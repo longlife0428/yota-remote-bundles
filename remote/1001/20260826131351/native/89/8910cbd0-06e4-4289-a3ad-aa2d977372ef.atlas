@@ -1,0 +1,13 @@
+feature_btn.png
+	size: 711, 70
+	filter: Linear, Linear
+	pma: true
+	scale: 0.8
+buy feature btn
+	bounds: 482, 2, 227, 66
+buy feature btn2
+	bounds: 253, 2, 227, 66
+text
+	bounds: 153, 54, 98, 14
+text2
+	bounds: 2, 54, 149, 14

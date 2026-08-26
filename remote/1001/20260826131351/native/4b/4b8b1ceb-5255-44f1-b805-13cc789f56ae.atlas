@@ -1,0 +1,184 @@
+symbol_up.png
+	size: 1284, 1284
+	filter: Linear, Linear
+glow_88
+	bounds: 634, 33, 232, 233
+	offsets: 15, 13, 256, 256
+glow_882
+	bounds: 830, 352, 232, 233
+	offsets: 15, 13, 256, 256
+lightning/lightning_00
+	bounds: 1154, 298, 106, 101
+	offsets: 71, 259, 260, 360
+lightning/lightning_01
+	bounds: 979, 158, 132, 155
+	offsets: 51, 205, 260, 360
+	rotate: 90
+lightning/lightning_02
+	bounds: 172, 567, 162, 356
+	offsets: 37, 0, 260, 360
+lightning/lightning_04
+	bounds: 484, 965, 176, 317
+	offsets: 30, 0, 260, 360
+lightning/lightning_05
+	bounds: 2, 203, 178, 357
+	offsets: 30, 0, 260, 360
+lightning/lightning_06
+	bounds: 2, 923, 168, 359
+	offsets: 30, 0, 260, 360
+lightning/lightning_08
+	bounds: 346, 228, 176, 345
+	offsets: 30, 1, 260, 360
+lightning/lightning_09
+	bounds: 336, 575, 130, 348
+	offsets: 71, 0, 260, 360
+lightning/lightning_10
+	bounds: 646, 680, 126, 283
+	offsets: 74, 62, 260, 360
+lightning/lightning_16
+	bounds: 1064, 1185, 97, 218
+	offsets: 89, 0, 260, 360
+	rotate: 90
+lightning/lightning_18
+	bounds: 922, 687, 135, 211
+	offsets: 80, 7, 260, 360
+lightning/lightning_19
+	bounds: 1064, 898, 146, 212
+	offsets: 71, 6, 260, 360
+	rotate: 90
+lightning/lightning_20
+	bounds: 761, 966, 137, 217
+	offsets: 63, 1, 260, 360
+lightning/lightning_21
+	bounds: 380, 8, 125, 218
+	offsets: 47, 0, 260, 360
+lightning/lightning_22
+	bounds: 646, 587, 91, 208
+	offsets: 40, 10, 260, 360
+	rotate: 90
+lightning/lightning_24
+	bounds: 190, 6, 93, 201
+	offsets: 37, 17, 260, 360
+lightning/lightning_25
+	bounds: 2, 21, 92, 180
+	offsets: 35, 38, 260, 360
+lightning_moon/lightning_moon_00
+	bounds: 1154, 195, 106, 101
+	offsets: 71, 259, 260, 360
+lightning_moon/lightning_moon_01
+	bounds: 1127, 24, 132, 155
+	offsets: 51, 205, 260, 360
+	rotate: 90
+lightning_moon/lightning_moon_02
+	bounds: 182, 209, 162, 356
+	offsets: 37, 0, 260, 360
+lightning_moon/lightning_moon_04
+	bounds: 524, 268, 176, 317
+	offsets: 30, 0, 260, 360
+lightning_moon/lightning_moon_05
+	bounds: 172, 925, 178, 357
+	offsets: 30, 0, 260, 360
+lightning_moon/lightning_moon_06
+	bounds: 2, 562, 168, 359
+	offsets: 30, 0, 260, 360
+lightning_moon/lightning_moon_08
+	bounds: 468, 587, 176, 345
+	offsets: 30, 1, 260, 360
+lightning_moon/lightning_moon_09
+	bounds: 352, 934, 130, 348
+	offsets: 71, 0, 260, 360
+lightning_moon/lightning_moon_10
+	bounds: 702, 302, 126, 283
+	offsets: 74, 62, 260, 360
+lightning_moon/lightning_moon_16
+	bounds: 662, 965, 97, 218
+	offsets: 89, 0, 260, 360
+lightning_moon/lightning_moon_18
+	bounds: 1064, 761, 135, 211
+	offsets: 80, 7, 260, 360
+	rotate: 90
+lightning_moon/lightning_moon_19
+	bounds: 774, 684, 146, 212
+	offsets: 71, 6, 260, 360
+lightning_moon/lightning_moon_20
+	bounds: 1064, 1046, 137, 217
+	offsets: 63, 1, 260, 360
+	rotate: 90
+lightning_moon/lightning_moon_21
+	bounds: 507, 8, 125, 218
+	offsets: 47, 0, 260, 360
+lightning_moon/lightning_moon_22
+	bounds: 662, 1191, 91, 208
+	offsets: 40, 10, 260, 360
+	rotate: 90
+lightning_moon/lightning_moon_24
+	bounds: 285, 6, 93, 201
+	offsets: 37, 17, 260, 360
+lightning_moon/lightning_moon_25
+	bounds: 96, 21, 92, 180
+	offsets: 35, 38, 260, 360
+sparks/sparks_00
+	bounds: 1154, 509, 126, 56
+	offsets: 23, 15, 160, 100
+sparks/sparks_02
+	bounds: 774, 900, 137, 64
+	offsets: 17, 9, 160, 100
+sparks/sparks_04
+	bounds: 922, 1209, 139, 73
+	offsets: 13, 5, 160, 100
+sparks/sparks_06
+	bounds: 830, 271, 147, 79
+	offsets: 9, 3, 160, 100
+sparks/sparks_08
+	bounds: 900, 966, 151, 85
+	offsets: 8, 0, 160, 100
+sparks/sparks_10
+	bounds: 1064, 444, 150, 88
+	offsets: 10, 0, 160, 100
+	rotate: 90
+sparks/sparks_12
+	bounds: 856, 593, 151, 89
+	offsets: 9, 0, 160, 100
+sparks/sparks_14
+	bounds: 955, 5, 151, 84
+	offsets: 8, 3, 160, 100
+	rotate: 90
+sparks/sparks_16
+	bounds: 1059, 689, 116, 70
+	offsets: 8, 17, 160, 100
+sparks/sparks_18
+	bounds: 1162, 567, 113, 48
+	offsets: 9, 24, 160, 100
+sparks_moon/sparks_moon_00
+	bounds: 1154, 451, 126, 56
+	offsets: 23, 15, 160, 100
+sparks_moon/sparks_moon_02
+	bounds: 913, 900, 137, 64
+	offsets: 17, 9, 160, 100
+sparks_moon/sparks_moon_04
+	bounds: 922, 1134, 139, 73
+	offsets: 13, 5, 160, 100
+sparks_moon/sparks_moon_06
+	bounds: 913, 1053, 147, 79
+	offsets: 9, 3, 160, 100
+sparks_moon/sparks_moon_08
+	bounds: 868, 5, 151, 85
+	offsets: 8, 0, 160, 100
+	rotate: 90
+sparks_moon/sparks_moon_10
+	bounds: 1064, 292, 150, 88
+	offsets: 10, 0, 160, 100
+	rotate: 90
+sparks_moon/sparks_moon_12
+	bounds: 1009, 596, 151, 89
+	offsets: 9, 0, 160, 100
+sparks_moon/sparks_moon_14
+	bounds: 1041, 5, 151, 84
+	offsets: 8, 3, 160, 100
+	rotate: 90
+sparks_moon/sparks_moon_16
+	bounds: 1162, 617, 116, 70
+	offsets: 8, 17, 160, 100
+sparks_moon/sparks_moon_18
+	bounds: 1154, 401, 113, 48
+	offsets: 9, 24, 160, 100
