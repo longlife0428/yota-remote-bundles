@@ -1,0 +1,9 @@
+ui_game_logo.png
+	size: 256, 256
+	filter: Linear, Linear
+flare_29
+	bounds: 2, 132, 252, 122
+	offsets: 4, 67, 256, 256
+spark1
+	bounds: 2, 65, 57, 65
+	offsets: 10, 7, 76, 76
