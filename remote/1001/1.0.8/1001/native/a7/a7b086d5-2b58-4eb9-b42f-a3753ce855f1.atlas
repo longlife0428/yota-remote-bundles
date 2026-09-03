@@ -1,0 +1,24 @@
+collect.png
+	size: 584, 584
+	filter: Linear, Linear
+aura_3
+	bounds: 236, 5, 116, 101
+	offsets: 6, 14, 128, 128
+aura_318
+	bounds: 236, 108, 216, 216
+	offsets: 24, 17, 256, 256
+flare2
+	bounds: 2, 326, 256, 256
+flare_29
+	bounds: 454, 72, 252, 122
+	offsets: 4, 67, 256, 256
+	rotate: 90
+glow
+	bounds: 260, 422, 160, 160
+	offsets: 20, 20, 200, 200
+glow_88
+	bounds: 2, 91, 232, 233
+	offsets: 15, 13, 256, 256
+path_83
+	bounds: 454, 326, 256, 128
+	rotate: 90
