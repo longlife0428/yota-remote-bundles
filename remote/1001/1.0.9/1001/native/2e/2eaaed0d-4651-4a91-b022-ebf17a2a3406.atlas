@@ -1,0 +1,96 @@
+symbol_m_fx.png
+	size: 1532, 1532
+	filter: Linear, Linear
+D2/D2_00
+	bounds: 2, 2, 1, 1
+D3/D3_00
+	bounds: 2, 2, 1, 1
+D2/D2_02
+	bounds: 1370, 1415, 110, 115
+	offsets: 5, 0, 120, 120
+D2/D2_04
+	bounds: 161, 48, 111, 114
+	offsets: 5, 2, 120, 120
+D2/D2_06
+	bounds: 387, 50, 111, 112
+	offsets: 6, 4, 120, 120
+D2/D2_08
+	bounds: 1370, 1185, 109, 111
+	offsets: 8, 4, 120, 120
+D2/D2_10
+	bounds: 1370, 1073, 106, 110
+	offsets: 11, 3, 120, 120
+D2/D2_12
+	bounds: 1370, 966, 100, 105
+	offsets: 15, 4, 120, 120
+D2/D2_14
+	bounds: 1370, 859, 97, 105
+	offsets: 17, 4, 120, 120
+D2/D2_16
+	bounds: 1370, 752, 91, 105
+	offsets: 22, 4, 120, 120
+D2/D2_18
+	bounds: 1370, 651, 86, 99
+	offsets: 26, 6, 120, 120
+D3/D3_02
+	bounds: 1370, 1298, 110, 115
+	offsets: 5, 0, 120, 120
+D3/D3_04
+	bounds: 274, 48, 111, 114
+	offsets: 5, 2, 120, 120
+D3/D3_06
+	bounds: 500, 50, 111, 112
+	offsets: 6, 4, 120, 120
+D3/D3_08
+	bounds: 613, 51, 109, 111
+	offsets: 8, 4, 120, 120
+D3/D3_10
+	bounds: 724, 52, 106, 110
+	offsets: 11, 3, 120, 120
+D3/D3_12
+	bounds: 832, 57, 100, 105
+	offsets: 15, 4, 120, 120
+D3/D3_14
+	bounds: 934, 57, 97, 105
+	offsets: 17, 4, 120, 120
+D3/D3_16
+	bounds: 1033, 57, 91, 105
+	offsets: 22, 4, 120, 120
+D3/D3_18
+	bounds: 1126, 63, 86, 99
+	offsets: 26, 6, 120, 120
+circle/01
+	bounds: 2, 1190, 340, 340
+circle/02
+	bounds: 2, 848, 340, 340
+circle/04
+	bounds: 344, 1190, 340, 340
+circle/06
+	bounds: 2, 506, 340, 340
+circle/08
+	bounds: 344, 848, 340, 340
+circle/10
+	bounds: 686, 1190, 340, 340
+glow1
+	bounds: 2, 5, 157, 157
+	offsets: 1, 1, 159, 159
+particle/21
+	bounds: 2, 164, 340, 340
+particle/23
+	bounds: 344, 506, 340, 340
+particle/25
+	bounds: 686, 848, 340, 340
+particle/27
+	bounds: 1028, 1190, 340, 340
+particle/29
+	bounds: 344, 164, 340, 340
+particle/31
+	bounds: 686, 506, 340, 340
+particle/33
+	bounds: 1028, 848, 340, 340
+particle/35
+	bounds: 686, 164, 340, 340
+particle/37
+	bounds: 1028, 506, 340, 340
+particle/39
+	bounds: 1028, 164, 340, 340
