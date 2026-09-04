@@ -6974,7 +6974,7 @@ System.register("bundle://1001/_virtual/FinishSpinTask.ts", ['./rollupPluginModL
 });
 
 System.register("bundle://1001/_virtual/GameBundleUpdateView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts', './HotUpdateConfig.ts', './NativeBundleUpdater.ts', './WebBundleVersionChecker.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, Slider, UITransform, Label, Component, sys, AppAssetBundle, NATIVE_CHECK_TIMEOUT_MS, NATIVE_DOWNLOAD_STALL_TIMEOUT_MS, NATIVE_HOT_UPDATE_CHECK_ENABLED, WEB_HOT_UPDATE_CHECK_ENABLED, HOT_UPDATE_ENABLED_BUNDLES, NativeBundleUpdater, NativeUpdateResult, WebBundleVersionChecker;
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, Slider, UITransform, Label, Component, sys, assetManager, AppAssetBundle, NATIVE_CHECK_TIMEOUT_MS, NATIVE_DOWNLOAD_STALL_TIMEOUT_MS, NATIVE_HOT_UPDATE_CHECK_ENABLED, WEB_HOT_UPDATE_CHECK_ENABLED, HOT_UPDATE_ENABLED_BUNDLES, NativeBundleUpdater, NativeUpdateResult, WebBundleVersionChecker;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -6992,6 +6992,7 @@ System.register("bundle://1001/_virtual/GameBundleUpdateView.ts", ['./rollupPlug
       Label = module.Label;
       Component = module.Component;
       sys = module.sys;
+      assetManager = module.assetManager;
     }, function (module) {
       AppAssetBundle = module.default;
     }, function (module) {
@@ -7080,49 +7081,54 @@ System.register("bundle://1001/_virtual/GameBundleUpdateView.ts", ['./rollupPlug
               while (1) switch (_context.prev = _context.next) {
                 case 0:
                   bundleName = pending.bundle;
+                  console.info("[GameBundleUpdateView] ensureUpdated \u9032\u5165 bundle=" + bundleName + " scene=" + pending.scene);
                   if (!(!bundleName || !HOT_UPDATE_ENABLED_BUNDLES.has(bundleName))) {
-                    _context.next = 3;
-                    break;
-                  }
-                  return _context.abrupt("return");
-                case 3:
-                  if (!(sys.isNative ? !NATIVE_HOT_UPDATE_CHECK_ENABLED : !WEB_HOT_UPDATE_CHECK_ENABLED)) {
                     _context.next = 5;
                     break;
                   }
+                  console.info("[GameBundleUpdateView] " + bundleName + " \u4E0D\u5728\u71B1\u66F4\u767D\u540D\u55AE\u5167 \u7565\u904E");
                   return _context.abrupt("return");
                 case 5:
-                  this.show();
-                  this.setStatus('檢查更新中...');
-                  _context.prev = 7;
-                  if (!sys.isNative) {
-                    _context.next = 13;
+                  if (!(sys.isNative ? !NATIVE_HOT_UPDATE_CHECK_ENABLED : !WEB_HOT_UPDATE_CHECK_ENABLED)) {
+                    _context.next = 8;
                     break;
                   }
-                  _context.next = 11;
+                  console.info("[GameBundleUpdateView] \u71B1\u66F4\u958B\u95DC\u95DC\u9589 (isNative=" + sys.isNative + ") \u7565\u904E");
+                  return _context.abrupt("return");
+                case 8:
+                  this.show();
+                  this.setStatus('檢查更新中...');
+                  _context.prev = 10;
+                  if (!sys.isNative) {
+                    _context.next = 17;
+                    break;
+                  }
+                  console.info("[GameBundleUpdateView] \u8D70\u539F\u751F\u71B1\u66F4\u6D41\u7A0B");
+                  _context.next = 15;
                   return this.runNativeUpdate(pending);
-                case 11:
-                  _context.next = 15;
-                  break;
-                case 13:
-                  _context.next = 15;
-                  return this.runWebUpdate(pending);
                 case 15:
                   _context.next = 20;
                   break;
                 case 17:
-                  _context.prev = 17;
-                  _context.t0 = _context["catch"](7);
-                  console.warn("[GameBundleUpdateView] \"" + bundleName + "\" \u71B1\u66F4\u6AA2\u67E5\u5931\u6557 \u6539\u7528\u672C\u5730\u65E2\u6709\u7248\u672C\u6B63\u5E38\u9032\u5834", _context.t0);
+                  console.info("[GameBundleUpdateView] \u8D70 Web \u71B1\u66F4\u6D41\u7A0B");
+                  _context.next = 20;
+                  return this.runWebUpdate(pending);
                 case 20:
-                  _context.prev = 20;
+                  _context.next = 25;
+                  break;
+                case 22:
+                  _context.prev = 22;
+                  _context.t0 = _context["catch"](10);
+                  console.warn("[GameBundleUpdateView] \"" + bundleName + "\" \u71B1\u66F4\u6AA2\u67E5\u5931\u6557 \u4F7F\u7528\u4FDD\u5E95\u7248\u672C\u6B63\u5E38\u9032\u5834", _context.t0);
+                case 25:
+                  _context.prev = 25;
                   this.hide();
-                  return _context.finish(20);
-                case 23:
+                  return _context.finish(25);
+                case 28:
                 case "end":
                   return _context.stop();
               }
-            }, _callee, this, [[7, 17, 20, 23]]);
+            }, _callee, this, [[10, 22, 25, 28]]);
           }));
           function ensureUpdated(_x) {
             return _ensureUpdated.apply(this, arguments);
@@ -7226,7 +7232,7 @@ System.register("bundle://1001/_virtual/GameBundleUpdateView.ts", ['./rollupPlug
         _proto.runWebUpdate = /*#__PURE__*/function () {
           var _runWebUpdate = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(pending) {
             var _this3 = this;
-            var bundleName, bundleUrl, bundle;
+            var bundleName, localVersion, remoteInfo, cached, cachedBase, remoteBase, bundle;
             return _regeneratorRuntime().wrap(function _callee3$(_context3) {
               while (1) switch (_context3.prev = _context3.next) {
                 case 0:
@@ -7238,33 +7244,50 @@ System.register("bundle://1001/_virtual/GameBundleUpdateView.ts", ['./rollupPlug
                   console.warn('[GameBundleUpdateView] webChecker 尚未在 Inspector 指定 略過 Web 版本檢查');
                   return _context3.abrupt("return");
                 case 4:
-                  if (!AppAssetBundle.getInstance(bundleName).hasCachedBundle()) {
-                    _context3.next = 7;
-                    break;
-                  }
-                  console.warn("[GameBundleUpdateView] \"" + bundleName + "\" \u672C\u6B21 session \u5DF2\u8F09\u5165\u904E \u7248\u672C\u6AA2\u67E5\u7565\u904E \u9700\u8981\u91CD\u65B0\u6574\u7406\u9801\u9762\u624D\u6703\u5957\u7528\u65B0\u7248");
-                  return _context3.abrupt("return");
-                case 7:
-                  this.setStatus('下載更新中...');
+                  localVersion = this.webChecker.getLocalVersion();
+                  console.info("[GameBundleUpdateView] \u958B\u59CB\u71B1\u66F4\u6AA2\u67E5 bundle=" + bundleName + " \u672C\u5730\u7248\u672C=v" + localVersion);
+                  this.setStatus('檢查版本...');
                   this.updateProgress(0.05);
-                  _context3.next = 11;
-                  return this.webChecker.resolveBundleUrl();
-                case 11:
-                  bundleUrl = _context3.sent;
-                  this.updateProgress(0.1);
-                  _context3.next = 15;
-                  return AppAssetBundle.getInstance(bundleName).loadBundle(bundleUrl);
-                case 15:
-                  bundle = _context3.sent;
-                  this.updateProgress(0.2);
-
-                  // loadBundle 只載入 config/index，Web 真正的圖片、音效與場景資源
-                  // 是在 preloadScene 才下載。把這段的進度映射到 UI 的 20%~100%。
-                  if (!pending.scene) {
-                    _context3.next = 22;
+                  _context3.next = 10;
+                  return this.webChecker.resolve();
+                case 10:
+                  remoteInfo = _context3.sent;
+                  console.info("[GameBundleUpdateView] \u9060\u7AEF\u6700\u65B0\u7248\u672C=v" + remoteInfo.version + " packageUrl=" + remoteInfo.packageUrl);
+                  cached = assetManager.getBundle(bundleName);
+                  if (!cached) {
+                    _context3.next = 24;
                     break;
                   }
-                  _context3.next = 20;
+                  cachedBase = (cached.base || '').replace(/\/+$/, '');
+                  remoteBase = remoteInfo.packageUrl.replace(/\/+$/, '');
+                  if (!(cachedBase === remoteBase)) {
+                    _context3.next = 20;
+                    break;
+                  }
+                  console.info("[GameBundleUpdateView] \u7248\u672C\u4E00\u81F4 \u672C\u5730=v" + localVersion + " \u9060\u7AEF=v" + remoteInfo.version + " \u4E0D\u9700\u66F4\u65B0");
+                  this.updateProgress(1);
+                  return _context3.abrupt("return");
+                case 20:
+                  console.warn("[GameBundleUpdateView] \u5075\u6E2C\u5230\u65B0\u7248\u672C \u76EE\u524D\u8F09\u5165=v" + localVersion + "(" + cachedBase + ") \u9060\u7AEF=v" + remoteInfo.version + "(" + remoteBase + ")");
+                  console.warn('[GameBundleUpdateView] Web 平台需要重新整理頁面才能套用新版本');
+                  this.updateProgress(1);
+                  return _context3.abrupt("return");
+                case 24:
+                  console.info("[GameBundleUpdateView] bundle \u5C1A\u672A\u8F09\u5165 \u5F9E\u9060\u7AEF\u4E0B\u8F09 v" + remoteInfo.version + " url=" + remoteInfo.packageUrl);
+                  this.setStatus('下載更新中...');
+                  this.updateProgress(0.1);
+                  _context3.next = 29;
+                  return AppAssetBundle.getInstance(bundleName).loadBundle(remoteInfo.packageUrl);
+                case 29:
+                  bundle = _context3.sent;
+                  console.info("[GameBundleUpdateView] bundle \u4E0B\u8F09\u5B8C\u6210 " + bundleName + " v" + remoteInfo.version);
+                  this.updateProgress(0.2);
+                  if (!pending.scene) {
+                    _context3.next = 38;
+                    break;
+                  }
+                  console.info("[GameBundleUpdateView] \u958B\u59CB\u9810\u8F09\u5834\u666F " + pending.scene);
+                  _context3.next = 36;
                   return new Promise(function (resolve, reject) {
                     bundle.preloadScene(pending.scene, function (finished, total) {
                       var ratio = total > 0 ? finished / total : 0;
@@ -7272,16 +7295,17 @@ System.register("bundle://1001/_virtual/GameBundleUpdateView.ts", ['./rollupPlug
                     }, function (err) {
                       if (err) reject(err);else {
                         _this3.updateProgress(1);
+                        console.info("[GameBundleUpdateView] \u5834\u666F\u9810\u8F09\u5B8C\u6210 " + pending.scene);
                         resolve();
                       }
                     });
                   });
-                case 20:
-                  _context3.next = 23;
+                case 36:
+                  _context3.next = 39;
                   break;
-                case 22:
+                case 38:
                   this.updateProgress(1);
-                case 23:
+                case 39:
                 case "end":
                   return _context3.stop();
               }
@@ -28129,15 +28153,8 @@ System.register("bundle://1001/_virtual/WebBundleVersionChecker.ts", ['./rollupP
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
 
-      /**
-       * WebBundleVersionChecker
-       *
-       * Web 平台對應原生 project.manifest／version.manifest
-       * localVersion 內建的基準版本資訊（由 generate-bundle-manifest.mjs
-       * 產生的 version.json 匯入 拿到的 packageUrl 已經是
-       * 完整的版本資料夾網址 直接交給 AppAssetBundle.loadBundle() 當來源網址用
-       * 不用另外拼版本號 也不需要 Cocos 的 md5Cache／bundleVers
-       */
+      // 大廳透過 globalThis.__subGameData__ 傳進來的資料
+
       var WebBundleVersionChecker = exports('WebBundleVersionChecker', (_dec = ccclass('1001/WebBundleVersionChecker'), _dec2 = property(JsonAsset), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(WebBundleVersionChecker, _Component);
         function WebBundleVersionChecker() {
@@ -28150,79 +28167,122 @@ System.register("bundle://1001/_virtual/WebBundleVersionChecker.ts", ['./rollupP
           return _this;
         }
         var _proto = WebBundleVersionChecker.prototype;
-        /** 取得遠端實際要載入的 bundle 網址。 */
-        _proto.resolveBundleUrl = /*#__PURE__*/
+        /** 取得遠端最新的 bundle 資訊 */
+        _proto.resolve = /*#__PURE__*/
         function () {
-          var _resolveBundleUrl = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-            var local, remote, pathname, urlBundleName;
+          var _resolve = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+            var local, remoteVersionUrl, remote, pathname, urlBundleName;
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
                   local = this.localVersion.json;
-                  _context.prev = 1;
-                  _context.next = 4;
-                  return this.fetchRemoteVersion(local.remoteVersionUrl);
-                case 4:
+                  remoteVersionUrl = this.getRemoteVersionUrl(local);
+                  console.info("[WebBundleVersionChecker] \u67E5\u8A62\u9060\u7AEF\u7248\u672C url=" + remoteVersionUrl);
+                  _context.prev = 3;
+                  _context.next = 6;
+                  return this.fetchRemoteVersion(remoteVersionUrl);
+                case 6:
                   remote = _context.sent;
+                  console.info("[WebBundleVersionChecker] \u9060\u7AEF\u56DE\u61C9 bundleName=" + remote.bundleName + " version=" + remote.version + " packageUrl=" + remote.packageUrl);
                   if (!(remote.bundleName !== local.bundleName)) {
-                    _context.next = 7;
+                    _context.next = 10;
                     break;
                   }
-                  throw new Error("bundleName \u4E0D\u7B26: " + remote.bundleName);
-                case 7:
+                  throw new Error("bundleName \u4E0D\u7B26: \u9060\u7AEF=" + remote.bundleName + " \u672C\u5730=" + local.bundleName);
+                case 10:
                   pathname = new URL(remote.packageUrl).pathname.replace(/\/+$/, '');
                   urlBundleName = pathname.slice(pathname.lastIndexOf('/') + 1);
                   if (!(urlBundleName !== local.bundleName)) {
-                    _context.next = 11;
+                    _context.next = 14;
                     break;
                   }
-                  throw new Error("packageUrl \u5FC5\u9808\u4EE5 /" + local.bundleName + "/ \u7D50\u5C3E\uFF0C\u76EE\u524D\u662F " + remote.packageUrl);
-                case 11:
-                  return _context.abrupt("return", remote.packageUrl);
+                  throw new Error("packageUrl \u5FC5\u9808\u4EE5 /" + local.bundleName + "/ \u7D50\u5C3E \u76EE\u524D\u662F " + remote.packageUrl);
                 case 14:
-                  _context.prev = 14;
-                  _context.t0 = _context["catch"](1);
-                  // 不要嘗試載入格式錯誤的版本 URL，否則 Cocos 會用 URL
-                  // 最後一段當 bundle 名，後續再載入正常 1001 時就會重複
-                  // 執行 index.js。把錯誤交給上層，上層會回到原本可用的進場流程。
-                  console.warn('[WebBundleVersionChecker] 遠端版本資訊不可用，略過這次熱更', _context.t0);
+                  return _context.abrupt("return", {
+                    bundleName: remote.bundleName,
+                    version: remote.version,
+                    packageUrl: remote.packageUrl
+                  });
+                case 17:
+                  _context.prev = 17;
+                  _context.t0 = _context["catch"](3);
+                  console.warn('[WebBundleVersionChecker] 遠端版本查詢失敗', _context.t0);
                   throw _context.t0;
-                case 18:
+                case 21:
                 case "end":
                   return _context.stop();
               }
-            }, _callee, this, [[1, 14]]);
+            }, _callee, this, [[3, 17]]);
+          }));
+          function resolve() {
+            return _resolve.apply(this, arguments);
+          }
+          return resolve;
+        }() /** @deprecated 用 resolve() 取代 */;
+        _proto.resolveBundleUrl = /*#__PURE__*/
+        function () {
+          var _resolveBundleUrl = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+            var info;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  _context2.next = 2;
+                  return this.resolve();
+                case 2:
+                  info = _context2.sent;
+                  return _context2.abrupt("return", info.packageUrl);
+                case 4:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, this);
           }));
           function resolveBundleUrl() {
             return _resolveBundleUrl.apply(this, arguments);
           }
           return resolveBundleUrl;
         }();
+        _proto.getRemoteVersionUrl = function getRemoteVersionUrl(local) {
+          var subGameData = globalThis.__subGameData__;
+          if (subGameData != null && subGameData.cdnBase) {
+            var base = subGameData.cdnBase.replace(/\/+$/, '');
+            var url = base + "/remote/" + local.bundleName + "/version.json";
+            console.info("[WebBundleVersionChecker] \u4F7F\u7528\u5927\u5EF3\u50B3\u5165\u7684 cdnBase=" + base);
+            return url;
+          }
+          console.info("[WebBundleVersionChecker] \u6C92\u6709\u5927\u5EF3 cdnBase fallback \u5230 localVersion remoteVersionUrl=" + local.remoteVersionUrl);
+          return local.remoteVersionUrl;
+        };
+        _proto.getLocalVersion = function getLocalVersion() {
+          var _this$localVersion, _local$version;
+          var local = (_this$localVersion = this.localVersion) == null ? void 0 : _this$localVersion.json;
+          return (_local$version = local == null ? void 0 : local.version) != null ? _local$version : 'unknown';
+        };
         _proto.fetchRemoteVersion = /*#__PURE__*/function () {
-          var _fetchRemoteVersion = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(remoteVersionUrl) {
+          var _fetchRemoteVersion = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(remoteVersionUrl) {
             var res;
-            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-              while (1) switch (_context2.prev = _context2.next) {
+            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+              while (1) switch (_context3.prev = _context3.next) {
                 case 0:
-                  _context2.next = 2;
+                  _context3.next = 2;
                   return fetch(remoteVersionUrl + "?t=" + Date.now());
                 case 2:
-                  res = _context2.sent;
+                  res = _context3.sent;
                   if (res.ok) {
-                    _context2.next = 5;
+                    _context3.next = 5;
                     break;
                   }
                   throw new Error("HTTP " + res.status);
                 case 5:
-                  _context2.next = 7;
+                  _context3.next = 7;
                   return res.json();
                 case 7:
-                  return _context2.abrupt("return", _context2.sent);
+                  return _context3.abrupt("return", _context3.sent);
                 case 8:
                 case "end":
-                  return _context2.stop();
+                  return _context3.stop();
               }
-            }, _callee2);
+            }, _callee3);
           }));
           function fetchRemoteVersion(_x) {
             return _fetchRemoteVersion.apply(this, arguments);
