@@ -27860,34 +27860,30 @@ System.register("bundle://1001/_virtual/WebBundleVersionCheck.ts", ['./rollupPlu
           return _regeneratorRuntime().wrap(function _callee$(_context) {
             while (1) switch (_context.prev = _context.next) {
               case 0:
-                {
-                  _context.next = 3;
-                  break;
-                }
-              case 3:
                 if (!sys.isNative) {
-                  _context.next = 6;
+                  _context.next = 3;
                   break;
                 }
                 console.info("[WebBundleVersionCheck] \u539F\u751F\u5E73\u53F0\u7531 NativeBundleUpdater \u8655\u7406 \u7565\u904E Web \u7248\u672C\u6AA2\u67E5");
                 return _context.abrupt("return");
-              case 6:
+              case 3:
                 if (HOT_UPDATE_ENABLED_BUNDLES.has(bundleName)) {
-                  _context.next = 9;
+                  _context.next = 6;
                   break;
                 }
                 console.info("[WebBundleVersionCheck] " + bundleName + " \u4E0D\u5728\u71B1\u66F4\u767D\u540D\u55AE\u5167 \u7565\u904E");
                 return _context.abrupt("return");
-              case 9:
+              case 6:
+                // __subGameData__ 存在代表從大廳載入 沒有就是 slot_game 獨立 Editor Preview
                 subGameData = globalThis.__subGameData__;
                 console.info("[WebBundleVersionCheck] \u6536\u5230\u5927\u5EF3\u8CC7\u6599 __subGameData__=", JSON.stringify(subGameData != null ? subGameData : null));
                 if (subGameData != null && subGameData.cdnBase) {
-                  _context.next = 14;
+                  _context.next = 11;
                   break;
                 }
                 console.info("[WebBundleVersionCheck] \u6C92\u6709\u5927\u5EF3\u50B3\u5165\u7684 cdnBase \u7565\u904E\u7248\u672C\u6AA2\u67E5");
                 return _context.abrupt("return");
-              case 14:
+              case 11:
                 cdnBase = subGameData.cdnBase.replace(/\/+$/, '');
                 versionUrl = cdnBase + "/remote/" + bundleName + "/version.json";
                 ui == null || ui.show();
@@ -27895,42 +27891,42 @@ System.register("bundle://1001/_virtual/WebBundleVersionCheck.ts", ['./rollupPlu
                 ui == null || ui.setProgress(0.1);
                 console.info("[WebBundleVersionCheck] \u958B\u59CB\u6AA2\u67E5 bundle=" + bundleName + " cdnBase=" + cdnBase);
                 console.info("[WebBundleVersionCheck] \u67E5\u8A62 " + versionUrl);
-                _context.prev = 21;
-                _context.next = 24;
+                _context.prev = 18;
+                _context.next = 21;
                 return fetch(versionUrl + "?t=" + Date.now());
-              case 24:
+              case 21:
                 res = _context.sent;
                 if (res.ok) {
-                  _context.next = 27;
+                  _context.next = 24;
                   break;
                 }
                 throw new Error("HTTP " + res.status);
-              case 27:
-                _context.next = 29;
+              case 24:
+                _context.next = 26;
                 return res.json();
-              case 29:
+              case 26:
                 remote = _context.sent;
                 ui == null || ui.setProgress(0.5);
                 console.info("[WebBundleVersionCheck] \u9060\u7AEF\u56DE\u61C9 bundleName=" + remote.bundleName + " version=" + remote.version + " packageUrl=" + remote.packageUrl);
                 if (!(remote.bundleName !== bundleName)) {
-                  _context.next = 37;
+                  _context.next = 34;
                   break;
                 }
                 console.warn("[WebBundleVersionCheck] bundleName \u4E0D\u7B26 \u9060\u7AEF=" + remote.bundleName + " \u9810\u671F=" + bundleName + " \u7565\u904E");
                 ui == null || ui.setStatus('版本資訊異常 使用保底版本');
                 ui == null || ui.setProgress(1);
                 return _context.abrupt("return");
-              case 37:
+              case 34:
                 cached = assetManager.getBundle(bundleName);
                 if (cached) {
-                  _context.next = 43;
+                  _context.next = 40;
                   break;
                 }
                 console.info("[WebBundleVersionCheck] bundle \u5C1A\u672A\u8F09\u5165 \u7121\u6CD5\u6BD4\u5C0D");
                 ui == null || ui.setStatus('檢查完成');
                 ui == null || ui.setProgress(1);
                 return _context.abrupt("return");
-              case 43:
+              case 40:
                 cachedBase = (cached.base || '').replace(/\/+$/, '');
                 remoteBase = remote.packageUrl.replace(/\/+$/, '');
                 ui == null || ui.setProgress(0.8);
@@ -27946,19 +27942,19 @@ System.register("bundle://1001/_virtual/WebBundleVersionCheck.ts", ['./rollupPlu
                   ui == null || ui.setStatus("\u767C\u73FE\u65B0\u7248\u672C v" + remote.version + " \u8ACB\u91CD\u65B0\u6574\u7406\u9801\u9762");
                   ui == null || ui.setProgress(1);
                 }
-                _context.next = 54;
+                _context.next = 51;
                 break;
-              case 49:
-                _context.prev = 49;
-                _context.t0 = _context["catch"](21);
+              case 46:
+                _context.prev = 46;
+                _context.t0 = _context["catch"](18);
                 console.warn("[WebBundleVersionCheck] \u7248\u672C\u6AA2\u67E5\u5931\u6557 \u4F7F\u7528\u4FDD\u5E95\u7248\u672C\u7E7C\u7E8C", _context.t0);
                 ui == null || ui.setStatus('版本檢查失敗 使用保底版本');
                 ui == null || ui.setProgress(1);
-              case 54:
+              case 51:
               case "end":
                 return _context.stop();
             }
-          }, _callee, null, [[21, 49]]);
+          }, _callee, null, [[18, 46]]);
         }));
         return _checkWebBundleVersion.apply(this, arguments);
       }
