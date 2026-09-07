@@ -28252,27 +28252,26 @@ System.register("bundle://1001/_virtual/WebBundleVersionCheck.ts", ['./rollupPlu
                 ui == null || ui.setProgress(1);
                 return _context.abrupt("return");
               case 45:
-                // configVersion 不一致代表 CDN 在載入途中剛發布新版
-                // 或本 session 已載入過舊版 不在這裡 remove/reload 避免 duplicate CID
+                // configVersion 不一致 已載入的 bundle 版本過期
+                // 實際更新由 entry SubGameLoader 在載入階段處理 這裡只記錄
                 console.warn('[WebBundleVersionCheck] 目前載入版本與 CDN 最新版本不一致');
                 console.warn("[WebBundleVersionCheck]   \u76EE\u524D: v" + ((_subGameData$version = subGameData.version) != null ? _subGameData$version : '?') + " configVersion=" + loadedConfigVersion);
                 console.warn("[WebBundleVersionCheck]   \u6700\u65B0: v" + remote.version + " configVersion=" + remote.configVersion);
-                console.warn('[WebBundleVersionCheck] Web 本次 session 繼續使用目前已載入的 Bundle');
-                ui == null || ui.setStatus('版本檢查完成');
+                ui == null || ui.setStatus("\u7248\u672C v" + remote.version + " \u5DF2\u66F4\u65B0");
                 ui == null || ui.setProgress(1);
-                _context.next = 58;
+                _context.next = 57;
                 break;
-              case 53:
-                _context.prev = 53;
+              case 52:
+                _context.prev = 52;
                 _context.t0 = _context["catch"](21);
                 console.warn('[WebBundleVersionCheck] 版本檢查失敗 使用目前已載入版本繼續', _context.t0);
                 ui == null || ui.setStatus('版本檢查失敗 使用目前版本');
                 ui == null || ui.setProgress(1);
-              case 58:
+              case 57:
               case "end":
                 return _context.stop();
             }
-          }, _callee, null, [[21, 53]]);
+          }, _callee, null, [[21, 52]]);
         }));
         return _checkWebBundleVersion.apply(this, arguments);
       }
