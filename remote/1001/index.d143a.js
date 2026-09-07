@@ -1,6 +1,6 @@
-System.register("bundle://1001/_virtual/1001", ['./GameMain_1001.ts', './GameRoot.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './NgSymbol.ts', './ReelView.ts', './ReelView_1001.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './ServerConfig.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SpinShortcutController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './BundleVersionInfo.ts', './HotUpdateConfig.ts', './HotUpdateView.ts', './NativeBundleUpdater.ts', './WebBundleVersionCheck.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './AccountApiTypes.ts', './GameNetHandler.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiHandlers.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SlotWebSocketClient.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './slot-api-mock.ts', './start.ts', './simple-mock.ts', './SlotGameMain.ts', './FGState_1001.ts', './GameState.ts', './GameStateKey.ts', './NGState_1001.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './WinFreeGamePopupTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './SpinTypes.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BonusResultView.ts', './BuyFeaturePopupView.ts', './CameraSyncOrtho.ts', './CollectMulEffect.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './HsTransitionView.ts', './JackpotView.ts', './LoadingModel.ts', './LoadingView.ts', './LoadingViewModel.ts', './AlertView.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SelectBetView.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './RollingNumberLabel.ts', './SpineAssetMap.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusInterFace.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './WinAnimationView.ts', './WinFreeGamePopupView.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts'], function () {
+System.register("bundle://1001/_virtual/1001", ['./GameMain_1001.ts', './GameRoot.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './NgSymbol.ts', './ReelView.ts', './ReelView_1001.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './ServerConfig.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SpinShortcutController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './NativeBundleUpdateView.ts', './NativeBundleUpdater.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './AccountApiTypes.ts', './GameNetHandler.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiHandlers.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SlotWebSocketClient.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './slot-api-mock.ts', './start.ts', './simple-mock.ts', './SlotGameMain.ts', './FGState_1001.ts', './GameState.ts', './GameStateKey.ts', './NGState_1001.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './WinFreeGamePopupTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './SpinTypes.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BonusResultView.ts', './BuyFeaturePopupView.ts', './CameraSyncOrtho.ts', './CollectMulEffect.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './HsTransitionView.ts', './JackpotView.ts', './LoadingModel.ts', './LoadingView.ts', './LoadingViewModel.ts', './AlertView.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SelectBetView.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './RollingNumberLabel.ts', './SpineAssetMap.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusInterFace.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './WinAnimationView.ts', './WinFreeGamePopupView.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts'], function () {
   return {
-    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
   };
 });
@@ -2587,25 +2587,6 @@ System.register("bundle://1001/_virtual/BonusResultView.ts", ['./rollupPluginMod
           return null;
         }
       })), _class2)) || _class));
-      cclegacy._RF.pop();
-    }
-  };
-});
-
-System.register("bundle://1001/_virtual/BundleVersionInfo.ts", ['cc'], function () {
-  var cclegacy;
-  return {
-    setters: [function (module) {
-      cclegacy = module.cclegacy;
-    }],
-    execute: function () {
-      cclegacy._RF.push({}, "1298d1zAEFJVrBKKtPvWR6B", "BundleVersionInfo", undefined);
-      /**
-       * Web 版本檢查用的最小回應格式 由 generate-bundle-manifest.mjs 產生的 version.json 對應這個形狀
-       *
-       * CDN base 由 Entry 在執行時傳入；版本檔不得決定下載 Host。
-       * 舊發布物可能仍帶 packageUrl／remoteVersionUrl，讀取端會忽略它們。
-       */
       cclegacy._RF.pop();
     }
   };
@@ -6677,14 +6658,6 @@ System.register("bundle://1001/_virtual/EnterFreeGameTask.ts", ['./rollupPluginM
   };
 });
 
-System.register("bundle://1001/_virtual/env", [], function (exports) {
-  return {
-    execute: function () {
-      var BUILD = exports('BUILD', true);
-    }
-  };
-});
-
 System.register("bundle://1001/_virtual/EventComponent.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SubscriptionBag.ts'], function (exports) {
   var _inheritsLoose, cclegacy, _decorator, Component, SubscriptionBag;
   return {
@@ -9202,8 +9175,8 @@ System.register("bundle://1001/_virtual/GamePopupManager.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './WebBundleVersionCheck.ts', './HotUpdateView.ts', './EventComponent.ts', './PopupStack.ts', './RootStoreHooks.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, profiler, Component, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, startGameMock, gameRuntimeEventBus, AppConfig, checkWebBundleVersion, HotUpdateView, EventComponent, PopupStack, createRootStore, GAME_EVENT_TYPE;
+System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, profiler, Component, sys, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, createRootStore, NativeBundleUpdateView, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -9219,6 +9192,7 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
       Node = module.Node;
       profiler = module.profiler;
       Component = module.Component;
+      sys = module.sys;
       instantiate = module.instantiate;
     }, function (module) {
       StoreManager = module.default;
@@ -9247,15 +9221,13 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
     }, function (module) {
       AppConfig = module.default;
     }, function (module) {
-      checkWebBundleVersion = module.checkWebBundleVersion;
-    }, function (module) {
-      HotUpdateView = module.HotUpdateView;
-    }, function (module) {
       EventComponent = module.EventComponent;
     }, function (module) {
       PopupStack = module.PopupStack;
     }, function (module) {
       createRootStore = module.createRootStore;
+    }, function (module) {
+      NativeBundleUpdateView = module.NativeBundleUpdateView;
     }, function (module) {
       GAME_EVENT_TYPE = module.GAME_EVENT_TYPE;
     }],
@@ -9379,7 +9351,7 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
         };
         _proto.initial = /*#__PURE__*/function () {
           var _initial = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-            var startTime, hotUpdateView;
+            var startTime, updateView;
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
@@ -9394,48 +9366,56 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                 case 5:
                   console.log('------ [GameRoot] initial ------ ');
 
-                  // 熱更新檢查 在 LoadingView 之前執行
-                  hotUpdateView = new HotUpdateView(this.node);
-                  _context.prev = 7;
-                  _context.next = 10;
-                  return checkWebBundleVersion(GameConfigManager.GAMEID, hotUpdateView);
-                case 10:
-                  _context.prev = 10;
-                  hotUpdateView.destroy();
-                  return _context.finish(10);
+                  // Native 更新由 1001 自己的 Loading 節點負責；Web 完全略過。
+                  if (!sys.isNative) {
+                    _context.next = 14;
+                    break;
+                  }
+                  updateView = this.node.getComponentInChildren(NativeBundleUpdateView);
+                  if (!updateView) {
+                    _context.next = 13;
+                    break;
+                  }
+                  _context.next = 11;
+                  return updateView.ensureUpdated();
+                case 11:
+                  _context.next = 14;
+                  break;
                 case 13:
+                  console.warn('[GameRoot] 未掛 NativeBundleUpdateView，略過 1001 原生熱更新');
+                case 14:
                   // 3.初始化 i18n
                   console.log('------ [GameRoot] initial initI18n ------ ');
-                  _context.next = 16;
+                  _context.next = 17;
                   return initI18n(undefined, GameConfigManager.GAMEID);
-                case 16:
+                case 17:
                   console.log('------ [GameRoot] loadServerConfig ------ ');
                   //載入 config 檔案
-                  _context.next = 19;
+                  _context.next = 20;
                   return this.loadServerConfig();
-                case 19:
+                case 20:
                   // 2.載入Bundle
                   console.log('------ [GameRoot] loadBundle ------ ');
-                  _context.next = 22;
+                  _context.next = 23;
                   return this.loadBundle();
-                case 22:
-                  _context.next = 24;
+                case 23:
+                  _context.next = 25;
                   return this.syncResolutionBeforeViewInit();
-                case 24:
+                case 25:
                   // 4.初始化 TemplateView
                   console.log('------ [GameRoot] initial addTemplateView ------ ');
-                  _context.next = 27;
+                  _context.next = 28;
                   return this.addTemplateView();
-                case 27:
+                case 28:
                   // 5.連線遊戲伺服器，取得遊戲初始資料
                   console.log('------ [GameRoot] initial addGamePrefab ------ ');
-                  _context.next = 30;
+                  _context.next = 31;
                   return this.addGamePrefab();
-                case 30:
+                case 31:
                   console.log('------ [GameRoot] initial connectGameServer ------ ');
-                  _context.next = 33;
+                  _context.next = 34;
                   return this.connectGameServer();
-                case 33:
+                case 34:
                   // 6.移除 LoadingView
                   this.removeLoadingView();
                   console.log('------ LOADING TIME ------ ');
@@ -9443,11 +9423,11 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                   EagleTracker.trackerEvent(TrackerMap.GAME_LOAD_COMPLETE, {
                     total_load_time_ms: performance.now() - startTime
                   });
-                case 37:
+                case 38:
                 case "end":
                   return _context.stop();
               }
-            }, _callee, this, [[7,, 10, 13]]);
+            }, _callee, this);
           }));
           function initial() {
             return _initial.apply(this, arguments);
@@ -12288,167 +12268,6 @@ System.register("bundle://1001/_virtual/HistoryView.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1001/_virtual/HotUpdateConfig.ts", ['cc', './env'], function (exports) {
-  var cclegacy, BUILD;
-  return {
-    setters: [function (module) {
-      cclegacy = module.cclegacy;
-    }, function (module) {
-      BUILD = module.BUILD;
-    }],
-    execute: function () {
-      cclegacy._RF.push({}, "51e36Z3GGVImqJxV5n3WV02", "HotUpdateConfig", undefined);
-
-      /**
-       * HotUpdateConfig
-       *
-       * 目前暫時只驗證 1001 先只列這一個 bundle，
-       * 其他遊戲要接上時再加進 ENABLED_BUNDLES。
-       *
-       * CDN base 由 Entry 在執行時傳入。version.json 只提供版本，Web 與原生
-       * 都以該 cdnBase 組合固定的 remote/<gameId>/... 路徑。
-       */
-      var HOT_UPDATE_ENABLED_BUNDLES = exports('HOT_UPDATE_ENABLED_BUNDLES', new Set(['1001']));
-
-      /**
-       * 只有實際建置出來的版本（BUILD）才會跑熱更檢查
-       */
-      /**
-       * Web 發布包已有 version.json 與完整版本目錄，實際建置時啟用。
-       * Editor Preview 不觸發，避免預覽開發流程被 CDN 檢查影響。
-       */
-      var WEB_HOT_UPDATE_CHECK_ENABLED = exports('WEB_HOT_UPDATE_CHECK_ENABLED', BUILD);
-
-      /**
-       * 原生 ZIP/manifest 發布產物與實機 fallback 尚未驗證，先關閉。
-       * 這個開關不影響原本打進 APK/IPA 的 1001 正常進場。
-       */
-      var NATIVE_HOT_UPDATE_CHECK_ENABLED = exports('NATIVE_HOT_UPDATE_CHECK_ENABLED', false);
-
-      /** 原生 checkUpdate() 查版本階段的逾時時間 超過就當作檢查失敗 放行正常進場 */
-      var NATIVE_CHECK_TIMEOUT_MS = exports('NATIVE_CHECK_TIMEOUT_MS', 8000);
-
-      /** 原生下載階段的逾時是「多久沒有新的下載進度」不是下載總長度 每次收到 UPDATE_PROGRESSION 就會重新計時 */
-      var NATIVE_DOWNLOAD_STALL_TIMEOUT_MS = exports('NATIVE_DOWNLOAD_STALL_TIMEOUT_MS', 30000);
-      cclegacy._RF.pop();
-    }
-  };
-});
-
-System.register("bundle://1001/_virtual/HotUpdateView.ts", ['cc'], function (exports) {
-  var cclegacy, Color, Node, UITransform, Label, view, Widget, Graphics, Vec3;
-  return {
-    setters: [function (module) {
-      cclegacy = module.cclegacy;
-      Color = module.Color;
-      Node = module.Node;
-      UITransform = module.UITransform;
-      Label = module.Label;
-      view = module.view;
-      Widget = module.Widget;
-      Graphics = module.Graphics;
-      Vec3 = module.Vec3;
-    }],
-    execute: function () {
-      cclegacy._RF.push({}, "8ba57pn1m1DGLNWYA4cB6Wf", "HotUpdateView", undefined);
-
-      // 熱更新檢查專用畫面 純程式碼建立 不需要 Inspector 綁定
-      // 在 LoadingView 之前顯示 版本確認無誤後才進入資源載入階段
-      var HotUpdateView = exports('HotUpdateView', /*#__PURE__*/function () {
-        function HotUpdateView(parent) {
-          this.root = void 0;
-          this.status = void 0;
-          this.percent = void 0;
-          this.progress = void 0;
-          this.root = new Node('HotUpdateView');
-          this.root.layer = parent.layer;
-          parent.addChild(this.root);
-          var size = view.getVisibleSize();
-          this.root.addComponent(UITransform).setContentSize(size);
-          var widget = this.root.addComponent(Widget);
-          widget.isAlignTop = true;
-          widget.isAlignBottom = true;
-          widget.isAlignLeft = true;
-          widget.isAlignRight = true;
-          widget.top = 0;
-          widget.bottom = 0;
-          widget.left = 0;
-          widget.right = 0;
-          var backdrop = this.root.addComponent(Graphics);
-          backdrop.fillColor = new Color(0, 0, 0, 220);
-          backdrop.rect(-size.width / 2, -size.height / 2, size.width, size.height);
-          backdrop.fill();
-          this.status = this.createLabel('Status', 30, new Vec3(0, 30));
-          this.percent = this.createLabel('Percent', 24, new Vec3(0, -10));
-          var track = new Node('ProgressTrack');
-          track.layer = parent.layer;
-          track.setParent(this.root);
-          track.setPosition(0, -55);
-          var trackGraphics = track.addComponent(Graphics);
-          trackGraphics.fillColor = new Color(60, 60, 70, 255);
-          trackGraphics.roundRect(-200, -6, 400, 12, 6);
-          trackGraphics.fill();
-          var bar = new Node('Progress');
-          bar.layer = parent.layer;
-          bar.setParent(track);
-          this.progress = bar.addComponent(Graphics);
-          this.setProgress(0);
-          this.root.active = false;
-        }
-        var _proto = HotUpdateView.prototype;
-        _proto.show = function show() {
-          var parent = this.root.parent;
-          if (parent) {
-            this.root.setSiblingIndex(parent.children.length - 1);
-          }
-          this.root.active = true;
-          this.setProgress(0);
-          console.info('[HotUpdateView] show');
-        };
-        _proto.hide = function hide() {
-          this.root.active = false;
-          console.info('[HotUpdateView] hide');
-        };
-        _proto.setStatus = function setStatus(text) {
-          this.status.string = text;
-          console.info("[HotUpdateView] " + text);
-        };
-        _proto.setProgress = function setProgress(value) {
-          var ratio = Math.max(0, Math.min(1, value));
-          this.percent.string = Math.round(ratio * 100) + "%";
-          this.progress.clear();
-          if (ratio > 0) {
-            this.progress.fillColor = new Color(45, 205, 255, 255);
-            this.progress.roundRect(-200, -6, 400 * ratio, 12, 6);
-            this.progress.fill();
-          }
-        };
-        _proto.destroy = function destroy() {
-          if (this.root.isValid) {
-            this.root.destroy();
-          }
-        };
-        _proto.createLabel = function createLabel(name, fontSize, position) {
-          var node = new Node(name);
-          node.layer = this.root.layer;
-          node.setParent(this.root);
-          node.setPosition(position);
-          node.addComponent(UITransform).setContentSize(600, 50);
-          var label = node.addComponent(Label);
-          label.fontSize = fontSize;
-          label.lineHeight = fontSize + 8;
-          label.horizontalAlign = Label.HorizontalAlign.CENTER;
-          label.verticalAlign = Label.VerticalAlign.CENTER;
-          label.color = Color.WHITE;
-          return label;
-        };
-        return HotUpdateView;
-      }());
-      cclegacy._RF.pop();
-    }
-  };
-});
-
 System.register("bundle://1001/_virtual/HsTransitionView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAudio.ts', './AudioConfig.ts', './GameRuntimeEventBus.ts', './StoreManager.ts', './GameViewAdapter.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, sp, Node, director, Component, AppAudio, EFFECTSMAP, gameRuntimeEventBus, StoreManager, GameViewAdapter, GAME_EVENT_TYPE;
   return {
@@ -14816,31 +14635,28 @@ System.register("bundle://1001/_virtual/Logger.ts", ['./rollupPluginModLoBabelHe
   };
 });
 
-System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Asset, sys, native, game, Component;
+System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameConfigManager.ts'], function (exports) {
+  var _inheritsLoose, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, native, sys, game, Component, GameConfigManager;
   return {
     setters: [function (module) {
-      _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
       _inheritsLoose = module.inheritsLoose;
-      _initializerDefineProperty = module.initializerDefineProperty;
-      _assertThisInitialized = module.assertThisInitialized;
       _createClass = module.createClass;
       _asyncToGenerator = module.asyncToGenerator;
       _regeneratorRuntime = module.regeneratorRuntime;
     }, function (module) {
       cclegacy = module.cclegacy;
       _decorator = module._decorator;
-      Asset = module.Asset;
-      sys = module.sys;
       native = module.native;
+      sys = module.sys;
       game = module.game;
       Component = module.Component;
+    }, function (module) {
+      GameConfigManager = module.default;
     }],
     execute: function () {
-      var _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3;
+      var _dec, _class;
       cclegacy._RF.push({}, "8732cG7RjdOd49qJK/BdB53", "NativeBundleUpdater", undefined);
-      var ccclass = _decorator.ccclass,
-        property = _decorator.property;
+      var ccclass = _decorator.ccclass;
       var NativeUpdateResult = exports('NativeUpdateResult', /*#__PURE__*/function (NativeUpdateResult) {
         NativeUpdateResult[NativeUpdateResult["UpToDate"] = 0] = "UpToDate";
         NativeUpdateResult[NativeUpdateResult["Restarting"] = 1] = "Restarting";
@@ -14865,13 +14681,10 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
        *
        * Cocos 3.8 的 native.fileUtils／native.AssetsManager checkUpdate
        *
-       * projectManifest／versionManifest 兩個屬性要在編輯器把對應的
-       * .manifest 檔（由 generate-bundle-manifest.mjs 產生）拖進去 當作
-       * 這個 bundle 內建的基準版本
+       * projectManifest 要在編輯器把遊戲自己的 .manifest 拖進去，作為內建基準版本。
+       * 與 DDPK minigame 相同，每款遊戲使用自己的 writable cache 與 manifest。
        */
-      var NativeBundleUpdater = exports('NativeBundleUpdater', (_dec = ccclass('1001/NativeBundleUpdater'), _dec2 = property({
-        tooltip: '要熱更的 bundle 名稱'
-      }), _dec3 = property(Asset), _dec4 = property(Asset), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+      var NativeBundleUpdater = exports('NativeBundleUpdater', (_dec = ccclass('1001/NativeBundleUpdater'), _dec(_class = /*#__PURE__*/function (_Component) {
         _inheritsLoose(NativeBundleUpdater, _Component);
         function NativeBundleUpdater() {
           var _this;
@@ -14879,28 +14692,12 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
             args[_key] = arguments[_key];
           }
           _this = _Component.call.apply(_Component, [this].concat(args)) || this;
-          _initializerDefineProperty(_this, "bundleName", _descriptor, _assertThisInitialized(_this));
-          _initializerDefineProperty(_this, "projectManifest", _descriptor2, _assertThisInitialized(_this));
-          _initializerDefineProperty(_this, "versionManifest", _descriptor3, _assertThisInitialized(_this));
+          _this.projectManifest = null;
           /** 下載進度 0 到 1 呼叫方接上進度條 */
           _this.onProgress = null;
-          /** 版本檢查有結果的當下觸發（不管是有新版要下載／已經最新／查詢失敗）呼叫方用來判斷「查版本」這段是不是已經結束 */
-          _this.onCheckResolved = null;
           _this.updateManager = null;
-          _this.cancelled = false;
           return _this;
         }
-        /** App 啟動初期（載入任何 bundle 之前）呼叫 把上次熱更成功後存的搜尋路徑還原回來 */
-        NativeBundleUpdater.restoreSearchPaths = function restoreSearchPaths() {
-          var raw = sys.localStorage.getItem(SEARCH_PATHS_STORAGE_KEY);
-          if (!raw) return;
-          try {
-            native.fileUtils.setSearchPaths(JSON.parse(raw));
-          } catch (err) {
-            console.warn('[NativeBundleUpdater] 還原搜尋路徑失敗', err);
-          }
-        }
-
         /**
          * App 啟動最早期（在 restoreSearchPaths 之前）針對每個熱更用的 bundle 呼叫
          * native.AssetsManager 下載時內部自己會用 `<resourceDir>_temp/` 當暫存目錄
@@ -14908,7 +14705,7 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
          * 在下載完成、搬移完成之間被系統或使用者殺掉
          * native/jsb-default/main.js 開機檢查
          * project.manifest.temp 這個檔案還在的話代表上次真的下載到一半 不要動
-         */;
+         */
         NativeBundleUpdater.finishInterruptedUpdate = function finishInterruptedUpdate(bundleName) {
           var resourceDir = "" + native.fileUtils.getWritablePath() + bundleName + "_update/";
           var tempDir = resourceDir + "_temp/";
@@ -14943,42 +14740,33 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
         function () {
           var _checkAndUpdate = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(cdnBase) {
             var _this2 = this;
-            var checkResolved, notifyCheckResolved, runtimeBase, localManifestPath, remoteManifest, localVersion, remoteVersion;
+            var runtimeBase, localManifestPath, remoteManifest, localVersion, remoteVersion;
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
-                  this.cancelled = false;
-                  checkResolved = false;
-                  notifyCheckResolved = function notifyCheckResolved() {
-                    if (checkResolved) return;
-                    checkResolved = true;
-                    _this2.onCheckResolved == null || _this2.onCheckResolved();
-                  };
-                  _context.prev = 3;
                   runtimeBase = this.resolveCdnBase(cdnBase);
                   this.prepareLocalManifests(runtimeBase);
                   localManifestPath = this.resourceDir + "project.manifest";
                   this.updateManager = new native.AssetsManager(localManifestPath, this.resourceDir, compareVersion);
-                  _context.next = 10;
+                  _context.next = 6;
                   return this.fetchRemoteManifest(runtimeBase);
-                case 10:
+                case 6:
                   remoteManifest = _context.sent;
                   localVersion = this.updateManager.getLocalManifest().getVersion();
                   remoteVersion = remoteManifest.getVersion();
-                  notifyCheckResolved();
                   if (!(compareVersion(localVersion, remoteVersion) >= 0)) {
-                    _context.next = 16;
+                    _context.next = 11;
                     break;
                   }
                   return _context.abrupt("return", NativeUpdateResult.UpToDate);
-                case 16:
+                case 11:
                   if (this.updateManager.loadRemoteManifest(remoteManifest)) {
-                    _context.next = 18;
+                    _context.next = 13;
                     break;
                   }
                   throw new Error('載入遠端 project.manifest 失敗');
-                case 18:
-                  _context.next = 20;
+                case 13:
+                  _context.next = 15;
                   return new Promise(function (resolve, reject) {
                     _this2.updateManager.setEventCallback(function (event) {
                       return _this2.onUpdateEvent(event, resolve, reject);
@@ -14986,37 +14774,19 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
                     _this2.updateManager.prepareUpdate();
                     _this2.updateManager.update();
                   });
-                case 20:
+                case 15:
                   return _context.abrupt("return", _context.sent);
-                case 23:
-                  _context.prev = 23;
-                  _context.t0 = _context["catch"](3);
-                  notifyCheckResolved();
-                  throw _context.t0;
-                case 27:
+                case 16:
                 case "end":
                   return _context.stop();
               }
-            }, _callee, this, [[3, 23]]);
+            }, _callee, this);
           }));
           function checkAndUpdate(_x) {
             return _checkAndUpdate.apply(this, arguments);
           }
           return checkAndUpdate;
-        }()
-        /**
-         * 逾時或呼叫方放棄等待時呼叫 讓晚到的事件不再生效 避免 UPDATE_FINISHED
-         * 觸發非預期的 game.restart 查過這個引擎版本的 native.AssetsManager
-         * 型別沒有任何取消/中止下載不再對後續事件有反應 底層下載本身
-         * 有沒有真的停掉 沒辦法從這裡控制 只是不會再觸發 restart
-         */;
-
-        _proto.cancel = function cancel() {
-          var _this$updateManager;
-          if (this.cancelled) return;
-          this.cancelled = true;
-          (_this$updateManager = this.updateManager) == null || _this$updateManager.setEventCallback(function () {});
-        };
+        }();
         _proto.resolveCdnBase = function resolveCdnBase(cdnBase) {
           var data = globalThis.__subGameData__;
           var value = cdnBase != null ? cdnBase : (data == null ? void 0 : data.gameId) === this.bundleName ? data.cdnBase : undefined;
@@ -15032,11 +14802,8 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
             native.fileUtils.createDirectory(this.resourceDir);
           }
           var localManifestPath = this.resourceDir + "project.manifest";
-          var localVersionPath = this.resourceDir + "version.manifest";
           var projectSource = native.fileUtils.isFileExist(localManifestPath) ? native.fileUtils.getStringFromFile(localManifestPath) : native.fileUtils.getStringFromFile(this.projectManifest.nativeUrl);
-          var versionSource = native.fileUtils.isFileExist(localVersionPath) ? native.fileUtils.getStringFromFile(localVersionPath) : native.fileUtils.getStringFromFile(this.versionManifest.nativeUrl);
           native.fileUtils.writeStringToFile(this.rewriteManifest(projectSource, cdnBase), localManifestPath);
-          native.fileUtils.writeStringToFile(this.rewriteManifest(versionSource, cdnBase), localVersionPath);
         };
         _proto.fetchRemoteManifest = /*#__PURE__*/function () {
           var _fetchRemoteManifest = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(cdnBase) {
@@ -15098,15 +14865,20 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
         };
         _proto.onUpdateEvent = function onUpdateEvent(event, resolve, reject) {
           var _this$onProgress;
-          if (this.cancelled) return;
           var code = event.getEventCode();
           switch (code) {
             case native.EventAssetsManager.UPDATE_PROGRESSION:
               (_this$onProgress = this.onProgress) == null || _this$onProgress.call(this, event.getPercent());
               break;
+            case native.EventAssetsManager.ALREADY_UP_TO_DATE:
+              resolve(NativeUpdateResult.UpToDate);
+              break;
             case native.EventAssetsManager.UPDATE_FINISHED:
               this.applyUpdateAndRestart(resolve);
               break;
+            case native.EventAssetsManager.ERROR_NO_LOCAL_MANIFEST:
+            case native.EventAssetsManager.ERROR_DOWNLOAD_MANIFEST:
+            case native.EventAssetsManager.ERROR_PARSE_MANIFEST:
             case native.EventAssetsManager.UPDATE_FAILED:
             case native.EventAssetsManager.ERROR_UPDATING:
             case native.EventAssetsManager.ERROR_DECOMPRESS:
@@ -15128,27 +14900,207 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
           game.restart();
         };
         _createClass(NativeBundleUpdater, [{
+          key: "bundleName",
+          get: function get() {
+            return GameConfigManager.GAMEID;
+          }
+        }, {
           key: "resourceDir",
           get: function get() {
             return "" + native.fileUtils.getWritablePath() + this.bundleName + "_update/";
           }
         }]);
         return NativeBundleUpdater;
-      }(Component), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "bundleName", [_dec2], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: function initializer() {
-          return '1001';
+      }(Component)) || _class));
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("bundle://1001/_virtual/NativeBundleUpdateView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameConfigManager.ts', './NativeBundleUpdater.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Asset, Node, ProgressBar, Label, sys, Component, GameConfigManager, NativeUpdateResult, NativeBundleUpdater;
+  return {
+    setters: [function (module) {
+      _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
+      _inheritsLoose = module.inheritsLoose;
+      _initializerDefineProperty = module.initializerDefineProperty;
+      _assertThisInitialized = module.assertThisInitialized;
+      _createClass = module.createClass;
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      _decorator = module._decorator;
+      Asset = module.Asset;
+      Node = module.Node;
+      ProgressBar = module.ProgressBar;
+      Label = module.Label;
+      sys = module.sys;
+      Component = module.Component;
+    }, function (module) {
+      GameConfigManager = module.default;
+    }, function (module) {
+      NativeUpdateResult = module.NativeUpdateResult;
+      NativeBundleUpdater = module.NativeBundleUpdater;
+    }],
+    execute: function () {
+      var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5;
+      cclegacy._RF.push({}, "be92coKIs9Pdpeq+QyOEAEB", "NativeBundleUpdateView", undefined);
+      var ccclass = _decorator.ccclass,
+        property = _decorator.property;
+      var RESTART_STORAGE_KEY = 'pending_game_entry_for_restart';
+
+      /**
+       * 掛在 1001 Loading 節點的原生熱更新元件。
+       * Web／Editor Preview 不執行；Native 更新成功會保存進場資訊並重啟。
+       */
+      var NativeBundleUpdateView = exports('NativeBundleUpdateView', (_dec = ccclass('1001/NativeBundleUpdateView'), _dec2 = property(Asset), _dec3 = property({
+        type: Node,
+        tooltip: '只有實際下載更新時才顯示的 NativeUpdatePanel'
+      }), _dec4 = property(ProgressBar), _dec5 = property(Label), _dec6 = property(Label), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+        _inheritsLoose(NativeBundleUpdateView, _Component);
+        function NativeBundleUpdateView() {
+          var _this;
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+          _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+          _initializerDefineProperty(_this, "projectManifest", _descriptor, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "updatePanel", _descriptor2, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "progressBar", _descriptor3, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "progressLabel", _descriptor4, _assertThisInitialized(_this));
+          _initializerDefineProperty(_this, "statusLabel", _descriptor5, _assertThisInitialized(_this));
+          _this.running = null;
+          return _this;
         }
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "projectManifest", [_dec3], {
+        var _proto = NativeBundleUpdateView.prototype;
+        _proto.onLoad = function onLoad() {
+          this.setPanelActive(false);
+        };
+        _proto.ensureUpdated = function ensureUpdated() {
+          if (!sys.isNative) return Promise.resolve();
+          if (this.running) return this.running;
+          this.running = this.run();
+          return this.running;
+        };
+        _proto.run = /*#__PURE__*/function () {
+          var _run = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+            var _this$node$getCompone,
+              _this2 = this;
+            var updater, pending, result;
+            return _regeneratorRuntime().wrap(function _callee$(_context) {
+              while (1) switch (_context.prev = _context.next) {
+                case 0:
+                  if (this.projectManifest) {
+                    _context.next = 3;
+                    break;
+                  }
+                  console.warn('[NativeBundleUpdateView] project.manifest 尚未在 Inspector 指定，略過更新');
+                  return _context.abrupt("return");
+                case 3:
+                  updater = (_this$node$getCompone = this.node.getComponent(NativeBundleUpdater)) != null ? _this$node$getCompone : this.node.addComponent(NativeBundleUpdater);
+                  updater.projectManifest = this.projectManifest;
+                  NativeBundleUpdater.finishInterruptedUpdate(this.bundleName);
+                  updater.onProgress = function (percent) {
+                    _this2.setPanelActive(true);
+                    _this2.setStatus('下載更新中...');
+                    _this2.updateProgress(percent);
+                  };
+                  this.setStatus('檢查更新中...');
+                  this.updateProgress(0);
+                  _context.prev = 9;
+                  pending = {
+                    bundle: this.bundleName,
+                    scene: this.bundleName,
+                    launchContext: GameConfigManager.launchContext
+                  };
+                  sys.localStorage.setItem(RESTART_STORAGE_KEY, JSON.stringify(pending));
+                  _context.next = 14;
+                  return updater.checkAndUpdate();
+                case 14:
+                  result = _context.sent;
+                  if (!(result === NativeUpdateResult.UpToDate)) {
+                    _context.next = 19;
+                    break;
+                  }
+                  sys.localStorage.removeItem(RESTART_STORAGE_KEY);
+                  this.setPanelActive(false);
+                  return _context.abrupt("return");
+                case 19:
+                  _context.next = 21;
+                  return new Promise(function () {});
+                case 21:
+                  _context.next = 28;
+                  break;
+                case 23:
+                  _context.prev = 23;
+                  _context.t0 = _context["catch"](9);
+                  sys.localStorage.removeItem(RESTART_STORAGE_KEY);
+                  console.warn('[NativeBundleUpdateView] 原生熱更新失敗，沿用內建版本', _context.t0);
+                  this.setPanelActive(false);
+                case 28:
+                  _context.prev = 28;
+                  updater.onProgress = null;
+                  return _context.finish(28);
+                case 31:
+                case "end":
+                  return _context.stop();
+              }
+            }, _callee, this, [[9, 23, 28, 31]]);
+          }));
+          function run() {
+            return _run.apply(this, arguments);
+          }
+          return run;
+        }();
+        _proto.setPanelActive = function setPanelActive(active) {
+          var _this$updatePanel;
+          if ((_this$updatePanel = this.updatePanel) != null && _this$updatePanel.isValid) this.updatePanel.active = active;
+        };
+        _proto.setStatus = function setStatus(text) {
+          if (this.statusLabel) this.statusLabel.string = text;
+        };
+        _proto.updateProgress = function updateProgress(percent) {
+          var ratio = Math.max(0, Math.min(1, Number.isFinite(percent) ? percent : 0));
+          if (this.progressBar) this.progressBar.progress = ratio;
+          if (this.progressLabel) this.progressLabel.string = Math.ceil(ratio * 100) + "%";
+        };
+        _createClass(NativeBundleUpdateView, [{
+          key: "bundleName",
+          get: function get() {
+            return GameConfigManager.GAMEID;
+          }
+        }]);
+        return NativeBundleUpdateView;
+      }(Component), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "projectManifest", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "versionManifest", [_dec4], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "updatePanel", [_dec3], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "progressBar", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "progressLabel", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "statusLabel", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -28145,152 +28097,6 @@ System.register("bundle://1001/_virtual/ViewStore.ts", ['./rollupPluginModLoBabe
         }]);
         return ViewStore;
       }());
-      cclegacy._RF.pop();
-    }
-  };
-});
-
-System.register("bundle://1001/_virtual/WebBundleVersionCheck.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './HotUpdateConfig.ts'], function (exports) {
-  var _asyncToGenerator, _regeneratorRuntime, cclegacy, sys, HOT_UPDATE_ENABLED_BUNDLES;
-  return {
-    setters: [function (module) {
-      _asyncToGenerator = module.asyncToGenerator;
-      _regeneratorRuntime = module.regeneratorRuntime;
-    }, function (module) {
-      cclegacy = module.cclegacy;
-      sys = module.sys;
-    }, function (module) {
-      HOT_UPDATE_ENABLED_BUNDLES = module.HOT_UPDATE_ENABLED_BUNDLES;
-    }],
-    execute: function () {
-      exports('checkWebBundleVersion', checkWebBundleVersion);
-      cclegacy._RF.push({}, "46db9l0jh5HTKPP66AhCVea", "WebBundleVersionCheck", undefined);
-
-      // 大廳透過 globalThis.__subGameData__ 傳進來的資料
-
-      // Web 只負責確認目前載入的 Bundle 是否仍和 CDN 最新發布一致
-      // 真正選擇與載入 Remote Bundle 已經由 entry 的 SubGame 負責
-      function checkWebBundleVersion(_x, _x2) {
-        return _checkWebBundleVersion.apply(this, arguments);
-      }
-      function _checkWebBundleVersion() {
-        _checkWebBundleVersion = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(bundleName, ui) {
-          var subGameData, cdnBase, versionUrl, _subGameData$version, _subGameData$version2, response, remote, loadedConfigVersion;
-          return _regeneratorRuntime().wrap(function _callee$(_context) {
-            while (1) switch (_context.prev = _context.next) {
-              case 0:
-                if (!sys.isNative) {
-                  _context.next = 3;
-                  break;
-                }
-                console.info('[WebBundleVersionCheck] 原生平台由 NativeBundleUpdater 處理 略過 Web 版本檢查');
-                return _context.abrupt("return");
-              case 3:
-                if (HOT_UPDATE_ENABLED_BUNDLES.has(bundleName)) {
-                  _context.next = 6;
-                  break;
-                }
-                console.info("[WebBundleVersionCheck] " + bundleName + " \u4E0D\u5728\u71B1\u66F4\u767D\u540D\u55AE\u5167 \u7565\u904E");
-                return _context.abrupt("return");
-              case 6:
-                // __subGameData__ 存在代表從 entry 大廳載入
-                // 沒有就是 slot_game 獨立 Editor Preview
-                subGameData = globalThis.__subGameData__;
-                console.info('[WebBundleVersionCheck] 收到大廳資料 __subGameData__=', JSON.stringify(subGameData != null ? subGameData : null));
-                if (subGameData != null && subGameData.cdnBase) {
-                  _context.next = 11;
-                  break;
-                }
-                console.info('[WebBundleVersionCheck] 沒有大廳傳入的 cdnBase 略過版本檢查');
-                return _context.abrupt("return");
-              case 11:
-                if (!(subGameData.gameId !== bundleName)) {
-                  _context.next = 14;
-                  break;
-                }
-                console.warn("[WebBundleVersionCheck] gameId \u4E0D\u7B26 \u5927\u5EF3=" + subGameData.gameId + " \u76EE\u524D=" + bundleName + " \u7565\u904E");
-                return _context.abrupt("return");
-              case 14:
-                cdnBase = subGameData.cdnBase.replace(/\/+$/, ''); // Web 固定路徑 不分版本資料夾
-                versionUrl = cdnBase + "/remote/" + bundleName + "/version.json";
-                ui == null || ui.show();
-                ui == null || ui.setStatus('檢查版本中...');
-                ui == null || ui.setProgress(0.1);
-                console.info("[WebBundleVersionCheck] \u958B\u59CB\u6AA2\u67E5 bundle=" + bundleName);
-                console.info("[WebBundleVersionCheck] \u67E5\u8A62 " + versionUrl);
-                _context.prev = 21;
-                _context.next = 24;
-                return fetch(versionUrl + "?t=" + Date.now(), {
-                  cache: 'no-store'
-                });
-              case 24:
-                response = _context.sent;
-                if (response.ok) {
-                  _context.next = 27;
-                  break;
-                }
-                throw new Error("HTTP " + response.status);
-              case 27:
-                _context.next = 29;
-                return response.json();
-              case 29:
-                remote = _context.sent;
-                ui == null || ui.setProgress(0.5);
-                validateRemoteVersion(bundleName, remote);
-                console.info("[WebBundleVersionCheck] \u9060\u7AEF\u6700\u65B0 v" + remote.version + " configVersion=" + remote.configVersion);
-
-                // 用 configVersion 比對而不是 packageUrl 因為 Web 路徑固定
-                loadedConfigVersion = subGameData.configVersion;
-                if (loadedConfigVersion) {
-                  _context.next = 39;
-                  break;
-                }
-                console.warn('[WebBundleVersionCheck] 目前 Bundle 的 configVersion 不明 無法比對');
-                ui == null || ui.setStatus('版本檢查完成');
-                ui == null || ui.setProgress(1);
-                return _context.abrupt("return");
-              case 39:
-                ui == null || ui.setProgress(0.8);
-                if (!(loadedConfigVersion === remote.configVersion)) {
-                  _context.next = 45;
-                  break;
-                }
-                console.info("[WebBundleVersionCheck] \u7248\u672C\u4E00\u81F4 v" + remote.version + " configVersion=" + remote.configVersion);
-                ui == null || ui.setStatus("\u7248\u672C v" + remote.version + " \u5DF2\u662F\u6700\u65B0");
-                ui == null || ui.setProgress(1);
-                return _context.abrupt("return");
-              case 45:
-                // configVersion 不一致 Web session 內含 script 的 bundle 無法熱換
-                // 下次重新開啟頁面會自動載入新版
-                console.warn('[WebBundleVersionCheck] 發現新版本 但本次 session 沿用已載入版本');
-                console.warn("[WebBundleVersionCheck]   \u76EE\u524D: v" + ((_subGameData$version = subGameData.version) != null ? _subGameData$version : '?') + " configVersion=" + loadedConfigVersion);
-                console.warn("[WebBundleVersionCheck]   \u6700\u65B0: v" + remote.version + " configVersion=" + remote.configVersion);
-                ui == null || ui.setStatus("\u767C\u73FE\u65B0\u7248\u672C v" + remote.version + "\uFF0C\u672C\u6B21\u4F7F\u7528 v" + ((_subGameData$version2 = subGameData.version) != null ? _subGameData$version2 : '?'));
-                ui == null || ui.setProgress(1);
-                _context.next = 57;
-                break;
-              case 52:
-                _context.prev = 52;
-                _context.t0 = _context["catch"](21);
-                console.warn('[WebBundleVersionCheck] 版本檢查失敗 使用目前已載入版本繼續', _context.t0);
-                ui == null || ui.setStatus('版本檢查失敗 使用目前版本');
-                ui == null || ui.setProgress(1);
-              case 57:
-              case "end":
-                return _context.stop();
-            }
-          }, _callee, null, [[21, 52]]);
-        }));
-        return _checkWebBundleVersion.apply(this, arguments);
-      }
-      function validateRemoteVersion(bundleName, remote) {
-        if (remote.bundleName !== bundleName) {
-          throw new Error("bundleName \u4E0D\u7B26 \u9060\u7AEF=" + remote.bundleName + " \u9810\u671F=" + bundleName);
-        }
-        if (!/^\d+(?:\.\d+)*$/.test(remote.version)) {
-          throw new Error("version \u683C\u5F0F\u932F\u8AA4: " + remote.version);
-        }
-      }
       cclegacy._RF.pop();
     }
   };
