@@ -1,6 +1,6 @@
-System.register("bundle://1001/_virtual/1001", ['./GameMain_1001.ts', './GameRoot.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './NgSymbol.ts', './ReelView.ts', './ReelView_1001.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './ServerConfig.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SpinShortcutController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './BundleVersionInfo.ts', './HotUpdateConfig.ts', './HotUpdateView.ts', './NativeBundleUpdater.ts', './WebBundleVersionCheck.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './AccountApiTypes.ts', './GameNetHandler.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiHandlers.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SlotWebSocketClient.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './slot-api-mock.ts', './start.ts', './simple-mock.ts', './SlotGameMain.ts', './FGState_1001.ts', './GameState.ts', './GameStateKey.ts', './NGState_1001.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './WinFreeGamePopupTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './SpinTypes.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BonusResultView.ts', './BuyFeaturePopupView.ts', './CameraSyncOrtho.ts', './CollectMulEffect.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './HsTransitionView.ts', './JackpotView.ts', './LoadingModel.ts', './LoadingView.ts', './LoadingViewModel.ts', './AlertView.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SelectBetView.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './RollingNumberLabel.ts', './SpineAssetMap.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusInterFace.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './WinAnimationView.ts', './WinFreeGamePopupView.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts'], function () {
+System.register("bundle://1001/_virtual/1001", ['./GameMain_1001.ts', './GameRoot.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './NgSymbol.ts', './ReelView.ts', './ReelView_1001.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './ServerConfig.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SpinShortcutController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './BundleVersionInfo.ts', './DownloadLogger.ts', './HotUpdateConfig.ts', './HotUpdateView.ts', './NativeBundleUpdater.ts', './WebBundleVersionCheck.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './AccountApiTypes.ts', './GameNetHandler.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiHandlers.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SlotWebSocketClient.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './slot-api-mock.ts', './start.ts', './simple-mock.ts', './SlotGameMain.ts', './FGState_1001.ts', './GameState.ts', './GameStateKey.ts', './NGState_1001.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './WinFreeGamePopupTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './SpinTypes.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BonusResultView.ts', './BuyFeaturePopupView.ts', './CameraSyncOrtho.ts', './CollectMulEffect.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './HsTransitionView.ts', './JackpotView.ts', './LoadingModel.ts', './LoadingView.ts', './LoadingViewModel.ts', './AlertView.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SelectBetView.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './RollingNumberLabel.ts', './SpineAssetMap.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusInterFace.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './WinAnimationView.ts', './WinFreeGamePopupView.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts'], function () {
   return {
-    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
   };
 });
@@ -6390,6 +6390,66 @@ System.register("bundle://1001/_virtual/DirectorSpeedHook.ts", ['cc'], function 
   };
 });
 
+System.register("bundle://1001/_virtual/DownloadLogger.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createForOfIteratorHelperLoose, cclegacy, sys;
+  return {
+    setters: [function (module) {
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      sys = module.sys;
+    }],
+    execute: function () {
+      exports({
+        startDownloadLog: startDownloadLog,
+        stopDownloadLog: stopDownloadLog
+      });
+      cclegacy._RF.push({}, "96d38PTJRBHbL4iJIyTGwFA", "DownloadLogger", undefined);
+      // 攔截 XMLHttpRequest.open 記錄實際發出的 HTTP 請求
+      // Cocos 內部用 XMLHttpRequest 下載 不走 downloader.downloadFile 實例屬性
+      var downloadLog = [];
+      var originalXHROpen = null;
+      function startDownloadLog() {
+        if (sys.isNative) return;
+        downloadLog = [];
+        if (originalXHROpen) return;
+        originalXHROpen = XMLHttpRequest.prototype.open;
+        var log = downloadLog;
+        var original = originalXHROpen;
+        XMLHttpRequest.prototype.open = function () {
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+          var url = args[1];
+          if (typeof url === 'string') {
+            log.push({
+              url: url,
+              time: Date.now()
+            });
+          }
+          return original.apply(this, args);
+        };
+      }
+      function stopDownloadLog(label) {
+        if (sys.isNative) return;
+        if (originalXHROpen) {
+          XMLHttpRequest.prototype.open = originalXHROpen;
+          originalXHROpen = null;
+        }
+        var log = downloadLog;
+        console.info("[DownloadLogger] ===== " + label + " \u4E0B\u8F09\u7D71\u8A08: " + log.length + " \u500B HTTP \u8ACB\u6C42 =====");
+        for (var _iterator = _createForOfIteratorHelperLoose(log), _step; !(_step = _iterator()).done;) {
+          var entry = _step.value;
+          console.info("[DownloadLogger]   " + entry.url);
+        }
+        console.info("[DownloadLogger] ===== \u4E0B\u8F09\u7D71\u8A08\u7D50\u675F =====");
+        downloadLog = [];
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("bundle://1001/_virtual/DualViewController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createClass, _createForOfIteratorHelperLoose, cclegacy;
   return {
@@ -9202,8 +9262,8 @@ System.register("bundle://1001/_virtual/GamePopupManager.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './WebBundleVersionCheck.ts', './HotUpdateView.ts', './EventComponent.ts', './PopupStack.ts', './RootStoreHooks.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, profiler, Component, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, startGameMock, gameRuntimeEventBus, AppConfig, checkWebBundleVersion, HotUpdateView, EventComponent, PopupStack, createRootStore, GAME_EVENT_TYPE;
+System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './WebBundleVersionCheck.ts', './HotUpdateView.ts', './DownloadLogger.ts', './EventComponent.ts', './PopupStack.ts', './RootStoreHooks.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, profiler, Component, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, startGameMock, gameRuntimeEventBus, AppConfig, checkWebBundleVersion, HotUpdateView, stopDownloadLog, startDownloadLog, EventComponent, PopupStack, createRootStore, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -9250,6 +9310,9 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
       checkWebBundleVersion = module.checkWebBundleVersion;
     }, function (module) {
       HotUpdateView = module.HotUpdateView;
+    }, function (module) {
+      stopDownloadLog = module.stopDownloadLog;
+      startDownloadLog = module.startDownloadLog;
     }, function (module) {
       EventComponent = module.EventComponent;
     }, function (module) {
@@ -9393,61 +9456,63 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                   return startGameMock();
                 case 5:
                   console.log('------ [GameRoot] initial ------ ');
+                  startDownloadLog();
 
                   // 熱更新檢查 在 LoadingView 之前執行
                   hotUpdateView = new HotUpdateView(this.node);
-                  _context.prev = 7;
-                  _context.next = 10;
+                  _context.prev = 8;
+                  _context.next = 11;
                   return checkWebBundleVersion(GameConfigManager.GAMEID, hotUpdateView);
-                case 10:
-                  _context.prev = 10;
+                case 11:
+                  _context.prev = 11;
                   hotUpdateView.destroy();
-                  return _context.finish(10);
-                case 13:
+                  return _context.finish(11);
+                case 14:
                   // 3.初始化 i18n
                   console.log('------ [GameRoot] initial initI18n ------ ');
-                  _context.next = 16;
+                  _context.next = 17;
                   return initI18n(undefined, GameConfigManager.GAMEID);
-                case 16:
+                case 17:
                   console.log('------ [GameRoot] loadServerConfig ------ ');
                   //載入 config 檔案
-                  _context.next = 19;
+                  _context.next = 20;
                   return this.loadServerConfig();
-                case 19:
+                case 20:
                   // 2.載入Bundle
                   console.log('------ [GameRoot] loadBundle ------ ');
-                  _context.next = 22;
+                  _context.next = 23;
                   return this.loadBundle();
-                case 22:
-                  _context.next = 24;
+                case 23:
+                  _context.next = 25;
                   return this.syncResolutionBeforeViewInit();
-                case 24:
+                case 25:
                   // 4.初始化 TemplateView
                   console.log('------ [GameRoot] initial addTemplateView ------ ');
-                  _context.next = 27;
+                  _context.next = 28;
                   return this.addTemplateView();
-                case 27:
+                case 28:
                   // 5.連線遊戲伺服器，取得遊戲初始資料
                   console.log('------ [GameRoot] initial addGamePrefab ------ ');
-                  _context.next = 30;
+                  _context.next = 31;
                   return this.addGamePrefab();
-                case 30:
+                case 31:
                   console.log('------ [GameRoot] initial connectGameServer ------ ');
-                  _context.next = 33;
+                  _context.next = 34;
                   return this.connectGameServer();
-                case 33:
+                case 34:
                   // 6.移除 LoadingView
                   this.removeLoadingView();
+                  stopDownloadLog(GameConfigManager.GAMEID);
                   console.log('------ LOADING TIME ------ ');
                   console.log('Total load time: ', performance.now() - startTime);
                   EagleTracker.trackerEvent(TrackerMap.GAME_LOAD_COMPLETE, {
                     total_load_time_ms: performance.now() - startTime
                   });
-                case 37:
+                case 39:
                 case "end":
                   return _context.stop();
               }
-            }, _callee, this, [[7,, 10, 13]]);
+            }, _callee, this, [[8,, 11, 14]]);
           }));
           function initial() {
             return _initial.apply(this, arguments);
