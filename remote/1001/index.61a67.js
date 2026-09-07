@@ -27159,39 +27159,47 @@ System.register("bundle://1001/_virtual/TemplateViewModel.ts", ['./rollupPluginM
           this.initGameTracker();
           this.initUserDefaultData();
         }
-        // 版號來自 bundle 自己的 version.json
+        // 版號優先用大廳帶過來的 SubGameData 其次讀 bundle 內的 version.json
         ;
 
         _proto.setVersionLabel = /*#__PURE__*/
         function () {
           var _setVersionLabel = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-            var _this$templateView, asset;
+            var _this$templateView, subGameData, asset;
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
                   _context.prev = 0;
-                  _context.next = 3;
+                  subGameData = globalThis.__subGameData__;
+                  if (!(subGameData != null && subGameData.version)) {
+                    _context.next = 5;
+                    break;
+                  }
+                  this.templateView.setVersionLabel(subGameData.version);
+                  return _context.abrupt("return");
+                case 5:
+                  _context.next = 7;
                   return this.assetBundle.loadAsset('version', JsonAsset);
-                case 3:
+                case 7:
                   asset = _context.sent;
                   if ((_this$templateView = this.templateView) != null && (_this$templateView = _this$templateView.node) != null && _this$templateView.isValid) {
-                    _context.next = 6;
+                    _context.next = 10;
                     break;
                   }
                   return _context.abrupt("return");
-                case 6:
+                case 10:
                   this.templateView.setVersionLabel(asset.json.version);
-                  _context.next = 12;
+                  _context.next = 16;
                   break;
-                case 9:
-                  _context.prev = 9;
+                case 13:
+                  _context.prev = 13;
                   _context.t0 = _context["catch"](0);
                   console.warn('[TemplateViewModel] version.json 讀取失敗', _context.t0);
-                case 12:
+                case 16:
                 case "end":
                   return _context.stop();
               }
-            }, _callee, this, [[0, 9]]);
+            }, _callee, this, [[0, 13]]);
           }));
           function setVersionLabel() {
             return _setVersionLabel.apply(this, arguments);
@@ -28167,7 +28175,7 @@ System.register("bundle://1001/_virtual/WebBundleVersionCheck.ts", ['./rollupPlu
       }
       function _checkWebBundleVersion() {
         _checkWebBundleVersion = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(bundleName, ui) {
-          var subGameData, cdnBase, versionUrl, _subGameData$version, response, remote, loadedConfigVersion;
+          var subGameData, cdnBase, versionUrl, _subGameData$version, _subGameData$version2, response, remote, loadedConfigVersion;
           return _regeneratorRuntime().wrap(function _callee$(_context) {
             while (1) switch (_context.prev = _context.next) {
               case 0:
@@ -28252,12 +28260,12 @@ System.register("bundle://1001/_virtual/WebBundleVersionCheck.ts", ['./rollupPlu
                 ui == null || ui.setProgress(1);
                 return _context.abrupt("return");
               case 45:
-                // configVersion 不一致 已載入的 bundle 版本過期
-                // 實際更新由 entry SubGameLoader 在載入階段處理 這裡只記錄
-                console.warn('[WebBundleVersionCheck] 目前載入版本與 CDN 最新版本不一致');
+                // configVersion 不一致 Web session 內含 script 的 bundle 無法熱換
+                // 下次重新開啟頁面會自動載入新版
+                console.warn('[WebBundleVersionCheck] 發現新版本 但本次 session 沿用已載入版本');
                 console.warn("[WebBundleVersionCheck]   \u76EE\u524D: v" + ((_subGameData$version = subGameData.version) != null ? _subGameData$version : '?') + " configVersion=" + loadedConfigVersion);
                 console.warn("[WebBundleVersionCheck]   \u6700\u65B0: v" + remote.version + " configVersion=" + remote.configVersion);
-                ui == null || ui.setStatus("\u7248\u672C v" + remote.version + " \u5DF2\u66F4\u65B0");
+                ui == null || ui.setStatus("\u767C\u73FE\u65B0\u7248\u672C v" + remote.version + "\uFF0C\u672C\u6B21\u4F7F\u7528 v" + ((_subGameData$version2 = subGameData.version) != null ? _subGameData$version2 : '?'));
                 ui == null || ui.setProgress(1);
                 _context.next = 57;
                 break;
