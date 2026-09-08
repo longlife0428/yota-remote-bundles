@@ -3770,9 +3770,8 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                   (_game$viewV3 = game.viewV) == null || (_game$viewV3 = _game$viewV3.slotMachineView.reelViews[_col7]) == null || _game$viewV3.explode(colElimRows[_col7], timing.explode);
                 }
                 spawnWinFloats(awards, colElimRows, currentCols, timing["float"]);
-                stepWin = steps[i].awards.reduce(function (s, a) {
-                  return s + (Number(a.pay) || 0);
-                }, 0);
+                // 用伺服器給的該步驟權威贏分 不要用 awards[].pay 自己加總 兩者可能因倍率等因素對不起來
+                stepWin = Number(steps[i].win) || 0;
                 game.addWinBarScore(stepWin);
                 _context7.next = 73;
                 return Promise.all(explodePromises);
@@ -5939,7 +5938,12 @@ System.register("bundle://1002/_virtual/FinishSpinTask.ts", ['./rollupPluginModL
       cclegacy._RF.push({}, "b4aa2VnR3hI2rUzPwNwXBNb", "FinishSpinTask", undefined);
       /** Spin 結算（贏分、餘額、tracker、buy-feature 收尾旗標）。 */
       function finishSpin(game, result, spinWin) {
-        game.storeManager.getModel('TemplateStore').setWinBalance(Number(spinWin.toFixed(2)));
+        var finalWin = Number(spinWin.toFixed(2));
+        game.storeManager.getModel('TemplateStore').setWinBalance(finalWin);
+        // win_bar 平常靠消除步驟逐步加總顯示 沒有倍率球可收時不會被 playWinBarAdd 校正回伺服器數字
+        // 這裡統一校正 避免跟 TemplateStore/WinAnimationView 用的 spinWin 對不起來
+        game.winBarValue = finalWin;
+        game.setWinBarNum(finalWin);
         var serverBalance = Number(result.balanceAfter);
         if (!isNaN(serverBalance)) {
           game.storeManager.getModel('UserStore').setBalance(serverBalance);
@@ -7990,10 +7994,6 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           this.subscribeEvent(bus, type, handler);
         };
         _proto.onLoad = function onLoad() {
-          GameRoot.instanceCount++;
-          if (GameRoot.instanceCount > 1) {
-            console.warn("[GameRoot] onLoad \u88AB\u547C\u53EB\u7B2C " + GameRoot.instanceCount + " \u6B21 \u5834\u666F\u88E1\u540C\u6642\u5B58\u5728\u591A\u500B GameRoot \u5BE6\u4F8B");
-          }
           console.log('GameRoot onLoad');
           // slot_game 獨立專案沒有 entry lobby 的 LoadingScene 幫忙建立 RootStore
           // 這裡自己補一次 createRootStore 內部已做過重複呼叫防呆
@@ -8066,16 +8066,11 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           var found = false;
           for (var _i = 0, _containers = containers; _i < _containers.length; _i++) {
             var container = _containers[_i];
-            if (!(container != null && container.isValid)) continue;
             for (var i = container.children.length - 1; i >= 0; i--) {
-              var child = container.children[i];
-              if (child.name !== viewName) continue;
-              if (!child.isValid) {
-                console.warn("[GameRoot] deleteView \"" + viewName + "\" \u5DF2\u7D93\u662F\u7121\u6548\u7BC0\u9EDE \u8DF3\u904E\u91CD\u8907 destroy");
-                continue;
+              if (container.children[i].name === viewName) {
+                container.children[i].destroy();
+                found = true;
               }
-              child.destroy();
-              found = true;
             }
           }
           if (!found) console.warn("[removeView] \u627E\u4E0D\u5230\u7BC0\u9EDE: " + viewName);
@@ -8485,15 +8480,10 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return loadServerConfig;
         }();
         _proto.removeLoadingView = function removeLoadingView() {
-          var _this$loadingView;
-          if (!((_this$loadingView = this.loadingView) != null && _this$loadingView.isValid)) {
-            console.warn('[GameRoot] removeLoadingView 被呼叫時 loadingView 已經無效 跳過重複 destroy');
-            return;
-          }
           this.loadingView.destroy();
         };
         return GameRoot;
-      }(EventComponent), _class3.TOP_LAYER = 4, _class3.instanceCount = 0, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "staticNode", [_dec2], {
+      }(EventComponent), _class3.TOP_LAYER = 4, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "staticNode", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
