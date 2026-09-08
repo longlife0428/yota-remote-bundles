@@ -3968,7 +3968,7 @@ System.register("bundle://1002/_virtual/CollectWinTask.ts", ['./rollupPluginModL
        */
       function _runCollectWin() {
         _runCollectWin = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(game, cols, acc, isFg, finalNum) {
-          var balls, col, row, info, ANIM_SEC, has23, lead, tasks;
+          var balls, col, row, info, ANIM_SEC, has23, lead, mulHoldExtra, finishDelay, tasks;
           return _regeneratorRuntime().wrap(function _callee$(_context) {
             while (1) switch (_context.prev = _context.next) {
               case 0:
@@ -3998,6 +3998,10 @@ System.register("bundle://1002/_virtual/CollectWinTask.ts", ['./rollupPluginModL
                 });
               case 9:
                 game.winBarMulEntered = false;
+
+                // 三段速度各自額外加碼 一般快速急速分別是 1s 0.5s 0.2s 加在合併進總分前 讓最終倍率多停留一下
+                mulHoldExtra = game.cascadeTiming().mulHoldExtra;
+                finishDelay = (balls.length + lead) * ANIM_SEC + 0.3 + mulHoldExtra;
                 tasks = [];
                 game.forEachView(function (v) {
                   var _v$slotMachineView;
@@ -4023,7 +4027,7 @@ System.register("bundle://1002/_virtual/CollectWinTask.ts", ['./rollupPluginModL
                       var _sk$node;
                       if (sk != null && (_sk$node = sk.node) != null && _sk$node.isValid) sk.node.active = false;
                       resolve();
-                    }, (balls.length + lead) * ANIM_SEC + 0.3);
+                    }, finishDelay);
                   }));
                 });
                 if (has23) {
@@ -4042,15 +4046,15 @@ System.register("bundle://1002/_virtual/CollectWinTask.ts", ['./rollupPluginModL
                   game.setWinBarMul(acc);
                   if (isFg) game.setTotalMultiplierLabel(acc);
                   game.playWinBarAdd(finalNum);
-                }, (balls.length + lead) * ANIM_SEC + 0.3);
-                _context.next = 17;
-                return Promise.all(tasks);
-              case 17:
+                }, finishDelay);
                 _context.next = 19;
-                return new Promise(function (r) {
-                  return setTimeout(r, 1000);
-                });
+                return Promise.all(tasks);
               case 19:
+                _context.next = 21;
+                return new Promise(function (resolve) {
+                  return game.scheduleOnce(resolve, 1);
+                });
+              case 21:
               case "end":
                 return _context.stop();
             }
@@ -5365,12 +5369,14 @@ System.register("bundle://1002/_virtual/DeviceStore.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/DirectorSpeedHook.ts", ['cc'], function (exports) {
-  var cclegacy, director;
+System.register("bundle://1002/_virtual/DirectorSpeedHook.ts", ['cc', './GameConfigManager.ts'], function (exports) {
+  var cclegacy, director, GameConfigManager;
   return {
     setters: [function (module) {
       cclegacy = module.cclegacy;
       director = module.director;
+    }, function (module) {
+      GameConfigManager = module.default;
     }],
     execute: function () {
       exports({
@@ -5379,30 +5385,47 @@ System.register("bundle://1002/_virtual/DirectorSpeedHook.ts", ['cc'], function 
         setDirectorSpeedFactor: setDirectorSpeedFactor
       });
       cclegacy._RF.push({}, "f6d2atGcpNNJ4jYQI2fig2B", "DirectorSpeedHook", undefined);
-      var installed = false;
-      var currentFactor = 1;
+
+      // director 是跨 Bundle 共用的全域單例 但這支腳本會隨各遊戲私有 Bundle 每次載入重新產生模組副本
+      // 如果 installed／currentFactor 只存在模組作用域 每次重進同一款遊戲都會在 director.tick 外面
+      // 再包一層 舊的包裝閉包（連同它 bind 住的舊 director.tick）永遠不會被釋放 疊到後面就會讓每一幀
+      // 都對著早已不存在的場景重新嘗試銷毀 演出 s[a]._destroyImmediate is not a function 的崩潰
+      // 比照 AppAudio／RootStore 的做法 狀態改放 globalThis 讓跨模組副本共用同一份
+      // key 用 GameConfigManager.GAMEID 動態組出來 這支檔案在每款遊戲都原封不動直接複製 不用改任何字
+      function scope() {
+        return globalThis;
+      }
+      function installedKey() {
+        return "__slotDirectorSpeedHookInstalled_" + GameConfigManager.GAMEID + "__";
+      }
+      function factorKey() {
+        return "__slotDirectorSpeedFactor_" + GameConfigManager.GAMEID + "__";
+      }
 
       /**
        * 攔截 director.tick(dt) 乘倍數往下傳
        * 含 Component update、Tween、scheduleOnce、Spine 動畫、shader 時間 uniform
        */
       function installDirectorSpeedHook() {
-        if (installed) return;
-        installed = true;
+        var g = scope();
+        if (g[installedKey()]) return;
+        g[installedKey()] = true;
+        if (g[factorKey()] === undefined) g[factorKey()] = 1;
         var originalTick = director.tick.bind(director);
         director.tick = function (dt) {
-          return originalTick(dt * currentFactor);
+          var _ref;
+          return originalTick(dt * ((_ref = scope()[factorKey()]) != null ? _ref : 1));
         };
       }
 
       /** 設定目前速度倍數 */
       function setDirectorSpeedFactor(factor) {
-        currentFactor = factor;
+        scope()[factorKey()] = factor;
       }
 
       /** 重置加速 NEW_GAME／onDestroy 都要 */
       function resetDirectorSpeedFactor() {
-        currentFactor = 1;
+        scope()[factorKey()] = 1;
       }
       cclegacy._RF.pop();
     }
@@ -7057,7 +7080,8 @@ System.register("bundle://1002/_virtual/GameMain_1002.ts", ['./rollupPluginModLo
             fillStagger: 0.03,
             fillEase: 'quadIn',
             "float": 1.2,
-            fgDelay: 500
+            fgDelay: 500,
+            mulHoldExtra: 1
           }, {
             colDelay: 0,
             tumbleClear: 0.36,
@@ -7072,7 +7096,8 @@ System.register("bundle://1002/_virtual/GameMain_1002.ts", ['./rollupPluginModLo
             fillStagger: 0.024,
             fillEase: 'quadIn',
             "float": 0.75,
-            fgDelay: 300
+            fgDelay: 300,
+            mulHoldExtra: 0.5
           }, {
             colDelay: 0,
             tumbleClear: 0.28,
@@ -7087,7 +7112,8 @@ System.register("bundle://1002/_virtual/GameMain_1002.ts", ['./rollupPluginModLo
             fillStagger: 0.02,
             fillEase: 'quadIn',
             "float": 0.45,
-            fgDelay: 150
+            fgDelay: 150,
+            mulHoldExtra: 0.2
           }];
           var turboIndex = this.getTurboIndex();
           var timing = table[turboIndex];
