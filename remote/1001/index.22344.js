@@ -1,6 +1,6 @@
-System.register("bundle://1001/_virtual/1001", ['./GameMain_1001.ts', './GameRoot.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './NgSymbol.ts', './ReelView.ts', './ReelView_1001.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './ServerConfig.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SpinShortcutController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './NativeBundleUpdateView.ts', './NativeBundleUpdater.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './AccountApiTypes.ts', './GameNetHandler.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiHandlers.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SlotWebSocketClient.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './slot-api-mock.ts', './start.ts', './simple-mock.ts', './SlotGameMain.ts', './FGState_1001.ts', './GameState.ts', './GameStateKey.ts', './NGState_1001.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './WinFreeGamePopupTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './SpinTypes.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BonusResultView.ts', './BuyFeaturePopupView.ts', './CameraSyncOrtho.ts', './CollectMulEffect.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './HsTransitionView.ts', './JackpotView.ts', './LoadingModel.ts', './LoadingView.ts', './LoadingViewModel.ts', './AlertView.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SelectBetView.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './RollingNumberLabel.ts', './SpineAssetMap.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusInterFace.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './WinAnimationView.ts', './WinFreeGamePopupView.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts'], function () {
+System.register("bundle://1001/_virtual/1001", ['./GameMain_1001.ts', './GameRoot.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './ServerConfig.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SpinShortcutController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './NativeBundleUpdateView.ts', './NativeBundleUpdater.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './AccountApiTypes.ts', './GameNetHandler.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiHandlers.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SlotWebSocketClient.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './slot-api-mock.ts', './start.ts', './simple-mock.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './NgSymbol.ts', './ReelView.ts', './ReelView_1001.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './SlotGameMain.ts', './FGState_1001.ts', './GameState.ts', './GameStateKey.ts', './NGState_1001.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './WinFreeGamePopupTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './SpinTypes.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BonusResultView.ts', './BuyFeaturePopupView.ts', './CameraSyncOrtho.ts', './CollectMulEffect.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './HsTransitionView.ts', './JackpotView.ts', './LoadingModel.ts', './LoadingView.ts', './LoadingViewModel.ts', './AlertView.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SelectBetView.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './RollingNumberLabel.ts', './SpineAssetMap.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './WinAnimationView.ts', './WinFreeGamePopupView.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts'], function () {
   return {
-    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
   };
 });
@@ -3315,7 +3315,7 @@ System.register("bundle://1001/_virtual/CameraSyncOrtho.ts", ['./rollupPluginMod
 });
 
 System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './WinFloatLabel.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './GameConfigManager.ts'], function (exports) {
-  var _asyncToGenerator, _regeneratorRuntime, _createForOfIteratorHelperLoose, _inheritsLoose, cclegacy, UITransform, Tween, tween, Vec3, sp, instantiate, GameTask, WinFloatLabel, AppAudio, StagedEffectPlayer, playLoopBySpeed, EFFECTSMAP, SPEED_BEHAVIOR, WIN_FX_STAGES, REEL_STOP_NORMAL_PRIORITY, REEL_STOP_BY_SYMBOL_ID, REEL_STOP_BY_KIND, REEL_STOP_NORMAL_POOL, GameConfigManager;
+  var _asyncToGenerator, _regeneratorRuntime, _createForOfIteratorHelperLoose, _inheritsLoose, cclegacy, UITransform, sp, instantiate, Tween, tween, Vec3, GameTask, WinFloatLabel, AppAudio, StagedEffectPlayer, playLoopBySpeed, EFFECTSMAP, SPEED_BEHAVIOR, WIN_FX_STAGES, REEL_STOP_NORMAL_PRIORITY, REEL_STOP_BY_SYMBOL_ID, REEL_STOP_BY_KIND, REEL_STOP_NORMAL_POOL, GameConfigManager;
   return {
     setters: [function (module) {
       _asyncToGenerator = module.asyncToGenerator;
@@ -3325,11 +3325,11 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
     }, function (module) {
       cclegacy = module.cclegacy;
       UITransform = module.UITransform;
+      sp = module.sp;
+      instantiate = module.instantiate;
       Tween = module.Tween;
       tween = module.tween;
       Vec3 = module.Vec3;
-      sp = module.sp;
-      instantiate = module.instantiate;
     }, function (module) {
       GameTask = module.GameTask;
     }, function (module) {
@@ -3377,7 +3377,7 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
       function _runCascadeReels() {
         _runCascadeReels = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(game, steps, terminalReplacements) {
           var _steps$, _firstGrid$columns;
-          var firstGrid, visibleRows, firstRedShaken, scattersRevealed, winFxStages, shakeScreen, applyMultiplierLabelsCol, applyMultiplierLabels, playReelStopSound, playChaMul, playCharacterMul, runTumbleSwap, playWinFloat, pickCenterCell, spawnWinFloats, timing, reelViews, colCount, sideByCol, c, frameName, frameIdxByName, toMutableCols, currentCols, boardNamesByCol, _loop2, _col4, colHasBall, hasHorusBall, hasAnubisBall, _loop3, i, touchedJackpotCols, _iterator6, _step6, _reelViews$_col11$fin, _reelViews$_col2, _game$viewV$slotMachi2, _game$viewV8, replacement, _replacement$position, _col11, row, frameIdx, posIdx, symIdx, symIdxV, _iterator7, _step7, _col12, _loop4, _col5;
+          var firstGrid, visibleRows, firstRedShaken, scattersRevealed, winFxStages, shakeScreen, applyMultiplierLabelRow, applyMultiplierLabelsCol, applyMultiplierLabels, playReelStopSound, playChaMul, playCharacterMul, runTumbleSwap, playWinFloat, pickCenterCell, spawnWinFloats, timing, reelViews, colCount, sideByCol, c, frameName, frameIdxByName, toMutableCols, currentCols, boardNamesByCol, _loop2, _col4, colHasBall, hasHorusBall, hasAnubisBall, _loop3, i, touchedJackpotCols, _iterator6, _step6, _reelViews$_col11$fin, _reelViews$_col2, _game$viewV$slotMachi2, _game$viewV8, replacement, _replacement$position, _col11, row, frameIdx, posIdx, symIdx, symIdxV, _iterator7, _step7, _col12, _loop4, _col5;
           return _regeneratorRuntime().wrap(function _callee2$(_context8) {
             while (1) switch (_context8.prev = _context8.next) {
               case 0:
@@ -3413,40 +3413,46 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                     }).start();
                   }
                 };
-                /** 單欄套用倍率球 symbol_m 動畫球 + 數字 以及 scatter/jackpot 的 spine 落定
+                /** 單顆球落定套用 symbol_m 動畫球 + 數字 以及 scatter/jackpot 的 spine 揭露
                  * 避免球/spine 先顯示靜態圖一段時間才變——轉動掉落途中 setSymbolDisplay 一律只顯示靜態圖
                  * 落定後才由這裡呼叫 revealScatter/revealJackpot 打開 */
-                applyMultiplierLabelsCol = function applyMultiplierLabelsCol(cols, sideByCol, col, landedRows) {
-                  var _sideByCol$col;
+                applyMultiplierLabelRow = function applyMultiplierLabelRow(cols, sideByCol, col, row, landed) {
+                  var _sideByCol$col, _reelsH$col, _game$viewV;
                   var reelsH = game.viewH.slotMachineView.reelViews;
                   if (col >= cols.length || col >= reelsH.length) return;
                   var side = (_sideByCol$col = sideByCol[col]) != null ? _sideByCol$col : 1;
+                  var m = game.definition.symbols.resolve(cols[col][row]);
+                  var value = m.kind === 'multiplier' ? m.value : null;
+                  (_reelsH$col = reelsH[col]) == null || _reelsH$col.setMultiplierLabel(row, value, side, m.colorTier);
+                  (_game$viewV = game.viewV) == null || (_game$viewV = _game$viewV.slotMachineView.reelViews[col]) == null || _game$viewV.setMultiplierLabel(row, value, side, m.colorTier);
+                  if (m.kind === 'scatter') {
+                    var _reelsH$col2, _game$viewV2;
+                    (_reelsH$col2 = reelsH[col]) == null || _reelsH$col2.revealScatter(row);
+                    (_game$viewV2 = game.viewV) == null || (_game$viewV2 = _game$viewV2.slotMachineView.reelViews[col]) == null || _game$viewV2.revealScatter(row);
+                    if (landed) {
+                      scattersRevealed++;
+                      AppAudio.getInstance().playEffect(scattersRevealed <= 2 ? EFFECTSMAP.S1_GET_1 : EFFECTSMAP.S1_GET_2, {
+                        interruptPaths: [EFFECTSMAP.S1_GET_1, EFFECTSMAP.S1_GET_2]
+                      });
+                    }
+                  }
+                  if (m.kind === 'jackpot') {
+                    var _reelsH$col3, _game$viewV3;
+                    (_reelsH$col3 = reelsH[col]) == null || _reelsH$col3.revealJackpot(row);
+                    (_game$viewV3 = game.viewV) == null || (_game$viewV3 = _game$viewV3.slotMachineView.reelViews[col]) == null || _game$viewV3.revealJackpot(row);
+                  }
+                  if (m.kind === 'multiplier' && m.colorTier === 1 && !firstRedShaken) {
+                    firstRedShaken = true;
+                    shakeScreen();
+                  }
+                };
+                /** 整欄套用（安全網用，冪等）：實際顯示已經由每顆球自己落定時的 onRowSettled 觸發過一次，
+                 * 這裡不重複帶 landed=true，避免 scatter 音效被算兩次 */
+                applyMultiplierLabelsCol = function applyMultiplierLabelsCol(cols, sideByCol, col, landedRows) {
+                  if (col >= cols.length) return;
                   for (var row = 0; row < cols[col].length; row++) {
-                    var _reelsH$col, _game$viewV;
-                    var m = game.definition.symbols.resolve(cols[col][row]);
-                    var value = m.kind === 'multiplier' ? m.value : null;
-                    (_reelsH$col = reelsH[col]) == null || _reelsH$col.setMultiplierLabel(row, value, side, m.colorTier);
-                    (_game$viewV = game.viewV) == null || (_game$viewV = _game$viewV.slotMachineView.reelViews[col]) == null || _game$viewV.setMultiplierLabel(row, value, side, m.colorTier);
-                    if (m.kind === 'scatter') {
-                      var _reelsH$col2, _game$viewV2;
-                      (_reelsH$col2 = reelsH[col]) == null || _reelsH$col2.revealScatter(row);
-                      (_game$viewV2 = game.viewV) == null || (_game$viewV2 = _game$viewV2.slotMachineView.reelViews[col]) == null || _game$viewV2.revealScatter(row);
-                      if (landedRows != null && landedRows.has(row)) {
-                        scattersRevealed++;
-                        AppAudio.getInstance().playEffect(scattersRevealed <= 2 ? EFFECTSMAP.S1_GET_1 : EFFECTSMAP.S1_GET_2, {
-                          interruptPaths: [EFFECTSMAP.S1_GET_1, EFFECTSMAP.S1_GET_2]
-                        });
-                      }
-                    }
-                    if (m.kind === 'jackpot') {
-                      var _reelsH$col3, _game$viewV3;
-                      (_reelsH$col3 = reelsH[col]) == null || _reelsH$col3.revealJackpot(row);
-                      (_game$viewV3 = game.viewV) == null || (_game$viewV3 = _game$viewV3.slotMachineView.reelViews[col]) == null || _game$viewV3.revealJackpot(row);
-                    }
-                    if (m.kind === 'multiplier' && m.colorTier === 1 && !firstRedShaken) {
-                      firstRedShaken = true;
-                      shakeScreen();
-                    }
+                    var _landedRows$has;
+                    applyMultiplierLabelRow(cols, sideByCol, col, row, (_landedRows$has = landedRows == null ? void 0 : landedRows.has(row)) != null ? _landedRows$has : false);
                   }
                 };
                 /** 依盤面 ids 驅動每顆倍率球的 symbol_m 動畫球(side/tier) + 常駐倍率數字，非倍率球清掉 */
@@ -3531,9 +3537,17 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                                       fired = true;
                                       playReelStopSound(currentCols[thisCol]);
                                     };
+                                    // 每顆球自己落定(到達targetY)就套倍率球/scatter/jackpot,不用等整欄——
+                                    // H/V 兩個 view 各自的 tumbleFill 都會呼叫到同一個 row,用 Set 去重避免重複套用/scatter 音效算兩次
+                                    var settledRows = new Set();
+                                    var onRowSettled = function onRowSettled(row) {
+                                      if (settledRows.has(row)) return;
+                                      settledRows.add(row);
+                                      applyMultiplierLabelRow(currentCols, sideByCol, thisCol, row, true);
+                                    };
                                     return Promise.all(game.allViews.map(function (v) {
                                       var rv = v.slotMachineView.reelViews[thisCol];
-                                      return rv ? rv.tumbleFill(symbolNames, timing.tumbleFill, 0.04, onFirstLanded, timing.tumbleFillEase) : Promise.resolve();
+                                      return rv ? rv.tumbleFill(symbolNames, timing.tumbleFill, 0.04, onFirstLanded, timing.tumbleFillEase, onRowSettled) : Promise.resolve();
                                     }));
                                   }).then(function () {
                                     if (onColFilled) onColFilled(thisCol);
@@ -3689,17 +3703,17 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                   }, _loop2);
                 });
                 _col4 = 0;
-              case 29:
+              case 30:
                 if (!(_col4 < colCount)) {
-                  _context8.next = 34;
+                  _context8.next = 35;
                   break;
                 }
-                return _context8.delegateYield(_loop2(_col4), "t0", 31);
-              case 31:
+                return _context8.delegateYield(_loop2(_col4), "t0", 32);
+              case 32:
                 _col4++;
-                _context8.next = 29;
+                _context8.next = 30;
                 break;
-              case 34:
+              case 35:
                 // 倍率球出現 → 對應角色舉手(mul)，稍候盤面落定打雷（m1=荷魯斯 cha_001、m2=阿努比斯 cha_002）
                 colHasBall = function colHasBall(ids) {
                   return ids.some(function (id) {
@@ -3713,29 +3727,27 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                   return colHasBall(ids) && sideByCol[col] === 2;
                 });
                 if (!(hasHorusBall || hasAnubisBall)) {
-                  _context8.next = 41;
+                  _context8.next = 42;
                   break;
                 }
                 playCharacterMul(hasHorusBall, hasAnubisBall);
-                _context8.next = 41;
+                _context8.next = 42;
                 return new Promise(function (r) {
                   return game.scheduleOnce(r, game.charMulLeadMs / 1000);
                 });
-              case 41:
+              case 42:
                 // 輪軸開始轉動，查 SPEED_BEHAVIOR 表決定快停/極速模式要不要播（G6）
                 playLoopBySpeed(SPEED_BEHAVIOR, EFFECTSMAP.REEL_START, game.storeManager.getGameStore().turboStatus);
 
-                // 每欄落定當下就套倍率球（不等全部 6 欄），避免球先顯示靜態圖一段時間才切 symbol_m
-                _context8.next = 44;
+                // 每顆球自己落定當下就套倍率球（tumbleFill 的 onRowSettled，不用等整欄）；
+                // 這裡整欄再套一次只是安全網（冪等，不重複帶 landed 避免 scatter 音效算兩次）
+                _context8.next = 45;
                 return runTumbleSwap(boardNamesByCol, function (col) {
-                  var landedRows = new Set(currentCols[col].map(function (_, row) {
-                    return row;
-                  }));
-                  applyMultiplierLabelsCol(currentCols, sideByCol, col, landedRows);
+                  applyMultiplierLabelsCol(currentCols, sideByCol, col);
                   // playReelStopSound(currentCols[col]); // 播該欄停輪音(這裡是全部動畫做完才播) 移到 tumbleFill
                 });
 
-              case 44:
+              case 45:
                 AppAudio.getInstance().stopLoopEffect(EFFECTSMAP.REEL_START);
                 game.allViews.forEach(function (v) {
                   return v.slotMachineModel.onAllStopped();
@@ -3938,46 +3950,46 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                   }, _loop3);
                 });
                 i = 0;
-              case 49:
+              case 50:
                 if (!(i < steps.length)) {
-                  _context8.next = 56;
+                  _context8.next = 57;
                   break;
                 }
-                return _context8.delegateYield(_loop3(), "t1", 51);
-              case 51:
+                return _context8.delegateYield(_loop3(), "t1", 52);
+              case 52:
                 if (!_context8.t1) {
-                  _context8.next = 53;
+                  _context8.next = 54;
                   break;
                 }
-                return _context8.abrupt("continue", 53);
-              case 53:
+                return _context8.abrupt("continue", 54);
+              case 54:
                 i++;
-                _context8.next = 49;
+                _context8.next = 50;
                 break;
-              case 56:
+              case 57:
                 // JP symbol 由 presentation.main.terminal_replacements
                 // 不能靠上面 Awards 迴圈帶出來
                 touchedJackpotCols = new Set();
                 _iterator6 = _createForOfIteratorHelperLoose(terminalReplacements != null ? terminalReplacements : []);
-              case 58:
+              case 59:
                 if ((_step6 = _iterator6()).done) {
-                  _context8.next = 75;
+                  _context8.next = 76;
                   break;
                 }
                 replacement = _step6.value;
                 _replacement$position = replacement.position, _col11 = _replacement$position.col, row = _replacement$position.row;
                 if (!(_col11 < 0 || _col11 >= colCount || row < 0 || row >= visibleRows)) {
-                  _context8.next = 63;
+                  _context8.next = 64;
                   break;
                 }
-                return _context8.abrupt("continue", 73);
-              case 63:
+                return _context8.abrupt("continue", 74);
+              case 64:
                 if (!(currentCols[_col11][row] === replacement.to_symbol_id)) {
-                  _context8.next = 65;
+                  _context8.next = 66;
                   break;
                 }
-                return _context8.abrupt("continue", 73);
-              case 65:
+                return _context8.abrupt("continue", 74);
+              case 66:
                 frameIdx = frameIdxByName(frameName(replacement.to_symbol_id, _col11));
                 posIdx = row + 2;
                 symIdx = (_reelViews$_col11$fin = (_reelViews$_col2 = reelViews[_col11]) == null ? void 0 : _reelViews$_col2.findSymbolNodeAtPosIndex(posIdx)) != null ? _reelViews$_col11$fin : -1;
@@ -3986,10 +3998,10 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                 if (symIdxV >= 0) game.viewV.slotMachineView.reelViews[_col11].setSymbolDisplay(symIdxV, frameIdx);
                 currentCols[_col11][row] = replacement.to_symbol_id;
                 touchedJackpotCols.add(_col11);
-              case 73:
-                _context8.next = 58;
+              case 74:
+                _context8.next = 59;
                 break;
-              case 75:
+              case 76:
                 // 落定setSymbolDisplay只會顯示靜態圖
                 // 動效判斷交給 applyMultiplierLabelsCol
                 for (_iterator7 = _createForOfIteratorHelperLoose(touchedJackpotCols); !(_step7 = _iterator7()).done;) {
@@ -3999,7 +4011,7 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
 
                 // viewV 的 cascade 是 fire-and-forget，把最終盤同步回去
                 if (!game.viewV) {
-                  _context8.next = 84;
+                  _context8.next = 85;
                   break;
                 }
                 _loop4 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop4(_col5) {
@@ -4019,19 +4031,19 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                   }, _loop4);
                 });
                 _col5 = 0;
-              case 79:
+              case 80:
                 if (!(_col5 < colCount)) {
-                  _context8.next = 84;
+                  _context8.next = 85;
                   break;
                 }
-                return _context8.delegateYield(_loop4(_col5), "t2", 81);
-              case 81:
+                return _context8.delegateYield(_loop4(_col5), "t2", 82);
+              case 82:
                 _col5++;
-                _context8.next = 79;
+                _context8.next = 80;
                 break;
-              case 84:
-                return _context8.abrupt("return", currentCols);
               case 85:
+                return _context8.abrupt("return", currentCols);
+              case 86:
               case "end":
                 return _context8.stop();
             }
@@ -4465,11 +4477,12 @@ System.register("bundle://1001/_virtual/CollectWinTask.ts", ['./rollupPluginModL
       /** 新曲射版本 */
       function _runCollectWinWithArtAnimation() {
         _runCollectWinWithArtAnimation = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(game, balls, hasMulValue, acc, isFg, finalNum) {
-          var lead, tasks;
+          var lead, finishDelay, tasks;
           return _regeneratorRuntime().wrap(function _callee2$(_context2) {
             while (1) switch (_context2.prev = _context2.next) {
               case 0:
-                lead = hasMulValue ? 1 : 0;
+                lead = hasMulValue ? 1 : 0; // 三段速度各自額外加碼 一般快速急速分別是 1s 0.5s 0.2s 加在合併進總分前 讓最終倍率多停留一下
+                finishDelay = (balls.length + lead) * ANIM_SEC + 0.3 + game.cascadeTiming().mulHoldExtra;
                 tasks = [];
                 game.forEachView(function (v) {
                   var _v$bg, _root$getChildByName, _v$slotMachineView;
@@ -4503,7 +4516,7 @@ System.register("bundle://1001/_virtual/CollectWinTask.ts", ['./rollupPluginModL
                         sk.node.active = false;
                       }
                       resolve();
-                    }, (balls.length + lead) * ANIM_SEC + 0.3);
+                    }, finishDelay);
                   }));
                 });
                 if (hasMulValue) {
@@ -4524,10 +4537,10 @@ System.register("bundle://1001/_virtual/CollectWinTask.ts", ['./rollupPluginModL
                     game.setTotalMultiplierLabel(acc);
                   }
                   game.playWinBarAdd(finalNum);
-                }, (balls.length + lead) * ANIM_SEC + 0.3);
-                _context2.next = 8;
+                }, finishDelay);
+                _context2.next = 9;
                 return Promise.all(tasks);
-              case 8:
+              case 9:
               case "end":
                 return _context2.stop();
             }
@@ -4641,13 +4654,18 @@ System.register("bundle://1001/_virtual/CollectWinTask.ts", ['./rollupPluginModL
                 _context4.next = 12;
                 break;
               case 16:
+                _context4.next = 18;
+                return new Promise(function (resolve) {
+                  return game.scheduleOnce(resolve, game.cascadeTiming().mulHoldExtra);
+                });
+              case 18:
                 game.winBarMulValue = acc;
                 game.setWinBarMul(acc);
                 if (isFg) {
                   game.setTotalMultiplierLabel(acc);
                 }
                 game.playWinBarAdd(finalNum);
-              case 20:
+              case 22:
               case "end":
                 return _context4.stop();
             }
@@ -6327,12 +6345,14 @@ System.register("bundle://1001/_virtual/DeviceStore.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1001/_virtual/DirectorSpeedHook.ts", ['cc'], function (exports) {
-  var cclegacy, director;
+System.register("bundle://1001/_virtual/DirectorSpeedHook.ts", ['cc', './GameConfigManager.ts'], function (exports) {
+  var cclegacy, director, GameConfigManager;
   return {
     setters: [function (module) {
       cclegacy = module.cclegacy;
       director = module.director;
+    }, function (module) {
+      GameConfigManager = module.default;
     }],
     execute: function () {
       exports({
@@ -6341,30 +6361,47 @@ System.register("bundle://1001/_virtual/DirectorSpeedHook.ts", ['cc'], function 
         setDirectorSpeedFactor: setDirectorSpeedFactor
       });
       cclegacy._RF.push({}, "d3b73HPYEVKWKOmvQJ525kP", "DirectorSpeedHook", undefined);
-      var installed = false;
-      var currentFactor = 1;
+
+      // director 是跨 Bundle 共用的全域單例 但這支腳本會隨各遊戲私有 Bundle 每次載入重新產生模組副本
+      // 如果 installed／currentFactor 只存在模組作用域 每次重進同一款遊戲都會在 director.tick 外面
+      // 再包一層 舊的包裝閉包（連同它 bind 住的舊 director.tick）永遠不會被釋放 疊到後面就會讓每一幀
+      // 都對著早已不存在的場景重新嘗試銷毀 演出 s[a]._destroyImmediate is not a function 的崩潰
+      // 比照 AppAudio／RootStore 的做法 狀態改放 globalThis 讓跨模組副本共用同一份
+      // key 用 GameConfigManager.GAMEID 動態組出來 這支檔案在每款遊戲都原封不動直接複製 不用改任何字
+      function scope() {
+        return globalThis;
+      }
+      function installedKey() {
+        return "__slotDirectorSpeedHookInstalled_" + GameConfigManager.GAMEID + "__";
+      }
+      function factorKey() {
+        return "__slotDirectorSpeedFactor_" + GameConfigManager.GAMEID + "__";
+      }
 
       /**
        * 攔截 director.tick(dt) 乘倍數往下傳
        * 含 Component update、Tween、scheduleOnce、Spine 動畫、shader 時間 uniform
        */
       function installDirectorSpeedHook() {
-        if (installed) return;
-        installed = true;
+        var g = scope();
+        if (g[installedKey()]) return;
+        g[installedKey()] = true;
+        if (g[factorKey()] === undefined) g[factorKey()] = 1;
         var originalTick = director.tick.bind(director);
         director.tick = function (dt) {
-          return originalTick(dt * currentFactor);
+          var _ref;
+          return originalTick(dt * ((_ref = scope()[factorKey()]) != null ? _ref : 1));
         };
       }
 
       /** 設定目前速度倍數 */
       function setDirectorSpeedFactor(factor) {
-        currentFactor = factor;
+        scope()[factorKey()] = factor;
       }
 
       /** 重置加速 NEW_GAME／onDestroy 都要 */
       function resetDirectorSpeedFactor() {
-        currentFactor = 1;
+        scope()[factorKey()] = 1;
       }
       cclegacy._RF.pop();
     }
@@ -6548,7 +6585,8 @@ System.register("bundle://1001/_virtual/EagleTracker.ts", ['cc', './StoreManager
         };
         EagleTracker.trackerEvent = function trackerEvent(eventName, params) {
           console.log("[EagleTracker] trackEvent: " + eventName, params);
-          if (window.trackEvent) window.trackEvent(eventName, params);
+          var trackEvent = window.trackEvent;
+          trackEvent == null || trackEvent(eventName, params);
         };
         return EagleTracker;
       }());
@@ -8063,7 +8101,8 @@ System.register("bundle://1001/_virtual/GameMain_1001.ts", ['./rollupPluginModLo
             fillStagger: 0.03,
             fillEase: 'quadIn',
             "float": 1.2,
-            fgDelay: 500
+            fgDelay: 500,
+            mulHoldExtra: 1
           }, {
             colDelay: 0,
             tumbleClear: 0.36,
@@ -8078,7 +8117,8 @@ System.register("bundle://1001/_virtual/GameMain_1001.ts", ['./rollupPluginModLo
             fillStagger: 0.024,
             fillEase: 'quadIn',
             "float": 0.75,
-            fgDelay: 300
+            fgDelay: 300,
+            mulHoldExtra: 0.5
           }, {
             colDelay: 0,
             tumbleClear: 0.28,
@@ -8093,7 +8133,8 @@ System.register("bundle://1001/_virtual/GameMain_1001.ts", ['./rollupPluginModLo
             fillStagger: 0.02,
             fillEase: 'quadIn',
             "float": 0.45,
-            fgDelay: 150
+            fgDelay: 150,
+            mulHoldExtra: 0.2
           }];
           var turboIndex = this.getTurboIndex();
           var timing = table[turboIndex];
@@ -12127,7 +12168,8 @@ System.register("bundle://1001/_virtual/HistoryModel.ts", ['./rollupPluginModLoB
                 case 4:
                   items.forEach(function (history) {
                     if (_this.storeManager.getGameStore().roundId === history.operationId) return;
-                    var item = _this.view.addHistoryItem(_this.storeManager.getDeviceStore().orientation);
+                    var orientation = _this.storeManager.getDeviceStore().orientation || ORIENTATION.LANDSCAPE;
+                    var item = _this.view.addHistoryItem(orientation);
                     var itemTS = item.getComponent(_this.HistoryItem);
                     itemTS.titleData = history;
                     itemTS.historyView = _this.view;
@@ -13152,8 +13194,8 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1001/_virtual/i18nHelper.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './LanguageData.ts', './AppAssetBundle.ts'], function (exports) {
-  var _asyncToGenerator, _regeneratorRuntime, cclegacy, JsonAsset, setLanguageMap, i18nInit, currentLanguage, resolveLanguageCode, AppAssetBundle;
+System.register("bundle://1001/_virtual/i18nHelper.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './LanguageData.ts', './AppAssetBundle.ts', './GameConfigManager.ts'], function (exports) {
+  var _asyncToGenerator, _regeneratorRuntime, cclegacy, JsonAsset, setLanguageMap, i18nInit, currentLanguage, resolveLanguageCode, AppAssetBundle, GameConfigManager;
   return {
     setters: [function (module) {
       _asyncToGenerator = module.asyncToGenerator;
@@ -13168,6 +13210,8 @@ System.register("bundle://1001/_virtual/i18nHelper.ts", ['./rollupPluginModLoBab
       resolveLanguageCode = module.resolveLanguageCode;
     }, function (module) {
       AppAssetBundle = module.default;
+    }, function (module) {
+      GameConfigManager = module.default;
     }],
     execute: function () {
       exports({
@@ -13179,7 +13223,7 @@ System.register("bundle://1001/_virtual/i18nHelper.ts", ['./rollupPluginModLoBab
       /**
        * 初始化 i18n（手動呼叫）
        * @param defaultLang - 預設語言，如未指定則從 URL ?language= 讀取
-       * @param bundleName - 語言 JSON 所在的 bundle，預設 "Core"
+       * @param bundleName - 語言 JSON 所在的 bundle，預設目前子遊戲
        */
       function initI18n(_x, _x2) {
         return _initI18n.apply(this, arguments);
@@ -13188,7 +13232,7 @@ System.register("bundle://1001/_virtual/i18nHelper.ts", ['./rollupPluginModLoBab
       /**
        * 切換語言
        * @param lang - 語言碼，如 "zh-CN" 或 "en-US"
-       * @param bundleName - 語言 JSON 所在的 bundle，預設 "Core"
+       * @param bundleName - 語言 JSON 所在的 bundle，預設目前子遊戲
        */
       function _initI18n() {
         _initI18n = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(defaultLang, bundleName) {
@@ -13198,7 +13242,7 @@ System.register("bundle://1001/_virtual/i18nHelper.ts", ['./rollupPluginModLoBab
             while (1) switch (_context.prev = _context.next) {
               case 0:
                 if (bundleName === void 0) {
-                  bundleName = 'Core';
+                  bundleName = GameConfigManager.GAMEID;
                 }
                 urlParams = new URLSearchParams(((_window$location = window.location) == null ? void 0 : _window$location.search) || '');
                 initLang = defaultLang || urlParams.get('language') || 'zh-HK'; // 先載入 JSON，再設語言 → 確保 reaction 觸發時語言檔已就緒
@@ -13234,7 +13278,7 @@ System.register("bundle://1001/_virtual/i18nHelper.ts", ['./rollupPluginModLoBab
             while (1) switch (_context2.prev = _context2.next) {
               case 0:
                 if (bundleName === void 0) {
-                  bundleName = 'Core';
+                  bundleName = GameConfigManager.GAMEID;
                 }
                 // 用 resolveLanguageCode 只做正規化、不觸發 LANGUAGE_CHANGED，
                 // 確保新語言的 JSON 先載入、setLanguageMap 完成後，i18nInit 才觸發事件通知 UI 更新，
@@ -13840,9 +13884,9 @@ System.register("bundle://1001/_virtual/LanguageData.ts", ['./rollupPluginModLoB
                 i18nImageDirectory = path + "i18nResource/" + targetLanguage + "/image"; // 如果找不到对应语言的图片目录，则使用默认语言
                 if (bundle.getDirWithPath(i18nImageDirectory).length <= 0) {
                   if (targetLanguage === "zh-HK" || targetLanguage === "zh-CN") {
-                    i18nImageDirectory = i18nImageDirectory.replaceAll(targetLanguage, "zh-CN");
+                    i18nImageDirectory = i18nImageDirectory.split(targetLanguage).join("zh-CN");
                   } else {
-                    i18nImageDirectory = i18nImageDirectory.replaceAll(targetLanguage, "en-US");
+                    i18nImageDirectory = i18nImageDirectory.split(targetLanguage).join("en-US");
                   }
                 }
                 searchName = i18nImageDirectory + "/" + spriteName + "/spriteFrame";
@@ -16850,7 +16894,7 @@ System.register("bundle://1001/_virtual/ReelView_1001.ts", ['./rollupPluginModLo
         /** 消除爆破：有 symbol_frame 特效的格子播 spine 取代縮小 tween；timeScale 隨三段速的 explode 時長縮放 */;
         _proto.explode = /*#__PURE__*/function () {
           var _explode = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(rows, explodeTime) {
-            var fxRows, tasks, speed, _iterator, _step, row, idx, ng, rest;
+            var fxRows, tasks, speed, _iterator, _step, _row, idx, ng, rest;
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
@@ -16858,11 +16902,11 @@ System.register("bundle://1001/_virtual/ReelView_1001.ts", ['./rollupPluginModLo
                   tasks = [];
                   speed = ReelView_1001.ELIMINATE_BASE_TIME / Math.max(explodeTime, 0.05);
                   for (_iterator = _createForOfIteratorHelperLoose(rows); !(_step = _iterator()).done;) {
-                    row = _step.value;
-                    idx = this.findSymbolNodeAtPosIndex(row + 2);
+                    _row = _step.value;
+                    idx = this.findSymbolNodeAtPosIndex(_row + 2);
                     ng = idx >= 0 ? this.coinDisplays[idx] : null;
                     if (ng != null && ng.hasEliminateFx()) {
-                      fxRows.push(row);
+                      fxRows.push(_row);
                       tasks.push(ng.playEliminate(speed));
                     }
                   }
@@ -16900,8 +16944,8 @@ System.register("bundle://1001/_virtual/ReelView_1001.ts", ['./rollupPluginModLo
           var promises = [];
           for (var _iterator2 = _createForOfIteratorHelperLoose(rows), _step2; !(_step2 = _iterator2()).done;) {
             var _this$currentSymbolNa;
-            var row = _step2.value;
-            var idx = this.findSymbolNodeAtPosIndex(row + 2);
+            var _row2 = _step2.value;
+            var idx = this.findSymbolNodeAtPosIndex(_row2 + 2);
             if (idx < 0) continue;
             var ng = this.coinDisplays[idx];
             if (ng) promises.push(ng.playWin((_this$currentSymbolNa = this.currentSymbolNames[idx]) != null ? _this$currentSymbolNa : undefined, speed));
@@ -16956,9 +17000,9 @@ System.register("bundle://1001/_virtual/ReelView_1001.ts", ['./rollupPluginModLo
           }
           for (var i = 0; i < this.strip.length; i++) {
             if (!this.isCoinFrame(this.strip[i])) continue;
-            var row = (i - finalRng - 2 + this.strip.length * 2) % this.strip.length;
-            if (row < 3 && correctMap.has(row)) {
-              this.stripCoinAmounts.set(i, correctMap.get(row));
+            var _row3 = (i - finalRng - 2 + this.strip.length * 2) % this.strip.length;
+            if (_row3 < 3 && correctMap.has(_row3)) {
+              this.stripCoinAmounts.set(i, correctMap.get(_row3));
             } else {
               this.stripCoinAmounts.set(i, this.randomCoinAmount());
             }
@@ -17148,7 +17192,7 @@ System.register("bundle://1001/_virtual/ReelView_1001.ts", ['./rollupPluginModLo
           return tumbleClear;
         }();
         _proto.tumbleFill = /*#__PURE__*/function () {
-          var _tumbleFill = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(newSymbolNames, fillTime, rowDelay, onFirstLanded, fillEase) {
+          var _tumbleFill = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(newSymbolNames, fillTime, rowDelay, onFirstLanded, fillEase, onRowSettled) {
             var _this4 = this;
             var cellHeight, startY, promises, fillOrder, _loop3, i;
             return _regeneratorRuntime().wrap(function _callee3$(_context5) {
@@ -17160,7 +17204,7 @@ System.register("bundle://1001/_virtual/ReelView_1001.ts", ['./rollupPluginModLo
                   if (fillEase === void 0) {
                     fillEase = 'quadIn';
                   }
-                  // onSymbolSettled 在落定 tween 的 .call 同步觸發(仍在此 await 內),放行窗口涵蓋整個初始盤落定
+                  // onSymbolSettled 在到達 targetY 當下同步觸發(不等落地彈跳/squash尾巴播完),放行窗口涵蓋整個初始盤落定
                   this.allowSettleLightning = true;
                   cellHeight = this.posList[1].position.y - this.posList[2].position.y;
                   startY = this.posList[0].position.y + cellHeight * 2;
@@ -17210,11 +17254,12 @@ System.register("bundle://1001/_virtual/ReelView_1001.ts", ['./rollupPluginModLo
                             }, {
                               easing: fillEase
                             }).call(function () {
-                              return onFirstLanded == null ? void 0 : onFirstLanded();
-                            }); // 到達 targetY
+                              onFirstLanded == null || onFirstLanded();
+                              _this4.onSymbolSettled(symIdx); // 到達 targetY 就打雷 不等落地彈跳/squash尾巴
+                              onRowSettled == null || onRowSettled(nameIdx);
+                            });
                             _this4.landingSquash(_this4.appendLandingBounce(fallTween, targetY, cellHeightAbs)).call(function () {
-                              _this4.onSymbolSettled(symIdx);
-                              resolve();
+                              return resolve();
                             }).start();
                           }));
                         case 18:
@@ -17251,7 +17296,7 @@ System.register("bundle://1001/_virtual/ReelView_1001.ts", ['./rollupPluginModLo
               }
             }, _callee3, this);
           }));
-          function tumbleFill(_x6, _x7, _x8, _x9, _x10) {
+          function tumbleFill(_x6, _x7, _x8, _x9, _x10, _x11) {
             return _tumbleFill.apply(this, arguments);
           }
           return tumbleFill;
@@ -25750,19 +25795,6 @@ System.register("bundle://1001/_virtual/start.ts", ['./rollupPluginModLoBabelHel
   };
 });
 
-System.register("bundle://1001/_virtual/StatusInterFace.ts", ['cc'], function () {
-  var cclegacy;
-  return {
-    setters: [function (module) {
-      cclegacy = module.cclegacy;
-    }],
-    execute: function () {
-      cclegacy._RF.push({}, "89d622u+FNB6rz9sQISn6PJ", "StatusInterFace", undefined);
-      cclegacy._RF.pop();
-    }
-  };
-});
-
 System.register("bundle://1001/_virtual/StatusManager.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
@@ -26356,7 +26388,7 @@ System.register("bundle://1001/_virtual/TemplateView.ts", ['./rollupPluginModLoB
       cclegacy._RF.push({}, "2a1f9DeTyVDkqsyLDgFv/5O", "TemplateView", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var TemplateView = exports('TemplateView', (_dec = ccclass('1001/TemplateView'), _dec2 = property(SpriteFrame), _dec3 = property(SpriteFrame), _dec4 = property(SpriteFrame), _dec5 = property(SpriteFrame), _dec6 = property(Layout), _dec7 = property(Layout), _dec8 = property(Layout), _dec9 = property(Layout), _dec10 = property(Layout), _dec11 = property(Button), _dec12 = property(Button), _dec13 = property(Button), _dec14 = property(Button), _dec15 = property(Button), _dec16 = property(Button), _dec17 = property(Node), _dec18 = property(Node), _dec19 = property(Node), _dec20 = property(Node), _dec21 = property(Node), _dec22 = property(sp.Skeleton), _dec23 = property(Label), _dec(_class = (_class2 = /*#__PURE__*/function (_EventComponent) {
+      var TemplateView = exports('TemplateView', (_dec = ccclass('1001/TemplateView_1001'), _dec2 = property(SpriteFrame), _dec3 = property(SpriteFrame), _dec4 = property(SpriteFrame), _dec5 = property(SpriteFrame), _dec6 = property(Layout), _dec7 = property(Layout), _dec8 = property(Layout), _dec9 = property(Layout), _dec10 = property(Layout), _dec11 = property(Button), _dec12 = property(Button), _dec13 = property(Button), _dec14 = property(Button), _dec15 = property(Button), _dec16 = property(Button), _dec17 = property(Node), _dec18 = property(Node), _dec19 = property(Node), _dec20 = property(Node), _dec21 = property(Node), _dec22 = property(sp.Skeleton), _dec23 = property(Label), _dec(_class = (_class2 = /*#__PURE__*/function (_EventComponent) {
         _inheritsLoose(TemplateView, _EventComponent);
         function TemplateView() {
           var _this;
@@ -28682,7 +28714,8 @@ System.register("bundle://1001/_virtual/WinAnimationView.ts", ['./rollupPluginMo
             if (!isEscalate) {
               AppAudio.getInstance().playEffect(key === WinTier.TOTAL ? EFFECTSMAP.TOTAL_WIN : EFFECTSMAP.WIN_START);
             }
-            _this3.fadeBgm(0, 0.5);
+            // 一般小獎(WinTier.WIN)不 fade 背景音樂 其他等級才要
+            if (key !== WinTier.WIN) _this3.fadeBgm(0, 0.5);
             _this3.fadeBlackBg(153, 0.333);
             _this3.winLabel.string = '';
             _this3.winLabel.node.active = true;
