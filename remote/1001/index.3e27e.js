@@ -3854,9 +3854,8 @@ System.register("bundle://1001/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                           (_game$viewV5 = game.viewV) == null || (_game$viewV5 = _game$viewV5.slotMachineView.reelViews[_col8]) == null || _game$viewV5.explode(colElimRows[_col8], timing.explode);
                         }
                         spawnWinFloats(awards, colElimRows, currentCols, timing["float"]);
-                        stepWin = steps[i].awards.reduce(function (s, a) {
-                          return s + (Number(a.pay) || 0);
-                        }, 0);
+                        // 用伺服器給的該步驟權威贏分 不要用 awards[].pay 自己加總 兩者可能因倍率等因素對不起來
+                        stepWin = Number(steps[i].win) || 0;
                         game.addWinBarScore(stepWin);
                         _context7.next = 33;
                         return Promise.all(explodePromises);
@@ -6951,7 +6950,12 @@ System.register("bundle://1001/_virtual/FinishSpinTask.ts", ['./rollupPluginModL
       cclegacy._RF.push({}, "ada90gugd9KQqy/x5jh1pKN", "FinishSpinTask", undefined);
       /** Spin 結算（贏分、餘額、tracker、buy-feature 收尾旗標）。 */
       function finishSpin(game, result, spinWin) {
-        game.storeManager.getModel('TemplateStore').setWinBalance(Number(spinWin.toFixed(2)));
+        var finalWin = Number(spinWin.toFixed(2));
+        game.storeManager.getModel('TemplateStore').setWinBalance(finalWin);
+        // win_bar 平常靠消除步驟逐步加總顯示 沒有倍率球可收時不會被 playWinBarAdd 校正回伺服器數字
+        // 這裡統一校正 避免跟 TemplateStore/WinAnimationView 用的 spinWin 對不起來
+        game.winBarValue = finalWin;
+        game.setWinBarNum(finalWin);
         var serverBalance = Number(result.balanceAfter);
         if (!isNaN(serverBalance)) {
           game.storeManager.getModel('UserStore').setBalance(serverBalance);
