@@ -1,0 +1,18 @@
+background_main.png
+	size: 556, 556
+	filter: Linear, Linear
+MG_lantern
+	bounds: 2, 422, 484, 131
+MG_lantern1
+	bounds: 2, 2, 131, 319
+	rotate: 90
+MG_lantern2
+	bounds: 2, 135, 131, 323
+	rotate: 90
+MG_lantern3
+	bounds: 2, 268, 152, 335
+	offsets: 0, 0, 155, 335
+	rotate: 90
+shine
+	bounds: 339, 216, 201, 204
+	offsets: 8, 0, 217, 204

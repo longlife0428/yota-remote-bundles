@@ -1,0 +1,168 @@
+win_bar.png
+	size: 764, 764
+	filter: Linear, Linear
+coin/coin_00
+	bounds: 292, 643, 36, 42
+	offsets: 3, 0, 39, 42
+coin/coin_01
+	bounds: 724, 567, 37, 38
+	offsets: 2, 0, 39, 42
+	rotate: 90
+coin/coin_02
+	bounds: 724, 567, 37, 38
+	offsets: 2, 0, 39, 42
+	rotate: 90
+coin/coin_03
+	bounds: 724, 529, 36, 38
+	offsets: 1, 0, 39, 42
+	rotate: 90
+coin/coin_04
+	bounds: 457, 15, 32, 38
+	offsets: 2, 0, 39, 42
+	rotate: 90
+coin/coin_05
+	bounds: 506, 606, 18, 38
+	offsets: 10, 0, 39, 42
+	rotate: 90
+coin/coin_06
+	bounds: 494, 256, 8, 38
+	offsets: 17, 0, 39, 42
+coin/coin_07
+	bounds: 699, 168, 23, 42
+	offsets: 11, 0, 39, 42
+	rotate: 90
+coin/coin_08
+	bounds: 413, 13, 34, 42
+	offsets: 5, 0, 39, 42
+	rotate: 90
+flash2
+	bounds: 414, 49, 92, 100
+	offsets: 4, 0, 100, 100
+particle2/01
+	bounds: 292, 494, 216, 56
+	offsets: 0, 15, 230, 80
+particle2/02
+	bounds: 289, 433, 218, 59
+	offsets: 0, 13, 230, 80
+particle2/03
+	bounds: 338, 626, 219, 61
+	offsets: 1, 11, 230, 80
+particle2/04
+	bounds: 2, 157, 221, 64
+	offsets: 1, 9, 230, 80
+	rotate: 90
+particle2/05
+	bounds: 288, 365, 217, 66
+	offsets: 6, 7, 230, 80
+particle2/06
+	bounds: 287, 151, 207, 67
+	offsets: 17, 7, 230, 80
+particle2/07
+	bounds: 62, 394, 224, 69
+	offsets: 0, 6, 230, 80
+particle2/08
+	bounds: 142, 172, 220, 71
+	offsets: 5, 5, 230, 80
+	rotate: 90
+particle2/09
+	bounds: 292, 552, 212, 72
+	offsets: 14, 5, 230, 80
+particle2/10
+	bounds: 287, 220, 205, 74
+	offsets: 21, 4, 230, 80
+particle2/11
+	bounds: 559, 606, 200, 76
+	offsets: 28, 3, 230, 80
+particle2/12
+	bounds: 510, 459, 196, 77
+	offsets: 34, 3, 230, 80
+particle2/13
+	bounds: 568, 684, 190, 78
+	offsets: 40, 2, 230, 80
+particle2/14
+	bounds: 509, 379, 185, 78
+	offsets: 45, 2, 230, 80
+particle2/15
+	bounds: 507, 300, 180, 77
+	offsets: 50, 1, 230, 80
+particle2/16
+	bounds: 62, 613, 228, 72
+	offsets: 0, 1, 230, 80
+particle2/17
+	bounds: 62, 539, 228, 72
+	offsets: 0, 1, 230, 80
+particle2/18
+	bounds: 338, 689, 228, 73
+	offsets: 1, 0, 230, 80
+particle2/19
+	bounds: 62, 465, 225, 72
+	offsets: 4, 1, 230, 80
+particle2/20
+	bounds: 68, 171, 221, 72
+	offsets: 8, 1, 230, 80
+	rotate: 90
+particle2/21
+	bounds: 215, 174, 218, 70
+	offsets: 11, 3, 230, 80
+	rotate: 90
+particle2/22
+	bounds: 287, 296, 215, 67
+	offsets: 15, 6, 230, 80
+particle2/23
+	bounds: 510, 538, 212, 66
+	offsets: 18, 7, 230, 80
+particle2/24
+	bounds: 2, 2, 147, 67
+	offsets: 83, 6, 230, 80
+	rotate: 90
+particle2/25
+	bounds: 71, 25, 144, 67
+	offsets: 86, 6, 230, 80
+	rotate: 90
+particle2/26
+	bounds: 140, 28, 141, 67
+	offsets: 89, 6, 230, 80
+	rotate: 90
+particle2/27
+	bounds: 209, 31, 139, 67
+	offsets: 91, 6, 230, 80
+	rotate: 90
+particle2/28
+	bounds: 696, 321, 136, 66
+	offsets: 94, 7, 230, 80
+	rotate: 90
+particle2/29
+	bounds: 278, 83, 134, 66
+	offsets: 96, 7, 230, 80
+particle2/30
+	bounds: 278, 15, 133, 66
+	offsets: 97, 7, 230, 80
+particle2/31
+	bounds: 504, 232, 132, 66
+	offsets: 98, 7, 230, 80
+particle2/32
+	bounds: 496, 165, 131, 65
+	offsets: 99, 8, 230, 80
+particle2/33
+	bounds: 508, 100, 129, 63
+	offsets: 101, 9, 230, 80
+particle2/34
+	bounds: 508, 38, 128, 60
+	offsets: 102, 12, 230, 80
+particle2/35
+	bounds: 638, 171, 127, 59
+	offsets: 103, 12, 230, 80
+	rotate: 90
+particle2/36
+	bounds: 699, 193, 126, 59
+	offsets: 104, 11, 230, 80
+	rotate: 90
+particle2/37
+	bounds: 71, 4, 124, 19
+	offsets: 105, 11, 230, 80
+sunlight_w
+	bounds: 2, 380, 58, 305
+	offsets: 5, 1, 65, 334
+vfx_level_y
+	bounds: 2, 687, 334, 75
+	offsets: 1, 1, 336, 99

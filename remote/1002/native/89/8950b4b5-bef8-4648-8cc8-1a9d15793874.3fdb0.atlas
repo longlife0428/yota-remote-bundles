@@ -1,0 +1,122 @@
+free_board.png
+	size: 2000, 2000
+	filter: Linear, Linear
+Coin_01
+	bounds: 736, 379, 231, 244
+	offsets: 1, 1, 233, 246
+	rotate: 90
+Coin_02
+	bounds: 1033, 214, 188, 157
+	offsets: 1, 1, 190, 159
+Coin_03
+	bounds: 1088, 672, 290, 217
+	offsets: 1, 1, 292, 219
+	rotate: 90
+Coin_04
+	bounds: 1223, 218, 153, 131
+	offsets: 1, 1, 155, 133
+	rotate: 90
+Coin_05
+	bounds: 1885, 1154, 113, 125
+	offsets: 1, 1, 115, 127
+Free_game_intro_small_bg
+	bounds: 2, 322, 732, 203
+	offsets: 1, 1, 734, 205
+Pop_up_bg
+	bounds: 2, 964, 1310, 1034
+	offsets: 1, 1, 1312, 1036
+Pop_up_bg_shine_00
+	bounds: 1314, 527, 752, 569
+	offsets: 75, 130, 900, 800
+	rotate: 90
+drill_light/drill_light_00
+	bounds: 543, 757, 205, 172
+	offsets: 59, 7, 320, 180
+	rotate: 90
+drill_light/drill_light_01
+	bounds: 458, 534, 211, 174
+	offsets: 55, 6, 320, 180
+	rotate: 90
+drill_light/drill_light_02
+	bounds: 365, 747, 215, 176
+	offsets: 53, 4, 320, 180
+	rotate: 90
+drill_light/drill_light_03
+	bounds: 235, 556, 221, 177
+	offsets: 50, 3, 320, 180
+drill_light/drill_light_04
+	bounds: 184, 735, 227, 179
+	offsets: 46, 1, 320, 180
+	rotate: 90
+drill_light/drill_light_05
+	bounds: 2, 544, 231, 178
+	offsets: 44, 0, 320, 180
+drill_light/drill_light_06
+	bounds: 2, 724, 238, 180
+	offsets: 40, 0, 320, 180
+	rotate: 90
+drill_light/drill_light_07
+	bounds: 1714, 282, 243, 177
+	offsets: 37, 3, 320, 180
+	rotate: 90
+drill_light/drill_light_08
+	bounds: 1696, 17, 248, 178
+	offsets: 34, 2, 320, 180
+	rotate: 90
+drill_light/drill_light_09
+	bounds: 1514, 7, 254, 180
+	offsets: 31, 0, 320, 180
+	rotate: 90
+drill_light/drill_light_10
+	bounds: 1536, 267, 258, 176
+	offsets: 28, 0, 320, 180
+	rotate: 90
+drill_light/drill_light_11
+	bounds: 1248, 39, 264, 177
+	offsets: 25, 0, 320, 180
+drill_light/drill_light_12
+	bounds: 1356, 263, 262, 178
+	offsets: 22, 2, 320, 180
+	rotate: 90
+drill_light/drill_light_13
+	bounds: 699, 27, 267, 178
+	offsets: 19, 0, 320, 180
+drill_light/drill_light_14
+	bounds: 177, 48, 272, 180
+	offsets: 15, 0, 320, 180
+	rotate: 90
+drill_light/drill_light_15
+	bounds: 968, 36, 278, 169
+	offsets: 11, 6, 320, 180
+drill_light/drill_light_16
+	bounds: 359, 35, 285, 170
+	offsets: 7, 6, 320, 180
+	rotate: 90
+drill_light/drill_light_17
+	bounds: 531, 31, 289, 166
+	offsets: 4, 11, 320, 180
+	rotate: 90
+drill_light/drill_light_18
+	bounds: 736, 207, 295, 170
+	offsets: 0, 10, 320, 180
+drill_light/drill_light_19
+	bounds: 1088, 373, 297, 172
+	offsets: 0, 8, 320, 180
+	rotate: 90
+drill_light/drill_light_20
+	bounds: 2, 31, 289, 173
+	offsets: 10, 7, 320, 180
+	rotate: 90
+ebg_zztgd2
+	bounds: 1885, 1089, 63, 64
+	offsets: 1, 1, 65, 66
+	rotate: 90
+light
+	bounds: 1314, 1281, 647, 717
+	offsets: 1, 1, 649, 719
+light_2
+	bounds: 736, 612, 350, 350
+spark1
+	bounds: 1885, 1030, 57, 65
+	offsets: 10, 7, 76, 76
+	rotate: 90

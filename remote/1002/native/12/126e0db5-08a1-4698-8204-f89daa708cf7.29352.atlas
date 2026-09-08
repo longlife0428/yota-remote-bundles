@@ -1,0 +1,21 @@
+購買視窗.png
+	size: 679, 870
+	filter: Linear, Linear
+	pma: true
+buy triple feature
+	bounds: 2, 408, 593, 460
+	offsets: 1, 0, 595, 460
+no
+	bounds: 597, 408, 163, 80
+	offsets: 1, 0, 165, 80
+	rotate: 90
+one feature
+	bounds: 2, 2, 526, 404
+	offsets: 3, 2, 532, 408
+star
+	bounds: 530, 285, 121, 121
+	offsets: 6, 3, 128, 128
+yes
+	bounds: 530, 120, 163, 80
+	offsets: 1, 0, 165, 80
+	rotate: 90

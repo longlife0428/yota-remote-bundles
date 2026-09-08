@@ -1,0 +1,57 @@
+button_buy_feature.png
+	size: 656, 656
+	filter: Linear, Linear
+button_buy_feature
+	bounds: 2, 187, 361, 467
+glow1
+	bounds: 2, 28, 157, 157
+	offsets: 1, 1, 159, 159
+sweeplight/00
+	bounds: 245, 26, 17, 25
+	offsets: 25, 174, 181, 234
+sweeplight/02
+	bounds: 571, 58, 51, 82
+	offsets: 15, 124, 181, 234
+	rotate: 90
+sweeplight/04
+	bounds: 571, 220, 78, 117
+	offsets: 12, 99, 181, 234
+sweeplight/06
+	bounds: 477, 190, 92, 140
+	offsets: 12, 79, 181, 234
+sweeplight/08
+	bounds: 325, 75, 107, 152
+	offsets: 12, 68, 181, 234
+	rotate: 90
+sweeplight/10
+	bounds: 499, 493, 125, 161
+	offsets: 12, 59, 181, 234
+sweeplight/12
+	bounds: 161, 53, 132, 162
+	offsets: 15, 57, 181, 234
+	rotate: 90
+sweeplight/14
+	bounds: 365, 490, 132, 164
+	offsets: 19, 53, 181, 234
+sweeplight/16
+	bounds: 365, 332, 132, 156
+	offsets: 26, 53, 181, 234
+sweeplight/18
+	bounds: 499, 339, 122, 152
+	offsets: 38, 52, 181, 234
+sweeplight/20
+	bounds: 365, 184, 110, 146
+	offsets: 51, 53, 181, 234
+sweeplight/22
+	bounds: 479, 58, 90, 130
+	offsets: 71, 53, 181, 234
+sweeplight/24
+	bounds: 571, 111, 75, 107
+	offsets: 86, 55, 181, 234
+sweeplight/26
+	bounds: 161, 2, 49, 82
+	offsets: 110, 59, 181, 234
+	rotate: 90
+sweeplight/28
+	bounds: 2, 2, 15, 24
+	offsets: 135, 70, 181, 234

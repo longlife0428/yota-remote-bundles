@@ -1,0 +1,75 @@
+symbol_win.png
+	size: 704, 704
+	filter: Linear, Linear
+glow_147
+	bounds: 2, 510, 191, 191
+	offsets: 32, 33, 256, 256
+line/line_00
+	bounds: 2, 284, 167, 111
+	offsets: 4, 0, 175, 111
+line/line_44
+	bounds: 2, 284, 167, 111
+	offsets: 4, 0, 175, 111
+line/line_02
+	bounds: 365, 590, 167, 111
+	offsets: 4, 0, 175, 111
+line/line_04
+	bounds: 2, 171, 167, 111
+	offsets: 4, 0, 175, 111
+line/line_06
+	bounds: 172, 364, 166, 111
+	offsets: 4, 0, 175, 111
+line/line_08
+	bounds: 339, 138, 165, 111
+	offsets: 4, 0, 175, 111
+line/line_10
+	bounds: 507, 251, 165, 111
+	offsets: 4, 0, 175, 111
+line/line_12
+	bounds: 340, 364, 166, 111
+	offsets: 4, 0, 175, 111
+line/line_14
+	bounds: 534, 590, 167, 111
+	offsets: 4, 0, 175, 111
+line/line_16
+	bounds: 2, 58, 167, 111
+	offsets: 4, 0, 175, 111
+line/line_18
+	bounds: 2, 397, 168, 111
+	offsets: 4, 0, 175, 111
+line/line_20
+	bounds: 195, 590, 168, 111
+	offsets: 4, 0, 175, 111
+line/line_22
+	bounds: 195, 477, 167, 111
+	offsets: 4, 0, 175, 111
+line/line_24
+	bounds: 364, 477, 167, 111
+	offsets: 4, 0, 175, 111
+line/line_26
+	bounds: 533, 477, 167, 111
+	offsets: 4, 0, 175, 111
+line/line_28
+	bounds: 508, 364, 166, 111
+	offsets: 5, 0, 175, 111
+line/line_30
+	bounds: 171, 251, 166, 111
+	offsets: 5, 0, 175, 111
+line/line_32
+	bounds: 506, 138, 165, 111
+	offsets: 5, 0, 175, 111
+line/line_34
+	bounds: 171, 25, 165, 111
+	offsets: 5, 0, 175, 111
+line/line_36
+	bounds: 505, 25, 164, 111
+	offsets: 5, 0, 175, 111
+line/line_38
+	bounds: 338, 25, 165, 111
+	offsets: 4, 0, 175, 111
+line/line_40
+	bounds: 171, 138, 166, 111
+	offsets: 4, 0, 175, 111
+line/line_42
+	bounds: 339, 251, 166, 111
+	offsets: 4, 0, 175, 111

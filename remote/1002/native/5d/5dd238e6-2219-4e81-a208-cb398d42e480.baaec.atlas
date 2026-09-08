@@ -1,0 +1,9 @@
+共用特效.png
+	size: 259, 164
+	filter: Linear, Linear
+	scale: 0.8
+Rays
+	bounds: 2, 2, 160, 160
+star
+	bounds: 164, 67, 93, 95
+	offsets: 5, 3, 102, 102

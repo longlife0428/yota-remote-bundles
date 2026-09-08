@@ -1,0 +1,194 @@
+background_free.png
+	size: 1812, 1812
+	filter: Linear, Linear
+FG_lantern
+	bounds: 2, 1239, 484, 131
+FG_lantern1
+	bounds: 696, 1488, 131, 319
+FG_lantern2
+	bounds: 2, 679, 118, 323
+	offsets: 0, 0, 131, 323
+FG_lantern3
+	bounds: 557, 1472, 137, 335
+	offsets: 0, 0, 155, 335
+glow_88
+	bounds: 2, 1004, 232, 233
+	offsets: 15, 13, 256, 256
+house
+	bounds: 2, 1372, 553, 435
+	offsets: 1, 1, 555, 437
+yanhua4b_00
+	bounds: 1257, 1610, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_01
+	bounds: 1471, 1610, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_02
+	bounds: 829, 1410, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_03
+	bounds: 1043, 1410, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_04
+	bounds: 236, 1039, 212, 198
+	offsets: 1, 1, 214, 199
+yanhua4b_05
+	bounds: 1257, 1411, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_06
+	bounds: 1471, 1411, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_07
+	bounds: 2, 465, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4b_08
+	bounds: 2, 251, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4b_09
+	bounds: 2, 37, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4b_10
+	bounds: 122, 790, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4b_11
+	bounds: 321, 825, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4b_12
+	bounds: 557, 1273, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_13
+	bounds: 771, 1211, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_14
+	bounds: 985, 1211, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_15
+	bounds: 1199, 1211, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_16
+	bounds: 1413, 1212, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4b_17
+	bounds: 450, 1040, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f1
+	bounds: 520, 826, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4f10
+	bounds: 321, 626, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f11
+	bounds: 535, 612, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4f12
+	bounds: 201, 427, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f13
+	bounds: 201, 228, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f14
+	bounds: 201, 29, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f15
+	bounds: 415, 413, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f16
+	bounds: 415, 214, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f17
+	bounds: 415, 15, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f18
+	bounds: 629, 398, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4f2
+	bounds: 629, 184, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4f3
+	bounds: 1413, 1013, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f4
+	bounds: 828, 1012, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f5
+	bounds: 829, 1609, 212, 198
+	offsets: 1, 1, 214, 200
+yanhua4f6
+	bounds: 1042, 1012, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f7
+	bounds: 828, 813, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f8
+	bounds: 1042, 813, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4f9
+	bounds: 734, 614, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_00
+	bounds: 948, 614, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_01
+	bounds: 828, 415, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_02
+	bounds: 828, 216, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_03
+	bounds: 1042, 400, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4y_04
+	bounds: 1043, 1609, 212, 198
+	offsets: 1, 1, 214, 199
+yanhua4y_05
+	bounds: 1042, 201, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_06
+	bounds: 1162, 614, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_07
+	bounds: 1241, 400, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4y_08
+	bounds: 1256, 201, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_09
+	bounds: 828, 17, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_10
+	bounds: 1042, 2, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_11
+	bounds: 1256, 2, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_12
+	bounds: 1256, 814, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_13
+	bounds: 1470, 814, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_14
+	bounds: 1376, 615, 212, 197
+	offsets: 1, 1, 214, 199
+yanhua4y_15
+	bounds: 1440, 401, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4y_16
+	bounds: 1470, 187, 212, 197
+	offsets: 1, 1, 214, 199
+	rotate: 90
+yanhua4y_17
+	bounds: 1590, 615, 212, 197
+	offsets: 1, 1, 214, 199
