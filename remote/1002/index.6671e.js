@@ -2316,7 +2316,7 @@ System.register("bundle://1002/_virtual/BonusResultView.ts", ['./rollupPluginMod
       cclegacy._RF.push({}, "ec27dOm8EdLyLlVFBELAaID", "BonusResultView", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var BonusResultView = exports('BonusResultView', (_dec = ccclass('1002/gs002/BonusResultView'), _dec2 = property(Label), _dec3 = property(sp.Skeleton), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+      var BonusResultView = exports('BonusResultView', (_dec = ccclass('1002/BonusResultView'), _dec2 = property(Label), _dec3 = property(sp.Skeleton), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(BonusResultView, _Component);
         function BonusResultView() {
           var _this;
@@ -2987,7 +2987,7 @@ System.register("bundle://1002/_virtual/BuyFeaturePopupView.ts", ['./rollupPlugi
       cclegacy._RF.push({}, "82376kHRO1KJ4uwkXJsSWGv", "BuyFeaturePopupView", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var BuyFeaturePopupView = exports('BuyFeaturePopupView', (_dec = ccclass("1002/gs002/BuyFeaturePopupView"), _dec2 = property(Node), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Button), _dec7 = property(Button), _dec8 = property(Button), _dec9 = property(Button), _dec10 = property(Button), _dec11 = property(Node), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+      var BuyFeaturePopupView = exports('BuyFeaturePopupView', (_dec = ccclass("1002/BuyFeaturePopupView"), _dec2 = property(Node), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Button), _dec7 = property(Button), _dec8 = property(Button), _dec9 = property(Button), _dec10 = property(Button), _dec11 = property(Node), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(BuyFeaturePopupView, _Component);
         function BuyFeaturePopupView() {
           var _this;
@@ -3208,7 +3208,7 @@ System.register("bundle://1002/_virtual/CameraSync3D.ts", ['./rollupPluginModLoB
        * 根據螢幕實際大小 vs 設計解析度的縮放比例，調整節點 scale，
        * 讓 3D 粒子跟 2D UI 的 Canvas 縮放一致。
        */
-      var CameraSync3D = exports('CameraSync3D', (_dec = ccclass("1002/gs002/CameraSync3D"), _dec(_class = /*#__PURE__*/function (_Component) {
+      var CameraSync3D = exports('CameraSync3D', (_dec = ccclass("1002/CameraSync3D"), _dec(_class = /*#__PURE__*/function (_Component) {
         _inheritsLoose(CameraSync3D, _Component);
         function CameraSync3D() {
           var _this;
@@ -4185,7 +4185,7 @@ System.register("bundle://1002/_virtual/CustomSurroundingEffect.ts", ['./rollupP
         ColorOption[ColorOption["skyBlue"] = 7] = "skyBlue";
         return ColorOption;
       }({}));
-      var CustomSurroundingEffect = exports('default', (_dec = ccclass("1002/core/framework/gs001/CustomSurroundingEffect"), _dec2 = property(Graphics), _dec3 = property({
+      var CustomSurroundingEffect = exports('default', (_dec = ccclass("1002/core/framework/CustomSurroundingEffect"), _dec2 = property(Graphics), _dec3 = property({
         type: Enum(ColorOption),
         tooltip: "选择颜色"
       }), _dec4 = property({
@@ -4664,7 +4664,7 @@ System.register("bundle://1002/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
       var EASE_OPTIONS = ['linear', 'quadIn', 'quadOut', 'quadInOut', 'cubicIn', 'cubicOut', 'cubicInOut', 'sineIn', 'sineOut', 'sineInOut', 'backIn', 'backOut', 'backInOut', 'elasticIn', 'elasticOut', 'elasticInOut', 'bounceIn', 'bounceOut', 'bounceInOut'];
       var ccclass = _decorator.ccclass;
       var WIN_PRESETS = [['25-50x', 25, 50], ['50-100x', 50, 100], ['100-200x', 100, 200], ['200x+', 200, 9999], ['10000x', 10000, 10000]];
-      var DebugPanel = exports('DebugPanel', (_dec = ccclass('1002/gs002/DebugPanel'), _dec(_class = /*#__PURE__*/function (_Component) {
+      var DebugPanel = exports('DebugPanel', (_dec = ccclass('1002/DebugPanel'), _dec(_class = /*#__PURE__*/function (_Component) {
         _inheritsLoose(DebugPanel, _Component);
         function DebugPanel() {
           var _this;
@@ -5994,7 +5994,7 @@ System.register("bundle://1002/_virtual/FrameMultiplierComp.ts", ['./rollupPlugi
       cclegacy._RF.push({}, "2e5964whd5LZ6cLj3JZAFCN", "FrameMultiplierComp", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var FrameMultiplierComp = exports('FrameMultiplierComp', (_dec = ccclass('1002/gs002/FrameMultiplierComp'), _dec2 = property(Label), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+      var FrameMultiplierComp = exports('FrameMultiplierComp', (_dec = ccclass('1002/FrameMultiplierComp'), _dec2 = property(Label), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(FrameMultiplierComp, _Component);
         function FrameMultiplierComp() {
           var _this;
@@ -6089,7 +6089,7 @@ System.register("bundle://1002/_virtual/FreeBoardView.ts", ['./rollupPluginModLo
 
       /** DismissableView interface (matched with PopupManager) */
 
-      var FreeBoardView = exports('FreeBoardView', (_dec = ccclass('1002/gs002/FreeBoardView'), _dec2 = property(sp.Skeleton), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+      var FreeBoardView = exports('FreeBoardView', (_dec = ccclass('1002/FreeBoardView'), _dec2 = property(sp.Skeleton), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(FreeBoardView, _Component);
         function FreeBoardView() {
           var _this;
@@ -8548,7 +8548,7 @@ System.register("bundle://1002/_virtual/GameRuleView.ts", ['./rollupPluginModLoB
       cclegacy._RF.push({}, "f8257Rmtb1EULE2npyzEF13", "GameRuleView", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var GameRuleView = exports('GameRuleView', (_dec = ccclass('1002/gs002/GameRuleView'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Node), _dec8 = property(Node), _dec9 = property(Node), _dec10 = property(Node), _dec11 = property(Node), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+      var GameRuleView = exports('GameRuleView', (_dec = ccclass('1002/GameRuleView'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Node), _dec8 = property(Node), _dec9 = property(Node), _dec10 = property(Node), _dec11 = property(Node), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(GameRuleView, _Component);
         function GameRuleView() {
           var _this;
@@ -9457,7 +9457,7 @@ System.register("bundle://1002/_virtual/GameViewAdapter.ts", ['./rollupPluginMod
       cclegacy._RF.push({}, "04064Hi8cxBipLWu4zW8UVe", "GameViewAdapter", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var GameViewAdapter = exports('GameViewAdapter', (_dec = ccclass("1002/gs002/GameViewAdapter"), _dec2 = property(Node), _dec3 = property({
+      var GameViewAdapter = exports('GameViewAdapter', (_dec = ccclass("1002/GameViewAdapter"), _dec2 = property(Node), _dec3 = property({
         tooltip: "WinAnimationView prefab 路徑（留空用預設）"
       }), _dec4 = property({
         tooltip: "buyFeaturePopup prefab 路徑（留空用預設）"
@@ -10544,7 +10544,7 @@ System.register("bundle://1002/_virtual/HsTransitionView.ts", ['./rollupPluginMo
       cclegacy._RF.push({}, "b12edqeJBxK/aPzBghvHU7D", "HsTransitionView", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var HsTransitionView = exports('HsTransitionView', (_dec = ccclass("1002/gs002/HsTransitionView"), _dec2 = property(sp.Skeleton), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+      var HsTransitionView = exports('HsTransitionView', (_dec = ccclass("1002/HsTransitionView"), _dec2 = property(sp.Skeleton), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(HsTransitionView, _Component);
         function HsTransitionView() {
           var _this;
@@ -13232,7 +13232,7 @@ System.register("bundle://1002/_virtual/NgSymbol.ts", ['./rollupPluginModLoBabel
       cclegacy._RF.push({}, "09e82BcvXVGFpD22+KPtLVQ", "NgSymbol", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var NgSymbol = exports('NgSymbol', (_dec = ccclass('1002/gs002/NgSymbol'), _dec2 = property(Label), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+      var NgSymbol = exports('NgSymbol', (_dec = ccclass('1002/NgSymbol'), _dec2 = property(Label), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(NgSymbol, _Component);
         function NgSymbol() {
           var _this;
@@ -21547,7 +21547,7 @@ System.register("bundle://1002/_virtual/SlotMachineView.ts", ['./rollupPluginMod
       cclegacy._RF.push({}, "07921BhnUtOCqZvKfIZvuL5", "SlotMachineView", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var SlotMachineView = exports('SlotMachineView', (_dec = ccclass("1002/gs002/SlotMachineView"), _dec2 = property([ReelView_1002]), _dec(_class = (_class2 = (_class3 = /*#__PURE__*/function (_EventComponent) {
+      var SlotMachineView = exports('SlotMachineView', (_dec = ccclass("1002/SlotMachineView"), _dec2 = property([ReelView_1002]), _dec(_class = (_class2 = (_class3 = /*#__PURE__*/function (_EventComponent) {
         _inheritsLoose(SlotMachineView, _EventComponent);
         function SlotMachineView() {
           var _this;
@@ -26487,7 +26487,7 @@ System.register("bundle://1002/_virtual/WinAnimationView.ts", ['./rollupPluginMo
       };
       var ESCALATE = ["big", "mega", "super", "epic"];
       var ESCALATE_DWELL = 2.0;
-      var WinAnimationView = exports('WinAnimationView', (_dec = ccclass("1002/gs002/WinAnimationView"), _dec2 = property(sp.Skeleton), _dec3 = property(Label), _dec4 = property(Button), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+      var WinAnimationView = exports('WinAnimationView', (_dec = ccclass("1002/WinAnimationView"), _dec2 = property(sp.Skeleton), _dec3 = property(Label), _dec4 = property(Button), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(WinAnimationView, _Component);
         function WinAnimationView() {
           var _this;
@@ -27130,7 +27130,7 @@ System.register("bundle://1002/_virtual/WinFloatLabel.ts", ['./rollupPluginModLo
       cclegacy._RF.push({}, "6535brm9SBMIpOVZ7HifWZS", "WinFloatLabel", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var WinFloatLabel = exports('WinFloatLabel', (_dec = ccclass("1002/gs002/WinFloatLabel"), _dec2 = property(sp.Skeleton), _dec3 = property(Label), _dec4 = property({
+      var WinFloatLabel = exports('WinFloatLabel', (_dec = ccclass("1002/WinFloatLabel"), _dec2 = property(sp.Skeleton), _dec3 = property(Label), _dec4 = property({
         tooltip: "Spine 動畫名"
       }), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(WinFloatLabel, _Component);
