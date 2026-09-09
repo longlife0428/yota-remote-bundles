@@ -9396,7 +9396,7 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
         };
         _proto.initial = /*#__PURE__*/function () {
           var _initial = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-            var startTime, updateView;
+            var startTime, updateView, enterStartTime;
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
@@ -9465,10 +9465,16 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                   this.removeLoadingView();
                   console.log('------ LOADING TIME ------ ');
                   console.log('Total load time: ', performance.now() - startTime);
+
+                  // entry 的 SubGame.ts 在按下進場那一刻寫進 globalThis 的時間戳
+                  enterStartTime = globalThis.__subGameEnterStartTime__;
+                  if (typeof enterStartTime === 'number') {
+                    console.log('[GameRoot] 熱更新下載開始 到 遊戲出現 總耗時: ', Date.now() - enterStartTime, 'ms');
+                  }
                   EagleTracker.trackerEvent(TrackerMap.GAME_LOAD_COMPLETE, {
                     total_load_time_ms: performance.now() - startTime
                   });
-                case 38:
+                case 40:
                 case "end":
                   return _context.stop();
               }
