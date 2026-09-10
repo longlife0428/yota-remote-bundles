@@ -9277,11 +9277,11 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
       GAME_EVENT_TYPE = module.GAME_EVENT_TYPE;
     }],
     execute: function () {
-      var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _class3;
+      var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3;
       cclegacy._RF.push({}, "b02abkmDM9C5qWrMCQEgpgF", "GameRoot", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
-      var GameRoot = exports('GameRoot', (_dec = ccclass('1001/GameRoot'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Node), _dec(_class = (_class2 = (_class3 = /*#__PURE__*/function (_EventComponent) {
+      var GameRoot = exports('GameRoot', (_dec = ccclass('1001/GameRoot'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Node), _dec8 = property(Node), _dec(_class = (_class2 = (_class3 = /*#__PURE__*/function (_EventComponent) {
         _inheritsLoose(GameRoot, _EventComponent);
         function GameRoot() {
           var _this;
@@ -9295,6 +9295,8 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           _initializerDefineProperty(_this, "middleNode", _descriptor4, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "topNode", _descriptor5, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "loadingView", _descriptor6, _assertThisInitialized(_this));
+          /** 落雷(symbol_up)播放時暫時搬過來的節點 不受 ReelView 的 Mask 限制 */
+          _initializerDefineProperty(_this, "symbolFxNode", _descriptor7, _assertThisInitialized(_this));
           _this.storeManager = void 0;
           _this.viewStore = void 0;
           _this.viewPool = void 0;
@@ -9309,13 +9311,21 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
         _proto.subscribeGameEvent = function subscribeGameEvent(bus, type, handler) {
           this.subscribeEvent(bus, type, handler);
         };
+        GameRoot.getInstance = function getInstance() {
+          return GameRoot.instance;
+        };
         _proto.onLoad = function onLoad() {
           console.log('GameRoot onLoad');
+          GameRoot.instance = this;
           // slot_game 獨立專案沒有 entry lobby 的 LoadingScene 幫忙建立 RootStore
           // 這裡自己補一次 createRootStore 內部已做過重複呼叫防呆
           createRootStore();
           this.trackLayer(this.topNode, GameRoot.TOP_LAYER);
           PopupStack.setLayer(this.topNode);
+        };
+        _proto.onDestroy = function onDestroy() {
+          if (GameRoot.instance === this) GameRoot.instance = null;
+          _EventComponent.prototype.onDestroy.call(this);
         };
         _proto.start = function start() {
           console.log('GameRoot onStart');
@@ -9834,7 +9844,7 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           this.loadingView.destroy();
         };
         return GameRoot;
-      }(EventComponent), _class3.TOP_LAYER = 4, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "staticNode", [_dec2], {
+      }(EventComponent), _class3.instance = null, _class3.TOP_LAYER = 4, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "staticNode", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -9860,6 +9870,11 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
         writable: true,
         initializer: null
       }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "loadingView", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "symbolFxNode", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -14799,38 +14814,41 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
               while (1) switch (_context.prev = _context.next) {
                 case 0:
                   runtimeBase = this.resolveCdnBase(cdnBase);
+                  console.log("[NativeBundleUpdater] " + this.bundleName + " cdnBase=" + runtimeBase);
                   this.prepareLocalManifests(runtimeBase);
                   localManifestPath = this.resourceDir + "project.manifest";
                   this.updateManager = new native.AssetsManager(localManifestPath, this.resourceDir, compareVersion);
-                  _context.next = 6;
+                  _context.next = 7;
                   return this.fetchRemoteManifest(runtimeBase);
-                case 6:
+                case 7:
                   remoteManifest = _context.sent;
                   localVersion = this.updateManager.getLocalManifest().getVersion();
                   remoteVersion = remoteManifest.getVersion();
+                  console.log("[NativeBundleUpdater] " + this.bundleName + " \u672C\u6A5F\u7248\u672C=" + localVersion + " \u9060\u7AEF\u7248\u672C=" + remoteVersion);
                   if (!(compareVersion(localVersion, remoteVersion) >= 0)) {
-                    _context.next = 11;
+                    _context.next = 14;
                     break;
                   }
+                  console.log("[NativeBundleUpdater] " + this.bundleName + " \u5DF2\u662F\u6700\u65B0\u7248\u672C \u4E0D\u4E0B\u8F09");
                   return _context.abrupt("return", NativeUpdateResult.UpToDate);
-                case 11:
+                case 14:
                   if (this.updateManager.loadRemoteManifest(remoteManifest)) {
-                    _context.next = 13;
+                    _context.next = 16;
                     break;
                   }
                   throw new Error('載入遠端 project.manifest 失敗');
-                case 13:
-                  _context.next = 15;
+                case 16:
+                  console.log("[NativeBundleUpdater] " + this.bundleName + " \u767C\u73FE\u65B0\u7248\u672C \u958B\u59CB\u4E0B\u8F09");
+                  _context.next = 19;
                   return new Promise(function (resolve, reject) {
                     _this2.updateManager.setEventCallback(function (event) {
                       return _this2.onUpdateEvent(event, resolve, reject);
                     });
-                    _this2.updateManager.prepareUpdate();
                     _this2.updateManager.update();
                   });
-                case 15:
+                case 19:
                   return _context.abrupt("return", _context.sent);
-                case 16:
+                case 20:
                 case "end":
                   return _context.stop();
               }
@@ -14865,7 +14883,7 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
             return _regeneratorRuntime().wrap(function _callee2$(_context2) {
               while (1) switch (_context2.prev = _context2.next) {
                 case 0:
-                  manifestUrl = cdnBase + "/remote/" + this.bundleName + "/native/project.manifest?t=" + Date.now();
+                  manifestUrl = cdnBase + "/remote/" + this.bundleName + "/hotupdate/project.manifest?t=" + Date.now();
                   _context2.next = 3;
                   return fetch(manifestUrl, {
                     cache: 'no-store'
@@ -14911,7 +14929,7 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
           if (!/^\d+(?:\.\d+)*$/.test(version)) {
             throw new Error("manifest version \u683C\u5F0F\u932F\u8AA4: " + version);
           }
-          var stableBase = cdnBase + "/remote/" + this.bundleName + "/native/";
+          var stableBase = cdnBase + "/remote/" + this.bundleName + "/hotupdate/";
           manifest.packageUrl = "" + stableBase + version + "/" + this.bundleName + "/";
           manifest.remoteManifestUrl = stableBase + "project.manifest";
           manifest.remoteVersionUrl = stableBase + "version.manifest";
@@ -14936,11 +14954,13 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
             case native.EventAssetsManager.UPDATE_FAILED:
             case native.EventAssetsManager.ERROR_UPDATING:
             case native.EventAssetsManager.ERROR_DECOMPRESS:
+              console.warn("[NativeBundleUpdater] " + this.bundleName + " \u71B1\u66F4\u5931\u6557 code=" + code + " " + event.getMessage());
               reject(new Error("\u71B1\u66F4\u5931\u6557 code=" + code + " " + event.getMessage()));
               break;
           }
         };
         _proto.applyUpdateAndRestart = function applyUpdateAndRestart(resolve) {
+          console.log("[NativeBundleUpdater] " + this.bundleName + " \u4E0B\u8F09\u5B8C\u6210 \u6E96\u5099\u5957\u7528\u4E26\u91CD\u555F");
           var searchPaths = native.fileUtils.getSearchPaths();
           var newPaths = this.updateManager.getLocalManifest().getSearchPaths();
           var merged = [].concat(newPaths, [this.resourceDir], searchPaths).filter(function (path, index, all) {
@@ -14950,6 +14970,7 @@ System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
           // native.fileUtils 是不是真的能撐過 game.restart() 沒有把握 兩邊都做保險
           sys.localStorage.setItem(SEARCH_PATHS_STORAGE_KEY, JSON.stringify(merged));
           native.fileUtils.setSearchPaths(merged);
+          console.log("[NativeBundleUpdater] " + this.bundleName + " searchPaths=" + JSON.stringify(merged));
           resolve(NativeUpdateResult.Restarting);
           game.restart();
         };
@@ -15033,6 +15054,8 @@ System.register("bundle://1001/_virtual/NativeBundleUpdateView.ts", ['./rollupPl
         };
         _proto.ensureUpdated = function ensureUpdated() {
           if (!sys.isNative) return Promise.resolve();
+          var host = globalThis.__subGameData__;
+          if ((host == null ? void 0 : host.gameId) === this.bundleName && host.nativeUpdateManaged) return Promise.resolve();
           if (this.running) return this.running;
           this.running = this.run();
           return this.running;
@@ -15277,8 +15300,8 @@ System.register("bundle://1001/_virtual/NGState_1001.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1001/_virtual/NgSymbol.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './AppAudio.ts', './AudioConfig.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, cclegacy, _decorator, SpriteFrame, Node, Label, sp, UIOpacity, Sprite, Component, StoreManager, AppAudio, EFFECTSMAP;
+System.register("bundle://1001/_virtual/NgSymbol.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './AppAudio.ts', './AudioConfig.ts', './GameRoot.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, cclegacy, _decorator, SpriteFrame, Node, Label, sp, UIOpacity, Sprite, Component, StoreManager, AppAudio, EFFECTSMAP, GameRoot;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -15302,6 +15325,8 @@ System.register("bundle://1001/_virtual/NgSymbol.ts", ['./rollupPluginModLoBabel
       AppAudio = module.default;
     }, function (module) {
       EFFECTSMAP = module.EFFECTSMAP;
+    }, function (module) {
+      GameRoot = module.GameRoot;
     }],
     execute: function () {
       var _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4;
@@ -15571,6 +15596,7 @@ System.register("bundle://1001/_virtual/NgSymbol.ts", ['./rollupPluginModLoBabel
         _proto.playUp = function playUp(frameName) {
           var _this4 = this;
           return new Promise(function (resolve) {
+            var _GameRoot$getInstance;
             // 企劃 §19：symbol_m 的 begin「與 symbol_up 同時播放一次」（角色落雷把球打進盤面）。
             // 自包：自己 activate + 解析 skin + 藏靜態圖 + 播 begin（setSymbolDisplay 已不啟動 symbol_m）。
             var mm = frameName.match(/^symbol_m(\d)_(\d)/);
@@ -15592,6 +15618,10 @@ System.register("bundle://1001/_virtual/NgSymbol.ts", ['./rollupPluginModLoBabel
               return;
             }
             sk.node.active = true;
+            // ReelView 有 Mask會被裁到落雷 對齊搬到場景SymbolFxNode 播完搬回原位
+            var originalParent = sk.node.parent;
+            var fxNode = (_GameRoot$getInstance = GameRoot.getInstance()) == null ? void 0 : _GameRoot$getInstance.symbolFxNode;
+            if (fxNode) sk.node.setParent(fxNode, true);
             try {
               sk.setSkin(frameName.startsWith('symbol_m2') ? 'anubis' : 'horus');
             } catch (e) {}
@@ -15605,7 +15635,10 @@ System.register("bundle://1001/_virtual/NgSymbol.ts", ['./rollupPluginModLoBabel
               if (done) return;
               done = true;
               sk.setCompleteListener(null);
-              if ((_sk$node = sk.node) != null && _sk$node.isValid) sk.node.active = false;
+              if ((_sk$node = sk.node) != null && _sk$node.isValid) {
+                sk.node.active = false;
+                if (fxNode && originalParent != null && originalParent.isValid) sk.node.setParent(originalParent, true);
+              }
               resolve();
             };
             sk.setCompleteListener(function (e) {

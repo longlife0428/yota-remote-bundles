@@ -789,11 +789,6 @@
             "cc.EffectAsset",
             1
         ],
-        "826f5b8c-f837-4d19-a84f-f19c8a100101": [
-            "project",
-            "cc.Asset",
-            1
-        ],
         "da026bf0-e15a-45ba-8703-fb31067f7527": [
             "version",
             "cc.JsonAsset",
@@ -4343,6 +4338,11 @@
             "resources/spine/free_game_Tail_cocos/2D and UI trailing effects/2dui/UI/textures/tailing/tailing_0002/texture",
             "cc.Texture2D",
             1
+        ],
+        "826f5b8c-f837-4d19-a84f-f19c8a100101": [
+            "project",
+            "cc.Asset",
+            1
         ]
     },
     "scenes": {
@@ -4883,7 +4883,7 @@
             "0a5ee21aa",
             "3e3e2",
             "0a752b179",
-            "4ea7c",
+            "fa432",
             "0a9780253",
             "75048",
             "0ab00f1a3",
@@ -4901,7 +4901,7 @@
             "0d255a0d5",
             "baa1c",
             "0d2f8ee90",
-            "f32aa",
+            "44bf1",
             "0db018336",
             "f65b3",
             "0e17c450-d4ce-4318-9d54-98d46fbf3a6b",
@@ -5433,7 +5433,7 @@
             "d9458253-c881-439a-8584-2b6585d2d6f2",
             "ae4ab",
             "da026bf0-e15a-45ba-8703-fb31067f7527",
-            "af8a3",
+            "aabde",
             "da0c433f-af91-42ac-a0ca-071d713f2c6a",
             "ab9ac",
             "de839797-6a83-43f3-b36e-42e803e846f3",
@@ -5817,7 +5817,7 @@
             "81de0517-8ba4-43f0-ad75-16b2564a7397",
             "5cfa5",
             "826f5b8c-f837-4d19-a84f-f19c8a100101",
-            "d4a36",
+            "401d9",
             "84447ee5-6de3-4159-ae8f-139c97130235",
             "12817",
             "846497f1-2874-4ce8-9439-0d7f89875ab8",
