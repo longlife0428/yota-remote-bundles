@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 取出檔案
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # 只要工作目錄 不要 400MB 的歷史
           fetch-depth: 1
