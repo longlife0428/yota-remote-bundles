@@ -1,0 +1,52 @@
+name: 同步到 R2
+
+on:
+  push:
+    branches: [main]
+    paths: ['remote/**']
+  workflow_dispatch:
+
+# 同時只跑一個 避免兩次推送互相覆蓋
+concurrency:
+  group: deploy-r2
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 取出檔案
+        uses: actions/checkout@v4
+        with:
+          # 只要工作目錄 不要 400MB 的歷史
+          fetch-depth: 1
+
+      - name: 安裝 rclone
+        uses: AnimMouse/setup-rclone@v1
+
+      - name: 同步到 R2
+        env:
+          RCLONE_CONFIG_R2_TYPE: s3
+          RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+          RCLONE_CONFIG_R2_REGION: auto
+          RCLONE_CONFIG_R2_ENDPOINT: https://083be250e2f5e9b78cc65fdbe2b2fcb2.r2.cloudflarestorage.com
+          RCLONE_CONFIG_R2_NO_CHECK_BUCKET: 'true'
+          RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: |
+          # sync 讓 R2 忠實鏡像 git 跟 Pages 的行為一致
+          # 舊版本目錄不能刪這條規則守在 git 不靠 copy 的語意兜底
+          rclone sync remote r2:yota-remote-bundles/remote \
+            --transfers 16 --checkers 32 \
+            --stats 10s --stats-one-line
+
+      - name: 驗證
+        run: |
+          BASE=https://pub-42d4a6164a8043969925bdede61d36a1.r2.dev
+          fail=0
+          for id in 1001 1002 1003; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/remote/$id/version.json")
+            echo "$code  remote/$id/version.json"
+            [ "$code" = 200 ] || fail=1
+          done
+          exit $fail
