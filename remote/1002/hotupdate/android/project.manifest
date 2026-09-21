@@ -1,0 +1,18 @@
+{
+  "bundleName": "1002",
+  "version": "1.0.6",
+  "configVersion": "",
+  "platform": "android",
+  "engineVersion": "3.8.8",
+  "packageUrl": "",
+  "remoteManifestUrl": "",
+  "remoteVersionUrl": "",
+  "assets": {
+    "1002.zip": {
+      "size": 22314283,
+      "md5": "d7266a8b7e8107065f9b9597099deebe",
+      "compressed": true
+    }
+  },
+  "searchPaths": []
+}
