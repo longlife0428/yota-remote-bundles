@@ -1,6 +1,6 @@
 {
   "bundleName": "1003",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "configVersion": "",
   "platform": "android",
   "engineVersion": "3.8.8",
@@ -9,8 +9,8 @@
   "remoteVersionUrl": "",
   "assets": {
     "1003.zip": {
-      "size": 27407188,
-      "md5": "e7dfd0b0becf0f26178b12681e9ab8ef",
+      "size": 23286645,
+      "md5": "d194e90bf1f029f5d28eecceb8dac075",
       "compressed": true
     }
   },
