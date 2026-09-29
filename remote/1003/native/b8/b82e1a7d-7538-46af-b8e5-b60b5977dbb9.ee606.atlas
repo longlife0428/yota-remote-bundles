@@ -1,0 +1,11 @@
+collect.png
+	size: 388, 388
+	filter: Linear, Linear
+Fx_Radial_WD_00023
+	bounds: 2, 127, 251, 256
+	offsets: 5, 0, 256, 256
+mainLight
+	bounds: 2, 6, 124, 119
+	offsets: 3, 4, 128, 128
+tail_0
+	bounds: 255, 127, 128, 256

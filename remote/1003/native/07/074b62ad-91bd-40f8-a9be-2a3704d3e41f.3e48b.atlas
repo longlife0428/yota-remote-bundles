@@ -1,0 +1,10 @@
+background_main.png
+	size: 296, 296
+	filter: Linear, Linear
+flare_121
+	bounds: 2, 2, 57, 65
+	offsets: 10, 7, 76, 76
+	rotate: 90
+glow_88
+	bounds: 2, 61, 232, 233
+	offsets: 15, 13, 256, 256

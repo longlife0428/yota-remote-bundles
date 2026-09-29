@@ -1,0 +1,115 @@
+win_bar.png
+	size: 684, 684
+	filter: Linear, Linear
+aura_3
+	bounds: 517, 350, 116, 101
+	offsets: 6, 14, 128, 128
+banner_glow
+	bounds: 640, 374, 307, 41
+	offsets: 9, 0, 319, 41
+	rotate: 90
+highlight_yellow
+	bounds: 2, 136, 236, 68
+	rotate: 90
+light1_w
+	bounds: 2, 607, 491, 74
+money_in_vfx/money_in_vfx_00
+	bounds: 2, 376, 36, 44
+	offsets: 45, 56, 130, 150
+money_in_vfx/money_in_vfx_01
+	bounds: 276, 480, 62, 71
+	offsets: 36, 51, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_02
+	bounds: 474, 172, 80, 80
+	offsets: 24, 49, 130, 150
+money_in_vfx/money_in_vfx_03
+	bounds: 169, 142, 88, 87
+	offsets: 18, 45, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_04
+	bounds: 72, 138, 92, 95
+	offsets: 17, 41, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_05
+	bounds: 368, 147, 96, 104
+	offsets: 17, 37, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_06
+	bounds: 375, 374, 100, 122
+	offsets: 17, 23, 130, 150
+money_in_vfx/money_in_vfx_07
+	bounds: 354, 17, 103, 125
+	offsets: 16, 22, 130, 150
+money_in_vfx/money_in_vfx_08
+	bounds: 145, 498, 107, 129
+	offsets: 15, 21, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_09
+	bounds: 569, 132, 106, 112
+	offsets: 17, 22, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_10
+	bounds: 569, 240, 108, 112
+	offsets: 17, 22, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_11
+	bounds: 459, 32, 108, 113
+	offsets: 18, 22, 130, 150
+money_in_vfx/money_in_vfx_12
+	bounds: 517, 453, 111, 116
+	offsets: 16, 20, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_13
+	bounds: 402, 254, 113, 118
+	offsets: 15, 19, 130, 150
+money_in_vfx/money_in_vfx_14
+	bounds: 145, 374, 102, 122
+	offsets: 14, 17, 130, 150
+money_in_vfx/money_in_vfx_15
+	bounds: 249, 374, 104, 124
+	offsets: 12, 16, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_16
+	bounds: 295, 245, 105, 127
+	offsets: 11, 14, 130, 150
+money_in_vfx/money_in_vfx_17
+	bounds: 187, 243, 106, 129
+	offsets: 10, 13, 130, 150
+money_in_vfx/money_in_vfx_18
+	bounds: 354, 498, 107, 132
+	offsets: 9, 12, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_19
+	bounds: 131, 2, 108, 134
+	offsets: 8, 11, 130, 150
+money_in_vfx/money_in_vfx_20
+	bounds: 241, 2, 111, 138
+	offsets: 7, 9, 130, 150
+money_in_vfx/money_in_vfx_21
+	bounds: 72, 232, 113, 140
+	offsets: 6, 8, 130, 150
+money_in_vfx/money_in_vfx_22
+	bounds: 495, 566, 115, 143
+	offsets: 5, 7, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_23
+	bounds: 258, 144, 97, 108
+	offsets: 23, 42, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_24
+	bounds: 276, 544, 61, 74
+	offsets: 33, 42, 130, 150
+	rotate: 90
+money_in_vfx/money_in_vfx_25
+	bounds: 2, 571, 34, 56
+	offsets: 55, 55, 130, 150
+	rotate: 90
+particle2
+	bounds: 2, 422, 142, 141
+	offsets: 1, 1, 144, 143
+	rotate: 90
+particle3
+	bounds: 2, 2, 132, 127
+	offsets: 1, 1, 134, 129
+	rotate: 90

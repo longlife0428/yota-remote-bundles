@@ -1,0 +1,40 @@
+ui_mul.png
+	size: 556, 556
+	filter: Linear, Linear
+Glow_Star
+	bounds: 307, 78, 64, 64
+aura_2
+	bounds: 204, 319, 223, 235
+	offsets: 9, 0, 256, 256
+dxjia_di1g
+	bounds: 429, 328, 105, 109
+	offsets: 6, 1, 117, 115
+dxjia_di2g
+	bounds: 307, 144, 63, 173
+	offsets: 1, 0, 65, 174
+dxjia_dig9
+	bounds: 372, 150, 69, 167
+flare_108
+	bounds: 204, 3, 56, 59
+	offsets: 4, 3, 64, 64
+	rotate: 90
+flare_121
+	bounds: 265, 26, 33, 33
+	offsets: 15, 16, 64, 64
+line2
+	bounds: 443, 205, 47, 121
+	offsets: 3, 0, 50, 121
+line3
+	bounds: 492, 205, 47, 121
+	offsets: 3, 0, 50, 121
+long2
+	bounds: 429, 439, 125, 115
+mul_frame_00
+	bounds: 2, 4, 200, 550
+w2
+	bounds: 443, 145, 58, 100
+	offsets: 21, 0, 100, 100
+	rotate: 90
+yunn3
+	bounds: 204, 61, 256, 101
+	rotate: 90

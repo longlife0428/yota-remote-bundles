@@ -1,0 +1,57 @@
+free_num.png
+	size: 1384, 1384
+	filter: Linear, Linear
+aura_236
+	bounds: 686, 450, 252, 248
+	offsets: 4, 8, 256, 256
+aura_41
+	bounds: 686, 324, 124, 124
+	offsets: 2, 2, 128, 128
+explosion/00
+	bounds: 2, 1042, 340, 340
+explosion/01
+	bounds: 2, 700, 340, 340
+explosion/02
+	bounds: 344, 1042, 340, 340
+explosion/03
+	bounds: 2, 358, 340, 340
+explosion/04
+	bounds: 344, 700, 340, 340
+explosion/05
+	bounds: 686, 1042, 340, 340
+explosion/06
+	bounds: 2, 16, 340, 340
+explosion/07
+	bounds: 344, 358, 340, 340
+explosion/08
+	bounds: 686, 700, 340, 340
+explosion/09
+	bounds: 1028, 1042, 340, 340
+explosion/10
+	bounds: 344, 16, 340, 340
+fx/03
+	bounds: 940, 587, 102, 111
+	offsets: 6, 5, 120, 120
+fx/04
+	bounds: 686, 89, 106, 113
+	offsets: 1, 5, 120, 120
+fx/05
+	bounds: 1158, 806, 107, 113
+	offsets: 1, 5, 120, 120
+fx/06
+	bounds: 812, 331, 106, 117
+	offsets: 0, 3, 120, 120
+fx/07
+	bounds: 686, 204, 106, 118
+	offsets: 0, 2, 120, 120
+fx/08
+	bounds: 2, 6, 7, 8
+	offsets: 96, 4, 120, 120
+glow_2
+	bounds: 1284, 942, 98, 98
+	offsets: 15, 15, 128, 128
+mainLight
+	bounds: 1158, 921, 124, 119
+	offsets: 3, 4, 128, 128
+tail_0
+	bounds: 1028, 784, 128, 256
