@@ -1,6 +1,6 @@
 {
   "bundleName": "1001",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "configVersion": "",
   "platform": "ios",
   "engineVersion": "3.8.8",
@@ -9,8 +9,8 @@
   "remoteVersionUrl": "",
   "assets": {
     "1001.zip": {
-      "size": 18282173,
-      "md5": "5539692ca375513210f2f88015d1b1c1",
+      "size": 18253435,
+      "md5": "4e46317f474ac94bcd34f64421afc041",
       "compressed": true
     }
   },
