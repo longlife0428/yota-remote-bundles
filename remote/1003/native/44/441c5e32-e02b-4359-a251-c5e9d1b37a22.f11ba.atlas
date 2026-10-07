@@ -1,0 +1,448 @@
+win.png
+	size: 2048, 2048
+	filter: Linear, Linear
+aura_3
+	bounds: 1944, 100, 116, 101
+	offsets: 6, 14, 128, 128
+	rotate: 90
+coin01
+	bounds: 1948, 1575, 115, 86
+	offsets: 1, 1, 117, 88
+	rotate: 90
+coin02
+	bounds: 1429, 5, 122, 96
+	offsets: 1, 1, 124, 98
+epic_win_bg
+	bounds: 2, 142, 1100, 829
+	offsets: 1, 1, 1102, 831
+epic_win_text
+	bounds: 1104, 35, 936, 222
+	rotate: 90
+flare_29
+	bounds: 1328, 103, 252, 122
+	offsets: 4, 67, 256, 256
+flash3
+	bounds: 2001, 634, 37, 38
+	offsets: 1, 1, 39, 40
+fs_bkgM_fx/fs_bkgM_fx_00
+	bounds: 2, 19, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_01
+	bounds: 364, 19, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_02
+	bounds: 726, 19, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_03
+	bounds: 1582, 95, 360, 121
+fs_bkgT_fx/fs_bkgT_fx_00
+	bounds: 1917, 16, 53, 77
+	offsets: 12, 1, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_01
+	bounds: 1948, 674, 76, 77
+	offsets: 12, 1, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_03
+	bounds: 1948, 1390, 84, 86
+	offsets: 4, 1, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_04
+	bounds: 1328, 816, 76, 88
+	offsets: 2, 0, 88, 89
+	rotate: 90
+fs_bkgT_fx/fs_bkgT_fx_05
+	bounds: 1328, 894, 77, 88
+	offsets: 1, 0, 88, 89
+	rotate: 90
+fs_bkgT_fx/fs_bkgT_fx_06
+	bounds: 1948, 1117, 77, 89
+	offsets: 1, 0, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_07
+	bounds: 1948, 1026, 77, 89
+	offsets: 1, 0, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_08
+	bounds: 1948, 1299, 78, 89
+	offsets: 0, 0, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_09
+	bounds: 1948, 1208, 78, 89
+	offsets: 0, 0, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_10
+	bounds: 1948, 935, 77, 89
+	offsets: 1, 0, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_11
+	bounds: 1948, 844, 77, 89
+	offsets: 1, 0, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_12
+	bounds: 1948, 753, 74, 89
+	offsets: 2, 0, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_13
+	bounds: 1553, 19, 74, 89
+	offsets: 2, 0, 88, 89
+	rotate: 90
+fs_bkgT_fx/fs_bkgT_fx_14
+	bounds: 1644, 19, 74, 89
+	offsets: 2, 0, 88, 89
+	rotate: 90
+fs_bkgT_fx/fs_bkgT_fx_15
+	bounds: 1735, 19, 74, 89
+	offsets: 2, 0, 88, 89
+	rotate: 90
+fs_bkgT_fx/fs_bkgT_fx_16
+	bounds: 1826, 20, 73, 89
+	offsets: 3, 0, 88, 89
+	rotate: 90
+fs_bkgT_fx/fs_bkgT_fx_17
+	bounds: 1972, 12, 70, 86
+	offsets: 4, 2, 88, 89
+highlight_yellow
+	bounds: 1948, 1810, 236, 68
+	offsets: 1, 1, 238, 70
+	rotate: 90
+line3
+	bounds: 2018, 1938, 28, 108
+	offsets: 11, 7, 50, 121
+lv3_obj_s/lv3_obj_s_06
+	bounds: 1663, 698, 25, 71
+	offsets: 31, 12, 87, 95
+lv3_obj_s/lv3_obj_s_08
+	bounds: 1328, 789, 25, 71
+	offsets: 31, 12, 87, 95
+	rotate: 90
+majiang_01
+	bounds: 1328, 227, 542, 333
+	offsets: 1, 1, 544, 335
+	rotate: 90
+num_board
+	bounds: 1690, 674, 1372, 256
+	offsets: 11, 44, 1400, 300
+	rotate: 90
+number_bg
+	bounds: 1418, 771, 1275, 270
+	offsets: 1, 1, 1277, 272
+	rotate: 90
+star01
+	bounds: 1948, 1692, 87, 116
+	offsets: 1, 1, 89, 118
+su_de2
+	bounds: 1328, 2, 99, 99
+	offsets: 1, 1, 101, 101
+su_de7
+	bounds: 1948, 1478, 95, 90
+	offsets: 1, 1, 97, 92
+	rotate: 90
+total_majiang01
+	bounds: 1663, 218, 454, 336
+	offsets: 1, 1, 456, 338
+	rotate: 90
+total_win_light
+	bounds: 2, 973, 1414, 1073
+	offsets: 1, 1, 1416, 1075
+
+win_2.png
+	size: 2048, 2048
+	filter: Linear, Linear
+big_man
+	bounds: 1033, 1224, 822, 953
+	offsets: 1, 1, 824, 955
+	rotate: 90
+flare_bg
+	bounds: 1471, 30, 180, 185
+	offsets: 3, 0, 185, 187
+	rotate: 90
+fs_bkgM_fx/fs_bkgM_fx_04
+	bounds: 1896, 862, 360, 121
+	rotate: 90
+fs_bkgM_fx/fs_bkgM_fx_05
+	bounds: 1896, 500, 360, 121
+	rotate: 90
+fs_bkgM_fx/fs_bkgM_fx_06
+	bounds: 1658, 75, 360, 121
+fs_bkgT_fx/fs_bkgT_fx_18
+	bounds: 1864, 4, 69, 85
+	offsets: 4, 2, 88, 89
+	rotate: 90
+lv3_obj_s/lv3_obj_s_00
+	bounds: 1730, 2, 69, 71
+	offsets: 9, 12, 87, 95
+lv3_obj_s/lv3_obj_s_02
+	bounds: 1801, 2, 61, 71
+	offsets: 13, 12, 87, 95
+lv3_obj_s/lv3_obj_s_04
+	bounds: 2, 2, 47, 72
+	offsets: 20, 12, 87, 95
+	rotate: 90
+lv3_obj_s/lv3_obj_s_10
+	bounds: 1988, 1974, 55, 72
+	offsets: 16, 12, 87, 95
+lv3_obj_s/lv3_obj_s_14
+	bounds: 1658, 2, 70, 71
+	offsets: 8, 12, 87, 95
+mega_man
+	bounds: 2, 1188, 1029, 858
+	offsets: 1, 1, 1031, 860
+mega_win_bg
+	bounds: 2, 51, 1135, 733
+	offsets: 1, 1, 1137, 735
+	rotate: 90
+mega_win_text
+	bounds: 1685, 254, 968, 209
+	offsets: 1, 1, 970, 211
+	rotate: 90
+point_w
+	bounds: 1951, 5, 68, 68
+	offsets: 16, 16, 100, 100
+spark1
+	bounds: 1988, 1907, 57, 65
+	offsets: 10, 7, 76, 76
+su_de5
+	bounds: 1896, 198, 141, 150
+	offsets: 1, 1, 143, 152
+	rotate: 90
+su_de6
+	bounds: 1896, 341, 157, 150
+	offsets: 1, 1, 159, 152
+	rotate: 90
+super_win_bg
+	bounds: 737, 52, 1134, 732
+	offsets: 1, 1, 1136, 734
+	rotate: 90
+super_win_text
+	bounds: 1471, 212, 1010, 212
+	offsets: 1, 1, 1012, 214
+	rotate: 90
+
+win_3.png
+	size: 2048, 2048
+	filter: Linear, Linear
+big_win_text
+	bounds: 1130, 229, 834, 217
+	offsets: 1, 1, 836, 219
+chip_fly01
+	bounds: 1897, 564, 184, 142
+	offsets: 1, 1, 186, 144
+	rotate: 90
+chip_fly02
+	bounds: 1867, 101, 146, 126
+	offsets: 1, 1, 148, 128
+epic_man
+	bounds: 1130, 448, 662, 765
+	rotate: 90
+fs_bkgM_fx/fs_bkgM_fx_07
+	bounds: 2, 73, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_08
+	bounds: 364, 73, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_09
+	bounds: 1505, 106, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_10
+	bounds: 1897, 750, 360, 121
+	rotate: 90
+fs_bkgT_fx/fs_bkgT_fx_02
+	bounds: 1505, 27, 76, 77
+	offsets: 12, 1, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_19
+	bounds: 2, 5, 66, 85
+	offsets: 6, 2, 88, 89
+	rotate: 90
+fs_bkgT_fx/fs_bkgT_fx_20
+	bounds: 1947, 1879, 65, 85
+	offsets: 6, 1, 88, 89
+fs_bkgT_fx/fs_bkgT_fx_21
+	bounds: 1583, 43, 61, 83
+	offsets: 7, 1, 88, 89
+	rotate: 90
+lv3_obj_s/lv3_obj_s_12
+	bounds: 89, 5, 66, 72
+	offsets: 10, 12, 87, 95
+	rotate: 90
+mega_chip_bg1
+	bounds: 724, 316, 404, 257
+	offsets: 1, 1, 406, 259
+star04
+	bounds: 1897, 456, 106, 142
+	offsets: 1, 1, 108, 144
+	rotate: 90
+su_de1
+	bounds: 1947, 1966, 81, 78
+	offsets: 1, 1, 83, 80
+su_man
+	bounds: 1138, 1112, 932, 807
+	offsets: 1, 1, 934, 809
+	rotate: 90
+total_win_bg
+	bounds: 2, 1314, 1134, 730
+	offsets: 1, 1, 1136, 732
+total_win_text
+	bounds: 2, 196, 720, 377
+	offsets: 1, 1, 722, 379
+win_bg
+	bounds: 2, 575, 1126, 737
+	offsets: 1, 1, 1128, 739
+win_chip_bg1
+	bounds: 1088, 2, 415, 225
+	offsets: 1, 1, 417, 227
+win_chip_bg2
+	bounds: 726, 86, 360, 228
+	offsets: 1, 1, 362, 230
+
+win_4.png
+	size: 1824, 1824
+	filter: Linear, Linear
+aura4
+	bounds: 1535, 1296, 256, 256
+aura_64
+	bounds: 971, 166, 256, 256
+coin03
+	bounds: 1512, 297, 111, 111
+	offsets: 1, 1, 113, 113
+diamand
+	bounds: 364, 939, 150, 127
+	offsets: 1, 1, 152, 129
+	rotate: 90
+e_coin1
+	bounds: 971, 5, 159, 178
+	offsets: 1, 1, 161, 180
+	rotate: 90
+e_coin2
+	bounds: 364, 588, 123, 120
+	offsets: 1, 1, 125, 122
+flare_bg2
+	bounds: 851, 424, 180, 185
+	offsets: 3, 0, 185, 187
+	rotate: 90
+fs_bkgM_fx/fs_bkgM_fx_11
+	bounds: 494, 1193, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_12
+	bounds: 494, 1070, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_13
+	bounds: 1094, 1188, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_14
+	bounds: 1456, 1173, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_15
+	bounds: 1094, 1065, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_16
+	bounds: 1456, 1050, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_17
+	bounds: 1094, 942, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_18
+	bounds: 1456, 927, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_19
+	bounds: 1094, 819, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_20
+	bounds: 1456, 804, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_21
+	bounds: 2, 968, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_22
+	bounds: 2, 845, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_23
+	bounds: 493, 947, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_24
+	bounds: 493, 824, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_25
+	bounds: 2, 722, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_26
+	bounds: 2, 599, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_27
+	bounds: 490, 701, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_28
+	bounds: 2, 476, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_29
+	bounds: 489, 578, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_30
+	bounds: 2, 353, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_31
+	bounds: 1090, 696, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_32
+	bounds: 2, 230, 359, 121
+	offsets: 1, 0, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_33
+	bounds: 2, 107, 359, 121
+	offsets: 1, 0, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_34
+	bounds: 487, 332, 359, 121
+	offsets: 1, 0, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_35
+	bounds: 1038, 450, 359, 121
+	offsets: 1, 0, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_36
+	bounds: 487, 209, 358, 121
+	offsets: 2, 0, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_37
+	bounds: 487, 86, 358, 121
+	offsets: 2, 0, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_38
+	bounds: 848, 63, 359, 121
+	offsets: 1, 0, 360, 121
+	rotate: 90
+fs_bkgM_fx/fs_bkgM_fx_39
+	bounds: 1452, 681, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_40
+	bounds: 1090, 573, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_41
+	bounds: 1452, 558, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_42
+	bounds: 488, 455, 360, 121
+fs_bkgM_fx/fs_bkgM_fx_43
+	bounds: 364, 111, 360, 121
+	rotate: 90
+glow_113
+	bounds: 364, 710, 124, 116
+	offsets: 4, 3, 128, 128
+glow_88
+	bounds: 855, 606, 232, 233
+	offsets: 15, 13, 256, 256
+	rotate: 90
+majiang_02
+	bounds: 2, 1416, 590, 406
+	offsets: 1, 1, 592, 408
+mega_chip_bg2
+	bounds: 1100, 1311, 433, 241
+	offsets: 1, 1, 435, 243
+mega_coin1
+	bounds: 1229, 276, 145, 172
+	offsets: 1, 1, 147, 174
+mega_coin2
+	bounds: 1151, 8, 156, 151
+	offsets: 1, 1, 158, 153
+	rotate: 90
+mega_coin3
+	bounds: 1304, 2, 116, 116
+	offsets: 1, 1, 118, 118
+mega_coin4
+	bounds: 1576, 410, 146, 151
+	offsets: 1, 1, 148, 153
+	rotate: 90
+mega_coin5
+	bounds: 1304, 120, 144, 154
+	offsets: 1, 1, 146, 156
+sdx1
+	bounds: 856, 1078, 236, 236
+sdx2
+	bounds: 856, 840, 236, 236
+star02
+	bounds: 1422, 3, 115, 152
+	offsets: 1, 1, 117, 154
+	rotate: 90
+star03
+	bounds: 1450, 142, 114, 152
+	offsets: 1, 1, 116, 154
+su_chip_bg1
+	bounds: 1166, 1554, 552, 268
+	offsets: 1, 1, 554, 270
+su_chip_bg2
+	bounds: 594, 1560, 570, 262
+	offsets: 1, 1, 572, 264
+su_de3
+	bounds: 364, 828, 127, 109
+	offsets: 1, 1, 129, 111
+su_de4
+	bounds: 364, 473, 122, 113
+	offsets: 1, 1, 124, 115
+su_de8
+	bounds: 1566, 154, 141, 129
+	offsets: 1, 1, 143, 131
+	rotate: 90
+su_de9
+	bounds: 1376, 296, 152, 134
+	offsets: 1, 1, 154, 136
+	rotate: 90
+total_majiang02
+	bounds: 2, 1091, 490, 323
+	offsets: 1, 1, 492, 325
+win
+	bounds: 594, 1316, 504, 242
+	offsets: 1, 1, 506, 244
