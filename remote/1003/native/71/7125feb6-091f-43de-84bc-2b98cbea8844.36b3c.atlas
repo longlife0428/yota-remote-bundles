@@ -1,0 +1,112 @@
+transition.png
+	size: 1352, 1352
+	filter: Linear, Linear
+JP_coin/JP_coin_00
+	bounds: 2, 686, 328, 328
+	offsets: 6, 6, 340, 340
+JP_coin/JP_coin_01
+	bounds: 684, 1019, 318, 328
+	offsets: 11, 6, 340, 340
+JP_coin/JP_coin_02
+	bounds: 1004, 1043, 304, 332
+	offsets: 18, 4, 340, 340
+	rotate: 90
+JP_coin/JP_coin_03
+	bounds: 326, 379, 280, 328
+	offsets: 30, 6, 340, 340
+	rotate: 90
+JP_coin/JP_coin_04
+	bounds: 666, 609, 252, 332
+	offsets: 44, 4, 340, 340
+JP_coin/JP_coin_05
+	bounds: 656, 137, 216, 332
+	offsets: 62, 4, 340, 340
+	rotate: 90
+JP_coin/JP_coin_06
+	bounds: 326, 209, 168, 328
+	offsets: 86, 6, 340, 340
+	rotate: 90
+JP_coin/JP_coin_07
+	bounds: 1004, 924, 117, 328
+	offsets: 112, 6, 340, 340
+	rotate: 90
+JP_coin/JP_coin_08
+	bounds: 920, 805, 117, 328
+	offsets: 112, 6, 340, 340
+	rotate: 90
+JP_coin/JP_coin_09
+	bounds: 322, 39, 168, 328
+	offsets: 86, 6, 340, 340
+	rotate: 90
+JP_coin/JP_coin_10
+	bounds: 656, 355, 252, 332
+	offsets: 44, 4, 340, 340
+	rotate: 90
+JP_coin/JP_coin_11
+	bounds: 332, 661, 280, 332
+	offsets: 30, 4, 340, 340
+	rotate: 90
+JP_coin/JP_coin_12
+	bounds: 2, 26, 318, 328
+	offsets: 11, 6, 340, 340
+JP_coin/JP_coin_13
+	bounds: 2, 356, 322, 328
+	offsets: 9, 6, 340, 340
+JP_coin/JP_coin_14
+	bounds: 354, 1019, 328, 328
+	offsets: 6, 6, 340, 340
+JP_coin_blur/JP_coin_blur_00
+	bounds: 1065, 660, 142, 143
+	offsets: 12, 11, 165, 165
+JP_coin_blur/JP_coin_blur_01
+	bounds: 990, 515, 141, 143
+	offsets: 12, 11, 165, 165
+JP_coin_blur/JP_coin_blur_02
+	bounds: 990, 224, 133, 144
+	offsets: 16, 10, 165, 165
+JP_coin_blur/JP_coin_blur_03
+	bounds: 1133, 369, 124, 143
+	offsets: 21, 11, 165, 165
+JP_coin_blur/JP_coin_blur_04
+	bounds: 1133, 514, 114, 144
+	offsets: 26, 10, 165, 165
+JP_coin_blur/JP_coin_blur_05
+	bounds: 1249, 514, 98, 144
+	offsets: 34, 10, 165, 165
+JP_coin_blur/JP_coin_blur_06
+	bounds: 1209, 660, 80, 143
+	offsets: 43, 11, 165, 165
+JP_coin_blur/JP_coin_blur_07
+	bounds: 1209, 660, 80, 143
+	offsets: 43, 11, 165, 165
+JP_coin_blur/JP_coin_blur_08
+	bounds: 1252, 225, 60, 142
+	offsets: 53, 11, 165, 165
+JP_coin_blur/JP_coin_blur_09
+	bounds: 847, 956, 61, 142
+	offsets: 52, 11, 165, 165
+	rotate: 90
+JP_coin_blur/JP_coin_blur_10
+	bounds: 1259, 369, 81, 143
+	offsets: 42, 11, 165, 165
+JP_coin_blur/JP_coin_blur_11
+	bounds: 1110, 77, 115, 144
+	offsets: 25, 10, 165, 165
+JP_coin_blur/JP_coin_blur_12
+	bounds: 1125, 223, 125, 144
+	offsets: 20, 10, 165, 165
+JP_coin_blur/JP_coin_blur_13
+	bounds: 990, 370, 141, 143
+	offsets: 12, 11, 165, 165
+JP_coin_blur/JP_coin_blur_14
+	bounds: 920, 660, 143, 143
+	offsets: 11, 11, 165, 165
+light
+	bounds: 2, 1016, 350, 331
+	offsets: 0, 19, 361, 350
+light1_w
+	bounds: 354, 943, 491, 74
+light2
+	bounds: 652, 7, 128, 456
+	offsets: 2, 1, 130, 458
+	rotate: 90

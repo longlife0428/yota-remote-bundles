@@ -1,0 +1,88 @@
+symbol_scatter.png
+	size: 644, 644
+	filter: Linear, Linear
+Eff_baoyun0160_new2
+	bounds: 103, 112, 128, 128
+aura_2
+	bounds: 306, 288, 128, 121
+	offsets: 0, 5, 128, 128
+	rotate: 90
+bg
+	bounds: 2, 418, 238, 224
+	offsets: 24, 26, 287, 276
+flare_121
+	bounds: 523, 333, 57, 65
+	offsets: 10, 7, 76, 76
+glow_88
+	bounds: 405, 492, 150, 150
+	offsets: 9, 8, 164, 164
+guang_BG
+	bounds: 172, 284, 132, 132
+main
+	bounds: 2, 242, 168, 174
+	offsets: 1, 1, 170, 176
+main_flip/main_flip_00
+	bounds: 429, 250, 88, 92
+	offsets: 16, 14, 120, 120
+	rotate: 90
+main_flip/main_flip_01
+	bounds: 233, 186, 92, 96
+	offsets: 15, 11, 120, 120
+main_flip/main_flip_02
+	bounds: 201, 8, 66, 102
+	offsets: 31, 8, 120, 120
+main_flip/main_flip_03
+	bounds: 242, 418, 58, 102
+	offsets: 27, 8, 120, 120
+	rotate: 90
+main_flip/main_flip_04
+	bounds: 103, 13, 96, 97
+	offsets: 10, 11, 120, 120
+main_flip/main_flip_05
+	bounds: 429, 340, 99, 92
+	offsets: 11, 15, 120, 120
+	rotate: 90
+main_flip/main_flip_06
+	bounds: 327, 110, 81, 93
+	offsets: 23, 16, 120, 120
+	rotate: 90
+main_flip/main_flip_07
+	bounds: 421, 203, 45, 92
+	offsets: 40, 17, 120, 120
+	rotate: 90
+main_flip/main_flip_08
+	bounds: 233, 129, 55, 92
+	offsets: 29, 17, 120, 120
+	rotate: 90
+main_flip/main_flip_09
+	bounds: 457, 15, 76, 92
+	offsets: 18, 17, 120, 120
+main_flip/main_flip_10
+	bounds: 524, 400, 87, 92
+	offsets: 14, 16, 120, 120
+	rotate: 90
+main_flip/main_flip_11
+	bounds: 422, 109, 92, 92
+	offsets: 13, 16, 120, 120
+main_flip/main_flip_12
+	bounds: 269, 16, 92, 92
+	offsets: 14, 15, 120, 120
+main_flip/main_flip_13
+	bounds: 327, 193, 92, 93
+	offsets: 14, 14, 120, 120
+main_flip/main_flip_14
+	bounds: 363, 15, 92, 92
+	offsets: 14, 14, 120, 120
+main_glow_00
+	bounds: 242, 478, 161, 164
+	offsets: 6, 5, 170, 176
+text
+	bounds: 2, 2, 238, 99
+	rotate: 90
+text_glow_00
+	bounds: 557, 489, 153, 85
+	offsets: 14, 4, 180, 90
+	rotate: 90
+text_light_00
+	bounds: 405, 441, 117, 49
+	offsets: 22, 12, 160, 70

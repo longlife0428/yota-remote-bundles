@@ -1,0 +1,183 @@
+symbol_wild.png
+	size: 1208, 1208
+	filter: Linear, Linear
+Eff_baoyun0160_new2
+	bounds: 2, 298, 128, 128
+aura_64
+	bounds: 835, 387, 256, 256
+bg
+	bounds: 524, 264, 236, 224
+	offsets: 22, 26, 280, 276
+cash
+	bounds: 565, 490, 268, 193
+	offsets: 1, 1, 270, 194
+flare_121
+	bounds: 762, 431, 57, 65
+	offsets: 10, 7, 76, 76
+	rotate: 90
+helm_sweep/helm_sweep_00
+	bounds: 266, 428, 256, 92
+	offsets: 37, 2, 342, 223
+helm_sweep/helm_sweep_01
+	bounds: 2, 428, 262, 111
+	offsets: 34, 2, 342, 223
+helm_sweep/helm_sweep_02
+	bounds: 277, 522, 267, 129
+	offsets: 32, 2, 342, 223
+helm_sweep/helm_sweep_03
+	bounds: 861, 645, 269, 148
+	offsets: 31, 2, 342, 223
+helm_sweep/helm_sweep_04
+	bounds: 2, 541, 273, 167
+	offsets: 29, 2, 342, 223
+helm_sweep/helm_sweep_05
+	bounds: 287, 653, 276, 186
+	offsets: 28, 2, 342, 223
+helm_sweep/helm_sweep_06
+	bounds: 579, 685, 280, 214
+	offsets: 26, 2, 342, 223
+helm_sweep/helm_sweep_07
+	bounds: 870, 795, 282, 217
+	offsets: 25, 4, 342, 223
+helm_sweep/helm_sweep_08
+	bounds: 2, 710, 283, 212
+	offsets: 25, 9, 342, 223
+helm_sweep/helm_sweep_09
+	bounds: 292, 841, 285, 204
+	offsets: 25, 17, 342, 223
+helm_sweep/helm_sweep_10
+	bounds: 872, 1014, 287, 192
+	offsets: 25, 29, 342, 223
+helm_sweep/helm_sweep_11
+	bounds: 2, 1029, 288, 177
+	offsets: 25, 44, 342, 223
+helm_sweep/helm_sweep_12
+	bounds: 292, 1047, 288, 159
+	offsets: 25, 62, 342, 223
+helm_sweep/helm_sweep_13
+	bounds: 582, 1051, 288, 155
+	offsets: 25, 66, 342, 223
+helm_sweep/helm_sweep_14
+	bounds: 582, 901, 286, 148
+	offsets: 25, 73, 342, 223
+helm_sweep/helm_sweep_15
+	bounds: 2, 924, 285, 103
+	offsets: 25, 118, 342, 223
+par/par_00
+	bounds: 579, 1044, 1, 1
+par/par_01
+	bounds: 336, 342, 88, 84
+	offsets: 16, 16, 120, 120
+par/par_02
+	bounds: 336, 248, 92, 87
+	offsets: 13, 15, 120, 120
+	rotate: 90
+par/par_03
+	bounds: 428, 336, 94, 90
+	offsets: 12, 14, 120, 120
+par/par_04
+	bounds: 428, 236, 98, 93
+	offsets: 9, 13, 120, 120
+	rotate: 90
+par/par_05
+	bounds: 985, 74, 100, 97
+	offsets: 8, 11, 120, 120
+par/par_06
+	bounds: 1091, 146, 103, 99
+	offsets: 6, 11, 120, 120
+par/par_07
+	bounds: 985, 283, 106, 102
+	offsets: 4, 11, 120, 120
+par/par_08
+	bounds: 985, 173, 108, 104
+	offsets: 2, 10, 120, 120
+	rotate: 90
+par/par_09
+	bounds: 876, 276, 109, 107
+	offsets: 1, 9, 120, 120
+	rotate: 90
+par/par_10
+	bounds: 873, 152, 111, 110
+	offsets: 0, 8, 120, 120
+	rotate: 90
+par/par_11
+	bounds: 861, 35, 112, 111
+	offsets: 0, 8, 120, 120
+	rotate: 90
+par/par_12
+	bounds: 1093, 472, 114, 113
+	offsets: 0, 7, 120, 120
+	rotate: 90
+par/par_13
+	bounds: 428, 2, 115, 114
+	offsets: 0, 6, 120, 120
+par/par_14
+	bounds: 1093, 247, 109, 110
+	offsets: 7, 5, 120, 120
+	rotate: 90
+par/par_15
+	bounds: 1093, 358, 112, 113
+	offsets: 6, 3, 120, 120
+	rotate: 90
+par/par_16
+	bounds: 545, 31, 111, 114
+	offsets: 8, 3, 120, 120
+par/par_17
+	bounds: 648, 148, 114, 111
+	offsets: 6, 1, 120, 120
+	rotate: 90
+par/par_18
+	bounds: 200, 21, 115, 119
+	offsets: 5, 0, 120, 120
+par/par_19
+	bounds: 100, 142, 115, 120
+	offsets: 4, 0, 120, 120
+par/par_20
+	bounds: 428, 118, 116, 114
+	offsets: 3, 0, 120, 120
+	rotate: 90
+par/par_21
+	bounds: 217, 144, 118, 117
+	offsets: 2, 0, 120, 120
+	rotate: 90
+par/par_22
+	bounds: 132, 309, 117, 107
+	offsets: 1, 11, 120, 120
+	rotate: 90
+par/par_23
+	bounds: 317, 24, 118, 109
+	offsets: 1, 10, 120, 120
+	rotate: 90
+par/par_24
+	bounds: 761, 149, 113, 110
+	offsets: 7, 10, 120, 120
+	rotate: 90
+par/par_25
+	bounds: 100, 20, 120, 98
+	offsets: 0, 9, 120, 120
+	rotate: 90
+par/par_26
+	bounds: 760, 32, 114, 99
+	offsets: 6, 8, 120, 120
+	rotate: 90
+par/par_27
+	bounds: 658, 32, 114, 100
+	offsets: 6, 8, 120, 120
+	rotate: 90
+par/par_28
+	bounds: 544, 147, 115, 102
+	offsets: 5, 7, 120, 120
+	rotate: 90
+par/par_29
+	bounds: 241, 313, 113, 91
+	offsets: 5, 16, 120, 120
+	rotate: 90
+par/par_30
+	bounds: 762, 265, 112, 91
+	offsets: 7, 7, 120, 120
+text
+	bounds: 1132, 588, 205, 69
+	rotate: 90
+text_bg
+	bounds: 2, 30, 232, 96
+	rotate: 90
