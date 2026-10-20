@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="color-scheme" content="normal">
+<title>host shell</title>
+<style>
+:root {
+    --sat: env(safe-area-inset-top, 0px);
+    --sar: env(safe-area-inset-right, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif; }
+body.has-game { background: #000; }
+
+#game { position: fixed; top: var(--sat); right: var(--sar); bottom: var(--sab); left: var(--sal); width: calc(100% - var(--sal) - var(--sar)); height: calc(100% - var(--sat) - var(--sab)); border: 0; background: #000; }
+
+#exit-btn { position: fixed; z-index: 10; top: calc(var(--sat) + 8px); left: calc(var(--sal) + 8px); min-width: 44px; height: 32px; padding: 0 12px; border: 1px solid rgba(255,255,255,.35); border-radius: 16px; background: rgba(0,0,0,.55); color: #fff; font-size: 14px; line-height: 30px; text-align: center; cursor: pointer; user-select: none; }
+#exit-btn.right { left: auto; right: calc(var(--sar) + 8px); }
+#exit-btn.hidden { display: none; }
+
+#mask { position: fixed; z-index: 20; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.6); }
+#mask.show { display: flex; }
+#dialog { width: min(86vw, 360px); padding: 22px 20px 18px; border-radius: 12px; background: #253448; color: #fff; text-align: center; }
+#dialog h1 { margin: 0 0 10px; font-size: 18px; font-weight: 600; }
+#dialog p { margin: 0 0 18px; font-size: 15px; line-height: 1.5; color: #d8e0ea; white-space: pre-line; }
+#dialog .row { display: flex; gap: 12px; }
+#dialog button { flex: 1; height: 40px; border-radius: 20px; font-size: 15px; cursor: pointer; }
+#dialog .cancel { border: 2px solid #797979; background: transparent; color: #fff; }
+#dialog .ok { border: 0; background: #60c4cf; color: #0c1620; }
+
+#loading { position: fixed; z-index: 30; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: rgba(0,0,0,.5); color: #fff; font-size: 15px; }
+#loading.show { display: flex; }
+#loading i { width: 34px; height: 34px; border: 3px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+#toast { position: fixed; z-index: 40; left: 50%; bottom: calc(var(--sab) + 40px); max-width: 80vw; padding: 10px 16px; border-radius: 8px; background: rgba(0,0,0,.8); color: #fff; font-size: 14px; transform: translateX(-50%); opacity: 0; pointer-events: none; transition: opacity .2s; }
+#toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+<button id="exit-btn" type="button"></button>
+<div id="mask"><div id="dialog"><h1></h1><p></p><div class="row"><button class="cancel" type="button"></button><button class="ok" type="button"></button></div></div></div>
+<div id="loading"><i></i><span></span></div>
+<div id="toast"></div>
+<script>
+(function () {
+    var query = new URLSearchParams(location.search);
+    var gameUrl = query.get('url') || '';
+    var scheme = query.get('scheme') || 'hostshell';
+    // post = 內嵌在頁面裡用 postMessage  scheme = 原生 WebView 用網址回呼
+    var bridge = query.get('bridge') || (window.parent !== window ? 'post' : 'scheme');
+    var lang = query.get('lang') || 'zh-TW';
+
+    var TEXT = {
+        'zh-TW': { exit: '退出', title: '離開遊戲', message: '確定要離開目前的遊戲嗎？', confirm: '確定離開', cancel: '取消', ok: '確定', loading: '處理中…', exitFailed: '退出失敗 請稍後再試' },
+        'zh-CN': { exit: '退出', title: '离开游戏', message: '确定要离开当前的游戏吗？', confirm: '确定离开', cancel: '取消', ok: '确定', loading: '处理中…', exitFailed: '退出失败 请稍后再试' },
+        'en': { exit: 'Exit', title: 'Leave game', message: 'Leave the current game?', confirm: 'Leave', cancel: 'Cancel', ok: 'OK', loading: 'Please wait…', exitFailed: 'Exit failed. Please try again.' }
+    };
+    var text = Object.assign({}, TEXT[lang] || TEXT['zh-TW']);
+
+    var exitBtn = document.getElementById('exit-btn');
+    var mask = document.getElementById('mask');
+    var dialog = document.getElementById('dialog');
+    var dlgTitle = dialog.querySelector('h1');
+    var dlgMessage = dialog.querySelector('p');
+    var dlgCancel = dialog.querySelector('.cancel');
+    var dlgOk = dialog.querySelector('.ok');
+    var loading = document.getElementById('loading');
+    var toast = document.getElementById('toast');
+    var gameFrame = null;
+    var dialogId = '';
+    var toastTimer = 0;
+
+    function emit(type, payload) {
+        var message = { source: 'host-shell', type: type, payload: payload || {} };
+        if (bridge === 'post') {
+            window.parent.postMessage(message, '*');
+        } else {
+            location.href = scheme + '://' + type + '?d=' + encodeURIComponent(JSON.stringify(message));
+        }
+    }
+
+    function applyText() {
+        exitBtn.textContent = text.exit;
+    }
+
+    function applySafe(safe) {
+        var root = document.documentElement.style;
+        if (safe.top != null) root.setProperty('--sat', safe.top + 'px');
+        if (safe.right != null) root.setProperty('--sar', safe.right + 'px');
+        if (safe.bottom != null) root.setProperty('--sab', safe.bottom + 'px');
+        if (safe.left != null) root.setProperty('--sal', safe.left + 'px');
+    }
+
+    function openDialog(options) {
+        dialogId = options.id || '';
+        dlgTitle.textContent = options.title || '';
+        dlgMessage.textContent = options.message || '';
+        dlgOk.textContent = options.confirm || text.ok;
+        dlgCancel.textContent = options.cancel || text.cancel;
+        dlgCancel.style.display = options.alert ? 'none' : '';
+        mask.classList.add('show');
+        emit('dialog-open', { id: dialogId });
+    }
+
+    function closeDialog(result) {
+        if (!mask.classList.contains('show')) return;
+        mask.classList.remove('show');
+        emit('dialog-close', { id: dialogId, result: result });
+        dialogId = '';
+    }
+
+    function showExitConfirm() {
+        openDialog({ id: 'exit', title: text.title, message: text.message, confirm: text.confirm, cancel: text.cancel });
+    }
+
+    function showToast(message, ms) {
+        toast.textContent = message;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toast.classList.remove('show'); }, ms || 2000);
+    }
+
+    function handle(message) {
+        if (!message || message.source !== 'host') return;
+        var payload = message.payload || {};
+        switch (message.type) {
+            case 'init':
+                if (payload.strings) Object.assign(text, payload.strings);
+                if (payload.safe) applySafe(payload.safe);
+                if (payload.exitButton === 'none') exitBtn.classList.add('hidden');
+                if (payload.exitButton === 'right') exitBtn.classList.add('right');
+                applyText();
+                break;
+            case 'show-exit':
+                showExitConfirm();
+                break;
+            case 'show-confirm':
+                openDialog(payload);
+                break;
+            case 'show-alert':
+                payload.alert = true;
+                openDialog(payload);
+                break;
+            case 'close-dialog':
+                closeDialog('closed');
+                break;
+            case 'show-loading':
+                loading.querySelector('span').textContent = payload.text || text.loading;
+                loading.classList.add('show');
+                break;
+            case 'hide-loading':
+                loading.classList.remove('show');
+                break;
+            case 'show-toast':
+                showToast(payload.text || text[payload.key] || '', payload.ms);
+                break;
+            case 'safe':
+                applySafe(payload);
+                break;
+        }
+    }
+
+    // 網頁版 postMessage
+    window.addEventListener('message', function (event) {
+        if (gameFrame && event.source === gameFrame.contentWindow) {
+            // 對方遊戲只認 return.html 的回傳
+            if (event.data && event.data.source === 'host-shell-return') emit('exit-confirm', { via: 'return_url' });
+            return;
+        }
+        if (bridge === 'post' && event.source !== window.parent) return;
+        handle(event.data);
+    });
+
+    // 原生 WebView evaluateJS 入口
+    window.__hostShell = {
+        receive: function (message) { handle(typeof message === 'string' ? JSON.parse(message) : message); }
+    };
+
+    exitBtn.addEventListener('click', showExitConfirm);
+    dlgOk.addEventListener('click', function () {
+        var id = dialogId;
+        closeDialog('ok');
+        if (id === 'exit') emit('exit-confirm', { via: 'dialog' });
+    });
+    dlgCancel.addEventListener('click', function () {
+        var id = dialogId;
+        closeDialog('cancel');
+        if (id === 'exit') emit('exit-cancel');
+    });
+    window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') showExitConfirm();
+    });
+
+    if (gameUrl) {
+        document.body.classList.add('has-game');
+        gameFrame = document.createElement('iframe');
+        gameFrame.id = 'game';
+        gameFrame.setAttribute('allow', 'autoplay; fullscreen; clipboard-write');
+        // 不給 allow-top-navigation 避免對方把殼頁導走
+        if (query.get('sandbox') !== '0') {
+            gameFrame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-pointer-lock allow-orientation-lock');
+        }
+        gameFrame.addEventListener('load', function () { emit('game-loaded'); });
+        gameFrame.src = gameUrl;
+        document.body.insertBefore(gameFrame, document.body.firstChild);
+    } else {
+        // 沒有網址就只出彈窗 不顯示退出鈕
+        exitBtn.classList.add('hidden');
+    }
+
+    applyText();
+    emit('ready', { hasGame: !!gameUrl });
+})();
+</script>
+</body>
+</html>

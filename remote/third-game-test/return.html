@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>return</title>
+</head>
+<body>
+<script>
+// 當作 return_url 給對方遊戲 對方導向這裡就通知殼頁退出
+window.parent.postMessage({ source: 'host-shell-return' }, '*');
+</script>
+</body>
+</html>

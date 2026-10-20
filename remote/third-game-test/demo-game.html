@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>demo game</title>
+<style>
+html, body { margin: 0; height: 100%; overflow: hidden; background: #123; color: #fff; font-family: sans-serif; }
+canvas { position: fixed; inset: 0; width: 100%; height: 100%; }
+#ui { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; }
+button { padding: 10px 22px; font-size: 18px; border-radius: 8px; border: 0; background: #f5b400; }
+#info { font-size: 14px; opacity: .8; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="ui">
+    <div style="font-size:26px">外部遊戲（測試頁）</div>
+    <div id="count">點擊次數 0</div>
+    <button id="plus">點我 +1</button>
+    <button id="ret">遊戲自己的退出（導向 return.html）</button>
+    <div id="info"></div>
+</div>
+<script>
+var n = 0;
+document.getElementById('plus').onclick = function () { n++; document.getElementById('count').textContent = '點擊次數 ' + n; };
+document.getElementById('ret').onclick = function () { location.href = 'return.html'; };
+document.getElementById('info').textContent = location.href + ' | ' + innerWidth + 'x' + innerHeight + ' | parent=' + (window.parent !== window);
+var c = document.getElementById('c'), g = c.getContext('2d'), t = 0;
+function frame() {
+    c.width = innerWidth; c.height = innerHeight; t += 0.03;
+    g.fillStyle = '#123'; g.fillRect(0, 0, c.width, c.height);
+    g.fillStyle = '#4af';
+    for (var i = 0; i < 6; i++) { g.beginPath(); g.arc(c.width / 2 + Math.cos(t + i) * 120, c.height / 2 + Math.sin(t * 1.3 + i) * 80, 22, 0, 6.3); g.fill(); }
+    requestAnimationFrame(frame);
+}
+frame();
+</script>
+</body>
+</html>
