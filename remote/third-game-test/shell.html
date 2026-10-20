@@ -60,6 +60,8 @@ body.has-game #tag { display: flex; }
     // post = 內嵌在頁面裡用 postMessage  scheme = 原生 WebView 用網址回呼
     var bridge = query.get('bridge') || (window.parent !== window ? 'post' : 'scheme');
     var lang = query.get('lang') || 'zh-TW';
+    // 自訂的遊戲代號 遊戲握手時一起回給它
+    var gameId = query.get('gameId') || '';
 
     var TEXT = {
         'zh-TW': { exit: '退出', title: '離開遊戲', message: '確定要離開目前的遊戲嗎？', confirm: '確定離開', cancel: '取消', ok: '確定', loading: '處理中…', exitFailed: '退出失敗 請稍後再試' },
@@ -115,10 +117,19 @@ body.has-game #tag { display: flex; }
         emit('cover-hidden', { reason: reason });
     }
 
+    // 握手 告訴遊戲殼頁在 以及它的代號與語言
+    function sendHello() {
+        gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'hello', payload: { gameId: gameId, lang: lang } }, '*');
+    }
+
     // 遊戲傳來的訊息 約定格式 { source: 'game', type, payload }
     function handleGame(message) {
         var payload = message.payload || {};
         switch (message.type) {
+            case 'hi':
+                // 遊戲啟動得比 load 事件晚 它主動問就補回握手
+                sendHello();
+                break;
             case 'ready':
                 hideCover('ready');
                 emit('game-ready', payload);
@@ -248,7 +259,7 @@ body.has-game #tag { display: flex; }
         gameFrame.addEventListener('load', function () {
             emit('game-loaded');
             // 先打招呼 遊戲想要的話可以用 host-sdk.js 接
-            gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'hello', payload: { lang: lang } }, '*');
+            sendHello();
             // 同網域的遊戲 補上大廳的共用介面 遊戲按選單時直接走殼頁的退出 跨網域取不到就略過
             try {
                 gameFrame.contentWindow.__subGameShowSystemMenu__ = function () { showExitConfirm(); return Promise.resolve(); };
