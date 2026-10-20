@@ -37,9 +37,10 @@ body.has-game { background: #000; }
 #loading i { width: 34px; height: 34px; border: 3px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-#tag { position: fixed; z-index: 5; inset: 0; display: none; align-items: center; justify-content: center; color: #fff; font-size: 36px; font-weight: 700; pointer-events: none; }
+#tag { position: fixed; z-index: 5; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #000; color: #fff; font-size: 36px; font-weight: 700; pointer-events: none; }
 body.has-game #tag { display: flex; }
 #tag.done { display: none !important; }
+#tag small { font-size: 14px; font-weight: 400; opacity: .7; }
 
 #toast { position: fixed; z-index: 40; left: 50%; bottom: calc(var(--sab) + 40px); max-width: 80vw; padding: 10px 16px; border-radius: 8px; background: rgba(0,0,0,.8); color: #fff; font-size: 14px; transform: translateX(-50%); opacity: 0; pointer-events: none; transition: opacity .2s; }
 #toast.show { opacity: 1; }
@@ -50,7 +51,7 @@ body.has-game #tag { display: flex; }
 <div id="mask"><div id="dialog"><h1></h1><p></p><div class="row"><button class="cancel" type="button"></button><button class="ok" type="button"></button></div></div></div>
 <div id="loading"><i></i><span></span></div>
 <div id="toast"></div>
-<div id="tag">shell page</div>
+<div id="tag">shell page<small id="tag-sub"></small></div>
 <script>
 (function () {
     var query = new URLSearchParams(location.search);
@@ -77,6 +78,11 @@ body.has-game #tag { display: flex; }
     var loading = document.getElementById('loading');
     var toast = document.getElementById('toast');
     var gameFrame = null;
+    var cover = document.getElementById('tag');
+    var coverSub = document.getElementById('tag-sub');
+    // 遮罩模式 數字=網頁載入後再蓋幾秒 wait=只等遊戲回 ready 最多 30 秒
+    var coverMode = query.get('cover') || '8';
+    var coverTimer = 0;
     var dialogId = '';
     var toastTimer = 0;
 
@@ -99,6 +105,34 @@ body.has-game #tag { display: flex; }
         if (safe.right != null) root.setProperty('--sar', safe.right + 'px');
         if (safe.bottom != null) root.setProperty('--sab', safe.bottom + 'px');
         if (safe.left != null) root.setProperty('--sal', safe.left + 'px');
+    }
+
+    // 遮罩隱藏原因 ready 遊戲通知 timeout 逾時
+    function hideCover(reason) {
+        if (cover.classList.contains('done')) return;
+        cover.classList.add('done');
+        clearTimeout(coverTimer);
+        emit('cover-hidden', { reason: reason });
+    }
+
+    // 遊戲傳來的訊息 約定格式 { source: 'game', type, payload }
+    function handleGame(message) {
+        var payload = message.payload || {};
+        switch (message.type) {
+            case 'ready':
+                hideCover('ready');
+                emit('game-ready', payload);
+                break;
+            case 'loading':
+                coverSub.textContent = typeof payload.percent === 'number' ? Math.round(payload.percent) + '%' : '';
+                break;
+            case 'exit':
+                showExitConfirm();
+                break;
+            case 'error':
+                emit('game-error', payload);
+                break;
+        }
     }
 
     function openDialog(options) {
@@ -173,8 +207,9 @@ body.has-game #tag { display: flex; }
     // 網頁版 postMessage
     window.addEventListener('message', function (event) {
         if (gameFrame && event.source === gameFrame.contentWindow) {
-            // 對方遊戲只認 return.html 的回傳
+            // return.html 的回傳 與遊戲自己傳的訊息
             if (event.data && event.data.source === 'host-shell-return') emit('exit-confirm', { via: 'return_url' });
+            else if (event.data && event.data.source === 'game') handleGame(event.data);
             return;
         }
         if (bridge === 'post' && event.source !== window.parent) return;
@@ -211,9 +246,13 @@ body.has-game #tag { display: flex; }
             gameFrame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-pointer-lock allow-orientation-lock');
         }
         gameFrame.addEventListener('load', function () {
-            // 對方網頁載入完成就隱藏殼頁標示
-            document.getElementById('tag').classList.add('done');
             emit('game-loaded');
+            // 先打招呼 遊戲想要的話可以用 host-sdk.js 接
+            gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'hello', payload: { lang: lang } }, '*');
+            // 沒收到 ready 的遊戲 載入後再蓋一段時間
+            var seconds = coverMode === 'wait' ? 30 : Number(coverMode);
+            if (!isFinite(seconds)) seconds = 8;
+            coverTimer = setTimeout(function () { hideCover('timeout'); }, seconds * 1000);
         });
         gameFrame.src = gameUrl;
         document.body.insertBefore(gameFrame, document.body.firstChild);
