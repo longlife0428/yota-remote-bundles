@@ -1,0 +1,123 @@
+free_board.png
+	size: 1756, 1756
+	filter: Linear, Linear
+board
+	bounds: 2, 646, 1711, 1108
+	offsets: 1, 1, 1713, 1110
+flare_29
+	bounds: 915, 125, 252, 122
+	offsets: 4, 67, 256, 256
+frame_light
+	bounds: 2, 37, 911, 607
+par2/p3_00000
+	bounds: 1261, 605, 39, 359
+	offsets: 11, 7, 50, 400
+	rotate: 90
+par2/p3_00029
+	bounds: 1261, 605, 39, 359
+	offsets: 11, 7, 50, 400
+	rotate: 90
+par2/p3_00001
+	bounds: 1261, 390, 39, 351
+	offsets: 11, 8, 50, 400
+	rotate: 90
+par2/p3_00002
+	bounds: 1261, 349, 39, 347
+	offsets: 11, 9, 50, 400
+	rotate: 90
+par2/p3_00003
+	bounds: 1261, 266, 39, 342
+	offsets: 11, 11, 50, 400
+	rotate: 90
+par2/p3_00004
+	bounds: 915, 37, 39, 339
+	offsets: 11, 12, 50, 400
+	rotate: 90
+par2/p3_00005
+	bounds: 1256, 139, 41, 335
+	offsets: 9, 13, 50, 400
+	rotate: 90
+par2/p3_00006
+	bounds: 1256, 52, 42, 332
+	offsets: 8, 14, 50, 400
+	rotate: 90
+par2/p3_00007
+	bounds: 1614, 266, 44, 319
+	offsets: 6, 25, 50, 400
+par2/p3_00008
+	bounds: 915, 78, 45, 339
+	offsets: 5, 26, 50, 400
+	rotate: 90
+par2/p3_00009
+	bounds: 1214, 289, 45, 355
+	offsets: 5, 27, 50, 400
+par2/p3_00010
+	bounds: 1261, 560, 43, 348
+	offsets: 7, 28, 50, 400
+	rotate: 90
+par2/p3_00011
+	bounds: 1261, 431, 41, 346
+	offsets: 9, 25, 50, 400
+	rotate: 90
+par2/p3_00012
+	bounds: 1256, 182, 39, 337
+	offsets: 11, 29, 50, 400
+	rotate: 90
+par2/p3_00013
+	bounds: 1256, 12, 38, 331
+	offsets: 12, 30, 50, 400
+	rotate: 90
+par2/p3_00014
+	bounds: 1261, 307, 40, 345
+	offsets: 10, 13, 50, 400
+	rotate: 90
+par2/p3_00015
+	bounds: 1256, 223, 41, 338
+	offsets: 9, 17, 50, 400
+	rotate: 90
+par2/p3_00016
+	bounds: 1261, 474, 41, 347
+	offsets: 9, 21, 50, 400
+	rotate: 90
+par2/p3_00017
+	bounds: 1256, 96, 41, 335
+	offsets: 9, 25, 50, 400
+	rotate: 90
+par2/p3_00018
+	bounds: 1171, 284, 41, 360
+	offsets: 9, 28, 50, 400
+par2/p3_00019
+	bounds: 1261, 517, 41, 348
+	offsets: 9, 31, 50, 400
+	rotate: 90
+par2/p3_00020
+	bounds: 915, 249, 40, 395
+	offsets: 10, 0, 50, 400
+par2/p3_00021
+	bounds: 1715, 1363, 39, 391
+	offsets: 11, 0, 50, 400
+par2/p3_00022
+	bounds: 1715, 976, 39, 385
+	offsets: 11, 1, 50, 400
+par2/p3_00023
+	bounds: 1715, 593, 39, 381
+	offsets: 11, 1, 50, 400
+par2/p3_00024
+	bounds: 957, 265, 40, 379
+	offsets: 10, 2, 50, 400
+par2/p3_00025
+	bounds: 999, 270, 41, 374
+	offsets: 9, 2, 50, 400
+par2/p3_00026
+	bounds: 1084, 276, 42, 368
+	offsets: 8, 3, 50, 400
+par2/p3_00027
+	bounds: 1128, 280, 41, 364
+	offsets: 9, 4, 50, 400
+par2/p3_00028
+	bounds: 1042, 271, 40, 373
+	offsets: 10, 5, 50, 400
+spark1
+	bounds: 1622, 587, 57, 65
+	offsets: 10, 7, 76, 76
+	rotate: 90

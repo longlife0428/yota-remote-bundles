@@ -1,0 +1,36 @@
+symbol_m.png
+	size: 712, 712
+	filter: Linear, Linear
+aura_318
+	bounds: 225, 493, 216, 216
+	offsets: 24, 17, 256, 256
+flare1
+	bounds: 2, 468, 221, 241
+	offsets: 18, 9, 256, 256
+flare2
+	bounds: 2, 225, 221, 241
+	offsets: 18, 9, 256, 256
+mul_symbol/symbol_m1_1
+	bounds: 2, 34, 160, 189
+	offsets: 1, 1, 162, 191
+mul_symbol/symbol_m1_2
+	bounds: 225, 302, 160, 189
+	offsets: 1, 1, 162, 191
+mul_symbol/symbol_m1_3
+	bounds: 443, 520, 160, 189
+	offsets: 1, 1, 162, 191
+mul_symbol/symbol_m1_4
+	bounds: 164, 34, 160, 189
+	offsets: 1, 1, 162, 191
+mul_symbol/symbol_m2_1
+	bounds: 387, 302, 160, 189
+	offsets: 1, 1, 162, 191
+mul_symbol/symbol_m2_2
+	bounds: 326, 111, 160, 189
+	offsets: 1, 1, 162, 191
+mul_symbol/symbol_m2_3
+	bounds: 488, 111, 160, 189
+	offsets: 1, 1, 162, 191
+mul_symbol/symbol_m2_4
+	bounds: 549, 329, 160, 189
+	offsets: 1, 1, 162, 191
