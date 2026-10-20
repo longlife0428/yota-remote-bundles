@@ -249,6 +249,12 @@ body.has-game #tag { display: flex; }
             emit('game-loaded');
             // 先打招呼 遊戲想要的話可以用 host-sdk.js 接
             gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'hello', payload: { lang: lang } }, '*');
+            // 同網域的遊戲 補上大廳的共用介面 遊戲按選單時直接走殼頁的退出 跨網域取不到就略過
+            try {
+                gameFrame.contentWindow.__subGameShowSystemMenu__ = function () { showExitConfirm(); return Promise.resolve(); };
+            } catch (error) {
+                // 跨網域的遊戲沒有這個介面
+            }
             // 沒收到 ready 的遊戲 載入後再蓋一段時間
             var seconds = coverMode === 'wait' ? 30 : Number(coverMode);
             if (!isFinite(seconds)) seconds = 8;
