@@ -37,6 +37,10 @@ body.has-game { background: #000; }
 #loading i { width: 34px; height: 34px; border: 3px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+#tag { position: fixed; z-index: 5; inset: 0; display: none; align-items: center; justify-content: center; color: #fff; font-size: 36px; font-weight: 700; pointer-events: none; }
+body.has-game #tag { display: flex; }
+#tag.done { display: none !important; }
+
 #toast { position: fixed; z-index: 40; left: 50%; bottom: calc(var(--sab) + 40px); max-width: 80vw; padding: 10px 16px; border-radius: 8px; background: rgba(0,0,0,.8); color: #fff; font-size: 14px; transform: translateX(-50%); opacity: 0; pointer-events: none; transition: opacity .2s; }
 #toast.show { opacity: 1; }
 </style>
@@ -46,6 +50,7 @@ body.has-game { background: #000; }
 <div id="mask"><div id="dialog"><h1></h1><p></p><div class="row"><button class="cancel" type="button"></button><button class="ok" type="button"></button></div></div></div>
 <div id="loading"><i></i><span></span></div>
 <div id="toast"></div>
+<div id="tag">shell page</div>
 <script>
 (function () {
     var query = new URLSearchParams(location.search);
@@ -205,7 +210,11 @@ body.has-game { background: #000; }
         if (query.get('sandbox') !== '0') {
             gameFrame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-pointer-lock allow-orientation-lock');
         }
-        gameFrame.addEventListener('load', function () { emit('game-loaded'); });
+        gameFrame.addEventListener('load', function () {
+            // 對方網頁載入完成就隱藏殼頁標示
+            document.getElementById('tag').classList.add('done');
+            emit('game-loaded');
+        });
         gameFrame.src = gameUrl;
         document.body.insertBefore(gameFrame, document.body.firstChild);
     } else {
