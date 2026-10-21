@@ -28,6 +28,8 @@
         loading: function (percent) { send('loading', { percent: percent }); },
         error: function (message) { send('error', { message: message }); },
         // 以下跟大廳呼叫殼頁的指令同一套
+        // 打開殼頁的系統選單 音樂音效切換會用 onHost 收到 setting { music, sound }
+        showSystemMenu: function () { send('show-system-menu'); },
         // 彈出退出確認窗 玩家確認後大廳會離開遊戲
         showExitDialog: function () { send('show-exit'); },
         // 彈出確認窗 options = { title, message, confirm, cancel } 回傳 'ok' 'cancel' 'closed'

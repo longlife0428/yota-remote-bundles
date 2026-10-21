@@ -18,9 +18,40 @@ body.has-game { background: #000; }
 
 #game { position: fixed; top: var(--sat); right: var(--sar); bottom: var(--sab); left: var(--sal); width: calc(100% - var(--sal) - var(--sar)); height: calc(100% - var(--sat) - var(--sab)); border: 0; background: #000; }
 
-#exit-btn { position: fixed; z-index: 10; top: calc(var(--sat) + 8px); left: calc(var(--sal) + 8px); min-width: 44px; height: 32px; padding: 0 12px; border: 1px solid rgba(255,255,255,.35); border-radius: 16px; background: rgba(0,0,0,.55); color: #fff; font-size: 14px; line-height: 30px; text-align: center; cursor: pointer; user-select: none; }
-#exit-btn.right { left: auto; right: calc(var(--sar) + 8px); }
-#exit-btn.hidden { display: none; }
+/* 選單鈕 原本的退出鈕 位置與樣式沿用 內容換成三條線 */
+#menu-btn { position: fixed; z-index: 10; top: calc(var(--sat) + 8px); left: calc(var(--sal) + 8px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; width: 44px; height: 32px; padding: 0; border: 1px solid rgba(255,255,255,.35); border-radius: 16px; background: rgba(0,0,0,.55); cursor: pointer; user-select: none; }
+#menu-btn i { display: block; width: 16px; height: 2px; border-radius: 1px; background: #fff; }
+#menu-btn.right { left: auto; right: calc(var(--sar) + 8px); }
+#menu-btn.hidden { display: none; }
+
+/* 系統選單 照 entry Core 的 SystemMenuPopup.prefab 一比一重做
+   面板用素材原尺寸 1200x700 排版 座標換算自 prefab 再整塊縮放 Cocos 版外框本身就縮成 0.5 倍
+   按鈕的顏色過渡 normal 214 hover 211 pressed 255 disabled 124 用 brightness 對應 只套在底圖上 */
+#sysmenu { position: fixed; z-index: 15; inset: 0; display: none; }
+#sysmenu.show { display: block; }
+#sysmenu-panel { position: absolute; left: 50%; top: 50%; width: 1200px; height: 700px; margin: -350px 0 0 -600px; background: url(system-menu/Popups_bg01.png) no-repeat; background-size: 100% 100%; font-family: Arial, "PingFang TC", "Microsoft JhengHei", sans-serif; color: #fff; user-select: none; }
+#sysmenu-close { position: absolute; left: 1082px; top: -41px; width: 180px; height: 180px; padding: 0; border: 0; background: url(system-menu/Popups_cancel_button.png) no-repeat; background-size: 100% 100%; filter: brightness(.839); cursor: pointer; }
+#sysmenu-close:hover { filter: brightness(.827); }
+#sysmenu-close:active { filter: none; }
+#sysmenu .title-en { position: absolute; left: 0; top: 35px; width: 1200px; height: 52px; font-size: 52px; line-height: 52px; font-weight: 700; text-align: center; color: rgb(248,236,205); white-space: nowrap; }
+#sysmenu .title { position: absolute; left: 0; top: 100.5px; width: 1200px; height: 73px; font-size: 60px; line-height: 73px; font-weight: 700; text-align: center; white-space: nowrap; }
+#sysmenu-list { position: absolute; left: 112.5px; top: 215px; display: grid; grid-template-columns: 470px 470px; gap: 25px 35px; }
+#sysmenu .row { position: relative; width: 470px; height: 120px; cursor: pointer; }
+#sysmenu .row.wide { grid-column: 1 / 3; width: 975px; }
+#sysmenu .row::before { content: ''; position: absolute; inset: 0; border: 30px solid transparent; border-image: url(system-menu/System_menu_options_bg.png) 30 fill stretch; filter: brightness(.839); }
+#sysmenu .row:hover::before { filter: brightness(.827); }
+#sysmenu .row:active::before { filter: none; }
+#sysmenu .row.disabled { cursor: default; }
+#sysmenu .row.disabled::before { filter: brightness(.486); }
+#sysmenu .row .icon { position: absolute; left: .5px; top: 0; width: 133px; height: 120px; background-size: 100% 100%; }
+#sysmenu .row.wide .icon { left: 1px; width: 131px; }
+#sysmenu .row .name { position: absolute; left: 164px; top: 21px; width: 306px; height: 50px; font-size: 40px; line-height: 50px; font-weight: 700; white-space: nowrap; overflow: hidden; }
+#sysmenu .row .desc { position: absolute; left: 164px; top: 72px; width: 306px; height: 24px; font-size: 20px; line-height: 24px; white-space: nowrap; overflow: hidden; }
+#sysmenu .row.wide .name, #sysmenu .row.wide .desc { width: 811px; }
+#sysmenu .row .switch { position: absolute; left: 350px; top: 16px; width: 100px; height: 44px; background: url(system-menu/System_menu_music_off_button.png) no-repeat; background-size: 100% 100%; }
+#sysmenu .row.on .switch { background-image: url(system-menu/System_menu_music_on_button.png); }
+#sysmenu .row .disable { position: absolute; inset: 0; display: none; border: 30px solid transparent; border-image: url(system-menu/System_menu_options_enable.png) 30 fill stretch; }
+#sysmenu .row.disabled .disable { display: block; }
 
 #mask { position: fixed; z-index: 20; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.6); }
 #mask.show { display: flex; }
@@ -47,7 +78,21 @@ body.has-game #tag { display: flex; }
 </style>
 </head>
 <body>
-<button id="exit-btn" type="button"></button>
+<button id="menu-btn" type="button"><i></i><i></i><i></i></button>
+<div id="sysmenu">
+    <div id="sysmenu-panel">
+        <div class="title-en"></div>
+        <div class="title"></div>
+        <div id="sysmenu-list">
+            <div class="row" data-action="music"><div class="icon" style="background-image:url(system-menu/System_menu_options_music_label.png)"></div><div class="name"></div><div class="desc"></div><div class="switch"></div><div class="disable"></div></div>
+            <div class="row" data-action="sound"><div class="icon" style="background-image:url(system-menu/System_menu_options_fx_label.png)"></div><div class="name"></div><div class="desc"></div><div class="switch"></div><div class="disable"></div></div>
+            <div class="row disabled" data-action="game-info"><div class="icon" style="background-image:url(system-menu/System_menu_options_info_label.png)"></div><div class="name"></div><div class="desc"></div><div class="disable"></div></div>
+            <div class="row disabled" data-action="game-history"><div class="icon" style="background-image:url(system-menu/System_menu_options_info_label.png)"></div><div class="name"></div><div class="desc"></div><div class="disable"></div></div>
+            <div class="row wide" data-action="leave"><div class="icon" style="background-image:url(system-menu/System_menu_options_exit_label.png)"></div><div class="name"></div><div class="desc"></div><div class="disable"></div></div>
+        </div>
+        <button id="sysmenu-close" type="button"></button>
+    </div>
+</div>
 <div id="mask"><div id="dialog"><h1></h1><p></p><div class="row"><button class="cancel" type="button"></button><button class="ok" type="button"></button></div></div></div>
 <div id="loading"><i></i><span></span></div>
 <div id="toast"></div>
@@ -63,14 +108,26 @@ body.has-game #tag { display: flex; }
     // 自訂的遊戲代號 遊戲握手時一起回給它
     var gameId = query.get('gameId') || '';
 
+    // menu 開頭的是系統選單 字串取自 entry Core 語系檔 zh-HK zh en 的 popup.systemMenu.*
     var TEXT = {
-        'zh-TW': { exit: '退出', title: '離開遊戲', message: '確定要離開目前的遊戲嗎？', confirm: '確定離開', cancel: '取消', ok: '確定', loading: '處理中…', exitFailed: '退出失敗 請稍後再試' },
-        'zh-CN': { exit: '退出', title: '离开游戏', message: '确定要离开当前的游戏吗？', confirm: '确定离开', cancel: '取消', ok: '确定', loading: '处理中…', exitFailed: '退出失败 请稍后再试' },
-        'en': { exit: 'Exit', title: 'Leave game', message: 'Leave the current game?', confirm: 'Leave', cancel: 'Cancel', ok: 'OK', loading: 'Please wait…', exitFailed: 'Exit failed. Please try again.' }
+        'zh-TW': { menu: '選單', title: '離開遊戲', message: '確定要離開目前的遊戲嗎？', confirm: '確定離開', cancel: '取消', ok: '確定', loading: '處理中…', exitFailed: '退出失敗 請稍後再試',
+            menuTitle: '遊戲選單', menuMusic: '音樂', menuMusicDesc: '背景音樂偏好', menuSound: '音效', menuSoundDesc: '按鈕與演出音效偏好', menuGameInfo: 'GAME INFO', menuGameInfoDesc: '玩法、賠付與操作說明', menuGameHistory: '遊戲紀錄', menuGameHistoryDesc: '遊戲紀錄尚未串接', menuLeave: '離開遊戲', menuLeaveDesc: '離開、保留或重新選座' },
+        'zh-CN': { menu: '选单', title: '离开游戏', message: '确定要离开当前的游戏吗？', confirm: '确定离开', cancel: '取消', ok: '确定', loading: '处理中…', exitFailed: '退出失败 请稍后再试',
+            menuTitle: '游戏选单', menuMusic: '音乐', menuMusicDesc: '背景音乐偏好', menuSound: '音效', menuSoundDesc: '按钮与演出音效偏好', menuGameInfo: 'GAME INFO', menuGameInfoDesc: '玩法、赔付与操作说明', menuGameHistory: '游戏记录', menuGameHistoryDesc: '游戏记录尚未串接', menuLeave: '离开游戏', menuLeaveDesc: '离开、保留或重新选座' },
+        'en': { menu: 'Menu', title: 'Leave game', message: 'Leave the current game?', confirm: 'Leave', cancel: 'Cancel', ok: 'OK', loading: 'Please wait…', exitFailed: 'Exit failed. Please try again.',
+            menuTitle: 'SYSTEM MENU', menuMusic: 'Music', menuMusicDesc: 'Background music preference', menuSound: 'SFX', menuSoundDesc: 'Button and animation sound preference', menuGameInfo: 'GAME INFO', menuGameInfoDesc: 'Rules, payouts and controls', menuGameHistory: 'History', menuGameHistoryDesc: 'Game history is not connected yet', menuLeave: 'Leave Game', menuLeaveDesc: 'Leave, keep your seat, or reselect' }
     };
     var text = Object.assign({}, TEXT[lang] || TEXT['zh-TW']);
+    // 系統選單第一行標題固定英文 跟 Cocos 版 Title_en 一樣不跟語系走
+    var MENU_TITLE_EN = 'SYSTEM MENU';
+    // 音樂音效開關 大廳 init 帶 settings 進來 沒帶就當作開
+    var settings = { music: true, sound: true };
 
-    var exitBtn = document.getElementById('exit-btn');
+    var menuBtn = document.getElementById('menu-btn');
+    var sysMenu = document.getElementById('sysmenu');
+    var sysMenuPanel = document.getElementById('sysmenu-panel');
+    var sysMenuRows = {};
+    Array.prototype.forEach.call(sysMenu.querySelectorAll('.row'), function (row) { sysMenuRows[row.getAttribute('data-action')] = row; });
     var mask = document.getElementById('mask');
     var dialog = document.getElementById('dialog');
     var dlgTitle = dialog.querySelector('h1');
@@ -97,8 +154,73 @@ body.has-game #tag { display: flex; }
         }
     }
 
+    function setRowText(action, name, desc) {
+        sysMenuRows[action].querySelector('.name').textContent = name;
+        sysMenuRows[action].querySelector('.desc').textContent = desc;
+    }
+
     function applyText() {
-        exitBtn.textContent = text.exit;
+        menuBtn.setAttribute('aria-label', text.menu);
+        sysMenuPanel.querySelector('.title-en').textContent = MENU_TITLE_EN;
+        sysMenuPanel.querySelector('.title').textContent = text.menuTitle;
+        setRowText('music', text.menuMusic, text.menuMusicDesc);
+        setRowText('sound', text.menuSound, text.menuSoundDesc);
+        setRowText('game-info', text.menuGameInfo, text.menuGameInfoDesc);
+        setRowText('game-history', text.menuGameHistory, text.menuGameHistoryDesc);
+        setRowText('leave', text.menuLeave, text.menuLeaveDesc);
+    }
+
+    function applySettings() {
+        sysMenuRows.music.classList.toggle('on', settings.music);
+        sysMenuRows.sound.classList.toggle('on', settings.sound);
+    }
+
+    // 數字照 Cocos SettingStore 的音量 大於 0 算開
+    function toSwitch(value, fallback) {
+        if (value == null) return fallback;
+        return typeof value === 'number' ? value > 0 : !!value;
+    }
+
+    // 外框在 Cocos 版是 1280x720 設計框裡縮成 0.5 倍 這裡照同一個比例跟著視窗等比縮放
+    function layoutSystemMenu() {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        var fit = w >= h ? Math.min(w / 1280, h / 720) : Math.min(w / 720, h / 1280);
+        sysMenuPanel.style.transform = 'scale(' + (fit * 0.5) + ')';
+    }
+
+    function showSystemMenu() {
+        layoutSystemMenu();
+        sysMenu.classList.add('show');
+    }
+
+    function hideSystemMenu() {
+        sysMenu.classList.remove('show');
+    }
+
+    // 音樂音效 大廳寫回自己的設定 遊戲要聽的話用 host-sdk 的 onHost 接 setting
+    function toggleSetting(key) {
+        settings[key] = !settings[key];
+        applySettings();
+        var payload = { music: settings.music, sound: settings.sound };
+        emit('setting-change', payload);
+        if (gameFrame) gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'setting', payload: payload }, '*');
+    }
+
+    function onSystemMenuRow(action) {
+        switch (action) {
+            case 'music':
+                toggleSetting('music');
+                break;
+            case 'sound':
+                toggleSetting('sound');
+                break;
+            case 'leave':
+                // 跟 Cocos 版一樣 先關選單再開退出確認
+                hideSystemMenu();
+                showExitConfirm();
+                break;
+        }
     }
 
     function applySafe(safe) {
@@ -119,11 +241,11 @@ body.has-game #tag { display: flex; }
 
     // 握手 告訴遊戲殼頁在 以及它的代號與語言
     function sendHello() {
-        gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'hello', payload: { gameId: gameId, lang: lang } }, '*');
+        gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'hello', payload: { gameId: gameId, lang: lang, settings: { music: settings.music, sound: settings.sound } } }, '*');
     }
 
     // 大廳與遊戲都能呼叫的指令 同一套名稱同一套參數
-    var COMMANDS = ['show-exit', 'show-confirm', 'show-alert', 'close-dialog', 'show-loading', 'hide-loading', 'show-toast'];
+    var COMMANDS = ['show-system-menu', 'show-exit', 'show-confirm', 'show-alert', 'close-dialog', 'show-loading', 'hide-loading', 'show-toast'];
     // 目前彈窗是誰叫的 host 或 game 結果回給它
     var dialogCaller = 'host';
 
@@ -165,6 +287,9 @@ body.has-game #tag { display: flex; }
 
     function execute(type, payload, caller) {
         switch (type) {
+            case 'show-system-menu':
+                showSystemMenu();
+                break;
             case 'show-exit':
                 openDialog({ id: 'exit', title: text.title, message: text.message, confirm: text.confirm, cancel: text.cancel }, caller);
                 break;
@@ -207,8 +332,13 @@ body.has-game #tag { display: flex; }
             case 'init':
                 if (payload.strings) Object.assign(text, payload.strings);
                 if (payload.safe) applySafe(payload.safe);
-                if (payload.exitButton === 'none') exitBtn.classList.add('hidden');
-                if (payload.exitButton === 'right') exitBtn.classList.add('right');
+                if (payload.settings) {
+                    settings.music = toSwitch(payload.settings.music, settings.music);
+                    settings.sound = toSwitch(payload.settings.sound, settings.sound);
+                    applySettings();
+                }
+                if (payload.exitButton === 'none') menuBtn.classList.add('hidden');
+                if (payload.exitButton === 'right') menuBtn.classList.add('right');
                 applyText();
                 break;
             case 'safe':
@@ -261,11 +391,25 @@ body.has-game #tag { display: flex; }
         receive: function (message) { handle(typeof message === 'string' ? JSON.parse(message) : message); }
     };
 
-    exitBtn.addEventListener('click', showExitConfirm);
+    menuBtn.addEventListener('click', showSystemMenu);
     dlgOk.addEventListener('click', function () { closeDialog('ok'); });
     dlgCancel.addEventListener('click', function () { closeDialog('cancel'); });
+    // 點選單外面或右上角 X 關閉 跟 Cocos 版的遮罩與關閉鈕一樣
+    sysMenu.addEventListener('click', function (event) {
+        if (event.target === sysMenu) hideSystemMenu();
+    });
+    document.getElementById('sysmenu-close').addEventListener('click', hideSystemMenu);
+    // 不能點的列不反應 GAME INFO 與遊戲紀錄目前都是這樣
+    Object.keys(sysMenuRows).forEach(function (action) {
+        sysMenuRows[action].addEventListener('click', function () {
+            if (!sysMenuRows[action].classList.contains('disabled')) onSystemMenuRow(action);
+        });
+    });
+    window.addEventListener('resize', layoutSystemMenu);
     window.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') showExitConfirm();
+        if (event.key !== 'Escape') return;
+        if (sysMenu.classList.contains('show')) hideSystemMenu();
+        else if (!mask.classList.contains('show')) showSystemMenu();
     });
 
     if (gameUrl) {
@@ -281,9 +425,9 @@ body.has-game #tag { display: flex; }
             emit('game-loaded');
             // 先打招呼 遊戲想要的話可以用 host-sdk.js 接
             sendHello();
-            // 同網域的遊戲 補上大廳的共用介面 遊戲按選單時直接走殼頁的退出 跨網域取不到就略過
+            // 同網域的遊戲 補上大廳的共用介面 遊戲按選單時開殼頁的系統選單 跨網域取不到就略過
             try {
-                gameFrame.contentWindow.__subGameShowSystemMenu__ = function () { showExitConfirm(); return Promise.resolve(); };
+                gameFrame.contentWindow.__subGameShowSystemMenu__ = function () { showSystemMenu(); return Promise.resolve(); };
             } catch (error) {
                 // 跨網域的遊戲沒有這個介面
             }
@@ -295,11 +439,12 @@ body.has-game #tag { display: flex; }
         gameFrame.src = gameUrl;
         document.body.insertBefore(gameFrame, document.body.firstChild);
     } else {
-        // 沒有網址就只出彈窗 不顯示退出鈕
-        exitBtn.classList.add('hidden');
+        // 沒有網址就只出彈窗 不顯示選單鈕
+        menuBtn.classList.add('hidden');
     }
 
     applyText();
+    applySettings();
     emit('ready', { hasGame: !!gameUrl });
 })();
 </script>
