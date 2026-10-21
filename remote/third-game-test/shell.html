@@ -204,11 +204,24 @@ body.has-game #tag { display: flex; }
     var currentSeatId = '1';
     // 有遊戲說明頁的遊戲與語言 頁面放在 game-info/遊戲代號/語言/index.html 新增頁面就在這裡加一行
     var GAME_INFO_PAGES = { '1001': ['zh-TW'] };
-    // 這款遊戲的說明頁網址 沒有頁面回空字串 語言沒有就用第一個
-    function gameInfoUrl() {
+    // 說明頁用到的圖片 共用的每個語言都要 各語言才有的放語言下面 路徑從遊戲說明資料夾算起
+    // 說明頁新增圖片就加進這裡 開頁前會先載好
+    var GAME_INFO_ASSETS = {
+        '1001': {
+            common: ['10.png', 'A.png', 'H1.png', 'H2.png', 'H3.png', 'H4.png', 'J.png', 'JP.png', 'K.png', 'Q.png', 'SCATTER.png', 'symbol_m1_1.png', 'symbol_m1_2.png', 'symbol_m1_3.png', 'symbol_m1_4.png', 'symbol_m2_1.png', 'symbol_m2_2.png', 'symbol_m2_3.png', 'symbol_m2_4.png'].map(function (f) { return 'assets/symbols/' + f; }),
+            'zh-TW': ['buy-feature.jpg', 'free-game-multiplier-after.jpg', 'main-game.jpg'].map(function (f) { return 'assets/screenshots/zh-TW/' + f; })
+        }
+    };
+    // 這款遊戲實際用的說明頁語言 沒有頁面回空字串 語言沒有就用第一個
+    function gameInfoLang() {
         var langs = GAME_INFO_PAGES[gameId];
         if (!langs) return '';
-        return 'game-info/' + gameId + '/' + (langs.indexOf(lang) >= 0 ? lang : langs[0]) + '/index.html';
+        return langs.indexOf(lang) >= 0 ? lang : langs[0];
+    }
+    // 這款遊戲的說明頁網址 沒有頁面回空字串
+    function gameInfoUrl() {
+        var infoLang = gameInfoLang();
+        return infoLang ? 'game-info/' + gameId + '/' + infoLang + '/index.html' : '';
     }
 
     var menuBtn = document.getElementById('menu-btn');
@@ -275,6 +288,24 @@ body.has-game #tag { display: flex; }
     function assetPath(file) {
         return 'popups/' + assetDir[file] + '/' + file;
     }
+    // 每一類要載的圖片網址 彈窗圖片之外 遊戲說明的圖片也登記在這裡
+    var ASSET_URLS = {};
+    Object.keys(POPUP_ASSETS).forEach(function (name) {
+        ASSET_URLS[name] = POPUP_ASSETS[name].map(assetPath);
+    });
+    // 遊戲說明的圖片類別名稱 沒有說明頁回空陣列
+    function gameInfoGroups() {
+        var infoLang = gameInfoLang();
+        var assets = GAME_INFO_ASSETS[gameId];
+        if (!infoLang || !assets) return [];
+        return ['common', infoLang].filter(function (key) { return assets[key]; }).map(function (key) {
+            var name = 'info/' + gameId + '/' + key;
+            if (!ASSET_URLS[name]) {
+                ASSET_URLS[name] = assets[key].map(function (file) { return 'game-info/' + gameId + '/' + file; });
+            }
+            return name;
+        });
+    }
 
     // 圖片載太久就不等了 照樣開彈窗
     var ASSET_TIMEOUT_MS = 4000;
@@ -288,14 +319,14 @@ body.has-game #tag { display: flex; }
 
     function preloadAssets(name) {
         if (!assetTasks[name]) {
-            assetTasks[name] = Promise.all(POPUP_ASSETS[name].map(function (file) {
+            assetTasks[name] = Promise.all(ASSET_URLS[name].map(function (url) {
                 return new Promise(function (resolve) {
                     var img = new Image();
                     keptImages.push(img);
                     // 載失敗也放行 不能因為一張圖卡住彈窗
                     img.onload = resolve;
                     img.onerror = resolve;
-                    img.src = assetPath(file);
+                    img.src = url;
                     if (img.decode) img.decode().then(resolve, resolve);
                 });
             })).then(function () { assetDone[name] = true; });
@@ -456,8 +487,12 @@ body.has-game #tag { display: flex; }
     // 整個畫面全開 右上 X 回到選單
 
     function showGameInfo() {
+        if (!gameInfoUrl()) return;
+        withAssets(gameInfoGroups(), buildGameInfo);
+    }
+
+    function buildGameInfo() {
         var url = gameInfoUrl();
-        if (!url) return;
         closePopup('replaced');
         var panel = h('div', 'info-panel');
         var bar = h('div', 'panel-bar');
