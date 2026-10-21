@@ -680,6 +680,8 @@ body.has-game #tag { display: flex; }
         cover.classList.add('done');
         clearTimeout(coverTimer);
         emit('cover-hidden', { reason: reason });
+        // 進遊戲先選座 遊戲露出來的那一刻開 不強制選 關掉照樣進遊戲 已經有別的彈窗開著就不搶
+        if (gameFrame && !currentPopup) showSeatLobby({});
     }
 
     // 握手 告訴遊戲殼頁在 以及它的代號與語言
