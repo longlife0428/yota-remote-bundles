@@ -243,12 +243,23 @@ body.has-game #tag { display: flex; }
     var dialogId = '';
     var toastTimer = 0;
 
+    // 原生靠網址傳訊息 同一刻連改頁面網址只有最後一次會送出
+    // 所以每個訊息用一個隱藏的 iframe 送 各自獨立 不會互相蓋掉
+    function sendByScheme(url) {
+        var frame = document.createElement('iframe');
+        frame.style.display = 'none';
+        frame.src = url;
+        document.documentElement.appendChild(frame);
+        // 等導覽發出去再移除
+        setTimeout(function () { frame.remove(); }, 1000);
+    }
+
     function emit(type, payload) {
         var message = { source: 'host-shell', type: type, payload: payload || {} };
         if (bridge === 'post') {
             window.parent.postMessage(message, '*');
         } else {
-            location.href = scheme + '://' + type + '?d=' + encodeURIComponent(JSON.stringify(message));
+            sendByScheme(scheme + '://' + type + '?d=' + encodeURIComponent(JSON.stringify(message)));
         }
     }
 
