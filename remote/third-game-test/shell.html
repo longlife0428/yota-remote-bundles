@@ -307,6 +307,7 @@ body.has-game #tag { display: flex; }
         popupLayer.classList.add('show');
         currentPopup = { name: options.name, frame: frame, width: options.width, height: options.height, onClose: options.onClose || null };
         layoutPopup();
+        emit('popup-open', { name: options.name });
         return frame;
     }
 
@@ -317,6 +318,8 @@ body.has-game #tag { display: flex; }
         popupLayer.classList.remove('show');
         popupLayer.textContent = '';
         if (popup.onClose) popup.onClose(reason);
+        // 換成下一個彈窗時不通知關閉 避免大廳那邊的殼頁閃一下
+        if (reason !== 'replaced') emit('popup-close', { name: popup.name, reason: reason });
     }
 
     // SystemMenu 與 LeaveConfirm 共用的選項列 o = { icon, iconWidth, wide, name, desc, toggle, disabled, onClick }
@@ -368,8 +371,9 @@ body.has-game #tag { display: flex; }
         var frame = openPopup({ name: 'leave-confirm', width: 1200, height: 700, titleEn: 'Leave current game?', title: text.leaveTitle });
         var list = h('div', 'lc-list');
         list.appendChild(optionRow({ icon: 'System_menu_options_exit_label.png', iconWidth: 131, wide: true, name: text.leaveLeave, desc: text.leaveLeaveDesc, onClick: function () {
-            closePopup('done');
+            // 先通知退出再關 大廳的處理中畫面才不會閃一下
             emit('exit-confirm', { via: 'leave' });
+            closePopup('done');
         } }));
         // Cocos 版保留目前只關彈窗 呼叫端沒接 onKeep 這裡多發一個事件給大廳以後接
         list.appendChild(optionRow({ icon: 'System_menu_options_save_label.png', wide: true, name: text.leaveKeep, desc: text.leaveKeepDesc, onClick: function () {
@@ -659,8 +663,9 @@ body.has-game #tag { display: flex; }
         enterBtn.addEventListener('click', function () {
             var table = selectedTable();
             if (!table || !isSeatAvailable(table)) return;
-            closePopup('done');
+            // 先通知入座再關 大廳才分得出入座與取消
             emit('seat-enter', { tableId: table.tableId });
+            closePopup('done');
         });
 
         render();
