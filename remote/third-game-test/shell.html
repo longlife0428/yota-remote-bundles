@@ -122,32 +122,14 @@ body.has-game #tag { display: flex; }
         gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'hello', payload: { gameId: gameId, lang: lang } }, '*');
     }
 
-    // 遊戲傳來的訊息 約定格式 { source: 'game', type, payload }
-    function handleGame(message) {
-        var payload = message.payload || {};
-        switch (message.type) {
-            case 'hi':
-                // 遊戲啟動得比 load 事件晚 它主動問就補回握手
-                sendHello();
-                break;
-            case 'ready':
-                hideCover('ready');
-                emit('game-ready', payload);
-                break;
-            case 'loading':
-                coverSub.textContent = typeof payload.percent === 'number' ? Math.round(payload.percent) + '%' : '';
-                break;
-            case 'exit':
-                showExitConfirm();
-                break;
-            case 'error':
-                emit('game-error', payload);
-                break;
-        }
-    }
+    // 大廳與遊戲都能呼叫的指令 同一套名稱同一套參數
+    var COMMANDS = ['show-exit', 'show-confirm', 'show-alert', 'close-dialog', 'show-loading', 'hide-loading', 'show-toast'];
+    // 目前彈窗是誰叫的 host 或 game 結果回給它
+    var dialogCaller = 'host';
 
-    function openDialog(options) {
+    function openDialog(options, caller) {
         dialogId = options.id || '';
+        dialogCaller = caller || 'host';
         dlgTitle.textContent = options.title || '';
         dlgMessage.textContent = options.message || '';
         dlgOk.textContent = options.confirm || text.ok;
@@ -160,12 +142,18 @@ body.has-game #tag { display: flex; }
     function closeDialog(result) {
         if (!mask.classList.contains('show')) return;
         mask.classList.remove('show');
-        emit('dialog-close', { id: dialogId, result: result });
+        var id = dialogId;
+        var caller = dialogCaller;
         dialogId = '';
-    }
-
-    function showExitConfirm() {
-        openDialog({ id: 'exit', title: text.title, message: text.message, confirm: text.confirm, cancel: text.cancel });
+        emit('dialog-close', { id: id, result: result });
+        if (caller === 'game' && gameFrame) {
+            gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'dialog-result', payload: { id: id, result: result } }, '*');
+        }
+        // 退出確認 不管誰叫的 都通知大廳決定要不要離開
+        if (id === 'exit') {
+            if (result === 'ok') emit('exit-confirm', { via: 'dialog' });
+            else emit('exit-cancel');
+        }
     }
 
     function showToast(message, ms) {
@@ -175,26 +163,17 @@ body.has-game #tag { display: flex; }
         toastTimer = setTimeout(function () { toast.classList.remove('show'); }, ms || 2000);
     }
 
-    function handle(message) {
-        if (!message || message.source !== 'host') return;
-        var payload = message.payload || {};
-        switch (message.type) {
-            case 'init':
-                if (payload.strings) Object.assign(text, payload.strings);
-                if (payload.safe) applySafe(payload.safe);
-                if (payload.exitButton === 'none') exitBtn.classList.add('hidden');
-                if (payload.exitButton === 'right') exitBtn.classList.add('right');
-                applyText();
-                break;
+    function execute(type, payload, caller) {
+        switch (type) {
             case 'show-exit':
-                showExitConfirm();
+                openDialog({ id: 'exit', title: text.title, message: text.message, confirm: text.confirm, cancel: text.cancel }, caller);
                 break;
             case 'show-confirm':
-                openDialog(payload);
+                openDialog(payload, caller);
                 break;
             case 'show-alert':
                 payload.alert = true;
-                openDialog(payload);
+                openDialog(payload, caller);
                 break;
             case 'close-dialog':
                 closeDialog('closed');
@@ -209,8 +188,58 @@ body.has-game #tag { display: flex; }
             case 'show-toast':
                 showToast(payload.text || text[payload.key] || '', payload.ms);
                 break;
+        }
+    }
+
+    function showExitConfirm() {
+        execute('show-exit', {}, 'host');
+    }
+
+    // 大廳傳來的訊息 約定格式 { source: 'host', type, payload }
+    function handle(message) {
+        if (!message || message.source !== 'host') return;
+        var payload = message.payload || {};
+        if (COMMANDS.indexOf(message.type) >= 0) {
+            execute(message.type, payload, 'host');
+            return;
+        }
+        switch (message.type) {
+            case 'init':
+                if (payload.strings) Object.assign(text, payload.strings);
+                if (payload.safe) applySafe(payload.safe);
+                if (payload.exitButton === 'none') exitBtn.classList.add('hidden');
+                if (payload.exitButton === 'right') exitBtn.classList.add('right');
+                applyText();
+                break;
             case 'safe':
                 applySafe(payload);
+                break;
+        }
+    }
+
+    // 遊戲傳來的訊息 約定格式 { source: 'game', type, payload }
+    function handleGame(message) {
+        var payload = message.payload || {};
+        // 舊的 exit 等同 show-exit
+        var type = message.type === 'exit' ? 'show-exit' : message.type;
+        if (COMMANDS.indexOf(type) >= 0) {
+            execute(type, payload, 'game');
+            return;
+        }
+        switch (type) {
+            case 'hi':
+                // 遊戲啟動得比 load 事件晚 它主動問就補回握手
+                sendHello();
+                break;
+            case 'ready':
+                hideCover('ready');
+                emit('game-ready', payload);
+                break;
+            case 'loading':
+                coverSub.textContent = typeof payload.percent === 'number' ? Math.round(payload.percent) + '%' : '';
+                break;
+            case 'error':
+                emit('game-error', payload);
                 break;
         }
     }
@@ -233,16 +262,8 @@ body.has-game #tag { display: flex; }
     };
 
     exitBtn.addEventListener('click', showExitConfirm);
-    dlgOk.addEventListener('click', function () {
-        var id = dialogId;
-        closeDialog('ok');
-        if (id === 'exit') emit('exit-confirm', { via: 'dialog' });
-    });
-    dlgCancel.addEventListener('click', function () {
-        var id = dialogId;
-        closeDialog('cancel');
-        if (id === 'exit') emit('exit-cancel');
-    });
+    dlgOk.addEventListener('click', function () { closeDialog('ok'); });
+    dlgCancel.addEventListener('click', function () { closeDialog('cancel'); });
     window.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') showExitConfirm();
     });

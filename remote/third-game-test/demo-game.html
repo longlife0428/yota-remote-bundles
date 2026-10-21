@@ -20,14 +20,14 @@ button { padding: 10px 22px; font-size: 18px; border-radius: 8px; border: 0; bac
     <div id="count">點擊次數 0</div>
     <button id="plus">點我 +1</button>
     <button id="ret">遊戲自己的退出（導向 return.html）</button>
-    <button id="ext">遊戲自己的退出（HostBridge.exit）</button>
+    <button id="ext">遊戲自己的退出（HostBridge.showExitDialog）</button>
     <div id="info"></div>
 </div>
 <script>
 var n = 0;
 document.getElementById('plus').onclick = function () { n++; document.getElementById('count').textContent = '點擊次數 ' + n; };
 document.getElementById('ret').onclick = function () { location.href = 'return.html'; };
-document.getElementById('ext').onclick = function () { HostBridge.exit(); };
+document.getElementById('ext').onclick = function () { HostBridge.showExitDialog(); };
 // 模擬載入 1.5 秒後通知殼頁畫面準備好了
 setTimeout(function () { HostBridge.ready(); }, 1500);
 document.getElementById('info').textContent = location.href + ' | ' + innerWidth + 'x' + innerHeight + ' | parent=' + (window.parent !== window);

@@ -1,10 +1,24 @@
 (function (w) {
     // 遊戲放在殼頁的 iframe 裡時 用這支跟殼頁溝通 不在殼頁裡就什麼都不做
     var inFrame = w.parent !== w;
+    var hello = null;
+    var waiting = {};
+    var dialogCount = 0;
+
     function send(type, payload) {
         if (inFrame) w.parent.postMessage({ source: 'game', type: type, payload: payload || {} }, '*');
     }
-    var hello = null;
+
+    // 彈窗要等玩家按 用代號對回結果
+    function askDialog(type, options) {
+        var id = 'game-' + (++dialogCount);
+        var payload = Object.assign({}, options, { id: id });
+        return new Promise(function (resolve) {
+            waiting[id] = resolve;
+            send(type, payload);
+        });
+    }
+
     w.HostBridge = {
         // 殼頁握手後的資料 { gameId, lang } 還沒握手是 null
         get hello() { return hello; },
@@ -12,9 +26,18 @@
         ready: function () { send('ready'); },
         // 載入進度 0 到 100
         loading: function (percent) { send('loading', { percent: percent }); },
-        // 玩家在遊戲內按退出 殼頁會彈出退出確認窗
-        exit: function () { send('exit'); },
         error: function (message) { send('error', { message: message }); },
+        // 以下跟大廳呼叫殼頁的指令同一套
+        // 彈出退出確認窗 玩家確認後大廳會離開遊戲
+        showExitDialog: function () { send('show-exit'); },
+        // 彈出確認窗 options = { title, message, confirm, cancel } 回傳 'ok' 'cancel' 'closed'
+        showConfirmDialog: function (options) { return askDialog('show-confirm', options); },
+        // 彈出只有一個按鈕的提示窗
+        showAlertDialog: function (options) { return askDialog('show-alert', options).then(function () {}); },
+        closeDialog: function () { send('close-dialog'); },
+        showLoading: function (text) { send('show-loading', { text: text }); },
+        hideLoading: function () { send('hide-loading'); },
+        showToast: function (text, ms) { send('show-toast', { text: text, ms: ms }); },
         // 接殼頁傳來的訊息 callback(type, payload)
         onHost: function (callback) {
             w.addEventListener('message', function (event) {
@@ -23,10 +46,19 @@
             });
         }
     };
+
     if (inFrame) {
         w.addEventListener('message', function (event) {
             var data = event.data;
-            if (event.source === w.parent && data && data.source === 'host-shell' && data.type === 'hello') hello = data.payload || {};
+            if (event.source !== w.parent || !data || data.source !== 'host-shell') return;
+            if (data.type === 'hello') hello = data.payload || {};
+            if (data.type === 'dialog-result') {
+                var payload = data.payload || {};
+                if (waiting[payload.id]) {
+                    waiting[payload.id](payload.result);
+                    delete waiting[payload.id];
+                }
+            }
         });
         // 啟動時主動問一次握手
         send('hi');
