@@ -36,6 +36,14 @@ body.has-game { background: #000; }
 .popup-close { position: absolute; right: -62px; top: -41px; width: 180px; height: 180px; padding: 0; border: 0; background: url(popups/Popups_cancel_button.png) no-repeat; background-size: 100% 100%; filter: brightness(.839); cursor: pointer; }
 .popup-close:hover { filter: brightness(.827); }
 .popup-close:active { filter: none; }
+/* 遊戲說明 版面照遊戲說明預覽的 info-panel 上面一條標題列 下面是頁面 */
+.info-panel { position: absolute; inset: 0; display: flex; flex-direction: column; background: #080808; color: #fff; font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif; }
+.panel-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #080808; padding: 8px 16px; min-height: 43px; border-bottom: 1px solid #3a3019; color: #fff; font-size: 11px; }
+.panel-bar > span { display: flex; align-items: center; gap: 8px; }
+.panel-bar i { width: 5px; height: 5px; border: 1px solid #d8b75a; transform: rotate(45deg); }
+.panel-bar button { background: transparent; color: #fff; border: 0; display: flex; align-items: center; gap: 12px; padding: 4px 3px; font-size: 11px; cursor: pointer; }
+.panel-bar b { font: 22px/1 "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif; color: #ffe16a; }
+.info-panel iframe { width: 100%; height: 100%; flex: 1; min-height: 0; display: block; border: 0; background: #080808; }
 .popup-back { left: 50px; top: 190px; width: 210px; height: 80px; cursor: pointer; }
 .popup-back::before { content: ''; position: absolute; inset: 0; border: 20px solid transparent; border-image: url(popups/popups_button_bg.png) 20 fill stretch; filter: brightness(.839); }
 .popup-back:hover::before { filter: brightness(.827); }
@@ -168,21 +176,21 @@ body.has-game #tag { display: flex; }
     // 大廳 init 的 strings 可以整批覆蓋 第一行英文標題固定英文 跟 Cocos 版 Title_en 一樣不跟語系走 不在這裡
     var TEXT = {
         'zh-TW': { menu: '選單', title: '離開遊戲', message: '確定要離開目前的遊戲嗎？', confirm: '確定離開', cancel: '取消', ok: '確定', loading: '處理中…', exitFailed: '退出失敗 請稍後再試',
-            menuTitle: '遊戲選單', menuMusic: '音樂', menuMusicDesc: '背景音樂偏好', menuSound: '音效', menuSoundDesc: '按鈕與演出音效偏好', menuGameInfo: 'GAME INFO', menuGameInfoDesc: '玩法、賠付與操作說明', menuGameHistory: '遊戲紀錄', menuGameHistoryDesc: '遊戲紀錄尚未串接', menuLeave: '離開遊戲', menuLeaveDesc: '離開、保留或重新選座',
+            menuTitle: '遊戲選單', menuMusic: '音樂', menuMusicDesc: '背景音樂偏好', menuSound: '音效', menuSoundDesc: '按鈕與演出音效偏好', menuGameInfo: 'GAME INFO', menuGameInfoDesc: '玩法、賠付與操作說明', infoTitle: '遊戲說明', infoClose: '關閉', menuGameHistory: '遊戲紀錄', menuGameHistoryDesc: '遊戲紀錄尚未串接', menuLeave: '離開遊戲', menuLeaveDesc: '離開、保留或重新選座',
             leaveTitle: '離開目前遊戲？', leaveLeave: '離開', leaveLeaveDesc: '釋放目前座位並離開', leaveKeep: '保留', leaveKeepDesc: '保留目前座位後離開', leaveReselect: '重新選座', leaveReselectDesc: '前往選座大廳並查看並選擇其他座位',
             autoTitle: '選擇自動旋轉次數', autoUnit: '局', autoHint: '選擇後立刻開始，再次點擊 AUTO 可停止後續局數',
             seatTitle: '選擇座位', seatBack: '遊戲選單', seatFilterAll: '顯示全部', seatFilterEmpty: '顯示空位', seatPrompt: '請選擇一台機台', seatPromptHint: '所有機台皆可查看，只有「空位」可以保留或入座', seatActionHint: '請先選擇左側機台，再決定保留入座', seatEnter: '入座', seatReserve: '保留', seatPage: '第{page}/{total}頁 共{count}台', seatTableId: '機台{id}',
             tableEmpty: '空位', tableFull: '使用中', tableReserved: '保留中', tableCurrent: '目前座位',
             statFreeGame: 'FREE GAME', statRtp: 'RTP', statHitRate: 'HITRATE', statTotalBet: 'TOTAL BET', statSpin: '轉', fgNotStarted: '未開', fgPrevious1: '前一', fgPrevious2: '前二', statToday: '今日', statThreeDay: '三日', statSevenDay: '七日' },
         'zh-CN': { menu: '选单', title: '离开游戏', message: '确定要离开当前的游戏吗？', confirm: '确定离开', cancel: '取消', ok: '确定', loading: '处理中…', exitFailed: '退出失败 请稍后再试',
-            menuTitle: '游戏选单', menuMusic: '音乐', menuMusicDesc: '背景音乐偏好', menuSound: '音效', menuSoundDesc: '按钮与演出音效偏好', menuGameInfo: 'GAME INFO', menuGameInfoDesc: '玩法、赔付与操作说明', menuGameHistory: '游戏记录', menuGameHistoryDesc: '游戏记录尚未串接', menuLeave: '离开游戏', menuLeaveDesc: '离开、保留或重新选座',
+            menuTitle: '游戏选单', menuMusic: '音乐', menuMusicDesc: '背景音乐偏好', menuSound: '音效', menuSoundDesc: '按钮与演出音效偏好', menuGameInfo: 'GAME INFO', menuGameInfoDesc: '玩法、赔付与操作说明', infoTitle: '游戏说明', infoClose: '关闭', menuGameHistory: '游戏记录', menuGameHistoryDesc: '游戏记录尚未串接', menuLeave: '离开游戏', menuLeaveDesc: '离开、保留或重新选座',
             leaveTitle: '离开当前游戏？', leaveLeave: '离开', leaveLeaveDesc: '释放目前座位并离开', leaveKeep: '保留', leaveKeepDesc: '保留目前座位后离开', leaveReselect: '重新选座', leaveReselectDesc: '前往选座大厅并查看并选择其他座位',
             autoTitle: '选择自动旋转次数', autoUnit: '局', autoHint: '选择后立刻开始，再次点击 AUTO 可停止后续局数',
             seatTitle: '选择座位', seatBack: '游戏菜单', seatFilterAll: '显示全部', seatFilterEmpty: '显示空位', seatPrompt: '请选择一台机台', seatPromptHint: '所有机台皆可查看，只有「空位」可以保留或入座', seatActionHint: '请先选择左侧机台，再决定保留入座', seatEnter: '入座', seatReserve: '保留', seatPage: '第{page}/{total}页 共{count}台', seatTableId: '机台{id}',
             tableEmpty: '空位', tableFull: '使用中', tableReserved: '保留中', tableCurrent: '目前座位',
             statFreeGame: 'FREE GAME', statRtp: 'RTP', statHitRate: 'HITRATE', statTotalBet: 'TOTAL BET', statSpin: '转', fgNotStarted: '未开', fgPrevious1: '前一', fgPrevious2: '前二', statToday: '今日', statThreeDay: '三日', statSevenDay: '七日' },
         'en': { menu: 'Menu', title: 'Leave game', message: 'Leave the current game?', confirm: 'Leave', cancel: 'Cancel', ok: 'OK', loading: 'Please wait…', exitFailed: 'Exit failed. Please try again.',
-            menuTitle: 'SYSTEM MENU', menuMusic: 'Music', menuMusicDesc: 'Background music preference', menuSound: 'SFX', menuSoundDesc: 'Button and animation sound preference', menuGameInfo: 'GAME INFO', menuGameInfoDesc: 'Rules, payouts and controls', menuGameHistory: 'History', menuGameHistoryDesc: 'Game history is not connected yet', menuLeave: 'Leave Game', menuLeaveDesc: 'Leave, keep your seat, or reselect',
+            menuTitle: 'SYSTEM MENU', menuMusic: 'Music', menuMusicDesc: 'Background music preference', menuSound: 'SFX', menuSoundDesc: 'Button and animation sound preference', menuGameInfo: 'GAME INFO', menuGameInfoDesc: 'Rules, payouts and controls', infoTitle: 'Game Info', infoClose: 'Close', menuGameHistory: 'History', menuGameHistoryDesc: 'Game history is not connected yet', menuLeave: 'Leave Game', menuLeaveDesc: 'Leave, keep your seat, or reselect',
             leaveTitle: 'Leave current game?', leaveLeave: 'Leave', leaveLeaveDesc: 'Release your current seat and leave', leaveKeep: 'Keep', leaveKeepDesc: 'Keep your current seat and leave', leaveReselect: 'Reselect Seat', leaveReselectDesc: 'Go to the seat lobby to view and choose another seat',
             autoTitle: 'Select Auto-Spin Count', autoUnit: 'Rounds', autoHint: 'Starts immediately after selection; tap AUTO again to stop remaining rounds',
             seatTitle: 'Choose Seat', seatBack: 'Game Menu', seatFilterAll: 'Show All', seatFilterEmpty: 'Show Empty', seatPrompt: 'Please select a table', seatPromptHint: 'All tables are visible; only Empty seats can be reserved or entered', seatActionHint: 'Please select a table on the left before reserving or entering', seatEnter: 'Enter', seatReserve: 'Reserve', seatPage: 'Page {page}/{total} · {count} tables', seatTableId: 'Table {id}',
@@ -194,6 +202,14 @@ body.has-game #tag { display: flex; }
     var settings = { music: true, sound: true };
     // 玩家目前所在的桌號 大廳 init 帶 tableId 進來 沒帶就當作第 1 桌 跟 Cocos 的 getCurrentSeatTableId() 一樣
     var currentSeatId = '1';
+    // 有遊戲說明頁的遊戲與語言 頁面放在 game-info/遊戲代號/語言/index.html 新增頁面就在這裡加一行
+    var GAME_INFO_PAGES = { '1001': ['zh-TW'] };
+    // 這款遊戲的說明頁網址 沒有頁面回空字串 語言沒有就用第一個
+    function gameInfoUrl() {
+        var langs = GAME_INFO_PAGES[gameId];
+        if (!langs) return '';
+        return 'game-info/' + gameId + '/' + (langs.indexOf(lang) >= 0 ? lang : langs[0]) + '/index.html';
+    }
 
     var menuBtn = document.getElementById('menu-btn');
     var popupLayer = document.getElementById('popup-layer');
@@ -273,7 +289,7 @@ body.has-game #tag { display: flex; }
     // 外框在 Cocos 版是 1280x720（直版 720x1280）設計框裡縮成 0.5 倍 這裡照同一個比例跟著視窗等比縮放
     // 這個比例會讓外框超出畫面時（例如 1600 寬的 SeatLobby 在直版）再縮到剛好塞進去 Cocos 版那種情況 X 會在畫面外按不到
     function layoutPopup() {
-        if (!currentPopup) return;
+        if (!currentPopup || currentPopup.full) return;
         var w = window.innerWidth;
         var hgt = window.innerHeight;
         var fit = w >= hgt ? Math.min(w / 1280, hgt / 720) : Math.min(w / 720, hgt / 1280);
@@ -357,11 +373,42 @@ body.has-game #tag { display: flex; }
         // 音樂音效兩列整列都能點 Cocos 版只有右邊小開關能點 縮小後太難按
         list.appendChild(optionRow({ icon: 'System_menu_options_music_label.png', name: text.menuMusic, desc: text.menuMusicDesc, toggle: settings.music, onClick: function (row) { toggleSetting('music', row); } }));
         list.appendChild(optionRow({ icon: 'System_menu_options_fx_label.png', name: text.menuSound, desc: text.menuSoundDesc, toggle: settings.sound, onClick: function (row) { toggleSetting('sound', row); } }));
-        list.appendChild(optionRow({ icon: 'System_menu_options_info_label.png', name: text.menuGameInfo, desc: text.menuGameInfoDesc, disabled: true }));
+        list.appendChild(optionRow({ icon: 'System_menu_options_info_label.png', name: text.menuGameInfo, desc: text.menuGameInfoDesc, disabled: !gameInfoUrl(), onClick: showGameInfo }));
         // prefab 裡遊戲紀錄用的就是 GAME INFO 的圖示 照原樣
         list.appendChild(optionRow({ icon: 'System_menu_options_info_label.png', name: text.menuGameHistory, desc: text.menuGameHistoryDesc, disabled: true }));
         list.appendChild(optionRow({ icon: 'System_menu_options_exit_label.png', iconWidth: 131, wide: true, name: text.menuLeave, desc: text.menuLeaveDesc, onClick: showLeaveConfirm }));
         frame.appendChild(list);
+    }
+
+    // ───── GameInfo 遊戲說明 ─────
+    // 整個畫面全開 右上 X 回到選單
+
+    function showGameInfo() {
+        var url = gameInfoUrl();
+        if (!url) return;
+        closePopup('replaced');
+        var panel = h('div', 'info-panel');
+        var bar = h('div', 'panel-bar');
+        var title = h('span');
+        title.appendChild(h('i'));
+        title.appendChild(document.createTextNode(text.infoTitle));
+        bar.appendChild(title);
+        var close = h('button');
+        close.type = 'button';
+        close.appendChild(document.createTextNode(text.infoClose + ' '));
+        close.appendChild(h('b', null, '×'));
+        close.addEventListener('click', showSystemMenu);
+        bar.appendChild(close);
+        panel.appendChild(bar);
+        var page = document.createElement('iframe');
+        page.src = url;
+        page.title = text.infoTitle;
+        page.setAttribute('sandbox', 'allow-scripts allow-same-origin');
+        panel.appendChild(page);
+        popupLayer.appendChild(panel);
+        popupLayer.classList.add('show');
+        currentPopup = { name: 'game-info', frame: panel, width: 0, height: 0, full: true, onClose: null };
+        emit('popup-open', { name: 'game-info' });
     }
 
     // ───── LeaveConfirm 離開目前遊戲？ ─────
