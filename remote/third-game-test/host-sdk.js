@@ -20,7 +20,7 @@
     }
 
     w.HostBridge = {
-        // 殼頁握手後的資料 { gameId, lang } 還沒握手是 null
+        // 殼頁握手後的資料 { gameId, lang, settings } 還沒握手是 null
         get hello() { return hello; },
         // 遊戲畫面準備好了 殼頁收到就拿掉遮罩
         ready: function () { send('ready'); },
@@ -30,6 +30,8 @@
         // 以下跟大廳呼叫殼頁的指令同一套
         // 打開殼頁的系統選單 音樂音效切換會用 onHost 收到 setting { music, sound }
         showSystemMenu: function () { send('show-system-menu'); },
+        // 選擇自動旋轉局數 counts 可省略 要給就剛好 6 個 -1 代表無限 回傳局數 沒選就關掉回 null
+        showAutoPlay: function (counts) { return askDialog('show-auto-play', counts ? { counts: counts } : {}); },
         // 彈出退出確認窗 玩家確認後大廳會離開遊戲
         showExitDialog: function () { send('show-exit'); },
         // 彈出確認窗 options = { title, message, confirm, cancel } 回傳 'ok' 'cancel' 'closed'
@@ -54,10 +56,11 @@
             var data = event.data;
             if (event.source !== w.parent || !data || data.source !== 'host-shell') return;
             if (data.type === 'hello') hello = data.payload || {};
-            if (data.type === 'dialog-result') {
+            // 確認窗回 result 自動旋轉選單回 count 都用代號對回去
+            if (data.type === 'dialog-result' || data.type === 'auto-play-result') {
                 var payload = data.payload || {};
                 if (waiting[payload.id]) {
-                    waiting[payload.id](payload.result);
+                    waiting[payload.id](data.type === 'auto-play-result' ? payload.count : payload.result);
                     delete waiting[payload.id];
                 }
             }
