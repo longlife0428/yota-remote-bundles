@@ -316,6 +316,19 @@ body.has-game #tag { display: flex; }
     // 讀取畫面是不是大廳要求顯示的 預載不能把它關掉
     var hostLoading = false;
     var assetLoading = 0;
+    // 只出彈窗的殼頁 一載入就先顯示讀取畫面 第一個彈窗出現才收掉
+    var bootLoading = query.get('loading') === '1';
+    if (bootLoading) {
+        hostLoading = true;
+        loading.querySelector('span').textContent = text.preload;
+        loading.classList.add('show');
+    }
+    function endBootLoading() {
+        if (!bootLoading) return;
+        bootLoading = false;
+        hostLoading = false;
+        if (assetLoading <= 0) loading.classList.remove('show');
+    }
 
     function preloadAssets(name) {
         if (!assetTasks[name]) {
@@ -333,6 +346,16 @@ body.has-game #tag { display: flex; }
         }
         return assetTasks[name];
     }
+
+    // 殼頁載好就在背景把彈窗與遊戲說明的圖片依序載完 要開彈窗時多半已經好了
+    // 選座最先用到 先載
+    function warmUp() {
+        var names = ['seat', 'common', 'menu', 'autoplay'].concat(gameInfoGroups());
+        names.reduce(function (chain, name) {
+            return chain.then(function () { return preloadAssets(name); });
+        }, Promise.resolve());
+    }
+    window.addEventListener('load', warmUp);
 
     // 需要的類別都載好就直接執行 還沒好就顯示讀取畫面 載完或逾時再執行
     function withAssets(names, run) {
@@ -402,6 +425,7 @@ body.has-game #tag { display: flex; }
      * onClose(reason) 不管怎麼關都會呼叫一次 reason 是 close outside escape replaced done
      */
     function openPopup(options) {
+        endBootLoading();
         closePopup('replaced');
         var frame = place(h('div', 'popup-frame'), null, null, options.width, options.height);
         frame.style.margin = (-options.height / 2) + 'px 0 0 ' + (-options.width / 2) + 'px';
@@ -492,6 +516,7 @@ body.has-game #tag { display: flex; }
     }
 
     function buildGameInfo() {
+        endBootLoading();
         var url = gameInfoUrl();
         closePopup('replaced');
         var panel = h('div', 'info-panel');
@@ -866,6 +891,7 @@ body.has-game #tag { display: flex; }
     var dialogCaller = 'host';
 
     function openDialog(options, caller) {
+        endBootLoading();
         dialogId = options.id || '';
         dialogCaller = caller || 'host';
         dlgTitle.textContent = options.title || '';
