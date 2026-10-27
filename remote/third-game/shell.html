@@ -149,7 +149,8 @@ body.shown #game { opacity: 1; }
 #tag { position: fixed; z-index: 5; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: rgba(0,0,0,.45); color: #fff; font-size: 36px; font-weight: 700; pointer-events: none; }
 body.has-game #tag { display: flex; }
 #tag.done { display: none !important; }
-#tag small { font-size: 14px; font-weight: 400; opacity: .7; }
+#tag i { width: 34px; height: 34px; border: 3px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
+#tag small { display: none; }
 
 #toast { position: fixed; z-index: 40; left: 50%; bottom: calc(var(--sab) + 40px); max-width: 80vw; padding: 10px 16px; border-radius: 8px; background: rgba(0,0,0,.8); color: #fff; font-size: 14px; transform: translateX(-50%); opacity: 0; pointer-events: none; transition: opacity .2s; }
 #toast.show { opacity: 1; }
@@ -161,7 +162,7 @@ body.has-game #tag { display: flex; }
 <div id="mask"><div id="dialog"><h1></h1><p></p><div class="row"><button class="cancel" type="button"></button><button class="ok" type="button"></button></div></div></div>
 <div id="loading"><i></i><span></span></div>
 <div id="toast"></div>
-<div id="tag">shell page<small id="tag-sub"></small></div>
+<div id="tag"><i></i><small id="tag-sub"></small></div>
 <script>
 // ============ 通訊約定 唯一來源 改協議只改這裡 ============
 // 網址參數 url 遊戲網址 gameId 遊戲代號 lang 語言 cover 遮罩秒數或 wait loading=1 只出彈窗
