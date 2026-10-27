@@ -14,9 +14,10 @@
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif; }
-body.has-game { background: #000; }
+body.has-game.shown { background: #000; }
 
-#game { position: fixed; top: var(--sat); right: var(--sar); bottom: var(--sab); left: var(--sal); width: calc(100% - var(--sal) - var(--sar)); height: calc(100% - var(--sat) - var(--sab)); border: 0; background: #000; }
+#game { position: fixed; top: var(--sat); right: var(--sar); bottom: var(--sab); left: var(--sal); width: calc(100% - var(--sal) - var(--sar)); height: calc(100% - var(--sat) - var(--sab)); border: 0; background: #000; opacity: 0; }
+body.shown #game { opacity: 1; }
 
 /* 選單鈕 原本的退出鈕 位置與樣式沿用 內容換成三條線 */
 #menu-btn { position: fixed; z-index: 10; top: calc(var(--sat) + 8px); left: calc(var(--sal) + 8px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; width: 44px; height: 32px; padding: 0; border: 1px solid rgba(255,255,255,.35); border-radius: 16px; background: rgba(0,0,0,.55); cursor: pointer; user-select: none; }
@@ -145,7 +146,7 @@ body.has-game { background: #000; }
 #loading i { width: 34px; height: 34px; border: 3px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-#tag { position: fixed; z-index: 5; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #000; color: #fff; font-size: 36px; font-weight: 700; pointer-events: none; }
+#tag { position: fixed; z-index: 5; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: rgba(0,0,0,.45); color: #fff; font-size: 36px; font-weight: 700; pointer-events: none; }
 body.has-game #tag { display: flex; }
 #tag.done { display: none !important; }
 #tag small { font-size: 14px; font-weight: 400; opacity: .7; }
@@ -911,6 +912,7 @@ body.has-game #tag { display: flex; }
     function hideCover(reason) {
         if (cover.classList.contains('done')) return;
         cover.classList.add('done');
+        document.body.classList.add('shown');
         clearTimeout(coverTimer);
         emit('cover-hidden', { reason: reason });
         if (!seatWaitEntered) openEnterSeat();
