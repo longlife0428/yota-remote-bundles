@@ -1,0 +1,77 @@
+symbol_win.png
+	size: 904, 904
+	filter: Linear, Linear
+glow_147
+	bounds: 2, 711, 191, 191
+	offsets: 32, 33, 256, 256
+line/line_00
+	bounds: 390, 553, 187, 173
+	offsets: 28, 13, 250, 200
+line/line_21
+	bounds: 390, 553, 187, 173
+	offsets: 28, 13, 250, 200
+line/line_01
+	bounds: 2, 324, 191, 177
+	offsets: 28, 12, 250, 200
+	rotate: 90
+line/line_02
+	bounds: 2, 517, 192, 177
+	offsets: 28, 13, 250, 200
+	rotate: 90
+line/line_03
+	bounds: 195, 726, 193, 176
+	offsets: 29, 14, 250, 200
+line/line_04
+	bounds: 390, 728, 190, 174
+	offsets: 31, 14, 250, 200
+line/line_05
+	bounds: 181, 380, 188, 174
+	offsets: 32, 14, 250, 200
+line/line_06
+	bounds: 181, 207, 189, 171
+	offsets: 31, 15, 250, 200
+line/line_07
+	bounds: 195, 556, 190, 168
+	offsets: 31, 14, 250, 200
+line/line_08
+	bounds: 178, 33, 189, 172
+	offsets: 32, 12, 250, 200
+line/line_09
+	bounds: 2, 133, 189, 174
+	offsets: 32, 11, 250, 200
+	rotate: 90
+line/line_10
+	bounds: 582, 729, 190, 173
+	offsets: 30, 12, 250, 200
+line/line_11
+	bounds: 371, 384, 185, 167
+	offsets: 30, 15, 250, 200
+line/line_12
+	bounds: 558, 375, 176, 163
+	offsets: 31, 16, 250, 200
+	rotate: 90
+line/line_13
+	bounds: 553, 212, 173, 161
+	offsets: 34, 18, 250, 200
+line/line_14
+	bounds: 720, 47, 170, 162
+	offsets: 37, 16, 250, 200
+line/line_15
+	bounds: 372, 44, 172, 166
+	offsets: 35, 12, 250, 200
+line/line_16
+	bounds: 546, 43, 172, 167
+	offsets: 36, 11, 250, 200
+line/line_17
+	bounds: 723, 388, 172, 169
+	offsets: 36, 11, 250, 200
+line/line_18
+	bounds: 728, 211, 175, 166
+	offsets: 33, 12, 250, 200
+	rotate: 90
+line/line_19
+	bounds: 723, 559, 179, 168
+	offsets: 29, 12, 250, 200
+line/line_20
+	bounds: 372, 212, 179, 170
+	offsets: 29, 12, 250, 200

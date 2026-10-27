@@ -1,0 +1,40 @@
+win_bar.png
+	size: 776, 776
+	filter: Linear, Linear
+banner_lighting/banner_lighting_00
+	bounds: 2, 708, 99, 66
+	offsets: 159, 44, 430, 150
+banner_lighting/banner_lighting_02
+	bounds: 229, 695, 160, 79
+	offsets: 135, 34, 430, 150
+banner_lighting/banner_lighting_04
+	bounds: 391, 687, 280, 87
+	offsets: 75, 30, 430, 150
+banner_lighting/banner_lighting_06
+	bounds: 294, 587, 353, 98
+	offsets: 44, 25, 430, 150
+banner_lighting/banner_lighting_08
+	bounds: 2, 297, 376, 100
+	offsets: 35, 28, 430, 150
+banner_lighting/banner_lighting_10
+	bounds: 380, 297, 378, 100
+	offsets: 24, 28, 430, 150
+banner_lighting/banner_lighting_12
+	bounds: 673, 434, 340, 101
+	offsets: 43, 23, 430, 150
+	rotate: 90
+banner_lighting/banner_lighting_14
+	bounds: 2, 603, 290, 90
+	offsets: 64, 29, 430, 150
+bg_ligjt
+	bounds: 2, 493, 588, 92
+	offsets: 1, 1, 590, 94
+bg_ligjt2
+	bounds: 2, 399, 588, 92
+flare3_00
+	bounds: 255, 39, 387, 256
+glow_106
+	bounds: 2, 44, 251, 251
+	offsets: 3, 2, 256, 256
+motion
+	bounds: 103, 700, 124, 74
