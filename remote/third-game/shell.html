@@ -1107,6 +1107,11 @@ body.shown #game { opacity: 1; }
                 scope.__subGameShowSystemMenu__ = function () { showSystemMenu(); return Promise.resolve(); };
                 scope.__subGameShowAutoPlaySelector__ = function () { return new Promise(function (resolve) { showAutoPlay({}, 'game', resolve); }); };
                 scope.__subGameReselectTable__ = function () { showSeatLobby({}); return Promise.resolve(); };
+                // 桌面瀏覽器 遊戲用固定比例 補發 resize 讓已經啟動的遊戲重算
+                if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                    scope.__subGameFixedRatio__ = true;
+                    scope.dispatchEvent(new scope.Event('resize'));
+                }
             } catch (error) {
                 // 跨網域的遊戲沒有這個介面
             }
