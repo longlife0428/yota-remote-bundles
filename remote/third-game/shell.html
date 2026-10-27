@@ -162,6 +162,20 @@ body.has-game #tag { display: flex; }
 <div id="toast"></div>
 <div id="tag">shell page<small id="tag-sub"></small></div>
 <script>
+// ============ 通訊約定 唯一來源 改協議只改這裡 ============
+// 網址參數 url 遊戲網址 gameId 遊戲代號 lang 語言 cover 遮罩秒數或 wait loading=1 只出彈窗
+// 大廳到殼頁 { source: 'host', type, payload }
+//   指令 show-system-menu show-auto-play show-seat-lobby show-exit show-confirm show-alert close-dialog show-loading hide-loading show-toast
+//   init 帶 strings safe settings tableId exitButton  safe 帶安全區
+// 殼頁到大廳 { source: 'host-shell', type, payload } 網頁用 postMessage 原生用 scheme 網址回呼
+//   ready dialog-open dialog-close exit-confirm exit-cancel leave-keep seat-enter seat-reserve popup-open popup-close auto-play-result setting-change
+//   game-loaded game-ready game-error cover-hidden
+// 遊戲到殼頁 { source: 'game', type, payload }
+//   hi 要握手  ready 畫面已出現 殼頁收到就拿掉遮罩  loading 帶 percent  error 帶 message  上面的指令也能由遊戲發
+// 殼頁到遊戲 { source: 'host-shell', type, payload }
+//   hello 握手 帶 gameId lang settings  setting 音樂音效切換  dialog-result auto-play-result 彈窗結果
+// 遊戲端實作 1001 在 GameRoot.bindShell 第三方遊戲用 host-sdk.js
+// 大廳端的型別在 entry 的 ThirdGameConst.ts 要跟這裡同步
 (function () {
     var query = new URLSearchParams(location.search);
     var gameUrl = query.get('url') || '';

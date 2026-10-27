@@ -1,3 +1,4 @@
+// 只給第三方遊戲用 我們自己的遊戲在各自的程式裡實作同一套訊息 約定見 shell.html 檔頭
 (function (w) {
     // 遊戲放在殼頁的 iframe 裡時 用這支跟殼頁溝通 不在殼頁裡就什麼都不做
     var inFrame = w.parent !== w;
