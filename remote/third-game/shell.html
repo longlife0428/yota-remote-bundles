@@ -146,11 +146,6 @@ body.shown #game { opacity: 1; }
 #loading i { width: 34px; height: 34px; border: 3px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-#tag { position: fixed; z-index: 5; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: rgba(0,0,0,.45); color: #fff; font-size: 36px; font-weight: 700; pointer-events: none; }
-body.has-game #tag { display: flex; }
-#tag.done { display: none !important; }
-#tag i { width: 34px; height: 34px; border: 3px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
-#tag small { display: none; }
 
 #toast { position: fixed; z-index: 40; left: 50%; bottom: calc(var(--sab) + 40px); max-width: 80vw; padding: 10px 16px; border-radius: 8px; background: rgba(0,0,0,.8); color: #fff; font-size: 14px; transform: translateX(-50%); opacity: 0; pointer-events: none; transition: opacity .2s; }
 #toast.show { opacity: 1; }
@@ -162,7 +157,6 @@ body.has-game #tag { display: flex; }
 <div id="mask"><div id="dialog"><h1></h1><p></p><div class="row"><button class="cancel" type="button"></button><button class="ok" type="button"></button></div></div></div>
 <div id="loading"><i></i><span></span></div>
 <div id="toast"></div>
-<div id="tag"><i></i><small id="tag-sub"></small></div>
 <script>
 // ============ 通訊約定 唯一來源 改協議只改這裡 ============
 // 網址參數 url 遊戲網址 gameId 遊戲代號 lang 語言 cover 遮罩秒數或 wait loading=1 只出彈窗
@@ -252,8 +246,7 @@ body.has-game #tag { display: flex; }
     var loading = document.getElementById('loading');
     var toast = document.getElementById('toast');
     var gameFrame = null;
-    var cover = document.getElementById('tag');
-    var coverSub = document.getElementById('tag-sub');
+    var coverDone = false;
     // 遮罩模式 數字=網頁載入後再蓋幾秒 wait=只等遊戲回 ready 最多 30 秒
     var coverMode = query.get('cover') || '8';
     var coverTimer = 0;
@@ -344,8 +337,8 @@ body.has-game #tag { display: flex; }
     // 讀取畫面是不是大廳要求顯示的 預載不能把它關掉
     var hostLoading = false;
     var assetLoading = 0;
-    // 只出彈窗的殼頁 一載入就先顯示讀取畫面 第一個彈窗出現才收掉
-    var bootLoading = query.get('loading') === '1';
+    // 只出彈窗的殼頁 或載入遊戲的殼頁 一載入就先顯示讀取畫面 第一個彈窗出現或遊戲遮罩拿掉才收掉
+    var bootLoading = query.get('loading') === '1' || !!gameUrl;
     if (bootLoading) {
         hostLoading = true;
         loading.querySelector('span').textContent = text.preload;
@@ -911,8 +904,9 @@ body.has-game #tag { display: flex; }
     }
 
     function hideCover(reason) {
-        if (cover.classList.contains('done')) return;
-        cover.classList.add('done');
+        if (coverDone) return;
+        coverDone = true;
+        endBootLoading();
         document.body.classList.add('shown');
         clearTimeout(coverTimer);
         emit('cover-hidden', { reason: reason });
@@ -1058,7 +1052,7 @@ body.has-game #tag { display: flex; }
                 openEnterSeat();
                 break;
             case 'loading':
-                coverSub.textContent = typeof payload.percent === 'number' ? Math.round(payload.percent) + '%' : '';
+                if (bootLoading) loading.querySelector('span').textContent = text.preload + (typeof payload.percent === 'number' ? ' ' + Math.round(payload.percent) + '%' : '');
                 break;
             case 'error':
                 emit('game-error', payload);
