@@ -1,0 +1,8 @@
+collect_end.png
+	size: 384, 384
+	filter: Linear, Linear
+flare2
+	bounds: 2, 126, 256, 256
+flare_29
+	bounds: 2, 2, 252, 122
+	offsets: 4, 67, 256, 256
