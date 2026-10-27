@@ -171,7 +171,8 @@ body.has-game #tag { display: flex; }
 //   ready dialog-open dialog-close exit-confirm exit-cancel leave-keep seat-enter seat-reserve popup-open popup-close auto-play-result setting-change
 //   game-loaded game-ready game-error cover-hidden
 // 遊戲到殼頁 { source: 'game', type, payload }
-//   hi 要握手  ready 畫面已出現 殼頁收到就拿掉遮罩  loading 帶 percent  error 帶 message  上面的指令也能由遊戲發
+//   hi 要握手  ready 畫面已出現 殼頁收到就拿掉遮罩 payload.seat 為 entered 時進場選座等 entered 才開 沒帶就遮罩一拿掉就開
+//   entered 載入完成進到遊戲 殼頁開進場選座  loading 帶 percent  error 帶 message  上面的指令也能由遊戲發
 // 殼頁到遊戲 { source: 'host-shell', type, payload }
 //   hello 握手 帶 gameId lang settings  setting 音樂音效切換  dialog-result auto-play-result 彈窗結果
 // 遊戲端實作 1001 在 GameRoot.bindShell 第三方遊戲用 host-sdk.js
@@ -896,13 +897,23 @@ body.has-game #tag { display: flex; }
     }
 
     // 遮罩隱藏原因 ready 遊戲通知 timeout 逾時
+    // 遊戲回 ready 時說進場選座要等 entered 才開 沒說的遊戲遮罩一拿掉就開
+    var seatWaitEntered = false;
+    var seatOpened = false;
+
+    // 進遊戲先選座 不強制選 關掉照樣進遊戲 已經有別的彈窗開著就不搶 一次進場只開一次
+    function openEnterSeat() {
+        if (seatOpened) return;
+        seatOpened = true;
+        if (gameFrame && !currentPopup) showSeatLobby({});
+    }
+
     function hideCover(reason) {
         if (cover.classList.contains('done')) return;
         cover.classList.add('done');
         clearTimeout(coverTimer);
         emit('cover-hidden', { reason: reason });
-        // 進遊戲先選座 遊戲露出來的那一刻開 不強制選 關掉照樣進遊戲 已經有別的彈窗開著就不搶
-        if (gameFrame && !currentPopup) showSeatLobby({});
+        if (!seatWaitEntered) openEnterSeat();
     }
 
     // 握手 告訴遊戲殼頁在 以及它的代號與語言
@@ -1033,8 +1044,15 @@ body.has-game #tag { display: flex; }
                 sendHello();
                 break;
             case 'ready':
+                seatWaitEntered = payload.seat === 'entered';
                 hideCover('ready');
                 emit('game-ready', payload);
+                break;
+            case 'entered':
+                // 載入完成進到遊戲 遮罩還在就一起拿掉
+                seatWaitEntered = false;
+                hideCover('entered');
+                openEnterSeat();
                 break;
             case 'loading':
                 coverSub.textContent = typeof payload.percent === 'number' ? Math.round(payload.percent) + '%' : '';
