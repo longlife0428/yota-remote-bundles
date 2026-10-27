@@ -53,7 +53,7 @@ remote/third-game/
 
 更新預覽：
 
-1. 在 `slot_game` 構建 web，輸出名稱用 `<gameId>-web`。完成時 Console 會印出複製目的地與預覽網址，鉤子只提示，不複製檔案。
+1. 在 `slot_game` 構建 web，輸出名稱用 `<gameId>-web`。完成時 Console 最後一行會印出預覽網址，鉤子只提示，不複製檔案。
 2. 自己把 `slot_game/build/<gameId>-web` 複製到 `remote/third-game/preview/<gameId>` 覆蓋，不要複製 `.map` 檔。
    - 完整構建：先清掉舊的再複製。
    - 只構建 Bundle：覆蓋 `assets/internal`、`assets/main`、`remote/<gameId>`、`src/settings*.json` 即可。
@@ -66,7 +66,7 @@ https://pub-42d4a6164a8043969925bdede61d36a1.r2.dev/remote/third-game/preview/<g
 https://pub-42d4a6164a8043969925bdede61d36a1.r2.dev/remote/third-game/shell.html?url=preview/<gameId>/index.html&gameId=<gameId>
 ```
 
-第二條是經過殼頁開，有選單、音樂音效開關與遮罩。沒上傳過的遊戲打開會失敗。
+第二條是經過殼頁開，有選單、自動旋轉、選座、遊戲說明與音樂音效開關。直接開第一條時，遊戲啟動頁會先確認上兩層有 `shell.html`，有就自動跳到第二條；網址加 `shell=0` 可以不跳。沒上傳過的遊戲打開會失敗。
 
 ## 四條不能違反的規則
 
