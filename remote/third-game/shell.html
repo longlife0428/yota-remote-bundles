@@ -1108,7 +1108,7 @@ body.shown #game { opacity: 1; }
                 scope.__subGameShowAutoPlaySelector__ = function () { return new Promise(function (resolve) { showAutoPlay({}, 'game', resolve); }); };
                 scope.__subGameReselectTable__ = function () { showSeatLobby({}); return Promise.resolve(); };
                 // 桌面瀏覽器 遊戲用固定比例 補發 resize 讓已經啟動的遊戲重算
-                if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                if (desktopRatio) {
                     scope.__subGameFixedRatio__ = true;
                     scope.dispatchEvent(new scope.Event('resize'));
                 }
@@ -1121,6 +1121,14 @@ body.shown #game { opacity: 1; }
             coverTimer = setTimeout(function () { hideCover('timeout'); }, seconds * 1000);
         });
         gameFrame.src = gameUrl;
+        // 遊戲啟動時只讀一次旗標 不能等 load 才寫 載入前就持續寫進去
+        var desktopRatio = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        if (desktopRatio) {
+            var ratioTimer = setInterval(function () {
+                try { gameFrame.contentWindow.__subGameFixedRatio__ = true; } catch (error) { clearInterval(ratioTimer); }
+            }, 2);
+            gameFrame.addEventListener('load', function () { clearInterval(ratioTimer); });
+        }
         document.body.insertBefore(gameFrame, document.body.firstChild);
     } else {
         // 沒有網址就只出彈窗 不顯示選單鈕
