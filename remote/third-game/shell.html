@@ -168,7 +168,7 @@ body.shown #game { opacity: 1; }
 //   game-loaded game-ready game-error cover-hidden
 // 遊戲到殼頁 { source: 'game', type, payload }
 //   hi 要握手  ready 畫面已出現 殼頁收到就拿掉遮罩 payload.seat 為 entered 時進場選座等 entered 才開 沒帶就遮罩一拿掉就開
-//   entered 載入完成進到遊戲 殼頁開進場選座  loading 帶 percent  error 帶 message  上面的指令也能由遊戲發
+//   entered 載入完成進到遊戲 殼頁開進場選座  error 帶 message  上面的指令也能由遊戲發
 // 殼頁到遊戲 { source: 'host-shell', type, payload }
 //   hello 握手 帶 gameId lang settings  setting 音樂音效切換  dialog-result auto-play-result 彈窗結果
 // 遊戲端實作 1001 在 GameRoot.bindShell 第三方遊戲用 host-sdk.js
@@ -1050,9 +1050,6 @@ body.shown #game { opacity: 1; }
                 seatWaitEntered = false;
                 hideCover('entered');
                 openEnterSeat();
-                break;
-            case 'loading':
-                if (bootLoading) loading.querySelector('span').textContent = text.preload + (typeof payload.percent === 'number' ? ' ' + Math.round(payload.percent) + '%' : '');
                 break;
             case 'error':
                 emit('game-error', payload);
