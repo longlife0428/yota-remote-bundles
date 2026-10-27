@@ -38,6 +38,36 @@ bash scripts/hotupdate/package-native.sh --bundle 1002 --platform ios
 
 原生要**先傳 payload zip，最後才傳兩份 manifest**。順序反了會讓客戶端抓到還不存在的檔案。
 
+## 殼頁與網頁預覽（third-game）
+
+`remote/third-game/` 是殼頁與網頁預覽，**不是熱更新內容，可以手動更新**，下面四條規則不適用。
+
+```text
+remote/third-game/
+├── shell.html            ← 殼頁 通訊約定寫在檔頭註解
+├── host-sdk.js           ← 第三方遊戲用
+├── demo-game.html、return.html
+├── popups/、game-info/   ← 彈窗素材、遊戲說明頁
+└── preview/<gameId>/     ← 遊戲網頁預覽 進遊戲模式是網頁的遊戲由大廳載入這裡
+```
+
+更新預覽：
+
+1. 在 `slot_game` 構建 web，輸出名稱用 `<gameId>-web`。完成時 Console 會印出複製目的地與預覽網址，鉤子只提示，不複製檔案。
+2. 自己把 `slot_game/build/<gameId>-web` 複製到 `remote/third-game/preview/<gameId>` 覆蓋，不要複製 `.map` 檔。
+   - 完整構建：先清掉舊的再複製。
+   - 只構建 Bundle：覆蓋 `assets/internal`、`assets/main`、`remote/<gameId>`、`src/settings*.json` 即可。
+3. commit 後 push，同步到 R2 後生效。
+
+預覽網址：
+
+```text
+https://pub-42d4a6164a8043969925bdede61d36a1.r2.dev/remote/third-game/preview/<gameId>/index.html
+https://pub-42d4a6164a8043969925bdede61d36a1.r2.dev/remote/third-game/shell.html?url=preview/<gameId>/index.html&gameId=<gameId>
+```
+
+第二條是經過殼頁開，有選單、音樂音效開關與遮罩。沒上傳過的遊戲打開會失敗。
+
 ## 四條不能違反的規則
 
 **1. 只能合併，不能取代目錄**
