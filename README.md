@@ -38,6 +38,8 @@ bash scripts/hotupdate/package-native.sh --bundle 1002 --platform ios
 
 原生要**先傳 payload zip，最後才傳兩份 manifest**。順序反了會讓客戶端抓到還不存在的檔案。
 
+Web 發布、新版上線並驗證後，要清掉 `remote/<gameId>/` 底下的舊版 Web 檔（hash 檔名解壓不會蓋掉舊檔），步驟見 `slot_game/docs/build-sync-hot-update.md` §5 步驟 11。
+
 ## 殼頁與網頁預覽（third-game）
 
 `remote/third-game/` 是殼頁與網頁預覽，**不是熱更新內容，可以手動更新**，下面四條規則不適用。
