@@ -1,6 +1,6 @@
 {
   "bundleName": "1001",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "configVersion": "",
   "platform": "android",
   "engineVersion": "3.8.8",
@@ -9,8 +9,8 @@
   "remoteVersionUrl": "",
   "assets": {
     "1001.zip": {
-      "size": 25082334,
-      "md5": "ae09d0a6880744a73c579319ffe909b3",
+      "size": 24471915,
+      "md5": "6767beaa3cf251386c3a59c7c8733007",
       "compressed": true
     }
   },
