@@ -1,0 +1,158 @@
+spin.png
+	size: 952, 952
+	filter: Linear, Linear
+aura_173
+	bounds: 832, 287, 109, 109
+	offsets: 10, 9, 128, 128
+aura_175
+	bounds: 236, 756, 194, 194
+	offsets: 31, 31, 256, 256
+bead_sweep/bead_sweep_01
+	bounds: 325, 135, 14, 22
+	offsets: 1, 16, 40, 40
+	rotate: 90
+bead_sweep/bead_sweep_02
+	bounds: 922, 564, 19, 28
+	offsets: 1, 11, 40, 40
+	rotate: 90
+bead_sweep/bead_sweep_03
+	bounds: 353, 2, 24, 32
+	offsets: 1, 7, 40, 40
+bead_sweep/bead_sweep_04
+	bounds: 922, 585, 28, 35
+	offsets: 1, 4, 40, 40
+bead_sweep/bead_sweep_05
+	bounds: 236, 717, 31, 37
+	offsets: 1, 2, 40, 40
+bead_sweep/bead_sweep_06
+	bounds: 302, 720, 34, 38
+	offsets: 1, 1, 40, 40
+	rotate: 90
+bead_sweep/bead_sweep_07
+	bounds: 769, 108, 35, 39
+	offsets: 3, 0, 40, 40
+bead_sweep/bead_sweep_08
+	bounds: 769, 68, 33, 38
+	offsets: 6, 0, 40, 40
+bead_sweep/bead_sweep_09
+	bounds: 269, 717, 31, 37
+	offsets: 9, 0, 40, 40
+bead_sweep/bead_sweep_10
+	bounds: 806, 112, 27, 35
+	offsets: 13, 0, 40, 40
+bead_sweep/bead_sweep_11
+	bounds: 807, 476, 23, 32
+	offsets: 17, 0, 40, 40
+bead_sweep/bead_sweep_12
+	bounds: 831, 767, 18, 27
+	offsets: 22, 1, 40, 40
+bead_sweep/bead_sweep_13
+	bounds: 119, 2, 12, 20
+	offsets: 27, 2, 40, 40
+	rotate: 90
+flare_110
+	bounds: 119, 16, 116, 116
+	offsets: 6, 6, 128, 128
+glow_88
+	bounds: 2, 717, 232, 233
+	offsets: 15, 13, 256, 256
+par/par_00
+	bounds: 302, 717, 1, 1
+par/par_02
+	bounds: 675, 60, 92, 87
+	offsets: 13, 15, 120, 120
+par/par_04
+	bounds: 575, 54, 98, 93
+	offsets: 9, 13, 120, 120
+par/par_06
+	bounds: 851, 731, 103, 99
+	offsets: 6, 11, 120, 120
+	rotate: 90
+par/par_08
+	bounds: 469, 41, 108, 104
+	offsets: 2, 10, 120, 120
+	rotate: 90
+par/par_10
+	bounds: 766, 149, 111, 110
+	offsets: 0, 8, 120, 120
+	rotate: 90
+par/par_12
+	bounds: 353, 36, 114, 113
+	offsets: 0, 7, 120, 120
+par/par_14
+	bounds: 832, 398, 109, 110
+	offsets: 7, 5, 120, 120
+par/par_16
+	bounds: 650, 149, 111, 114
+	offsets: 8, 3, 120, 120
+	rotate: 90
+par/par_18
+	bounds: 2, 13, 115, 119
+	offsets: 5, 0, 120, 120
+par/par_20
+	bounds: 237, 16, 116, 114
+	offsets: 3, 0, 120, 120
+	rotate: 90
+par/par_22
+	bounds: 831, 622, 117, 107
+	offsets: 1, 11, 120, 120
+par/par_24
+	bounds: 807, 510, 113, 110
+	offsets: 7, 10, 120, 120
+par/par_26
+	bounds: 851, 836, 114, 99
+	offsets: 6, 8, 120, 120
+	rotate: 90
+spin_fx/spin_fx_01
+	bounds: 650, 262, 181, 180
+	offsets: 17, 47, 230, 230
+	rotate: 90
+spin_fx/spin_fx_03
+	bounds: 202, 344, 185, 184
+	offsets: 15, 46, 230, 230
+	rotate: 90
+spin_fx/spin_fx_05
+	bounds: 209, 531, 183, 184
+	offsets: 15, 46, 230, 230
+spin_fx/spin_fx_07
+	bounds: 388, 344, 185, 182
+	offsets: 15, 48, 230, 230
+	rotate: 90
+spin_fx/spin_fx_09
+	bounds: 2, 344, 198, 185
+	offsets: 7, 45, 230, 230
+spin_fx/spin_fx_11
+	bounds: 2, 531, 205, 184
+	offsets: 3, 44, 230, 230
+spin_fx/spin_fx_13
+	bounds: 173, 134, 208, 150
+	offsets: 1, 44, 230, 230
+	rotate: 90
+spin_fx/spin_fx_15
+	bounds: 640, 796, 209, 154
+	offsets: 0, 44, 230, 230
+spin_fx/spin_fx_17
+	bounds: 2, 134, 208, 169
+	offsets: 0, 37, 230, 230
+	rotate: 90
+spin_fx/spin_fx_19
+	bounds: 432, 773, 206, 177
+	offsets: 0, 34, 230, 230
+spin_fx/spin_fx_21
+	bounds: 621, 445, 176, 184
+	offsets: 4, 31, 230, 230
+	rotate: 90
+spin_fx/spin_fx_23
+	bounds: 492, 153, 156, 189
+	offsets: 26, 30, 230, 230
+spin_fx/spin_fx_25
+	bounds: 325, 151, 165, 191
+	offsets: 23, 29, 230, 230
+spin_fx/spin_fx_27
+	bounds: 640, 623, 171, 189
+	offsets: 21, 29, 230, 230
+	rotate: 90
+spin_fx/spin_fx_29
+	bounds: 432, 596, 175, 187
+	offsets: 20, 34, 230, 230
+	rotate: 90

@@ -1,0 +1,131 @@
+slowmotion.png
+	size: 788, 788
+	filter: Linear, Linear
+10018
+	bounds: 52, 358, 31, 31
+dxjia_di1g
+	bounds: 423, 2, 105, 109
+	offsets: 6, 1, 117, 115
+	rotate: 90
+dxjia_di2g
+	bounds: 571, 164, 63, 174
+	offsets: 1, 0, 65, 174
+	rotate: 90
+dxjia_dig6
+	bounds: 40, 104, 82, 182
+	offsets: 1, 1, 84, 183
+fl2_paigx2b
+	bounds: 2, 288, 48, 498
+fx/p3_00000
+	bounds: 124, 34, 39, 359
+	offsets: 11, 7, 50, 400
+fx/p3_00029
+	bounds: 124, 34, 39, 359
+	offsets: 11, 7, 50, 400
+fx/p3_00001
+	bounds: 431, 526, 39, 351
+	offsets: 11, 8, 50, 400
+	rotate: 90
+fx/p3_00002
+	bounds: 431, 485, 39, 347
+	offsets: 11, 9, 50, 400
+	rotate: 90
+fx/p3_00003
+	bounds: 431, 402, 39, 342
+	offsets: 11, 11, 50, 400
+	rotate: 90
+fx/p3_00004
+	bounds: 208, 64, 39, 339
+	offsets: 11, 12, 50, 400
+fx/p3_00005
+	bounds: 380, 81, 41, 335
+	offsets: 9, 13, 50, 400
+fx/p3_00006
+	bounds: 423, 315, 42, 332
+	offsets: 8, 14, 50, 400
+	rotate: 90
+fx/p3_00007
+	bounds: 423, 229, 44, 319
+	offsets: 6, 25, 50, 400
+	rotate: 90
+fx/p3_00008
+	bounds: 249, 66, 45, 339
+	offsets: 5, 26, 50, 400
+fx/p3_00009
+	bounds: 431, 741, 45, 355
+	offsets: 5, 27, 50, 400
+	rotate: 90
+fx/p3_00010
+	bounds: 431, 696, 43, 348
+	offsets: 7, 28, 50, 400
+	rotate: 90
+fx/p3_00011
+	bounds: 431, 567, 41, 346
+	offsets: 9, 25, 50, 400
+	rotate: 90
+fx/p3_00012
+	bounds: 339, 74, 39, 337
+	offsets: 11, 29, 50, 400
+fx/p3_00013
+	bounds: 423, 275, 38, 331
+	offsets: 12, 30, 50, 400
+	rotate: 90
+fx/p3_00014
+	bounds: 431, 443, 40, 345
+	offsets: 10, 13, 50, 400
+	rotate: 90
+fx/p3_00015
+	bounds: 296, 72, 41, 338
+	offsets: 9, 17, 50, 400
+fx/p3_00016
+	bounds: 431, 610, 41, 347
+	offsets: 9, 21, 50, 400
+	rotate: 90
+fx/p3_00017
+	bounds: 423, 359, 41, 335
+	offsets: 9, 25, 50, 400
+	rotate: 90
+fx/p3_00018
+	bounds: 165, 39, 41, 360
+	offsets: 9, 28, 50, 400
+fx/p3_00019
+	bounds: 431, 653, 41, 348
+	offsets: 9, 31, 50, 400
+	rotate: 90
+fx/p3_00020
+	bounds: 52, 391, 40, 395
+	offsets: 10, 0, 50, 400
+fx/p3_00021
+	bounds: 94, 395, 39, 391
+	offsets: 11, 0, 50, 400
+fx/p3_00022
+	bounds: 135, 401, 39, 385
+	offsets: 11, 1, 50, 400
+fx/p3_00023
+	bounds: 176, 405, 39, 381
+	offsets: 11, 1, 50, 400
+fx/p3_00024
+	bounds: 217, 407, 40, 379
+	offsets: 10, 2, 50, 400
+fx/p3_00025
+	bounds: 259, 412, 41, 374
+	offsets: 9, 2, 50, 400
+fx/p3_00026
+	bounds: 344, 418, 42, 368
+	offsets: 8, 3, 50, 400
+fx/p3_00027
+	bounds: 388, 422, 41, 364
+	offsets: 9, 4, 50, 400
+fx/p3_00028
+	bounds: 302, 413, 40, 373
+	offsets: 10, 5, 50, 400
+gx3
+	bounds: 775, 311, 130, 11
+	rotate: 90
+hljs_pgx3
+	bounds: 2, 18, 36, 268
+hot1
+	bounds: 423, 109, 146, 118
+pmd3_xg8
+	bounds: 40, 54, 50, 48
+	offsets: 1, 1, 52, 50

@@ -1,0 +1,117 @@
+symbol_win.png
+	size: 964, 964
+	filter: Linear, Linear
+hot1
+	bounds: 823, 465, 146, 111
+	offsets: 0, 7, 146, 118
+	rotate: 90
+line/line_00
+	bounds: 483, 3, 119, 131
+	offsets: 41, 34, 200, 200
+	rotate: 90
+line/line_01
+	bounds: 813, 17, 124, 134
+	offsets: 36, 34, 200, 200
+	rotate: 90
+line/line_02
+	bounds: 813, 143, 133, 142
+	offsets: 31, 32, 200, 200
+line/line_03
+	bounds: 514, 124, 151, 153
+	offsets: 28, 25, 200, 200
+line/line_04
+	bounds: 665, 452, 156, 159
+	offsets: 23, 21, 200, 200
+line/line_05
+	bounds: 349, 444, 163, 166
+	offsets: 19, 18, 200, 200
+line/line_06
+	bounds: 177, 262, 170, 172
+	offsets: 17, 14, 200, 200
+line/line_07
+	bounds: 544, 787, 176, 175
+	offsets: 15, 12, 200, 200
+line/line_08
+	bounds: 368, 784, 174, 178
+	offsets: 13, 11, 200, 200
+line/line_09
+	bounds: 190, 784, 176, 178
+	offsets: 13, 9, 200, 200
+line/line_10
+	bounds: 2, 209, 173, 173
+	offsets: 17, 15, 200, 200
+line/line_11
+	bounds: 190, 613, 169, 175
+	offsets: 16, 14, 200, 200
+	rotate: 90
+line/line_12
+	bounds: 2, 31, 170, 176
+	offsets: 16, 13, 200, 200
+line/line_13
+	bounds: 720, 613, 173, 172
+	offsets: 15, 12, 200, 200
+line/line_14
+	bounds: 544, 613, 174, 172
+	offsets: 14, 12, 200, 200
+line/line_15
+	bounds: 2, 384, 175, 173
+	offsets: 14, 12, 200, 200
+	rotate: 90
+line/line_16
+	bounds: 722, 787, 176, 175
+	offsets: 14, 11, 200, 200
+line/line_17
+	bounds: 367, 612, 170, 175
+	offsets: 14, 11, 200, 200
+	rotate: 90
+line/line_18
+	bounds: 177, 436, 170, 175
+	offsets: 13, 11, 200, 200
+line/line_19
+	bounds: 349, 274, 168, 154
+	offsets: 14, 21, 200, 200
+	rotate: 90
+line/line_20
+	bounds: 177, 109, 167, 151
+	offsets: 15, 23, 200, 200
+line/line_21
+	bounds: 514, 446, 164, 149
+	offsets: 15, 24, 200, 200
+	rotate: 90
+line/line_22
+	bounds: 505, 279, 163, 150
+	offsets: 15, 24, 200, 200
+	rotate: 90
+line/line_23
+	bounds: 657, 281, 163, 149
+	offsets: 15, 25, 200, 200
+	rotate: 90
+line/line_24
+	bounds: 808, 287, 163, 145
+	offsets: 15, 29, 200, 200
+	rotate: 90
+line/line_25
+	bounds: 349, 127, 163, 145
+	offsets: 15, 30, 200, 200
+line/line_26
+	bounds: 667, 116, 163, 144
+	offsets: 15, 31, 200, 200
+	rotate: 90
+line/line_27
+	bounds: 346, 2, 123, 135
+	offsets: 39, 32, 200, 200
+	rotate: 90
+line/line_28
+	bounds: 346, 2, 123, 135
+	offsets: 39, 32, 200, 200
+	rotate: 90
+line/line_29
+	bounds: 346, 2, 123, 135
+	offsets: 39, 32, 200, 200
+	rotate: 90
+symbol_glow_filp
+	bounds: 2, 756, 186, 206
+	offsets: 17, 17, 220, 240
+symbol_glow_filp_00
+	bounds: 2, 561, 173, 193
+	offsets: 23, 24, 220, 240

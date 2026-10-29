@@ -1,0 +1,123 @@
+symbol_frame.png
+	size: 788, 788
+	filter: Linear, Linear
+fx_aura_03
+	bounds: 393, 9, 116, 101
+	offsets: 6, 14, 128, 128
+icon/icon_00
+	bounds: 714, 679, 36, 42
+	offsets: 3, 0, 39, 42
+icon/icon_01
+	bounds: 714, 639, 37, 38
+	offsets: 2, 0, 39, 42
+icon/icon_02
+	bounds: 653, 38, 37, 38
+	offsets: 2, 0, 39, 42
+icon/icon_03
+	bounds: 613, 38, 38, 38
+	offsets: 1, 0, 39, 42
+icon/icon_04
+	bounds: 730, 562, 36, 38
+	offsets: 1, 0, 39, 42
+icon/icon_05
+	bounds: 714, 602, 35, 38
+	offsets: 1, 0, 39, 42
+	rotate: 90
+icon/icon_06
+	bounds: 753, 639, 32, 38
+	offsets: 2, 0, 39, 42
+icon/icon_07
+	bounds: 511, 9, 26, 38
+	offsets: 5, 0, 39, 42
+	rotate: 90
+icon/icon_08
+	bounds: 768, 565, 18, 38
+	offsets: 10, 0, 39, 42
+icon/icon_09
+	bounds: 607, 195, 11, 38
+	offsets: 14, 0, 39, 42
+icon/icon_10
+	bounds: 551, 27, 8, 38
+	offsets: 17, 0, 39, 42
+	rotate: 90
+icon/icon_11
+	bounds: 765, 252, 16, 38
+	offsets: 14, 0, 39, 42
+icon/icon_12
+	bounds: 607, 235, 23, 42
+	offsets: 11, 0, 39, 42
+icon/icon_13
+	bounds: 478, 112, 31, 42
+	offsets: 7, 0, 39, 42
+icon/icon_14
+	bounds: 752, 679, 34, 42
+	offsets: 5, 0, 39, 42
+long2
+	bounds: 638, 175, 125, 115
+particle_baofa/particle_baofa_01
+	bounds: 700, 6, 79, 82
+	offsets: 86, 99, 241, 269
+particle_baofa/particle_baofa_02
+	bounds: 279, 2, 108, 112
+	offsets: 70, 84, 241, 269
+	rotate: 90
+particle_baofa/particle_baofa_03
+	bounds: 156, 11, 121, 130
+	offsets: 63, 74, 241, 269
+particle_baofa/particle_baofa_04
+	bounds: 2, 5, 136, 152
+	offsets: 54, 63, 241, 269
+	rotate: 90
+particle_baofa/particle_baofa_05
+	bounds: 305, 112, 152, 171
+	offsets: 47, 54, 241, 269
+	rotate: 90
+particle_baofa/particle_baofa_06
+	bounds: 352, 433, 163, 184
+	offsets: 43, 47, 241, 269
+	rotate: 90
+particle_baofa/particle_baofa_07
+	bounds: 538, 429, 171, 190
+	offsets: 41, 44, 241, 269
+	rotate: 90
+particle_baofa/particle_baofa_08
+	bounds: 352, 598, 178, 188
+	offsets: 39, 47, 241, 269
+particle_baofa/particle_baofa_09
+	bounds: 532, 602, 180, 184
+	offsets: 39, 51, 241, 269
+shine_1
+	bounds: 2, 143, 301, 297
+shine_b
+	bounds: 2, 442, 348, 344
+	offsets: 20, 19, 388, 382
+win_bar_win_par/win_bar_win_par_002
+	bounds: 754, 605, 32, 32
+	offsets: 83, 85, 200, 200
+win_bar_win_par/win_bar_win_par_004
+	bounds: 714, 723, 65, 63
+	offsets: 65, 69, 200, 200
+win_bar_win_par/win_bar_win_par_006
+	bounds: 700, 90, 83, 76
+	offsets: 52, 63, 200, 200
+	rotate: 90
+win_bar_win_par/win_bar_win_par_008
+	bounds: 613, 78, 85, 95
+	offsets: 55, 49, 200, 200
+win_bar_win_par/win_bar_win_par_010
+	bounds: 511, 37, 117, 100
+	offsets: 34, 46, 200, 200
+	rotate: 90
+win_bar_win_par/win_bar_win_par_012
+	bounds: 481, 156, 121, 124
+	offsets: 38, 37, 200, 200
+	rotate: 90
+win_bar_win_par/win_bar_win_par_014
+	bounds: 638, 292, 148, 135
+	offsets: 21, 28, 200, 200
+win_bar_win_par/win_bar_win_par_016
+	bounds: 481, 279, 155, 148
+	offsets: 20, 27, 200, 200
+win_bar_win_par/win_bar_win_par_018
+	bounds: 305, 266, 174, 165
+	offsets: 10, 17, 200, 200

@@ -1,0 +1,83 @@
+mg_man.png
+	size: 1680, 1680
+	filter: Linear, Linear
+JP_coin/JP_coin_00
+	bounds: 404, 635, 326, 326
+	offsets: 7, 7, 340, 340
+JP_coin/JP_coin_01
+	bounds: 732, 635, 320, 326
+	offsets: 7, 7, 340, 340
+JP_coin/JP_coin_02
+	bounds: 736, 328, 305, 326
+	offsets: 15, 7, 340, 340
+	rotate: 90
+JP_coin/JP_coin_03
+	bounds: 1054, 649, 283, 326
+	offsets: 26, 7, 340, 340
+JP_coin/JP_coin_04
+	bounds: 1051, 977, 252, 326
+	offsets: 39, 7, 340, 340
+	rotate: 90
+JP_coin/JP_coin_05
+	bounds: 1339, 649, 221, 326
+	offsets: 54, 7, 340, 340
+JP_coin/JP_coin_06
+	bounds: 1308, 146, 173, 326
+	offsets: 81, 7, 340, 340
+	rotate: 90
+JP_coin/JP_coin_07
+	bounds: 595, 2, 127, 330
+	offsets: 104, 5, 340, 340
+JP_coin/JP_coin_08
+	bounds: 1093, 1231, 77, 340
+	offsets: 130, 0, 340, 340
+	rotate: 90
+JP_coin/JP_coin_09
+	bounds: 1562, 796, 80, 340
+	offsets: 130, 0, 340, 340
+JP_coin/JP_coin_10
+	bounds: 1308, 17, 127, 340
+	offsets: 109, 0, 340, 340
+	rotate: 90
+JP_coin/JP_coin_11
+	bounds: 1349, 321, 221, 326
+	offsets: 65, 7, 340, 340
+JP_coin/JP_coin_12
+	bounds: 1064, 321, 283, 326
+	offsets: 31, 7, 340, 340
+JP_coin/JP_coin_13
+	bounds: 267, 27, 305, 326
+	offsets: 20, 7, 340, 340
+	rotate: 90
+JP_coin/JP_coin_14
+	bounds: 724, 6, 320, 326
+	offsets: 13, 7, 340, 340
+	rotate: 90
+back_hair
+	bounds: 1052, 7, 254, 312
+h
+	bounds: 513, 1275, 578, 403
+handwear-l
+	bounds: 513, 963, 536, 310
+handwear-l3
+	bounds: 1093, 1310, 368, 515
+	rotate: 90
+handwear-r
+	bounds: 2, 33, 263, 453
+head
+	bounds: 404, 334, 299, 330
+	rotate: 90
+legwear
+	bounds: 2, 488, 600, 400
+	rotate: 90
+mouth
+	bounds: 1562, 651, 143, 76
+	offsets: 0, 0, 145, 89
+	rotate: 90
+neck
+	bounds: 1435, 1138, 178, 170
+nose
+	bounds: 267, 336, 150, 94
+	rotate: 90
+topwear
+	bounds: 2, 1090, 509, 588

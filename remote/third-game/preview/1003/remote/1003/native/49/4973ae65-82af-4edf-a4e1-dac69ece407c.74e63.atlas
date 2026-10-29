@@ -1,0 +1,9 @@
+reel_fx.png
+	size: 388, 388
+	filter: Linear, Linear
+glow
+	bounds: 2, 153, 232, 233
+	offsets: 15, 13, 256, 256
+glow_88
+	bounds: 236, 236, 150, 150
+	offsets: 9, 8, 164, 164

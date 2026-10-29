@@ -1,0 +1,7 @@
+frame_light.png
+size:64,64
+filter:Linear,Linear
+pma:true
+scale:0.8
+light
+bounds:2,2,40,40

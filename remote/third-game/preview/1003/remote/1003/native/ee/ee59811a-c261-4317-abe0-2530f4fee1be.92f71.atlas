@@ -1,0 +1,31 @@
+background_free.png
+	size: 1800, 1800
+	filter: Linear, Linear
+Purple_light
+	bounds: 939, 8, 641, 361
+	rotate: 90
+flare_121
+	bounds: 1738, 1730, 57, 65
+	offsets: 10, 7, 76, 76
+glow_88
+	bounds: 1465, 342, 232, 233
+	offsets: 15, 13, 256, 256
+gold01
+	bounds: 1302, 72, 503, 161
+	rotate: 90
+gold03
+	bounds: 2, 328, 721, 330
+	offsets: 0, 0, 722, 350
+l
+	bounds: 2, 660, 901, 1135
+	offsets: 1, 1, 903, 1137
+m
+	bounds: 2, 90, 935, 236
+	offsets: 1, 1, 937, 238
+m2
+	bounds: 1355, 577, 1218, 381
+	offsets: 1, 1, 1220, 383
+	rotate: 90
+r
+	bounds: 905, 651, 448, 1144
+	offsets: 1, 1, 450, 1146
