@@ -1,0 +1,76 @@
+symbol.png
+	size: 1016, 1016
+	filter: Linear, Linear
+d
+	bounds: 434, 48, 141, 178
+d_g
+	bounds: 577, 48, 141, 178
+fa
+	bounds: 855, 841, 171, 157
+	rotate: 90
+fa_g
+	bounds: 855, 668, 171, 157
+	rotate: 90
+mahjong_a_00
+	bounds: 612, 804, 208, 241
+	offsets: 84, 81, 383, 403
+	rotate: 90
+mahjong_a_01
+	bounds: 398, 765, 212, 247
+	offsets: 81, 77, 383, 403
+mahjong_a_02
+	bounds: 2, 261, 219, 249
+	offsets: 82, 76, 383, 403
+mahjong_a_03
+	bounds: 2, 763, 222, 249
+	offsets: 81, 76, 383, 403
+mahjong_a_04
+	bounds: 223, 262, 209, 248
+	offsets: 87, 77, 383, 403
+mahjong_a_05
+	bounds: 226, 764, 170, 248
+	offsets: 107, 82, 383, 403
+mahjong_a_06
+	bounds: 612, 489, 103, 241
+	offsets: 140, 82, 383, 403
+	rotate: 90
+mahjong_a_07
+	bounds: 609, 234, 148, 238
+	offsets: 118, 83, 383, 403
+	rotate: 90
+mahjong_b_00
+	bounds: 612, 594, 208, 241
+	offsets: 84, 81, 383, 403
+	rotate: 90
+mahjong_b_01
+	bounds: 398, 516, 212, 247
+	offsets: 81, 77, 383, 403
+mahjong_b_02
+	bounds: 2, 10, 219, 249
+	offsets: 82, 76, 383, 403
+mahjong_b_03
+	bounds: 2, 512, 222, 249
+	offsets: 81, 76, 383, 403
+mahjong_b_04
+	bounds: 223, 12, 209, 248
+	offsets: 87, 77, 383, 403
+mahjong_b_05
+	bounds: 226, 514, 170, 248
+	offsets: 107, 82, 383, 403
+mahjong_b_06
+	bounds: 609, 384, 103, 241
+	offsets: 140, 82, 383, 403
+	rotate: 90
+mahjong_b_07
+	bounds: 849, 34, 148, 238
+	offsets: 118, 83, 383, 403
+w
+	bounds: 855, 471, 155, 195
+w_g
+	bounds: 852, 274, 155, 195
+z
+	bounds: 434, 372, 142, 173
+	rotate: 90
+z_g
+	bounds: 434, 228, 142, 173
+	rotate: 90
