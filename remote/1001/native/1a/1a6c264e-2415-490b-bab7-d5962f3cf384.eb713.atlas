@@ -1,0 +1,153 @@
+transition.png
+	size: 1536, 1536
+	filter: Linear, Linear
+door_l
+	bounds: 331, 1, 960, 1080
+	offsets: 1, 1, 962, 1082
+door_lm
+	bounds: 1, 1, 328, 1153
+door_rm
+	bounds: 1, 1156, 328, 1153
+	rotate: 90
+dust/dust_03
+	bounds: 1254, 1297, 53, 56
+	offsets: 49, 101, 150, 158
+dust/dust_05
+	bounds: 882, 1083, 73, 64
+	offsets: 40, 94, 150, 158
+dust/dust_07
+	bounds: 800, 1083, 80, 70
+	offsets: 42, 87, 150, 158
+dust/dust_09
+	bounds: 1347, 1141, 92, 77
+	offsets: 37, 80, 150, 158
+	rotate: 90
+dust/dust_11
+	bounds: 1426, 1141, 90, 86
+	offsets: 30, 71, 150, 158
+	rotate: 90
+dust/dust_13
+	bounds: 1408, 964, 104, 99
+	offsets: 23, 58, 150, 158
+	rotate: 90
+dust/dust_15
+	bounds: 1293, 967, 106, 113
+	offsets: 17, 44, 150, 158
+	rotate: 90
+dust/dust_17
+	bounds: 1293, 545, 121, 126
+	offsets: 13, 32, 150, 158
+dust/dust_19
+	bounds: 1403, 826, 131, 136
+	offsets: 9, 21, 150, 158
+dust/dust_21
+	bounds: 1293, 685, 124, 139
+	offsets: 13, 19, 150, 158
+dust/dust_23
+	bounds: 1293, 401, 121, 142
+	offsets: 15, 15, 150, 158
+dust/dust_25
+	bounds: 1419, 685, 114, 139
+	offsets: 18, 19, 150, 158
+dust/dust_27
+	bounds: 1293, 826, 108, 139
+	offsets: 20, 19, 150, 158
+dust/dust_29
+	bounds: 1416, 401, 101, 140
+	offsets: 24, 17, 150, 158
+dust/dust_31
+	bounds: 1416, 543, 95, 140
+	offsets: 27, 17, 150, 158
+dust/dust_33
+	bounds: 1445, 256, 88, 140
+	offsets: 30, 17, 150, 158
+dust/dust_35
+	bounds: 1363, 256, 80, 143
+	offsets: 34, 14, 150, 158
+dust/dust_37
+	bounds: 1363, 178, 76, 146
+	offsets: 37, 12, 150, 158
+	rotate: 90
+dust/dust_39
+	bounds: 647, 1083, 68, 151
+	offsets: 39, 7, 150, 158
+	rotate: 90
+dust/dust_41
+	bounds: 491, 1083, 69, 154
+	offsets: 39, 3, 150, 158
+	rotate: 90
+dust/dust_43
+	bounds: 1293, 178, 68, 158
+	offsets: 38, 0, 150, 158
+dust/dust_45
+	bounds: 331, 1083, 70, 158
+	offsets: 38, 0, 150, 158
+	rotate: 90
+fire/fire_00
+	bounds: 1254, 1355, 53, 48
+	offsets: 7, 0, 66, 70
+fire/fire_01
+	bounds: 1408, 1293, 56, 50
+	offsets: 6, 0, 66, 70
+	rotate: 90
+fire/fire_02
+	bounds: 1460, 1293, 56, 52
+	offsets: 5, 0, 66, 70
+	rotate: 90
+fire/fire_03
+	bounds: 1156, 1485, 58, 50
+	offsets: 4, 0, 66, 70
+fire/fire_04
+	bounds: 1426, 1233, 58, 69
+	offsets: 4, 0, 66, 70
+	rotate: 90
+fire/fire_05
+	bounds: 957, 1083, 57, 70
+	offsets: 4, 0, 66, 70
+fire/fire_06
+	bounds: 1469, 1, 58, 66
+	offsets: 4, 0, 66, 70
+fire/fire_07
+	bounds: 1016, 1083, 58, 70
+	offsets: 4, 0, 66, 70
+	rotate: 90
+fire/fire_08
+	bounds: 1088, 1083, 57, 70
+	offsets: 4, 0, 66, 70
+fire/fire_09
+	bounds: 1469, 69, 60, 62
+	offsets: 2, 0, 66, 70
+fire/fire_10
+	bounds: 1347, 1235, 59, 62
+	offsets: 2, 0, 66, 70
+fire/fire_11
+	bounds: 1254, 1236, 57, 59
+	offsets: 4, 0, 66, 70
+fire/fire_12
+	bounds: 1293, 338, 56, 60
+	offsets: 5, 0, 66, 70
+fire/fire_13
+	bounds: 1, 1486, 55, 44
+	offsets: 6, 0, 66, 70
+fire/fire_14
+	bounds: 1309, 1299, 55, 47
+	offsets: 7, 0, 66, 70
+	rotate: 90
+glow_88
+	bounds: 1293, 1, 174, 175
+	offsets: 11, 10, 192, 192
+light1_w
+	bounds: 1156, 1083, 368, 56
+light2
+	bounds: 1156, 1141, 96, 342
+	offsets: 2, 1, 98, 344
+smoke_3
+	bounds: 1254, 1141, 91, 93
+	offsets: 2, 2, 96, 96
+
+transition_2.png
+	size: 1096, 1096
+	filter: Linear, Linear
+door_r
+	bounds: 1, 1, 960, 1080
+	offsets: 1, 1, 962, 1082

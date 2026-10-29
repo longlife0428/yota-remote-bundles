@@ -1,0 +1,146 @@
+win.png
+	size: 1552, 1552
+	filter: Linear, Linear
+aura_3
+	bounds: 490, 913, 87, 76
+	offsets: 4, 10, 96, 96
+aura_64
+	bounds: 1225, 1313, 192, 192
+bg_board
+	bounds: 401, 1, 670, 305
+	offsets: 1, 1, 671, 307
+big_coin_l
+	bounds: 745, 622, 244, 138
+	offsets: 1, 1, 245, 140
+	rotate: 90
+big_coin_r
+	bounds: 1182, 1173, 244, 138
+	offsets: 1, 1, 246, 140
+bigwin_tx1
+	bounds: 908, 1031, 335, 140
+	offsets: 1, 1, 337, 141
+epic_board_obj1
+	bounds: 1073, 1, 643, 434
+	offsets: 1, 1, 644, 435
+	rotate: 90
+epic_board_obj2
+	bounds: 401, 622, 342, 289
+	offsets: 1, 1, 344, 290
+epic_board_obj3
+	bounds: 1, 1319, 684, 232
+	offsets: 1, 1, 686, 234
+flare_29
+	bounds: 1428, 1031, 189, 92
+	offsets: 3, 50, 192, 192
+	rotate: 90
+flash3
+	bounds: 1522, 521, 28, 28
+	offsets: 1, 1, 29, 30
+glow
+	bounds: 1428, 1222, 120, 120
+	offsets: 15, 15, 150, 150
+glow_113
+	bounds: 401, 913, 93, 87
+	offsets: 3, 2, 96, 96
+	rotate: 90
+line3
+	bounds: 885, 622, 20, 81
+	offsets: 9, 5, 38, 91
+lv3_obj_s/lv3_obj_s_00
+	bounds: 739, 1484, 52, 53
+	offsets: 7, 9, 65, 71
+lv3_obj_s/lv3_obj_s_02
+	bounds: 793, 1484, 46, 53
+	offsets: 10, 9, 65, 71
+lv3_obj_s/lv3_obj_s_04
+	bounds: 1509, 409, 35, 54
+	offsets: 15, 9, 65, 71
+lv3_obj_s/lv3_obj_s_06
+	bounds: 885, 705, 19, 53
+	offsets: 23, 9, 65, 71
+lv3_obj_s/lv3_obj_s_08
+	bounds: 885, 760, 19, 53
+	offsets: 23, 9, 65, 71
+lv3_obj_s/lv3_obj_s_10
+	bounds: 1509, 465, 41, 54
+	offsets: 12, 9, 65, 71
+lv3_obj_s/lv3_obj_s_12
+	bounds: 687, 1484, 50, 54
+	offsets: 8, 9, 65, 71
+lv3_obj_s/lv3_obj_s_14
+	bounds: 841, 1484, 52, 53
+	offsets: 6, 9, 65, 71
+mega_board_obj
+	bounds: 1, 1010, 905, 307
+	offsets: 1, 1, 907, 308
+mega_obj_ls
+	bounds: 1509, 1, 202, 37
+	offsets: 1, 1, 204, 38
+	rotate: 90
+mega_obj_rs
+	bounds: 1509, 205, 202, 37
+	offsets: 1, 1, 204, 38
+	rotate: 90
+mega_tx1
+	bounds: 687, 1319, 536, 163
+	offsets: 1, 1, 537, 164
+particle2
+	bounds: 745, 868, 155, 86
+	offsets: 0, 4, 156, 125
+spark1
+	bounds: 579, 956, 43, 49
+	offsets: 8, 5, 57, 57
+super_obj_l
+	bounds: 908, 1173, 272, 144
+	offsets: 1, 1, 273, 146
+superwin_tx1
+	bounds: 908, 881, 564, 148
+	offsets: 1, 1, 566, 149
+totalwin_board
+	bounds: 201, 1, 1005, 198
+	rotate: 90
+totalwin_txt
+	bounds: 401, 308, 590, 312
+	offsets: 1, 1, 592, 314
+win_board
+	bounds: 1, 1, 1007, 198
+	rotate: 90
+win_text
+	bounds: 908, 646, 612, 233
+	offsets: 1, 1, 614, 235
+
+win_2.png
+	size: 856, 856
+	filter: Linear, Linear
+epic_tx1
+	bounds: 1, 238, 455, 166
+	offsets: 1, 1, 457, 168
+	rotate: 90
+flare_bg
+	bounds: 474, 404, 173, 176
+glow_88
+	bounds: 649, 507, 174, 175
+	offsets: 11, 10, 192, 192
+mega_obj_l
+	bounds: 674, 1, 152, 325
+	offsets: 1, 1, 153, 326
+mega_obj_r
+	bounds: 1, 695, 152, 320
+	offsets: 1, 1, 154, 321
+	rotate: 90
+sdx1
+	bounds: 674, 328, 177, 177
+super_obj_r
+	bounds: 323, 568, 271, 144
+	offsets: 1, 1, 272, 146
+	rotate: 90
+total_board
+	bounds: 1, 1, 515, 235
+	offsets: 1, 1, 517, 236
+total_wing_l
+	bounds: 169, 238, 328, 303
+	rotate: 90
+tx2
+	bounds: 518, 1, 401, 154
+	offsets: 1, 1, 403, 156
+	rotate: 90

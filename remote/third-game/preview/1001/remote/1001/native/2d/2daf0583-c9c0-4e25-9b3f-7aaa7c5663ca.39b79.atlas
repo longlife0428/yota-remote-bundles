@@ -1,0 +1,277 @@
+fg_cha_002.png
+	size: 1548, 1548
+	filter: Linear, Linear
+D2/D2_19
+	bounds: 1324, 1485, 62, 62
+	offsets: 14, 14, 90, 90
+ball_fx/ball_fx_00
+	bounds: 518, 1417, 108, 150
+	offsets: 25, 0, 150, 150
+	rotate: 90
+ball_fx/ball_fx_01
+	bounds: 670, 1417, 108, 150
+	offsets: 25, 0, 150, 150
+	rotate: 90
+bar
+	bounds: 1, 1, 346, 1098
+	offsets: 1, 1, 347, 1100
+cloth
+	bounds: 349, 1, 620, 792
+cloth_b
+	bounds: 987, 287, 542, 417
+cloth_b2
+	bounds: 987, 706, 279, 531
+eye
+	bounds: 1523, 706, 51, 24
+	offsets: 1, 1, 52, 26
+	rotate: 90
+f
+	bounds: 1471, 900, 50, 104
+	offsets: 1, 1, 51, 106
+flare_23
+	bounds: 327, 1417, 189, 91
+	offsets: 3, 52, 192, 192
+habd_l
+	bounds: 1027, 1298, 203, 249
+habd_r
+	bounds: 1232, 1298, 185, 207
+	rotate: 90
+head
+	bounds: 1268, 1066, 230, 261
+	rotate: 90
+leg_l2
+	bounds: 1, 1101, 142, 345
+	rotate: 90
+leg_l3
+	bounds: 1268, 706, 201, 358
+leg_r
+	bounds: 971, 1, 284, 561
+	rotate: 90
+lightning/00
+	bounds: 1, 1519, 43, 28
+	offsets: 20, 0, 90, 135
+lightning/02
+	bounds: 1232, 1485, 90, 56
+	offsets: 0, 1, 90, 135
+lightning/03
+	bounds: 1441, 1298, 90, 53
+	offsets: 0, 8, 90, 135
+	rotate: 90
+lightning/04
+	bounds: 1520, 706, 1, 1
+lightning/06
+	bounds: 1520, 709, 1, 1
+lightning/08
+	bounds: 1520, 712, 1, 1
+lightning/11
+	bounds: 1520, 715, 1, 1
+lightning/13
+	bounds: 1520, 718, 1, 1
+lightning/10
+	bounds: 822, 1417, 90, 116
+	offsets: 0, 19, 90, 135
+	rotate: 90
+magic_00
+	bounds: 349, 795, 636, 620
+	offsets: 2, 11, 641, 641
+projectile_50
+	bounds: 1027, 1239, 47, 192
+	offsets: 1, 0, 48, 192
+	rotate: 90
+projectile_502
+	bounds: 1471, 706, 47, 192
+	offsets: 1, 0, 48, 192
+projectile_55
+	bounds: 1534, 1, 12, 96
+	offsets: 38, 0, 96, 96
+projectile_56
+	bounds: 1534, 99, 12, 96
+	offsets: 38, 0, 96, 96
+tail
+	bounds: 1, 1245, 324, 272
+tr
+	bounds: 987, 1239, 38, 292
+
+fg_cha_002_2.png
+	size: 912, 912
+	filter: Linear, Linear
+D2/D2_00
+	bounds: 507, 739, 73, 89
+	offsets: 2, 0, 90, 90
+	rotate: 90
+D2/D2_01
+	bounds: 829, 111, 80, 90
+	offsets: 2, 0, 90, 90
+D2/D2_02
+	bounds: 598, 661, 70, 88
+	offsets: 3, 1, 90, 90
+	rotate: 90
+D2/D2_03
+	bounds: 598, 733, 86, 88
+	offsets: 0, 1, 90, 90
+	rotate: 90
+D2/D2_04
+	bounds: 598, 821, 86, 85
+	offsets: 2, 2, 90, 90
+	rotate: 90
+D2/D2_05
+	bounds: 789, 371, 90, 84
+	offsets: 0, 3, 90, 90
+	rotate: 90
+D2/D2_06
+	bounds: 685, 821, 86, 83
+	offsets: 0, 3, 90, 90
+D2/D2_07
+	bounds: 507, 814, 89, 82
+	offsets: 1, 3, 90, 90
+D2/D2_08
+	bounds: 518, 373, 88, 90
+	offsets: 2, 0, 90, 90
+	rotate: 90
+D2/D2_09
+	bounds: 689, 646, 88, 89
+	offsets: 2, 1, 90, 90
+D2/D2_10
+	bounds: 610, 385, 88, 90
+	offsets: 2, 0, 90, 90
+D2/D2_11
+	bounds: 507, 463, 90, 90
+D2/D2_12
+	bounds: 700, 385, 83, 90
+	offsets: 1, 0, 90, 90
+D2/D2_13
+	bounds: 785, 463, 89, 90
+	offsets: 1, 0, 90, 90
+D2/D2_14
+	bounds: 599, 477, 89, 90
+	offsets: 1, 0, 90, 90
+D2/D2_15
+	bounds: 507, 555, 89, 90
+	offsets: 1, 0, 90, 90
+D2/D2_16
+	bounds: 688, 737, 68, 67
+	offsets: 11, 12, 90, 90
+D2/D2_17
+	bounds: 758, 737, 67, 67
+	offsets: 12, 12, 90, 90
+D2/D2_18
+	bounds: 827, 688, 66, 64
+	offsets: 12, 14, 90, 90
+ball_fx/ball_fx_02
+	bounds: 177, 591, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_03
+	bounds: 177, 743, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_04
+	bounds: 127, 1, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_05
+	bounds: 127, 153, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_06
+	bounds: 188, 305, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_07
+	bounds: 237, 1, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_08
+	bounds: 237, 153, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_09
+	bounds: 287, 457, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_10
+	bounds: 298, 305, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_11
+	bounds: 347, 1, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_12
+	bounds: 347, 153, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_13
+	bounds: 287, 609, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_14
+	bounds: 287, 761, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_15
+	bounds: 1, 768, 108, 150
+	offsets: 25, 0, 150, 150
+	rotate: 90
+ball_fx/ball_fx_16
+	bounds: 397, 457, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_17
+	bounds: 408, 305, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_18
+	bounds: 457, 1, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_19
+	bounds: 457, 153, 108, 150
+	offsets: 25, 0, 150, 150
+	rotate: 90
+ball_fx/ball_fx_20
+	bounds: 567, 1, 108, 150
+	offsets: 25, 0, 150, 150
+	rotate: 90
+ball_fx/ball_fx_21
+	bounds: 719, 1, 108, 150
+	offsets: 25, 0, 150, 150
+	rotate: 90
+ball_fx/ball_fx_22
+	bounds: 518, 263, 108, 147
+	offsets: 25, 0, 150, 150
+	rotate: 90
+ball_fx/ball_fx_23
+	bounds: 397, 609, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_24
+	bounds: 397, 761, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_25
+	bounds: 609, 111, 108, 150
+	offsets: 25, 0, 150, 150
+ball_fx/ball_fx_26
+	bounds: 719, 111, 108, 150
+	offsets: 25, 0, 150, 150
+cloth_f
+	bounds: 1, 1, 124, 379
+glow
+	bounds: 667, 263, 120, 120
+	offsets: 15, 15, 150, 150
+glow_88
+	bounds: 1, 591, 174, 175
+	offsets: 11, 10, 192, 192
+habd_l2
+	bounds: 188, 457, 106, 96
+	rotate: 90
+habd_r2
+	bounds: 1, 382, 185, 207
+hand_r2
+	bounds: 689, 569, 72, 84
+	offsets: 1, 1, 74, 86
+	rotate: 90
+lightning/01
+	bounds: 779, 646, 88, 40
+	offsets: 0, 0, 90, 135
+lightning/05
+	bounds: 690, 477, 90, 85
+	offsets: 0, 11, 90, 135
+	rotate: 90
+lightning/07
+	bounds: 777, 555, 90, 89
+	offsets: 0, 15, 90, 135
+lightning/09
+	bounds: 789, 263, 90, 106
+	offsets: 0, 16, 90, 135
+lightning/12
+	bounds: 598, 569, 90, 89
+	offsets: 0, 46, 90, 135
+	rotate: 90
+lightning/14
+	bounds: 507, 647, 90, 88
+	offsets: 0, 46, 90, 135
+	rotate: 90

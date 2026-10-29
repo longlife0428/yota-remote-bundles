@@ -1,0 +1,191 @@
+fg_cha_001.png
+	size: 1568, 1568
+	filter: Linear, Linear
+D2/D2_00
+	bounds: 939, 712, 73, 89
+	offsets: 2, 0, 90, 90
+D2/D2_03
+	bounds: 868, 1419, 86, 88
+	offsets: 0, 1, 90, 90
+D2/D2_11
+	bounds: 1472, 1211, 90, 90
+D2/D2_13
+	bounds: 1472, 1303, 89, 90
+	offsets: 1, 0, 90, 90
+D2/D2_14
+	bounds: 939, 850, 89, 90
+	offsets: 1, 0, 90, 90
+bar
+	bounds: 1, 1, 284, 862
+	offsets: 1, 1, 285, 863
+cloth
+	bounds: 301, 963, 443, 538
+cloth_b
+	bounds: 1109, 362, 441, 339
+cloth_f1
+	bounds: 939, 362, 118, 348
+crown
+	bounds: 1109, 1179, 146, 160
+	offsets: 1, 1, 148, 161
+eye
+	bounds: 1541, 703, 68, 24
+	offsets: 1, 1, 69, 26
+	rotate: 90
+eye_glow
+	bounds: 587, 1503, 60, 20
+	offsets: 1, 1, 62, 21
+	rotate: 90
+glow
+	bounds: 746, 1419, 120, 120
+	offsets: 15, 15, 150, 150
+glow_88
+	bounds: 1299, 985, 174, 175
+	offsets: 11, 10, 192, 192
+	rotate: 90
+hand_l
+	bounds: 1109, 985, 188, 192
+hand_l_f
+	bounds: 956, 1419, 72, 76
+	offsets: 1, 1, 74, 77
+	rotate: 90
+head2
+	bounds: 1299, 1161, 168, 171
+	rotate: 90
+knife
+	bounds: 746, 963, 454, 361
+	offsets: 1, 1, 456, 362
+	rotate: 90
+leg_l
+	bounds: 1109, 703, 280, 430
+	rotate: 90
+leg_r
+	bounds: 988, 1, 359, 568
+	rotate: 90
+lightning/00
+	bounds: 1014, 712, 43, 28
+	offsets: 20, 0, 90, 135
+lightning/01
+	bounds: 939, 803, 88, 40
+	offsets: 0, 0, 90, 135
+lightning/02
+	bounds: 1030, 850, 90, 56
+	offsets: 0, 1, 90, 135
+	rotate: 90
+lightning/03
+	bounds: 495, 1503, 90, 53
+	offsets: 0, 8, 90, 135
+lightning/04
+	bounds: 1472, 1161, 1, 1
+lightning/06
+	bounds: 1472, 1164, 1, 1
+lightning/08
+	bounds: 1472, 1167, 1, 1
+lightning/11
+	bounds: 1472, 1170, 1, 1
+lightning/13
+	bounds: 1472, 1173, 1, 1
+lightning/09
+	bounds: 1476, 1103, 90, 106
+	offsets: 0, 16, 90, 135
+lightning/10
+	bounds: 1476, 985, 90, 116
+	offsets: 0, 19, 90, 135
+magic_00
+	bounds: 301, 341, 636, 620
+	offsets: 2, 11, 641, 641
+projectile_50
+	bounds: 301, 1503, 47, 192
+	offsets: 1, 0, 48, 192
+	rotate: 90
+projectile_502
+	bounds: 1059, 656, 47, 192
+	offsets: 1, 0, 48, 192
+projectile_56
+	bounds: 1552, 362, 14, 96
+	offsets: 38, 0, 96, 96
+tr
+	bounds: 1059, 362, 38, 292
+wing_l_f
+	bounds: 1, 865, 298, 701
+wing_r_f
+	bounds: 287, 1, 338, 699
+	rotate: 90
+
+fg_cha_001_2.png
+	size: 792, 792
+	filter: Linear, Linear
+D2/D2_01
+	bounds: 1, 316, 80, 90
+	offsets: 2, 0, 90, 90
+D2/D2_02
+	bounds: 711, 413, 70, 88
+	offsets: 3, 1, 90, 90
+D2/D2_04
+	bounds: 541, 687, 86, 85
+	offsets: 2, 2, 90, 90
+D2/D2_05
+	bounds: 83, 316, 90, 84
+	offsets: 0, 3, 90, 90
+	rotate: 90
+D2/D2_06
+	bounds: 629, 687, 86, 83
+	offsets: 0, 3, 90, 90
+D2/D2_07
+	bounds: 622, 505, 89, 82
+	offsets: 1, 3, 90, 90
+	rotate: 90
+D2/D2_08
+	bounds: 169, 316, 88, 90
+	offsets: 2, 0, 90, 90
+	rotate: 90
+D2/D2_09
+	bounds: 541, 596, 88, 89
+	offsets: 2, 1, 90, 90
+D2/D2_10
+	bounds: 261, 316, 88, 90
+	offsets: 2, 0, 90, 90
+	rotate: 90
+D2/D2_12
+	bounds: 278, 654, 83, 90
+	offsets: 1, 0, 90, 90
+D2/D2_15
+	bounds: 363, 654, 89, 90
+	offsets: 1, 0, 90, 90
+D2/D2_16
+	bounds: 717, 503, 68, 67
+	offsets: 11, 12, 90, 90
+D2/D2_17
+	bounds: 717, 572, 67, 67
+	offsets: 12, 12, 90, 90
+D2/D2_18
+	bounds: 717, 641, 66, 64
+	offsets: 12, 14, 90, 90
+	rotate: 90
+D2/D2_19
+	bounds: 717, 709, 62, 62
+	offsets: 14, 14, 90, 90
+cloth_f2
+	bounds: 278, 413, 239, 250
+	rotate: 90
+hand_r
+	bounds: 1, 413, 275, 295
+lightning/05
+	bounds: 454, 654, 90, 85
+	offsets: 0, 11, 90, 135
+	rotate: 90
+lightning/07
+	bounds: 530, 413, 90, 89
+	offsets: 0, 15, 90, 135
+	rotate: 90
+lightning/12
+	bounds: 530, 505, 90, 89
+	offsets: 0, 46, 90, 135
+lightning/14
+	bounds: 621, 413, 90, 88
+	offsets: 0, 46, 90, 135
+	rotate: 90
+wing_l_b
+	bounds: 415, 1, 316, 410
+wing_r_b
+	bounds: 1, 1, 313, 412
+	rotate: 90

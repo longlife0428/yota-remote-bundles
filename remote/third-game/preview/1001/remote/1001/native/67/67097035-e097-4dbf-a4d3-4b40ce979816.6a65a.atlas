@@ -1,0 +1,354 @@
+win_jp.png
+	size: 1552, 1552
+	filter: Linear, Linear
+aura_3
+	bounds: 1444, 1289, 87, 76
+	offsets: 4, 10, 96, 96
+aura_64
+	bounds: 1250, 1289, 192, 192
+flare_29
+	bounds: 1187, 851, 189, 92
+	offsets: 3, 50, 192, 192
+	rotate: 90
+flare_bg
+	bounds: 995, 1102, 173, 176
+flash3
+	bounds: 1523, 1367, 28, 28
+	offsets: 1, 1, 29, 30
+fx/p6_00008
+	bounds: 1436, 1483, 56, 85
+	offsets: 12, 4, 75, 90
+	rotate: 90
+fx/p6_00009
+	bounds: 1487, 90, 56, 86
+	offsets: 11, 4, 75, 90
+fx/p6_00010
+	bounds: 1487, 1, 57, 87
+	offsets: 11, 3, 75, 90
+gem13
+	bounds: 1347, 1483, 87, 52
+	offsets: 1, 1, 88, 53
+gem14
+	bounds: 1487, 380, 43, 52
+gem2
+	bounds: 1487, 592, 44, 47
+	offsets: 1, 1, 46, 49
+gem4
+	bounds: 1250, 1483, 95, 58
+	offsets: 1, 1, 97, 60
+gem7
+	bounds: 1487, 434, 52, 51
+	rotate: 90
+gem8
+	bounds: 1487, 488, 51, 46
+	offsets: 1, 1, 52, 47
+	rotate: 90
+glow_113
+	bounds: 1170, 1199, 93, 87
+	offsets: 3, 2, 96, 96
+grand
+	bounds: 1, 1289, 1247, 249
+	offsets: 1, 1, 1249, 250
+grand_board
+	bounds: 1, 1, 1286, 198
+	offsets: 1, 1, 1287, 200
+jp
+	bounds: 1, 1102, 813, 151
+	offsets: 4, 1, 818, 152
+line3
+	bounds: 1203, 599, 20, 81
+	offsets: 9, 5, 38, 91
+	rotate: 90
+lv3_obj_s/lv3_obj_s_00
+	bounds: 1487, 271, 52, 53
+	offsets: 7, 9, 65, 71
+	rotate: 90
+lv3_obj_s/lv3_obj_s_02
+	bounds: 1487, 325, 46, 53
+	offsets: 10, 9, 65, 71
+lv3_obj_s/lv3_obj_s_04
+	bounds: 1487, 178, 35, 54
+	offsets: 15, 9, 65, 71
+	rotate: 90
+lv3_obj_s/lv3_obj_s_06
+	bounds: 1530, 215, 19, 53
+	offsets: 23, 9, 65, 71
+lv3_obj_s/lv3_obj_s_08
+	bounds: 1265, 1199, 19, 53
+	offsets: 23, 9, 65, 71
+lv3_obj_s/lv3_obj_s_10
+	bounds: 1487, 215, 41, 54
+	offsets: 12, 9, 65, 71
+major
+	bounds: 1, 599, 1200, 250
+	offsets: 1, 1, 1202, 252
+major_board
+	bounds: 1, 201, 1286, 196
+	offsets: 1, 3, 1287, 200
+mini_board
+	bounds: 1289, 1, 1286, 196
+	offsets: 1, 3, 1287, 200
+	rotate: 90
+minor
+	bounds: 1, 851, 1184, 249
+	offsets: 1, 1, 1186, 250
+minor_board
+	bounds: 1, 399, 1286, 198
+	offsets: 1, 1, 1287, 200
+particle2
+	bounds: 1187, 1042, 155, 86
+	offsets: 0, 4, 156, 125
+	rotate: 90
+sdx1
+	bounds: 816, 1102, 177, 177
+spark1
+	bounds: 1487, 541, 43, 49
+	offsets: 8, 5, 57, 57
+
+win_jp_2.png
+	size: 944, 944
+	filter: Linear, Linear
+fx/p6_00000
+	bounds: 434, 844, 59, 56
+	offsets: 10, 21, 75, 90
+fx/p6_00001
+	bounds: 546, 261, 59, 70
+	offsets: 10, 8, 75, 90
+fx/p6_00002
+	bounds: 543, 337, 57, 71
+	offsets: 14, 5, 75, 90
+fx/p6_00003
+	bounds: 177, 339, 57, 75
+	offsets: 14, 4, 75, 90
+fx/p6_00004
+	bounds: 1, 811, 57, 78
+	offsets: 14, 3, 75, 90
+fx/p6_00005
+	bounds: 1, 729, 56, 80
+	offsets: 14, 3, 75, 90
+fx/p6_00006
+	bounds: 61, 560, 57, 81
+	offsets: 13, 5, 75, 90
+fx/p6_00007
+	bounds: 1, 560, 58, 83
+	offsets: 12, 5, 75, 90
+fx/p6_00011
+	bounds: 495, 844, 58, 58
+	offsets: 11, 2, 75, 90
+fx/p6_00012
+	bounds: 567, 475, 61, 59
+	offsets: 10, 2, 75, 90
+fx/p6_00013
+	bounds: 569, 410, 61, 60
+	offsets: 11, 2, 75, 90
+fx/p6_00014
+	bounds: 505, 475, 60, 62
+	offsets: 14, 2, 75, 90
+fx/p6_00015
+	bounds: 372, 780, 60, 62
+	offsets: 14, 3, 75, 90
+fx/p6_00016
+	bounds: 372, 844, 60, 62
+	offsets: 14, 4, 75, 90
+fx/p6_00017
+	bounds: 434, 780, 60, 62
+	offsets: 14, 5, 75, 90
+fx/p6_00018
+	bounds: 447, 705, 59, 62
+	offsets: 14, 7, 75, 90
+	rotate: 90
+fx/p6_00019
+	bounds: 60, 886, 53, 62
+	offsets: 14, 7, 75, 90
+	rotate: 90
+fx/p6_00020
+	bounds: 602, 333, 52, 60
+	offsets: 14, 8, 75, 90
+fx/p6_00021
+	bounds: 496, 766, 53, 58
+	offsets: 13, 9, 75, 90
+	rotate: 90
+fx/p6_00022
+	bounds: 470, 631, 55, 62
+	offsets: 12, 10, 75, 90
+	rotate: 90
+fx/p6_00023
+	bounds: 514, 539, 57, 62
+	offsets: 10, 13, 75, 90
+gem1
+	bounds: 1, 645, 61, 82
+	offsets: 1, 1, 62, 83
+gem11
+	bounds: 120, 560, 76, 54
+	offsets: 0, 0, 76, 55
+gem12
+	bounds: 456, 565, 56, 64
+	offsets: 1, 1, 57, 65
+gem3
+	bounds: 607, 261, 60, 52
+	offsets: 1, 1, 62, 54
+gem5
+	bounds: 1, 891, 54, 50
+	offsets: 1, 1, 56, 51
+gem6
+	bounds: 511, 688, 55, 56
+	rotate: 90
+gem9
+	bounds: 124, 876, 61, 66
+	offsets: 1, 1, 62, 68
+gem_b/gem_b_01
+	bounds: 302, 261, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_02
+	bounds: 187, 770, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_03
+	bounds: 187, 846, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_04
+	bounds: 248, 693, 59, 74
+	offsets: 8, 13, 75, 98
+	rotate: 90
+gem_b/gem_b_05
+	bounds: 257, 570, 59, 74
+	offsets: 8, 13, 75, 98
+	rotate: 90
+gem_b/gem_b_06
+	bounds: 261, 493, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_07
+	bounds: 311, 415, 58, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_08
+	bounds: 257, 631, 59, 74
+	offsets: 8, 13, 75, 98
+	rotate: 90
+gem_b/gem_b_09
+	bounds: 360, 337, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_10
+	bounds: 363, 261, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_11
+	bounds: 187, 416, 59, 75
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_12
+	bounds: 236, 339, 59, 75
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_13
+	bounds: 242, 261, 58, 75
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_14
+	bounds: 124, 722, 59, 75
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_15
+	bounds: 322, 491, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_16
+	bounds: 371, 413, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_17
+	bounds: 421, 337, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_18
+	bounds: 424, 261, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_19
+	bounds: 248, 754, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_20
+	bounds: 248, 830, 60, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_21
+	bounds: 309, 754, 60, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_22
+	bounds: 310, 830, 60, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_23
+	bounds: 333, 567, 60, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_24
+	bounds: 383, 489, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_25
+	bounds: 432, 413, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_26
+	bounds: 482, 337, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_27
+	bounds: 485, 261, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_28
+	bounds: 333, 643, 59, 74
+	offsets: 8, 13, 75, 98
+gem_b/gem_b_29
+	bounds: 371, 719, 59, 74
+	offsets: 8, 13, 75, 98
+	rotate: 90
+gem_b/gem_b_30
+	bounds: 394, 643, 60, 74
+	offsets: 8, 13, 75, 98
+	rotate: 90
+gem_g/gem_g_00
+	bounds: 395, 565, 59, 74
+	offsets: 8, 13, 75, 98
+gem_g/gem_g_01
+	bounds: 444, 489, 59, 74
+	offsets: 8, 13, 75, 98
+gem_g/gem_g_02
+	bounds: 493, 413, 60, 74
+	offsets: 7, 13, 75, 98
+	rotate: 90
+gem_g/gem_g_03
+	bounds: 123, 438, 62, 76
+	offsets: 7, 12, 75, 98
+gem_g/gem_g_04
+	bounds: 60, 808, 62, 76
+	offsets: 6, 12, 75, 98
+gem_g/gem_g_05
+	bounds: 59, 729, 63, 77
+	offsets: 5, 11, 75, 98
+gem_g/gem_g_06
+	bounds: 64, 643, 64, 77
+	offsets: 5, 11, 75, 98
+gem_g/gem_g_07
+	bounds: 177, 261, 63, 76
+	offsets: 5, 12, 75, 98
+gem_g/gem_g_08
+	bounds: 130, 616, 62, 75
+	offsets: 6, 12, 75, 98
+gem_g/gem_g_09
+	bounds: 124, 799, 61, 75
+	offsets: 7, 12, 75, 98
+gem_g/gem_g_10
+	bounds: 185, 693, 61, 75
+	offsets: 7, 12, 75, 98
+gem_g/gem_g_11
+	bounds: 194, 616, 61, 75
+	offsets: 7, 12, 75, 98
+gem_g/gem_g_12
+	bounds: 198, 493, 61, 75
+	offsets: 7, 12, 75, 98
+gem_g/gem_g_13
+	bounds: 248, 416, 61, 75
+	offsets: 7, 12, 75, 98
+gem_g/gem_g_14
+	bounds: 297, 338, 61, 75
+	offsets: 7, 12, 75, 98
+glow
+	bounds: 1, 438, 120, 120
+	offsets: 15, 15, 150, 150
+glow_88
+	bounds: 1, 261, 174, 175
+	offsets: 11, 10, 192, 192
+lv3_obj_s/lv3_obj_s_12
+	bounds: 534, 603, 50, 54
+	offsets: 8, 9, 65, 71
+lv3_obj_s/lv3_obj_s_14
+	bounds: 573, 536, 52, 53
+	offsets: 6, 9, 65, 71
+mini
+	bounds: 1, 1, 934, 258
+	offsets: 1, 1, 936, 260
