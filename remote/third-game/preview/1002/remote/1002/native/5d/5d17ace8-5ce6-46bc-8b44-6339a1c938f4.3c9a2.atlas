@@ -1,0 +1,66 @@
+symbol_m_fx.png
+	size: 1460, 1460
+	filter: Linear, Linear
+glow1
+	bounds: 938, 11, 157, 157
+	offsets: 1, 1, 159, 159
+particle/21
+	bounds: 2, 1118, 340, 340
+particle/23
+	bounds: 2, 776, 340, 340
+particle/25
+	bounds: 344, 1118, 340, 340
+particle/27
+	bounds: 2, 434, 340, 340
+particle/29
+	bounds: 344, 776, 340, 340
+particle/31
+	bounds: 686, 1118, 340, 340
+particle/33
+	bounds: 2, 92, 340, 340
+particle/35
+	bounds: 344, 434, 340, 340
+particle/37
+	bounds: 686, 776, 340, 340
+particle/39
+	bounds: 1028, 1118, 340, 340
+tiger/tiger_00
+	bounds: 344, 232, 200, 200
+tiger/tiger_01
+	bounds: 686, 574, 200, 200
+tiger/tiger_02
+	bounds: 1028, 916, 200, 200
+tiger/tiger_03
+	bounds: 344, 30, 200, 200
+tiger/tiger_04
+	bounds: 546, 232, 200, 200
+tiger/tiger_05
+	bounds: 546, 30, 200, 200
+tiger/tiger_06
+	bounds: 888, 574, 200, 200
+tiger/tiger_07
+	bounds: 1230, 916, 200, 200
+tiger/tiger_08
+	bounds: 748, 372, 200, 200
+tiger/tiger_09
+	bounds: 748, 170, 200, 200
+tiger/tiger_10
+	bounds: 950, 372, 200, 200
+tiger/tiger_11
+	bounds: 950, 170, 200, 200
+tiger/tiger_12
+	bounds: 1090, 714, 200, 200
+tiger/tiger_13
+	bounds: 1152, 512, 200, 195
+	offsets: 0, 5, 200, 200
+	rotate: 90
+tiger/tiger_14
+	bounds: 1152, 310, 200, 183
+	offsets: 0, 17, 200, 200
+	rotate: 90
+tiger/tiger_15
+	bounds: 1152, 137, 200, 171
+	offsets: 0, 29, 200, 200
+tiger/tiger_16
+	bounds: 748, 2, 188, 166
+	offsets: 10, 34, 200, 200

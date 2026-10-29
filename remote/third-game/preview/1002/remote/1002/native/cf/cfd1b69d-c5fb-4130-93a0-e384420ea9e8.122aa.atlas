@@ -1,0 +1,106 @@
+symbol_frame.png
+	size: 756, 756
+	filter: Linear, Linear
+coin2/icon_00
+	bounds: 305, 358, 36, 42
+	offsets: 3, 0, 39, 42
+coin2/icon_01
+	bounds: 423, 47, 37, 38
+	offsets: 2, 0, 39, 42
+	rotate: 90
+coin2/icon_02
+	bounds: 174, 63, 37, 38
+	offsets: 2, 0, 39, 42
+coin2/icon_03
+	bounds: 423, 86, 38, 38
+	offsets: 1, 0, 39, 42
+coin2/icon_04
+	bounds: 423, 9, 36, 38
+	offsets: 1, 0, 39, 42
+	rotate: 90
+coin2/icon_05
+	bounds: 213, 63, 35, 38
+	offsets: 1, 0, 39, 42
+coin2/icon_06
+	bounds: 174, 29, 32, 38
+	offsets: 2, 0, 39, 42
+	rotate: 90
+coin2/icon_07
+	bounds: 566, 489, 26, 38
+	offsets: 5, 0, 39, 42
+coin2/icon_08
+	bounds: 566, 330, 18, 38
+	offsets: 10, 0, 39, 42
+	rotate: 90
+coin2/icon_09
+	bounds: 644, 20, 11, 38
+	offsets: 14, 0, 39, 42
+	rotate: 90
+coin2/icon_10
+	bounds: 746, 371, 8, 38
+	offsets: 17, 0, 39, 42
+coin2/icon_11
+	bounds: 724, 566, 16, 38
+	offsets: 14, 0, 39, 42
+coin2/icon_12
+	bounds: 463, 32, 23, 42
+	offsets: 11, 0, 39, 42
+	rotate: 90
+coin2/icon_13
+	bounds: 463, 57, 31, 42
+	offsets: 7, 0, 39, 42
+	rotate: 90
+coin2/icon_14
+	bounds: 463, 90, 34, 42
+	offsets: 5, 0, 39, 42
+	rotate: 90
+color_bg
+	bounds: 594, 476, 128, 128
+flare_002
+	bounds: 354, 328, 210, 199
+fx_aura_03
+	bounds: 305, 23, 116, 101
+	offsets: 6, 14, 128, 128
+fx_particle_03
+	bounds: 2, 402, 350, 352
+	offsets: 79, 70, 500, 500
+glow_circle
+	bounds: 305, 126, 200, 200
+shine_1
+	bounds: 2, 103, 301, 297
+spark_12
+	bounds: 689, 359, 50, 50
+	offsets: 7, 7, 64, 64
+symbol_glow_001
+	bounds: 354, 529, 238, 225
+	offsets: 11, 15, 256, 256
+win_bar_win_par/win_bar_win_par_002
+	bounds: 250, 69, 32, 32
+	offsets: 83, 85, 200, 200
+win_bar_win_par/win_bar_win_par_004
+	bounds: 689, 411, 65, 63
+	offsets: 65, 69, 200, 200
+win_bar_win_par/win_bar_win_par_006
+	bounds: 89, 25, 83, 76
+	offsets: 52, 63, 200, 200
+win_bar_win_par/win_bar_win_par_008
+	bounds: 2, 6, 85, 95
+	offsets: 55, 49, 200, 200
+win_bar_win_par/win_bar_win_par_010
+	bounds: 644, 33, 117, 100
+	offsets: 34, 46, 200, 200
+	rotate: 90
+win_bar_win_par/win_bar_win_par_012
+	bounds: 566, 350, 121, 124
+	offsets: 38, 37, 200, 200
+win_bar_win_par/win_bar_win_par_014
+	bounds: 507, 2, 148, 135
+	offsets: 21, 28, 200, 200
+	rotate: 90
+win_bar_win_par/win_bar_win_par_016
+	bounds: 594, 606, 155, 148
+	offsets: 20, 27, 200, 200
+win_bar_win_par/win_bar_win_par_018
+	bounds: 507, 152, 174, 165
+	offsets: 10, 17, 200, 200
+	rotate: 90

@@ -1,0 +1,215 @@
+button_spin.png
+	size: 808, 808
+	filter: Linear, Linear
+f_00
+	bounds: 2, 587, 220, 219
+	offsets: 0, 1, 220, 220
+flare_17
+	bounds: 2, 295, 125, 128
+	offsets: 1, 0, 128, 128
+flare_73
+	bounds: 358, 681, 124, 125
+	offsets: 0, 2, 128, 128
+glow
+	bounds: 2, 425, 160, 160
+	offsets: 20, 20, 200, 200
+particle3
+	bounds: 224, 679, 132, 127
+	offsets: 1, 1, 134, 129
+spin_particular/spin_particular_00
+	bounds: 221, 584, 1, 1
+spin_particular/spin_particular_01
+	bounds: 221, 584, 1, 1
+spin_particular/spin_particular_02
+	bounds: 759, 594, 47, 31
+	offsets: 56, 41, 160, 130
+spin_particular/spin_particular_03
+	bounds: 659, 656, 53, 50
+	offsets: 51, 38, 160, 130
+spin_particular/spin_particular_04
+	bounds: 164, 428, 57, 54
+	offsets: 48, 37, 160, 130
+	rotate: 90
+spin_particular/spin_particular_05
+	bounds: 434, 5, 65, 64
+	offsets: 46, 34, 160, 130
+spin_particular/spin_particular_06
+	bounds: 528, 2, 69, 68
+	offsets: 44, 32, 160, 130
+spin_particular/spin_particular_07
+	bounds: 318, 92, 73, 70
+	offsets: 42, 32, 160, 130
+spin_particular/spin_particular_08
+	bounds: 585, 630, 75, 72
+	offsets: 42, 32, 160, 130
+	rotate: 90
+spin_particular/spin_particular_09
+	bounds: 695, 214, 77, 75
+	offsets: 41, 30, 160, 130
+	rotate: 90
+spin_particular/spin_particular_10
+	bounds: 620, 120, 75, 77
+	offsets: 43, 29, 160, 130
+spin_particular/spin_particular_11
+	bounds: 697, 135, 77, 77
+	offsets: 42, 29, 160, 130
+spin_particular/spin_particular_12
+	bounds: 511, 450, 79, 79
+	offsets: 40, 28, 160, 130
+spin_particular/spin_particular_13
+	bounds: 430, 411, 79, 79
+	offsets: 40, 28, 160, 130
+spin_particular/spin_particular_14
+	bounds: 687, 293, 81, 80
+	offsets: 38, 27, 160, 130
+	rotate: 90
+spin_particular/spin_particular_15
+	bounds: 676, 544, 81, 81
+	offsets: 38, 27, 160, 130
+spin_particular/spin_particular_16
+	bounds: 684, 376, 79, 82
+	offsets: 41, 26, 160, 130
+spin_particular/spin_particular_17
+	bounds: 676, 460, 80, 82
+	offsets: 40, 26, 160, 130
+spin_particular/spin_particular_18
+	bounds: 612, 199, 81, 83
+	offsets: 40, 26, 160, 130
+spin_particular/spin_particular_19
+	bounds: 592, 456, 82, 84
+	offsets: 39, 25, 160, 130
+spin_particular/spin_particular_20
+	bounds: 601, 370, 81, 84
+	offsets: 39, 25, 160, 130
+spin_particular/spin_particular_21
+	bounds: 603, 284, 82, 84
+	offsets: 39, 25, 160, 130
+spin_particular/spin_particular_22
+	bounds: 180, 2, 82, 85
+	offsets: 39, 24, 160, 130
+spin_particular/spin_particular_23
+	bounds: 264, 3, 82, 87
+	offsets: 39, 23, 160, 130
+spin_particular/spin_particular_24
+	bounds: 591, 542, 83, 86
+	offsets: 38, 24, 160, 130
+spin_particular/spin_particular_25
+	bounds: 348, 3, 84, 87
+	offsets: 38, 23, 160, 130
+spin_particular/spin_particular_26
+	bounds: 2, 2, 85, 87
+	offsets: 38, 23, 160, 130
+	rotate: 90
+spin_particular/spin_particular_27
+	bounds: 91, 2, 85, 87
+	offsets: 37, 23, 160, 130
+	rotate: 90
+spin_particular/spin_particular_28
+	bounds: 396, 590, 86, 89
+	offsets: 37, 22, 160, 130
+spin_particular/spin_particular_29
+	bounds: 524, 164, 86, 89
+	offsets: 37, 22, 160, 130
+spin_particular/spin_particular_30
+	bounds: 717, 627, 87, 89
+	offsets: 36, 22, 160, 130
+	rotate: 90
+spin_particular/spin_particular_31
+	bounds: 528, 72, 90, 90
+	offsets: 35, 21, 160, 130
+spin_particular/spin_particular_32
+	bounds: 717, 716, 90, 89
+	offsets: 36, 22, 160, 130
+	rotate: 90
+spin_particular/spin_particular_33
+	bounds: 335, 199, 91, 91
+	offsets: 34, 21, 160, 130
+spin_particular/spin_particular_34
+	bounds: 434, 71, 92, 91
+	offsets: 34, 21, 160, 130
+spin_particular/spin_particular_35
+	bounds: 335, 292, 93, 91
+	offsets: 33, 21, 160, 130
+	rotate: 90
+spin_particular/spin_particular_36
+	bounds: 334, 483, 94, 94
+	offsets: 34, 20, 160, 130
+spin_particular/spin_particular_37
+	bounds: 428, 316, 93, 93
+	offsets: 33, 20, 160, 130
+spin_particular/spin_particular_38
+	bounds: 428, 240, 74, 93
+	offsets: 33, 20, 160, 130
+	rotate: 90
+spin_particular/spin_particular_39
+	bounds: 428, 164, 74, 94
+	offsets: 33, 20, 160, 130
+	rotate: 90
+spin_particular/spin_particular_40
+	bounds: 330, 387, 95, 94
+	offsets: 33, 19, 160, 130
+spin_particular/spin_particular_41
+	bounds: 430, 492, 79, 96
+	offsets: 31, 19, 160, 130
+spin_particular/spin_particular_42
+	bounds: 523, 255, 78, 95
+	offsets: 32, 19, 160, 130
+spin_particular/spin_particular_43
+	bounds: 222, 191, 80, 99
+	offsets: 30, 18, 160, 130
+	rotate: 90
+spin_particular/spin_particular_44
+	bounds: 511, 531, 78, 96
+	offsets: 31, 18, 160, 130
+spin_particular/spin_particular_45
+	bounds: 217, 92, 99, 97
+	offsets: 31, 18, 160, 130
+spin_particular/spin_particular_46
+	bounds: 228, 273, 105, 98
+	offsets: 30, 17, 160, 130
+spin_particular/spin_particular_47
+	bounds: 119, 193, 101, 100
+	offsets: 29, 16, 160, 130
+spin_particular/spin_particular_48
+	bounds: 114, 89, 102, 101
+	offsets: 29, 16, 160, 130
+	rotate: 90
+spin_particular/spin_particular_49
+	bounds: 228, 373, 108, 100
+	offsets: 29, 16, 160, 130
+	rotate: 90
+spin_particular/spin_particular_50
+	bounds: 129, 313, 110, 97
+	offsets: 28, 23, 160, 130
+	rotate: 90
+spin_particular/spin_particular_51
+	bounds: 2, 89, 110, 102
+	offsets: 28, 15, 160, 130
+spin_particular/spin_particular_52
+	bounds: 221, 483, 111, 94
+	offsets: 28, 23, 160, 130
+spin_particular/spin_particular_53
+	bounds: 602, 708, 113, 98
+	offsets: 27, 20, 160, 130
+spin_particular/spin_particular_54
+	bounds: 224, 579, 113, 98
+	offsets: 27, 20, 160, 130
+spin_particular/spin_particular_55
+	bounds: 2, 193, 115, 100
+	offsets: 26, 20, 160, 130
+spin_particular/spin_particular_56
+	bounds: 523, 352, 76, 96
+	offsets: 25, 22, 160, 130
+spin_particular/spin_particular_57
+	bounds: 484, 707, 116, 99
+	offsets: 25, 20, 160, 130
+spin_particular/spin_particular_58
+	bounds: 484, 629, 76, 99
+	offsets: 25, 20, 160, 130
+	rotate: 90
+spin_particular/spin_particular_59
+	bounds: 164, 487, 55, 98
+	offsets: 46, 22, 160, 130
+spin_particular/spin_particular_60
+	bounds: 339, 579, 55, 98
+	offsets: 46, 22, 160, 130

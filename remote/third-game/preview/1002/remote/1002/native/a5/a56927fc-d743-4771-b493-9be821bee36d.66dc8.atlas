@@ -1,0 +1,103 @@
+symbol_up.png
+	size: 992, 992
+	filter: Linear, Linear
+boom_s/boom_s_00
+	bounds: 236, 20, 161, 147
+	offsets: 17, 0, 200, 200
+boom_s/boom_s_02
+	bounds: 650, 471, 194, 168
+	offsets: 2, 0, 200, 200
+	rotate: 90
+boom_s/boom_s_03
+	bounds: 236, 169, 196, 170
+	offsets: 0, 0, 200, 200
+boom_s/boom_s_04
+	bounds: 476, 467, 197, 172
+	offsets: 0, 0, 200, 200
+	rotate: 90
+boom_s/boom_s_06
+	bounds: 820, 474, 193, 165
+	offsets: 3, 0, 200, 200
+	rotate: 90
+boom_s/boom_s_08
+	bounds: 476, 305, 189, 160
+	offsets: 3, 0, 200, 200
+boom_s/boom_s_10
+	bounds: 667, 302, 175, 167
+	offsets: 8, 0, 200, 200
+boom_s/boom_s_12
+	bounds: 434, 136, 167, 168
+	offsets: 15, 0, 200, 200
+	rotate: 90
+boom_s/boom_s_14
+	bounds: 844, 330, 142, 130
+	offsets: 21, 33, 200, 200
+	rotate: 90
+boom_s/boom_s_16
+	bounds: 399, 6, 140, 128
+	offsets: 23, 33, 200, 200
+glow_88
+	bounds: 2, 72, 232, 233
+	offsets: 15, 13, 256, 256
+lightning/lightning_03
+	bounds: 789, 669, 156, 320
+	offsets: 66, 40, 260, 360
+lightning/lightning_05
+	bounds: 2, 632, 156, 357
+	offsets: 66, 3, 260, 360
+lightning/lightning_07
+	bounds: 2, 307, 156, 323
+	offsets: 66, 0, 260, 360
+lightning/lightning_09
+	bounds: 160, 666, 156, 323
+	offsets: 66, 0, 260, 360
+lightning/lightning_11
+	bounds: 476, 666, 154, 323
+	offsets: 68, 0, 260, 360
+lightning/lightning_12
+	bounds: 160, 341, 156, 323
+	offsets: 66, 0, 260, 360
+lightning/lightning_13
+	bounds: 318, 666, 156, 323
+	offsets: 66, 0, 260, 360
+lightning/lightning_14
+	bounds: 318, 341, 156, 323
+	offsets: 66, 0, 260, 360
+lightning/lightning_15
+	bounds: 632, 667, 155, 322
+	offsets: 66, 0, 260, 360
+sparks/sparks_00
+	bounds: 604, 177, 126, 56
+	offsets: 23, 15, 160, 100
+	rotate: 90
+sparks/sparks_02
+	bounds: 2, 6, 137, 64
+	offsets: 17, 9, 160, 100
+sparks/sparks_04
+	bounds: 815, 74, 139, 73
+	offsets: 13, 5, 160, 100
+sparks/sparks_06
+	bounds: 613, 43, 147, 79
+	offsets: 9, 3, 160, 100
+sparks/sparks_08
+	bounds: 662, 124, 151, 85
+	offsets: 8, 0, 160, 100
+sparks/sparks_10
+	bounds: 901, 178, 150, 88
+	offsets: 10, 0, 160, 100
+	rotate: 90
+sparks/sparks_12
+	bounds: 662, 211, 151, 89
+	offsets: 9, 0, 160, 100
+sparks/sparks_14
+	bounds: 815, 149, 151, 84
+	offsets: 8, 3, 160, 100
+	rotate: 90
+sparks/sparks_16
+	bounds: 541, 18, 116, 70
+	offsets: 8, 17, 160, 100
+	rotate: 90
+sparks/sparks_18
+	bounds: 762, 9, 113, 48
+	offsets: 9, 24, 160, 100
+	rotate: 90

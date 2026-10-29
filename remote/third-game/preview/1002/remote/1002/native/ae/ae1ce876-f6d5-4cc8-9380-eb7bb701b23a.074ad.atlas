@@ -1,0 +1,15 @@
+buy_dialog.png
+	size: 1612, 1612
+	filter: Linear, Linear
+Pop_up_bg
+	bounds: 2, 573, 1310, 1034
+	offsets: 1, 1, 1312, 1036
+Pop_up_bg_shine_00
+	bounds: 2, 2, 752, 569
+	offsets: 75, 130, 900, 800
+ebg_zztgd2
+	bounds: 1314, 1543, 63, 64
+	offsets: 1, 1, 65, 66
+spark1
+	bounds: 756, 506, 57, 65
+	offsets: 10, 7, 76, 76

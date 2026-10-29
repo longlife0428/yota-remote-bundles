@@ -1,0 +1,199 @@
+symbol.png
+	size: 796, 796
+	filter: Linear, Linear
+	pma: true
+	scale: 0.78
+S01_bk
+	bounds: 642, 575, 106, 105
+	offsets: 1, 0, 107, 109
+W01_bk
+	bounds: 533, 573, 107, 107
+b1
+	bounds: 306, 568, 112, 112
+b2
+	bounds: 192, 568, 112, 112
+b3
+	bounds: 648, 682, 112, 112
+beamglow
+	bounds: 103, 6, 67, 66
+	offsets: 2, 2, 71, 70
+caishen_00000
+	bounds: 2, 73, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00002
+	bounds: 303, 74, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00004
+	bounds: 406, 78, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00006
+	bounds: 606, 80, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00008
+	bounds: 204, 170, 97, 99
+	offsets: 3, 4, 103, 103
+caishen_00010
+	bounds: 103, 172, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00012
+	bounds: 2, 172, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00014
+	bounds: 305, 173, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00016
+	bounds: 505, 177, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00018
+	bounds: 608, 179, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00020
+	bounds: 204, 271, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00022
+	bounds: 103, 271, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00024
+	bounds: 2, 271, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00026
+	bounds: 404, 272, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00028
+	bounds: 507, 276, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00030
+	bounds: 622, 278, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00032
+	bounds: 303, 370, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00034
+	bounds: 202, 370, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00036
+	bounds: 101, 370, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00038
+	bounds: 406, 371, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00040
+	bounds: 521, 375, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00042
+	bounds: 634, 377, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00044
+	bounds: 2, 418, 97, 99
+	offsets: 3, 4, 103, 103
+caishen_00046
+	bounds: 305, 469, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00048
+	bounds: 204, 469, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00050
+	bounds: 103, 469, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00052
+	bounds: 420, 470, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00054
+	bounds: 533, 474, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00056
+	bounds: 642, 476, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+caishen_00058
+	bounds: 2, 519, 97, 99
+	offsets: 3, 4, 103, 103
+	rotate: 90
+circle_gradient
+	bounds: 103, 74, 100, 94
+	offsets: 0, 6, 100, 100
+coin_lightb
+	bounds: 14, 618, 176, 176
+frame2
+	bounds: 479, 30, 105, 44
+fu
+	bounds: 205, 77, 93, 91
+	offsets: 57, 58, 206, 206
+fuzi_00000
+	bounds: 743, 520, 53, 50
+	offsets: 25, 28, 103, 103
+	rotate: 90
+h/h2
+	bounds: 305, 274, 91, 94
+	offsets: 11, 7, 112, 112
+h/h3
+	bounds: 507, 76, 92, 99
+	offsets: 10, 6, 112, 112
+h/h4
+	bounds: 709, 89, 77, 95
+	offsets: 20, 6, 112, 112
+h/h5
+	bounds: 601, 2, 76, 96
+	offsets: 18, 7, 112, 112
+	rotate: 90
+h/h_light1
+	bounds: 534, 682, 112, 112
+h/h_light2
+	bounds: 420, 682, 112, 112
+h/h_light3
+	bounds: 306, 682, 112, 112
+h/h_light4
+	bounds: 192, 682, 112, 112
+light
+	bounds: 723, 294, 71, 81
+light 2
+	bounds: 709, 186, 85, 90
+n/n1
+	bounds: 404, 9, 73, 67
+	offsets: 19, 20, 112, 112
+n/n2
+	bounds: 274, 5, 65, 67
+	offsets: 26, 20, 112, 112
+n/n3
+	bounds: 205, 7, 67, 68
+	offsets: 24, 19, 112, 112
+n/n4
+	bounds: 735, 407, 58, 67
+	offsets: 28, 19, 112, 112
+n/n5
+	bounds: 707, 20, 78, 67
+	offsets: 16, 19, 112, 112
+分色
+	bounds: 406, 178, 92, 92
+	offsets: 10, 10, 112, 112
+花紋金邊
+	bounds: 420, 569, 111, 111
+	offsets: 0, 1, 112, 112
+金幣側面
+	bounds: 2, 682, 10, 112

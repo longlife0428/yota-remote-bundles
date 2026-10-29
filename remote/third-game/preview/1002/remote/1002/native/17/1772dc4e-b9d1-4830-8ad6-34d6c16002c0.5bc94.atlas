@@ -1,0 +1,91 @@
+collect.png
+	size: 852, 852
+	filter: Linear, Linear
+pic/fireArrow_1
+	bounds: 250, 94, 85, 170
+	rotate: 90
+pic/fireArrow_2
+	bounds: 275, 7, 85, 170
+	rotate: 90
+pic/fireArrow_3
+	bounds: 258, 351, 85, 170
+	rotate: 90
+pic/fireArrow_4
+	bounds: 422, 108, 85, 170
+	rotate: 90
+pic/fireArrow_5
+	bounds: 447, 21, 85, 170
+	rotate: 90
+pic/fireArrow_6
+	bounds: 260, 608, 85, 170
+	rotate: 90
+pic/fireArrow_7
+	bounds: 432, 608, 85, 170
+	rotate: 90
+pic/fireArrow_8
+	bounds: 430, 364, 85, 170
+	rotate: 90
+pic/fireArrow_9
+	bounds: 602, 364, 85, 170
+	rotate: 90
+vfx/f1
+	bounds: 260, 695, 155, 127
+	rotate: 90
+vfx/f2
+	bounds: 389, 695, 155, 127
+	rotate: 90
+vfx/f3
+	bounds: 408, 451, 155, 127
+	rotate: 90
+vfx/f4
+	bounds: 537, 451, 155, 127
+	rotate: 90
+vfx/f5
+	bounds: 550, 207, 155, 127
+	rotate: 90
+vfx/f6
+	bounds: 678, 78, 155, 127
+vfx/f7
+	bounds: 679, 207, 155, 127
+	rotate: 90
+vfx/f8
+	bounds: 518, 695, 155, 127
+	rotate: 90
+vfx/fireStart_1
+	bounds: 2, 2, 89, 82
+vfx/fireStart_2
+	bounds: 93, 2, 89, 82
+vfx/fireStart_3
+	bounds: 184, 2, 89, 82
+vfx/fireStart_4
+	bounds: 594, 116, 89, 82
+	rotate: 90
+vfx/fireStart_5
+	bounds: 604, 611, 89, 82
+vfx/fireStart_6
+	bounds: 695, 631, 89, 82
+	rotate: 90
+vfx/fq5
+	bounds: 250, 181, 154, 148
+	rotate: 90
+vfx/fq6
+	bounds: 258, 438, 154, 148
+	rotate: 90
+vfx/fq8
+	bounds: 400, 195, 154, 148
+	rotate: 90
+vfx/hit_0
+	bounds: 647, 722, 128, 125
+	offsets: 0, 0, 128, 128
+	rotate: 90
+vfx/in_0
+	bounds: 2, 594, 256, 256
+vfx/in_1
+	bounds: 2, 337, 255, 254
+	offsets: 1, 2, 256, 256
+	rotate: 90
+vfx/mainLight
+	bounds: 666, 481, 128, 128
+vfx/oring_0
+	bounds: 2, 86, 246, 249
+	offsets: 3, 7, 256, 256

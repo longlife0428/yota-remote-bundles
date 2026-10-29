@@ -1,0 +1,108 @@
+win.png
+	size: 1621, 1524
+	filter: Linear, Linear
+	pma: true
+	scale: 0.9
+GIGANTIC WIN
+	bounds: 2, 28, 485, 231
+	offsets: 3, 2, 491, 236
+HUGE WIN
+	bounds: 1238, 1072, 322, 228
+	offsets: 3, 2, 328, 233
+baoshi
+	bounds: 655, 1353, 606, 169
+	offsets: 1, 0, 608, 169
+big win
+	bounds: 1192, 838, 259, 232
+	offsets: 3, 2, 265, 237
+bk
+	bounds: 2, 690, 608, 215
+	offsets: 0, 2, 608, 219
+blue_board
+	bounds: 489, 24, 235, 235
+	offsets: 4, 4, 243, 243
+blue_diban
+	bounds: 655, 1242, 581, 109
+	offsets: 2, 2, 585, 112
+blue_light
+	bounds: 1188, 154, 199, 193
+	offsets: 3, 5, 202, 198
+board
+	bounds: 655, 952, 535, 177
+cloud1
+	bounds: 1082, 797, 153, 78
+	offsets: 2, 2, 157, 80
+	rotate: 90
+cloud2
+	bounds: 1427, 435, 114, 78
+	offsets: 2, 2, 118, 80
+cloud3
+	bounds: 1507, 37, 115, 76
+	offsets: 2, 2, 119, 78
+	rotate: 90
+coin_lightb
+	bounds: 962, 205, 217, 112
+goldk
+	bounds: 2, 261, 557, 193
+green_board
+	bounds: 962, 2, 201, 204
+	rotate: 90
+green_diban
+	bounds: 2, 456, 581, 109
+	offsets: 2, 2, 585, 112
+green_light
+	bounds: 1389, 154, 199, 193
+	offsets: 3, 5, 202, 198
+guang
+	bounds: 1453, 923, 147, 145
+	offsets: 2, 2, 149, 149
+	rotate: 90
+gx
+	bounds: 1168, 25, 127, 184
+	offsets: 0, 5, 127, 189
+	rotate: 90
+light
+	bounds: 1354, 7, 151, 145
+	offsets: 1, 1, 152, 147
+man
+	bounds: 2, 907, 651, 615
+	offsets: 36, 30, 721, 680
+purple_board
+	bounds: 726, 83, 234, 234
+	offsets: 4, 5, 243, 243
+purple_diban
+	bounds: 655, 1131, 581, 109
+	offsets: 2, 2, 585, 112
+purple_light
+	bounds: 1188, 349, 237, 239
+	offsets: 0, 8, 244, 257
+purple_tuteng
+	bounds: 1427, 515, 125, 124
+	offsets: 3, 3, 131, 131
+red_board
+	bounds: 1188, 590, 237, 246
+	offsets: 3, 4, 244, 253
+red_diban
+	bounds: 2, 567, 594, 121
+	offsets: 3, 2, 599, 125
+red_goldring
+	bounds: 612, 319, 401, 419
+	rotate: 90
+red_light
+	bounds: 1453, 774, 146, 147
+	offsets: 2, 1, 148, 149
+red_tuteng
+	bounds: 1427, 641, 132, 131
+	offsets: 2, 2, 136, 136
+super win
+	bounds: 655, 722, 425, 228
+	offsets: 2, 2, 430, 233
+treasury full
+	bounds: 1263, 1469, 356, 53
+	offsets: 0, 1, 356, 55
+wenzi
+	bounds: 1033, 319, 401, 153
+	rotate: 90
+yuanbao
+	bounds: 1263, 1302, 354, 165
+	offsets: 0, 0, 355, 165

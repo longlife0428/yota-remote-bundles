@@ -1,0 +1,73 @@
+金幣噴發連續.png
+	size: 512, 256
+	filter: Linear, Linear
+	pma: true
+	scale: 0.9
+coin_0
+	bounds: 338, 74, 54, 55
+coin_1
+	bounds: 282, 74, 54, 55
+coin_10
+	bounds: 116, 2, 18, 55
+	offsets: 18, 0, 54, 55
+	rotate: 90
+coin_11
+	bounds: 2, 74, 12, 55
+	offsets: 21, 0, 54, 55
+coin_12
+	bounds: 59, 2, 18, 55
+	offsets: 18, 0, 54, 55
+	rotate: 90
+coin_13
+	bounds: 228, 2, 24, 55
+	offsets: 15, 0, 54, 55
+	rotate: 90
+coin_14
+	bounds: 2, 14, 32, 55
+	offsets: 11, 0, 54, 55
+	rotate: 90
+coin_15
+	bounds: 399, 34, 38, 55
+	offsets: 8, 0, 54, 55
+	rotate: 90
+coin_16
+	bounds: 228, 28, 44, 55
+	offsets: 5, 0, 54, 55
+	rotate: 90
+coin_17
+	bounds: 114, 22, 50, 55
+	offsets: 2, 0, 54, 55
+	rotate: 90
+coin_18
+	bounds: 394, 74, 53, 55
+	offsets: 1, 0, 54, 55
+coin_19
+	bounds: 226, 74, 54, 55
+coin_2
+	bounds: 170, 74, 54, 55
+coin_3
+	bounds: 114, 74, 54, 55
+coin_4
+	bounds: 449, 74, 50, 55
+	offsets: 2, 0, 54, 55
+coin_5
+	bounds: 171, 24, 48, 55
+	offsets: 3, 0, 54, 55
+	rotate: 90
+coin_6
+	bounds: 285, 29, 43, 55
+	offsets: 6, 0, 54, 55
+	rotate: 90
+coin_7
+	bounds: 342, 34, 38, 55
+	offsets: 8, 0, 54, 55
+	rotate: 90
+coin_8
+	bounds: 456, 17, 32, 55
+	offsets: 11, 0, 54, 55
+coin_9
+	bounds: 342, 6, 26, 55
+	offsets: 14, 0, 54, 55
+	rotate: 90
+z1
+	bounds: 16, 48, 96, 81

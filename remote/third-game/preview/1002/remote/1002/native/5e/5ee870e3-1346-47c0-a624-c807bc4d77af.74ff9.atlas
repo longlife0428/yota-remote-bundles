@@ -1,0 +1,199 @@
+symbol_scatter.png
+	size: 1228, 1228
+	filter: Linear, Linear
+Bg
+	bounds: 956, 878, 242, 152
+	offsets: 1, 1, 244, 154
+Charm_L
+	bounds: 586, 342, 117, 154
+	offsets: 1, 1, 119, 156
+Charm_R
+	bounds: 347, 12, 136, 162
+	offsets: 1, 1, 138, 164
+	rotate: 90
+Frame
+	bounds: 604, 664, 367, 210
+	offsets: 1, 1, 369, 212
+Glow_Star
+	bounds: 979, 81, 78, 78
+	offsets: 1, 1, 80, 80
+Sactter_text
+	bounds: 495, 342, 294, 89
+	offsets: 1, 1, 296, 91
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_00
+	bounds: 979, 161, 23, 31
+	offsets: 5, 19, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_01
+	bounds: 1201, 285, 25, 31
+	offsets: 4, 19, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_02
+	bounds: 941, 435, 28, 32
+	offsets: 4, 18, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_03
+	bounds: 1187, 78, 36, 35
+	offsets: 3, 15, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_04
+	bounds: 1118, 163, 41, 35
+	offsets: 3, 15, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_05
+	bounds: 1188, 601, 47, 37
+	offsets: 2, 13, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_06
+	bounds: 1166, 1033, 59, 39
+	offsets: 2, 11, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_07
+	bounds: 1159, 200, 70, 40
+	offsets: 1, 10, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_08
+	bounds: 1159, 272, 81, 40
+	offsets: 1, 10, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_09
+	bounds: 1171, 431, 92, 42
+	offsets: 2, 8, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_10
+	bounds: 1059, 54, 105, 43
+	offsets: 3, 7, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_11
+	bounds: 1126, 374, 115, 43
+	offsets: 4, 7, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_12
+	bounds: 1171, 747, 129, 43
+	offsets: 6, 7, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_13
+	bounds: 1166, 1094, 132, 44
+	offsets: 11, 6, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_14
+	bounds: 1142, 569, 123, 44
+	offsets: 22, 6, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_15
+	bounds: 1007, 161, 109, 43
+	offsets: 37, 7, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_16
+	bounds: 705, 351, 102, 43
+	offsets: 45, 7, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_17
+	bounds: 1104, 66, 93, 42
+	offsets: 54, 8, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_18
+	bounds: 1142, 525, 84, 42
+	offsets: 63, 8, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_19
+	bounds: 1171, 355, 74, 41
+	offsets: 73, 9, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_20
+	bounds: 1155, 158, 61, 40
+	offsets: 86, 10, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_21
+	bounds: 1148, 116, 56, 40
+	offsets: 91, 10, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_22
+	bounds: 1171, 694, 51, 39
+	offsets: 95, 11, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_23
+	bounds: 1188, 650, 42, 38
+	offsets: 104, 12, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_24
+	bounds: 1148, 77, 37, 37
+	offsets: 108, 13, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_25
+	bounds: 941, 396, 31, 37
+	offsets: 114, 13, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_26
+	bounds: 1201, 318, 25, 35
+	offsets: 119, 13, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_27
+	bounds: 1188, 575, 24, 34
+	offsets: 120, 13, 150, 50
+	rotate: 90
+Sactter_text_sweep/Sactter_text_sweep_28
+	bounds: 1201, 249, 22, 34
+	offsets: 121, 13, 150, 50
+Sactter_text_sweep/Sactter_text_sweep_29
+	bounds: 675, 2, 21, 33
+	offsets: 122, 13, 150, 50
+	rotate: 90
+guangxian_a
+	bounds: 2, 150, 491, 486
+jqtdgqg/jqtdigqg01
+	bounds: 675, 25, 150, 150
+jqtdgqg/jqtdigqg02
+	bounds: 855, 194, 150, 150
+jqtdgqg/jqtdigqg03
+	bounds: 827, 25, 150, 150
+jqtdgqg/jqtdigqg04
+	bounds: 1007, 206, 150, 150
+light_Di4e
+	bounds: 973, 694, 196, 182
+lizi
+	bounds: 941, 366, 28, 28
+	offsets: 1, 1, 30, 30
+s_Glow
+	bounds: 956, 1032, 208, 194
+	offsets: 1, 1, 210, 196
+s_Light
+	bounds: 604, 876, 350, 350
+	offsets: 1, 1, 352, 352
+ssg_14
+	bounds: 2, 638, 600, 588
+win_lizi/win_lizi_00
+	bounds: 1059, 4, 48, 42
+	offsets: 126, 113, 300, 257
+	rotate: 90
+win_lizi/win_lizi_01
+	bounds: 979, 2, 77, 78
+	offsets: 113, 94, 300, 257
+	rotate: 90
+win_lizi/win_lizi_02
+	bounds: 705, 396, 103, 100
+	offsets: 100, 82, 300, 257
+win_lizi/win_lizi_03
+	bounds: 810, 346, 129, 117
+	offsets: 91, 72, 300, 257
+win_lizi/win_lizi_04
+	bounds: 975, 358, 149, 131
+	offsets: 82, 63, 300, 257
+win_lizi/win_lizi_05
+	bounds: 181, 9, 164, 139
+	offsets: 76, 58, 300, 257
+win_lizi/win_lizi_06
+	bounds: 2, 2, 177, 146
+	offsets: 70, 53, 300, 257
+win_lizi/win_lizi_07
+	bounds: 495, 152, 188, 154
+	offsets: 65, 50, 300, 257
+	rotate: 90
+win_lizi/win_lizi_08
+	bounds: 814, 465, 197, 159
+	offsets: 61, 47, 300, 257
+	rotate: 90
+win_lizi/win_lizi_09
+	bounds: 651, 177, 202, 163
+	offsets: 60, 45, 300, 257
+win_lizi/win_lizi_10
+	bounds: 604, 498, 208, 164
+	offsets: 57, 43, 300, 257
+win_lizi/win_lizi_11
+	bounds: 975, 491, 201, 165
+	offsets: 67, 42, 300, 257
+	rotate: 90
+win_lizi/win_lizi_12
+	bounds: 511, 16, 162, 134
+	offsets: 65, 74, 300, 257
