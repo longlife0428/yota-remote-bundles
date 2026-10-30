@@ -1,0 +1,10 @@
+spin_icon.png
+size:675,391
+filter:Linear,Linear
+pma:true
+glow
+bounds:2,2,387,387
+offsets:5,5,397,397
+shine
+bounds:391,90,282,299
+offsets:18,10,318,319
