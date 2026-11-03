@@ -162,15 +162,19 @@ body.shown #game { opacity: 1; }
 // 網址參數 url 遊戲網址 gameId 遊戲代號 lang 語言 cover 遮罩秒數或 wait loading=1 只出彈窗
 // 大廳到殼頁 { source: 'host', type, payload }
 //   指令 show-system-menu show-auto-play show-seat-lobby show-exit show-confirm show-alert close-dialog show-loading hide-loading show-toast
-//   init 帶 strings safe settings tableId exitButton  safe 帶安全區
+//   init 帶 strings safe settings tableId exitButton canVibrate  safe 帶安全區
+//   canVibrate 大廳能不能震動 沒帶當作不能 有大廳時震動一律交給大廳做
 // 殼頁到大廳 { source: 'host-shell', type, payload } 網頁用 postMessage 原生用 scheme 網址回呼
 //   ready dialog-open dialog-close exit-confirm exit-cancel leave-keep seat-enter seat-reserve popup-open popup-close auto-play-result setting-change
 //   game-loaded game-ready game-error cover-hidden
+//   vibrate 帶 pattern 震動節奏 毫秒 震停交替 震動開關開著 大廳的 init 帶 canVibrate 時才發
 // 遊戲到殼頁 { source: 'game', type, payload }
 //   hi 要握手  ready 畫面已出現 殼頁收到就拿掉遮罩 payload.seat 為 entered 時進場選座等 entered 才開 沒帶就遮罩一拿掉就開
 //   entered 載入完成進到遊戲 殼頁開進場選座  error 帶 message  上面的指令也能由遊戲發
+//   vibrate 帶 pattern 要手機震動 數字或數字陣列 每段 0～1000ms 最多 10 段 不合格或開關關著就丟掉
 // 殼頁到遊戲 { source: 'host-shell', type, payload }
-//   hello 握手 帶 gameId lang settings  setting 音樂音效切換  dialog-result auto-play-result 彈窗結果
+//   hello 握手 帶 gameId lang settings  setting 音樂音效震動切換  dialog-result auto-play-result 彈窗結果
+//   settings 帶 music sound vibrate 震動開關存在殼頁自己的 localStorage 遊戲不必理會 vibrate
 // 遊戲端實作 1001 在 GameRoot.bindShell 第三方遊戲用 host-sdk.js
 // 大廳端的型別在 entry 的 ThirdGameConst.ts 要跟這裡同步
 (function () {
@@ -187,21 +191,21 @@ body.shown #game { opacity: 1; }
     // 大廳 init 的 strings 可以整批覆蓋 第一行英文標題固定英文 跟 Cocos 版 Title_en 一樣不跟語系走 不在這裡
     var TEXT = {
         'zh-TW': { menu: '選單', title: '離開遊戲', message: '確定要離開目前的遊戲嗎？', confirm: '確定離開', cancel: '取消', ok: '確定', loading: '處理中…', preload: '載入中…', exitFailed: '退出失敗 請稍後再試',
-            menuTitle: '遊戲選單', menuMusic: '音樂', menuMusicDesc: '背景音樂偏好', menuSound: '音效', menuSoundDesc: '按鈕與演出音效偏好', menuGameInfo: 'GAME INFO', menuGameInfoDesc: '玩法、賠付與操作說明', infoTitle: '遊戲說明', infoClose: '關閉', menuGameHistory: '遊戲紀錄', menuGameHistoryDesc: '遊戲紀錄尚未串接', menuLeave: '離開遊戲', menuLeaveDesc: '離開、保留或重新選座',
+            menuTitle: '遊戲選單', menuMusic: '音樂', menuMusicDesc: '背景音樂偏好', menuSound: '音效', menuSoundDesc: '按鈕與演出音效偏好', menuVibrate: '震動', menuVibrateDesc: '大獎等演出時手機震動',menuGameInfo: 'GAME INFO', menuGameInfoDesc: '玩法、賠付與操作說明', infoTitle: '遊戲說明', infoClose: '關閉', menuGameHistory: '遊戲紀錄', menuGameHistoryDesc: '遊戲紀錄尚未串接', menuLeave: '離開遊戲', menuLeaveDesc: '離開、保留或重新選座',
             leaveTitle: '離開目前遊戲？', leaveLeave: '離開', leaveLeaveDesc: '釋放目前座位並離開', leaveKeep: '保留', leaveKeepDesc: '保留目前座位後離開', leaveReselect: '重新選座', leaveReselectDesc: '前往選座大廳並查看並選擇其他座位',
             autoTitle: '選擇自動旋轉次數', autoUnit: '局', autoHint: '選擇後立刻開始，再次點擊 AUTO 可停止後續局數',
             seatTitle: '選擇座位', seatBack: '遊戲選單', seatFilterAll: '顯示全部', seatFilterEmpty: '顯示空位', seatPrompt: '請選擇一台機台', seatPromptHint: '所有機台皆可查看，只有「空位」可以保留或入座', seatActionHint: '請先選擇左側機台，再決定保留入座', seatEnter: '入座', seatReserve: '保留', seatPage: '第{page}/{total}頁 共{count}台', seatTableId: '機台{id}',
             tableEmpty: '空位', tableFull: '使用中', tableReserved: '保留中', tableCurrent: '目前座位',
             statFreeGame: 'FREE GAME', statRtp: 'RTP', statHitRate: 'HITRATE', statTotalBet: 'TOTAL BET', statSpin: '轉', fgNotStarted: '未開', fgPrevious1: '前一', fgPrevious2: '前二', statToday: '今日', statThreeDay: '三日', statSevenDay: '七日' },
         'zh-CN': { menu: '选单', title: '离开游戏', message: '确定要离开当前的游戏吗？', confirm: '确定离开', cancel: '取消', ok: '确定', loading: '处理中…', preload: '加载中…', exitFailed: '退出失败 请稍后再试',
-            menuTitle: '游戏选单', menuMusic: '音乐', menuMusicDesc: '背景音乐偏好', menuSound: '音效', menuSoundDesc: '按钮与演出音效偏好', menuGameInfo: 'GAME INFO', menuGameInfoDesc: '玩法、赔付与操作说明', infoTitle: '游戏说明', infoClose: '关闭', menuGameHistory: '游戏记录', menuGameHistoryDesc: '游戏记录尚未串接', menuLeave: '离开游戏', menuLeaveDesc: '离开、保留或重新选座',
+            menuTitle: '游戏选单', menuMusic: '音乐', menuMusicDesc: '背景音乐偏好', menuSound: '音效', menuSoundDesc: '按钮与演出音效偏好', menuVibrate: '震动', menuVibrateDesc: '大奖等演出时手机震动',menuGameInfo: 'GAME INFO', menuGameInfoDesc: '玩法、赔付与操作说明', infoTitle: '游戏说明', infoClose: '关闭', menuGameHistory: '游戏记录', menuGameHistoryDesc: '游戏记录尚未串接', menuLeave: '离开游戏', menuLeaveDesc: '离开、保留或重新选座',
             leaveTitle: '离开当前游戏？', leaveLeave: '离开', leaveLeaveDesc: '释放目前座位并离开', leaveKeep: '保留', leaveKeepDesc: '保留目前座位后离开', leaveReselect: '重新选座', leaveReselectDesc: '前往选座大厅并查看并选择其他座位',
             autoTitle: '选择自动旋转次数', autoUnit: '局', autoHint: '选择后立刻开始，再次点击 AUTO 可停止后续局数',
             seatTitle: '选择座位', seatBack: '游戏菜单', seatFilterAll: '显示全部', seatFilterEmpty: '显示空位', seatPrompt: '请选择一台机台', seatPromptHint: '所有机台皆可查看，只有「空位」可以保留或入座', seatActionHint: '请先选择左侧机台，再决定保留入座', seatEnter: '入座', seatReserve: '保留', seatPage: '第{page}/{total}页 共{count}台', seatTableId: '机台{id}',
             tableEmpty: '空位', tableFull: '使用中', tableReserved: '保留中', tableCurrent: '目前座位',
             statFreeGame: 'FREE GAME', statRtp: 'RTP', statHitRate: 'HITRATE', statTotalBet: 'TOTAL BET', statSpin: '转', fgNotStarted: '未开', fgPrevious1: '前一', fgPrevious2: '前二', statToday: '今日', statThreeDay: '三日', statSevenDay: '七日' },
         'en': { menu: 'Menu', title: 'Leave game', message: 'Leave the current game?', confirm: 'Leave', cancel: 'Cancel', ok: 'OK', loading: 'Please wait…', preload: 'Loading…', exitFailed: 'Exit failed. Please try again.',
-            menuTitle: 'SYSTEM MENU', menuMusic: 'Music', menuMusicDesc: 'Background music preference', menuSound: 'SFX', menuSoundDesc: 'Button and animation sound preference', menuGameInfo: 'GAME INFO', menuGameInfoDesc: 'Rules, payouts and controls', infoTitle: 'Game Info', infoClose: 'Close', menuGameHistory: 'History', menuGameHistoryDesc: 'Game history is not connected yet', menuLeave: 'Leave Game', menuLeaveDesc: 'Leave, keep your seat, or reselect',
+            menuTitle: 'SYSTEM MENU', menuMusic: 'Music', menuMusicDesc: 'Background music preference', menuSound: 'SFX', menuSoundDesc: 'Button and animation sound preference', menuVibrate: 'Vibration', menuVibrateDesc: 'Vibrate on big wins',menuGameInfo: 'GAME INFO', menuGameInfoDesc: 'Rules, payouts and controls', infoTitle: 'Game Info', infoClose: 'Close', menuGameHistory: 'History', menuGameHistoryDesc: 'Game history is not connected yet', menuLeave: 'Leave Game', menuLeaveDesc: 'Leave, keep your seat, or reselect',
             leaveTitle: 'Leave current game?', leaveLeave: 'Leave', leaveLeaveDesc: 'Release your current seat and leave', leaveKeep: 'Keep', leaveKeepDesc: 'Keep your current seat and leave', leaveReselect: 'Reselect Seat', leaveReselectDesc: 'Go to the seat lobby to view and choose another seat',
             autoTitle: 'Select Auto-Spin Count', autoUnit: 'Rounds', autoHint: 'Starts immediately after selection; tap AUTO again to stop remaining rounds',
             seatTitle: 'Choose Seat', seatBack: 'Game Menu', seatFilterAll: 'Show All', seatFilterEmpty: 'Show Empty', seatPrompt: 'Please select a table', seatPromptHint: 'All tables are visible; only Empty seats can be reserved or entered', seatActionHint: 'Please select a table on the left before reserving or entering', seatEnter: 'Enter', seatReserve: 'Reserve', seatPage: 'Page {page}/{total} · {count} tables', seatTableId: 'Table {id}',
@@ -210,7 +214,11 @@ body.shown #game { opacity: 1; }
     };
     var text = Object.assign({}, TEXT[lang] || TEXT['zh-TW']);
     // 音樂音效開關 大廳 init 帶 settings 進來 沒帶就當作開
-    var settings = { music: true, sound: true };
+    // 震動開關存在殼頁自己的 localStorage 直接開殼頁時沒有大廳可以記 預設開
+    var VIBRATE_STORAGE_KEY = 'hostShell.vibrate';
+    var settings = { music: true, sound: true, vibrate: readStorage(VIBRATE_STORAGE_KEY) !== '0' };
+    // 大廳 收到 init 就算有 canVibrate 是大廳能不能震動 舊版大廳不帶 當作不能
+    var host = { present: false, canVibrate: false };
     // 玩家目前所在的桌號 大廳 init 帶 tableId 進來 沒帶就當作第 1 桌 跟 Cocos 的 getCurrentSeatTableId() 一樣
     var currentSeatId = '1';
     // 有遊戲說明頁的遊戲與語言 頁面放在 game-info/遊戲代號/語言/index.html 新增頁面就在這裡加一行
@@ -279,6 +287,41 @@ body.shown #game { opacity: 1; }
 
     function applyText() {
         menuBtn.setAttribute('aria-label', text.menu);
+    }
+
+    // 封鎖網站資料或無痕模式時 localStorage 會丟例外 讀不到就當沒存過 寫不進去就只在這次有效
+    function readStorage(key) {
+        try { return localStorage.getItem(key); } catch (error) { return null; }
+    }
+    function writeStorage(key, value) {
+        try { localStorage.setItem(key, value); } catch (error) { /* 只在這次有效 */ }
+    }
+
+    // ───── 震動 ─────
+    // 遊戲在殼頁的 iframe 裡 自己震會被瀏覽器擋 所以由殼頁交給最外層做
+    // 有大廳 交給大廳 正式是 App 用原生震動 網頁版大廳只用於測試 DEMO 由大廳的頁面震 殼頁在它的跨網域 iframe 裡自己震會被擋
+    // 沒有大廳 只有直接開殼頁預覽時 殼頁自己就是最外層 直接呼叫 navigator.vibrate iPhone 的瀏覽器沒有這個介面
+    // 第三方網頁進遊戲沒有殼頁 遊戲的 vibrate 直接送到對方頁面 不經過這裡
+    function canVibrate() {
+        if (host.present) return host.canVibrate;
+        return window.top === window && typeof navigator.vibrate === 'function';
+    }
+
+    // 震動節奏 數字或數字陣列 每段 0～1000ms 最多 10 段 不合格回 null 整則丟掉
+    function toVibratePattern(value) {
+        var list = Array.isArray(value) ? value : [value];
+        if (list.length === 0 || list.length > 10) return null;
+        for (var i = 0; i < list.length; i++) {
+            if (typeof list[i] !== 'number' || !(list[i] >= 0 && list[i] <= 1000)) return null;
+        }
+        return list.slice();
+    }
+
+    function vibrate(value) {
+        var pattern = toVibratePattern(value);
+        if (!pattern || !settings.vibrate || !canVibrate()) return;
+        if (host.present) emit('vibrate', { pattern: pattern });
+        else navigator.vibrate(pattern);
     }
 
     // 數字照 Cocos SettingStore 的音量 大於 0 算開
@@ -503,10 +546,12 @@ body.shown #game { opacity: 1; }
     // ───── SystemMenu 遊戲選單 ─────
 
     // 音樂音效 大廳寫回自己的設定 遊戲要聽的話用 host-sdk 的 onHost 接 setting
+    // 震動 殼頁自己存 一樣隨 setting-change 與 setting 帶出去 大廳與遊戲不必理會
     function toggleSetting(key, row) {
         settings[key] = !settings[key];
         row.classList.toggle('on', settings[key]);
-        var payload = { music: settings.music, sound: settings.sound };
+        if (key === 'vibrate') writeStorage(VIBRATE_STORAGE_KEY, settings.vibrate ? '1' : '0');
+        var payload = { music: settings.music, sound: settings.sound, vibrate: settings.vibrate };
         emit('setting-change', payload);
         postToGame('setting', payload);
     }
@@ -521,10 +566,15 @@ body.shown #game { opacity: 1; }
         // 音樂音效兩列整列都能點 Cocos 版只有右邊小開關能點 縮小後太難按
         list.appendChild(optionRow({ icon: 'System_menu_options_music_label.png', name: text.menuMusic, desc: text.menuMusicDesc, toggle: settings.music, onClick: function (row) { toggleSetting('music', row); } }));
         list.appendChild(optionRow({ icon: 'System_menu_options_fx_label.png', name: text.menuSound, desc: text.menuSoundDesc, toggle: settings.sound, onClick: function (row) { toggleSetting('sound', row); } }));
+        // 震動只在能震的時候出現 iPhone 與舊版大廳看不到
+        // 圖示還沒有美術圖 先借音效的 補了 System_menu_options_vibrate_label.png 再換 也要加進 POPUP_ASSETS.menu
+        var vibrateRow = canVibrate();
+        if (vibrateRow) list.appendChild(optionRow({ icon: 'System_menu_options_fx_label.png', name: text.menuVibrate, desc: text.menuVibrateDesc, toggle: settings.vibrate, onClick: function (row) { toggleSetting('vibrate', row); } }));
         list.appendChild(optionRow({ icon: 'System_menu_options_info_label.png', name: text.menuGameInfo, desc: text.menuGameInfoDesc, disabled: !gameInfoUrl(), onClick: showGameInfo }));
         // prefab 裡遊戲紀錄用的就是 GAME INFO 的圖示 照原樣
         list.appendChild(optionRow({ icon: 'System_menu_options_info_label.png', name: text.menuGameHistory, desc: text.menuGameHistoryDesc, disabled: true }));
-        list.appendChild(optionRow({ icon: 'System_menu_options_exit_label.png', iconWidth: 131, wide: true, name: text.menuLeave, desc: text.menuLeaveDesc, onClick: showLeaveConfirm }));
+        // 彈窗只放得下三排 多了震動列時離開遊戲改成半寬 跟遊戲紀錄排在同一排
+        list.appendChild(optionRow({ icon: 'System_menu_options_exit_label.png', iconWidth: 131, wide: !vibrateRow, name: text.menuLeave, desc: text.menuLeaveDesc, onClick: showLeaveConfirm }));
         frame.appendChild(list);
     }
 
@@ -915,7 +965,7 @@ body.shown #game { opacity: 1; }
 
     // 握手 告訴遊戲殼頁在 以及它的代號與語言
     function sendHello() {
-        gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'hello', payload: { gameId: gameId, lang: lang, settings: { music: settings.music, sound: settings.sound } } }, '*');
+        gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'hello', payload: { gameId: gameId, lang: lang, settings: { music: settings.music, sound: settings.sound, vibrate: settings.vibrate } } }, '*');
     }
 
     // 大廳與遊戲都能呼叫的指令 同一套名稱同一套參數
@@ -1009,6 +1059,9 @@ body.shown #game { opacity: 1; }
         }
         switch (message.type) {
             case 'init':
+                // 選座回寫的 init 只帶 tableId 不能把 canVibrate 蓋掉
+                host.present = true;
+                if (payload.canVibrate != null) host.canVibrate = !!payload.canVibrate;
                 if (payload.strings) Object.assign(text, payload.strings);
                 if (payload.safe) applySafe(payload.safe);
                 if (payload.settings) {
@@ -1053,6 +1106,9 @@ body.shown #game { opacity: 1; }
                 break;
             case 'error':
                 emit('game-error', payload);
+                break;
+            case 'vibrate':
+                vibrate(payload.pattern);
                 break;
         }
     }

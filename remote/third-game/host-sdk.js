@@ -28,6 +28,9 @@
         // 載入進度 0 到 100
         loading: function (percent) { send('loading', { percent: percent }); },
         error: function (message) { send('error', { message: message }); },
+        // 手機震動 pattern 是毫秒 數字或震停交替的陣列 每段 0～1000 最多 10 段
+        // 玩家關掉震動或裝置不能震時殼頁直接丟掉 遊戲不必自己判斷
+        vibrate: function (pattern) { send('vibrate', { pattern: pattern }); },
         // 以下跟大廳呼叫殼頁的指令同一套
         // 打開殼頁的系統選單 音樂音效切換會用 onHost 收到 setting { music, sound }
         showSystemMenu: function () { send('show-system-menu'); },
