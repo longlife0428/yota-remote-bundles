@@ -1,0 +1,18 @@
+symbol_l.png
+	size: 300, 300
+	filter: Linear, Linear
+symbol_l1
+	bounds: 2, 72, 112, 112
+	offsets: 1, 1, 114, 114
+symbol_l2
+	bounds: 116, 74, 98, 110
+	offsets: 1, 1, 100, 112
+symbol_l3
+	bounds: 126, 186, 108, 112
+	offsets: 1, 1, 110, 114
+symbol_l4
+	bounds: 216, 74, 82, 110
+	offsets: 1, 1, 84, 112
+symbol_l5
+	bounds: 2, 186, 122, 112
+	offsets: 1, 1, 124, 114

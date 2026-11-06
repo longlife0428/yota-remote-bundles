@@ -1,0 +1,5 @@
+win_num.png
+	size: 16, 16
+	filter: Linear, Linear
+null
+	bounds: 2, 2, 1, 1

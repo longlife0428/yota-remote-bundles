@@ -1,0 +1,442 @@
+cha_001.png
+	size: 1748, 1748
+	filter: Linear, Linear
+02_fx/09_fx/smok_0000
+	bounds: 1513, 1186, 110, 111
+	offsets: 9, 7, 124, 124
+	rotate: 90
+02_fx/09_fx/smok_0001
+	bounds: 1390, 1105, 122, 121
+	offsets: 2, 2, 124, 124
+	rotate: 90
+02_fx/09_fx/smok_0002
+	bounds: 1622, 591, 124, 124
+02_fx/09_fx/smok_0003
+	bounds: 1387, 643, 124, 124
+02_fx/09_fx/smok_0004
+	bounds: 1366, 410, 124, 124
+02_fx/09_fx/smok_0005
+	bounds: 1624, 1009, 124, 122
+	offsets: 0, 1, 124, 124
+	rotate: 90
+02_fx/09_fx/smok_0006
+	bounds: 1388, 981, 123, 122
+	offsets: 1, 1, 124, 124
+02_fx/09_fx/smok_0007
+	bounds: 1624, 884, 123, 122
+	offsets: 1, 1, 124, 124
+	rotate: 90
+02_fx/09_fx/smok_0008
+	bounds: 839, 1057, 121, 120
+	offsets: 3, 2, 124, 124
+02_fx/09_fx/smok_0009
+	bounds: 623, 1057, 119, 117
+	offsets: 4, 3, 124, 124
+02_fx/09_fx/smok_0010
+	bounds: 705, 3, 115, 115
+	offsets: 6, 4, 124, 124
+02_fx/09_fx/smok_0011
+	bounds: 1513, 956, 107, 109
+	offsets: 11, 7, 124, 124
+	rotate: 90
+02_fx/09_fx/smok_0012
+	bounds: 1200, 124, 101, 105
+	offsets: 13, 8, 124, 124
+02_fx/09_fx/smok_0013
+	bounds: 985, 626, 82, 93
+	offsets: 18, 12, 124, 124
+	rotate: 90
+02_fx/09_fx/smok_0014
+	bounds: 874, 1439, 51, 69
+	offsets: 29, 25, 124, 124
+	rotate: 90
+02_fx/09_fx/smok_0015
+	bounds: 1249, 1201, 40, 43
+	offsets: 28, 22, 124, 124
+02_fx/D2/D2_00
+	bounds: 1079, 124, 97, 119
+	offsets: 2, 0, 120, 120
+	rotate: 90
+02_fx/D2/D2_01
+	bounds: 1278, 663, 107, 120
+	offsets: 2, 0, 120, 120
+02_fx/D2/D2_02
+	bounds: 744, 1057, 93, 117
+	offsets: 4, 1, 120, 120
+02_fx/D2/D2_03
+	bounds: 586, 3, 115, 117
+	offsets: 0, 1, 120, 120
+	rotate: 90
+02_fx/D2/D2_04
+	bounds: 1631, 1633, 114, 113
+	offsets: 2, 3, 120, 120
+02_fx/D2/D2_05
+	bounds: 1513, 1420, 120, 112
+	offsets: 0, 4, 120, 120
+	rotate: 90
+02_fx/D2/D2_06
+	bounds: 1631, 1520, 114, 111
+	offsets: 0, 4, 120, 120
+02_fx/D2/D2_07
+	bounds: 1513, 1065, 119, 109
+	offsets: 1, 4, 120, 120
+	rotate: 90
+02_fx/D2/D2_08
+	bounds: 948, 2, 118, 120
+	offsets: 2, 0, 120, 120
+	rotate: 90
+02_fx/D2/D2_09
+	bounds: 1070, 2, 118, 119
+	offsets: 2, 1, 120, 120
+02_fx/D2/D2_10
+	bounds: 1190, 2, 118, 120
+	offsets: 2, 0, 120, 120
+02_fx/D2/D2_11
+	bounds: 1391, 1350, 120, 120
+02_fx/D2/D2_12
+	bounds: 1513, 1298, 111, 120
+	offsets: 1, 0, 120, 120
+02_fx/D2/D2_13
+	bounds: 1391, 1229, 119, 120
+	offsets: 1, 0, 120, 120
+	rotate: 90
+02_fx/D2/D2_14
+	bounds: 1626, 1256, 119, 120
+	offsets: 1, 0, 120, 120
+	rotate: 90
+02_fx/D2/D2_15
+	bounds: 1626, 1135, 119, 120
+	offsets: 1, 0, 120, 120
+	rotate: 90
+02_fx/D2/D2_16
+	bounds: 675, 623, 90, 89
+	offsets: 15, 16, 120, 120
+	rotate: 90
+02_fx/D2/D2_17
+	bounds: 766, 624, 89, 89
+	offsets: 16, 16, 120, 120
+02_fx/D2/D2_18
+	bounds: 898, 625, 88, 85
+	offsets: 16, 18, 120, 120
+	rotate: 90
+02_fx/D2/D2_19
+	bounds: 1196, 231, 83, 83
+	offsets: 18, 19, 120, 120
+02_fx/ball_fx/ball_fx_00
+	bounds: 1638, 32, 100, 119
+	offsets: 24, 5, 150, 150
+02_fx/ball_fx/ball_fx_02
+	bounds: 1638, 153, 101, 118
+	offsets: 23, 5, 150, 150
+02_fx/ball_fx/ball_fx_04
+	bounds: 1432, 52, 101, 119
+	offsets: 23, 4, 150, 150
+02_fx/ball_fx/ball_fx_06
+	bounds: 1310, 203, 101, 121
+	offsets: 23, 4, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_08
+	bounds: 1447, 276, 102, 121
+	offsets: 22, 4, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_10
+	bounds: 1323, 306, 102, 122
+	offsets: 22, 4, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_12
+	bounds: 1199, 316, 103, 122
+	offsets: 21, 4, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_14
+	bounds: 1075, 328, 104, 122
+	offsets: 21, 4, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_16
+	bounds: 1388, 875, 104, 123
+	offsets: 21, 3, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_18
+	bounds: 1388, 769, 104, 123
+	offsets: 21, 3, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_20
+	bounds: 1492, 380, 105, 124
+	offsets: 21, 2, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_22
+	bounds: 1379, 536, 105, 125
+	offsets: 21, 2, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_24
+	bounds: 948, 410, 105, 125
+	offsets: 21, 2, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_26
+	bounds: 1279, 785, 107, 125
+	offsets: 20, 2, 150, 150
+02_fx/ball_fx/ball_fx_28
+	bounds: 1513, 700, 107, 125
+	offsets: 20, 2, 150, 150
+02_fx/ball_fx/ball_fx_30
+	bounds: 1513, 827, 107, 127
+	offsets: 20, 1, 150, 150
+02_fx/ball_fx/ball_fx_32
+	bounds: 962, 1057, 107, 126
+	offsets: 20, 2, 150, 150
+02_fx/ball_fx/ball_fx_34
+	bounds: 1280, 912, 106, 125
+	offsets: 20, 2, 150, 150
+02_fx/ball_fx/ball_fx_36
+	bounds: 1513, 573, 106, 125
+	offsets: 20, 2, 150, 150
+02_fx/ball_fx/ball_fx_38
+	bounds: 1621, 483, 106, 125
+	offsets: 20, 2, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_40
+	bounds: 948, 517, 106, 125
+	offsets: 20, 2, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_42
+	bounds: 276, 2, 104, 125
+	offsets: 21, 2, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_44
+	bounds: 403, 2, 104, 124
+	offsets: 21, 3, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_46
+	bounds: 1618, 377, 104, 124
+	offsets: 21, 3, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_48
+	bounds: 948, 304, 104, 122
+	offsets: 21, 4, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_50
+	bounds: 1072, 223, 103, 122
+	offsets: 22, 4, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_52
+	bounds: 948, 199, 103, 122
+	offsets: 22, 4, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_54
+	bounds: 1570, 273, 102, 120
+	offsets: 22, 5, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_56
+	bounds: 1433, 173, 101, 120
+	offsets: 23, 5, 150, 150
+	rotate: 90
+02_fx/ball_fx/ball_fx_58
+	bounds: 1310, 100, 101, 120
+	offsets: 23, 5, 150, 150
+	rotate: 90
+02_fx/dis/dis_00
+	bounds: 245, 622, 1, 1
+02_fx/dis/dis_02
+	bounds: 1318, 1039, 68, 142
+	offsets: 37, 29, 150, 200
+02_fx/dis/dis_04
+	bounds: 2, 3, 63, 141
+	offsets: 41, 32, 150, 200
+	rotate: 90
+02_fx/dis/dis_06
+	bounds: 1080, 602, 82, 148
+	offsets: 33, 24, 150, 200
+	rotate: 90
+02_fx/dis/dis_08
+	bounds: 1075, 516, 84, 145
+	offsets: 33, 27, 150, 200
+	rotate: 90
+02_fx/dis/dis_10
+	bounds: 1217, 421, 81, 139
+	offsets: 36, 31, 150, 200
+	rotate: 90
+02_fx/dis/dis_12
+	bounds: 1222, 504, 74, 142
+	offsets: 40, 32, 150, 200
+	rotate: 90
+02_fx/dis/dis_14
+	bounds: 1080, 686, 81, 151
+	offsets: 32, 31, 150, 200
+	rotate: 90
+02_fx/dis/dis_16
+	bounds: 841, 715, 79, 148
+	offsets: 30, 30, 150, 200
+	rotate: 90
+02_fx/dis/dis_18
+	bounds: 1230, 580, 81, 147
+	offsets: 29, 32, 150, 200
+	rotate: 90
+02_fx/dis/dis_20
+	bounds: 1075, 434, 80, 140
+	offsets: 30, 33, 150, 200
+	rotate: 90
+02_fx/dis/dis_22
+	bounds: 704, 715, 78, 135
+	offsets: 31, 35, 150, 200
+	rotate: 90
+02_fx/dis/dis_24
+	bounds: 145, 3, 63, 129
+	offsets: 44, 38, 150, 200
+	rotate: 90
+02_fx/dis/dis_26
+	bounds: 529, 2, 55, 116
+	offsets: 45, 47, 150, 200
+02_fx/dis/dis_28
+	bounds: 972, 1444, 46, 129
+	offsets: 47, 54, 150, 200
+	rotate: 90
+02_fx/dis/dis_30
+	bounds: 1199, 1456, 43, 127
+	offsets: 52, 54, 150, 200
+	rotate: 90
+02_fx/dis/dis_32
+	bounds: 1328, 1472, 39, 120
+	offsets: 55, 58, 150, 200
+	rotate: 90
+02_fx/dis/dis_34
+	bounds: 857, 624, 39, 89
+	offsets: 54, 60, 150, 200
+02_fx/dis/dis_36
+	bounds: 1242, 769, 34, 87
+	offsets: 54, 60, 150, 200
+02_fx/dis/dis_38
+	bounds: 1168, 1454, 29, 45
+	offsets: 59, 74, 150, 200
+02_fx/dis/dis_40
+	bounds: 1242, 858, 35, 71
+	offsets: 53, 76, 150, 200
+02_fx/dis/dis_42
+	bounds: 1411, 1514, 12, 100
+	offsets: 59, 79, 150, 200
+	rotate: 90
+02_fx/dis/dis_44
+	bounds: 1312, 1513, 13, 97
+	offsets: 59, 79, 150, 200
+	rotate: 90
+02_fx/flare3
+	bounds: 1012, 1197, 245, 235
+	offsets: 11, 12, 256, 256
+	rotate: 90
+02_fx/glow
+	bounds: 1080, 769, 160, 160
+	offsets: 20, 20, 200, 200
+02_fx/magic_shine2_00
+	bounds: 466, 120, 500, 473
+	offsets: 0, 27, 500, 500
+	rotate: 90
+02_fx/wild_in/wild_in_05
+	bounds: 1017, 123, 74, 60
+	offsets: 32, 29, 140, 260
+	rotate: 90
+02_fx/wild_in/wild_in_07
+	bounds: 991, 710, 84, 87
+	offsets: 25, 4, 140, 260
+	rotate: 90
+02_fx/wild_in/wild_in_09
+	bounds: 588, 622, 85, 91
+	offsets: 29, 0, 140, 260
+02_fx/wild_in/wild_in_11
+	bounds: 499, 622, 91, 87
+	offsets: 29, 0, 140, 260
+	rotate: 90
+02_fx/wild_in/wild_in_13
+	bounds: 1535, 52, 101, 119
+	offsets: 27, 0, 140, 260
+02_fx/wild_in/wild_in_15
+	bounds: 902, 1185, 108, 252
+	offsets: 26, 0, 140, 260
+02_fx/wild_in/wild_in_17
+	bounds: 1014, 1500, 119, 246
+	offsets: 20, 0, 140, 260
+02_fx/wild_in/wild_in_19
+	bounds: 1071, 1063, 132, 245
+	offsets: 6, 0, 140, 260
+	rotate: 90
+02_fx/wild_in/wild_in_21
+	bounds: 874, 1492, 138, 254
+	offsets: 0, 0, 140, 260
+02_fx/wild_in/wild_in_23
+	bounds: 704, 795, 129, 260
+	offsets: 4, 0, 140, 260
+02_fx/wild_in/wild_in_25
+	bounds: 623, 1176, 136, 260
+	offsets: 4, 0, 140, 260
+02_fx/wild_in/wild_in_27
+	bounds: 761, 1179, 139, 257
+	offsets: 1, 0, 140, 260
+02_fx/wild_in/wild_in_29
+	bounds: 1249, 1246, 140, 208
+	offsets: 0, 0, 140, 260
+02_fx/wild_in/wild_in_30
+	bounds: 1489, 1542, 140, 204
+	offsets: 0, 0, 140, 260
+02_fx/wild_in/wild_in_31
+	bounds: 1080, 931, 130, 198
+	offsets: 2, 0, 140, 260
+	rotate: 90
+02_fx/wild_in/wild_in_33
+	bounds: 1622, 717, 124, 165
+	offsets: 9, 0, 140, 260
+02_fx/wild_in/wild_in_35
+	bounds: 1627, 1377, 119, 141
+	offsets: 11, 0, 140, 260
+02_fx/wild_in/wild_in_37
+	bounds: 822, 4, 124, 114
+	offsets: 5, 0, 140, 260
+02_fx/wild_in/wild_in_39
+	bounds: 403, 622, 91, 94
+	offsets: 29, 0, 140, 260
+	rotate: 90
+arm_l
+	bounds: 623, 1438, 308, 249
+	rotate: 90
+arm_r
+	bounds: 1135, 1501, 175, 245
+arm_r2
+	bounds: 245, 625, 156, 430
+body
+	bounds: 245, 1057, 376, 689
+cloth_b
+	bounds: 1103, 1445, 53, 31
+	rotate: 90
+eye_l
+	bounds: 246, 77, 19, 29
+	offsets: 1, 1, 21, 31
+eye_lip_rd
+	bounds: 1136, 1444, 55, 30
+	rotate: 90
+eye_lip_rt
+	bounds: 945, 1442, 48, 25
+	rotate: 90
+eye_r
+	bounds: 1291, 1203, 41, 34
+	offsets: 1, 1, 43, 36
+	rotate: 90
+hand_l
+	bounds: 1506, 487, 84, 106
+	offsets: 1, 1, 86, 108
+	rotate: 90
+hand_r2
+	bounds: 941, 122, 74, 75
+hat
+	bounds: 1312, 1528, 175, 218
+head
+	bounds: 835, 796, 259, 243
+	rotate: 90
+leg_l
+	bounds: 246, 108, 218, 512
+leg_r
+	bounds: 2, 68, 242, 544
+mouth
+	bounds: 1327, 1183, 61, 61
+obl
+	bounds: 2, 614, 241, 1132
+	offsets: 1, 1, 243, 1134
+tail
+	bounds: 403, 715, 340, 299
+	offsets: 1, 1, 342, 301
+	rotate: 90

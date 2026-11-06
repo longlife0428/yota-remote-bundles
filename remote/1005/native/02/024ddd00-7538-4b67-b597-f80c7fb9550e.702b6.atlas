@@ -1,0 +1,383 @@
+background_main.png
+	size: 2048, 2048
+	filter: Linear, Linear
+bg_dust_b/bg_dust_b_07
+	bounds: 619, 81, 195, 315
+	offsets: 109, 285, 360, 600
+	rotate: 90
+bg_dust_b/bg_dust_b_09
+	bounds: 944, 101, 207, 329
+	offsets: 106, 271, 360, 600
+	rotate: 90
+bg_dust_b/bg_dust_b_13
+	bounds: 1275, 99, 226, 350
+	offsets: 107, 250, 360, 600
+	rotate: 90
+bg_dust_b/bg_dust_b_19
+	bounds: 1627, 95, 256, 393
+	offsets: 100, 207, 360, 600
+	rotate: 90
+bg_dust_b/bg_dust_b_39
+	bounds: 1569, 353, 289, 544
+	offsets: 71, 56, 360, 600
+bg_dust_b/bg_dust_b_41
+	bounds: 1274, 327, 293, 557
+	offsets: 67, 43, 360, 600
+bg_dust_b/bg_dust_b_43
+	bounds: 934, 875, 296, 577
+	offsets: 64, 23, 360, 600
+bg_dust_b/bg_dust_b_45
+	bounds: 318, 248, 299, 594
+	offsets: 61, 6, 360, 600
+bg_dust_b/bg_dust_b_47
+	bounds: 629, 861, 303, 586
+	offsets: 57, 14, 360, 600
+bg_dust_b/bg_dust_b_49
+	bounds: 320, 844, 307, 600
+	offsets: 53, 0, 360, 600
+bg_dust_b/bg_dust_b_51
+	bounds: 2, 248, 314, 597
+	offsets: 46, 3, 360, 600
+bg_dust_b/bg_dust_b_53
+	bounds: 2, 847, 316, 597
+	offsets: 44, 3, 360, 600
+bg_dust_b/bg_dust_b_55
+	bounds: 2, 1446, 319, 600
+	offsets: 41, 0, 360, 600
+bg_dust_b/bg_dust_b_57
+	bounds: 323, 1449, 320, 597
+	offsets: 40, 0, 360, 600
+bg_dust_b/bg_dust_b_59
+	bounds: 645, 1454, 324, 592
+	offsets: 36, 0, 360, 600
+bg_dust_b/bg_dust_b_61
+	bounds: 971, 1459, 325, 587
+	offsets: 35, 0, 360, 600
+bg_dust_b/bg_dust_b_63
+	bounds: 1298, 1465, 329, 581
+	offsets: 31, 0, 360, 600
+bg_dust_b/bg_dust_b_65
+	bounds: 1629, 1470, 326, 576
+	offsets: 34, 0, 360, 600
+bg_dust_b/bg_dust_b_67
+	bounds: 1232, 886, 323, 571
+	offsets: 37, 0, 360, 600
+bg_dust_b/bg_dust_b_69
+	bounds: 1557, 899, 324, 564
+	offsets: 36, 0, 360, 600
+bg_dust_b/bg_dust_b_71
+	bounds: 944, 310, 328, 563
+	offsets: 32, 0, 360, 600
+bg_dust_b/bg_dust_b_73
+	bounds: 619, 278, 323, 564
+	offsets: 37, 0, 360, 600
+bg_dust_l/bg_dust_l_03
+	bounds: 580, 4, 75, 195
+	offsets: 168, 405, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_07
+	bounds: 496, 19, 82, 227
+	offsets: 162, 373, 360, 600
+bg_dust_l/bg_dust_l_09
+	bounds: 1957, 1805, 88, 241
+	offsets: 157, 358, 360, 600
+bg_dust_l/bg_dust_l_11
+	bounds: 1472, 3, 90, 255
+	offsets: 152, 345, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_13
+	bounds: 936, 2, 95, 266
+	offsets: 148, 334, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_41
+	bounds: 1883, 1007, 159, 461
+	offsets: 80, 132, 360, 600
+bg_dust_l/bg_dust_l_49
+	bounds: 1860, 396, 177, 501
+	offsets: 61, 84, 360, 600
+bg_dust_l/bg_dust_l_55
+	bounds: 2, 45, 201, 492
+	offsets: 30, 44, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_09
+	bounds: 1957, 1562, 88, 241
+	offsets: 115, 358, 360, 600
+bg_dust_r/bg_dust_r_11
+	bounds: 1729, 3, 90, 255
+	offsets: 118, 345, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_13
+	bounds: 1204, 2, 95, 266
+	offsets: 117, 334, 360, 600
+	rotate: 90
+
+background_main_2.png
+	size: 2048, 2048
+	filter: Linear, Linear
+bg_dust_b/bg_dust_b_21
+	bounds: 1624, 1361, 264, 405
+	offsets: 96, 195, 360, 600
+	rotate: 90
+bg_dust_b/bg_dust_b_23
+	bounds: 1624, 1778, 268, 421
+	offsets: 92, 179, 360, 600
+	rotate: 90
+bg_dust_b/bg_dust_b_25
+	bounds: 855, 1606, 273, 440
+	offsets: 87, 160, 360, 600
+bg_dust_b/bg_dust_b_27
+	bounds: 2, 26, 276, 460
+	offsets: 84, 140, 360, 600
+bg_dust_b/bg_dust_b_29
+	bounds: 573, 1566, 280, 480
+	offsets: 80, 120, 360, 600
+bg_dust_b/bg_dust_b_31
+	bounds: 2, 488, 282, 496
+	offsets: 78, 104, 360, 600
+bg_dust_b/bg_dust_b_33
+	bounds: 291, 1531, 280, 515
+	offsets: 80, 85, 360, 600
+bg_dust_b/bg_dust_b_35
+	bounds: 2, 986, 286, 524
+	offsets: 74, 76, 360, 600
+bg_dust_b/bg_dust_b_37
+	bounds: 2, 1512, 287, 534
+	offsets: 73, 66, 360, 600
+bg_dust_l/bg_dust_l_01
+	bounds: 1084, 26, 73, 180
+	offsets: 171, 419, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_05
+	bounds: 1506, 1236, 81, 209
+	offsets: 165, 389, 360, 600
+bg_dust_l/bg_dust_l_15
+	bounds: 1266, 17, 100, 278
+	offsets: 143, 321, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_35
+	bounds: 1624, 1627, 149, 417
+	offsets: 95, 183, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_43
+	bounds: 1250, 119, 165, 478
+	offsets: 75, 119, 360, 600
+bg_dust_l/bg_dust_l_45
+	bounds: 851, 1075, 166, 489
+	offsets: 73, 108, 360, 600
+bg_dust_l/bg_dust_l_47
+	bounds: 1019, 1075, 173, 485
+	offsets: 68, 96, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_51
+	bounds: 469, 1033, 187, 496
+	offsets: 48, 71, 360, 600
+bg_dust_l/bg_dust_l_53
+	bounds: 1130, 1646, 197, 492
+	offsets: 36, 58, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_57
+	bounds: 671, 84, 200, 489
+	offsets: 25, 35, 360, 600
+bg_dust_l/bg_dust_l_59
+	bounds: 668, 575, 190, 491
+	offsets: 29, 18, 360, 600
+bg_dust_l/bg_dust_l_61
+	bounds: 658, 1068, 191, 496
+	offsets: 26, 2, 360, 600
+bg_dust_l/bg_dust_l_63
+	bounds: 1019, 1250, 195, 485
+	offsets: 21, 6, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_65
+	bounds: 280, 12, 197, 474
+	offsets: 15, 7, 360, 600
+bg_dust_l/bg_dust_l_67
+	bounds: 1417, 124, 199, 469
+	offsets: 11, 0, 360, 600
+bg_dust_l/bg_dust_l_69
+	bounds: 1591, 1157, 202, 455
+	offsets: 9, 0, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_71
+	bounds: 1591, 748, 203, 439
+	offsets: 6, 0, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_01
+	bounds: 1618, 51, 73, 180
+	offsets: 116, 419, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_03
+	bounds: 671, 7, 75, 195
+	offsets: 117, 405, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_05
+	bounds: 873, 10, 81, 209
+	offsets: 114, 389, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_07
+	bounds: 1819, 72, 82, 227
+	offsets: 116, 373, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_35
+	bounds: 1591, 597, 149, 417
+	offsets: 116, 183, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_43
+	bounds: 1424, 595, 165, 478
+	offsets: 120, 119, 360, 600
+bg_dust_r/bg_dust_r_45
+	bounds: 860, 584, 166, 489
+	offsets: 121, 108, 360, 600
+bg_dust_r/bg_dust_r_47
+	bounds: 1075, 101, 173, 485
+	offsets: 119, 96, 360, 600
+bg_dust_r/bg_dust_r_49
+	bounds: 290, 1009, 177, 501
+	offsets: 122, 84, 360, 600
+bg_dust_r/bg_dust_r_51
+	bounds: 286, 488, 187, 496
+	offsets: 125, 71, 360, 600
+bg_dust_r/bg_dust_r_53
+	bounds: 1130, 1447, 197, 492
+	offsets: 127, 58, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_55
+	bounds: 1130, 1845, 201, 492
+	offsets: 129, 44, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_57
+	bounds: 873, 93, 200, 489
+	offsets: 135, 35, 360, 600
+bg_dust_r/bg_dust_r_59
+	bounds: 479, 42, 190, 491
+	offsets: 141, 18, 360, 600
+bg_dust_r/bg_dust_r_61
+	bounds: 475, 535, 191, 496
+	offsets: 143, 2, 360, 600
+bg_dust_r/bg_dust_r_63
+	bounds: 1028, 588, 195, 485
+	offsets: 144, 6, 360, 600
+bg_dust_r/bg_dust_r_65
+	bounds: 1225, 599, 197, 474
+	offsets: 148, 7, 360, 600
+bg_dust_r/bg_dust_r_67
+	bounds: 1618, 126, 199, 469
+	offsets: 150, 0, 360, 600
+bg_dust_r/bg_dust_r_69
+	bounds: 1591, 953, 202, 455
+	offsets: 149, 0, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_71
+	bounds: 1819, 156, 203, 439
+	offsets: 151, 0, 360, 600
+
+background_main_3.png
+	size: 1396, 1396
+	filter: Linear, Linear
+bg_dust_b/bg_dust_b_01
+	bounds: 1060, 10, 156, 272
+	offsets: 112, 328, 360, 600
+	rotate: 90
+bg_dust_b/bg_dust_b_03
+	bounds: 887, 1109, 165, 285
+	offsets: 112, 315, 360, 600
+bg_dust_b/bg_dust_b_05
+	bounds: 761, 622, 182, 298
+	offsets: 111, 302, 360, 600
+bg_dust_b/bg_dust_b_11
+	bounds: 1054, 1064, 219, 339
+	offsets: 103, 261, 360, 600
+	rotate: 90
+bg_dust_b/bg_dust_b_15
+	bounds: 520, 622, 239, 370
+	offsets: 104, 230, 360, 600
+bg_dust_b/bg_dust_b_17
+	bounds: 503, 160, 245, 380
+	offsets: 101, 220, 360, 600
+bg_dust_l/bg_dust_l_17
+	bounds: 761, 922, 101, 293
+	offsets: 142, 306, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_19
+	bounds: 750, 158, 103, 308
+	offsets: 141, 289, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_21
+	bounds: 1060, 1285, 109, 326
+	offsets: 135, 274, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_23
+	bounds: 1056, 834, 117, 338
+	offsets: 128, 262, 360, 600
+	rotate: 90
+bg_dust_l/bg_dust_l_25
+	bounds: 1012, 273, 125, 352
+	offsets: 120, 248, 360, 600
+bg_dust_l/bg_dust_l_27
+	bounds: 750, 263, 129, 357
+	offsets: 114, 243, 360, 600
+bg_dust_l/bg_dust_l_29
+	bounds: 617, 1025, 133, 369
+	offsets: 110, 228, 360, 600
+bg_dust_l/bg_dust_l_31
+	bounds: 364, 155, 137, 385
+	offsets: 105, 215, 360, 600
+bg_dust_l/bg_dust_l_33
+	bounds: 319, 994, 147, 400
+	offsets: 100, 200, 360, 600
+bg_dust_l/bg_dust_l_37
+	bounds: 159, 504, 154, 427
+	offsets: 91, 164, 360, 600
+bg_dust_l/bg_dust_l_39
+	bounds: 2, 478, 155, 453
+	offsets: 86, 147, 360, 600
+bg_dust_l/bg_dust_l_73
+	bounds: 159, 79, 203, 423
+	offsets: 3, 0, 360, 600
+bg_dust_r/bg_dust_r_15
+	bounds: 751, 56, 100, 278
+	offsets: 117, 321, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_17
+	bounds: 945, 627, 101, 293
+	offsets: 117, 306, 360, 600
+bg_dust_r/bg_dust_r_19
+	bounds: 1060, 168, 103, 308
+	offsets: 116, 289, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_21
+	bounds: 1060, 953, 109, 326
+	offsets: 116, 274, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_23
+	bounds: 1048, 715, 117, 338
+	offsets: 115, 262, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_25
+	bounds: 1139, 361, 125, 352
+	offsets: 115, 248, 360, 600
+bg_dust_r/bg_dust_r_27
+	bounds: 881, 263, 129, 357
+	offsets: 117, 243, 360, 600
+bg_dust_r/bg_dust_r_29
+	bounds: 752, 1025, 133, 369
+	offsets: 117, 228, 360, 600
+bg_dust_r/bg_dust_r_31
+	bounds: 364, 16, 137, 385
+	offsets: 118, 215, 360, 600
+	rotate: 90
+bg_dust_r/bg_dust_r_33
+	bounds: 468, 994, 147, 400
+	offsets: 113, 200, 360, 600
+bg_dust_r/bg_dust_r_37
+	bounds: 163, 967, 154, 427
+	offsets: 115, 164, 360, 600
+bg_dust_r/bg_dust_r_39
+	bounds: 2, 23, 155, 453
+	offsets: 119, 147, 360, 600
+bg_dust_r/bg_dust_r_41
+	bounds: 2, 933, 159, 461
+	offsets: 121, 132, 360, 600
+bg_dust_r/bg_dust_r_73
+	bounds: 315, 542, 203, 423
+	offsets: 154, 0, 360, 600

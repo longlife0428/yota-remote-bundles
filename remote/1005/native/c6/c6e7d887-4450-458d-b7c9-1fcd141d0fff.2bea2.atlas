@@ -1,0 +1,251 @@
+symbol_scatter.png
+	size: 1276, 1276
+	filter: Linear, Linear
+effect
+	bounds: 2, 1003, 272, 271
+	offsets: 8, 8, 280, 280
+explosion/00
+	bounds: 2, 751, 250, 250
+explosion/01
+	bounds: 276, 1024, 250, 250
+explosion/02
+	bounds: 2, 499, 250, 250
+explosion/03
+	bounds: 528, 1024, 250, 250
+explosion/04
+	bounds: 2, 247, 250, 250
+explosion/05
+	bounds: 780, 1024, 250, 250
+explosion/06
+	bounds: 254, 751, 250, 250
+explosion/07
+	bounds: 254, 499, 250, 250
+explosion/08
+	bounds: 254, 247, 250, 250
+explosion/09
+	bounds: 506, 772, 250, 250
+explosion/10
+	bounds: 506, 520, 250, 250
+explosion/11
+	bounds: 758, 772, 250, 250
+explosion/12
+	bounds: 506, 268, 250, 250
+explosion/13
+	bounds: 758, 520, 250, 250
+explosion/14
+	bounds: 758, 268, 250, 250
+explosion/15
+	bounds: 1010, 772, 250, 250
+explosion/16
+	bounds: 1010, 520, 250, 250
+scatter_light/scatter_light_00
+	bounds: 1019, 142, 50, 53
+	offsets: 0, 8, 105, 75
+scatter_light/scatter_light_01
+	bounds: 1071, 241, 50, 54
+	offsets: 0, 8, 105, 75
+	rotate: 90
+scatter_light/scatter_light_02
+	bounds: 1071, 293, 52, 55
+	offsets: 0, 8, 105, 75
+scatter_light/scatter_light_03
+	bounds: 1010, 197, 53, 57
+	offsets: 0, 7, 105, 75
+	rotate: 90
+scatter_light/scatter_light_04
+	bounds: 1013, 86, 54, 57
+	offsets: 0, 7, 105, 75
+	rotate: 90
+scatter_light/scatter_light_05
+	bounds: 1206, 445, 73, 58
+	offsets: 0, 7, 105, 75
+	rotate: 90
+scatter_light/scatter_light_06
+	bounds: 1196, 349, 94, 58
+	offsets: 0, 7, 105, 75
+	rotate: 90
+scatter_light/scatter_light_07
+	bounds: 1076, 352, 95, 58
+	offsets: 0, 7, 105, 75
+	rotate: 90
+scatter_light/scatter_light_08
+	bounds: 1010, 252, 96, 59
+	offsets: 0, 7, 105, 75
+	rotate: 90
+scatter_light/scatter_light_09
+	bounds: 204, 113, 97, 61
+	offsets: 1, 6, 105, 75
+scatter_light/scatter_light_10
+	bounds: 1108, 455, 96, 63
+	offsets: 2, 5, 105, 75
+scatter_light/scatter_light_11
+	bounds: 1010, 350, 97, 64
+	offsets: 2, 4, 105, 75
+	rotate: 90
+scatter_light/scatter_light_12
+	bounds: 302, 179, 98, 66
+	offsets: 2, 4, 105, 75
+scatter_light/scatter_light_13
+	bounds: 1130, 1127, 96, 67
+	offsets: 4, 4, 105, 75
+scatter_light/scatter_light_14
+	bounds: 204, 176, 96, 69
+	offsets: 4, 3, 105, 75
+scatter_light/scatter_light_15
+	bounds: 2, 41, 97, 69
+	offsets: 4, 4, 105, 75
+scatter_light/scatter_light_16
+	bounds: 1032, 1125, 96, 69
+	offsets: 5, 4, 105, 75
+scatter_light/scatter_light_17
+	bounds: 1010, 449, 96, 69
+	offsets: 5, 4, 105, 75
+scatter_light/scatter_light_18
+	bounds: 101, 41, 96, 69
+	offsets: 6, 4, 105, 75
+scatter_light/scatter_light_19
+	bounds: 1032, 1055, 96, 68
+	offsets: 6, 5, 105, 75
+scatter_light/scatter_light_20
+	bounds: 1130, 1058, 96, 67
+	offsets: 7, 5, 105, 75
+scatter_light/scatter_light_21
+	bounds: 402, 181, 95, 64
+	offsets: 8, 6, 105, 75
+scatter_light/scatter_light_22
+	bounds: 303, 114, 94, 63
+	offsets: 10, 7, 105, 75
+scatter_light/scatter_light_23
+	bounds: 1136, 358, 95, 58
+	offsets: 10, 8, 105, 75
+	rotate: 90
+scatter_light/scatter_light_24
+	bounds: 665, 162, 74, 57
+	offsets: 31, 9, 105, 75
+scatter_light/scatter_light_25
+	bounds: 741, 163, 73, 56
+	offsets: 32, 9, 105, 75
+scatter_light/scatter_light_26
+	bounds: 816, 148, 71, 56
+	offsets: 34, 9, 105, 75
+	rotate: 90
+scatter_light/scatter_light_27
+	bounds: 246, 55, 52, 56
+	offsets: 53, 9, 105, 75
+scatter_light/scatter_light_28
+	bounds: 1195, 295, 52, 56
+	offsets: 53, 9, 105, 75
+	rotate: 90
+scatter_light/scatter_light_29
+	bounds: 246, 2, 51, 54
+	offsets: 54, 10, 105, 75
+	rotate: 90
+scatter_text_light/scatter_text_light_00
+	bounds: 93, 2, 24, 37
+	offsets: 4, 11, 125, 50
+scatter_text_light/scatter_text_light_01
+	bounds: 1130, 1024, 32, 42
+	offsets: 3, 7, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_02
+	bounds: 48, 2, 37, 43
+	offsets: 3, 6, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_03
+	bounds: 1179, 204, 43, 44
+	offsets: 2, 5, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_04
+	bounds: 1184, 249, 49, 44
+	offsets: 2, 5, 125, 50
+scatter_text_light/scatter_text_light_05
+	bounds: 1127, 265, 55, 44
+	offsets: 2, 5, 125, 50
+scatter_text_light/scatter_text_light_06
+	bounds: 199, 51, 59, 45
+	offsets: 3, 4, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_07
+	bounds: 952, 151, 65, 44
+	offsets: 3, 4, 125, 50
+scatter_text_light/scatter_text_light_08
+	bounds: 874, 129, 70, 44
+	offsets: 4, 4, 125, 50
+scatter_text_light/scatter_text_light_09
+	bounds: 874, 175, 76, 42
+	offsets: 4, 5, 125, 50
+scatter_text_light/scatter_text_light_10
+	bounds: 499, 174, 82, 45
+	offsets: 3, 4, 125, 50
+scatter_text_light/scatter_text_light_11
+	bounds: 785, 221, 89, 45
+	offsets: 2, 3, 125, 50
+scatter_text_light/scatter_text_light_12
+	bounds: 600, 221, 91, 45
+	offsets: 6, 2, 125, 50
+scatter_text_light/scatter_text_light_13
+	bounds: 506, 221, 92, 45
+	offsets: 12, 2, 125, 50
+scatter_text_light/scatter_text_light_14
+	bounds: 693, 221, 90, 45
+	offsets: 19, 2, 125, 50
+scatter_text_light/scatter_text_light_15
+	bounds: 1228, 1106, 88, 46
+	offsets: 26, 2, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_16
+	bounds: 876, 219, 84, 47
+	offsets: 33, 2, 125, 50
+scatter_text_light/scatter_text_light_17
+	bounds: 583, 172, 80, 47
+	offsets: 39, 2, 125, 50
+scatter_text_light/scatter_text_light_18
+	bounds: 1228, 1030, 74, 46
+	offsets: 46, 3, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_19
+	bounds: 962, 197, 69, 46
+	offsets: 52, 3, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_20
+	bounds: 946, 102, 65, 47
+	offsets: 57, 2, 125, 50
+scatter_text_light/scatter_text_light_21
+	bounds: 1136, 311, 57, 45
+	offsets: 65, 4, 125, 50
+scatter_text_light/scatter_text_light_22
+	bounds: 1127, 219, 50, 44
+	offsets: 73, 4, 125, 50
+scatter_text_light/scatter_text_light_23
+	bounds: 199, 6, 43, 45
+	offsets: 80, 4, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_24
+	bounds: 2, 2, 37, 44
+	offsets: 86, 4, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_25
+	bounds: 119, 8, 31, 40
+	offsets: 92, 4, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_26
+	bounds: 1174, 1030, 26, 35
+	offsets: 97, 5, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_27
+	bounds: 1032, 1024, 20, 29
+	offsets: 103, 4, 125, 50
+scatter_text_light/scatter_text_light_28
+	bounds: 276, 1003, 19, 28
+	offsets: 103, 5, 125, 50
+	rotate: 90
+scatter_text_light/scatter_text_light_29
+	bounds: 306, 1003, 19, 28
+	offsets: 103, 5, 125, 50
+	rotate: 90
+symbol
+	bounds: 2, 112, 200, 133
+	offsets: 1, 1, 202, 135
+text
+	bounds: 1032, 1196, 224, 78
+	offsets: 1, 1, 226, 80
