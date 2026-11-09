@@ -4528,6 +4528,8 @@ System.register("bundle://1002/_virtual/chinhoyiah.ts", ['./rollupPluginModLoBab
       var MAX_CASCADES = 8;
       // 單局上限 底注倍數
       var MAX_WIN_MULTIPLE = 5000;
+      // 免費遊戲中途到頂測試 第幾轉到頂 0 是主遊戲
+      var FREE_CAP_SPIN = 3;
       var NATURAL_FREE_CHANCE = 0.08;
       // 加注的觸發機率
       var EXTRA_FREE_CHANCE = 0.14;
@@ -4972,9 +4974,10 @@ System.register("bundle://1002/_virtual/chinhoyiah.ts", ['./rollupPluginModLoBab
         }
         var control = getSlotApiDebugControl();
         var forced = control == null ? void 0 : control.symbol_control;
-        var hasControl = !!(forced || control != null && control.win || control != null && control.max_win);
+        var maxWinCase = control == null ? void 0 : control.max_win;
+        var hasControl = !!(forced || control != null && control.win || maxWinCase);
         var buy = !!options.buy;
-        var trigger = buy || !hasControl && Math.random() < (options.extra ? EXTRA_FREE_CHANCE : NATURAL_FREE_CHANCE);
+        var trigger = buy || !!maxWinCase || !hasControl && Math.random() < (options.extra ? EXTRA_FREE_CHANCE : NATURAL_FREE_CHANCE);
         var mainPlan = {
           kind: buy ? 'buy' : 'main',
           wantWin: !buy && (!!forced || !trigger && Math.random() < MAIN_WIN_CHANCE || trigger && Math.random() < 0.5),
@@ -5020,12 +5023,21 @@ System.register("bundle://1002/_virtual/chinhoyiah.ts", ['./rollupPluginModLoBab
             }
           }]);
         }
-        applyWinControl(round, control != null && control.max_win ? {
-          min: MAX_WIN_MULTIPLE + 1,
-          max: MAX_WIN_MULTIPLE + 1
-        } : control == null ? void 0 : control.win);
+        if (maxWinCase === 'main') forceOverCap(round, 0);else if (maxWinCase === 'free') forceOverCap(round, Math.min(FREE_CAP_SPIN, round.spins.length - 1));else applyWinControl(round, control == null ? void 0 : control.win);
         applyCap(round, MAX_WIN_MULTIPLE * 100);
         return round;
+      }
+
+      // 治具讓指定那一轉的累計剛好超過上限 只供假資料使用
+      function forceOverCap(round, spinIndex) {
+        var total = round.spins.slice(0, spinIndex + 1).reduce(function (sum, spin) {
+          return sum + spin.boards.reduce(function (s, item) {
+            return s + item.paidCents;
+          }, 0);
+        }, 0);
+        var tail = round.spins[spinIndex].boards[round.spins[spinIndex].boards.length - 1];
+        tail.paidCents = Math.max(0, tail.paidCents + (MAX_WIN_MULTIPLE + 1) * 100 - total);
+        tail.board.bm = tail.paidCents > 0 ? formatCents(tail.paidCents) : undefined;
       }
 
       // 治具指定整局贏分倍數 調整最後一張盤面的實付 只供假資料使用
@@ -5867,7 +5879,7 @@ System.register("bundle://1002/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
           _this.count = 8;
           _this.line = 1;
           _this.win = null;
-          _this.maxWin = false;
+          _this.maxWin = null;
           // 轉輪節奏 state（PM 線上調整用；只負責寫，SGGameMain 在每次 spin 開始前才讀取套用）
           _this.reelTiming = DEFAULT_REEL_CONFIG;
           _this.reelTimingDefault = null;
@@ -6114,10 +6126,22 @@ System.register("bundle://1002/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
             _loop3();
           }
           p.appendChild(winGrid);
-          p.appendChild(this.toggleBtn('達到最高贏分', this.maxWin, function () {
-            _this4.maxWin = !_this4.maxWin;
-            _this4.updateControl();
-          }));
+          var maxWinGrid = this.row('flex-wrap:wrap;gap:4px;');
+          var maxWinOptions = [['主遊戲到頂 觸發免費遊戲', 'main'], ['免費遊戲到頂', 'free']];
+          var _loop4 = function _loop4() {
+            var _maxWinOptions$_i = _maxWinOptions[_i3],
+              label = _maxWinOptions$_i[0],
+              value = _maxWinOptions$_i[1];
+            var active = _this4.maxWin === value;
+            maxWinGrid.appendChild(_this4.toggleBtn(label, active, function () {
+              _this4.maxWin = active ? null : value;
+              _this4.updateControl();
+            }));
+          };
+          for (var _i3 = 0, _maxWinOptions = maxWinOptions; _i3 < _maxWinOptions.length; _i3++) {
+            _loop4();
+          }
+          p.appendChild(maxWinGrid);
 
           // ── 轉輪節奏（PM 線上調整用）──
 
@@ -6158,8 +6182,8 @@ System.register("bundle://1002/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
             row.appendChild(_this4.makeEl('span', label, 'font-size:11px;color:#aaa;min-width:70px;'));
             var select = document.createElement('select');
             select.style.cssText = 'flex:1;background:#222;color:#ddd;border:1px solid #555;border-radius:4px;padding:3px;font-family:monospace;font-size:11px;';
-            for (var _i4 = 0, _EASE_OPTIONS2 = EASE_OPTIONS; _i4 < _EASE_OPTIONS2.length; _i4++) {
-              var name = _EASE_OPTIONS2[_i4];
+            for (var _i5 = 0, _EASE_OPTIONS2 = EASE_OPTIONS; _i5 < _EASE_OPTIONS2.length; _i5++) {
+              var name = _EASE_OPTIONS2[_i5];
               var opt = document.createElement('option');
               opt.value = name;
               opt.textContent = name;
@@ -6338,7 +6362,7 @@ System.register("bundle://1002/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
           this.count = 8;
           this.line = 1;
           this.win = null;
-          this.maxWin = false;
+          this.maxWin = null;
           this.updateControl();
         };
         _proto.buildControl = function buildControl() {
@@ -6353,7 +6377,7 @@ System.register("bundle://1002/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
           if (this.win !== null) {
             control.win = _extends({}, this.win);
           }
-          if (this.maxWin) control.max_win = true;
+          if (this.maxWin !== null) control.max_win = this.maxWin;
           return control;
         };
         _proto.apply = function apply() {
@@ -14518,6 +14542,7 @@ System.register("bundle://1002/_virtual/mock-shared.ts", ['cc'], function (expor
     execute: function () {
       exports('randomInt', randomInt);
       cclegacy._RF.push({}, "9ba185FgRhPqYRRloWfXWVk", "mock-shared", undefined); // 傳輸層與引擎共用的小工具
+      // 測試到頂的情況 main 主遊戲到頂又觸發免費遊戲 free 免費遊戲中途到頂
       // DebugPanel 寫在 globalThis 的治具 每局產生結果時才讀
       var getSlotApiDebugControl = exports('getSlotApiDebugControl', function getSlotApiDebugControl() {
         var _slotApiDebugControl;
@@ -23741,6 +23766,7 @@ System.register("bundle://1002/_virtual/SlotRound.ts", ['cc'], function () {
       /** 中性的 JP 等級名稱 */
       /** Main／Free 局的 Grid／Awards 解碼結果，跟「這是哪次 spin」無關，History Detail 沒有 spin 信封欄位時也能重用 */
       /** Spin 一局的正規化結果 後端格式無關 Handler／Task／Controller／Presentation 只認這個型別 */
+      // 免費遊戲結束原因 spins_done 排程打完 cap_stop 達到上限
       /** 免費遊戲的一轉 播完這一轉才向後端要下一轉 */
       // 免費遊戲打到一半 進場時要還原的資料
       // 進場時要還原的畫面資料
@@ -23774,7 +23800,9 @@ System.register("bundle://1002/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
         // 湊滿 Scatter 但已到上限
         FREE_BLOCKED: 'FB',
         // 單局上限截斷 org 截斷前 cap 截斷後
-        CAP: 'CA'
+        CAP: 'CA',
+        // 免費遊戲結束 rsn 結束原因
+        FREE_EXITED: 'FX'
       };
 
       // 中獎種類
@@ -23937,7 +23965,7 @@ System.register("bundle://1002/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
          * @throws 沒有步驟時
          */;
         _proto.toSlotFreeSpin = function toSlotFreeSpin(steps, baseBet, accumulatedBefore) {
-          var _fs$s, _fs$ts;
+          var _fs$s, _fs$ts, _findEvent2;
           var last = steps[steps.length - 1];
           if (!last) throw new RangeError('SlotRoundMapper.toSlotFreeSpin: no steps');
           var events = this.eventsOf(steps);
@@ -23950,7 +23978,7 @@ System.register("bundle://1002/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
             finished: last.nst === STEP_STATE.BASE_SPIN,
             totalWin: last.aw,
             balance: last.bl,
-            maxWinApplied: !!findEvent(events, EVENT.CAP)
+            endReason: toEndReason((_findEvent2 = findEvent(events, EVENT.FREE_EXITED)) == null || (_findEvent2 = _findEvent2.d) == null ? void 0 : _findEvent2.rsn)
           };
         }
 
@@ -23966,7 +23994,7 @@ System.register("bundle://1002/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
             _main$result,
             _this = this,
             _findEvent$d$f2,
-            _findEvent2;
+            _findEvent3;
           var sorted = Array.from(details).sort(function (a, b) {
             return a.seq - b.seq;
           });
@@ -24000,10 +24028,10 @@ System.register("bundle://1002/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
               return findEvent((_board$e2 = board.e) != null ? _board$e2 : [], EVENT.FREE_ENTERED);
             }),
             freeMultipliers: freeMultipliers,
-            multiplier: Number((_findEvent$d$f2 = (_findEvent2 = findEvent(mainBoards.flatMap(function (board) {
+            multiplier: Number((_findEvent$d$f2 = (_findEvent3 = findEvent(mainBoards.flatMap(function (board) {
               var _board$e3;
               return (_board$e3 = board.e) != null ? _board$e3 : [];
-            }), EVENT.MULTIPLIER)) == null || (_findEvent2 = _findEvent2.d) == null ? void 0 : _findEvent2.f) != null ? _findEvent$d$f2 : 0) || 0
+            }), EVENT.MULTIPLIER)) == null || (_findEvent3 = _findEvent3.d) == null ? void 0 : _findEvent3.f) != null ? _findEvent$d$f2 : 0) || 0
           };
         }
 
@@ -24055,8 +24083,8 @@ System.register("bundle://1002/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
           return multiplyDecimal((_board$bm = board.bm) != null ? _board$bm : '0', baseBet, this.amountScale);
         };
         _proto.toMaxWin = function toMaxWin(events, baseBet) {
-          var _findEvent3;
-          var cap = (_findEvent3 = findEvent(events, EVENT.CAP)) == null || (_findEvent3 = _findEvent3.d) == null ? void 0 : _findEvent3.cap;
+          var _findEvent4;
+          var cap = (_findEvent4 = findEvent(events, EVENT.CAP)) == null || (_findEvent4 = _findEvent4.d) == null ? void 0 : _findEvent4.cap;
           if (cap === undefined) return {
             applied: false,
             multiplier: '',
@@ -24098,6 +24126,11 @@ System.register("bundle://1002/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
         return events.find(function (e) {
           return e.t === type;
         });
+      }
+
+      // 事件裡的結束原因 不認得的值當沒給
+      function toEndReason(value) {
+        return value === 'spins_done' || value === 'cap_stop' ? value : null;
       }
 
       // 事件裡的轉數欄位轉成非負整數
@@ -24624,14 +24657,14 @@ System.register("bundle://1002/_virtual/SpinResultHandler.ts", ['./rollupPluginM
         function () {
           var _playFreeGame = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(mainResult) {
             var _this5 = this;
-            var store, totalWin, balance, maxWinApplied, spin;
+            var store, totalWin, balance, capStop, spin;
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
                   store = this.game.storeManager.getHttpClientStore();
                   totalWin = mainResult.totalWin;
                   balance = mainResult.balanceAfter;
-                  maxWinApplied = false;
+                  capStop = false;
                   _context.prev = 4;
                 case 5:
                   _context.next = 7;
@@ -24654,7 +24687,7 @@ System.register("bundle://1002/_virtual/SpinResultHandler.ts", ['./rollupPluginM
                   this.game.updateFgUi();
                   totalWin = spin.totalWin;
                   balance = spin.balance;
-                  maxWinApplied || (maxWinApplied = spin.maxWinApplied);
+                  capStop || (capStop = spin.endReason === 'cap_stop');
                   if (!spin.finished) {
                     _context.next = 20;
                     break;
@@ -24670,7 +24703,7 @@ System.register("bundle://1002/_virtual/SpinResultHandler.ts", ['./rollupPluginM
                   break;
                 case 24:
                   _context.prev = 24;
-                  if (maxWinApplied) console.log('[MaxWin] 免費遊戲達到贏分上限', {
+                  if (capStop) console.log('[MaxWin] 免費遊戲達到贏分上限', {
                     totalWin: totalWin
                   });
                   // 不論正常結束或中途出錯都要收尾，畫面才不會卡在免費遊戲

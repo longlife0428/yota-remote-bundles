@@ -78,6 +78,8 @@
             "1002",
             "1002",
             "1002",
+            "1002",
+            "1002",
             "1002"
         ],
         "subpackages": [],
@@ -174,12 +176,18 @@
             },
             {
                 "bundle": "main"
+            },
+            {
+                "bundle": "main"
+            },
+            {
+                "bundle": "main"
             }
         ],
         "bundleVers": {
-            "1002": "81133",
+            "1002": "b211c",
             "internal": "07d67",
-            "main": "d5360"
+            "main": "3a8b3"
         },
         "preloadAssets": [],
         "projectBundles": [
