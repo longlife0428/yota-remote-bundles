@@ -1,0 +1,292 @@
+symbol_p.png
+	size: 2000, 2000
+	filter: Linear, Linear
+H1/H1000
+	bounds: 2, 1715, 175, 200
+	rotate: 90
+H1/H1001
+	bounds: 204, 1715, 175, 200
+	rotate: 90
+H1/H1002
+	bounds: 406, 1670, 175, 200
+	rotate: 90
+H1/H1003
+	bounds: 608, 1670, 175, 200
+	rotate: 90
+H1/H1004
+	bounds: 810, 1648, 175, 200
+	rotate: 90
+H1/H1005
+	bounds: 1012, 1648, 175, 200
+	rotate: 90
+H1/H1006
+	bounds: 1214, 1648, 175, 200
+	rotate: 90
+H1/H1007
+	bounds: 1416, 1646, 175, 200
+	rotate: 90
+H1/H1008
+	bounds: 1618, 1646, 175, 200
+	rotate: 90
+H1/H1009
+	bounds: 1820, 1621, 175, 200
+H1/H1010
+	bounds: 2, 1538, 175, 200
+	rotate: 90
+H1/H1011
+	bounds: 204, 1538, 175, 200
+	rotate: 90
+H1/H1012
+	bounds: 406, 1493, 175, 200
+	rotate: 90
+H1/H1013
+	bounds: 608, 1493, 175, 200
+	rotate: 90
+H1/H1014
+	bounds: 810, 1471, 175, 200
+	rotate: 90
+H2/H2000
+	bounds: 1012, 1471, 175, 200
+	rotate: 90
+H2/H2001
+	bounds: 1214, 1471, 175, 200
+	rotate: 90
+H2/H2002
+	bounds: 1416, 1469, 175, 200
+	rotate: 90
+H2/H2003
+	bounds: 1618, 1469, 175, 200
+	rotate: 90
+H2/H2004
+	bounds: 1820, 1419, 175, 200
+H2/H2005
+	bounds: 2, 1361, 175, 200
+	rotate: 90
+H2/H2006
+	bounds: 204, 1361, 175, 200
+	rotate: 90
+H2/H2007
+	bounds: 406, 1316, 175, 200
+	rotate: 90
+H2/H2008
+	bounds: 608, 1316, 175, 200
+	rotate: 90
+H2/H2009
+	bounds: 810, 1294, 175, 200
+	rotate: 90
+H2/H2010
+	bounds: 1012, 1294, 175, 200
+	rotate: 90
+H2/H2011
+	bounds: 1214, 1294, 175, 200
+	rotate: 90
+H2/H2012
+	bounds: 1416, 1292, 175, 200
+	rotate: 90
+H2/H2013
+	bounds: 1618, 1292, 175, 200
+	rotate: 90
+H2/H2014
+	bounds: 1820, 1217, 175, 200
+H3/H3000
+	bounds: 2, 1184, 175, 200
+	rotate: 90
+H3/H3001
+	bounds: 204, 1184, 175, 200
+	rotate: 90
+H3/H3002
+	bounds: 406, 1139, 175, 200
+	rotate: 90
+H3/H3003
+	bounds: 608, 1139, 175, 200
+	rotate: 90
+H3/H3004
+	bounds: 810, 1117, 175, 200
+	rotate: 90
+H3/H3005
+	bounds: 1012, 1117, 175, 200
+	rotate: 90
+H3/H3006
+	bounds: 1214, 1117, 175, 200
+	rotate: 90
+H3/H3007
+	bounds: 1416, 1115, 175, 200
+	rotate: 90
+H3/H3008
+	bounds: 1618, 1115, 175, 200
+	rotate: 90
+H3/H3009
+	bounds: 1820, 1015, 175, 200
+H3/H3010
+	bounds: 2, 1007, 175, 200
+	rotate: 90
+H3/H3011
+	bounds: 204, 1007, 175, 200
+	rotate: 90
+H3/H3012
+	bounds: 406, 962, 175, 200
+	rotate: 90
+H3/H3013
+	bounds: 608, 962, 175, 200
+	rotate: 90
+H3/H3014
+	bounds: 810, 940, 175, 200
+	rotate: 90
+H4/H4000
+	bounds: 1012, 940, 175, 200
+	rotate: 90
+H4/H4001
+	bounds: 1214, 940, 175, 200
+	rotate: 90
+H4/H4002
+	bounds: 1416, 938, 175, 200
+	rotate: 90
+H4/H4003
+	bounds: 1618, 938, 175, 200
+	rotate: 90
+H4/H4004
+	bounds: 2, 830, 175, 200
+	rotate: 90
+H4/H4005
+	bounds: 204, 830, 175, 200
+	rotate: 90
+H4/H4006
+	bounds: 1820, 813, 175, 200
+H4/H4007
+	bounds: 406, 785, 175, 200
+	rotate: 90
+H4/H4008
+	bounds: 608, 785, 175, 200
+	rotate: 90
+H4/H4009
+	bounds: 810, 763, 175, 200
+	rotate: 90
+H4/H4010
+	bounds: 1012, 763, 175, 200
+	rotate: 90
+H4/H4011
+	bounds: 1214, 763, 175, 200
+	rotate: 90
+H4/H4012
+	bounds: 1416, 761, 175, 200
+	rotate: 90
+H4/H4013
+	bounds: 1618, 761, 175, 200
+	rotate: 90
+H4/H4014
+	bounds: 2, 653, 175, 200
+	rotate: 90
+L1/L1000
+	bounds: 204, 653, 175, 200
+	rotate: 90
+L1/L1001
+	bounds: 1820, 611, 175, 200
+L1/L1002
+	bounds: 406, 608, 175, 200
+	rotate: 90
+L1/L1003
+	bounds: 608, 608, 175, 200
+	rotate: 90
+L1/L1004
+	bounds: 810, 586, 175, 200
+	rotate: 90
+L1/L1005
+	bounds: 1012, 586, 175, 200
+	rotate: 90
+L1/L1006
+	bounds: 1214, 586, 175, 200
+	rotate: 90
+L1/L1007
+	bounds: 1416, 584, 175, 200
+	rotate: 90
+L1/L1008
+	bounds: 1618, 584, 175, 200
+	rotate: 90
+L1/L1009
+	bounds: 2, 476, 175, 200
+	rotate: 90
+L1/L1010
+	bounds: 204, 476, 175, 200
+	rotate: 90
+L1/L1011
+	bounds: 406, 431, 175, 200
+	rotate: 90
+L1/L1012
+	bounds: 608, 431, 175, 200
+	rotate: 90
+L1/L1013
+	bounds: 810, 409, 175, 200
+	rotate: 90
+L1/L1014
+	bounds: 1012, 409, 175, 200
+	rotate: 90
+mahjong_a_00
+	bounds: 1214, 374, 208, 241
+	offsets: 84, 81, 383, 403
+	rotate: 90
+mahjong_a_01
+	bounds: 252, 217, 212, 247
+	offsets: 81, 77, 383, 403
+	rotate: 90
+mahjong_a_02
+	bounds: 750, 188, 219, 249
+	offsets: 82, 76, 383, 403
+	rotate: 90
+mahjong_a_03
+	bounds: 1252, 150, 222, 249
+	offsets: 81, 76, 383, 403
+	rotate: 90
+mahjong_a_04
+	bounds: 1700, 373, 209, 248
+	offsets: 87, 77, 383, 403
+	rotate: 90
+mahjong_a_05
+	bounds: 968, 1825, 170, 248
+	offsets: 107, 82, 383, 403
+	rotate: 90
+mahjong_a_06
+	bounds: 2, 1892, 103, 241
+	offsets: 140, 82, 383, 403
+	rotate: 90
+mahjong_a_07
+	bounds: 488, 1847, 148, 238
+	offsets: 118, 83, 383, 403
+	rotate: 90
+mahjong_b_00
+	bounds: 1457, 374, 208, 241
+	offsets: 84, 81, 383, 403
+	rotate: 90
+mahjong_b_01
+	bounds: 501, 217, 212, 247
+	offsets: 81, 77, 383, 403
+	rotate: 90
+mahjong_b_02
+	bounds: 1001, 153, 219, 249
+	offsets: 82, 76, 383, 403
+	rotate: 90
+mahjong_b_03
+	bounds: 1503, 149, 222, 249
+	offsets: 81, 76, 383, 403
+	rotate: 90
+mahjong_b_04
+	bounds: 2, 265, 209, 248
+	offsets: 87, 77, 383, 403
+	rotate: 90
+mahjong_b_05
+	bounds: 1218, 1825, 170, 248
+	offsets: 107, 82, 383, 403
+	rotate: 90
+mahjong_b_06
+	bounds: 245, 1892, 103, 241
+	offsets: 140, 82, 383, 403
+	rotate: 90
+mahjong_b_07
+	bounds: 728, 1847, 148, 238
+	offsets: 118, 83, 383, 403
+	rotate: 90
+symbol_frame
+	bounds: 1468, 1823, 172, 208
+	rotate: 90
+symbol_gold_frame
+	bounds: 1678, 1823, 172, 208
+	rotate: 90
