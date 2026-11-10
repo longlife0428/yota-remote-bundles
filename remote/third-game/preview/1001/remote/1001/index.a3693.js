@@ -6782,8 +6782,8 @@ System.register("bundle://1001/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1001/_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _createClass, cclegacy, ResolutionPolicy, view, screen, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
+System.register("bundle://1001/_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './env', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _createClass, cclegacy, ResolutionPolicy, view, screen, PREVIEW, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
       _createClass = module.createClass;
@@ -6793,12 +6793,15 @@ System.register("bundle://1001/_virtual/DeviceStore.ts", ['./rollupPluginModLoBa
       view = module.view;
       screen = module.screen;
     }, function (module) {
+      PREVIEW = module.PREVIEW;
+    }, function (module) {
       gameRuntimeEventBus = module.gameRuntimeEventBus;
     }, function (module) {
       GAME_EVENT_TYPE = module.GAME_EVENT_TYPE;
       GAME_EVENT_ID = module.GAME_EVENT_ID;
     }],
     execute: function () {
+      exports('isFixedRatio', isFixedRatio);
       cclegacy._RF.push({}, "c46b2SYVbVHlpn1QfGxnlGJ", "DeviceStore", undefined);
       function getFrameSize() {
         var dpr = screen.devicePixelRatio;
@@ -6806,6 +6809,12 @@ System.register("bundle://1001/_virtual/DeviceStore.ts", ['./rollupPluginModLoBa
         sizeInCssPixels.width /= dpr;
         sizeInCssPixels.height /= dpr;
         return sizeInCssPixels;
+      }
+
+      // entry 判斷的固定比例旗標 單獨預覽時沒有 entry 桌面瀏覽器直接視為固定比例
+      function isFixedRatio() {
+        if (globalThis.__subGameFixedRatio__ === true) return true;
+        return PREVIEW;
       }
       var DeviceStore = exports('DeviceStore', /*#__PURE__*/function () {
         /** 保留建構子參數是為了相容 StoreManager 裡 `new DeviceStore({})` 的舊呼叫方式。
@@ -6841,8 +6850,7 @@ System.register("bundle://1001/_virtual/DeviceStore.ts", ['./rollupPluginModLoBa
           }
           this.setOrientation(next);
           // 固定比例由 entry 判斷 沒有旗標一律依容器撲滿
-          var fixedRatio = globalThis.__subGameFixedRatio__ === true;
-          var policy = fixedRatio ? ResolutionPolicy.SHOW_ALL : ResolutionPolicy.FIXED_HEIGHT;
+          var policy = isFixedRatio() ? ResolutionPolicy.SHOW_ALL : ResolutionPolicy.FIXED_HEIGHT;
           next == 'landscape' ? view.setDesignResolutionSize(1280, 720, policy) : view.setDesignResolutionSize(720, 1280, policy);
         };
         _createClass(DeviceStore, [{
@@ -7225,6 +7233,7 @@ System.register("bundle://1001/_virtual/EnterFreeGameTask.ts", ['./rollupPluginM
 System.register("bundle://1001/_virtual/env", [], function (exports) {
   return {
     execute: function () {
+      var PREVIEW = exports('PREVIEW', false);
       var DEBUG = exports('DEBUG', true);
     }
   };
@@ -10037,8 +10046,8 @@ System.register("bundle://1001/_virtual/GamePopupManager.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './OrientationController.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, Widget, UITransform, Mask, profiler, Component, ImageAsset, assetManager, sys, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, getSettingStore, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
+System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './DeviceStore.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './OrientationController.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, Mask, view, Widget, UITransform, profiler, Component, ImageAsset, assetManager, sys, instantiate, StoreManager, isFixedRatio, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, getSettingStore, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -10052,10 +10061,10 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
       cclegacy = module.cclegacy;
       _decorator = module._decorator;
       Node = module.Node;
+      Mask = module.Mask;
       view = module.view;
       Widget = module.Widget;
       UITransform = module.UITransform;
-      Mask = module.Mask;
       profiler = module.profiler;
       Component = module.Component;
       ImageAsset = module.ImageAsset;
@@ -10064,6 +10073,8 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
       instantiate = module.instantiate;
     }, function (module) {
       StoreManager = module.default;
+    }, function (module) {
+      isFixedRatio = module.isFixedRatio;
     }, function (module) {
       initI18n = module.initI18n;
     }, function (module) {
@@ -10173,6 +10184,11 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           this.bindShell();
           this.trackLayer(this.topNode, GameRoot.TOP_LAYER);
           PopupStack.setLayer(this.topNode);
+          // 各內容層裁在可視範圍內 固定比例時設計框外的素材不會露出來
+          for (var _i = 0, _arr = [this.gameNode, this.templateNode, this.middleNode, this.topNode]; _i < _arr.length; _i++) {
+            var layer = _arr[_i];
+            if (layer && !layer.getComponent(Mask)) layer.addComponent(Mask);
+          }
           view.on('design-resolution-changed', this.fitContentLayers, this);
           this.fitContentLayers();
         };
@@ -10206,9 +10222,9 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           var design = view.getDesignResolutionSize();
           var visible = view.getVisibleSize();
           var scale = Math.min(1, visible.width / design.width, visible.height / design.height);
-          for (var _i = 0, _arr = [this.gameNode, this.templateNode, this.middleNode, this.topNode]; _i < _arr.length; _i++) {
+          for (var _i2 = 0, _arr2 = [this.gameNode, this.templateNode, this.middleNode, this.topNode]; _i2 < _arr2.length; _i2++) {
             var _layer$getComponent;
-            var layer = _arr[_i];
+            var layer = _arr2[_i2];
             if (!layer) continue;
             layer.setScale(scale, scale, 1);
             var widget = layer.getComponent(Widget);
@@ -10244,7 +10260,7 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
-                  if (!(!sys.isBrowser || globalThis.__subGameFixedRatio__ !== true)) {
+                  if (!(!sys.isBrowser || !isFixedRatio())) {
                     _context.next = 2;
                     break;
                   }
@@ -10394,8 +10410,8 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
         _proto.deleteView = function deleteView(viewName) {
           var containers = [this.node, this.gameNode, this.templateNode, this.middleNode, this.topNode];
           var found = false;
-          for (var _i2 = 0, _containers = containers; _i2 < _containers.length; _i2++) {
-            var container = _containers[_i2];
+          for (var _i3 = 0, _containers = containers; _i3 < _containers.length; _i3++) {
+            var container = _containers[_i3];
             for (var i = container.children.length - 1; i >= 0; i--) {
               if (container.children[i].name === viewName) {
                 container.children[i].destroy();
