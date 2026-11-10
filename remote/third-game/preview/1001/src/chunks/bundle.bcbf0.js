@@ -1,29 +1,9 @@
 System.register([], function(_export, _context) { return { execute: function () {
-System.register("chunks:///_virtual/HistoryAdapter3.ts", ['./rollupPluginModLoBabelHelpers.js', './HistoryAdapter.ts', './SlotGameDefinition3.ts'], function (exports) {
-  var _inheritsLoose, HistoryAdapter$1, SLOT_GAME_DEFINITION;
+System.register("chunks:///_virtual/env", [], function (exports) {
   return {
-    setters: [function (module) {
-      _inheritsLoose = module.inheritsLoose;
-    }, function (module) {
-      HistoryAdapter$1 = module.HistoryAdapter;
-    }, function (module) {
-      SLOT_GAME_DEFINITION = module.SLOT_GAME_DEFINITION;
-    }],
     execute: function () {
-      var HistoryAdapter = exports('default', /*#__PURE__*/function (_HistoryAdapterBase) {
-        _inheritsLoose(HistoryAdapter, _HistoryAdapterBase);
-        function HistoryAdapter() {
-          var _this;
-          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-          }
-          _this = _HistoryAdapterBase.call.apply(_HistoryAdapterBase, [this].concat(args)) || this;
-          _this.symbolsFolder = 'Images/Symbols';
-          _this.symbolCatalog = SLOT_GAME_DEFINITION.symbols;
-          return _this;
-        }
-        return HistoryAdapter;
-      }(HistoryAdapter$1));
+      var PREVIEW = exports('PREVIEW', false);
+      var DEBUG = exports('DEBUG', true);
     }
   };
 });
@@ -571,96 +551,6 @@ System.register("chunks:///_virtual/rollupPluginModLoBabelHelpers.js", [], funct
         }
         return desc;
       }
-    }
-  };
-});
-
-System.register("chunks:///_virtual/SlotGameDefinition3.ts", ['./SlotGameDefinition.ts'], function (exports) {
-  var createSlotSymbolCatalog;
-  return {
-    setters: [function (module) {
-      createSlotSymbolCatalog = module.createSlotSymbolCatalog;
-    }],
-    execute: function () {
-      var MULTIPLIER_VALUES = [2, 3, 4, 6, 8, 10, 12, 15, 18, 25, 50, 55, 60, 65, 80, 100, 150, 200, 250, 500];
-      var NORMAL_SYMBOLS = [{
-        id: 1,
-        kind: 'normal',
-        name: 'sym1',
-        frame: 'symbol_h1'
-      }, {
-        id: 2,
-        kind: 'normal',
-        name: 'sym2',
-        frame: 'symbol_h2'
-      }, {
-        id: 3,
-        kind: 'normal',
-        name: 'sym3',
-        frame: 'symbol_h3'
-      }, {
-        id: 4,
-        kind: 'normal',
-        name: 'sym4',
-        frame: 'symbol_h4'
-      }, {
-        id: 5,
-        kind: 'normal',
-        name: 'sym5',
-        frame: 'symbol_l1'
-      }, {
-        id: 6,
-        kind: 'normal',
-        name: 'sym6',
-        frame: 'symbol_l2'
-      }, {
-        id: 7,
-        kind: 'normal',
-        name: 'sym7',
-        frame: 'symbol_l3'
-      }, {
-        id: 8,
-        kind: 'normal',
-        name: 'sym8',
-        frame: 'symbol_l4'
-      }, {
-        id: 9,
-        kind: 'normal',
-        name: 'sym9',
-        frame: 'symbol_l5'
-      }];
-      var SCATTER_SYMBOL = {
-        id: 10,
-        kind: 'scatter',
-        name: 'scatter',
-        frame: 'symbol_scatter'
-      };
-      var multiplierSymbols = function multiplierSymbols(startId, upgradeable) {
-        return MULTIPLIER_VALUES.map(function (value, index) {
-          return {
-            id: startId + index,
-            kind: 'multiplier',
-            name: "mul" + value,
-            value: value,
-            upgradeable: upgradeable,
-            colorTier: 4 - Math.floor(index / 5),
-            frame: function frame(_ref) {
-              var symbol = _ref.symbol;
-              return "symbol_m1_" + symbol.colorTier;
-            }
-          };
-        });
-      };
-      var SLOT_GAME_DEFINITION = exports('SLOT_GAME_DEFINITION', {
-        symbols: createSlotSymbolCatalog({
-          symbols: [].concat(NORMAL_SYMBOLS, [SCATTER_SYMBOL], multiplierSymbols(11, false), multiplierSymbols(111, true)),
-          fallback: {
-            kind: 'normal',
-            name: 'unknown',
-            frame: 'symbol_h1'
-          }
-        })
-      });
     }
   };
 });
