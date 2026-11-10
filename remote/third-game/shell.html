@@ -1196,7 +1196,18 @@ body.shown #game { opacity: 1; }
             if (!isFinite(seconds)) seconds = 8;
             coverTimer = setTimeout(function () { hideCover('timeout'); }, seconds * 1000);
         });
-        gameFrame.src = gameUrl;
+        // 同網域的遊戲頁加 v 避免 index.html 吃舊快取
+        var frameUrl = gameUrl;
+        try {
+            var parsedUrl = new URL(gameUrl, location.href);
+            if (parsedUrl.origin === location.origin) {
+                parsedUrl.searchParams.set('v', String(Date.now()));
+                frameUrl = parsedUrl.toString();
+            }
+        } catch (error) {
+            // 網址無法解析就維持原樣
+        }
+        gameFrame.src = frameUrl;
         // 遊戲啟動時只讀一次旗標 不能等 load 才寫 載入前就持續寫進去
         var desktopRatio = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
         if (desktopRatio) {
