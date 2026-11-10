@@ -8143,7 +8143,7 @@ System.register("bundle://1001/_virtual/FinishSpinTask.ts", ['./rollupPluginModL
 });
 
 System.register("bundle://1001/_virtual/FixedRatioFrame.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './env', './GameConfigManager.ts'], function (exports) {
-  var _inheritsLoose, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, sys, view, Rect, screen, director, Camera, Component, ImageAsset, assetManager, PREVIEW, GameConfigManager;
+  var _inheritsLoose, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, sys, view, Component, ImageAsset, assetManager, PREVIEW, GameConfigManager;
   return {
     setters: [function (module) {
       _inheritsLoose = module.inheritsLoose;
@@ -8155,10 +8155,6 @@ System.register("bundle://1001/_virtual/FixedRatioFrame.ts", ['./rollupPluginMod
       _decorator = module._decorator;
       sys = module.sys;
       view = module.view;
-      Rect = module.Rect;
-      screen = module.screen;
-      director = module.director;
-      Camera = module.Camera;
       Component = module.Component;
       ImageAsset = module.ImageAsset;
       assetManager = module.assetManager;
@@ -8186,7 +8182,7 @@ System.register("bundle://1001/_virtual/FixedRatioFrame.ts", ['./rollupPluginMod
         return PREVIEW;
       }
 
-      /** 固定比例時把所有相機裁在設計框內 並在黑邊鋪背景圖 不是固定比例就什麼都不做 */
+      /** 固定比例時在畫布上面蓋住設計框外的黑邊 黑邊鋪背景圖 不是固定比例就什麼都不做 */
       var FixedRatioFrame = exports('FixedRatioFrame', (_dec = ccclass('1001/FixedRatioFrame'), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
         _inheritsLoose(FixedRatioFrame, _Component);
         function FixedRatioFrame() {
@@ -8195,9 +8191,42 @@ System.register("bundle://1001/_virtual/FixedRatioFrame.ts", ['./rollupPluginMod
             args[_key] = arguments[_key];
           }
           _this = _Component.call.apply(_Component, [this].concat(args)) || this;
-          _this.backdropEl = null;
+          _this.bars = [];
           _this.backdropUrls = null;
           _this.backdropFree = false;
+          _this.layout = function () {
+            if (!isFixedRatio()) {
+              for (var _iterator = _createForOfIteratorHelperLoose(_this.bars), _step; !(_step = _iterator()).done;) {
+                var bar = _step.value;
+                bar.style.display = 'none';
+              }
+              return;
+            }
+            _this.ensureBars();
+            var design = view.getDesignResolutionSize();
+            var winW = window.innerWidth;
+            var winH = window.innerHeight;
+            var designAspect = design.width / design.height;
+            // 設計框置中 框外的兩條就是黑邊
+            var frameW = winW;
+            var frameH = winH;
+            if (winW / winH > designAspect) frameW = winH * designAspect;else frameH = winW / designAspect;
+            var gapX = (winW - frameW) / 2;
+            var gapY = (winH - frameH) / 2;
+            var _this$bars = _this.bars,
+              first = _this$bars[0],
+              second = _this$bars[1];
+            if (gapX >= 1) {
+              _this.place(first, 0, 0, gapX, winH);
+              _this.place(second, winW - gapX, 0, gapX, winH);
+            } else if (gapY >= 1) {
+              _this.place(first, 0, 0, winW, gapY);
+              _this.place(second, 0, winH - gapY, winW, gapY);
+            } else {
+              first.style.display = 'none';
+              second.style.display = 'none';
+            }
+          };
           return _this;
         }
         /**
@@ -8214,55 +8243,44 @@ System.register("bundle://1001/_virtual/FixedRatioFrame.ts", ['./rollupPluginMod
         var _proto = FixedRatioFrame.prototype;
         _proto.onLoad = function onLoad() {
           FixedRatioFrame.instance = this;
-          view.on('design-resolution-changed', this.refit, this);
-          this.refit();
+          view.on('design-resolution-changed', this.layout, this);
+          window.addEventListener('resize', this.layout);
+          this.layout();
         };
         _proto.start = function start() {
           void this.loadBackdrop();
         };
         _proto.onDestroy = function onDestroy() {
-          var _this$backdropEl;
-          view.off('design-resolution-changed', this.refit, this);
-          this.applyRect(new Rect(0, 0, 1, 1));
-          (_this$backdropEl = this.backdropEl) == null || _this$backdropEl.remove();
-          this.backdropEl = null;
+          view.off('design-resolution-changed', this.layout, this);
+          window.removeEventListener('resize', this.layout);
+          for (var _iterator2 = _createForOfIteratorHelperLoose(this.bars), _step2; !(_step2 = _iterator2()).done;) {
+            var bar = _step2.value;
+            bar.remove();
+          }
+          this.bars = [];
           if (FixedRatioFrame.instance === this) FixedRatioFrame.instance = null;
         };
-        _proto.refit = function refit() {
-          if (!isFixedRatio()) {
-            this.applyRect(new Rect(0, 0, 1, 1));
-            return;
-          }
-          var design = view.getDesignResolutionSize();
-          var win = screen.windowSize;
-          var designAspect = design.width / design.height;
-          var winAspect = win.width / win.height;
-          var rect = new Rect(0, 0, 1, 1);
-          if (winAspect > designAspect) {
-            rect.width = designAspect / winAspect;
-            rect.x = (1 - rect.width) / 2;
-          } else {
-            rect.height = winAspect / designAspect;
-            rect.y = (1 - rect.height) / 2;
-          }
-          this.applyRect(rect);
+        _proto.place = function place(el, x, y, w, h) {
+          el.style.display = 'block';
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.width = w + "px";
+          el.style.height = h + "px";
         };
-        _proto.applyRect = function applyRect(rect) {
-          var scene = director.getScene();
-          if (!scene) return;
-          for (var _iterator = _createForOfIteratorHelperLoose(scene.getComponentsInChildren(Camera)), _step; !(_step = _iterator()).done;) {
-            var camera = _step.value;
-            // 畫到貼圖的相機不是畫到螢幕 不裁
-            if (camera.targetTexture) continue;
-            camera.rect = rect;
-            // 引擎改 rect 不會重算寬高比 要自己重設一次
-            var inner = camera.camera;
-            if (inner != null && inner.window) inner.resize(inner.window.width, inner.window.height);
+        _proto.ensureBars = function ensureBars() {
+          if (this.bars.length) return;
+          for (var i = 0; i < 2; i++) {
+            var el = document.createElement('div');
+            // 蓋在畫布上面 不擋操作 沒有圖時就是純黑
+            el.style.cssText = 'position:fixed;display:none;z-index:2147483000;pointer-events:none;background-color:#000;background-attachment:fixed;background-size:cover;background-position:center;background-repeat:no-repeat';
+            document.body.appendChild(el);
+            this.bars.push(el);
           }
+          this.applyBackdrop();
         };
         _proto.loadBackdrop = /*#__PURE__*/function () {
           var _loadBackdrop = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-            var bundle, paths, missing, _yield$Promise$all, main, free;
+            var bundle, paths, _yield$Promise$all, main, free;
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
@@ -8272,27 +8290,22 @@ System.register("bundle://1001/_virtual/FixedRatioFrame.ts", ['./rollupPluginMod
                   }
                   return _context.abrupt("return");
                 case 2:
-                  bundle = assetManager.getBundle(GameConfigManager.GAMEID);
+                  _context.next = 4;
+                  return this.waitBundle();
+                case 4:
+                  bundle = _context.sent;
                   paths = [BACKDROP_MAIN_PATH, BACKDROP_FREE_PATH];
-                  if (bundle) {
-                    _context.next = 7;
+                  if (!(!bundle || !paths.every(function (path) {
+                    return bundle.getInfoWithPath(path, ImageAsset);
+                  }))) {
+                    _context.next = 9;
                     break;
                   }
-                  console.warn('[FixedRatioFrame] 找不到遊戲 bundle 沒有黑邊背景圖', GameConfigManager.GAMEID);
+                  console.warn('[FixedRatioFrame] 沒有黑邊背景圖 黑邊維持純黑');
                   return _context.abrupt("return");
-                case 7:
-                  missing = paths.filter(function (path) {
-                    return !bundle.getInfoWithPath(path, ImageAsset);
-                  });
-                  if (!missing.length) {
-                    _context.next = 11;
-                    break;
-                  }
-                  console.warn('[FixedRatioFrame] bundle 內找不到黑邊背景圖', missing);
-                  return _context.abrupt("return");
-                case 11:
-                  _context.prev = 11;
-                  _context.next = 14;
+                case 9:
+                  _context.prev = 9;
+                  _context.next = 12;
                   return Promise.all(paths.map(function (path) {
                     return new Promise(function (resolve, reject) {
                       bundle.load(path, ImageAsset, function (error, asset) {
@@ -8300,49 +8313,95 @@ System.register("bundle://1001/_virtual/FixedRatioFrame.ts", ['./rollupPluginMod
                       });
                     });
                   }));
-                case 14:
+                case 12:
                   _yield$Promise$all = _context.sent;
                   main = _yield$Promise$all[0];
                   free = _yield$Promise$all[1];
                   if (this.isValid) {
-                    _context.next = 19;
+                    _context.next = 17;
                     break;
                   }
                   return _context.abrupt("return");
-                case 19:
+                case 17:
                   this.backdropUrls = {
                     main: main,
                     free: free
                   };
-                  console.log('[FixedRatioFrame] 黑邊背景圖已載入', main, free);
                   this.applyBackdrop();
-                  _context.next = 27;
+                  _context.next = 24;
                   break;
+                case 21:
+                  _context.prev = 21;
+                  _context.t0 = _context["catch"](9);
+                  console.warn('[FixedRatioFrame] 讀取黑邊背景圖失敗 黑邊維持純黑', _context.t0);
                 case 24:
-                  _context.prev = 24;
-                  _context.t0 = _context["catch"](11);
-                  console.warn('[FixedRatioFrame] 讀取黑邊背景圖失敗 略過', _context.t0);
-                case 27:
                 case "end":
                   return _context.stop();
               }
-            }, _callee, this, [[11, 24]]);
+            }, _callee, this, [[9, 21]]);
           }));
           function loadBackdrop() {
             return _loadBackdrop.apply(this, arguments);
           }
           return loadBackdrop;
+        }() // bundle 在 GameRoot 初始化時才載入 這裡等它出現 最多等一分鐘
+        ;
+
+        _proto.waitBundle = /*#__PURE__*/
+        function () {
+          var _waitBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+            var i, bundle;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  i = 0;
+                case 1:
+                  if (!(i < 600)) {
+                    _context2.next = 12;
+                    break;
+                  }
+                  bundle = assetManager.getBundle(GameConfigManager.GAMEID);
+                  if (!bundle) {
+                    _context2.next = 5;
+                    break;
+                  }
+                  return _context2.abrupt("return", bundle);
+                case 5:
+                  _context2.next = 7;
+                  return new Promise(function (resolve) {
+                    return setTimeout(resolve, 100);
+                  });
+                case 7:
+                  if (this.isValid) {
+                    _context2.next = 9;
+                    break;
+                  }
+                  return _context2.abrupt("return", null);
+                case 9:
+                  i++;
+                  _context2.next = 1;
+                  break;
+                case 12:
+                  return _context2.abrupt("return", null);
+                case 13:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, this);
+          }));
+          function waitBundle() {
+            return _waitBundle.apply(this, arguments);
+          }
+          return waitBundle;
         }();
         _proto.applyBackdrop = function applyBackdrop() {
           var urls = this.backdropUrls;
-          if (!urls) return;
-          if (!this.backdropEl) {
-            var el = document.createElement('div');
-            el.style.cssText = 'position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:-1;background-size:cover;background-position:center;background-repeat:no-repeat';
-            document.body.insertBefore(el, document.body.firstChild);
-            this.backdropEl = el;
+          if (!urls || !this.bars.length) return;
+          var image = "url(\"" + (this.backdropFree ? urls.free : urls.main).replace(/"/g, '%22') + "\")";
+          for (var _iterator3 = _createForOfIteratorHelperLoose(this.bars), _step3; !(_step3 = _iterator3()).done;) {
+            var bar = _step3.value;
+            bar.style.backgroundImage = image;
           }
-          this.backdropEl.style.backgroundImage = "url(\"" + (this.backdropFree ? urls.free : urls.main).replace(/"/g, '%22') + "\")";
           // 另一張先載進快取 切換時不會閃
           new Image().src = this.backdropFree ? urls.main : urls.free;
         };
