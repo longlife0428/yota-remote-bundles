@@ -60,7 +60,7 @@
             }
         ],
         "bundleVers": {
-            "1001": "46b78",
+            "1001": "f3673",
             "internal": "d0abe",
             "main": "d19c8"
         },
@@ -77,7 +77,7 @@
     },
     "scripting": {
         "scriptPackages": [
-            "../src/chunks/bundle.bcbf0.js"
+            "../src/chunks/bundle.30131.js"
         ]
     },
     "launch": {

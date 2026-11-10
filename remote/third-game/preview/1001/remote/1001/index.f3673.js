@@ -1,6 +1,6 @@
-System.register("chunks:///_virtual/1001", ['./GameMain_1001.ts', './GameRoot.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './SpinSkipConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SkipWait.ts', './SpinShortcutController.ts', './SpinSkipController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './NativeBundleUpdateView.ts', './NativeBundleUpdater.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './eyeofhorus.ts', './index.ts', './mock-shared.ts', './slot-api-mock.ts', './start.ts', './types.ts', './simple-mock.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './SymbolCell.ts', './SymbolImageManager.ts', './SymbolImageSet.ts', './SymbolState.ts', './SymbolView.ts', './SymbolViewErase.ts', './SymbolViewMultiplier.ts', './SymbolViewSpine.ts', './ReelView.ts', './ReelView_1001.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './SlotGameMain.ts', './FGState_1001.ts', './GameState.ts', './GameStateKey.ts', './NGState_1001.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './WinFreeGamePopupTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './SpinTypes.ts', './SubGameData.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseButton.ts', './ButtonState.ts', './ButtonVariant.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BuyFeaturePopupView.ts', './CameraSyncOrtho.ts', './CollectMulEffect.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './FixedRatioFrame.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './JackpotView.ts', './LoadingModel.ts', './LoadingView.ts', './LoadingViewModel.ts', './AlertView.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SelectBetView.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './RollingNumberLabel.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './WinAnimationView.ts', './WinBarMarqueeView.ts', './WinFreeGamePopupView.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts', './SpineSafe.ts'], function () {
+System.register("chunks:///_virtual/1001", ['./GameMain_1001.ts', './GameRoot.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './SpinSkipConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SkipWait.ts', './SpinShortcutController.ts', './SpinSkipController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './NativeBundleUpdateView.ts', './NativeBundleUpdater.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './eyeofhorus.ts', './index.ts', './mock-shared.ts', './slot-api-mock.ts', './start.ts', './types.ts', './simple-mock.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './SymbolCell.ts', './SymbolImageManager.ts', './SymbolImageSet.ts', './SymbolState.ts', './SymbolView.ts', './SymbolViewErase.ts', './SymbolViewMultiplier.ts', './SymbolViewSpine.ts', './ReelView.ts', './ReelView_1001.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './SlotGameMain.ts', './FGState_1001.ts', './GameState.ts', './GameStateKey.ts', './NGState_1001.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './WinFreeGamePopupTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './SpinTypes.ts', './SubGameData.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseButton.ts', './ButtonState.ts', './ButtonVariant.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BuyFeaturePopupView.ts', './CameraSyncOrtho.ts', './CollectMulEffect.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './JackpotView.ts', './LoadingModel.ts', './LoadingView.ts', './LoadingViewModel.ts', './AlertView.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SelectBetView.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './RollingNumberLabel.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './WinAnimationView.ts', './WinBarMarqueeView.ts', './WinFreeGamePopupView.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts', './SpineSafe.ts'], function () {
   return {
-    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
   };
 });
@@ -6782,8 +6782,8 @@ System.register("chunks:///_virtual/DebugPanel.ts", ['./rollupPluginModLoBabelHe
   };
 });
 
-System.register("chunks:///_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './FixedRatioFrame.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _createClass, cclegacy, ResolutionPolicy, view, screen, isFixedRatio, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
+System.register("chunks:///_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _createClass, cclegacy, ResolutionPolicy, view, screen, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
       _createClass = module.createClass;
@@ -6792,8 +6792,6 @@ System.register("chunks:///_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelH
       ResolutionPolicy = module.ResolutionPolicy;
       view = module.view;
       screen = module.screen;
-    }, function (module) {
-      isFixedRatio = module.isFixedRatio;
     }, function (module) {
       gameRuntimeEventBus = module.gameRuntimeEventBus;
     }, function (module) {
@@ -6843,7 +6841,8 @@ System.register("chunks:///_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelH
           }
           this.setOrientation(next);
           // 固定比例由 entry 判斷 沒有旗標一律依容器撲滿
-          var policy = isFixedRatio() ? ResolutionPolicy.SHOW_ALL : ResolutionPolicy.FIXED_HEIGHT;
+          var fixedRatio = globalThis.__subGameFixedRatio__ === true;
+          var policy = fixedRatio ? ResolutionPolicy.SHOW_ALL : ResolutionPolicy.FIXED_HEIGHT;
           next == 'landscape' ? view.setDesignResolutionSize(1280, 720, policy) : view.setDesignResolutionSize(720, 1280, policy);
         };
         _createClass(DeviceStore, [{
@@ -8133,276 +8132,6 @@ System.register("chunks:///_virtual/FinishSpinTask.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("chunks:///_virtual/FixedRatioFrame.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './env', './GameConfigManager.ts'], function (exports) {
-  var _inheritsLoose, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, sys, view, Component, ImageAsset, assetManager, PREVIEW, GameConfigManager;
-  return {
-    setters: [function (module) {
-      _inheritsLoose = module.inheritsLoose;
-      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
-      _asyncToGenerator = module.asyncToGenerator;
-      _regeneratorRuntime = module.regeneratorRuntime;
-    }, function (module) {
-      cclegacy = module.cclegacy;
-      _decorator = module._decorator;
-      sys = module.sys;
-      view = module.view;
-      Component = module.Component;
-      ImageAsset = module.ImageAsset;
-      assetManager = module.assetManager;
-    }, function (module) {
-      PREVIEW = module.PREVIEW;
-    }, function (module) {
-      GameConfigManager = module.default;
-    }],
-    execute: function () {
-      exports('isFixedRatio', isFixedRatio);
-      var _dec, _class, _class2;
-      cclegacy._RF.push({}, "c83d10EFINI9a2cR0u+XJ53", "FixedRatioFrame", undefined);
-      var ccclass = _decorator.ccclass;
-
-      // 黑邊背景圖 放在遊戲包裡
-      var BACKDROP_MAIN_PATH = 'resources/Images/backdrop_main';
-      var BACKDROP_FREE_PATH = 'resources/Images/backdrop_free';
-
-      /**
-       * 是否固定比例 entry 或殼頁會設旗標 預覽沒有旗標 跨網域的殼頁也寫不進來 桌面瀏覽器直接視為固定比例
-       */
-      function isFixedRatio() {
-        if (!sys.isBrowser) return false;
-        if (globalThis.__subGameFixedRatio__ === true) return true;
-        return PREVIEW;
-      }
-
-      /** 固定比例時在畫布上面蓋住設計框外的黑邊 黑邊鋪背景圖 不是固定比例就什麼都不做 */
-      var FixedRatioFrame = exports('FixedRatioFrame', (_dec = ccclass('1001/FixedRatioFrame'), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
-        _inheritsLoose(FixedRatioFrame, _Component);
-        function FixedRatioFrame() {
-          var _this;
-          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-          }
-          _this = _Component.call.apply(_Component, [this].concat(args)) || this;
-          _this.bars = [];
-          _this.backdropUrls = null;
-          _this.backdropFree = false;
-          _this.layout = function () {
-            if (!isFixedRatio()) {
-              for (var _iterator = _createForOfIteratorHelperLoose(_this.bars), _step; !(_step = _iterator()).done;) {
-                var bar = _step.value;
-                bar.style.display = 'none';
-              }
-              return;
-            }
-            _this.ensureBars();
-            var design = view.getDesignResolutionSize();
-            var winW = window.innerWidth;
-            var winH = window.innerHeight;
-            var designAspect = design.width / design.height;
-            // 設計框置中 框外的兩條就是黑邊
-            var frameW = winW;
-            var frameH = winH;
-            if (winW / winH > designAspect) frameW = winH * designAspect;else frameH = winW / designAspect;
-            var gapX = (winW - frameW) / 2;
-            var gapY = (winH - frameH) / 2;
-            var _this$bars = _this.bars,
-              first = _this$bars[0],
-              second = _this$bars[1];
-            if (gapX >= 1) {
-              _this.place(first, 0, 0, gapX, winH);
-              _this.place(second, winW - gapX, 0, gapX, winH);
-            } else if (gapY >= 1) {
-              _this.place(first, 0, 0, winW, gapY);
-              _this.place(second, 0, winH - gapY, winW, gapY);
-            } else {
-              first.style.display = 'none';
-              second.style.display = 'none';
-            }
-          };
-          return _this;
-        }
-        /**
-         * 切換一般或免費遊戲的黑邊背景圖
-         *
-         * @param free 是否為免費遊戲
-         */
-        FixedRatioFrame.setFree = function setFree(free) {
-          var frame = FixedRatioFrame.instance;
-          if (!frame) return;
-          frame.backdropFree = free;
-          frame.applyBackdrop();
-        };
-        var _proto = FixedRatioFrame.prototype;
-        _proto.onLoad = function onLoad() {
-          FixedRatioFrame.instance = this;
-          view.on('design-resolution-changed', this.layout, this);
-          window.addEventListener('resize', this.layout);
-          this.layout();
-        };
-        _proto.start = function start() {
-          void this.loadBackdrop();
-        };
-        _proto.onDestroy = function onDestroy() {
-          view.off('design-resolution-changed', this.layout, this);
-          window.removeEventListener('resize', this.layout);
-          for (var _iterator2 = _createForOfIteratorHelperLoose(this.bars), _step2; !(_step2 = _iterator2()).done;) {
-            var bar = _step2.value;
-            bar.remove();
-          }
-          this.bars = [];
-          if (FixedRatioFrame.instance === this) FixedRatioFrame.instance = null;
-        };
-        _proto.place = function place(el, x, y, w, h) {
-          el.style.display = 'block';
-          el.style.left = x + "px";
-          el.style.top = y + "px";
-          el.style.width = w + "px";
-          el.style.height = h + "px";
-        };
-        _proto.ensureBars = function ensureBars() {
-          if (this.bars.length) return;
-          for (var i = 0; i < 2; i++) {
-            var el = document.createElement('div');
-            // 蓋在畫布上面 不擋操作 沒有圖時就是純黑
-            el.style.cssText = 'position:fixed;display:none;z-index:2147483000;pointer-events:none;background-color:#000;background-attachment:fixed;background-size:cover;background-position:center;background-repeat:no-repeat';
-            document.body.appendChild(el);
-            this.bars.push(el);
-          }
-          this.applyBackdrop();
-        };
-        _proto.loadBackdrop = /*#__PURE__*/function () {
-          var _loadBackdrop = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-            var bundle, paths, _yield$Promise$all, main, free;
-            return _regeneratorRuntime().wrap(function _callee$(_context) {
-              while (1) switch (_context.prev = _context.next) {
-                case 0:
-                  if (isFixedRatio()) {
-                    _context.next = 2;
-                    break;
-                  }
-                  return _context.abrupt("return");
-                case 2:
-                  _context.next = 4;
-                  return this.waitBundle();
-                case 4:
-                  bundle = _context.sent;
-                  paths = [BACKDROP_MAIN_PATH, BACKDROP_FREE_PATH];
-                  if (!(!bundle || !paths.every(function (path) {
-                    return bundle.getInfoWithPath(path, ImageAsset);
-                  }))) {
-                    _context.next = 9;
-                    break;
-                  }
-                  console.warn('[FixedRatioFrame] 沒有黑邊背景圖 黑邊維持純黑');
-                  return _context.abrupt("return");
-                case 9:
-                  _context.prev = 9;
-                  _context.next = 12;
-                  return Promise.all(paths.map(function (path) {
-                    return new Promise(function (resolve, reject) {
-                      bundle.load(path, ImageAsset, function (error, asset) {
-                        return error ? reject(error) : resolve(asset.nativeUrl);
-                      });
-                    });
-                  }));
-                case 12:
-                  _yield$Promise$all = _context.sent;
-                  main = _yield$Promise$all[0];
-                  free = _yield$Promise$all[1];
-                  if (this.isValid) {
-                    _context.next = 17;
-                    break;
-                  }
-                  return _context.abrupt("return");
-                case 17:
-                  this.backdropUrls = {
-                    main: main,
-                    free: free
-                  };
-                  this.applyBackdrop();
-                  _context.next = 24;
-                  break;
-                case 21:
-                  _context.prev = 21;
-                  _context.t0 = _context["catch"](9);
-                  console.warn('[FixedRatioFrame] 讀取黑邊背景圖失敗 黑邊維持純黑', _context.t0);
-                case 24:
-                case "end":
-                  return _context.stop();
-              }
-            }, _callee, this, [[9, 21]]);
-          }));
-          function loadBackdrop() {
-            return _loadBackdrop.apply(this, arguments);
-          }
-          return loadBackdrop;
-        }() // bundle 在 GameRoot 初始化時才載入 這裡等它出現 最多等一分鐘
-        ;
-
-        _proto.waitBundle = /*#__PURE__*/
-        function () {
-          var _waitBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-            var i, bundle;
-            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-              while (1) switch (_context2.prev = _context2.next) {
-                case 0:
-                  i = 0;
-                case 1:
-                  if (!(i < 600)) {
-                    _context2.next = 12;
-                    break;
-                  }
-                  bundle = assetManager.getBundle(GameConfigManager.GAMEID);
-                  if (!bundle) {
-                    _context2.next = 5;
-                    break;
-                  }
-                  return _context2.abrupt("return", bundle);
-                case 5:
-                  _context2.next = 7;
-                  return new Promise(function (resolve) {
-                    return setTimeout(resolve, 100);
-                  });
-                case 7:
-                  if (this.isValid) {
-                    _context2.next = 9;
-                    break;
-                  }
-                  return _context2.abrupt("return", null);
-                case 9:
-                  i++;
-                  _context2.next = 1;
-                  break;
-                case 12:
-                  return _context2.abrupt("return", null);
-                case 13:
-                case "end":
-                  return _context2.stop();
-              }
-            }, _callee2, this);
-          }));
-          function waitBundle() {
-            return _waitBundle.apply(this, arguments);
-          }
-          return waitBundle;
-        }();
-        _proto.applyBackdrop = function applyBackdrop() {
-          var urls = this.backdropUrls;
-          if (!urls || !this.bars.length) return;
-          var image = "url(\"" + (this.backdropFree ? urls.free : urls.main).replace(/"/g, '%22') + "\")";
-          for (var _iterator3 = _createForOfIteratorHelperLoose(this.bars), _step3; !(_step3 = _iterator3()).done;) {
-            var bar = _step3.value;
-            bar.style.backgroundImage = image;
-          }
-          // 另一張先載進快取 切換時不會閃
-          new Image().src = this.backdropFree ? urls.main : urls.free;
-        };
-        return FixedRatioFrame;
-      }(Component), _class2.instance = null, _class2)) || _class));
-      cclegacy._RF.pop();
-    }
-  };
-});
-
 System.register("chunks:///_virtual/GameConfig.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy;
   return {
@@ -8768,8 +8497,8 @@ System.register("chunks:///_virtual/GameLaunchContext.ts", ['cc'], function (exp
   };
 });
 
-System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './GameViewAdapter.ts', './AppAssetBundle.ts', './AppUtility.ts', './StoreMap.ts', './SlotApiTypes.ts', './SlotMachineModel.ts', './GamePopupManager.ts', './AppAudio.ts', './AudioConfig.ts', './EagleTracker.ts', './TrackerMap.ts', './GameRuntimeEventBus.ts', './SlotGameMain.ts', './GameRoot.ts', './FixedRatioFrame.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './DirectorSpeedHook.ts', './GameConfigManager.ts', './GameStateKey.ts', './SpinResultHandler.ts', './NGState_1001.ts', './FGState_1001.ts', './SlotGameDefinition.ts', './SubGameData.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Prefab, director, view, Camera, sp, Node, UITransform, JsonAsset, StoreManager, GameViewAdapter, AppAssetBundle, AppUtility, GAMESTOREMAP, TURBOSTATUSMAP, isRoundInProgress, SlotMachineModel, SlotMachineState, GamePopupManager, AppAudio, EFFECTSMAP, MUSICMAP, EagleTracker, TrackerMap, gameRuntimeEventBus, SlotGameMain, GameRoot, FixedRatioFrame, parsePresentationConfig, PRESENTATION_CONFIG_PATH, PresentationStore, parseReelConfig, REEL_CONFIG_PATH, parseSceneSpeedConfig, ReelTimingDebugStore, SceneSpeedStore, SceneSpeedActivationMode, installDirectorSpeedHook, setDirectorSpeedFactor, resetDirectorSpeedFactor, GameConfigManager, GameStateKey, SpinResultHandler, NGState_1001, FGState_1001, SLOT_GAME_DEFINITION, getSubGameData, GAME_EVENT_TYPE;
+System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './GameViewAdapter.ts', './AppAssetBundle.ts', './AppUtility.ts', './StoreMap.ts', './SlotApiTypes.ts', './SlotMachineModel.ts', './GamePopupManager.ts', './AppAudio.ts', './AudioConfig.ts', './EagleTracker.ts', './TrackerMap.ts', './GameRuntimeEventBus.ts', './SlotGameMain.ts', './GameRoot.ts', './TemplateView.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './DirectorSpeedHook.ts', './GameConfigManager.ts', './GameStateKey.ts', './SpinResultHandler.ts', './NGState_1001.ts', './FGState_1001.ts', './SlotGameDefinition.ts', './SubGameData.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Prefab, director, view, Widget, Camera, sp, Node, UITransform, JsonAsset, StoreManager, GameViewAdapter, AppAssetBundle, AppUtility, GAMESTOREMAP, TURBOSTATUSMAP, isRoundInProgress, SlotMachineModel, SlotMachineState, GamePopupManager, AppAudio, EFFECTSMAP, MUSICMAP, EagleTracker, TrackerMap, gameRuntimeEventBus, SlotGameMain, GameRoot, TemplateView, parsePresentationConfig, PRESENTATION_CONFIG_PATH, PresentationStore, parseReelConfig, REEL_CONFIG_PATH, parseSceneSpeedConfig, ReelTimingDebugStore, SceneSpeedStore, SceneSpeedActivationMode, installDirectorSpeedHook, setDirectorSpeedFactor, resetDirectorSpeedFactor, GameConfigManager, GameStateKey, SpinResultHandler, NGState_1001, FGState_1001, SLOT_GAME_DEFINITION, getSubGameData, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -8785,6 +8514,7 @@ System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabe
       Prefab = module.Prefab;
       director = module.director;
       view = module.view;
+      Widget = module.Widget;
       Camera = module.Camera;
       sp = module.sp;
       Node = module.Node;
@@ -8824,7 +8554,7 @@ System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabe
     }, function (module) {
       GameRoot = module.GameRoot;
     }, function (module) {
-      FixedRatioFrame = module.FixedRatioFrame;
+      TemplateView = module.TemplateView;
     }, function (module) {
       parsePresentationConfig = module.parsePresentationConfig;
       PRESENTATION_CONFIG_PATH = module.PRESENTATION_CONFIG_PATH;
@@ -8950,6 +8680,22 @@ System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabe
           _this.entryRestored = false;
           // 這一轉開始時的速度檔位 轉動中不隨加速鈕變動
           _this.spinTurboIndex = null;
+          // 直版遊戲層的購買按鈕對齊 Template 直版那顆的位置 只對位置
+          _this.alignBuyButton = function () {
+            var _GameRoot$getInstance, _this$viewV;
+            var anchor = (_GameRoot$getInstance = GameRoot.getInstance()) == null || (_GameRoot$getInstance = _GameRoot$getInstance.templateViewH) == null || (_GameRoot$getInstance = _GameRoot$getInstance.getComponent(TemplateView)) == null ? void 0 : _GameRoot$getInstance.buyFeatureBtn;
+            var button = (_this$viewV = _this.viewV) == null || (_this$viewV = _this$viewV.buySuperBtn) == null ? void 0 : _this$viewV.node;
+            if (!(anchor != null && anchor.isValid) || !(button != null && button.isValid)) return;
+            // 它自己的 Widget 會把位置對回去 關掉才不會打架
+            var widget = button.getComponent(Widget);
+            if (widget != null && widget.enabled) widget.enabled = false;
+            button.setWorldPosition(anchor.worldPosition);
+          };
+          // 版面改變時對位 延後一幀讓兩邊的 Widget 先更新完
+          _this.requestAlignBuyButton = function () {
+            _this.unschedule(_this.alignBuyButton);
+            _this.scheduleOnce(_this.alignBuyButton, 0);
+          };
           return _this;
         }
         var _proto = GameMain_1001.prototype;
@@ -9048,7 +8794,9 @@ System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabe
           // [EVT-GAME-008] 裝置直橫版切換改由 EventBus 觸發
           this.subscribeEvent(gameRuntimeEventBus, GAME_EVENT_TYPE.DEVICE_ORIENTATION_CHANGED, function () {
             _this3.orientation.applyOrientation(device.isLandscape);
+            _this3.requestAlignBuyButton();
           });
+          view.on('design-resolution-changed', this.requestAlignBuyButton);
 
           // 這裡原本每次 stateChanged 都把所有符號 spine 的 timeScale 設成 0（"凍住 idle 動畫"）。
           // 移除原因有兩層：
@@ -9203,12 +8951,12 @@ System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabe
         }() /** 轉場門平常關閉 勾選放最上層時搬進中間層最底 蓋過遊戲與 Template 但在彈窗之下 */;
         _proto.setupTransition = function setupTransition() {
           var _director$getScene3,
-            _GameRoot$getInstance,
             _GameRoot$getInstance2,
+            _GameRoot$getInstance3,
             _this5 = this;
           var canvas = (_director$getScene3 = director.getScene()) == null ? void 0 : _director$getScene3.getChildByName('Canvas');
           // if (!canvas) return;
-          var parent = (_GameRoot$getInstance = (_GameRoot$getInstance2 = GameRoot.getInstance()) == null ? void 0 : _GameRoot$getInstance2.middleNode) != null ? _GameRoot$getInstance : canvas;
+          var parent = (_GameRoot$getInstance2 = (_GameRoot$getInstance3 = GameRoot.getInstance()) == null ? void 0 : _GameRoot$getInstance3.middleNode) != null ? _GameRoot$getInstance2 : canvas;
           if (!parent) return;
           this.forEachView(function (v) {
             var _v$transitionDoor2;
@@ -9287,8 +9035,8 @@ System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabe
         ;
 
         _proto.getTransitionDoor = function getTransitionDoor(portrait) {
-          var _this$viewV;
-          return (portrait ? (_this$viewV = this.viewV) != null ? _this$viewV : this.viewH : this.viewH).transitionDoor;
+          var _this$viewV2;
+          return (portrait ? (_this$viewV2 = this.viewV) != null ? _this$viewV2 : this.viewH : this.viewH).transitionDoor;
         };
         /**
          * 轉場動畫置中 縮放交給門節點上的 AdapterNode
@@ -9305,12 +9053,13 @@ System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabe
 
         /** NG 顯示一般背景 FG 顯示免費背景 */;
         _proto.applyBackgroundMode = function applyBackgroundMode(toFree) {
-          var _this7 = this;
+          var _this7 = this,
+            _GameRoot$getInstance4;
           this.forEachView(function (v) {
             _this7.toggleBackground(v.backgroundMain, !toFree);
             _this7.toggleBackground(v.backgroundFree, toFree);
           });
-          FixedRatioFrame.setFree(toFree);
+          (_GameRoot$getInstance4 = GameRoot.getInstance()) == null || _GameRoot$getInstance4.setBackdropFree(toFree);
         }
 
         /**
@@ -9404,6 +9153,8 @@ System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabe
             var sup = Number((_ref = (_cc$buy_super_multipl = cc.buy_super_multiplier) != null ? _cc$buy_super_multipl : cc.buy_triple_multiplier) != null ? _ref : 100);
             this.buyFeature.setMultipliers(sup);
           }
+          // Template 載好之後才對得到位置
+          this.requestAlignBuyButton();
 
           // 還原盤面（需要 config 先更新 strip）
           if (!(init != null && init.machine_info)) return;
@@ -9797,9 +9548,9 @@ System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabe
 
         /** 建立接快停點擊的全螢幕空白節點：放在遊戲畫面之上、Template 之下，只在轉動中啟用 */;
         _proto.setupQuickStopTouch = function setupQuickStopTouch() {
-          var _GameRoot$getInstance3,
+          var _GameRoot$getInstance5,
             _this10 = this;
-          var parent = (_GameRoot$getInstance3 = GameRoot.getInstance()) == null ? void 0 : _GameRoot$getInstance3.gameNode;
+          var parent = (_GameRoot$getInstance5 = GameRoot.getInstance()) == null ? void 0 : _GameRoot$getInstance5.gameNode;
           if (!(parent != null && parent.isValid)) return;
           var node = new Node('QuickStopTouch');
           node.layer = parent.layer;
@@ -9814,6 +9565,7 @@ System.register("chunks:///_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabe
         _proto.onDestroy = function onDestroy() {
           var _this$sceneSpeedUnsub, _this$quickStopTouch;
           view.off('design-resolution-changed', this.refitTransitionDoor);
+          view.off('design-resolution-changed', this.requestAlignBuyButton);
           (_this$sceneSpeedUnsub = this.sceneSpeedUnsubscribe) == null || _this$sceneSpeedUnsub.call(this);
           this.sceneSpeedUnsubscribe = null;
           this.resetPlaybackSpeed();
@@ -10301,8 +10053,8 @@ System.register("chunks:///_virtual/GamePopupManager.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './OrientationController.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './FixedRatioFrame.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, Widget, UITransform, Mask, profiler, Component, sys, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, getSettingStore, createRootStore, NativeBundleUpdateView, LoadingView, FixedRatioFrame, GAME_EVENT_TYPE;
+System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './OrientationController.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, sys, Widget, UITransform, Mask, profiler, Component, ImageAsset, assetManager, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, getSettingStore, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -10317,12 +10069,14 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
       _decorator = module._decorator;
       Node = module.Node;
       view = module.view;
+      sys = module.sys;
       Widget = module.Widget;
       UITransform = module.UITransform;
       Mask = module.Mask;
       profiler = module.profiler;
       Component = module.Component;
-      sys = module.sys;
+      ImageAsset = module.ImageAsset;
+      assetManager = module.assetManager;
       instantiate = module.instantiate;
     }, function (module) {
       StoreManager = module.default;
@@ -10365,8 +10119,6 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
     }, function (module) {
       LoadingView = module.LoadingView;
     }, function (module) {
-      FixedRatioFrame = module.FixedRatioFrame;
-    }, function (module) {
       GAME_EVENT_TYPE = module.GAME_EVENT_TYPE;
     }],
     execute: function () {
@@ -10374,6 +10126,10 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
       cclegacy._RF.push({}, "b02abkmDM9C5qWrMCQEgpgF", "GameRoot", undefined);
       var ccclass = _decorator.ccclass,
         property = _decorator.property;
+
+      // 固定比例時黑邊的背景圖 放在遊戲包裡
+      var BACKDROP_MAIN_PATH = 'resources/Images/backdrop_main';
+      var BACKDROP_FREE_PATH = 'resources/Images/backdrop_free';
       var GameRoot = exports('GameRoot', (_dec = ccclass('1001/GameRoot'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Node), _dec8 = property(Node), _dec(_class = (_class2 = (_class3 = /*#__PURE__*/function (_EventComponent) {
         _inheritsLoose(GameRoot, _EventComponent);
         function GameRoot() {
@@ -10403,6 +10159,51 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
             if (typeof settings.music === 'boolean') store.setMusicVolumeStore(settings.music ? 1 : 0);
             if (typeof settings.sound === 'boolean') store.setSoundVolumeStore(settings.sound ? 1 : 0);
           };
+          // 黑邊背景圖的網址與目前模式
+          _this.backdropBars = [];
+          _this.backdropUrls = null;
+          _this.backdropFree = false;
+          // 固定比例時在畫布上面蓋住設計框外的兩條黑邊 沒有圖就是純黑
+          _this.layoutBackdrop = function () {
+            if (globalThis.__subGameFixedRatio__ !== true) {
+              for (var _iterator = _createForOfIteratorHelperLoose(_this.backdropBars), _step; !(_step = _iterator()).done;) {
+                var bar = _step.value;
+                bar.style.display = 'none';
+              }
+              return;
+            }
+            if (!_this.backdropBars.length) {
+              for (var i = 0; i < 2; i++) {
+                var el = document.createElement('div');
+                el.style.cssText = 'position:fixed;display:none;z-index:2147483000;pointer-events:none;background-color:#000;background-attachment:fixed;background-size:cover;background-position:center;background-repeat:no-repeat';
+                document.body.appendChild(el);
+                _this.backdropBars.push(el);
+              }
+              _this.applyBackdrop();
+            }
+            var design = view.getDesignResolutionSize();
+            var winW = window.innerWidth;
+            var winH = window.innerHeight;
+            var designAspect = design.width / design.height;
+            var frameW = winW;
+            var frameH = winH;
+            if (winW / winH > designAspect) frameW = winH * designAspect;else frameH = winW / designAspect;
+            var gapX = (winW - frameW) / 2;
+            var gapY = (winH - frameH) / 2;
+            var _this$backdropBars = _this.backdropBars,
+              first = _this$backdropBars[0],
+              second = _this$backdropBars[1];
+            if (gapX >= 1) {
+              _this.placeBar(first, 0, 0, gapX, winH);
+              _this.placeBar(second, winW - gapX, 0, gapX, winH);
+            } else if (gapY >= 1) {
+              _this.placeBar(first, 0, 0, winW, gapY);
+              _this.placeBar(second, 0, winH - gapY, winW, gapY);
+            } else {
+              first.style.display = 'none';
+              second.style.display = 'none';
+            }
+          };
           _this.storeManager = void 0;
           _this.viewStore = void 0;
           _this.viewPool = void 0;
@@ -10429,9 +10230,13 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           this.bindShell();
           this.trackLayer(this.topNode, GameRoot.TOP_LAYER);
           PopupStack.setLayer(this.topNode);
-          if (!this.getComponent(FixedRatioFrame)) this.addComponent(FixedRatioFrame);
           view.on('design-resolution-changed', this.fitContentLayers, this);
           this.fitContentLayers();
+          if (sys.isBrowser) {
+            view.on('design-resolution-changed', this.layoutBackdrop, this);
+            window.addEventListener('resize', this.layoutBackdrop);
+            this.layoutBackdrop();
+          }
         };
         _proto.inShell = function inShell() {
           return typeof window !== 'undefined' && !!window.parent && window.parent !== window;
@@ -10479,9 +10284,9 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
             if (!fx.getComponent(Mask)) fx.addComponent(Mask);
             (_fx$getComponent = fx.getComponent(UITransform)) == null || _fx$getComponent.setContentSize(visible);
           }
-          for (var _iterator = _createForOfIteratorHelperLoose((_this$templateNode$ch = (_this$templateNode = this.templateNode) == null ? void 0 : _this$templateNode.children) != null ? _this$templateNode$ch : []), _step; !(_step = _iterator()).done;) {
+          for (var _iterator2 = _createForOfIteratorHelperLoose((_this$templateNode$ch = (_this$templateNode = this.templateNode) == null ? void 0 : _this$templateNode.children) != null ? _this$templateNode$ch : []), _step2; !(_step2 = _iterator2()).done;) {
             var _this$templateNode$ch, _this$templateNode;
-            var templateView = _step.value;
+            var templateView = _step2.value;
             fitViewToSafeArea(templateView);
           }
         };
@@ -10489,14 +10294,174 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           if (typeof window !== 'undefined') window.removeEventListener('message', this.onShellMessage);
           view.off('design-resolution-changed', this.fitContentLayers, this);
           if (GameRoot.instance === this) GameRoot.instance = null;
+          if (sys.isBrowser) {
+            view.off('design-resolution-changed', this.layoutBackdrop, this);
+            window.removeEventListener('resize', this.layoutBackdrop);
+          }
+          this.removeBackdrop();
           stopGameMock();
           _EventComponent.prototype.onDestroy.call(this);
+        };
+        /** 載入黑邊背景圖並顯示一般背景 只有 entry 判斷為固定比例的網頁才做 沒有圖就略過 */
+        _proto.initBackdrop = /*#__PURE__*/
+        function () {
+          var _initBackdrop = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+            var bundle, paths, _yield$Promise$all, main, free;
+            return _regeneratorRuntime().wrap(function _callee$(_context) {
+              while (1) switch (_context.prev = _context.next) {
+                case 0:
+                  if (!(!sys.isBrowser || globalThis.__subGameFixedRatio__ !== true)) {
+                    _context.next = 2;
+                    break;
+                  }
+                  return _context.abrupt("return");
+                case 2:
+                  _context.next = 4;
+                  return this.waitBundle();
+                case 4:
+                  bundle = _context.sent;
+                  paths = [BACKDROP_MAIN_PATH, BACKDROP_FREE_PATH];
+                  if (!(!bundle || !paths.every(function (path) {
+                    return bundle.getInfoWithPath(path, ImageAsset);
+                  }))) {
+                    _context.next = 8;
+                    break;
+                  }
+                  return _context.abrupt("return");
+                case 8:
+                  _context.prev = 8;
+                  _context.next = 11;
+                  return Promise.all(paths.map(function (path) {
+                    return new Promise(function (resolve, reject) {
+                      bundle.load(path, ImageAsset, function (error, asset) {
+                        return error ? reject(error) : resolve(asset.nativeUrl);
+                      });
+                    });
+                  }));
+                case 11:
+                  _yield$Promise$all = _context.sent;
+                  main = _yield$Promise$all[0];
+                  free = _yield$Promise$all[1];
+                  if (this.isValid) {
+                    _context.next = 16;
+                    break;
+                  }
+                  return _context.abrupt("return");
+                case 16:
+                  this.backdropUrls = {
+                    main: main,
+                    free: free
+                  };
+                  this.applyBackdrop();
+                  _context.next = 23;
+                  break;
+                case 20:
+                  _context.prev = 20;
+                  _context.t0 = _context["catch"](8);
+                  console.warn('[GameRoot] 讀取黑邊背景圖失敗 略過', _context.t0);
+                case 23:
+                case "end":
+                  return _context.stop();
+              }
+            }, _callee, this, [[8, 20]]);
+          }));
+          function initBackdrop() {
+            return _initBackdrop.apply(this, arguments);
+          }
+          return initBackdrop;
+        }()
+        /**
+         * 切換一般或免費遊戲的黑邊背景圖
+         *
+         * @param free 是否為免費遊戲
+         */;
+
+        _proto.setBackdropFree = function setBackdropFree(free) {
+          this.backdropFree = free;
+          this.applyBackdrop();
+        }
+
+        // bundle 在初始化時才載入 等它出現 最多等一分鐘
+        ;
+
+        _proto.waitBundle = /*#__PURE__*/
+        function () {
+          var _waitBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+            var i, bundle;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  i = 0;
+                case 1:
+                  if (!(i < 600)) {
+                    _context2.next = 12;
+                    break;
+                  }
+                  bundle = assetManager.getBundle(GameConfigManager.GAMEID);
+                  if (!bundle) {
+                    _context2.next = 5;
+                    break;
+                  }
+                  return _context2.abrupt("return", bundle);
+                case 5:
+                  _context2.next = 7;
+                  return new Promise(function (resolve) {
+                    return setTimeout(resolve, 100);
+                  });
+                case 7:
+                  if (this.isValid) {
+                    _context2.next = 9;
+                    break;
+                  }
+                  return _context2.abrupt("return", null);
+                case 9:
+                  i++;
+                  _context2.next = 1;
+                  break;
+                case 12:
+                  return _context2.abrupt("return", null);
+                case 13:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, this);
+          }));
+          function waitBundle() {
+            return _waitBundle.apply(this, arguments);
+          }
+          return waitBundle;
+        }();
+        _proto.applyBackdrop = function applyBackdrop() {
+          var urls = this.backdropUrls;
+          if (!urls || !this.backdropBars.length) return;
+          var image = "url(\"" + (this.backdropFree ? urls.free : urls.main).replace(/"/g, '%22') + "\")";
+          for (var _iterator3 = _createForOfIteratorHelperLoose(this.backdropBars), _step3; !(_step3 = _iterator3()).done;) {
+            var bar = _step3.value;
+            bar.style.backgroundImage = image;
+          }
+          // 另一張先載進快取 切換時不會閃
+          new Image().src = this.backdropFree ? urls.main : urls.free;
+        };
+        _proto.placeBar = function placeBar(el, x, y, w, h) {
+          el.style.display = 'block';
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.width = w + "px";
+          el.style.height = h + "px";
+        };
+        _proto.removeBackdrop = function removeBackdrop() {
+          for (var _iterator4 = _createForOfIteratorHelperLoose(this.backdropBars), _step4; !(_step4 = _iterator4()).done;) {
+            var bar = _step4.value;
+            bar.remove();
+          }
+          this.backdropBars = [];
         };
         _proto.start = function start() {
           console.log('GameRoot onStart');
           // 關閉 FPS 顯示
           if (!AppConfig.DEBUG) profiler.hideStats();
           // profiler.showStats();
+          void this.initBackdrop();
           this.initViewPool();
           this.registerStore();
           this.registerReactions();
@@ -10510,8 +10475,8 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
               _this2.setLayerRecursive(child, layer);
               apply(child);
             });
-            for (var _iterator2 = _createForOfIteratorHelperLoose(n.children), _step2; !(_step2 = _iterator2()).done;) {
-              var c = _step2.value;
+            for (var _iterator5 = _createForOfIteratorHelperLoose(n.children), _step5; !(_step5 = _iterator5()).done;) {
+              var c = _step5.value;
               apply(c);
             }
           };
@@ -10519,8 +10484,8 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
         };
         _proto.setLayerRecursive = function setLayerRecursive(node, layer) {
           node.layer = layer;
-          for (var _iterator3 = _createForOfIteratorHelperLoose(node.children), _step3; !(_step3 = _iterator3()).done;) {
-            var c = _step3.value;
+          for (var _iterator6 = _createForOfIteratorHelperLoose(node.children), _step6; !(_step6 = _iterator6()).done;) {
+            var c = _step6.value;
             this.setLayerRecursive(c, layer);
           }
         };
@@ -10571,74 +10536,74 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           this.viewPool = AppViewPool.getInstance();
         };
         _proto.initial = /*#__PURE__*/function () {
-          var _initial = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+          var _initial = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
             var _this$loadingView$get;
             var startTime, updateView, enterStartTime, entered;
-            return _regeneratorRuntime().wrap(function _callee$(_context) {
-              while (1) switch (_context.prev = _context.next) {
+            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+              while (1) switch (_context3.prev = _context3.next) {
                 case 0:
                   startTime = performance.now();
                   EagleTracker.trackerEvent(TrackerMap.GAME_LOAD_START);
                   if (!isMock()) {
-                    _context.next = 5;
+                    _context3.next = 5;
                     break;
                   }
-                  _context.next = 5;
+                  _context3.next = 5;
                   return startGameMock();
                 case 5:
                   console.log('------ [GameRoot] initial ------ ');
 
                   // Native 更新由 1001 自己的 Loading 節點負責；Web 完全略過。
                   if (!sys.isNative) {
-                    _context.next = 14;
+                    _context3.next = 14;
                     break;
                   }
                   updateView = this.node.getComponentInChildren(NativeBundleUpdateView);
                   if (!updateView) {
-                    _context.next = 13;
+                    _context3.next = 13;
                     break;
                   }
-                  _context.next = 11;
+                  _context3.next = 11;
                   return updateView.ensureUpdated();
                 case 11:
-                  _context.next = 14;
+                  _context3.next = 14;
                   break;
                 case 13:
                   console.warn('[GameRoot] 未掛 NativeBundleUpdateView，略過 1001 原生熱更新');
                 case 14:
                   // 3.初始化 i18n
                   console.log('------ [GameRoot] initial initI18n ------ ');
-                  _context.next = 17;
+                  _context3.next = 17;
                   return initI18n(undefined, GameConfigManager.GAMEID);
                 case 17:
                   console.log('------ [GameRoot] loadServerConfig ------ ');
                   //載入 config 檔案
-                  _context.next = 20;
+                  _context3.next = 20;
                   return this.loadServerConfig();
                 case 20:
                   // 2.載入Bundle
                   console.log('------ [GameRoot] loadBundle ------ ');
-                  _context.next = 23;
+                  _context3.next = 23;
                   return this.loadBundle();
                 case 23:
-                  _context.next = 25;
+                  _context3.next = 25;
                   return this.syncResolutionBeforeViewInit();
                 case 25:
                   // 4.初始化 TemplateView
                   console.log('------ [GameRoot] initial addTemplateView ------ ');
-                  _context.next = 28;
+                  _context3.next = 28;
                   return this.addTemplateView();
                 case 28:
                   // 5.連線遊戲伺服器，取得遊戲初始資料
                   console.log('------ [GameRoot] initial addGamePrefab ------ ');
-                  _context.next = 31;
+                  _context3.next = 31;
                   return this.addGamePrefab();
                 case 31:
                   console.log('------ [GameRoot] initial connectGameServer ------ ');
-                  _context.next = 34;
+                  _context3.next = 34;
                   return this.connectGameServer();
                 case 34:
-                  _context.next = 36;
+                  _context3.next = 36;
                   return (_this$loadingView$get = this.loadingView.getComponent(LoadingView)) == null ? void 0 : _this$loadingView$get.fillToEnd();
                 case 36:
                   this.removeLoadingView();
@@ -10661,9 +10626,9 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
                   });
                 case 45:
                 case "end":
-                  return _context.stop();
+                  return _context3.stop();
               }
-            }, _callee, this);
+            }, _callee3, this);
           }));
           function initial() {
             return _initial.apply(this, arguments);
@@ -10671,13 +10636,13 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           return initial;
         }();
         _proto.syncResolutionBeforeViewInit = /*#__PURE__*/function () {
-          var _syncResolutionBeforeViewInit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+          var _syncResolutionBeforeViewInit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
             var _this3 = this;
-            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-              while (1) switch (_context2.prev = _context2.next) {
+            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+              while (1) switch (_context4.prev = _context4.next) {
                 case 0:
                   this.deviceStore.checkOrientation();
-                  _context2.next = 3;
+                  _context4.next = 3;
                   return new Promise(function (resolve) {
                     _this3.scheduleOnce(function () {
                       return resolve();
@@ -10685,9 +10650,9 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
                   });
                 case 3:
                 case "end":
-                  return _context2.stop();
+                  return _context4.stop();
               }
-            }, _callee2, this);
+            }, _callee4, this);
           }));
           function syncResolutionBeforeViewInit() {
             return _syncResolutionBeforeViewInit.apply(this, arguments);
@@ -10733,24 +10698,24 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           this.templateViewH.x = 9999;
         };
         _proto.loadBundle = /*#__PURE__*/function () {
-          var _loadBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+          var _loadBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
             var assetBundle, templatePaths;
-            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
-              while (1) switch (_context3.prev = _context3.next) {
+            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+              while (1) switch (_context5.prev = _context5.next) {
                 case 0:
                   assetBundle = AppAssetBundle.getInstance(GameConfigManager.GAMEID);
                   assetBundle.setImageRootPath('resources/Images/UI/');
                   templatePaths = [VIEWMAP.TEMPLATEVIEW.path, VIEWMAP.TEMPLATEVIEWH.path];
-                  _context3.next = 5;
+                  _context5.next = 5;
                   return assetBundle.preloadPrefabs([].concat(templatePaths, [GAMEVIEWMAP.GAMEPREFAB.path]), this.progressCallback.bind(this));
                 case 5:
-                  _context3.next = 7;
+                  _context5.next = 7;
                   return assetBundle.preloadImages();
                 case 7:
                 case "end":
-                  return _context3.stop();
+                  return _context5.stop();
               }
-            }, _callee3, this);
+            }, _callee5, this);
           }));
           function loadBundle() {
             return _loadBundle.apply(this, arguments);
@@ -10758,26 +10723,26 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           return loadBundle;
         }();
         _proto.connectGameServer = /*#__PURE__*/function () {
-          var _connectGameServer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+          var _connectGameServer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
             var _this$storeManager$ge;
-            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
-              while (1) switch (_context4.prev = _context4.next) {
+            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+              while (1) switch (_context6.prev = _context6.next) {
                 case 0:
                   console.log('------ [GameRoot] connectGameServer ------ ');
                   console.log('------ gameInitial ------');
-                  _context4.next = 4;
+                  _context6.next = 4;
                   return this.storeManager.getHttpClientStore().gameInitial();
                 case 4:
                   console.log('------ gameConfig ------');
-                  _context4.next = 7;
+                  _context6.next = 7;
                   return (_this$storeManager$ge = this.storeManager.getHttpClientStore()) == null ? void 0 : _this$storeManager$ge.gameConfig();
                 case 7:
                   console.log('------ Server  complete ------');
                 case 8:
                 case "end":
-                  return _context4.stop();
+                  return _context6.stop();
               }
-            }, _callee4, this);
+            }, _callee6, this);
           }));
           function connectGameServer() {
             return _connectGameServer.apply(this, arguments);
@@ -10785,17 +10750,17 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           return connectGameServer;
         }();
         _proto.addView = /*#__PURE__*/function () {
-          var _addView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(viewName) {
-            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
-              while (1) switch (_context5.prev = _context5.next) {
+          var _addView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(viewName) {
+            return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+              while (1) switch (_context7.prev = _context7.next) {
                 case 0:
-                  _context5.next = 2;
+                  _context7.next = 2;
                   return this.addViewToLayer(viewName, false);
                 case 2:
                 case "end":
-                  return _context5.stop();
+                  return _context7.stop();
               }
-            }, _callee5, this);
+            }, _callee7, this);
           }));
           function addView(_x) {
             return _addView.apply(this, arguments);
@@ -10803,17 +10768,17 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           return addView;
         }();
         _proto.addVGameView = /*#__PURE__*/function () {
-          var _addVGameView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(viewName) {
-            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
-              while (1) switch (_context6.prev = _context6.next) {
+          var _addVGameView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(viewName) {
+            return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+              while (1) switch (_context8.prev = _context8.next) {
                 case 0:
-                  _context6.next = 2;
+                  _context8.next = 2;
                   return this.addViewToLayer(viewName, true);
                 case 2:
                 case "end":
-                  return _context6.stop();
+                  return _context8.stop();
               }
-            }, _callee6, this);
+            }, _callee8, this);
           }));
           function addVGameView(_x2) {
             return _addVGameView.apply(this, arguments);
@@ -10821,71 +10786,71 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           return addVGameView;
         }();
         _proto.addViewToLayer = /*#__PURE__*/function () {
-          var _addViewToLayer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(viewName, useGameViewPool) {
+          var _addViewToLayer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9(viewName, useGameViewPool) {
             var _yield$coreBundle$get;
             var coreBundle, bundleName, view;
-            return _regeneratorRuntime().wrap(function _callee7$(_context7) {
-              while (1) switch (_context7.prev = _context7.next) {
+            return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+              while (1) switch (_context9.prev = _context9.next) {
                 case 0:
                   if (viewName) {
-                    _context7.next = 2;
+                    _context9.next = 2;
                     break;
                   }
-                  return _context7.abrupt("return");
+                  return _context9.abrupt("return");
                 case 2:
                   // 自動找出對應的 bundle
                   coreBundle = AppAssetBundle.getInstance(GameConfigManager.GAMEID);
                   if (!useGameViewPool) {
-                    _context7.next = 7;
+                    _context9.next = 7;
                     break;
                   }
-                  _context7.t0 = GameConfigManager.GAMEID;
-                  _context7.next = 16;
+                  _context9.t0 = GameConfigManager.GAMEID;
+                  _context9.next = 16;
                   break;
                 case 7:
-                  _context7.next = 9;
+                  _context9.next = 9;
                   return coreBundle.getInfoWithPath(viewName.path);
                 case 9:
-                  _context7.t1 = _yield$coreBundle$get = _context7.sent;
-                  if (!(_context7.t1 != null)) {
-                    _context7.next = 14;
+                  _context9.t1 = _yield$coreBundle$get = _context9.sent;
+                  if (!(_context9.t1 != null)) {
+                    _context9.next = 14;
                     break;
                   }
-                  _context7.t2 = _yield$coreBundle$get;
-                  _context7.next = 15;
+                  _context9.t2 = _yield$coreBundle$get;
+                  _context9.next = 15;
                   break;
                 case 14:
-                  _context7.t2 = GameConfigManager.GAMEID;
+                  _context9.t2 = GameConfigManager.GAMEID;
                 case 15:
-                  _context7.t0 = _context7.t2;
+                  _context9.t0 = _context9.t2;
                 case 16:
-                  bundleName = _context7.t0;
-                  _context7.next = 19;
+                  bundleName = _context9.t0;
+                  _context9.next = 19;
                   return this.viewPool.getView(viewName.path, bundleName);
                 case 19:
-                  view = _context7.sent;
-                  _context7.t3 = viewName.level;
-                  _context7.next = _context7.t3 === VIEWLEVEL.GAME ? 23 : _context7.t3 === VIEWLEVEL.TEMPLATE ? 25 : _context7.t3 === VIEWLEVEL.MIDDLE ? 27 : _context7.t3 === VIEWLEVEL.TOP ? 29 : 31;
+                  view = _context9.sent;
+                  _context9.t3 = viewName.level;
+                  _context9.next = _context9.t3 === VIEWLEVEL.GAME ? 23 : _context9.t3 === VIEWLEVEL.TEMPLATE ? 25 : _context9.t3 === VIEWLEVEL.MIDDLE ? 27 : _context9.t3 === VIEWLEVEL.TOP ? 29 : 31;
                   break;
                 case 23:
                   this.addGameNode(view);
-                  return _context7.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 25:
                   this.addTemplateNode(view);
-                  return _context7.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 27:
                   this.addMiddleNode(view);
-                  return _context7.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 29:
                   this.addTopNode(view);
-                  return _context7.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 31:
-                  return _context7.abrupt("return");
+                  return _context9.abrupt("return");
                 case 32:
                 case "end":
-                  return _context7.stop();
+                  return _context9.stop();
               }
-            }, _callee7, this);
+            }, _callee9, this);
           }));
           function addViewToLayer(_x3, _x4) {
             return _addViewToLayer.apply(this, arguments);
@@ -10907,48 +10872,48 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           (_this$storeManager$ge3 = this.storeManager.getModel('LoadingStore')) == null || _this$storeManager$ge3.setProgress(progress);
         };
         _proto.addTemplateView = /*#__PURE__*/function () {
-          var _addTemplateView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8() {
+          var _addTemplateView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
             var tvHBundleId, tvHPath, tvVBundleId, tvVPath, isPortrait;
-            return _regeneratorRuntime().wrap(function _callee8$(_context8) {
-              while (1) switch (_context8.prev = _context8.next) {
+            return _regeneratorRuntime().wrap(function _callee10$(_context10) {
+              while (1) switch (_context10.prev = _context10.next) {
                 case 0:
                   tvHBundleId = GameConfigManager.GAMEID;
                   tvHPath = VIEWMAP.TEMPLATEVIEW.path;
                   tvVBundleId = GameConfigManager.GAMEID;
                   tvVPath = VIEWMAP.TEMPLATEVIEWH.path;
-                  _context8.t0 = instantiate;
-                  _context8.next = 7;
+                  _context10.t0 = instantiate;
+                  _context10.next = 7;
                   return AppAssetBundle.getInstance(tvHBundleId).loadPrefab(tvHPath);
                 case 7:
-                  _context8.t1 = _context8.sent;
-                  this.templateView = (0, _context8.t0)(_context8.t1);
+                  _context10.t1 = _context10.sent;
+                  this.templateView = (0, _context10.t0)(_context10.t1);
                   this.templateView.x = 9999;
                   this.addTemplateNode(this.templateView);
 
                   // 橫版是負責扣局數的 TemplateView.isPrimary
                   this.isTemplateViewPrimary(this.templateView);
-                  _context8.t2 = instantiate;
-                  _context8.next = 15;
+                  _context10.t2 = instantiate;
+                  _context10.next = 15;
                   return AppAssetBundle.getInstance(tvVBundleId).loadPrefab(tvVPath);
                 case 15:
-                  _context8.t3 = _context8.sent;
-                  this.templateViewH = (0, _context8.t2)(_context8.t3);
+                  _context10.t3 = _context10.sent;
+                  this.templateViewH = (0, _context10.t2)(_context10.t3);
                   this.templateViewH.x = 9999;
                   this.addTemplateNode(this.templateViewH);
                   isPortrait = this.deviceStore.isPortrait;
                   if (!isPortrait) {
-                    _context8.next = 23;
+                    _context10.next = 23;
                     break;
                   }
                   this.templateViewH.x = 0;
-                  return _context8.abrupt("return");
+                  return _context10.abrupt("return");
                 case 23:
                   this.templateView.x = 0;
                 case 24:
                 case "end":
-                  return _context8.stop();
+                  return _context10.stop();
               }
-            }, _callee8, this);
+            }, _callee10, this);
           }));
           function addTemplateView() {
             return _addTemplateView.apply(this, arguments);
@@ -10971,23 +10936,23 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           }
         };
         _proto.addGamePrefab = /*#__PURE__*/function () {
-          var _addGamePrefab = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
+          var _addGamePrefab = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
             var gamePrefab;
-            return _regeneratorRuntime().wrap(function _callee9$(_context9) {
-              while (1) switch (_context9.prev = _context9.next) {
+            return _regeneratorRuntime().wrap(function _callee11$(_context11) {
+              while (1) switch (_context11.prev = _context11.next) {
                 case 0:
-                  _context9.t0 = instantiate;
-                  _context9.next = 3;
+                  _context11.t0 = instantiate;
+                  _context11.next = 3;
                   return AppAssetBundle.getInstance(GameConfigManager.GAMEID).loadPrefab(GAMEVIEWMAP.GAMEPREFAB.path);
                 case 3:
-                  _context9.t1 = _context9.sent;
-                  gamePrefab = (0, _context9.t0)(_context9.t1);
+                  _context11.t1 = _context11.sent;
+                  gamePrefab = (0, _context11.t0)(_context11.t1);
                   this.addGameNode(gamePrefab);
                 case 6:
                 case "end":
-                  return _context9.stop();
+                  return _context11.stop();
               }
-            }, _callee9, this);
+            }, _callee11, this);
           }));
           function addGamePrefab() {
             return _addGamePrefab.apply(this, arguments);
@@ -10995,20 +10960,20 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           return addGamePrefab;
         }();
         _proto.loadServerConfig = /*#__PURE__*/function () {
-          var _loadServerConfig = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
+          var _loadServerConfig = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
             var gameConfigManager;
-            return _regeneratorRuntime().wrap(function _callee10$(_context10) {
-              while (1) switch (_context10.prev = _context10.next) {
+            return _regeneratorRuntime().wrap(function _callee12$(_context12) {
+              while (1) switch (_context12.prev = _context12.next) {
                 case 0:
                   console.log('------ [GameRoot] loadServerConfig ------ ');
                   gameConfigManager = GameConfigManager.getInstance();
-                  _context10.next = 4;
+                  _context12.next = 4;
                   return gameConfigManager.updateServerConfig();
                 case 4:
                 case "end":
-                  return _context10.stop();
+                  return _context12.stop();
               }
-            }, _callee10);
+            }, _callee12);
           }));
           function loadServerConfig() {
             return _loadServerConfig.apply(this, arguments);
@@ -23673,9 +23638,10 @@ System.register("chunks:///_virtual/SlotGameMain.ts", ['./rollupPluginModLoBabel
 
         /** public：供 Net/SpinResultHandler 呼叫 */;
         _proto.applyGameModeUi = function applyGameModeUi(fg) {
-          var _this3 = this;
           this.forEachView(function (v) {
-            v.buySuperBtn.node.active = !fg && !_this3.isGameLayerBuyHidden(v);
+            // v.buySuperBtn.node.active = !fg && !this.isGameLayerBuyHidden(v);
+            // 直版也改回用遊戲層的購買鈕
+            v.buySuperBtn.node.active = !fg;
           });
         }
 
@@ -29000,7 +28966,7 @@ System.register("chunks:///_virtual/TemplateModel.ts", ['./rollupPluginModLoBabe
 });
 
 System.register("chunks:///_virtual/TemplateView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TemplateViewModel.ts', './EventComponent.ts', './StoreManager.ts', './AppAssetBundle.ts', './GameStateKey.ts', './GameConfigManager.ts', './AppAnimation.ts', './StoreMap.ts', './BaseButton.ts', './GameConst.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _extends, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, SpriteFrame, Layout, Button, Node, sp, Label, UIOpacity, tween, Vec3, TemplateViewModel, EventComponent, StoreManager, AppAssetBundle, GameStateKey, GameConfigManager, AppAnimation, AUTOSPINSTATUSMAP, BaseButton, FG_RETRIGGER_BOUNCE;
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _extends, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, SpriteFrame, Layout, Button, Node, sp, Label, UIOpacity, tween, Vec3, TemplateViewModel, EventComponent, StoreManager, AppAssetBundle, GameStateKey, GameConfigManager, AppAnimation, AUTOSPINSTATUSMAP, BaseButton, FG_RETRIGGER_BOUNCE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -29008,6 +28974,7 @@ System.register("chunks:///_virtual/TemplateView.ts", ['./rollupPluginModLoBabel
       _initializerDefineProperty = module.initializerDefineProperty;
       _assertThisInitialized = module.assertThisInitialized;
       _extends = module.extends;
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
       _asyncToGenerator = module.asyncToGenerator;
       _regeneratorRuntime = module.regeneratorRuntime;
     }, function (module) {
@@ -29183,7 +29150,16 @@ System.register("chunks:///_virtual/TemplateView.ts", ['./rollupPluginModLoBabel
           var isFg = gameMode === GameStateKey.FG;
           this.isFgMode = isFg;
           this.setFgCounterVisible(isFg);
-          if (this.buyFeatureBtn) this.buyFeatureBtn.active = !isFg;
+          // if (this.buyFeatureBtn) this.buyFeatureBtn.active = !isFg;
+          // 購買鈕改用遊戲層的 這顆只當位置標記 節點留著讓 Widget 照常對齊 畫面與點擊都關掉
+          if (this.buyFeatureBtn) {
+            for (var _iterator = _createForOfIteratorHelperLoose(this.buyFeatureBtn.children), _step; !(_step = _iterator()).done;) {
+              var child = _step.value;
+              child.active = false;
+            }
+            var buyButton = this.buyFeatureBtn.getComponent(Button);
+            if (buyButton) buyButton.enabled = false;
+          }
           if (isFg) {
             // 停掉還沒跑完的箭頭動畫
             this.resumeSpinAction();
