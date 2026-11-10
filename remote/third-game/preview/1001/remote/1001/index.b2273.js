@@ -22,25 +22,39 @@ System.register("chunks:///_virtual/AdapterNode.ts", ['./rollupPluginModLoBabelH
       var _dec, _class;
       cclegacy._RF.push({}, "7c439GOE49MHpBGog2l2BnQ", "AdapterNode", undefined);
       var ccclass = _decorator.ccclass;
+
+      /**
+       * 背景與彈窗遮罩用：等比放大到蓋滿可視範圍，超出的部分裁掉。
+       * 固定比例（SHOW_ALL）時可視範圍就是設計框，背景不會鋪到框外；隨視窗延伸（FIXED_HEIGHT）時就是整個視窗。
+       */
       var AdapterNode = exports('AdapterNode', (_dec = ccclass('1001/AdapterNode'), _dec(_class = /*#__PURE__*/function (_Component) {
         _inheritsLoose(AdapterNode, _Component);
         function AdapterNode() {
           return _Component.apply(this, arguments) || this;
         }
         var _proto = AdapterNode.prototype;
+        /**
+         * 先套一次目前的視窗尺寸，並監聽之後的視窗與解析度變化。
+         */
         _proto.onLoad = function onLoad() {
           var _Component$prototype$;
           (_Component$prototype$ = _Component.prototype.onLoad) == null || _Component$prototype$.call(this);
           this.onWindowResize();
           view.on('design-resolution-changed', this.onWindowResize, this);
-        };
+        }
+
+        /**
+         * 解除視窗與解析度變化的監聽。
+         */;
         _proto.onDestroy = function onDestroy() {
           var _Component$prototype$2;
           view.off('design-resolution-changed', this.onWindowResize, this);
           (_Component$prototype$2 = _Component.prototype.onDestroy) == null || _Component$prototype$2.call(this);
         }
 
-        /** 依可視尺寸等比鋪滿背景 並抵消父層的內容縮放 */;
+        /**
+         * 依可視範圍等比鋪滿，並抵消父層的內容縮放。
+         */;
         _proto.onWindowResize = function onWindowResize() {
           var _this$node$getCompone, _this$node$parent$wor, _this$node$parent;
           var nodeSize = (_this$node$getCompone = this.node.getComponent(UITransform)) == null ? void 0 : _this$node$getCompone.contentSize;

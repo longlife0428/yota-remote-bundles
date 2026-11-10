@@ -6,8 +6,7 @@
         "customLayers": [],
         "sortingLayers": [],
         "macros": {
-            "ENABLE_TRANSPARENT_CANVAS": true,
-            "CLEANUP_IMAGE_CACHE": true
+            "ENABLE_TRANSPARENT_CANVAS": true
         },
         "builtinAssets": [
             "60f7195c-ec2a-45eb-ba94-8955f60e81d0",
@@ -60,7 +59,7 @@
             }
         ],
         "bundleVers": {
-            "1001": "f3673",
+            "1001": "b2273",
             "internal": "d0abe",
             "main": "d19c8"
         },
