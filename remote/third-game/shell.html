@@ -169,11 +169,14 @@ body.shown #game { opacity: 1; }
 //   game-loaded game-ready game-error cover-hidden
 //   vibrate 帶 pattern 震動節奏 毫秒 震停交替 震動開關開著 大廳的 init 帶 canVibrate 時才發
 // 遊戲到殼頁 { source: 'game', type, payload }
-//   hi 要握手  ready 畫面已出現 殼頁收到就拿掉遮罩 payload.seat 為 entered 時進場選座等 entered 才開 沒帶就遮罩一拿掉就開
-//   entered 載入完成進到遊戲 殼頁開進場選座  error 帶 message  上面的指令也能由遊戲發
+//   hi 要握手  ready 畫面已出現 殼頁收到就拿掉遮罩 不會開進場選座
+//   entered 或 show-seat-lobby 載入完成進到遊戲 殼頁開進場選座 一次進場只開一次
+//   state 回覆殼頁的 get-state 帶 state 為 loading 或 ready 回 ready 殼頁開進場選座
+//   error 帶 message  上面的指令也能由遊戲發
 //   vibrate 帶 pattern 要手機震動 數字或數字陣列 每段 0～1000ms 最多 10 段 不合格或開關關著就丟掉
 // 殼頁到遊戲 { source: 'host-shell', type, payload }
 //   hello 握手 帶 gameId lang settings  setting 音樂音效震動切換  dialog-result auto-play-result 彈窗結果
+//   get-state 殼頁定時問遊戲載入好沒 遊戲用 state 回覆
 //   settings 帶 music sound vibrate 震動開關存在殼頁自己的 localStorage 遊戲不必理會 vibrate
 // 遊戲端實作 1001 在 GameRoot.bindShell 第三方遊戲用 host-sdk.js
 // 大廳端的型別在 entry 的 ThirdGameConst.ts 要跟這裡同步
@@ -947,13 +950,32 @@ body.shown #game { opacity: 1; }
 
     // 遮罩隱藏原因 ready 遊戲通知 timeout 逾時
     // 遊戲回 ready 時說進場選座要等 entered 才開 沒說的遊戲遮罩一拿掉就開
-    var seatWaitEntered = false;
     var seatOpened = false;
+    var statePollTimer = 0;
+
+    // 殼頁定時問遊戲載入好沒 遊戲回 state ready 就開進場選座 最多問五分鐘
+    function startStatePoll() {
+        var tries = 0;
+        clearInterval(statePollTimer);
+        statePollTimer = setInterval(function () {
+            tries++;
+            if (seatOpened || !gameFrame || tries > 600) {
+                clearInterval(statePollTimer);
+                return;
+            }
+            try {
+                gameFrame.contentWindow.postMessage({ source: 'host-shell', type: 'get-state', payload: {} }, '*');
+            } catch (error) {
+                // 遊戲視窗還沒好就略過
+            }
+        }, 500);
+    }
 
     // 進遊戲先選座 不強制選 關掉照樣進遊戲 已經有別的彈窗開著就不搶 一次進場只開一次
     function openEnterSeat() {
         if (seatOpened) return;
         seatOpened = true;
+        clearInterval(statePollTimer);
         // 重整續打這次已經選過座就不再彈
         if (seatRecord() !== null) return;
         saveSeat('');
@@ -980,7 +1002,6 @@ body.shown #game { opacity: 1; }
         document.body.classList.add('shown');
         clearTimeout(coverTimer);
         emit('cover-hidden', { reason: reason });
-        if (!seatWaitEntered) openEnterSeat();
     }
 
     // 握手 告訴遊戲殼頁在 以及它的代號與語言
@@ -1039,7 +1060,9 @@ body.shown #game { opacity: 1; }
                 showAutoPlay(payload, caller);
                 break;
             case 'show-seat-lobby':
-                showSeatLobby(payload);
+                // 遊戲送來的是進場選座 走同一個入口
+                if (caller === 'game') openEnterSeat();
+                else showSeatLobby(payload);
                 break;
             case 'show-exit':
                 openDialog({ id: 'exit', title: text.title, message: text.message, confirm: text.confirm, cancel: text.cancel }, caller);
@@ -1114,15 +1137,20 @@ body.shown #game { opacity: 1; }
                 sendHello();
                 break;
             case 'ready':
-                seatWaitEntered = payload.seat === 'entered';
                 hideCover('ready');
                 emit('game-ready', payload);
                 break;
             case 'entered':
                 // 載入完成進到遊戲 遮罩還在就一起拿掉
-                seatWaitEntered = false;
                 hideCover('entered');
                 openEnterSeat();
+                break;
+            case 'state':
+                // 殼頁問的回覆 ready 才算載入完成
+                if (payload.state === 'ready') {
+                    hideCover('state');
+                    openEnterSeat();
+                }
                 break;
             case 'error':
                 emit('game-error', payload);
@@ -1177,6 +1205,7 @@ body.shown #game { opacity: 1; }
             emit('game-loaded');
             // 先打招呼 遊戲想要的話可以用 host-sdk.js 接
             sendHello();
+            startStatePoll();
             // 同網域的遊戲 補上大廳的共用介面 遊戲按選單時開殼頁的系統選單 跨網域取不到就略過
             try {
                 var scope = gameFrame.contentWindow;

@@ -3,6 +3,7 @@
     // 遊戲放在殼頁的 iframe 裡時 用這支跟殼頁溝通 不在殼頁裡就什麼都不做
     var inFrame = w.parent !== w;
     var hello = null;
+    var state = 'loading';
     var waiting = {};
     var dialogCount = 0;
 
@@ -25,6 +26,11 @@
         get hello() { return hello; },
         // 遊戲畫面準備好了 殼頁收到就拿掉遮罩
         ready: function () { send('ready'); },
+        // 載入狀態 loading 或 ready 殼頁會定時來問 設成 ready 殼頁就開進場選座
+        setState: function (value) {
+            state = value;
+            if (value === 'ready') send('state', { state: value });
+        },
         // 載入進度 0 到 100
         loading: function (percent) { send('loading', { percent: percent }); },
         error: function (message) { send('error', { message: message }); },
@@ -60,6 +66,7 @@
             var data = event.data;
             if (event.source !== w.parent || !data || data.source !== 'host-shell') return;
             if (data.type === 'hello') hello = data.payload || {};
+            if (data.type === 'get-state') send('state', { state: state });
             // 確認窗回 result 自動旋轉選單回 count 都用代號對回去
             if (data.type === 'dialog-result' || data.type === 'auto-play-result') {
                 var payload = data.payload || {};
