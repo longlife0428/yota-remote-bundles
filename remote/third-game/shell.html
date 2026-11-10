@@ -626,12 +626,14 @@ body.shown #game { opacity: 1; }
         var list = h('div', 'lc-list');
         list.appendChild(optionRow({ icon: 'System_menu_options_exit_label.png', iconWidth: 131, wide: true, name: text.leaveLeave, desc: text.leaveLeaveDesc, onClick: function () {
             // 先通知退出再關 大廳的處理中畫面才不會閃一下
+            clearSeat();
             emit('exit-confirm', { via: 'leave' });
             closePopup('done');
         } }));
         // Cocos 版保留目前只關彈窗 呼叫端沒接 onKeep 這裡多發一個事件給大廳以後接
         list.appendChild(optionRow({ icon: 'System_menu_options_save_label.png', wide: true, name: text.leaveKeep, desc: text.leaveKeepDesc, onClick: function () {
             closePopup('done');
+            clearSeat();
             emit('leave-keep');
         } }));
         list.appendChild(optionRow({ icon: 'System_menu_options_reset_label.png', wide: true, name: text.leaveReselect, desc: text.leaveReselectDesc, onClick: function () { showSeatLobby({}); } }));
@@ -920,12 +922,14 @@ body.shown #game { opacity: 1; }
             if (!table || !isSeatAvailable(table)) return;
             table.isReserved = true;
             render();
+            saveSeat(String(table.tableId));
             emit('seat-reserve', { tableId: table.tableId });
         });
         enterBtn.addEventListener('click', function () {
             var table = selectedTable();
             if (!table || !isSeatAvailable(table)) return;
             // 先通知入座再關 大廳才分得出入座與取消
+            saveSeat(String(table.tableId));
             emit('seat-enter', { tableId: table.tableId });
             closePopup('done');
         });
@@ -950,7 +954,23 @@ body.shown #game { opacity: 1; }
     function openEnterSeat() {
         if (seatOpened) return;
         seatOpened = true;
+        // 重整續打這次已經選過座就不再彈
+        if (seatRecord() !== null) return;
+        saveSeat('');
         if (gameFrame && !currentPopup) showSeatLobby({});
+    }
+
+    // 暫時辦法 後端沒有桌的資料 用 sessionStorage 記這次已經選過座 重整時不再彈 離開遊戲時清掉
+    function seatKey() { return 'seat:' + gameId; }
+    function seatRecord() {
+        try { return sessionStorage.getItem(seatKey()); } catch (error) { return null; }
+    }
+    // 重複選會覆蓋 空字串是開過選座但還沒選
+    function saveSeat(tableId) {
+        try { sessionStorage.setItem(seatKey(), tableId); } catch (error) { /* 不給存就略過 */ }
+    }
+    function clearSeat() {
+        try { sessionStorage.removeItem(seatKey()); } catch (error) { /* 不給存就略過 */ }
     }
 
     function hideCover(reason) {
@@ -998,7 +1018,7 @@ body.shown #game { opacity: 1; }
         }
         // 退出確認 不管誰叫的 都通知大廳決定要不要離開
         if (id === 'exit') {
-            if (result === 'ok') emit('exit-confirm', { via: 'dialog' });
+            if (result === 'ok') { clearSeat(); emit('exit-confirm', { via: 'dialog' }); }
             else emit('exit-cancel');
         }
     }
@@ -1117,7 +1137,7 @@ body.shown #game { opacity: 1; }
     window.addEventListener('message', function (event) {
         if (gameFrame && event.source === gameFrame.contentWindow) {
             // return.html 的回傳 與遊戲自己傳的訊息
-            if (event.data && event.data.source === 'host-shell-return') emit('exit-confirm', { via: 'return_url' });
+            if (event.data && event.data.source === 'host-shell-return') { clearSeat(); emit('exit-confirm', { via: 'return_url' }); }
             else if (event.data && event.data.source === 'game') handleGame(event.data);
             return;
         }
