@@ -1,11 +1,11 @@
-System.register("bundle://1002/_virtual/1002", ['./GameMain_1002.ts', './GameRoot.ts', './LoadingView.ts', './AlertView.ts', './SelectBetView.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './SpinSkipConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SkipWait.ts', './SpinShortcutController.ts', './SpinSkipController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './NativeBundleUpdateView.ts', './NativeBundleUpdater.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './chinhoyiah.ts', './index.ts', './mock-shared.ts', './slot-api-mock.ts', './start.ts', './types.ts', './simple-mock.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './SymbolCell.ts', './SymbolImageManager.ts', './SymbolImageSet.ts', './SymbolState.ts', './SymbolView.ts', './SymbolViewErase.ts', './SymbolViewMultiplier.ts', './SymbolViewSpine.ts', './ReelView.ts', './ReelView_1002.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './SlotGameMain.ts', './TableListModel.ts', './TableListSelection.ts', './TableListTypes.ts', './TableListViewModel.ts', './FGState_1002.ts', './GameState.ts', './GameStateKey.ts', './NGState_1002.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './ISlotGameMainCheck.ts', './SpinTypes.ts', './SubGameData.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseButton.ts', './ButtonState.ts', './ButtonVariant.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BuyFeaturePopupView.ts', './CameraSync3D.ts', './CameraSyncOrtho.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './FrameMultiplierComp.ts', './FreeBoardView.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './LoadingModel.ts', './LoadingViewModel.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SeatLobbyPopup.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './VirtualList.ts', './VirtualListMath.ts', './WinAnimationView.ts', './WinFeed.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts', './SpineSafe.ts'], function () {
+System.register("chunks:///_virtual/1002", ['./GameMain_1002.ts', './GameRoot.ts', './LoadingView.ts', './AlertView.ts', './SelectBetView.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './SpinSkipConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SkipWait.ts', './SpinShortcutController.ts', './SpinSkipController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './NativeBundleUpdateView.ts', './NativeBundleUpdater.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './chinhoyiah.ts', './index.ts', './mock-shared.ts', './slot-api-mock.ts', './start.ts', './types.ts', './simple-mock.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './SymbolCell.ts', './SymbolImageManager.ts', './SymbolImageSet.ts', './SymbolState.ts', './SymbolView.ts', './SymbolViewErase.ts', './SymbolViewMultiplier.ts', './SymbolViewSpine.ts', './ReelView.ts', './ReelView_1002.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './SlotGameMain.ts', './TableListModel.ts', './TableListSelection.ts', './TableListTypes.ts', './TableListViewModel.ts', './FGState_1002.ts', './GameState.ts', './GameStateKey.ts', './NGState_1002.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './ISlotGameMainCheck.ts', './SpinTypes.ts', './SubGameData.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseButton.ts', './ButtonState.ts', './ButtonVariant.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BuyFeaturePopupView.ts', './CameraSync3D.ts', './CameraSyncOrtho.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './FrameMultiplierComp.ts', './FreeBoardView.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './LoadingModel.ts', './LoadingViewModel.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SeatLobbyPopup.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './VirtualList.ts', './VirtualListMath.ts', './WinAnimationView.ts', './WinFeed.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts', './SpineSafe.ts'], function () {
   return {
     setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
   };
 });
 
-System.register("bundle://1002/_virtual/AdapterNode.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/AdapterNode.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _inheritsLoose, cclegacy, _decorator, view, UITransform, Vec3, Component;
   return {
     setters: [function (module) {
@@ -22,25 +22,39 @@ System.register("bundle://1002/_virtual/AdapterNode.ts", ['./rollupPluginModLoBa
       var _dec, _class;
       cclegacy._RF.push({}, "178efCzEVlIYpCqeh02b151", "AdapterNode", undefined);
       var ccclass = _decorator.ccclass;
+
+      /**
+       * 背景與彈窗遮罩用：等比放大到蓋滿可視範圍，超出的部分裁掉。
+       * 固定比例（SHOW_ALL）時可視範圍就是設計框，背景不會鋪到框外；隨視窗延伸（FIXED_HEIGHT）時就是整個視窗。
+       */
       var AdapterNode = exports('AdapterNode', (_dec = ccclass('1002/AdapterNode'), _dec(_class = /*#__PURE__*/function (_Component) {
         _inheritsLoose(AdapterNode, _Component);
         function AdapterNode() {
           return _Component.apply(this, arguments) || this;
         }
         var _proto = AdapterNode.prototype;
+        /**
+         * 先套一次目前的視窗尺寸，並監聽之後的視窗與解析度變化。
+         */
         _proto.onLoad = function onLoad() {
           var _Component$prototype$;
           (_Component$prototype$ = _Component.prototype.onLoad) == null || _Component$prototype$.call(this);
           this.onWindowResize();
           view.on('design-resolution-changed', this.onWindowResize, this);
-        };
+        }
+
+        /**
+         * 解除視窗與解析度變化的監聽。
+         */;
         _proto.onDestroy = function onDestroy() {
           var _Component$prototype$2;
           view.off('design-resolution-changed', this.onWindowResize, this);
           (_Component$prototype$2 = _Component.prototype.onDestroy) == null || _Component$prototype$2.call(this);
         }
 
-        /** 依可視尺寸等比鋪滿背景 並抵消父層的內容縮放 */;
+        /**
+         * 依可視範圍等比鋪滿，並抵消父層的內容縮放。
+         */;
         _proto.onWindowResize = function onWindowResize() {
           var _this$node$getCompone, _this$node$parent$wor, _this$node$parent;
           var nodeSize = (_this$node$getCompone = this.node.getComponent(UITransform)) == null ? void 0 : _this$node$getCompone.contentSize;
@@ -57,7 +71,7 @@ System.register("bundle://1002/_virtual/AdapterNode.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/AlertView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './SOUNDMAP.ts', './AppAudio.ts', './StoreMap.ts'], function (exports) {
+System.register("chunks:///_virtual/AlertView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './SOUNDMAP.ts', './AppAudio.ts', './StoreMap.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Label, Component, StoreManager, EFFECTSMAP, AppAudio, GAMESTOREMAP;
   return {
     setters: [function (module) {
@@ -145,7 +159,7 @@ System.register("bundle://1002/_virtual/AlertView.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("bundle://1002/_virtual/AppAnimation.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/AppAnimation.ts", ['cc'], function (exports) {
   var cclegacy, Tween, Vec3, tween, UIOpacity;
   return {
     setters: [function (module) {
@@ -346,7 +360,7 @@ System.register("bundle://1002/_virtual/AppAnimation.ts", ['cc'], function (expo
   };
 });
 
-System.register("bundle://1002/_virtual/AppAssetBundle.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/AppAssetBundle.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, _createForOfIteratorHelperLoose, cclegacy, assetManager, SpriteFrame, Prefab, AudioClip;
   return {
     setters: [function (module) {
@@ -782,7 +796,7 @@ System.register("bundle://1002/_virtual/AppAssetBundle.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/AppAudio.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppUtility.ts', './AppAssetBundle.ts', './BaseRuntimeEventBus.ts', './RootStoreHooks.ts', './BaseRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/AppAudio.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppUtility.ts', './AppAssetBundle.ts', './BaseRuntimeEventBus.ts', './RootStoreHooks.ts', './BaseRuntimeEventTypes.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, Node, AudioSource, game, Game, Tween, tween, AppUtility, AppAssetBundle, baseRuntimeEventBus, getSettingStore, BASE_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -1706,7 +1720,7 @@ System.register("bundle://1002/_virtual/AppAudio.ts", ['./rollupPluginModLoBabel
   };
 });
 
-System.register("bundle://1002/_virtual/AppConfig.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/AppConfig.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -1729,7 +1743,7 @@ System.register("bundle://1002/_virtual/AppConfig.ts", ['cc'], function (exports
   };
 });
 
-System.register("bundle://1002/_virtual/AppStore.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/AppStore.ts", ['cc'], function (exports) {
   var cclegacy, assert;
   return {
     setters: [function (module) {
@@ -1770,7 +1784,7 @@ System.register("bundle://1002/_virtual/AppStore.ts", ['cc'], function (exports)
   };
 });
 
-System.register("bundle://1002/_virtual/AppUtility.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/AppUtility.ts", ['cc'], function (exports) {
   var cclegacy, director, sys;
   return {
     setters: [function (module) {
@@ -1913,7 +1927,7 @@ System.register("bundle://1002/_virtual/AppUtility.ts", ['cc'], function (export
   };
 });
 
-System.register("bundle://1002/_virtual/AppViewPool.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts'], function (exports) {
+System.register("chunks:///_virtual/AppViewPool.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy, NodePool, instantiate, AppAssetBundle;
   return {
     setters: [function (module) {
@@ -2004,7 +2018,7 @@ System.register("bundle://1002/_virtual/AppViewPool.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/AudioBehaviorTypes.ts", ['cc', './AppAudio.ts'], function (exports) {
+System.register("chunks:///_virtual/AudioBehaviorTypes.ts", ['cc', './AppAudio.ts'], function (exports) {
   var cclegacy, AppAudio;
   return {
     setters: [function (module) {
@@ -2042,7 +2056,7 @@ System.register("bundle://1002/_virtual/AudioBehaviorTypes.ts", ['cc', './AppAud
   };
 });
 
-System.register("bundle://1002/_virtual/AudioConfig.ts", ['cc', './StoreMap.ts'], function (exports) {
+System.register("chunks:///_virtual/AudioConfig.ts", ['cc', './StoreMap.ts'], function (exports) {
   var cclegacy, TURBOSTATUSMAP;
   return {
     setters: [function (module) {
@@ -2124,7 +2138,7 @@ System.register("bundle://1002/_virtual/AudioConfig.ts", ['cc', './StoreMap.ts']
   };
 });
 
-System.register("bundle://1002/_virtual/BaseButton.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './ButtonState.ts', './ButtonVariant.ts'], function (exports) {
+System.register("chunks:///_virtual/BaseButton.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './ButtonState.ts', './ButtonVariant.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _createClass, cclegacy, _decorator, Sprite, Button, Node, EventComponent, ButtonState, ButtonVariant;
   return {
     setters: [function (module) {
@@ -2463,7 +2477,7 @@ System.register("bundle://1002/_virtual/BaseButton.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/BaseRuntimeEventBus.ts", ['cc', './TypedEventBus.ts', './BaseRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/BaseRuntimeEventBus.ts", ['cc', './TypedEventBus.ts', './BaseRuntimeEventTypes.ts'], function (exports) {
   var cclegacy, TypedEventBus;
   return {
     setters: [function (module) {
@@ -2492,7 +2506,7 @@ System.register("bundle://1002/_virtual/BaseRuntimeEventBus.ts", ['cc', './Typed
   };
 });
 
-System.register("bundle://1002/_virtual/BaseRuntimeEventTypes.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/BaseRuntimeEventTypes.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -2532,7 +2546,7 @@ System.register("bundle://1002/_virtual/BaseRuntimeEventTypes.ts", ['cc'], funct
   };
 });
 
-System.register("bundle://1002/_virtual/BaseToggle.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './BaseUIComponent.ts', './BaseToggleGroup.ts'], function (exports) {
+System.register("chunks:///_virtual/BaseToggle.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './BaseUIComponent.ts', './BaseToggleGroup.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, cclegacy, _decorator, Node, BaseUIComponent, BaseToggleGroup;
   return {
     setters: [function (module) {
@@ -2649,7 +2663,7 @@ System.register("bundle://1002/_virtual/BaseToggle.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/BaseToggleGroup.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './BaseUIComponent.ts'], function (exports) {
+System.register("chunks:///_virtual/BaseToggleGroup.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './BaseUIComponent.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, cclegacy, _decorator, BaseUIComponent;
   return {
     setters: [function (module) {
@@ -2747,7 +2761,7 @@ System.register("bundle://1002/_virtual/BaseToggleGroup.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/BaseUIComponent.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Logger.ts'], function (exports) {
+System.register("chunks:///_virtual/BaseUIComponent.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Logger.ts'], function (exports) {
   var _inheritsLoose, cclegacy, _decorator, Component, Logger;
   return {
     setters: [function (module) {
@@ -2781,7 +2795,7 @@ System.register("bundle://1002/_virtual/BaseUIComponent.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/BetHistory.ts", ['cc'], function () {
+System.register("chunks:///_virtual/BetHistory.ts", ['cc'], function () {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -2795,7 +2809,7 @@ System.register("bundle://1002/_virtual/BetHistory.ts", ['cc'], function () {
   };
 });
 
-System.register("bundle://1002/_virtual/ButtonState.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/ButtonState.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -2820,7 +2834,7 @@ System.register("bundle://1002/_virtual/ButtonState.ts", ['cc'], function (expor
   };
 });
 
-System.register("bundle://1002/_virtual/ButtonVariant.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/ButtonVariant.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _applyDecoratedDescriptor, _initializerDefineProperty, cclegacy, _decorator, SpriteFrame;
   return {
     setters: [function (module) {
@@ -2900,7 +2914,7 @@ System.register("bundle://1002/_virtual/ButtonVariant.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/BuyFeatureController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreMap.ts', './AppAudio.ts', './LanguageData.ts', './EagleTracker.ts', './TrackerMap.ts', './SlotMachineModel.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/BuyFeatureController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreMap.ts', './AppAudio.ts', './LanguageData.ts', './EagleTracker.ts', './TrackerMap.ts', './SlotMachineModel.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, Button, Tween, tween, Vec3, GAMEVIEWMAP, AUTOSPINSTATUSMAP, GAMESTOREMAP, AppAudio, getLocalizedString, EagleTracker, TrackerMap, SlotMachineState, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -3261,7 +3275,7 @@ System.register("bundle://1002/_virtual/BuyFeatureController.ts", ['./rollupPlug
   };
 });
 
-System.register("bundle://1002/_virtual/BuyFeaturePopupView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './GameViewAdapter.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/BuyFeaturePopupView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './GameViewAdapter.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Node, Label, Button, Vec3, director, Tween, tween, Component, StoreManager, GameViewAdapter, gameRuntimeEventBus, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -3524,7 +3538,7 @@ System.register("bundle://1002/_virtual/BuyFeaturePopupView.ts", ['./rollupPlugi
   };
 });
 
-System.register("bundle://1002/_virtual/CameraSync3D.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/CameraSync3D.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _inheritsLoose, cclegacy, _decorator, view, screen, Vec3, Component;
   return {
     setters: [function (module) {
@@ -3591,7 +3605,7 @@ System.register("bundle://1002/_virtual/CameraSync3D.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/CameraSyncOrtho.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/CameraSyncOrtho.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Camera, view, Component;
   return {
     setters: [function (module) {
@@ -3659,7 +3673,7 @@ System.register("bundle://1002/_virtual/CameraSyncOrtho.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './WinFloatLabel.ts', './SkipWait.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts'], function (exports) {
+System.register("chunks:///_virtual/CascadeReelsTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './WinFloatLabel.ts', './SkipWait.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, _createForOfIteratorHelperLoose, _inheritsLoose, cclegacy, Tween, UITransform, sp, instantiate, tween, Vec3, GameTask, WinFloatLabel, raceSkip, skipWait, AppAudio, playLoopBySpeed, EFFECTSMAP, SPEED_BEHAVIOR, REEL_STOP_NORMAL_POOL, REEL_STOP_NORMAL_PRIORITY, REEL_STOP_BY_SYMBOL_ID, REEL_STOP_BY_KIND;
   return {
     setters: [function (module) {
@@ -4481,7 +4495,7 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1002/_virtual/chinhoyiah.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './mock-shared.ts'], function (exports) {
+System.register("chunks:///_virtual/chinhoyiah.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './mock-shared.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, cclegacy, getSlotApiDebugControl, randomInt;
   return {
     setters: [function (module) {
@@ -5082,7 +5096,7 @@ System.register("bundle://1002/_virtual/chinhoyiah.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/CollectWinTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './SkipWait.ts'], function (exports) {
+System.register("chunks:///_virtual/CollectWinTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './SkipWait.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, _inheritsLoose, cclegacy, GameTask, skipWait, raceSkip;
   return {
     setters: [function (module) {
@@ -5297,7 +5311,7 @@ System.register("bundle://1002/_virtual/CollectWinTask.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/CommonPopView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SOUNDMAP.ts', './AppAudio.ts'], function (exports) {
+System.register("chunks:///_virtual/CommonPopView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SOUNDMAP.ts', './AppAudio.ts'], function (exports) {
   var _inheritsLoose, cclegacy, _decorator, Component, EFFECTSMAP, AppAudio;
   return {
     setters: [function (module) {
@@ -5336,7 +5350,7 @@ System.register("bundle://1002/_virtual/CommonPopView.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/CustomSurroundingEffect.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/CustomSurroundingEffect.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Graphics, Enum, CCInteger, Color, UITransform, Vec2, Component;
   return {
     setters: [function (module) {
@@ -5766,7 +5780,7 @@ System.register("bundle://1002/_virtual/CustomSurroundingEffect.ts", ['./rollupP
   };
 });
 
-System.register("bundle://1002/_virtual/DebugPanel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppConfig.ts', './SlotGameDefinition.ts', './GameRuntimeEventBus.ts', './AppAudio.ts', './AudioConfig.ts', './StoreManager.ts', './SlotMachineView.ts', './ReelTimingDebugStore.ts', './ReelConfig.ts', './SceneSpeedStore.ts', './SceneSpeedConfig.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/DebugPanel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppConfig.ts', './SlotGameDefinition.ts', './GameRuntimeEventBus.ts', './AppAudio.ts', './AudioConfig.ts', './StoreManager.ts', './SlotMachineView.ts', './ReelTimingDebugStore.ts', './ReelConfig.ts', './SceneSpeedStore.ts', './SceneSpeedConfig.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _inheritsLoose, _extends, cclegacy, _decorator, sys, director, Component, AppConfig, SYMBOL_IDS, gameRuntimeEventBus, AppAudio, EFFECTSMAP, REEL_STOP_NORMAL_PRIORITY, REEL_STOP_BY_KIND, REEL_STOP_NORMAL_POOL, StoreManager, SlotMachineView, ReelTimingDebugStore, DEFAULT_REEL_CONFIG, SceneSpeedActivationMode, SceneSpeedStore, DEFAULT_SCENE_SPEED_CONFIG, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -6540,7 +6554,7 @@ System.register("bundle://1002/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _createClass, cclegacy, ResolutionPolicy, view, screen, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
@@ -6631,7 +6645,7 @@ System.register("bundle://1002/_virtual/DeviceStore.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/DirectorSpeedHook.ts", ['cc', './GameConfigManager.ts'], function (exports) {
+System.register("chunks:///_virtual/DirectorSpeedHook.ts", ['cc', './GameConfigManager.ts'], function (exports) {
   var cclegacy, director, GameConfigManager;
   return {
     setters: [function (module) {
@@ -6694,7 +6708,7 @@ System.register("bundle://1002/_virtual/DirectorSpeedHook.ts", ['cc', './GameCon
   };
 });
 
-System.register("bundle://1002/_virtual/DualViewController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/DualViewController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createClass, _createForOfIteratorHelperLoose, cclegacy;
   return {
     setters: [function (module) {
@@ -6799,7 +6813,7 @@ System.register("bundle://1002/_virtual/DualViewController.ts", ['./rollupPlugin
   };
 });
 
-System.register("bundle://1002/_virtual/EagleTracker.ts", ['cc', './StoreManager.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/EagleTracker.ts", ['cc', './StoreManager.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var cclegacy, StoreManager, gameRuntimeEventBus, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -6882,7 +6896,7 @@ System.register("bundle://1002/_virtual/EagleTracker.ts", ['cc', './StoreManager
   };
 });
 
-System.register("bundle://1002/_virtual/EndSpinTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './StoreMap.ts', './SlotMachineModel.ts'], function (exports) {
+System.register("chunks:///_virtual/EndSpinTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './StoreMap.ts', './SlotMachineModel.ts'], function (exports) {
   var _inheritsLoose, cclegacy, GameTaskFn, GAMESTOREMAP, SlotMachineState;
   return {
     setters: [function (module) {
@@ -6923,7 +6937,7 @@ System.register("bundle://1002/_virtual/EndSpinTask.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/EnterFreeGameTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './GameStateKey.ts'], function (exports) {
+System.register("chunks:///_virtual/EnterFreeGameTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './GameStateKey.ts'], function (exports) {
   var _inheritsLoose, cclegacy, GameTask, GameStateKey;
   return {
     setters: [function (module) {
@@ -6980,7 +6994,7 @@ System.register("bundle://1002/_virtual/EnterFreeGameTask.ts", ['./rollupPluginM
   };
 });
 
-System.register("bundle://1002/_virtual/EventComponent.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SubscriptionBag.ts'], function (exports) {
+System.register("chunks:///_virtual/EventComponent.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SubscriptionBag.ts'], function (exports) {
   var _inheritsLoose, cclegacy, _decorator, Component, SubscriptionBag;
   return {
     setters: [function (module) {
@@ -7047,7 +7061,7 @@ System.register("bundle://1002/_virtual/EventComponent.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/ExitFreeGameTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './GameStateKey.ts', './EagleTracker.ts', './FinishSpinTask.ts', './EndSpinTask.ts', './WinAnimationTask.ts', './GameConst.ts'], function (exports) {
+System.register("chunks:///_virtual/ExitFreeGameTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './GameStateKey.ts', './EagleTracker.ts', './FinishSpinTask.ts', './EndSpinTask.ts', './WinAnimationTask.ts', './GameConst.ts'], function (exports) {
   var _inheritsLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, GameTask, GameStateKey, EagleTracker, finishSpin, endSpin, playWinAnimationIfNeeded, WinTier;
   return {
     setters: [function (module) {
@@ -7149,7 +7163,7 @@ System.register("bundle://1002/_virtual/ExitFreeGameTask.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1002/_virtual/FGState_1002.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameState.ts', './GameStateKey.ts', './AppAudio.ts', './AudioConfig.ts'], function (exports) {
+System.register("chunks:///_virtual/FGState_1002.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameState.ts', './GameStateKey.ts', './AppAudio.ts', './AudioConfig.ts'], function (exports) {
   var _inheritsLoose, cclegacy, GameState, GameStateKey, AppAudio, MUSICMAP;
   return {
     setters: [function (module) {
@@ -7192,7 +7206,7 @@ System.register("bundle://1002/_virtual/FGState_1002.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/FinishSpinTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './EagleTracker.ts'], function (exports) {
+System.register("chunks:///_virtual/FinishSpinTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './EagleTracker.ts'], function (exports) {
   var _inheritsLoose, cclegacy, GameTaskFn, EagleTracker;
   return {
     setters: [function (module) {
@@ -7244,7 +7258,7 @@ System.register("bundle://1002/_virtual/FinishSpinTask.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/FrameMultiplierComp.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/FrameMultiplierComp.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Label, tween, Vec3, Component;
   return {
     setters: [function (module) {
@@ -7336,7 +7350,7 @@ System.register("bundle://1002/_virtual/FrameMultiplierComp.ts", ['./rollupPlugi
   };
 });
 
-System.register("bundle://1002/_virtual/FreeBoardView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SpineSafe.ts', './StoreManager.ts', './GameViewAdapter.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/FreeBoardView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SpineSafe.ts', './StoreManager.ts', './GameViewAdapter.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, sp, Node, director, UIOpacity, Tween, tween, Component, trySetAnimation, StoreManager, GameViewAdapter, gameRuntimeEventBus, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -7532,7 +7546,7 @@ System.register("bundle://1002/_virtual/FreeBoardView.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/GameConfig.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/GameConfig.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy;
   return {
     setters: [function (module) {
@@ -7619,7 +7633,7 @@ System.register("bundle://1002/_virtual/GameConfig.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/GameConfigManager.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameConfig.ts', './AppConfig.ts', './AppUtility.ts', './StoreManager.ts', './StoreMap.ts', './GameLaunchContext.ts'], function (exports, module) {
+System.register("chunks:///_virtual/GameConfigManager.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameConfig.ts', './AppConfig.ts', './AppUtility.ts', './StoreManager.ts', './StoreMap.ts', './GameLaunchContext.ts'], function (exports, module) {
   var _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, GameConfig, AppConfig, AppUtility, StoreManager, GROUPTYPE, createDemoGameLaunchContext;
   return {
     setters: [function (module) {
@@ -7778,7 +7792,7 @@ System.register("bundle://1002/_virtual/GameConfigManager.ts", ['./rollupPluginM
   };
 });
 
-System.register("bundle://1002/_virtual/GameConst.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/GameConst.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -7802,7 +7816,7 @@ System.register("bundle://1002/_virtual/GameConst.ts", ['cc'], function (exports
   };
 });
 
-System.register("bundle://1002/_virtual/GameEndStatus.ts", ['cc', './StoreManager.ts'], function (exports) {
+System.register("chunks:///_virtual/GameEndStatus.ts", ['cc', './StoreManager.ts'], function (exports) {
   var cclegacy, StoreManager;
   return {
     setters: [function (module) {
@@ -7852,7 +7866,7 @@ System.register("bundle://1002/_virtual/GameEndStatus.ts", ['cc', './StoreManage
   };
 });
 
-System.register("bundle://1002/_virtual/GameLaunchContext.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/GameLaunchContext.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -7874,7 +7888,7 @@ System.register("bundle://1002/_virtual/GameLaunchContext.ts", ['cc'], function 
   };
 });
 
-System.register("bundle://1002/_virtual/GameMain_1002.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotGameMain.ts', './GameStateKey.ts', './NGState_1002.ts', './FGState_1002.ts', './SlotGameDefinition.ts', './StoreManager.ts', './GameViewAdapter.ts', './AppAudio.ts', './AppAssetBundle.ts', './GameConfigManager.ts', './ReelTimingDebugStore.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './SceneSpeedStore.ts', './DirectorSpeedHook.ts', './StoreMap.ts', './SlotApiTypes.ts', './AppUtility.ts', './SlotMachineModel.ts', './GamePopupManager.ts', './AudioConfig.ts', './EagleTracker.ts', './TrackerMap.ts', './GameRuntimeEventBus.ts', './SpinResultHandler.ts', './GameRoot.ts', './SubGameData.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/GameMain_1002.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotGameMain.ts', './GameStateKey.ts', './NGState_1002.ts', './FGState_1002.ts', './SlotGameDefinition.ts', './StoreManager.ts', './GameViewAdapter.ts', './AppAudio.ts', './AppAssetBundle.ts', './GameConfigManager.ts', './ReelTimingDebugStore.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './SceneSpeedStore.ts', './DirectorSpeedHook.ts', './StoreMap.ts', './SlotApiTypes.ts', './AppUtility.ts', './SlotMachineModel.ts', './GamePopupManager.ts', './AudioConfig.ts', './EagleTracker.ts', './TrackerMap.ts', './GameRuntimeEventBus.ts', './SpinResultHandler.ts', './GameRoot.ts', './SubGameData.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Prefab, director, Camera, Node, UITransform, JsonAsset, SlotGameMain, GameStateKey, NGState_1002, FGState_1002, SLOT_GAME_DEFINITION, StoreManager, GameViewAdapter, AppAudio, AppAssetBundle, GameConfigManager, ReelTimingDebugStore, parseReelConfig, REEL_CONFIG_PATH, parseSceneSpeedConfig, SceneSpeedStore, SceneSpeedActivationMode, installDirectorSpeedHook, setDirectorSpeedFactor, resetDirectorSpeedFactor, GAMESTOREMAP, TURBOSTATUSMAP, isRoundInProgress, AppUtility, SlotMachineModel, SlotMachineState, GamePopupManager, EFFECTSMAP, EagleTracker, TrackerMap, gameRuntimeEventBus, SpinResultHandler, GameRoot, getSubGameData, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -8767,7 +8781,7 @@ System.register("bundle://1002/_virtual/GameMain_1002.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/GamePopupManager.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts', './WinAnimationView.ts', './FreeBoardView.ts', './StoreManager.ts', './GameRoot.ts'], function (exports) {
+System.register("chunks:///_virtual/GamePopupManager.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts', './WinAnimationView.ts', './FreeBoardView.ts', './StoreManager.ts', './GameRoot.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, _createClass, _createForOfIteratorHelperLoose, cclegacy, instantiate, director, Node, UITransform, sp, Prefab, AppAssetBundle, WinAnimationView, FreeBoardView, StoreManager, GameRoot;
   return {
     setters: [function (module) {
@@ -9182,8 +9196,8 @@ System.register("bundle://1002/_virtual/GamePopupManager.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './GameViewAdapter.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, Widget, UITransform, profiler, Component, ImageAsset, assetManager, sys, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
+System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './GameViewAdapter.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, sys, Widget, UITransform, profiler, Component, ImageAsset, assetManager, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -9198,13 +9212,13 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
       _decorator = module._decorator;
       Node = module.Node;
       view = module.view;
+      sys = module.sys;
       Widget = module.Widget;
       UITransform = module.UITransform;
       profiler = module.profiler;
       Component = module.Component;
       ImageAsset = module.ImageAsset;
       assetManager = module.assetManager;
-      sys = module.sys;
       instantiate = module.instantiate;
     }, function (module) {
       StoreManager = module.default;
@@ -9272,9 +9286,50 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           _initializerDefineProperty(_this, "topNode", _descriptor5, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "loadingView", _descriptor6, _assertThisInitialized(_this));
           // 黑邊背景圖的網址與目前模式
-          _this.backdropEl = null;
+          _this.backdropBars = [];
           _this.backdropUrls = null;
           _this.backdropFree = false;
+          // 固定比例時在畫布上面蓋住設計框外的兩條黑邊 沒有圖就是純黑
+          _this.layoutBackdrop = function () {
+            if (globalThis.__subGameFixedRatio__ !== true) {
+              for (var _iterator = _createForOfIteratorHelperLoose(_this.backdropBars), _step; !(_step = _iterator()).done;) {
+                var bar = _step.value;
+                bar.style.display = 'none';
+              }
+              return;
+            }
+            if (!_this.backdropBars.length) {
+              for (var i = 0; i < 2; i++) {
+                var el = document.createElement('div');
+                el.style.cssText = 'position:fixed;display:none;z-index:2147483000;pointer-events:none;background-color:#000;background-attachment:fixed;background-size:cover;background-position:center;background-repeat:no-repeat';
+                document.body.appendChild(el);
+                _this.backdropBars.push(el);
+              }
+              _this.applyBackdrop();
+            }
+            var design = view.getDesignResolutionSize();
+            var winW = window.innerWidth;
+            var winH = window.innerHeight;
+            var designAspect = design.width / design.height;
+            var frameW = winW;
+            var frameH = winH;
+            if (winW / winH > designAspect) frameW = winH * designAspect;else frameH = winW / designAspect;
+            var gapX = (winW - frameW) / 2;
+            var gapY = (winH - frameH) / 2;
+            var _this$backdropBars = _this.backdropBars,
+              first = _this$backdropBars[0],
+              second = _this$backdropBars[1];
+            if (gapX >= 1) {
+              _this.placeBar(first, 0, 0, gapX, winH);
+              _this.placeBar(second, winW - gapX, 0, gapX, winH);
+            } else if (gapY >= 1) {
+              _this.placeBar(first, 0, 0, winW, gapY);
+              _this.placeBar(second, 0, winH - gapY, winW, gapY);
+            } else {
+              first.style.display = 'none';
+              second.style.display = 'none';
+            }
+          };
           _this.storeManager = void 0;
           _this.viewStore = void 0;
           _this.viewPool = void 0;
@@ -9298,6 +9353,11 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           PopupStack.setLayer(this.topNode);
           view.on('design-resolution-changed', this.fitContentLayers, this);
           this.fitContentLayers();
+          if (sys.isBrowser) {
+            view.on('design-resolution-changed', this.layoutBackdrop, this);
+            window.addEventListener('resize', this.layoutBackdrop);
+            this.layoutBackdrop();
+          }
         }
 
         // 螢幕比設計框窄時 內容層整體縮小 整個設計框才看得到
@@ -9317,14 +9377,18 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
             if (widget) widget.enabled = false;
             (_layer$getComponent = layer.getComponent(UITransform)) == null || _layer$getComponent.setContentSize(visible.width / scale, visible.height / scale);
           }
-          for (var _iterator = _createForOfIteratorHelperLoose((_this$templateNode$ch = (_this$templateNode = this.templateNode) == null ? void 0 : _this$templateNode.children) != null ? _this$templateNode$ch : []), _step; !(_step = _iterator()).done;) {
+          for (var _iterator2 = _createForOfIteratorHelperLoose((_this$templateNode$ch = (_this$templateNode = this.templateNode) == null ? void 0 : _this$templateNode.children) != null ? _this$templateNode$ch : []), _step2; !(_step2 = _iterator2()).done;) {
             var _this$templateNode$ch, _this$templateNode;
-            var templateView = _step.value;
+            var templateView = _step2.value;
             fitViewToSafeArea(templateView);
           }
         };
         _proto.onDestroy = function onDestroy() {
           view.off('design-resolution-changed', this.fitContentLayers, this);
+          if (sys.isBrowser) {
+            view.off('design-resolution-changed', this.layoutBackdrop, this);
+            window.removeEventListener('resize', this.layoutBackdrop);
+          }
           this.removeBackdrop();
           stopGameMock();
           _EventComponent.prototype.onDestroy.call(this);
@@ -9343,18 +9407,21 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                   }
                   return _context.abrupt("return");
                 case 2:
-                  bundle = assetManager.getBundle(GameConfigManager.GAMEID);
+                  _context.next = 4;
+                  return this.waitBundle();
+                case 4:
+                  bundle = _context.sent;
                   paths = [BACKDROP_MAIN_PATH, BACKDROP_FREE_PATH];
                   if (!(!bundle || !paths.every(function (path) {
                     return bundle.getInfoWithPath(path, ImageAsset);
                   }))) {
-                    _context.next = 6;
+                    _context.next = 8;
                     break;
                   }
                   return _context.abrupt("return");
-                case 6:
-                  _context.prev = 6;
-                  _context.next = 9;
+                case 8:
+                  _context.prev = 8;
+                  _context.next = 11;
                   return Promise.all(paths.map(function (path) {
                     return new Promise(function (resolve, reject) {
                       bundle.load(path, ImageAsset, function (error, asset) {
@@ -9362,32 +9429,32 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                       });
                     });
                   }));
-                case 9:
+                case 11:
                   _yield$Promise$all = _context.sent;
                   main = _yield$Promise$all[0];
                   free = _yield$Promise$all[1];
                   if (this.isValid) {
-                    _context.next = 14;
+                    _context.next = 16;
                     break;
                   }
                   return _context.abrupt("return");
-                case 14:
+                case 16:
                   this.backdropUrls = {
                     main: main,
                     free: free
                   };
                   this.applyBackdrop();
-                  _context.next = 21;
+                  _context.next = 23;
                   break;
-                case 18:
-                  _context.prev = 18;
-                  _context.t0 = _context["catch"](6);
+                case 20:
+                  _context.prev = 20;
+                  _context.t0 = _context["catch"](8);
                   console.warn('[GameRoot] 讀取黑邊背景圖失敗 略過', _context.t0);
-                case 21:
+                case 23:
                 case "end":
                   return _context.stop();
               }
-            }, _callee, this, [[6, 18]]);
+            }, _callee, this, [[8, 20]]);
           }));
           function initBackdrop() {
             return _initBackdrop.apply(this, arguments);
@@ -9403,24 +9470,82 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
         _proto.setBackdropFree = function setBackdropFree(free) {
           this.backdropFree = free;
           this.applyBackdrop();
-        };
+        }
+
+        // bundle 在初始化時才載入 等它出現 最多等一分鐘
+        ;
+
+        _proto.waitBundle = /*#__PURE__*/
+        function () {
+          var _waitBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+            var i, bundle;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  i = 0;
+                case 1:
+                  if (!(i < 600)) {
+                    _context2.next = 12;
+                    break;
+                  }
+                  bundle = assetManager.getBundle(GameConfigManager.GAMEID);
+                  if (!bundle) {
+                    _context2.next = 5;
+                    break;
+                  }
+                  return _context2.abrupt("return", bundle);
+                case 5:
+                  _context2.next = 7;
+                  return new Promise(function (resolve) {
+                    return setTimeout(resolve, 100);
+                  });
+                case 7:
+                  if (this.isValid) {
+                    _context2.next = 9;
+                    break;
+                  }
+                  return _context2.abrupt("return", null);
+                case 9:
+                  i++;
+                  _context2.next = 1;
+                  break;
+                case 12:
+                  return _context2.abrupt("return", null);
+                case 13:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, this);
+          }));
+          function waitBundle() {
+            return _waitBundle.apply(this, arguments);
+          }
+          return waitBundle;
+        }();
         _proto.applyBackdrop = function applyBackdrop() {
           var urls = this.backdropUrls;
-          if (!urls) return;
-          if (!this.backdropEl) {
-            var el = document.createElement('div');
-            el.style.cssText = 'position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:-1;background-size:cover;background-position:center;background-repeat:no-repeat';
-            document.body.insertBefore(el, document.body.firstChild);
-            this.backdropEl = el;
+          if (!urls || !this.backdropBars.length) return;
+          var image = "url(\"" + (this.backdropFree ? urls.free : urls.main).replace(/"/g, '%22') + "\")";
+          for (var _iterator3 = _createForOfIteratorHelperLoose(this.backdropBars), _step3; !(_step3 = _iterator3()).done;) {
+            var bar = _step3.value;
+            bar.style.backgroundImage = image;
           }
-          this.backdropEl.style.backgroundImage = "url(\"" + (this.backdropFree ? urls.free : urls.main).replace(/"/g, '%22') + "\")";
           // 另一張先載進快取 切換時不會閃
           new Image().src = this.backdropFree ? urls.main : urls.free;
         };
+        _proto.placeBar = function placeBar(el, x, y, w, h) {
+          el.style.display = 'block';
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.width = w + "px";
+          el.style.height = h + "px";
+        };
         _proto.removeBackdrop = function removeBackdrop() {
-          var _this$backdropEl;
-          (_this$backdropEl = this.backdropEl) == null || _this$backdropEl.remove();
-          this.backdropEl = null;
+          for (var _iterator4 = _createForOfIteratorHelperLoose(this.backdropBars), _step4; !(_step4 = _iterator4()).done;) {
+            var bar = _step4.value;
+            bar.remove();
+          }
+          this.backdropBars = [];
         };
         _proto.start = function start() {
           console.log('GameRoot onStart');
@@ -9441,8 +9566,8 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
               _this2.setLayerRecursive(child, layer);
               apply(child);
             });
-            for (var _iterator2 = _createForOfIteratorHelperLoose(n.children), _step2; !(_step2 = _iterator2()).done;) {
-              var c = _step2.value;
+            for (var _iterator5 = _createForOfIteratorHelperLoose(n.children), _step5; !(_step5 = _iterator5()).done;) {
+              var c = _step5.value;
               apply(c);
             }
           };
@@ -9450,8 +9575,8 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
         };
         _proto.setLayerRecursive = function setLayerRecursive(node, layer) {
           node.layer = layer;
-          for (var _iterator3 = _createForOfIteratorHelperLoose(node.children), _step3; !(_step3 = _iterator3()).done;) {
-            var c = _step3.value;
+          for (var _iterator6 = _createForOfIteratorHelperLoose(node.children), _step6; !(_step6 = _iterator6()).done;) {
+            var c = _step6.value;
             this.setLayerRecursive(c, layer);
           }
         };
@@ -9502,74 +9627,74 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           this.viewPool = AppViewPool.getInstance();
         };
         _proto.initial = /*#__PURE__*/function () {
-          var _initial = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+          var _initial = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
             var _this$loadingView$get;
             var startTime, updateView, enterStartTime, entered;
-            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-              while (1) switch (_context2.prev = _context2.next) {
+            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+              while (1) switch (_context3.prev = _context3.next) {
                 case 0:
                   startTime = performance.now();
                   EagleTracker.trackerEvent(TrackerMap.GAME_LOAD_START);
                   if (!isMock()) {
-                    _context2.next = 5;
+                    _context3.next = 5;
                     break;
                   }
-                  _context2.next = 5;
+                  _context3.next = 5;
                   return startGameMock();
                 case 5:
                   console.log('------ [GameRoot] initial ------ ');
 
                   // Native 更新由 1002 自己的 Loading 節點負責；Web 完全略過。
                   if (!sys.isNative) {
-                    _context2.next = 14;
+                    _context3.next = 14;
                     break;
                   }
                   updateView = this.node.getComponentInChildren(NativeBundleUpdateView);
                   if (!updateView) {
-                    _context2.next = 13;
+                    _context3.next = 13;
                     break;
                   }
-                  _context2.next = 11;
+                  _context3.next = 11;
                   return updateView.ensureUpdated();
                 case 11:
-                  _context2.next = 14;
+                  _context3.next = 14;
                   break;
                 case 13:
                   console.warn('[GameRoot] 未掛 NativeBundleUpdateView，略過 1002 原生熱更新');
                 case 14:
                   // 3.初始化 i18n
                   console.log('------ [GameRoot] initial initI18n ------ ');
-                  _context2.next = 17;
+                  _context3.next = 17;
                   return initI18n(undefined, GameConfigManager.GAMEID);
                 case 17:
                   console.log('------ [GameRoot] loadServerConfig ------ ');
                   //載入 config 檔案
-                  _context2.next = 20;
+                  _context3.next = 20;
                   return this.loadServerConfig();
                 case 20:
                   // 2.載入Bundle
                   console.log('------ [GameRoot] loadBundle ------ ');
-                  _context2.next = 23;
+                  _context3.next = 23;
                   return this.loadBundle();
                 case 23:
-                  _context2.next = 25;
+                  _context3.next = 25;
                   return this.syncResolutionBeforeViewInit();
                 case 25:
                   // 4.初始化 TemplateView
                   console.log('------ [GameRoot] initial addTemplateView ------ ');
-                  _context2.next = 28;
+                  _context3.next = 28;
                   return this.addTemplateView();
                 case 28:
                   // 5.連線遊戲伺服器，取得遊戲初始資料
                   console.log('------ [GameRoot] initial addGamePrefab ------ ');
-                  _context2.next = 31;
+                  _context3.next = 31;
                   return this.addGamePrefab();
                 case 31:
                   console.log('------ [GameRoot] initial connectGameServer ------ ');
-                  _context2.next = 34;
+                  _context3.next = 34;
                   return this.connectGameServer();
                 case 34:
-                  _context2.next = 36;
+                  _context3.next = 36;
                   return (_this$loadingView$get = this.loadingView.getComponent(LoadingView)) == null ? void 0 : _this$loadingView$get.fillToEnd();
                 case 36:
                   this.removeLoadingView();
@@ -9590,9 +9715,9 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                   });
                 case 44:
                 case "end":
-                  return _context2.stop();
+                  return _context3.stop();
               }
-            }, _callee2, this);
+            }, _callee3, this);
           }));
           function initial() {
             return _initial.apply(this, arguments);
@@ -9600,13 +9725,13 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return initial;
         }();
         _proto.syncResolutionBeforeViewInit = /*#__PURE__*/function () {
-          var _syncResolutionBeforeViewInit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+          var _syncResolutionBeforeViewInit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
             var _this3 = this;
-            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
-              while (1) switch (_context3.prev = _context3.next) {
+            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+              while (1) switch (_context4.prev = _context4.next) {
                 case 0:
                   this.deviceStore.checkOrientation();
-                  _context3.next = 3;
+                  _context4.next = 3;
                   return new Promise(function (resolve) {
                     _this3.scheduleOnce(function () {
                       return resolve();
@@ -9614,9 +9739,9 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                   });
                 case 3:
                 case "end":
-                  return _context3.stop();
+                  return _context4.stop();
               }
-            }, _callee3, this);
+            }, _callee4, this);
           }));
           function syncResolutionBeforeViewInit() {
             return _syncResolutionBeforeViewInit.apply(this, arguments);
@@ -9662,24 +9787,24 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           this.templateViewH.x = 9999;
         };
         _proto.loadBundle = /*#__PURE__*/function () {
-          var _loadBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+          var _loadBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
             var assetBundle, templatePaths;
-            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
-              while (1) switch (_context4.prev = _context4.next) {
+            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+              while (1) switch (_context5.prev = _context5.next) {
                 case 0:
                   assetBundle = AppAssetBundle.getInstance(GameConfigManager.GAMEID);
                   assetBundle.setImageRootPath('resources/Images/UI/');
                   templatePaths = [VIEWMAP.TEMPLATEVIEW.path, VIEWMAP.TEMPLATEVIEWH.path];
-                  _context4.next = 5;
+                  _context5.next = 5;
                   return assetBundle.preloadPrefabs([].concat(templatePaths, [GAMEVIEWMAP.GAMEPREFAB.path]), this.progressCallback.bind(this));
                 case 5:
-                  _context4.next = 7;
+                  _context5.next = 7;
                   return assetBundle.preloadImages();
                 case 7:
                 case "end":
-                  return _context4.stop();
+                  return _context5.stop();
               }
-            }, _callee4, this);
+            }, _callee5, this);
           }));
           function loadBundle() {
             return _loadBundle.apply(this, arguments);
@@ -9687,26 +9812,26 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return loadBundle;
         }();
         _proto.connectGameServer = /*#__PURE__*/function () {
-          var _connectGameServer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
+          var _connectGameServer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
             var _this$storeManager$ge;
-            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
-              while (1) switch (_context5.prev = _context5.next) {
+            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+              while (1) switch (_context6.prev = _context6.next) {
                 case 0:
                   console.log('------ [GameRoot] connectGameServer ------ ');
                   console.log('------ gameInitial ------');
-                  _context5.next = 4;
+                  _context6.next = 4;
                   return this.storeManager.getHttpClientStore().gameInitial();
                 case 4:
                   console.log('------ gameConfig ------');
-                  _context5.next = 7;
+                  _context6.next = 7;
                   return (_this$storeManager$ge = this.storeManager.getHttpClientStore()) == null ? void 0 : _this$storeManager$ge.gameConfig();
                 case 7:
                   console.log('------ Server  complete ------');
                 case 8:
                 case "end":
-                  return _context5.stop();
+                  return _context6.stop();
               }
-            }, _callee5, this);
+            }, _callee6, this);
           }));
           function connectGameServer() {
             return _connectGameServer.apply(this, arguments);
@@ -9714,17 +9839,17 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return connectGameServer;
         }();
         _proto.addView = /*#__PURE__*/function () {
-          var _addView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(viewName) {
-            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
-              while (1) switch (_context6.prev = _context6.next) {
+          var _addView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(viewName) {
+            return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+              while (1) switch (_context7.prev = _context7.next) {
                 case 0:
-                  _context6.next = 2;
+                  _context7.next = 2;
                   return this.addViewToLayer(viewName, false);
                 case 2:
                 case "end":
-                  return _context6.stop();
+                  return _context7.stop();
               }
-            }, _callee6, this);
+            }, _callee7, this);
           }));
           function addView(_x) {
             return _addView.apply(this, arguments);
@@ -9732,17 +9857,17 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return addView;
         }();
         _proto.addVGameView = /*#__PURE__*/function () {
-          var _addVGameView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(viewName) {
-            return _regeneratorRuntime().wrap(function _callee7$(_context7) {
-              while (1) switch (_context7.prev = _context7.next) {
+          var _addVGameView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(viewName) {
+            return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+              while (1) switch (_context8.prev = _context8.next) {
                 case 0:
-                  _context7.next = 2;
+                  _context8.next = 2;
                   return this.addViewToLayer(viewName, true);
                 case 2:
                 case "end":
-                  return _context7.stop();
+                  return _context8.stop();
               }
-            }, _callee7, this);
+            }, _callee8, this);
           }));
           function addVGameView(_x2) {
             return _addVGameView.apply(this, arguments);
@@ -9750,71 +9875,71 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return addVGameView;
         }();
         _proto.addViewToLayer = /*#__PURE__*/function () {
-          var _addViewToLayer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(viewName, useGameViewPool) {
+          var _addViewToLayer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9(viewName, useGameViewPool) {
             var _yield$coreBundle$get;
             var coreBundle, bundleName, view;
-            return _regeneratorRuntime().wrap(function _callee8$(_context8) {
-              while (1) switch (_context8.prev = _context8.next) {
+            return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+              while (1) switch (_context9.prev = _context9.next) {
                 case 0:
                   if (viewName) {
-                    _context8.next = 2;
+                    _context9.next = 2;
                     break;
                   }
-                  return _context8.abrupt("return");
+                  return _context9.abrupt("return");
                 case 2:
                   // 自動找出對應的 bundle
                   coreBundle = AppAssetBundle.getInstance(GameConfigManager.GAMEID);
                   if (!useGameViewPool) {
-                    _context8.next = 7;
+                    _context9.next = 7;
                     break;
                   }
-                  _context8.t0 = GameConfigManager.GAMEID;
-                  _context8.next = 16;
+                  _context9.t0 = GameConfigManager.GAMEID;
+                  _context9.next = 16;
                   break;
                 case 7:
-                  _context8.next = 9;
+                  _context9.next = 9;
                   return coreBundle.getInfoWithPath(viewName.path);
                 case 9:
-                  _context8.t1 = _yield$coreBundle$get = _context8.sent;
-                  if (!(_context8.t1 != null)) {
-                    _context8.next = 14;
+                  _context9.t1 = _yield$coreBundle$get = _context9.sent;
+                  if (!(_context9.t1 != null)) {
+                    _context9.next = 14;
                     break;
                   }
-                  _context8.t2 = _yield$coreBundle$get;
-                  _context8.next = 15;
+                  _context9.t2 = _yield$coreBundle$get;
+                  _context9.next = 15;
                   break;
                 case 14:
-                  _context8.t2 = GameConfigManager.GAMEID;
+                  _context9.t2 = GameConfigManager.GAMEID;
                 case 15:
-                  _context8.t0 = _context8.t2;
+                  _context9.t0 = _context9.t2;
                 case 16:
-                  bundleName = _context8.t0;
-                  _context8.next = 19;
+                  bundleName = _context9.t0;
+                  _context9.next = 19;
                   return this.viewPool.getView(viewName.path, bundleName);
                 case 19:
-                  view = _context8.sent;
-                  _context8.t3 = viewName.level;
-                  _context8.next = _context8.t3 === VIEWLEVEL.GAME ? 23 : _context8.t3 === VIEWLEVEL.TEMPLATE ? 25 : _context8.t3 === VIEWLEVEL.MIDDLE ? 27 : _context8.t3 === VIEWLEVEL.TOP ? 29 : 31;
+                  view = _context9.sent;
+                  _context9.t3 = viewName.level;
+                  _context9.next = _context9.t3 === VIEWLEVEL.GAME ? 23 : _context9.t3 === VIEWLEVEL.TEMPLATE ? 25 : _context9.t3 === VIEWLEVEL.MIDDLE ? 27 : _context9.t3 === VIEWLEVEL.TOP ? 29 : 31;
                   break;
                 case 23:
                   this.addGameNode(view);
-                  return _context8.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 25:
                   this.addTemplateNode(view);
-                  return _context8.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 27:
                   this.addMiddleNode(view);
-                  return _context8.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 29:
                   this.addTopNode(view);
-                  return _context8.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 31:
-                  return _context8.abrupt("return");
+                  return _context9.abrupt("return");
                 case 32:
                 case "end":
-                  return _context8.stop();
+                  return _context9.stop();
               }
-            }, _callee8, this);
+            }, _callee9, this);
           }));
           function addViewToLayer(_x3, _x4) {
             return _addViewToLayer.apply(this, arguments);
@@ -9833,48 +9958,48 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           (_this$storeManager$ge3 = this.storeManager.getModel('LoadingStore')) == null || _this$storeManager$ge3.setProgress(progress);
         };
         _proto.addTemplateView = /*#__PURE__*/function () {
-          var _addTemplateView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
+          var _addTemplateView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
             var tvHBundleId, tvHPath, tvVBundleId, tvVPath, isPortrait;
-            return _regeneratorRuntime().wrap(function _callee9$(_context9) {
-              while (1) switch (_context9.prev = _context9.next) {
+            return _regeneratorRuntime().wrap(function _callee10$(_context10) {
+              while (1) switch (_context10.prev = _context10.next) {
                 case 0:
                   tvHBundleId = GameConfigManager.GAMEID;
                   tvHPath = VIEWMAP.TEMPLATEVIEW.path;
                   tvVBundleId = GameConfigManager.GAMEID;
                   tvVPath = VIEWMAP.TEMPLATEVIEWH.path;
-                  _context9.t0 = instantiate;
-                  _context9.next = 7;
+                  _context10.t0 = instantiate;
+                  _context10.next = 7;
                   return AppAssetBundle.getInstance(tvHBundleId).loadPrefab(tvHPath);
                 case 7:
-                  _context9.t1 = _context9.sent;
-                  this.templateView = (0, _context9.t0)(_context9.t1);
+                  _context10.t1 = _context10.sent;
+                  this.templateView = (0, _context10.t0)(_context10.t1);
                   this.templateView.x = 9999;
                   this.addTemplateNode(this.templateView);
 
                   // 橫版是負責扣局數的 TemplateView.isPrimary
                   this.isTemplateViewPrimary(this.templateView);
-                  _context9.t2 = instantiate;
-                  _context9.next = 15;
+                  _context10.t2 = instantiate;
+                  _context10.next = 15;
                   return AppAssetBundle.getInstance(tvVBundleId).loadPrefab(tvVPath);
                 case 15:
-                  _context9.t3 = _context9.sent;
-                  this.templateViewH = (0, _context9.t2)(_context9.t3);
+                  _context10.t3 = _context10.sent;
+                  this.templateViewH = (0, _context10.t2)(_context10.t3);
                   this.templateViewH.x = 9999;
                   this.addTemplateNode(this.templateViewH);
                   isPortrait = this.deviceStore.isPortrait;
                   if (!isPortrait) {
-                    _context9.next = 23;
+                    _context10.next = 23;
                     break;
                   }
                   this.templateViewH.x = 0;
-                  return _context9.abrupt("return");
+                  return _context10.abrupt("return");
                 case 23:
                   this.templateView.x = 0;
                 case 24:
                 case "end":
-                  return _context9.stop();
+                  return _context10.stop();
               }
-            }, _callee9, this);
+            }, _callee10, this);
           }));
           function addTemplateView() {
             return _addTemplateView.apply(this, arguments);
@@ -9897,23 +10022,23 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           }
         };
         _proto.addGamePrefab = /*#__PURE__*/function () {
-          var _addGamePrefab = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
+          var _addGamePrefab = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
             var gamePrefab;
-            return _regeneratorRuntime().wrap(function _callee10$(_context10) {
-              while (1) switch (_context10.prev = _context10.next) {
+            return _regeneratorRuntime().wrap(function _callee11$(_context11) {
+              while (1) switch (_context11.prev = _context11.next) {
                 case 0:
-                  _context10.t0 = instantiate;
-                  _context10.next = 3;
+                  _context11.t0 = instantiate;
+                  _context11.next = 3;
                   return AppAssetBundle.getInstance(GameConfigManager.GAMEID).loadPrefab(GAMEVIEWMAP.GAMEPREFAB.path);
                 case 3:
-                  _context10.t1 = _context10.sent;
-                  gamePrefab = (0, _context10.t0)(_context10.t1);
+                  _context11.t1 = _context11.sent;
+                  gamePrefab = (0, _context11.t0)(_context11.t1);
                   this.addGameNode(gamePrefab);
                 case 6:
                 case "end":
-                  return _context10.stop();
+                  return _context11.stop();
               }
-            }, _callee10, this);
+            }, _callee11, this);
           }));
           function addGamePrefab() {
             return _addGamePrefab.apply(this, arguments);
@@ -9921,20 +10046,20 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return addGamePrefab;
         }();
         _proto.loadServerConfig = /*#__PURE__*/function () {
-          var _loadServerConfig = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
+          var _loadServerConfig = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
             var gameConfigManager;
-            return _regeneratorRuntime().wrap(function _callee11$(_context11) {
-              while (1) switch (_context11.prev = _context11.next) {
+            return _regeneratorRuntime().wrap(function _callee12$(_context12) {
+              while (1) switch (_context12.prev = _context12.next) {
                 case 0:
                   console.log('------ [GameRoot] loadServerConfig ------ ');
                   gameConfigManager = GameConfigManager.getInstance();
-                  _context11.next = 4;
+                  _context12.next = 4;
                   return gameConfigManager.updateServerConfig();
                 case 4:
                 case "end":
-                  return _context11.stop();
+                  return _context12.stop();
               }
-            }, _callee11);
+            }, _callee12);
           }));
           function loadServerConfig() {
             return _loadServerConfig.apply(this, arguments);
@@ -9981,7 +10106,7 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
   };
 });
 
-System.register("bundle://1002/_virtual/GameRuleView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts', './StoreMap.ts', './StoreManager.ts'], function (exports) {
+System.register("chunks:///_virtual/GameRuleView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts', './StoreMap.ts', './StoreManager.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, Component, Label, instantiate, AppAssetBundle, VIEWMAP, StoreManager;
   return {
     setters: [function (module) {
@@ -10357,7 +10482,7 @@ System.register("bundle://1002/_virtual/GameRuleView.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/GameRuntimeEventBus.ts", ['cc', './TypedEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/GameRuntimeEventBus.ts", ['cc', './TypedEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var cclegacy, TypedEventBus;
   return {
     setters: [function (module) {
@@ -10386,7 +10511,7 @@ System.register("bundle://1002/_virtual/GameRuntimeEventBus.ts", ['cc', './Typed
   };
 });
 
-System.register("bundle://1002/_virtual/GameRuntimeEventTypes.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/GameRuntimeEventTypes.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -10525,7 +10650,7 @@ System.register("bundle://1002/_virtual/GameRuntimeEventTypes.ts", ['cc'], funct
   };
 });
 
-System.register("bundle://1002/_virtual/GameState.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/GameState.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -10581,7 +10706,7 @@ System.register("bundle://1002/_virtual/GameState.ts", ['cc'], function (exports
   };
 });
 
-System.register("bundle://1002/_virtual/GameStateKey.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/GameStateKey.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -10607,7 +10732,7 @@ System.register("bundle://1002/_virtual/GameStateKey.ts", ['cc'], function (expo
   };
 });
 
-System.register("bundle://1002/_virtual/GameTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/GameTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createClass, _inheritsLoose, cclegacy;
   return {
     setters: [function (module) {
@@ -10730,7 +10855,7 @@ System.register("bundle://1002/_virtual/GameTask.ts", ['./rollupPluginModLoBabel
   };
 });
 
-System.register("bundle://1002/_virtual/GameTaskHandler.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/GameTaskHandler.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -10778,7 +10903,7 @@ System.register("bundle://1002/_virtual/GameTaskHandler.ts", ['cc'], function (e
   };
 });
 
-System.register("bundle://1002/_virtual/GameTaskQueue.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/GameTaskQueue.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createClass, cclegacy;
   return {
     setters: [function (module) {
@@ -10889,7 +11014,7 @@ System.register("bundle://1002/_virtual/GameTaskQueue.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/GameViewAdapter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AdapterNode.ts', './SlotMachineView.ts', './BaseToggle.ts', './WinFeed.ts'], function (exports) {
+System.register("chunks:///_virtual/GameViewAdapter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AdapterNode.ts', './SlotMachineView.ts', './BaseToggle.ts', './WinFeed.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, UITransform, sys, view, Node, Prefab, sp, Sprite, Button, Label, Component, Vec3, AdapterNode, SlotMachineView, BaseToggle, WinFeed;
   return {
     setters: [function (module) {
@@ -11310,7 +11435,7 @@ System.register("bundle://1002/_virtual/GameViewAdapter.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/GridLayoutConfig.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/GridLayoutConfig.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -11338,7 +11463,7 @@ System.register("bundle://1002/_virtual/GridLayoutConfig.ts", ['cc'], function (
   };
 });
 
-System.register("bundle://1002/_virtual/HistoryAdapter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts', './GameConfigManager.ts', './StoreMap.ts', './SlotGameDefinition.ts'], function (exports) {
+System.register("chunks:///_virtual/HistoryAdapter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts', './GameConfigManager.ts', './StoreMap.ts', './SlotGameDefinition.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, UITransform, Sprite, Label, Layout, Mask, Graphics, UIOpacity, RichText, sp, instantiate, SpriteFrame, AppAssetBundle, GameConfigManager, CURRENCY_MAP, GAMEVIEWMAP, SLOT_GAME_DEFINITION;
   return {
     setters: [function (module) {
@@ -11720,7 +11845,7 @@ System.register("bundle://1002/_virtual/HistoryAdapter.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/HistoryItem.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppUtility.ts', './StoreMap.ts', './StoreManager.ts', './LanguageData.ts'], function (exports) {
+System.register("chunks:///_virtual/HistoryItem.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppUtility.ts', './StoreMap.ts', './StoreManager.ts', './LanguageData.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, Prefab, Label, Component, AppUtility, CURRENCY_MAP, VIEWMAP, StoreManager, getLocalizedString;
   return {
     setters: [function (module) {
@@ -11913,7 +12038,7 @@ System.register("bundle://1002/_virtual/HistoryItem.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/HistoryModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreMap.ts', './StoreManager.ts'], function (exports) {
+System.register("chunks:///_virtual/HistoryModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreMap.ts', './StoreManager.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy, ORIENTATION, StoreManager;
   return {
     setters: [function (module) {
@@ -12012,7 +12137,7 @@ System.register("bundle://1002/_virtual/HistoryModel.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/HistoryView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './HistoryModel.ts', './StoreMap.ts', './HistoryAdapter.ts', './HistoryItem.ts'], function (exports) {
+System.register("chunks:///_virtual/HistoryView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './HistoryModel.ts', './StoreMap.ts', './HistoryAdapter.ts', './HistoryItem.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Prefab, instantiate, Component, HistoryModel, ORIENTATION, HistoryAdapter, HistoryItem;
   return {
     setters: [function (module) {
@@ -12099,7 +12224,7 @@ System.register("bundle://1002/_virtual/HistoryView.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/HttpClientStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './SlotApiClient.ts', './SlotRoundMapper.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './GameConfig.ts', './SlotGameDefinition.ts', './PresentationStore.ts', './i18nHelper.ts', './LanguageData.ts', './Logger.ts', './start.ts', './slot-api-mock.ts', './StoreMap.ts', './GameConfigManager.ts'], function (exports) {
+System.register("chunks:///_virtual/HttpClientStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './SlotApiClient.ts', './SlotRoundMapper.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './GameConfig.ts', './SlotGameDefinition.ts', './PresentationStore.ts', './i18nHelper.ts', './LanguageData.ts', './Logger.ts', './start.ts', './slot-api-mock.ts', './StoreMap.ts', './GameConfigManager.ts'], function (exports) {
   var _createClass, _asyncToGenerator, _regeneratorRuntime, _extends, cclegacy, isRoundInProgress, SlotApiHttpError, SLOT_API_CODE, STEP_STATE, SlotApiClient, SlotRoundMapper, SlotHistoryMapper, toBetPlan, toExtraBetTier, toSlotInitData, toWinTierThresholds, baseBetAmount, toSlotConfigData, autoFallbackToMock, isMock, API_GAME_ID, PresentationStore, switchLanguage, getLocalizedString, Logger, startGameMock, MOCK_API_BASE_URL, MOCK_TOKEN, GAMESTOREMAP, GameConfigManager;
   return {
     setters: [function (module) {
@@ -13173,7 +13298,7 @@ System.register("bundle://1002/_virtual/HttpClientStore.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/i18nHelper.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './LanguageData.ts', './AppAssetBundle.ts'], function (exports) {
+System.register("chunks:///_virtual/i18nHelper.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './LanguageData.ts', './AppAssetBundle.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy, JsonAsset, setLanguageMap, i18nInit, currentLanguage, resolveLanguageCode, AppAssetBundle;
   return {
     setters: [function (module) {
@@ -13315,7 +13440,7 @@ System.register("bundle://1002/_virtual/i18nHelper.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/index.ts", ['cc', './chinhoyiah.ts'], function (exports) {
+System.register("chunks:///_virtual/index.ts", ['cc', './chinhoyiah.ts'], function (exports) {
   var cclegacy, chinHoYiahEngine;
   return {
     setters: [function (module) {
@@ -13339,7 +13464,7 @@ System.register("bundle://1002/_virtual/index.ts", ['cc', './chinhoyiah.ts'], fu
   };
 });
 
-System.register("bundle://1002/_virtual/ISlotGameMain.ts", ['cc'], function () {
+System.register("chunks:///_virtual/ISlotGameMain.ts", ['cc'], function () {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -13394,7 +13519,7 @@ System.register("bundle://1002/_virtual/ISlotGameMain.ts", ['cc'], function () {
   };
 });
 
-System.register("bundle://1002/_virtual/ISlotGameMainCheck.ts", ['cc'], function () {
+System.register("chunks:///_virtual/ISlotGameMainCheck.ts", ['cc'], function () {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -13417,7 +13542,7 @@ System.register("bundle://1002/_virtual/ISlotGameMainCheck.ts", ['cc'], function
   };
 });
 
-System.register("bundle://1002/_virtual/LanguageData.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/LanguageData.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy, JsonAsset, SpriteFrame, AppAssetBundle, baseRuntimeEventBus, BASE_EVENT_TYPE, BASE_EVENT_ID;
   return {
     setters: [function (module) {
@@ -13821,7 +13946,7 @@ System.register("bundle://1002/_virtual/LanguageData.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/LoadingModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/LoadingModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _createClass, cclegacy, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
@@ -13866,7 +13991,7 @@ System.register("bundle://1002/_virtual/LoadingModel.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/LoadingView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './LoadingViewModel.ts', './EventComponent.ts'], function (exports) {
+System.register("chunks:///_virtual/LoadingView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './LoadingViewModel.ts', './EventComponent.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, ProgressBar, Label, Layout, Node, view, UITransform, LoadingViewModel, EventComponent;
   return {
     setters: [function (module) {
@@ -14106,7 +14231,7 @@ System.register("bundle://1002/_virtual/LoadingView.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/LoadingViewModel.ts", ['cc', './LoadingModel.ts', './StoreManager.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/LoadingViewModel.ts", ['cc', './LoadingModel.ts', './StoreManager.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var cclegacy, LoadingModel, StoreManager, gameRuntimeEventBus, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -14161,7 +14286,7 @@ System.register("bundle://1002/_virtual/LoadingViewModel.ts", ['cc', './LoadingM
   };
 });
 
-System.register("bundle://1002/_virtual/LocalConfig.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/LocalConfig.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -14189,7 +14314,7 @@ System.register("bundle://1002/_virtual/LocalConfig.ts", ['cc'], function (expor
   };
 });
 
-System.register("bundle://1002/_virtual/LocalizedLabel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './BaseRuntimeEventBus.ts', './LanguageData.ts', './BaseRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/LocalizedLabel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './BaseRuntimeEventBus.ts', './LanguageData.ts', './BaseRuntimeEventTypes.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, cclegacy, _decorator, Label, RichText, EventComponent, baseRuntimeEventBus, loadFixedLanguage, getLocalizedStringForLanguage, getLocalizedString, BASE_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -14340,7 +14465,7 @@ System.register("bundle://1002/_virtual/LocalizedLabel.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/Logger.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/Logger.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _extends, cclegacy;
   return {
     setters: [function (module) {
@@ -14533,7 +14658,7 @@ System.register("bundle://1002/_virtual/Logger.ts", ['./rollupPluginModLoBabelHe
   };
 });
 
-System.register("bundle://1002/_virtual/mock-shared.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/mock-shared.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -14563,7 +14688,7 @@ System.register("bundle://1002/_virtual/mock-shared.ts", ['cc'], function (expor
   };
 });
 
-System.register("bundle://1002/_virtual/NativeBundleUpdater.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameConfigManager.ts', './SubGameData.ts'], function (exports) {
+System.register("chunks:///_virtual/NativeBundleUpdater.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameConfigManager.ts', './SubGameData.ts'], function (exports) {
   var _inheritsLoose, _createClass, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, native, sys, game, Component, GameConfigManager, getSubGameData;
   return {
     setters: [function (module) {
@@ -14935,7 +15060,7 @@ System.register("bundle://1002/_virtual/NativeBundleUpdater.ts", ['./rollupPlugi
   };
 });
 
-System.register("bundle://1002/_virtual/NativeBundleUpdateView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameConfigManager.ts', './NativeBundleUpdater.ts'], function (exports) {
+System.register("chunks:///_virtual/NativeBundleUpdateView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameConfigManager.ts', './NativeBundleUpdater.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Asset, Node, ProgressBar, Label, sys, Component, GameConfigManager, NativeUpdateResult, NativeBundleUpdater;
   return {
     setters: [function (module) {
@@ -15131,7 +15256,7 @@ System.register("bundle://1002/_virtual/NativeBundleUpdateView.ts", ['./rollupPl
   };
 });
 
-System.register("bundle://1002/_virtual/NewGameStatus.ts", ['cc', './StoreManager.ts', './StoreMap.ts'], function (exports) {
+System.register("chunks:///_virtual/NewGameStatus.ts", ['cc', './StoreManager.ts', './StoreMap.ts'], function (exports) {
   var cclegacy, StoreManager, AUTOSPINSTATUSMAP, GAMESTOREMAP;
   return {
     setters: [function (module) {
@@ -15206,7 +15331,7 @@ System.register("bundle://1002/_virtual/NewGameStatus.ts", ['cc', './StoreManage
   };
 });
 
-System.register("bundle://1002/_virtual/NGState_1002.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAudio.ts', './GameState.ts', './GameStateKey.ts', './AudioConfig.ts'], function (exports) {
+System.register("chunks:///_virtual/NGState_1002.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAudio.ts', './GameState.ts', './GameStateKey.ts', './AudioConfig.ts'], function (exports) {
   var _inheritsLoose, cclegacy, AppAudio, GameState, GameStateKey, MUSICMAP;
   return {
     setters: [function (module) {
@@ -15249,7 +15374,7 @@ System.register("bundle://1002/_virtual/NGState_1002.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/OrientationController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/OrientationController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createForOfIteratorHelperLoose, cclegacy, Layers, Vec3, Node;
   return {
     setters: [function (module) {
@@ -15356,7 +15481,7 @@ System.register("bundle://1002/_virtual/OrientationController.ts", ['./rollupPlu
   };
 });
 
-System.register("bundle://1002/_virtual/PlayFreeRoundTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './SlotMachineModel.ts', './CascadeReelsTask.ts', './CollectWinTask.ts'], function (exports) {
+System.register("chunks:///_virtual/PlayFreeRoundTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './SlotMachineModel.ts', './CascadeReelsTask.ts', './CollectWinTask.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, _inheritsLoose, cclegacy, Tween, GameTask, SlotMachineState, runCascadeReels, runCollectWin;
   return {
     setters: [function (module) {
@@ -15495,7 +15620,7 @@ System.register("bundle://1002/_virtual/PlayFreeRoundTask.ts", ['./rollupPluginM
   };
 });
 
-System.register("bundle://1002/_virtual/PopupBase.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './PopupStack.ts', './PopupProperty.ts'], function (exports) {
+System.register("chunks:///_virtual/PopupBase.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './PopupStack.ts', './PopupProperty.ts'], function (exports) {
   var _inheritsLoose, cclegacy, _decorator, Button, Node, EventComponent, PopupStack, PopupProperty;
   return {
     setters: [function (module) {
@@ -15592,7 +15717,7 @@ System.register("bundle://1002/_virtual/PopupBase.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("bundle://1002/_virtual/PopupProperty.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/PopupProperty.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Node, Component;
   return {
     setters: [function (module) {
@@ -15669,7 +15794,7 @@ System.register("bundle://1002/_virtual/PopupProperty.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/PopupStack.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/PopupStack.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createClass, cclegacy, instantiate, js;
   return {
     setters: [function (module) {
@@ -15790,7 +15915,7 @@ System.register("bundle://1002/_virtual/PopupStack.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/PresentationStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/PresentationStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createClass, cclegacy;
   return {
     setters: [function (module) {
@@ -15845,7 +15970,7 @@ System.register("bundle://1002/_virtual/PresentationStore.ts", ['./rollupPluginM
   };
 });
 
-System.register("bundle://1002/_virtual/ReelConfig.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/ReelConfig.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _extends, cclegacy;
   return {
     setters: [function (module) {
@@ -15941,7 +16066,7 @@ System.register("bundle://1002/_virtual/ReelConfig.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/ReelModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TypedEventBus.ts'], function (exports) {
+System.register("chunks:///_virtual/ReelModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TypedEventBus.ts'], function (exports) {
   var _createClass, cclegacy, TypedEventBus;
   return {
     setters: [function (module) {
@@ -16035,7 +16160,7 @@ System.register("bundle://1002/_virtual/ReelModel.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("bundle://1002/_virtual/ReelTimingDebugStore.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/ReelTimingDebugStore.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -16146,7 +16271,7 @@ System.register("bundle://1002/_virtual/ReelTimingDebugStore.ts", ['cc'], functi
   };
 });
 
-System.register("bundle://1002/_virtual/ReelView_1002.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ReelView.ts', './SymbolCell.ts', './SymbolImageManager.ts', './SymbolViewMultiplier.ts', './SymbolState.ts', './SlotGameDefinition.ts'], function (exports) {
+System.register("chunks:///_virtual/ReelView_1002.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ReelView.ts', './SymbolCell.ts', './SymbolImageManager.ts', './SymbolViewMultiplier.ts', './SymbolState.ts', './SlotGameDefinition.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Mask, Node, UITransform, UIOpacity, Vec3, Tween, tween, ReelView, SymbolCell, SymbolImageManager, SymbolViewMultiplier, SymbolStateLevel, SymbolState, SLOT_GAME_DEFINITION, MULTIPLIER_SYMBOL_IDS, SYMBOL_IDS, isMultiplierSymbolId;
   return {
     setters: [function (module) {
@@ -17089,7 +17214,7 @@ System.register("bundle://1002/_virtual/ReelView_1002.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/ReelView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './ReelModel.ts', './SymbolState.ts'], function (exports) {
+System.register("chunks:///_virtual/ReelView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './ReelModel.ts', './SymbolState.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, SpriteFrame, Sprite, easing, Vec3, Tween, tween, EventComponent, ReelState, ReelFlag;
   return {
     setters: [function (module) {
@@ -18224,7 +18349,7 @@ System.register("bundle://1002/_virtual/ReelView.ts", ['./rollupPluginModLoBabel
   };
 });
 
-System.register("bundle://1002/_virtual/ReSpinStatus.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/ReSpinStatus.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -18275,7 +18400,7 @@ System.register("bundle://1002/_virtual/ReSpinStatus.ts", ['cc'], function (expo
   };
 });
 
-System.register("bundle://1002/_virtual/RestClient.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/RestClient.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _inheritsLoose, _extends, _wrapNativeSuper, _asyncToGenerator, _regeneratorRuntime, cclegacy;
   return {
     setters: [function (module) {
@@ -18556,554 +18681,7 @@ System.register("bundle://1002/_virtual/RestClient.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/rollupPluginModLoBabelHelpers.js", [], function (exports) {
-  return {
-    execute: function () {
-      exports({
-        applyDecoratedDescriptor: _applyDecoratedDescriptor,
-        arrayLikeToArray: _arrayLikeToArray,
-        assertThisInitialized: _assertThisInitialized,
-        asyncToGenerator: _asyncToGenerator,
-        construct: _construct,
-        createClass: _createClass,
-        createForOfIteratorHelperLoose: _createForOfIteratorHelperLoose,
-        extends: _extends,
-        getPrototypeOf: _getPrototypeOf,
-        inheritsLoose: _inheritsLoose,
-        initializerDefineProperty: _initializerDefineProperty,
-        isNativeFunction: _isNativeFunction,
-        isNativeReflectConstruct: _isNativeReflectConstruct,
-        regeneratorRuntime: _regeneratorRuntime,
-        setPrototypeOf: _setPrototypeOf,
-        toPrimitive: _toPrimitive,
-        toPropertyKey: _toPropertyKey,
-        unsupportedIterableToArray: _unsupportedIterableToArray,
-        wrapNativeSuper: _wrapNativeSuper
-      });
-      function _regeneratorRuntime() {
-        /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-        _regeneratorRuntime = exports('regeneratorRuntime', function () {
-          return e;
-        });
-        var t,
-          e = {},
-          r = Object.prototype,
-          n = r.hasOwnProperty,
-          o = Object.defineProperty || function (t, e, r) {
-            t[e] = r.value;
-          },
-          i = "function" == typeof Symbol ? Symbol : {},
-          a = i.iterator || "@@iterator",
-          c = i.asyncIterator || "@@asyncIterator",
-          u = i.toStringTag || "@@toStringTag";
-        function define(t, e, r) {
-          return Object.defineProperty(t, e, {
-            value: r,
-            enumerable: !0,
-            configurable: !0,
-            writable: !0
-          }), t[e];
-        }
-        try {
-          define({}, "");
-        } catch (t) {
-          define = function (t, e, r) {
-            return t[e] = r;
-          };
-        }
-        function wrap(t, e, r, n) {
-          var i = e && e.prototype instanceof Generator ? e : Generator,
-            a = Object.create(i.prototype),
-            c = new Context(n || []);
-          return o(a, "_invoke", {
-            value: makeInvokeMethod(t, r, c)
-          }), a;
-        }
-        function tryCatch(t, e, r) {
-          try {
-            return {
-              type: "normal",
-              arg: t.call(e, r)
-            };
-          } catch (t) {
-            return {
-              type: "throw",
-              arg: t
-            };
-          }
-        }
-        e.wrap = wrap;
-        var h = "suspendedStart",
-          l = "suspendedYield",
-          f = "executing",
-          s = "completed",
-          y = {};
-        function Generator() {}
-        function GeneratorFunction() {}
-        function GeneratorFunctionPrototype() {}
-        var p = {};
-        define(p, a, function () {
-          return this;
-        });
-        var d = Object.getPrototypeOf,
-          v = d && d(d(values([])));
-        v && v !== r && n.call(v, a) && (p = v);
-        var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p);
-        function defineIteratorMethods(t) {
-          ["next", "throw", "return"].forEach(function (e) {
-            define(t, e, function (t) {
-              return this._invoke(e, t);
-            });
-          });
-        }
-        function AsyncIterator(t, e) {
-          function invoke(r, o, i, a) {
-            var c = tryCatch(t[r], t, o);
-            if ("throw" !== c.type) {
-              var u = c.arg,
-                h = u.value;
-              return h && "object" == typeof h && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) {
-                invoke("next", t, i, a);
-              }, function (t) {
-                invoke("throw", t, i, a);
-              }) : e.resolve(h).then(function (t) {
-                u.value = t, i(u);
-              }, function (t) {
-                return invoke("throw", t, i, a);
-              });
-            }
-            a(c.arg);
-          }
-          var r;
-          o(this, "_invoke", {
-            value: function (t, n) {
-              function callInvokeWithMethodAndArg() {
-                return new e(function (e, r) {
-                  invoke(t, n, e, r);
-                });
-              }
-              return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
-            }
-          });
-        }
-        function makeInvokeMethod(e, r, n) {
-          var o = h;
-          return function (i, a) {
-            if (o === f) throw new Error("Generator is already running");
-            if (o === s) {
-              if ("throw" === i) throw a;
-              return {
-                value: t,
-                done: !0
-              };
-            }
-            for (n.method = i, n.arg = a;;) {
-              var c = n.delegate;
-              if (c) {
-                var u = maybeInvokeDelegate(c, n);
-                if (u) {
-                  if (u === y) continue;
-                  return u;
-                }
-              }
-              if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) {
-                if (o === h) throw o = s, n.arg;
-                n.dispatchException(n.arg);
-              } else "return" === n.method && n.abrupt("return", n.arg);
-              o = f;
-              var p = tryCatch(e, r, n);
-              if ("normal" === p.type) {
-                if (o = n.done ? s : l, p.arg === y) continue;
-                return {
-                  value: p.arg,
-                  done: n.done
-                };
-              }
-              "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg);
-            }
-          };
-        }
-        function maybeInvokeDelegate(e, r) {
-          var n = r.method,
-            o = e.iterator[n];
-          if (o === t) return r.delegate = null, "throw" === n && e.iterator.return && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y;
-          var i = tryCatch(o, e.iterator, r.arg);
-          if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y;
-          var a = i.arg;
-          return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y);
-        }
-        function pushTryEntry(t) {
-          var e = {
-            tryLoc: t[0]
-          };
-          1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e);
-        }
-        function resetTryEntry(t) {
-          var e = t.completion || {};
-          e.type = "normal", delete e.arg, t.completion = e;
-        }
-        function Context(t) {
-          this.tryEntries = [{
-            tryLoc: "root"
-          }], t.forEach(pushTryEntry, this), this.reset(!0);
-        }
-        function values(e) {
-          if (e || "" === e) {
-            var r = e[a];
-            if (r) return r.call(e);
-            if ("function" == typeof e.next) return e;
-            if (!isNaN(e.length)) {
-              var o = -1,
-                i = function next() {
-                  for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next;
-                  return next.value = t, next.done = !0, next;
-                };
-              return i.next = i;
-            }
-          }
-          throw new TypeError(typeof e + " is not iterable");
-        }
-        return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", {
-          value: GeneratorFunctionPrototype,
-          configurable: !0
-        }), o(GeneratorFunctionPrototype, "constructor", {
-          value: GeneratorFunction,
-          configurable: !0
-        }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) {
-          var e = "function" == typeof t && t.constructor;
-          return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name));
-        }, e.mark = function (t) {
-          return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t;
-        }, e.awrap = function (t) {
-          return {
-            __await: t
-          };
-        }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () {
-          return this;
-        }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) {
-          void 0 === i && (i = Promise);
-          var a = new AsyncIterator(wrap(t, r, n, o), i);
-          return e.isGeneratorFunction(r) ? a : a.next().then(function (t) {
-            return t.done ? t.value : a.next();
-          });
-        }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () {
-          return this;
-        }), define(g, "toString", function () {
-          return "[object Generator]";
-        }), e.keys = function (t) {
-          var e = Object(t),
-            r = [];
-          for (var n in e) r.push(n);
-          return r.reverse(), function next() {
-            for (; r.length;) {
-              var t = r.pop();
-              if (t in e) return next.value = t, next.done = !1, next;
-            }
-            return next.done = !0, next;
-          };
-        }, e.values = values, Context.prototype = {
-          constructor: Context,
-          reset: function (e) {
-            if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t);
-          },
-          stop: function () {
-            this.done = !0;
-            var t = this.tryEntries[0].completion;
-            if ("throw" === t.type) throw t.arg;
-            return this.rval;
-          },
-          dispatchException: function (e) {
-            if (this.done) throw e;
-            var r = this;
-            function handle(n, o) {
-              return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o;
-            }
-            for (var o = this.tryEntries.length - 1; o >= 0; --o) {
-              var i = this.tryEntries[o],
-                a = i.completion;
-              if ("root" === i.tryLoc) return handle("end");
-              if (i.tryLoc <= this.prev) {
-                var c = n.call(i, "catchLoc"),
-                  u = n.call(i, "finallyLoc");
-                if (c && u) {
-                  if (this.prev < i.catchLoc) return handle(i.catchLoc, !0);
-                  if (this.prev < i.finallyLoc) return handle(i.finallyLoc);
-                } else if (c) {
-                  if (this.prev < i.catchLoc) return handle(i.catchLoc, !0);
-                } else {
-                  if (!u) throw new Error("try statement without catch or finally");
-                  if (this.prev < i.finallyLoc) return handle(i.finallyLoc);
-                }
-              }
-            }
-          },
-          abrupt: function (t, e) {
-            for (var r = this.tryEntries.length - 1; r >= 0; --r) {
-              var o = this.tryEntries[r];
-              if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) {
-                var i = o;
-                break;
-              }
-            }
-            i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null);
-            var a = i ? i.completion : {};
-            return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a);
-          },
-          complete: function (t, e) {
-            if ("throw" === t.type) throw t.arg;
-            return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y;
-          },
-          finish: function (t) {
-            for (var e = this.tryEntries.length - 1; e >= 0; --e) {
-              var r = this.tryEntries[e];
-              if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y;
-            }
-          },
-          catch: function (t) {
-            for (var e = this.tryEntries.length - 1; e >= 0; --e) {
-              var r = this.tryEntries[e];
-              if (r.tryLoc === t) {
-                var n = r.completion;
-                if ("throw" === n.type) {
-                  var o = n.arg;
-                  resetTryEntry(r);
-                }
-                return o;
-              }
-            }
-            throw new Error("illegal catch attempt");
-          },
-          delegateYield: function (e, r, n) {
-            return this.delegate = {
-              iterator: values(e),
-              resultName: r,
-              nextLoc: n
-            }, "next" === this.method && (this.arg = t), y;
-          }
-        }, e;
-      }
-      function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-        try {
-          var info = gen[key](arg);
-          var value = info.value;
-        } catch (error) {
-          reject(error);
-          return;
-        }
-        if (info.done) {
-          resolve(value);
-        } else {
-          Promise.resolve(value).then(_next, _throw);
-        }
-      }
-      function _asyncToGenerator(fn) {
-        return function () {
-          var self = this,
-            args = arguments;
-          return new Promise(function (resolve, reject) {
-            var gen = fn.apply(self, args);
-            function _next(value) {
-              asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-            }
-            function _throw(err) {
-              asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-            }
-            _next(undefined);
-          });
-        };
-      }
-      function _defineProperties(target, props) {
-        for (var i = 0; i < props.length; i++) {
-          var descriptor = props[i];
-          descriptor.enumerable = descriptor.enumerable || false;
-          descriptor.configurable = true;
-          if ("value" in descriptor) descriptor.writable = true;
-          Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
-        }
-      }
-      function _createClass(Constructor, protoProps, staticProps) {
-        if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-        if (staticProps) _defineProperties(Constructor, staticProps);
-        Object.defineProperty(Constructor, "prototype", {
-          writable: false
-        });
-        return Constructor;
-      }
-      function _extends() {
-        _extends = exports('extends', Object.assign ? Object.assign.bind() : function (target) {
-          for (var i = 1; i < arguments.length; i++) {
-            var source = arguments[i];
-            for (var key in source) {
-              if (Object.prototype.hasOwnProperty.call(source, key)) {
-                target[key] = source[key];
-              }
-            }
-          }
-          return target;
-        });
-        return _extends.apply(this, arguments);
-      }
-      function _inheritsLoose(subClass, superClass) {
-        subClass.prototype = Object.create(superClass.prototype);
-        subClass.prototype.constructor = subClass;
-        _setPrototypeOf(subClass, superClass);
-      }
-      function _getPrototypeOf(o) {
-        _getPrototypeOf = exports('getPrototypeOf', Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
-          return o.__proto__ || Object.getPrototypeOf(o);
-        });
-        return _getPrototypeOf(o);
-      }
-      function _setPrototypeOf(o, p) {
-        _setPrototypeOf = exports('setPrototypeOf', Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
-          o.__proto__ = p;
-          return o;
-        });
-        return _setPrototypeOf(o, p);
-      }
-      function _isNativeReflectConstruct() {
-        if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-        if (Reflect.construct.sham) return false;
-        if (typeof Proxy === "function") return true;
-        try {
-          Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-          return true;
-        } catch (e) {
-          return false;
-        }
-      }
-      function _construct(Parent, args, Class) {
-        if (_isNativeReflectConstruct()) {
-          _construct = exports('construct', Reflect.construct.bind());
-        } else {
-          _construct = exports('construct', function _construct(Parent, args, Class) {
-            var a = [null];
-            a.push.apply(a, args);
-            var Constructor = Function.bind.apply(Parent, a);
-            var instance = new Constructor();
-            if (Class) _setPrototypeOf(instance, Class.prototype);
-            return instance;
-          });
-        }
-        return _construct.apply(null, arguments);
-      }
-      function _isNativeFunction(fn) {
-        return Function.toString.call(fn).indexOf("[native code]") !== -1;
-      }
-      function _wrapNativeSuper(Class) {
-        var _cache = typeof Map === "function" ? new Map() : undefined;
-        _wrapNativeSuper = exports('wrapNativeSuper', function _wrapNativeSuper(Class) {
-          if (Class === null || !_isNativeFunction(Class)) return Class;
-          if (typeof Class !== "function") {
-            throw new TypeError("Super expression must either be null or a function");
-          }
-          if (typeof _cache !== "undefined") {
-            if (_cache.has(Class)) return _cache.get(Class);
-            _cache.set(Class, Wrapper);
-          }
-          function Wrapper() {
-            return _construct(Class, arguments, _getPrototypeOf(this).constructor);
-          }
-          Wrapper.prototype = Object.create(Class.prototype, {
-            constructor: {
-              value: Wrapper,
-              enumerable: false,
-              writable: true,
-              configurable: true
-            }
-          });
-          return _setPrototypeOf(Wrapper, Class);
-        });
-        return _wrapNativeSuper(Class);
-      }
-      function _assertThisInitialized(self) {
-        if (self === void 0) {
-          throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        }
-        return self;
-      }
-      function _unsupportedIterableToArray(o, minLen) {
-        if (!o) return;
-        if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-        var n = Object.prototype.toString.call(o).slice(8, -1);
-        if (n === "Object" && o.constructor) n = o.constructor.name;
-        if (n === "Map" || n === "Set") return Array.from(o);
-        if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-      }
-      function _arrayLikeToArray(arr, len) {
-        if (len == null || len > arr.length) len = arr.length;
-        for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-        return arr2;
-      }
-      function _createForOfIteratorHelperLoose(o, allowArrayLike) {
-        var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"];
-        if (it) return (it = it.call(o)).next.bind(it);
-        if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {
-          if (it) o = it;
-          var i = 0;
-          return function () {
-            if (i >= o.length) return {
-              done: true
-            };
-            return {
-              done: false,
-              value: o[i++]
-            };
-          };
-        }
-        throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-      }
-      function _toPrimitive(input, hint) {
-        if (typeof input !== "object" || input === null) return input;
-        var prim = input[Symbol.toPrimitive];
-        if (prim !== undefined) {
-          var res = prim.call(input, hint || "default");
-          if (typeof res !== "object") return res;
-          throw new TypeError("@@toPrimitive must return a primitive value.");
-        }
-        return (hint === "string" ? String : Number)(input);
-      }
-      function _toPropertyKey(arg) {
-        var key = _toPrimitive(arg, "string");
-        return typeof key === "symbol" ? key : String(key);
-      }
-      function _initializerDefineProperty(target, property, descriptor, context) {
-        if (!descriptor) return;
-        Object.defineProperty(target, property, {
-          enumerable: descriptor.enumerable,
-          configurable: descriptor.configurable,
-          writable: descriptor.writable,
-          value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
-        });
-      }
-      function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
-        var desc = {};
-        Object.keys(descriptor).forEach(function (key) {
-          desc[key] = descriptor[key];
-        });
-        desc.enumerable = !!desc.enumerable;
-        desc.configurable = !!desc.configurable;
-        if ('value' in desc || desc.initializer) {
-          desc.writable = true;
-        }
-        desc = decorators.slice().reverse().reduce(function (desc, decorator) {
-          return decorator(target, property, desc) || desc;
-        }, desc);
-        if (context && desc.initializer !== void 0) {
-          desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
-          desc.initializer = undefined;
-        }
-        if (desc.initializer === void 0) {
-          Object.defineProperty(target, property, desc);
-          desc = null;
-        }
-        return desc;
-      }
-    }
-  };
-});
-
-System.register("bundle://1002/_virtual/RootStore.ts", ['cc', './SettingStore.ts'], function (exports) {
+System.register("chunks:///_virtual/RootStore.ts", ['cc', './SettingStore.ts'], function (exports) {
   var cclegacy, SettingStore;
   return {
     setters: [function (module) {
@@ -19121,7 +18699,7 @@ System.register("bundle://1002/_virtual/RootStore.ts", ['cc', './SettingStore.ts
   };
 });
 
-System.register("bundle://1002/_virtual/RootStoreHooks.ts", ['cc', './RootStore.ts'], function (exports) {
+System.register("chunks:///_virtual/RootStoreHooks.ts", ['cc', './RootStore.ts'], function (exports) {
   var cclegacy, RootStore;
   return {
     setters: [function (module) {
@@ -19156,7 +18734,7 @@ System.register("bundle://1002/_virtual/RootStoreHooks.ts", ['cc', './RootStore.
   };
 });
 
-System.register("bundle://1002/_virtual/ScatterFreeGameController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/ScatterFreeGameController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createForOfIteratorHelperLoose, cclegacy;
   return {
     setters: [function (module) {
@@ -19201,7 +18779,7 @@ System.register("bundle://1002/_virtual/ScatterFreeGameController.ts", ['./rollu
   };
 });
 
-System.register("bundle://1002/_virtual/ScatterWinTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './SkipWait.ts', './AppAudio.ts', './AudioConfig.ts'], function (exports) {
+System.register("chunks:///_virtual/ScatterWinTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './SkipWait.ts', './AppAudio.ts', './AudioConfig.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, _inheritsLoose, cclegacy, GameTask, skipWait, AppAudio, EFFECTSMAP;
   return {
     setters: [function (module) {
@@ -19278,7 +18856,7 @@ System.register("bundle://1002/_virtual/ScatterWinTask.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/SceneSpeedConfig.ts", ['cc', './SceneSpeedStore.ts'], function (exports) {
+System.register("chunks:///_virtual/SceneSpeedConfig.ts", ['cc', './SceneSpeedStore.ts'], function (exports) {
   var cclegacy, SceneSpeedActivationMode;
   return {
     setters: [function (module) {
@@ -19322,7 +18900,7 @@ System.register("bundle://1002/_virtual/SceneSpeedConfig.ts", ['cc', './SceneSpe
   };
 });
 
-System.register("bundle://1002/_virtual/SceneSpeedStore.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/SceneSpeedStore.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -19431,7 +19009,7 @@ System.register("bundle://1002/_virtual/SceneSpeedStore.ts", ['cc'], function (e
   };
 });
 
-System.register("bundle://1002/_virtual/SeatLobbyPopup.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './PopupBase.ts', './VirtualList.ts', './TableListModel.ts', './TableListViewModel.ts', './TableListSelection.ts', './TableListTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/SeatLobbyPopup.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './PopupBase.ts', './VirtualList.ts', './TableListModel.ts', './TableListViewModel.ts', './TableListSelection.ts', './TableListTypes.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Toggle, Button, PopupBase, VirtualList, TableListModel, TableListViewModel, TableListSelection, TableSeatState;
   return {
     setters: [function (module) {
@@ -19614,7 +19192,7 @@ System.register("bundle://1002/_virtual/SeatLobbyPopup.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/SelectBetView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SelectBetViewModel.ts', './SOUNDMAP.ts', './AppAudio.ts', './EventComponent.ts'], function (exports) {
+System.register("chunks:///_virtual/SelectBetView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SelectBetViewModel.ts', './SOUNDMAP.ts', './AppAudio.ts', './EventComponent.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Font, Node, Toggle, Label, SelectBetViewModel, EFFECTSMAP, AppAudio, EventComponent;
   return {
     setters: [function (module) {
@@ -19715,7 +19293,7 @@ System.register("bundle://1002/_virtual/SelectBetView.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/SelectBetViewModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './StoreMap.ts', './AppAssetBundle.ts', './GameRuntimeEventBus.ts', './GameConfigManager.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/SelectBetViewModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './StoreMap.ts', './AppAssetBundle.ts', './GameRuntimeEventBus.ts', './GameConfigManager.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy, Label, Toggle, Node, instantiate, StoreManager, ORIENTATION, VIEWMAP, AppAssetBundle, gameRuntimeEventBus, GameConfigManager, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -19855,7 +19433,7 @@ System.register("bundle://1002/_virtual/SelectBetViewModel.ts", ['./rollupPlugin
   };
 });
 
-System.register("bundle://1002/_virtual/SettingStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/SettingStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts'], function (exports) {
   var _createClass, cclegacy, sys, baseRuntimeEventBus, BASE_EVENT_TYPE, BASE_EVENT_ID;
   return {
     setters: [function (module) {
@@ -19929,7 +19507,7 @@ System.register("bundle://1002/_virtual/SettingStore.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/simple-mock.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/simple-mock.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, _createForOfIteratorHelperLoose, cclegacy;
   return {
     setters: [function (module) {
@@ -20340,7 +19918,7 @@ System.register("bundle://1002/_virtual/simple-mock.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/SkipWait.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/SkipWait.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -20379,7 +19957,7 @@ System.register("bundle://1002/_virtual/SkipWait.ts", ['cc'], function (exports)
   };
 });
 
-System.register("bundle://1002/_virtual/slot-api-mock.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './simple-mock.ts', './index.ts'], function (exports) {
+System.register("chunks:///_virtual/slot-api-mock.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './simple-mock.ts', './index.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, _extends, cclegacy, STEP_STATE, SLOT_API_CODE, addMockRoute, clearMockRoutes, jsonResponse, resolveMockEngine;
   return {
     setters: [function (module) {
@@ -21110,7 +20688,7 @@ System.register("bundle://1002/_virtual/slot-api-mock.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/SlotApiClient.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './RestClient.ts'], function (exports) {
+System.register("chunks:///_virtual/SlotApiClient.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './RestClient.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy, SLOT_API_CODE, SlotApiHttpError, RestClient, RestClientError;
   return {
     setters: [function (module) {
@@ -21522,7 +21100,7 @@ System.register("bundle://1002/_virtual/SlotApiClient.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/SlotApiTypes.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/SlotApiTypes.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _inheritsLoose, _wrapNativeSuper, cclegacy;
   return {
     setters: [function (module) {
@@ -21653,7 +21231,7 @@ System.register("bundle://1002/_virtual/SlotApiTypes.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/SlotGameDefinition.ts", ['cc', './SlotGameTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/SlotGameDefinition.ts", ['cc', './SlotGameTypes.ts'], function (exports) {
   var cclegacy, createSlotSymbolCatalog;
   return {
     setters: [function (module) {
@@ -21820,7 +21398,7 @@ System.register("bundle://1002/_virtual/SlotGameDefinition.ts", ['cc', './SlotGa
   };
 });
 
-System.register("bundle://1002/_virtual/SlotGameMain.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './AppAudio.ts', './DualViewController.ts', './StoreManager.ts', './SlotMachineModel.ts', './BuyFeatureController.ts', './SpinShortcutController.ts', './SpinSkipController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './WinBarController.ts', './WinAnimationController.ts', './GameRuntimeEventBus.ts', './ReelTimingDebugStore.ts', './GameConfigManager.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/SlotGameMain.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './AppAudio.ts', './DualViewController.ts', './StoreManager.ts', './SlotMachineModel.ts', './BuyFeatureController.ts', './SpinShortcutController.ts', './SpinSkipController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './WinBarController.ts', './WinAnimationController.ts', './GameRuntimeEventBus.ts', './ReelTimingDebugStore.ts', './GameConfigManager.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _inheritsLoose, _createForOfIteratorHelperLoose, _createClass, cclegacy, EventComponent, AppAudio, DualViewController, StoreManager, SlotMachineState, BuyFeatureController, SpinShortcutController, SpinSkipController, OrientationController, ScatterFreeGameController, WinBarController, WinAnimationController, gameRuntimeEventBus, ReelTimingDebugStore, GameConfigManager, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
@@ -22301,7 +21879,7 @@ System.register("bundle://1002/_virtual/SlotGameMain.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/SlotGameStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreMap.ts', './LanguageData.ts', './AppUtility.ts', './AppStore.ts', './GridLayoutConfig.ts', './GameRuntimeEventBus.ts', './GameStateKey.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/SlotGameStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreMap.ts', './LanguageData.ts', './AppUtility.ts', './AppStore.ts', './GridLayoutConfig.ts', './GameRuntimeEventBus.ts', './GameStateKey.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _createClass, cclegacy, GAMESTOREMAP, AUTOSPINSTATUSMAP, TURBOSTATUSMAP, getLocalizedString, AppUtility, AppStore, createSlotGridLayout, TEMPORARY_SLOT_LAYOUT_SOURCE, gameRuntimeEventBus, GameStateKey, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
@@ -22890,7 +22468,7 @@ System.register("bundle://1002/_virtual/SlotGameStore.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/SlotGameTypes.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/SlotGameTypes.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createForOfIteratorHelperLoose, cclegacy;
   return {
     setters: [function (module) {
@@ -22945,7 +22523,7 @@ System.register("bundle://1002/_virtual/SlotGameTypes.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/SlotGrid.ts", ['cc'], function () {
+System.register("chunks:///_virtual/SlotGrid.ts", ['cc'], function () {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -22967,7 +22545,7 @@ System.register("bundle://1002/_virtual/SlotGrid.ts", ['cc'], function () {
   };
 });
 
-System.register("bundle://1002/_virtual/SlotGridDecoder.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotGameDefinition.ts'], function (exports) {
+System.register("chunks:///_virtual/SlotGridDecoder.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotGameDefinition.ts'], function (exports) {
   var _extends, cclegacy, BOOM_SYMBOL_ID, multiplierSymbolIdOf;
   return {
     setters: [function (module) {
@@ -23059,7 +22637,7 @@ System.register("bundle://1002/_virtual/SlotGridDecoder.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/SlotHistoryMapper.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotResponseAdapter.ts'], function (exports) {
+System.register("chunks:///_virtual/SlotHistoryMapper.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotResponseAdapter.ts'], function (exports) {
   var _extends, cclegacy, subtractDecimal;
   return {
     setters: [function (module) {
@@ -23153,7 +22731,7 @@ System.register("bundle://1002/_virtual/SlotHistoryMapper.ts", ['./rollupPluginM
   };
 });
 
-System.register("bundle://1002/_virtual/SlotMachineModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ReelModel.ts', './TypedEventBus.ts'], function (exports) {
+System.register("chunks:///_virtual/SlotMachineModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ReelModel.ts', './TypedEventBus.ts'], function (exports) {
   var _createClass, cclegacy, ReelModel, TypedEventBus;
   return {
     setters: [function (module) {
@@ -23258,7 +22836,7 @@ System.register("bundle://1002/_virtual/SlotMachineModel.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1002/_virtual/SlotMachineView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './ReelView_1002.ts', './SymbolState.ts'], function (exports) {
+System.register("chunks:///_virtual/SlotMachineView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './ReelView_1002.ts', './SymbolState.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, cclegacy, _decorator, EventComponent, ReelView_1002, ReelFlag;
   return {
     setters: [function (module) {
@@ -23495,7 +23073,7 @@ System.register("bundle://1002/_virtual/SlotMachineView.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/SlotResponseAdapter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './GameConst.ts'], function (exports) {
+System.register("chunks:///_virtual/SlotResponseAdapter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './GameConst.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, cclegacy, isRoundInProgress, WinTier;
   return {
     setters: [function (module) {
@@ -23754,7 +23332,7 @@ System.register("bundle://1002/_virtual/SlotResponseAdapter.ts", ['./rollupPlugi
   };
 });
 
-System.register("bundle://1002/_virtual/SlotRound.ts", ['cc'], function () {
+System.register("chunks:///_virtual/SlotRound.ts", ['cc'], function () {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -23775,7 +23353,7 @@ System.register("bundle://1002/_virtual/SlotRound.ts", ['cc'], function () {
   };
 });
 
-System.register("bundle://1002/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotResponseAdapter.ts'], function (exports) {
+System.register("chunks:///_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotResponseAdapter.ts'], function (exports) {
   var cclegacy, STEP_STATE, SlotGridDecoder, multiplyDecimal;
   return {
     setters: [function (module) {
@@ -24143,7 +23721,7 @@ System.register("bundle://1002/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
   };
 });
 
-System.register("bundle://1002/_virtual/SOUNDMAP.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/SOUNDMAP.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -24167,7 +23745,7 @@ System.register("bundle://1002/_virtual/SOUNDMAP.ts", ['cc'], function (exports)
   };
 });
 
-System.register("bundle://1002/_virtual/SpeedConfig.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/SpeedConfig.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _applyDecoratedDescriptor, _initializerDefineProperty, cclegacy, _decorator;
   return {
     setters: [function (module) {
@@ -24249,7 +23827,7 @@ System.register("bundle://1002/_virtual/SpeedConfig.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/SpineSafe.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/SpineSafe.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -24325,7 +23903,7 @@ System.register("bundle://1002/_virtual/SpineSafe.ts", ['cc'], function (exports
   };
 });
 
-System.register("bundle://1002/_virtual/SpinFlowPlanner.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/SpinFlowPlanner.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -24434,7 +24012,7 @@ System.register("bundle://1002/_virtual/SpinFlowPlanner.ts", ['cc'], function (e
   };
 });
 
-System.register("bundle://1002/_virtual/SpinnerView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/SpinnerView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _inheritsLoose, cclegacy, _decorator, tween, Vec3, Tween, Component;
   return {
     setters: [function (module) {
@@ -24477,7 +24055,7 @@ System.register("bundle://1002/_virtual/SpinnerView.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/SpinResultHandler.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTaskHandler.ts', './GameTaskQueue.ts', './GameTask.ts', './SpinFlowPlanner.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './ScatterWinTask.ts', './FinishSpinTask.ts', './WinAnimationTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './PlayFreeRoundTask.ts', './ExitFreeGameTask.ts'], function (exports) {
+System.register("chunks:///_virtual/SpinResultHandler.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTaskHandler.ts', './GameTaskQueue.ts', './GameTask.ts', './SpinFlowPlanner.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './ScatterWinTask.ts', './FinishSpinTask.ts', './WinAnimationTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './PlayFreeRoundTask.ts', './ExitFreeGameTask.ts'], function (exports) {
   var _inheritsLoose, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, _extends, cclegacy, GameTaskHandler, GameTaskQueue, GameTaskFn, GameTaskPromise, planSpinFlow, CascadeReelsTask, CollectWinTask, ScatterWinTask, FinishSpinTask, WinAnimationTask, EndSpinTask, EnterFreeGameTask, PlayFreeRoundTask, runFreeRound, ExitFreeGameTask;
   return {
     setters: [function (module) {
@@ -24730,7 +24308,7 @@ System.register("bundle://1002/_virtual/SpinResultHandler.ts", ['./rollupPluginM
   };
 });
 
-System.register("bundle://1002/_virtual/SpinShortcutController.ts", ['cc', './StoreMap.ts', './SlotMachineModel.ts', './GameStateKey.ts'], function (exports) {
+System.register("chunks:///_virtual/SpinShortcutController.ts", ['cc', './StoreMap.ts', './SlotMachineModel.ts', './GameStateKey.ts'], function (exports) {
   var cclegacy, input, Input, KeyCode, GAMESTOREMAP, SlotMachineState, GameStateKey;
   return {
     setters: [function (module) {
@@ -24789,7 +24367,7 @@ System.register("bundle://1002/_virtual/SpinShortcutController.ts", ['cc', './St
   };
 });
 
-System.register("bundle://1002/_virtual/SpinSkipConfig.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/SpinSkipConfig.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -24815,7 +24393,7 @@ System.register("bundle://1002/_virtual/SpinSkipConfig.ts", ['cc'], function (ex
   };
 });
 
-System.register("bundle://1002/_virtual/SpinSkipController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SpinSkipConfig.ts'], function (exports) {
+System.register("chunks:///_virtual/SpinSkipController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SpinSkipConfig.ts'], function (exports) {
   var _createClass, cclegacy, getSpinSkipScope;
   return {
     setters: [function (module) {
@@ -24905,7 +24483,7 @@ System.register("bundle://1002/_virtual/SpinSkipController.ts", ['./rollupPlugin
   };
 });
 
-System.register("bundle://1002/_virtual/SpinStartStatus.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './StoreMap.ts'], function (exports) {
+System.register("chunks:///_virtual/SpinStartStatus.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './StoreMap.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy, StoreManager, AUTOSPINSTATUSMAP, TURBOSTATUSMAP;
   return {
     setters: [function (module) {
@@ -25033,7 +24611,7 @@ System.register("bundle://1002/_virtual/SpinStartStatus.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/SpinTypes.ts", ['cc'], function () {
+System.register("chunks:///_virtual/SpinTypes.ts", ['cc'], function () {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -25049,7 +24627,7 @@ System.register("bundle://1002/_virtual/SpinTypes.ts", ['cc'], function () {
   };
 });
 
-System.register("bundle://1002/_virtual/start.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './simple-mock.ts', './slot-api-mock.ts'], function (exports) {
+System.register("chunks:///_virtual/start.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './simple-mock.ts', './slot-api-mock.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy, startSimpleMock, installSlotApiHttpMock, uninstallSlotApiHttpMock;
   return {
     setters: [function (module) {
@@ -25107,7 +24685,7 @@ System.register("bundle://1002/_virtual/start.ts", ['./rollupPluginModLoBabelHel
   };
 });
 
-System.register("bundle://1002/_virtual/StatusManager.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/StatusManager.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -25179,7 +24757,7 @@ System.register("bundle://1002/_virtual/StatusManager.ts", ['cc'], function (exp
   };
 });
 
-System.register("bundle://1002/_virtual/StoreAlertView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './AlertView.ts'], function (exports) {
+System.register("chunks:///_virtual/StoreAlertView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './AlertView.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Node, StoreManager, AlertView;
   return {
     setters: [function (module) {
@@ -25246,7 +24824,7 @@ System.register("bundle://1002/_virtual/StoreAlertView.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/StoreManager.ts", ['cc', './AppStore.ts', './SlotGameStore.ts', './UserStore.ts', './ViewStore.ts', './TrackerStore.ts', './DeviceStore.ts'], function (exports) {
+System.register("chunks:///_virtual/StoreManager.ts", ['cc', './AppStore.ts', './SlotGameStore.ts', './UserStore.ts', './ViewStore.ts', './TrackerStore.ts', './DeviceStore.ts'], function (exports) {
   var cclegacy, AppStore, GameStore, UserStore, ViewStore, TrackerStore, DeviceStore;
   return {
     setters: [function (module) {
@@ -25343,7 +24921,7 @@ System.register("bundle://1002/_virtual/StoreManager.ts", ['cc', './AppStore.ts'
   };
 });
 
-System.register("bundle://1002/_virtual/StoreMap.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/StoreMap.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -25501,7 +25079,7 @@ System.register("bundle://1002/_virtual/StoreMap.ts", ['cc'], function (exports)
   };
 });
 
-System.register("bundle://1002/_virtual/SubGameData.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/SubGameData.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -25527,7 +25105,7 @@ System.register("bundle://1002/_virtual/SubGameData.ts", ['cc'], function (expor
   };
 });
 
-System.register("bundle://1002/_virtual/SubscriptionBag.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/SubscriptionBag.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createClass, cclegacy;
   return {
     setters: [function (module) {
@@ -25594,7 +25172,7 @@ System.register("bundle://1002/_virtual/SubscriptionBag.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/SymbolCell.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolState.ts'], function (exports) {
+System.register("chunks:///_virtual/SymbolCell.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolState.ts'], function (exports) {
   var _inheritsLoose, cclegacy, _decorator, Color, Vec3, Component, SymbolStateLevel, SymbolState, ReelFlag;
   return {
     setters: [function (module) {
@@ -25966,7 +25544,7 @@ System.register("bundle://1002/_virtual/SymbolCell.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/SymbolImageManager.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolImageSet.ts', './SymbolState.ts', './SymbolView.ts'], function (exports) {
+System.register("chunks:///_virtual/SymbolImageManager.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolImageSet.ts', './SymbolState.ts', './SymbolView.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, cclegacy, _decorator, Prefab, Node, instantiate, Component, SymbolImageSet, SymbolState, SymbolView;
   return {
     setters: [function (module) {
@@ -26206,7 +25784,7 @@ System.register("bundle://1002/_virtual/SymbolImageManager.ts", ['./rollupPlugin
   };
 });
 
-System.register("bundle://1002/_virtual/SymbolImageSet.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolView.ts', './SymbolState.ts'], function (exports) {
+System.register("chunks:///_virtual/SymbolImageSet.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolView.ts', './SymbolState.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Component, SymbolView, SymbolState;
   return {
     setters: [function (module) {
@@ -26375,7 +25953,7 @@ System.register("bundle://1002/_virtual/SymbolImageSet.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/SymbolState.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/SymbolState.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -26475,7 +26053,7 @@ System.register("bundle://1002/_virtual/SymbolState.ts", ['cc'], function (expor
   };
 });
 
-System.register("bundle://1002/_virtual/SymbolView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolState.ts'], function (exports) {
+System.register("chunks:///_virtual/SymbolView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolState.ts'], function (exports) {
   var _inheritsLoose, _createForOfIteratorHelperLoose, cclegacy, _decorator, Sprite, sp, Label, Color, Component, SymbolState;
   return {
     setters: [function (module) {
@@ -26654,7 +26232,7 @@ System.register("bundle://1002/_virtual/SymbolView.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1002/_virtual/SymbolViewErase.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolViewSpine.ts'], function (exports) {
+System.register("chunks:///_virtual/SymbolViewErase.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolViewSpine.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Node, SymbolViewSpine;
   return {
     setters: [function (module) {
@@ -26757,7 +26335,7 @@ System.register("bundle://1002/_virtual/SymbolViewErase.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/SymbolViewMultiplier.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolViewSpine.ts', './SpineSafe.ts'], function (exports) {
+System.register("chunks:///_virtual/SymbolViewMultiplier.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolViewSpine.ts', './SpineSafe.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Label, sp, SymbolViewSpine, trySetAnimation;
   return {
     setters: [function (module) {
@@ -27045,7 +26623,7 @@ System.register("bundle://1002/_virtual/SymbolViewMultiplier.ts", ['./rollupPlug
   };
 });
 
-System.register("bundle://1002/_virtual/SymbolViewSpine.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolView.ts', './SpineSafe.ts'], function (exports) {
+System.register("chunks:///_virtual/SymbolViewSpine.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SymbolView.ts', './SpineSafe.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _createClass, cclegacy, _decorator, sp, SymbolView, tryClearAnimation, trySetAnimation;
   return {
     setters: [function (module) {
@@ -27272,7 +26850,7 @@ System.register("bundle://1002/_virtual/SymbolViewSpine.ts", ['./rollupPluginMod
   };
 });
 
-System.register("bundle://1002/_virtual/TableListModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TypedEventBus.ts'], function (exports) {
+System.register("chunks:///_virtual/TableListModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TypedEventBus.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, cclegacy, TypedEventBus;
   return {
     setters: [function (module) {
@@ -27346,7 +26924,7 @@ System.register("bundle://1002/_virtual/TableListModel.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1002/_virtual/TableListSelection.ts", ['cc', './TypedEventBus.ts'], function (exports) {
+System.register("chunks:///_virtual/TableListSelection.ts", ['cc', './TypedEventBus.ts'], function (exports) {
   var cclegacy, TypedEventBus;
   return {
     setters: [function (module) {
@@ -27396,7 +26974,7 @@ System.register("bundle://1002/_virtual/TableListSelection.ts", ['cc', './TypedE
   };
 });
 
-System.register("bundle://1002/_virtual/TableListTypes.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/TableListTypes.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -27435,7 +27013,7 @@ System.register("bundle://1002/_virtual/TableListTypes.ts", ['cc'], function (ex
   };
 });
 
-System.register("bundle://1002/_virtual/TableListViewModel.ts", ['cc', './TypedEventBus.ts', './SubscriptionBag.ts', './TableListTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/TableListViewModel.ts", ['cc', './TypedEventBus.ts', './SubscriptionBag.ts', './TableListTypes.ts'], function (exports) {
   var cclegacy, TypedEventBus, SubscriptionBag, TableSeatState;
   return {
     setters: [function (module) {
@@ -27521,7 +27099,7 @@ System.register("bundle://1002/_virtual/TableListViewModel.ts", ['cc', './TypedE
   };
 });
 
-System.register("bundle://1002/_virtual/TemplateModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/TemplateModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _createClass, cclegacy, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
@@ -27681,7 +27259,7 @@ System.register("bundle://1002/_virtual/TemplateModel.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/TemplateView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TemplateViewModel.ts', './StoreManager.ts', './AppAssetBundle.ts', './GameConfigManager.ts', './EventComponent.ts', './GameStateKey.ts', './StoreMap.ts', './BaseButton.ts'], function (exports) {
+System.register("chunks:///_virtual/TemplateView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TemplateViewModel.ts', './StoreManager.ts', './AppAssetBundle.ts', './GameConfigManager.ts', './EventComponent.ts', './GameStateKey.ts', './StoreMap.ts', './BaseButton.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Layout, Button, Node, sp, Label, UIOpacity, tween, Vec3, TemplateViewModel, StoreManager, AppAssetBundle, GameConfigManager, EventComponent, GameStateKey, AUTOSPINSTATUSMAP, BaseButton;
   return {
     setters: [function (module) {
@@ -28156,7 +27734,7 @@ System.register("bundle://1002/_virtual/TemplateView.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/TemplateViewModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TemplateModel.ts', './StoreManager.ts', './SpinStartStatus.ts', './StatusManager.ts', './NewGameStatus.ts', './StoreMap.ts', './AppAudio.ts', './SOUNDMAP.ts', './ReSpinStatus.ts', './GameEndStatus.ts', './EagleTracker.ts', './TrackerMap.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameConfigManager.ts', './GameRuntimeEventBus.ts', './SubGameData.ts', './GameStateKey.ts', './SlotGameMain.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/TemplateViewModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TemplateModel.ts', './StoreManager.ts', './SpinStartStatus.ts', './StatusManager.ts', './NewGameStatus.ts', './StoreMap.ts', './AppAudio.ts', './SOUNDMAP.ts', './ReSpinStatus.ts', './GameEndStatus.ts', './EagleTracker.ts', './TrackerMap.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameConfigManager.ts', './GameRuntimeEventBus.ts', './SubGameData.ts', './GameStateKey.ts', './SlotGameMain.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, sys, JsonAsset, TemplateStore, StoreManager, SpinStartStatus, StatusManager, NewGameStatus, GAMESTOREMAP, TURBOSTATUSMAP, AUTOSPINSTATUSMAP, AppAudio, bindAudioVolumeEvents, EFFECTSMAP, ReSpinStatus, GameEndStatus, EagleTracker, TrackerMap, AppAssetBundle, AppUtility, GameConfigManager, gameRuntimeEventBus, getSubGameData, GameStateKey, SlotGameMain, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -28729,7 +28307,7 @@ System.register("bundle://1002/_virtual/TemplateViewModel.ts", ['./rollupPluginM
   };
 });
 
-System.register("bundle://1002/_virtual/ToastView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts'], function (exports) {
+System.register("chunks:///_virtual/ToastView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Label, UIOpacity, tween, Vec3, Component, StoreManager;
   return {
     setters: [function (module) {
@@ -28800,7 +28378,7 @@ System.register("bundle://1002/_virtual/ToastView.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("bundle://1002/_virtual/TrackerMap.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/TrackerMap.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -28832,7 +28410,7 @@ System.register("bundle://1002/_virtual/TrackerMap.ts", ['cc'], function (export
   };
 });
 
-System.register("bundle://1002/_virtual/TrackerStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/TrackerStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _createClass, cclegacy, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
@@ -28921,7 +28499,7 @@ System.register("bundle://1002/_virtual/TrackerStore.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1002/_virtual/TypedEventBus.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/TypedEventBus.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createForOfIteratorHelperLoose, cclegacy;
   return {
     setters: [function (module) {
@@ -29017,7 +28595,7 @@ System.register("bundle://1002/_virtual/TypedEventBus.ts", ['./rollupPluginModLo
   };
 });
 
-System.register("bundle://1002/_virtual/types.ts", ['cc'], function () {
+System.register("chunks:///_virtual/types.ts", ['cc'], function () {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -29034,7 +28612,7 @@ System.register("bundle://1002/_virtual/types.ts", ['cc'], function () {
   };
 });
 
-System.register("bundle://1002/_virtual/UserStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/UserStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _createClass, cclegacy, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
@@ -29078,7 +28656,7 @@ System.register("bundle://1002/_virtual/UserStore.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("bundle://1002/_virtual/ViewStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreMap.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/ViewStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreMap.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _createClass, cclegacy, find, VIEWMAP, ORIENTATION, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
@@ -29202,7 +28780,7 @@ System.register("bundle://1002/_virtual/ViewStore.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("bundle://1002/_virtual/VirtualList.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './VirtualListMath.ts'], function (exports) {
+System.register("chunks:///_virtual/VirtualList.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EventComponent.ts', './VirtualListMath.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, cclegacy, _decorator, ScrollView, Prefab, NodePool, UITransform, Vec2, instantiate, Vec3, EventComponent, computeVisibleRange;
   return {
     setters: [function (module) {
@@ -29537,7 +29115,7 @@ System.register("bundle://1002/_virtual/VirtualList.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1002/_virtual/VirtualListMath.ts", ['cc'], function (exports) {
+System.register("chunks:///_virtual/VirtualListMath.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
     setters: [function (module) {
@@ -29592,7 +29170,7 @@ System.register("bundle://1002/_virtual/VirtualListMath.ts", ['cc'], function (e
   };
 });
 
-System.register("bundle://1002/_virtual/WinAnimationController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreMap.ts', './AppAudio.ts'], function (exports) {
+System.register("chunks:///_virtual/WinAnimationController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreMap.ts', './AppAudio.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, GAMESTOREMAP, AppAudio;
   return {
     setters: [function (module) {
@@ -29906,7 +29484,7 @@ System.register("bundle://1002/_virtual/WinAnimationController.ts", ['./rollupPl
   };
 });
 
-System.register("bundle://1002/_virtual/WinAnimationTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './WinAnimationView.ts'], function (exports) {
+System.register("chunks:///_virtual/WinAnimationTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './WinAnimationView.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, _inheritsLoose, cclegacy, GameTask, WinAnimationView;
   return {
     setters: [function (module) {
@@ -29975,7 +29553,7 @@ System.register("bundle://1002/_virtual/WinAnimationTask.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1002/_virtual/WinAnimationView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAudio.ts', './AudioConfig.ts', './StoreManager.ts', './GameViewAdapter.ts', './GameRuntimeEventBus.ts', './GameConst.ts', './PresentationStore.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("chunks:///_virtual/WinAnimationView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAudio.ts', './AudioConfig.ts', './StoreManager.ts', './GameViewAdapter.ts', './GameRuntimeEventBus.ts', './GameConst.ts', './PresentationStore.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, cclegacy, _decorator, sp, Label, Button, Node, director, Tween, UIOpacity, Sprite, Color, tween, Vec3, Component, AppAudio, EFFECTSMAP, StoreManager, GameViewAdapter, gameRuntimeEventBus, WinTier, PresentationStore, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -30556,7 +30134,7 @@ System.register("bundle://1002/_virtual/WinAnimationView.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1002/_virtual/WinBarController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './FrameMultiplierComp.ts'], function (exports) {
+System.register("chunks:///_virtual/WinBarController.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './FrameMultiplierComp.ts'], function (exports) {
   var _createForOfIteratorHelperLoose, cclegacy, UIOpacity, Tween, tween, FrameMultiplierComp;
   return {
     setters: [function (module) {
@@ -30751,7 +30329,7 @@ System.register("bundle://1002/_virtual/WinBarController.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1002/_virtual/WinFeed.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/WinFeed.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Node, instantiate, tween, Tween, Label, Sprite, Vec3, UIOpacity, Component;
   return {
     setters: [function (module) {
@@ -30952,7 +30530,7 @@ System.register("bundle://1002/_virtual/WinFeed.ts", ['./rollupPluginModLoBabelH
   };
 });
 
-System.register("bundle://1002/_virtual/WinFloatLabel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+System.register("chunks:///_virtual/WinFloatLabel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, sp, Label, Component;
   return {
     setters: [function (module) {
@@ -31037,7 +30615,7 @@ System.register("bundle://1002/_virtual/WinFloatLabel.ts", ['./rollupPluginModLo
 });
 
 (function(r) {
-  r('virtual:///prerequisite-imports/1002', 'bundle://1002/_virtual/1002'); 
+  r('virtual:///prerequisite-imports/1002', 'chunks:///_virtual/1002'); 
 })(function(mid, cid) {
     System.register(mid, [cid], function (_export, _context) {
     return {

@@ -22,25 +22,39 @@ System.register("bundle://1002/_virtual/AdapterNode.ts", ['./rollupPluginModLoBa
       var _dec, _class;
       cclegacy._RF.push({}, "178efCzEVlIYpCqeh02b151", "AdapterNode", undefined);
       var ccclass = _decorator.ccclass;
+
+      /**
+       * 背景與彈窗遮罩用：等比放大到蓋滿可視範圍，超出的部分裁掉。
+       * 固定比例（SHOW_ALL）時可視範圍就是設計框，背景不會鋪到框外；隨視窗延伸（FIXED_HEIGHT）時就是整個視窗。
+       */
       var AdapterNode = exports('AdapterNode', (_dec = ccclass('1002/AdapterNode'), _dec(_class = /*#__PURE__*/function (_Component) {
         _inheritsLoose(AdapterNode, _Component);
         function AdapterNode() {
           return _Component.apply(this, arguments) || this;
         }
         var _proto = AdapterNode.prototype;
+        /**
+         * 先套一次目前的視窗尺寸，並監聽之後的視窗與解析度變化。
+         */
         _proto.onLoad = function onLoad() {
           var _Component$prototype$;
           (_Component$prototype$ = _Component.prototype.onLoad) == null || _Component$prototype$.call(this);
           this.onWindowResize();
           view.on('design-resolution-changed', this.onWindowResize, this);
-        };
+        }
+
+        /**
+         * 解除視窗與解析度變化的監聽。
+         */;
         _proto.onDestroy = function onDestroy() {
           var _Component$prototype$2;
           view.off('design-resolution-changed', this.onWindowResize, this);
           (_Component$prototype$2 = _Component.prototype.onDestroy) == null || _Component$prototype$2.call(this);
         }
 
-        /** 依可視尺寸等比鋪滿背景 並抵消父層的內容縮放 */;
+        /**
+         * 依可視範圍等比鋪滿，並抵消父層的內容縮放。
+         */;
         _proto.onWindowResize = function onWindowResize() {
           var _this$node$getCompone, _this$node$parent$wor, _this$node$parent;
           var nodeSize = (_this$node$getCompone = this.node.getComponent(UITransform)) == null ? void 0 : _this$node$getCompone.contentSize;
@@ -9183,7 +9197,7 @@ System.register("bundle://1002/_virtual/GamePopupManager.ts", ['./rollupPluginMo
 });
 
 System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './GameViewAdapter.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, Widget, UITransform, profiler, Component, ImageAsset, assetManager, sys, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, sys, Widget, UITransform, profiler, Component, ImageAsset, assetManager, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -9198,13 +9212,13 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
       _decorator = module._decorator;
       Node = module.Node;
       view = module.view;
+      sys = module.sys;
       Widget = module.Widget;
       UITransform = module.UITransform;
       profiler = module.profiler;
       Component = module.Component;
       ImageAsset = module.ImageAsset;
       assetManager = module.assetManager;
-      sys = module.sys;
       instantiate = module.instantiate;
     }, function (module) {
       StoreManager = module.default;
@@ -9272,9 +9286,50 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           _initializerDefineProperty(_this, "topNode", _descriptor5, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "loadingView", _descriptor6, _assertThisInitialized(_this));
           // 黑邊背景圖的網址與目前模式
-          _this.backdropEl = null;
+          _this.backdropBars = [];
           _this.backdropUrls = null;
           _this.backdropFree = false;
+          // 固定比例時在畫布上面蓋住設計框外的兩條黑邊 沒有圖就是純黑
+          _this.layoutBackdrop = function () {
+            if (globalThis.__subGameFixedRatio__ !== true) {
+              for (var _iterator = _createForOfIteratorHelperLoose(_this.backdropBars), _step; !(_step = _iterator()).done;) {
+                var bar = _step.value;
+                bar.style.display = 'none';
+              }
+              return;
+            }
+            if (!_this.backdropBars.length) {
+              for (var i = 0; i < 2; i++) {
+                var el = document.createElement('div');
+                el.style.cssText = 'position:fixed;display:none;z-index:2147483000;pointer-events:none;background-color:#000;background-attachment:fixed;background-size:cover;background-position:center;background-repeat:no-repeat';
+                document.body.appendChild(el);
+                _this.backdropBars.push(el);
+              }
+              _this.applyBackdrop();
+            }
+            var design = view.getDesignResolutionSize();
+            var winW = window.innerWidth;
+            var winH = window.innerHeight;
+            var designAspect = design.width / design.height;
+            var frameW = winW;
+            var frameH = winH;
+            if (winW / winH > designAspect) frameW = winH * designAspect;else frameH = winW / designAspect;
+            var gapX = (winW - frameW) / 2;
+            var gapY = (winH - frameH) / 2;
+            var _this$backdropBars = _this.backdropBars,
+              first = _this$backdropBars[0],
+              second = _this$backdropBars[1];
+            if (gapX >= 1) {
+              _this.placeBar(first, 0, 0, gapX, winH);
+              _this.placeBar(second, winW - gapX, 0, gapX, winH);
+            } else if (gapY >= 1) {
+              _this.placeBar(first, 0, 0, winW, gapY);
+              _this.placeBar(second, 0, winH - gapY, winW, gapY);
+            } else {
+              first.style.display = 'none';
+              second.style.display = 'none';
+            }
+          };
           _this.storeManager = void 0;
           _this.viewStore = void 0;
           _this.viewPool = void 0;
@@ -9298,6 +9353,11 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           PopupStack.setLayer(this.topNode);
           view.on('design-resolution-changed', this.fitContentLayers, this);
           this.fitContentLayers();
+          if (sys.isBrowser) {
+            view.on('design-resolution-changed', this.layoutBackdrop, this);
+            window.addEventListener('resize', this.layoutBackdrop);
+            this.layoutBackdrop();
+          }
         }
 
         // 螢幕比設計框窄時 內容層整體縮小 整個設計框才看得到
@@ -9317,14 +9377,18 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
             if (widget) widget.enabled = false;
             (_layer$getComponent = layer.getComponent(UITransform)) == null || _layer$getComponent.setContentSize(visible.width / scale, visible.height / scale);
           }
-          for (var _iterator = _createForOfIteratorHelperLoose((_this$templateNode$ch = (_this$templateNode = this.templateNode) == null ? void 0 : _this$templateNode.children) != null ? _this$templateNode$ch : []), _step; !(_step = _iterator()).done;) {
+          for (var _iterator2 = _createForOfIteratorHelperLoose((_this$templateNode$ch = (_this$templateNode = this.templateNode) == null ? void 0 : _this$templateNode.children) != null ? _this$templateNode$ch : []), _step2; !(_step2 = _iterator2()).done;) {
             var _this$templateNode$ch, _this$templateNode;
-            var templateView = _step.value;
+            var templateView = _step2.value;
             fitViewToSafeArea(templateView);
           }
         };
         _proto.onDestroy = function onDestroy() {
           view.off('design-resolution-changed', this.fitContentLayers, this);
+          if (sys.isBrowser) {
+            view.off('design-resolution-changed', this.layoutBackdrop, this);
+            window.removeEventListener('resize', this.layoutBackdrop);
+          }
           this.removeBackdrop();
           stopGameMock();
           _EventComponent.prototype.onDestroy.call(this);
@@ -9343,18 +9407,21 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                   }
                   return _context.abrupt("return");
                 case 2:
-                  bundle = assetManager.getBundle(GameConfigManager.GAMEID);
+                  _context.next = 4;
+                  return this.waitBundle();
+                case 4:
+                  bundle = _context.sent;
                   paths = [BACKDROP_MAIN_PATH, BACKDROP_FREE_PATH];
                   if (!(!bundle || !paths.every(function (path) {
                     return bundle.getInfoWithPath(path, ImageAsset);
                   }))) {
-                    _context.next = 6;
+                    _context.next = 8;
                     break;
                   }
                   return _context.abrupt("return");
-                case 6:
-                  _context.prev = 6;
-                  _context.next = 9;
+                case 8:
+                  _context.prev = 8;
+                  _context.next = 11;
                   return Promise.all(paths.map(function (path) {
                     return new Promise(function (resolve, reject) {
                       bundle.load(path, ImageAsset, function (error, asset) {
@@ -9362,32 +9429,32 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                       });
                     });
                   }));
-                case 9:
+                case 11:
                   _yield$Promise$all = _context.sent;
                   main = _yield$Promise$all[0];
                   free = _yield$Promise$all[1];
                   if (this.isValid) {
-                    _context.next = 14;
+                    _context.next = 16;
                     break;
                   }
                   return _context.abrupt("return");
-                case 14:
+                case 16:
                   this.backdropUrls = {
                     main: main,
                     free: free
                   };
                   this.applyBackdrop();
-                  _context.next = 21;
+                  _context.next = 23;
                   break;
-                case 18:
-                  _context.prev = 18;
-                  _context.t0 = _context["catch"](6);
+                case 20:
+                  _context.prev = 20;
+                  _context.t0 = _context["catch"](8);
                   console.warn('[GameRoot] 讀取黑邊背景圖失敗 略過', _context.t0);
-                case 21:
+                case 23:
                 case "end":
                   return _context.stop();
               }
-            }, _callee, this, [[6, 18]]);
+            }, _callee, this, [[8, 20]]);
           }));
           function initBackdrop() {
             return _initBackdrop.apply(this, arguments);
@@ -9403,24 +9470,82 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
         _proto.setBackdropFree = function setBackdropFree(free) {
           this.backdropFree = free;
           this.applyBackdrop();
-        };
+        }
+
+        // bundle 在初始化時才載入 等它出現 最多等一分鐘
+        ;
+
+        _proto.waitBundle = /*#__PURE__*/
+        function () {
+          var _waitBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+            var i, bundle;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  i = 0;
+                case 1:
+                  if (!(i < 600)) {
+                    _context2.next = 12;
+                    break;
+                  }
+                  bundle = assetManager.getBundle(GameConfigManager.GAMEID);
+                  if (!bundle) {
+                    _context2.next = 5;
+                    break;
+                  }
+                  return _context2.abrupt("return", bundle);
+                case 5:
+                  _context2.next = 7;
+                  return new Promise(function (resolve) {
+                    return setTimeout(resolve, 100);
+                  });
+                case 7:
+                  if (this.isValid) {
+                    _context2.next = 9;
+                    break;
+                  }
+                  return _context2.abrupt("return", null);
+                case 9:
+                  i++;
+                  _context2.next = 1;
+                  break;
+                case 12:
+                  return _context2.abrupt("return", null);
+                case 13:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, this);
+          }));
+          function waitBundle() {
+            return _waitBundle.apply(this, arguments);
+          }
+          return waitBundle;
+        }();
         _proto.applyBackdrop = function applyBackdrop() {
           var urls = this.backdropUrls;
-          if (!urls) return;
-          if (!this.backdropEl) {
-            var el = document.createElement('div');
-            el.style.cssText = 'position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:-1;background-size:cover;background-position:center;background-repeat:no-repeat';
-            document.body.insertBefore(el, document.body.firstChild);
-            this.backdropEl = el;
+          if (!urls || !this.backdropBars.length) return;
+          var image = "url(\"" + (this.backdropFree ? urls.free : urls.main).replace(/"/g, '%22') + "\")";
+          for (var _iterator3 = _createForOfIteratorHelperLoose(this.backdropBars), _step3; !(_step3 = _iterator3()).done;) {
+            var bar = _step3.value;
+            bar.style.backgroundImage = image;
           }
-          this.backdropEl.style.backgroundImage = "url(\"" + (this.backdropFree ? urls.free : urls.main).replace(/"/g, '%22') + "\")";
           // 另一張先載進快取 切換時不會閃
           new Image().src = this.backdropFree ? urls.main : urls.free;
         };
+        _proto.placeBar = function placeBar(el, x, y, w, h) {
+          el.style.display = 'block';
+          el.style.left = x + "px";
+          el.style.top = y + "px";
+          el.style.width = w + "px";
+          el.style.height = h + "px";
+        };
         _proto.removeBackdrop = function removeBackdrop() {
-          var _this$backdropEl;
-          (_this$backdropEl = this.backdropEl) == null || _this$backdropEl.remove();
-          this.backdropEl = null;
+          for (var _iterator4 = _createForOfIteratorHelperLoose(this.backdropBars), _step4; !(_step4 = _iterator4()).done;) {
+            var bar = _step4.value;
+            bar.remove();
+          }
+          this.backdropBars = [];
         };
         _proto.start = function start() {
           console.log('GameRoot onStart');
@@ -9441,8 +9566,8 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
               _this2.setLayerRecursive(child, layer);
               apply(child);
             });
-            for (var _iterator2 = _createForOfIteratorHelperLoose(n.children), _step2; !(_step2 = _iterator2()).done;) {
-              var c = _step2.value;
+            for (var _iterator5 = _createForOfIteratorHelperLoose(n.children), _step5; !(_step5 = _iterator5()).done;) {
+              var c = _step5.value;
               apply(c);
             }
           };
@@ -9450,8 +9575,8 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
         };
         _proto.setLayerRecursive = function setLayerRecursive(node, layer) {
           node.layer = layer;
-          for (var _iterator3 = _createForOfIteratorHelperLoose(node.children), _step3; !(_step3 = _iterator3()).done;) {
-            var c = _step3.value;
+          for (var _iterator6 = _createForOfIteratorHelperLoose(node.children), _step6; !(_step6 = _iterator6()).done;) {
+            var c = _step6.value;
             this.setLayerRecursive(c, layer);
           }
         };
@@ -9502,74 +9627,74 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           this.viewPool = AppViewPool.getInstance();
         };
         _proto.initial = /*#__PURE__*/function () {
-          var _initial = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+          var _initial = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
             var _this$loadingView$get;
             var startTime, updateView, enterStartTime, entered;
-            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-              while (1) switch (_context2.prev = _context2.next) {
+            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+              while (1) switch (_context3.prev = _context3.next) {
                 case 0:
                   startTime = performance.now();
                   EagleTracker.trackerEvent(TrackerMap.GAME_LOAD_START);
                   if (!isMock()) {
-                    _context2.next = 5;
+                    _context3.next = 5;
                     break;
                   }
-                  _context2.next = 5;
+                  _context3.next = 5;
                   return startGameMock();
                 case 5:
                   console.log('------ [GameRoot] initial ------ ');
 
                   // Native 更新由 1002 自己的 Loading 節點負責；Web 完全略過。
                   if (!sys.isNative) {
-                    _context2.next = 14;
+                    _context3.next = 14;
                     break;
                   }
                   updateView = this.node.getComponentInChildren(NativeBundleUpdateView);
                   if (!updateView) {
-                    _context2.next = 13;
+                    _context3.next = 13;
                     break;
                   }
-                  _context2.next = 11;
+                  _context3.next = 11;
                   return updateView.ensureUpdated();
                 case 11:
-                  _context2.next = 14;
+                  _context3.next = 14;
                   break;
                 case 13:
                   console.warn('[GameRoot] 未掛 NativeBundleUpdateView，略過 1002 原生熱更新');
                 case 14:
                   // 3.初始化 i18n
                   console.log('------ [GameRoot] initial initI18n ------ ');
-                  _context2.next = 17;
+                  _context3.next = 17;
                   return initI18n(undefined, GameConfigManager.GAMEID);
                 case 17:
                   console.log('------ [GameRoot] loadServerConfig ------ ');
                   //載入 config 檔案
-                  _context2.next = 20;
+                  _context3.next = 20;
                   return this.loadServerConfig();
                 case 20:
                   // 2.載入Bundle
                   console.log('------ [GameRoot] loadBundle ------ ');
-                  _context2.next = 23;
+                  _context3.next = 23;
                   return this.loadBundle();
                 case 23:
-                  _context2.next = 25;
+                  _context3.next = 25;
                   return this.syncResolutionBeforeViewInit();
                 case 25:
                   // 4.初始化 TemplateView
                   console.log('------ [GameRoot] initial addTemplateView ------ ');
-                  _context2.next = 28;
+                  _context3.next = 28;
                   return this.addTemplateView();
                 case 28:
                   // 5.連線遊戲伺服器，取得遊戲初始資料
                   console.log('------ [GameRoot] initial addGamePrefab ------ ');
-                  _context2.next = 31;
+                  _context3.next = 31;
                   return this.addGamePrefab();
                 case 31:
                   console.log('------ [GameRoot] initial connectGameServer ------ ');
-                  _context2.next = 34;
+                  _context3.next = 34;
                   return this.connectGameServer();
                 case 34:
-                  _context2.next = 36;
+                  _context3.next = 36;
                   return (_this$loadingView$get = this.loadingView.getComponent(LoadingView)) == null ? void 0 : _this$loadingView$get.fillToEnd();
                 case 36:
                   this.removeLoadingView();
@@ -9590,9 +9715,9 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                   });
                 case 44:
                 case "end":
-                  return _context2.stop();
+                  return _context3.stop();
               }
-            }, _callee2, this);
+            }, _callee3, this);
           }));
           function initial() {
             return _initial.apply(this, arguments);
@@ -9600,13 +9725,13 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return initial;
         }();
         _proto.syncResolutionBeforeViewInit = /*#__PURE__*/function () {
-          var _syncResolutionBeforeViewInit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+          var _syncResolutionBeforeViewInit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
             var _this3 = this;
-            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
-              while (1) switch (_context3.prev = _context3.next) {
+            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+              while (1) switch (_context4.prev = _context4.next) {
                 case 0:
                   this.deviceStore.checkOrientation();
-                  _context3.next = 3;
+                  _context4.next = 3;
                   return new Promise(function (resolve) {
                     _this3.scheduleOnce(function () {
                       return resolve();
@@ -9614,9 +9739,9 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                   });
                 case 3:
                 case "end":
-                  return _context3.stop();
+                  return _context4.stop();
               }
-            }, _callee3, this);
+            }, _callee4, this);
           }));
           function syncResolutionBeforeViewInit() {
             return _syncResolutionBeforeViewInit.apply(this, arguments);
@@ -9662,24 +9787,24 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           this.templateViewH.x = 9999;
         };
         _proto.loadBundle = /*#__PURE__*/function () {
-          var _loadBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+          var _loadBundle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
             var assetBundle, templatePaths;
-            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
-              while (1) switch (_context4.prev = _context4.next) {
+            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+              while (1) switch (_context5.prev = _context5.next) {
                 case 0:
                   assetBundle = AppAssetBundle.getInstance(GameConfigManager.GAMEID);
                   assetBundle.setImageRootPath('resources/Images/UI/');
                   templatePaths = [VIEWMAP.TEMPLATEVIEW.path, VIEWMAP.TEMPLATEVIEWH.path];
-                  _context4.next = 5;
+                  _context5.next = 5;
                   return assetBundle.preloadPrefabs([].concat(templatePaths, [GAMEVIEWMAP.GAMEPREFAB.path]), this.progressCallback.bind(this));
                 case 5:
-                  _context4.next = 7;
+                  _context5.next = 7;
                   return assetBundle.preloadImages();
                 case 7:
                 case "end":
-                  return _context4.stop();
+                  return _context5.stop();
               }
-            }, _callee4, this);
+            }, _callee5, this);
           }));
           function loadBundle() {
             return _loadBundle.apply(this, arguments);
@@ -9687,26 +9812,26 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return loadBundle;
         }();
         _proto.connectGameServer = /*#__PURE__*/function () {
-          var _connectGameServer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
+          var _connectGameServer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
             var _this$storeManager$ge;
-            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
-              while (1) switch (_context5.prev = _context5.next) {
+            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+              while (1) switch (_context6.prev = _context6.next) {
                 case 0:
                   console.log('------ [GameRoot] connectGameServer ------ ');
                   console.log('------ gameInitial ------');
-                  _context5.next = 4;
+                  _context6.next = 4;
                   return this.storeManager.getHttpClientStore().gameInitial();
                 case 4:
                   console.log('------ gameConfig ------');
-                  _context5.next = 7;
+                  _context6.next = 7;
                   return (_this$storeManager$ge = this.storeManager.getHttpClientStore()) == null ? void 0 : _this$storeManager$ge.gameConfig();
                 case 7:
                   console.log('------ Server  complete ------');
                 case 8:
                 case "end":
-                  return _context5.stop();
+                  return _context6.stop();
               }
-            }, _callee5, this);
+            }, _callee6, this);
           }));
           function connectGameServer() {
             return _connectGameServer.apply(this, arguments);
@@ -9714,17 +9839,17 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return connectGameServer;
         }();
         _proto.addView = /*#__PURE__*/function () {
-          var _addView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(viewName) {
-            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
-              while (1) switch (_context6.prev = _context6.next) {
+          var _addView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(viewName) {
+            return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+              while (1) switch (_context7.prev = _context7.next) {
                 case 0:
-                  _context6.next = 2;
+                  _context7.next = 2;
                   return this.addViewToLayer(viewName, false);
                 case 2:
                 case "end":
-                  return _context6.stop();
+                  return _context7.stop();
               }
-            }, _callee6, this);
+            }, _callee7, this);
           }));
           function addView(_x) {
             return _addView.apply(this, arguments);
@@ -9732,17 +9857,17 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return addView;
         }();
         _proto.addVGameView = /*#__PURE__*/function () {
-          var _addVGameView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(viewName) {
-            return _regeneratorRuntime().wrap(function _callee7$(_context7) {
-              while (1) switch (_context7.prev = _context7.next) {
+          var _addVGameView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(viewName) {
+            return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+              while (1) switch (_context8.prev = _context8.next) {
                 case 0:
-                  _context7.next = 2;
+                  _context8.next = 2;
                   return this.addViewToLayer(viewName, true);
                 case 2:
                 case "end":
-                  return _context7.stop();
+                  return _context8.stop();
               }
-            }, _callee7, this);
+            }, _callee8, this);
           }));
           function addVGameView(_x2) {
             return _addVGameView.apply(this, arguments);
@@ -9750,71 +9875,71 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return addVGameView;
         }();
         _proto.addViewToLayer = /*#__PURE__*/function () {
-          var _addViewToLayer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(viewName, useGameViewPool) {
+          var _addViewToLayer = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9(viewName, useGameViewPool) {
             var _yield$coreBundle$get;
             var coreBundle, bundleName, view;
-            return _regeneratorRuntime().wrap(function _callee8$(_context8) {
-              while (1) switch (_context8.prev = _context8.next) {
+            return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+              while (1) switch (_context9.prev = _context9.next) {
                 case 0:
                   if (viewName) {
-                    _context8.next = 2;
+                    _context9.next = 2;
                     break;
                   }
-                  return _context8.abrupt("return");
+                  return _context9.abrupt("return");
                 case 2:
                   // 自動找出對應的 bundle
                   coreBundle = AppAssetBundle.getInstance(GameConfigManager.GAMEID);
                   if (!useGameViewPool) {
-                    _context8.next = 7;
+                    _context9.next = 7;
                     break;
                   }
-                  _context8.t0 = GameConfigManager.GAMEID;
-                  _context8.next = 16;
+                  _context9.t0 = GameConfigManager.GAMEID;
+                  _context9.next = 16;
                   break;
                 case 7:
-                  _context8.next = 9;
+                  _context9.next = 9;
                   return coreBundle.getInfoWithPath(viewName.path);
                 case 9:
-                  _context8.t1 = _yield$coreBundle$get = _context8.sent;
-                  if (!(_context8.t1 != null)) {
-                    _context8.next = 14;
+                  _context9.t1 = _yield$coreBundle$get = _context9.sent;
+                  if (!(_context9.t1 != null)) {
+                    _context9.next = 14;
                     break;
                   }
-                  _context8.t2 = _yield$coreBundle$get;
-                  _context8.next = 15;
+                  _context9.t2 = _yield$coreBundle$get;
+                  _context9.next = 15;
                   break;
                 case 14:
-                  _context8.t2 = GameConfigManager.GAMEID;
+                  _context9.t2 = GameConfigManager.GAMEID;
                 case 15:
-                  _context8.t0 = _context8.t2;
+                  _context9.t0 = _context9.t2;
                 case 16:
-                  bundleName = _context8.t0;
-                  _context8.next = 19;
+                  bundleName = _context9.t0;
+                  _context9.next = 19;
                   return this.viewPool.getView(viewName.path, bundleName);
                 case 19:
-                  view = _context8.sent;
-                  _context8.t3 = viewName.level;
-                  _context8.next = _context8.t3 === VIEWLEVEL.GAME ? 23 : _context8.t3 === VIEWLEVEL.TEMPLATE ? 25 : _context8.t3 === VIEWLEVEL.MIDDLE ? 27 : _context8.t3 === VIEWLEVEL.TOP ? 29 : 31;
+                  view = _context9.sent;
+                  _context9.t3 = viewName.level;
+                  _context9.next = _context9.t3 === VIEWLEVEL.GAME ? 23 : _context9.t3 === VIEWLEVEL.TEMPLATE ? 25 : _context9.t3 === VIEWLEVEL.MIDDLE ? 27 : _context9.t3 === VIEWLEVEL.TOP ? 29 : 31;
                   break;
                 case 23:
                   this.addGameNode(view);
-                  return _context8.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 25:
                   this.addTemplateNode(view);
-                  return _context8.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 27:
                   this.addMiddleNode(view);
-                  return _context8.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 29:
                   this.addTopNode(view);
-                  return _context8.abrupt("break", 32);
+                  return _context9.abrupt("break", 32);
                 case 31:
-                  return _context8.abrupt("return");
+                  return _context9.abrupt("return");
                 case 32:
                 case "end":
-                  return _context8.stop();
+                  return _context9.stop();
               }
-            }, _callee8, this);
+            }, _callee9, this);
           }));
           function addViewToLayer(_x3, _x4) {
             return _addViewToLayer.apply(this, arguments);
@@ -9833,48 +9958,48 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           (_this$storeManager$ge3 = this.storeManager.getModel('LoadingStore')) == null || _this$storeManager$ge3.setProgress(progress);
         };
         _proto.addTemplateView = /*#__PURE__*/function () {
-          var _addTemplateView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
+          var _addTemplateView = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
             var tvHBundleId, tvHPath, tvVBundleId, tvVPath, isPortrait;
-            return _regeneratorRuntime().wrap(function _callee9$(_context9) {
-              while (1) switch (_context9.prev = _context9.next) {
+            return _regeneratorRuntime().wrap(function _callee10$(_context10) {
+              while (1) switch (_context10.prev = _context10.next) {
                 case 0:
                   tvHBundleId = GameConfigManager.GAMEID;
                   tvHPath = VIEWMAP.TEMPLATEVIEW.path;
                   tvVBundleId = GameConfigManager.GAMEID;
                   tvVPath = VIEWMAP.TEMPLATEVIEWH.path;
-                  _context9.t0 = instantiate;
-                  _context9.next = 7;
+                  _context10.t0 = instantiate;
+                  _context10.next = 7;
                   return AppAssetBundle.getInstance(tvHBundleId).loadPrefab(tvHPath);
                 case 7:
-                  _context9.t1 = _context9.sent;
-                  this.templateView = (0, _context9.t0)(_context9.t1);
+                  _context10.t1 = _context10.sent;
+                  this.templateView = (0, _context10.t0)(_context10.t1);
                   this.templateView.x = 9999;
                   this.addTemplateNode(this.templateView);
 
                   // 橫版是負責扣局數的 TemplateView.isPrimary
                   this.isTemplateViewPrimary(this.templateView);
-                  _context9.t2 = instantiate;
-                  _context9.next = 15;
+                  _context10.t2 = instantiate;
+                  _context10.next = 15;
                   return AppAssetBundle.getInstance(tvVBundleId).loadPrefab(tvVPath);
                 case 15:
-                  _context9.t3 = _context9.sent;
-                  this.templateViewH = (0, _context9.t2)(_context9.t3);
+                  _context10.t3 = _context10.sent;
+                  this.templateViewH = (0, _context10.t2)(_context10.t3);
                   this.templateViewH.x = 9999;
                   this.addTemplateNode(this.templateViewH);
                   isPortrait = this.deviceStore.isPortrait;
                   if (!isPortrait) {
-                    _context9.next = 23;
+                    _context10.next = 23;
                     break;
                   }
                   this.templateViewH.x = 0;
-                  return _context9.abrupt("return");
+                  return _context10.abrupt("return");
                 case 23:
                   this.templateView.x = 0;
                 case 24:
                 case "end":
-                  return _context9.stop();
+                  return _context10.stop();
               }
-            }, _callee9, this);
+            }, _callee10, this);
           }));
           function addTemplateView() {
             return _addTemplateView.apply(this, arguments);
@@ -9897,23 +10022,23 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           }
         };
         _proto.addGamePrefab = /*#__PURE__*/function () {
-          var _addGamePrefab = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
+          var _addGamePrefab = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
             var gamePrefab;
-            return _regeneratorRuntime().wrap(function _callee10$(_context10) {
-              while (1) switch (_context10.prev = _context10.next) {
+            return _regeneratorRuntime().wrap(function _callee11$(_context11) {
+              while (1) switch (_context11.prev = _context11.next) {
                 case 0:
-                  _context10.t0 = instantiate;
-                  _context10.next = 3;
+                  _context11.t0 = instantiate;
+                  _context11.next = 3;
                   return AppAssetBundle.getInstance(GameConfigManager.GAMEID).loadPrefab(GAMEVIEWMAP.GAMEPREFAB.path);
                 case 3:
-                  _context10.t1 = _context10.sent;
-                  gamePrefab = (0, _context10.t0)(_context10.t1);
+                  _context11.t1 = _context11.sent;
+                  gamePrefab = (0, _context11.t0)(_context11.t1);
                   this.addGameNode(gamePrefab);
                 case 6:
                 case "end":
-                  return _context10.stop();
+                  return _context11.stop();
               }
-            }, _callee10, this);
+            }, _callee11, this);
           }));
           function addGamePrefab() {
             return _addGamePrefab.apply(this, arguments);
@@ -9921,20 +10046,20 @@ System.register("bundle://1002/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           return addGamePrefab;
         }();
         _proto.loadServerConfig = /*#__PURE__*/function () {
-          var _loadServerConfig = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
+          var _loadServerConfig = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
             var gameConfigManager;
-            return _regeneratorRuntime().wrap(function _callee11$(_context11) {
-              while (1) switch (_context11.prev = _context11.next) {
+            return _regeneratorRuntime().wrap(function _callee12$(_context12) {
+              while (1) switch (_context12.prev = _context12.next) {
                 case 0:
                   console.log('------ [GameRoot] loadServerConfig ------ ');
                   gameConfigManager = GameConfigManager.getInstance();
-                  _context11.next = 4;
+                  _context12.next = 4;
                   return gameConfigManager.updateServerConfig();
                 case 4:
                 case "end":
-                  return _context11.stop();
+                  return _context12.stop();
               }
-            }, _callee11);
+            }, _callee12);
           }));
           function loadServerConfig() {
             return _loadServerConfig.apply(this, arguments);
