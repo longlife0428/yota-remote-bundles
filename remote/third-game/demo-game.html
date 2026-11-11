@@ -15,6 +15,7 @@ button { padding: 10px 22px; font-size: 18px; border-radius: 8px; border: 0; bac
 <body>
 <script src="host-sdk.js"></script>
 <canvas id="c"></canvas>
+<div id="loading" style="position:fixed;inset:0;z-index:9;background:#000;display:flex;align-items:center;justify-content:center;font-size:22px">載入中</div>
 <div id="ui">
     <div style="font-size:26px">外部遊戲（測試頁）</div>
     <div id="count">點擊次數 0</div>
@@ -30,6 +31,13 @@ document.getElementById('ret').onclick = function () { location.href = 'return.h
 document.getElementById('ext').onclick = function () { HostBridge.showExitDialog(); };
 // 模擬載入 1.5 秒後通知殼頁畫面準備好了
 setTimeout(function () { HostBridge.ready(); }, 1500);
+// 需要選座的遊戲才在載入完成時呼叫 setState 不需要的不呼叫 網址加 seat=1 可以測需要選座
+if (location.search.indexOf('seat=1') >= 0) setTimeout(function () { HostBridge.setState('ready'); }, 2500);
+// 模擬遊戲載入完成 印出一行並移除讀取畫面 殼頁網址 seat=console:demo loaded 或 seat=selector:!%23loading 可以測
+setTimeout(function () {
+    console.log('demo loaded');
+    document.getElementById('loading').remove();
+}, 3000);
 document.getElementById('info').textContent = location.href + ' | ' + innerWidth + 'x' + innerHeight + ' | parent=' + (window.parent !== window);
 var c = document.getElementById('c'), g = c.getContext('2d'), t = 0;
 function frame() {

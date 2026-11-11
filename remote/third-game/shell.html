@@ -160,6 +160,9 @@ body.shown #game { opacity: 1; }
 <script>
 // ============ 通訊約定 唯一來源 改協議只改這裡 ============
 // 網址參數 url 遊戲網址 gameId 遊戲代號 lang 語言 cover 遮罩秒數或 wait loading=1 只出彈窗
+//   seat 進場選座什麼時候開 只有符合的時機才會開 message=遊戲通知或殼頁詢問 預設  load=遊戲頁載完
+//   delay:秒=載完後再等幾秒  console:字串=遊戲 console 印出含這串字 只限同網域 App 可用 __shellConsoleLine__ 逐行丟進來
+//   selector:選擇器=遊戲畫面上這個元素出現且看得到 selector:!選擇器=元素出現過後消失或被隱藏 只限同網域  off=不自動開
 // 大廳到殼頁 { source: 'host', type, payload }
 //   指令 show-system-menu show-auto-play show-seat-lobby show-exit show-confirm show-alert close-dialog show-loading hide-loading show-toast
 //   init 帶 strings safe settings tableId exitButton canVibrate  safe 帶安全區
@@ -261,6 +264,14 @@ body.shown #game { opacity: 1; }
     // 遮罩模式 數字=網頁載入後再蓋幾秒 wait=只等遊戲回 ready 最多 30 秒
     var coverMode = query.get('cover') || '8';
     var coverTimer = 0;
+    // 進場選座的時機 格式 類型 或 類型:值 不認得或值不對就用 message
+    var seatSpec = query.get('seat') || 'message';
+    var seatColon = seatSpec.indexOf(':');
+    var seatType = seatColon < 0 ? seatSpec : seatSpec.slice(0, seatColon);
+    var seatValue = seatColon < 0 ? '' : seatSpec.slice(seatColon + 1);
+    if (['message', 'load', 'delay', 'console', 'selector', 'off'].indexOf(seatType) < 0) seatType = 'message';
+    if ((seatType === 'console' || seatType === 'selector') && !seatValue) seatType = 'message';
+    if (seatType === 'delay' && !isFinite(parseFloat(seatValue))) seatType = 'message';
     var dialogId = '';
     var toastTimer = 0;
 
@@ -949,7 +960,6 @@ body.shown #game { opacity: 1; }
     }
 
     // 遮罩隱藏原因 ready 遊戲通知 timeout 逾時
-    // 遊戲回 ready 時說進場選座要等 entered 才開 沒說的遊戲遮罩一拿掉就開
     var seatOpened = false;
     var statePollTimer = 0;
 
@@ -969,6 +979,65 @@ body.shown #game { opacity: 1; }
                 // 遊戲視窗還沒好就略過
             }
         }, 500);
+    }
+
+    // 遊戲 console 的一行 含設定的字串就開進場選座
+    function onConsoleLine(line) {
+        if (seatType === 'console' && String(line).indexOf(seatValue) >= 0) triggerSeat('console');
+    }
+    // 原生 App 可以把 WebView 收到的 console 逐行丟進來 不同網域的遊戲也能用
+    window.__shellConsoleLine__ = onConsoleLine;
+
+    // 同網域的遊戲 載入期間一直補掛 console 重新導頁後視窗會換新 不同網域讀不到就收手
+    function hookGameConsole() {
+        var hookTimer = setInterval(function () {
+            if (seatOpened || !gameFrame) {
+                clearInterval(hookTimer);
+                return;
+            }
+            try {
+                var gameConsole = gameFrame.contentWindow.console;
+                if (gameConsole.__shellHooked) return;
+                gameConsole.__shellHooked = true;
+                ['log', 'info', 'warn', 'error', 'debug'].forEach(function (name) {
+                    var original = gameConsole[name];
+                    gameConsole[name] = function () {
+                        original.apply(gameConsole, arguments);
+                        onConsoleLine(Array.prototype.map.call(arguments, String).join(' '));
+                    };
+                });
+            } catch (error) {
+                clearInterval(hookTimer);
+                console.warn('seat=console 只支援同網域的遊戲 不同網域要由 App 呼叫 __shellConsoleLine__');
+            }
+        }, 50);
+    }
+
+    // 同網域的遊戲 定時看畫面元素 一般寫法是出現就開 前面加 ! 是出現過後消失或被隱藏才開
+    function watchGameDom() {
+        var gone = seatValue.charAt(0) === '!';
+        var selector = gone ? seatValue.slice(1) : seatValue;
+        var seen = false;
+        var domTimer = setInterval(function () {
+            if (seatOpened || !gameFrame) {
+                clearInterval(domTimer);
+                return;
+            }
+            try {
+                var element = gameFrame.contentDocument.querySelector(selector);
+                var visible = !!element && element.getClientRects().length > 0;
+                if (visible) seen = true;
+                if (gone ? seen && !visible : visible) triggerSeat('selector');
+            } catch (error) {
+                clearInterval(domTimer);
+                console.warn('seat=selector 只支援同網域的遊戲 而且選擇器要正確');
+            }
+        }, 100);
+    }
+
+    // 只有符合 seat 設定的時機才開進場選座
+    function triggerSeat(source) {
+        if (source === seatType) openEnterSeat();
     }
 
     // 進遊戲先選座 不強制選 關掉照樣進遊戲 已經有別的彈窗開著就不搶 一次進場只開一次
@@ -1061,7 +1130,7 @@ body.shown #game { opacity: 1; }
                 break;
             case 'show-seat-lobby':
                 // 遊戲送來的是進場選座 走同一個入口
-                if (caller === 'game') openEnterSeat();
+                if (caller === 'game') triggerSeat('message');
                 else showSeatLobby(payload);
                 break;
             case 'show-exit':
@@ -1143,13 +1212,13 @@ body.shown #game { opacity: 1; }
             case 'entered':
                 // 載入完成進到遊戲 遮罩還在就一起拿掉
                 hideCover('entered');
-                openEnterSeat();
+                triggerSeat('message');
                 break;
             case 'state':
                 // 殼頁問的回覆 ready 才算載入完成
                 if (payload.state === 'ready') {
                     hideCover('state');
-                    openEnterSeat();
+                    triggerSeat('message');
                 }
                 break;
             case 'error':
@@ -1205,7 +1274,9 @@ body.shown #game { opacity: 1; }
             emit('game-loaded');
             // 先打招呼 遊戲想要的話可以用 host-sdk.js 接
             sendHello();
-            startStatePoll();
+            if (seatType === 'message') startStatePoll();
+            triggerSeat('load');
+            if (seatType === 'delay') setTimeout(function () { triggerSeat('delay'); }, parseFloat(seatValue) * 1000);
             // 同網域的遊戲 補上大廳的共用介面 遊戲按選單時開殼頁的系統選單 跨網域取不到就略過
             try {
                 var scope = gameFrame.contentWindow;
@@ -1237,6 +1308,8 @@ body.shown #game { opacity: 1; }
             // 網址無法解析就維持原樣
         }
         gameFrame.src = frameUrl;
+        if (seatType === 'console') hookGameConsole();
+        if (seatType === 'selector') watchGameDom();
         // 遊戲啟動時只讀一次旗標 不能等 load 才寫 載入前就持續寫進去
         var desktopRatio = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
         if (desktopRatio) {
