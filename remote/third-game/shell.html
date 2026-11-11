@@ -1267,8 +1267,9 @@ body.shown #game { opacity: 1; }
         gameFrame.id = 'game';
         gameFrame.setAttribute('allow', 'autoplay; fullscreen; clipboard-write');
         // 不給 allow-top-navigation 避免對方把殼頁導走
+        // allow-downloads 給遊戲祕技（DebugPanel）的匯出 JSON 用 沒有它 Chrome 會靜靜擋掉 sandbox 裡的下載
         if (query.get('sandbox') !== '0') {
-            gameFrame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-pointer-lock allow-orientation-lock');
+            gameFrame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-pointer-lock allow-orientation-lock allow-downloads');
         }
         gameFrame.addEventListener('load', function () {
             emit('game-loaded');
