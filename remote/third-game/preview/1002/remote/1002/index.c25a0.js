@@ -6555,7 +6555,7 @@ System.register("chunks:///_virtual/DebugPanel.ts", ['./rollupPluginModLoBabelHe
 });
 
 System.register("chunks:///_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _createClass, cclegacy, ResolutionPolicy, view, screen, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
+  var _createClass, cclegacy, ResolutionPolicy, view, Size, screen, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
       _createClass = module.createClass;
@@ -6563,6 +6563,7 @@ System.register("chunks:///_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelH
       cclegacy = module.cclegacy;
       ResolutionPolicy = module.ResolutionPolicy;
       view = module.view;
+      Size = module.Size;
       screen = module.screen;
     }, function (module) {
       gameRuntimeEventBus = module.gameRuntimeEventBus;
@@ -6572,7 +6573,22 @@ System.register("chunks:///_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelH
     }],
     execute: function () {
       cclegacy._RF.push({}, "0dce0lMOpFA8Imud2y76e3+", "DeviceStore", undefined);
+      function isFixedRatio() {
+        return globalThis.__subGameFixedRatio__ === true;
+      }
+
+      // 固定比例時容器縮成設計比例並置中 畫布只有遊戲範圍
+      var fixedRatioPolicy = null;
+      function getFixedRatioPolicy() {
+        var _fixedRatioPolicy;
+        (_fixedRatioPolicy = fixedRatioPolicy) != null ? _fixedRatioPolicy : fixedRatioPolicy = new ResolutionPolicy(ResolutionPolicy.ContainerStrategy.PROPORTION_TO_FRAME, ResolutionPolicy.ContentStrategy.SHOW_ALL);
+        return fixedRatioPolicy;
+      }
+
+      // 固定比例時容器永遠是設計比例 橫直版要看外層 GameDiv 不能看容器
       function getFrameSize() {
+        var gameDiv = isFixedRatio() ? document.getElementById("GameDiv") : null;
+        if (gameDiv) return new Size(gameDiv.clientWidth, gameDiv.clientHeight);
         var dpr = screen.devicePixelRatio;
         var sizeInCssPixels = screen.windowSize;
         sizeInCssPixels.width /= dpr;
@@ -6613,9 +6629,14 @@ System.register("chunks:///_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelH
           }
           this.setOrientation(next);
           // 固定比例由 entry 判斷 沒有旗標一律依容器撲滿
-          var fixedRatio = globalThis.__subGameFixedRatio__ === true;
-          var policy = fixedRatio ? ResolutionPolicy.SHOW_ALL : ResolutionPolicy.FIXED_HEIGHT;
-          next == 'landscape' ? view.setDesignResolutionSize(1280, 720, policy) : view.setDesignResolutionSize(720, 1280, policy);
+          var policy = isFixedRatio() ? getFixedRatioPolicy() : ResolutionPolicy.FIXED_HEIGHT;
+          var designWidth = next == 'landscape' ? 1280 : 720;
+          var designHeight = next == 'landscape' ? 720 : 1280;
+          var designSize = view.getDesignResolutionSize();
+          var designChanged = designSize.width !== designWidth || designSize.height !== designHeight;
+          view.setDesignResolutionSize(designWidth, designHeight, policy);
+          // 容器策略沒變時引擎不會重算容器 設計比例換了要補發 resize 容器才會依新比例重新縮放
+          if (designChanged && isFixedRatio()) window.dispatchEvent(new Event("resize"));
         };
         _createClass(DeviceStore, [{
           key: "orientation",
@@ -9197,7 +9218,7 @@ System.register("chunks:///_virtual/GamePopupManager.ts", ['./rollupPluginModLoB
 });
 
 System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './GameViewAdapter.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, sys, Widget, UITransform, profiler, Component, ImageAsset, assetManager, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, Widget, UITransform, profiler, Component, ImageAsset, sys, assetManager, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, getSettingStore, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -9212,12 +9233,12 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
       _decorator = module._decorator;
       Node = module.Node;
       view = module.view;
-      sys = module.sys;
       Widget = module.Widget;
       UITransform = module.UITransform;
       profiler = module.profiler;
       Component = module.Component;
       ImageAsset = module.ImageAsset;
+      sys = module.sys;
       assetManager = module.assetManager;
       instantiate = module.instantiate;
     }, function (module) {
@@ -9254,6 +9275,7 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
     }, function (module) {
       fitViewToSafeArea = module.fitViewToSafeArea;
     }, function (module) {
+      getSettingStore = module.getSettingStore;
       createRootStore = module.createRootStore;
     }, function (module) {
       NativeBundleUpdateView = module.NativeBundleUpdateView;
@@ -9285,51 +9307,22 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           _initializerDefineProperty(_this, "middleNode", _descriptor4, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "topNode", _descriptor5, _assertThisInitialized(_this));
           _initializerDefineProperty(_this, "loadingView", _descriptor6, _assertThisInitialized(_this));
+          // 殼頁的 hello 帶初始音樂音效 setting 是切換 套用到原本的音量設定
+          _this.onShellMessage = function (event) {
+            var _event$data;
+            if (event.source !== window.parent || ((_event$data = event.data) == null ? void 0 : _event$data.source) !== 'host-shell') return;
+            var _event$data2 = event.data,
+              type = _event$data2.type,
+              payload = _event$data2.payload;
+            var settings = type === 'hello' ? payload == null ? void 0 : payload.settings : type === 'setting' ? payload : null;
+            var store = getSettingStore();
+            if (!settings || !store) return;
+            if (typeof settings.music === 'boolean') store.setMusicVolumeStore(settings.music ? 1 : 0);
+            if (typeof settings.sound === 'boolean') store.setSoundVolumeStore(settings.sound ? 1 : 0);
+          };
           // 黑邊背景圖的網址與目前模式
-          _this.backdropBars = [];
           _this.backdropUrls = null;
           _this.backdropFree = false;
-          // 固定比例時在畫布上面蓋住設計框外的兩條黑邊 沒有圖就是純黑
-          _this.layoutBackdrop = function () {
-            if (globalThis.__subGameFixedRatio__ !== true) {
-              for (var _iterator = _createForOfIteratorHelperLoose(_this.backdropBars), _step; !(_step = _iterator()).done;) {
-                var bar = _step.value;
-                bar.style.display = 'none';
-              }
-              return;
-            }
-            if (!_this.backdropBars.length) {
-              for (var i = 0; i < 2; i++) {
-                var el = document.createElement('div');
-                el.style.cssText = 'position:fixed;display:none;z-index:2147483000;pointer-events:none;background-color:#000;background-attachment:fixed;background-size:cover;background-position:center;background-repeat:no-repeat';
-                document.body.appendChild(el);
-                _this.backdropBars.push(el);
-              }
-              _this.applyBackdrop();
-            }
-            var design = view.getDesignResolutionSize();
-            var winW = window.innerWidth;
-            var winH = window.innerHeight;
-            var designAspect = design.width / design.height;
-            var frameW = winW;
-            var frameH = winH;
-            if (winW / winH > designAspect) frameW = winH * designAspect;else frameH = winW / designAspect;
-            var gapX = (winW - frameW) / 2;
-            var gapY = (winH - frameH) / 2;
-            var _this$backdropBars = _this.backdropBars,
-              first = _this$backdropBars[0],
-              second = _this$backdropBars[1];
-            if (gapX >= 1) {
-              _this.placeBar(first, 0, 0, gapX, winH);
-              _this.placeBar(second, winW - gapX, 0, gapX, winH);
-            } else if (gapY >= 1) {
-              _this.placeBar(first, 0, 0, winW, gapY);
-              _this.placeBar(second, 0, winH - gapY, winW, gapY);
-            } else {
-              first.style.display = 'none';
-              second.style.display = 'none';
-            }
-          };
           _this.storeManager = void 0;
           _this.viewStore = void 0;
           _this.viewPool = void 0;
@@ -9349,21 +9342,35 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
           // slot_game 獨立專案沒有 entry lobby 的 LoadingScene 幫忙建立 RootStore
           // 這裡自己補一次 createRootStore 內部已做過重複呼叫防呆
           createRootStore();
+          this.bindShell();
           this.trackLayer(this.topNode, GameRoot.TOP_LAYER);
           PopupStack.setLayer(this.topNode);
           view.on('design-resolution-changed', this.fitContentLayers, this);
           this.fitContentLayers();
-          if (sys.isBrowser) {
-            view.on('design-resolution-changed', this.layoutBackdrop, this);
-            window.addEventListener('resize', this.layoutBackdrop);
-            this.layoutBackdrop();
+        };
+        _proto.inShell = function inShell() {
+          return typeof window !== 'undefined' && !!window.parent && window.parent !== window;
+        };
+        _proto.postShell = function postShell(type, payload) {
+          if (payload === void 0) {
+            payload = {};
           }
+          if (this.inShell()) window.parent.postMessage({
+            source: 'game',
+            type: type,
+            payload: payload
+          }, '*');
         }
 
+        /** 遊戲放在殼頁 iframe 裡時 向殼頁要初始設定 並通知殼頁載入畫面已出現 讓殼頁拿掉遮罩 */;
+        _proto.bindShell = function bindShell() {
+          if (!this.inShell()) return;
+          window.addEventListener('message', this.onShellMessage);
+          this.postShell('hi');
+          this.postShell('ready');
+        };
         // 螢幕比設計框窄時 內容層整體縮小 整個設計框才看得到
         // 層的大小同步放大成 螢幕除以縮放 縮放後剛好蓋滿螢幕
-        ;
-
         _proto.fitContentLayers = function fitContentLayers() {
           var design = view.getDesignResolutionSize();
           var visible = view.getVisibleSize();
@@ -9377,18 +9384,15 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
             if (widget) widget.enabled = false;
             (_layer$getComponent = layer.getComponent(UITransform)) == null || _layer$getComponent.setContentSize(visible.width / scale, visible.height / scale);
           }
-          for (var _iterator2 = _createForOfIteratorHelperLoose((_this$templateNode$ch = (_this$templateNode = this.templateNode) == null ? void 0 : _this$templateNode.children) != null ? _this$templateNode$ch : []), _step2; !(_step2 = _iterator2()).done;) {
+          for (var _iterator = _createForOfIteratorHelperLoose((_this$templateNode$ch = (_this$templateNode = this.templateNode) == null ? void 0 : _this$templateNode.children) != null ? _this$templateNode$ch : []), _step; !(_step = _iterator()).done;) {
             var _this$templateNode$ch, _this$templateNode;
-            var templateView = _step2.value;
+            var templateView = _step.value;
             fitViewToSafeArea(templateView);
           }
         };
         _proto.onDestroy = function onDestroy() {
+          if (typeof window !== 'undefined') window.removeEventListener('message', this.onShellMessage);
           view.off('design-resolution-changed', this.fitContentLayers, this);
-          if (sys.isBrowser) {
-            view.off('design-resolution-changed', this.layoutBackdrop, this);
-            window.removeEventListener('resize', this.layoutBackdrop);
-          }
           this.removeBackdrop();
           stopGameMock();
           _EventComponent.prototype.onDestroy.call(this);
@@ -9521,31 +9525,21 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
             return _waitBundle.apply(this, arguments);
           }
           return waitBundle;
-        }();
+        }() // 固定比例時容器縮在中間 外層 GameDiv 露出來的部分就是黑邊 背景圖直接鋪在它上面
+        ;
+
         _proto.applyBackdrop = function applyBackdrop() {
           var urls = this.backdropUrls;
-          if (!urls || !this.backdropBars.length) return;
+          var frame = document.getElementById('GameDiv');
+          if (!urls || !frame) return;
           var image = "url(\"" + (this.backdropFree ? urls.free : urls.main).replace(/"/g, '%22') + "\")";
-          for (var _iterator3 = _createForOfIteratorHelperLoose(this.backdropBars), _step3; !(_step3 = _iterator3()).done;) {
-            var bar = _step3.value;
-            bar.style.backgroundImage = image;
-          }
+          frame.style.background = "#000 " + image + " center / cover no-repeat";
           // 另一張先載進快取 切換時不會閃
           new Image().src = this.backdropFree ? urls.main : urls.free;
         };
-        _proto.placeBar = function placeBar(el, x, y, w, h) {
-          el.style.display = 'block';
-          el.style.left = x + "px";
-          el.style.top = y + "px";
-          el.style.width = w + "px";
-          el.style.height = h + "px";
-        };
         _proto.removeBackdrop = function removeBackdrop() {
-          for (var _iterator4 = _createForOfIteratorHelperLoose(this.backdropBars), _step4; !(_step4 = _iterator4()).done;) {
-            var bar = _step4.value;
-            bar.remove();
-          }
-          this.backdropBars = [];
+          var _document$getElementB;
+          if (typeof document !== 'undefined') (_document$getElementB = document.getElementById('GameDiv')) == null || _document$getElementB.style.removeProperty('background');
         };
         _proto.start = function start() {
           console.log('GameRoot onStart');
@@ -9566,8 +9560,8 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
               _this2.setLayerRecursive(child, layer);
               apply(child);
             });
-            for (var _iterator5 = _createForOfIteratorHelperLoose(n.children), _step5; !(_step5 = _iterator5()).done;) {
-              var c = _step5.value;
+            for (var _iterator2 = _createForOfIteratorHelperLoose(n.children), _step2; !(_step2 = _iterator2()).done;) {
+              var c = _step2.value;
               apply(c);
             }
           };
@@ -9575,8 +9569,8 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
         };
         _proto.setLayerRecursive = function setLayerRecursive(node, layer) {
           node.layer = layer;
-          for (var _iterator6 = _createForOfIteratorHelperLoose(node.children), _step6; !(_step6 = _iterator6()).done;) {
-            var c = _step6.value;
+          for (var _iterator3 = _createForOfIteratorHelperLoose(node.children), _step3; !(_step3 = _iterator3()).done;) {
+            var c = _step3.value;
             this.setLayerRecursive(c, layer);
           }
         };
@@ -9710,10 +9704,12 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
                   // 告訴 entry 已經進到遊戲 大廳依 existTableList 決定要不要開選座彈窗 獨立執行時沒有這個介面就跳過
                   entered = globalThis.__subGameEntered__;
                   if (typeof entered === 'function') entered();
+                  // 載入完成 通知殼頁開進場選座
+                  this.postShell('show-seat-lobby');
                   EagleTracker.trackerEvent(TrackerMap.GAME_LOAD_COMPLETE, {
                     total_load_time_ms: performance.now() - startTime
                   });
-                case 44:
+                case 45:
                 case "end":
                   return _context3.stop();
               }
@@ -11065,7 +11061,7 @@ System.register("chunks:///_virtual/GameViewAdapter.ts", ['./rollupPluginModLoBa
         if (!transform || !scale || scale.x === 0 || scale.y === 0) return;
         var rawSafe = sys.getSafeAreaRect();
         var visible = view.getVisibleSize();
-        // 桌面黑邊不算安全區 與設計區域取交集
+        // 安全區與可視範圍取交集 超出的不算
         var safeLeft = Math.max(rawSafe.x, 0);
         var safeBottom = Math.max(rawSafe.y, 0);
         var safe = {
