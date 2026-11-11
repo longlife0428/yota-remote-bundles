@@ -3742,7 +3742,7 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
       function _runCascadeReels() {
         _runCascadeReels = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(game, steps) {
           var _steps$, _firstGrid$columns;
-          var firstGrid, visibleRows, quick, waitUnlessQuick, onQuickStop, firstRedShaken, shakeScreen, applyMultiplierLabelsCol, applyMultiplierLabels, playChaMul, playCharacterMul, playReelStopSound, runTumbleSwap, winFloatNodes, playWinFloat, pickCenterCell, spawnWinFloats, timing, reelViews, colCount, sideByCol, c, frameName, frameIdxByName, toMutableCols, currentCols, boardNamesByCol, _loop2, _col4, colHasBall, hasAnyBall, settleSkipped, _loop4, _ret, i, _loop5, _col7;
+          var firstGrid, visibleRows, quick, waitUnlessQuick, onQuickStop, firstRedShaken, shakeScreen, applyMultiplierLabelsCol, applyMultiplierLabels, playChaMul, playCharacterMul, playReelStopSound, runTumbleSwap, winFloatNodes, playWinFloat, pickCenterCell, spawnWinFloats, timing, reelViews, colCount, sideByCol, c, frameName, frameIdxByName, toMutableCols, currentCols, boardNamesByCol, _loop2, _col4, colHasBall, hasAnyBall, awardsOf, feedNext, pushFeed, settleSkipped, _loop4, _ret, i, _loop5, _col7;
           return _regeneratorRuntime().wrap(function _callee2$(_context8) {
             while (1) switch (_context8.prev = _context8.next) {
               case 0:
@@ -4136,7 +4136,19 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                   return v.slotMachineModel.onAllStopped();
                 });
                 applyMultiplierLabels(currentCols, sideByCol);
-
+                awardsOf = function awardsOf(step) {
+                  return step.awards.filter(function (a) {
+                    return game.definition.symbols.resolve(a.symbolId).kind !== 'scatter';
+                  });
+                }; // 贏分小看板已經推到第幾個 step
+                feedNext = 0;
+                pushFeed = function pushFeed(awards) {
+                  for (var _iterator6 = _createForOfIteratorHelperLoose(awards), _step6; !(_step6 = _iterator6()).done;) {
+                    var award = _step6.value;
+                    var pay = Number(award.pay) || 0;
+                    if (pay > 0) game.pushWinFeed(award.symbolId, award.count, pay);
+                  }
+                };
                 /** 跳過：盤面與贏分欄直接設成最終結果 */
                 settleSkipped = function settleSkipped() {
                   for (var _i6 = 0, _winFloatNodes = winFloatNodes; _i6 < _winFloatNodes.length; _i6++) {
@@ -4144,6 +4156,9 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                     if (node.isValid) node.destroy();
                   }
                   winFloatNodes.length = 0;
+                  // 還沒推的贏分小看板補上
+                  for (var i = feedNext; i < steps.length; i++) pushFeed(awardsOf(steps[i]));
+                  feedNext = steps.length;
                   var finalCols = toMutableCols(steps[steps.length - 1].grid);
                   for (var _col5 = 0; _col5 < colCount; _col5++) currentCols[_col5] = finalCols[_col5];
                   game.allViews.forEach(function (v) {
@@ -4168,7 +4183,7 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                 }; // 消除迴圈：跑 server 每個有中獎的 step（終盤段 Awards=null 自動跳過）
                 _loop4 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop4() {
                   var _steps;
-                  var awards, elimSymbolIds, nextGrid, nextCols, colElimRows, toMapByCol, _loop6, _col8, winFxPromises, _i7, _Object$keys3, _game$viewV2, colStr, _col9, explodePromises, _i8, _Object$keys4, _game$viewV3, _colStr, _col10, _iterator6, _step6, award, pay, stepWin, fillPromises, _loop7, _i9, _Object$keys5, _i10, _Object$keys6, _colStr2, _col11, nextCol, row, oldM, newM, _reelViews$_col, _game$viewV5;
+                  var awards, elimSymbolIds, nextGrid, nextCols, colElimRows, toMapByCol, _loop6, _col8, winFxPromises, _i7, _Object$keys3, _game$viewV2, colStr, _col9, explodePromises, _i8, _Object$keys4, _game$viewV3, _colStr, _col10, stepWin, fillPromises, _loop7, _i9, _Object$keys5, _i10, _Object$keys6, _colStr2, _col11, nextCol, row, oldM, newM, _reelViews$_col, _game$viewV5;
                   return _regeneratorRuntime().wrap(function _loop4$(_context7) {
                     while (1) switch (_context7.prev = _context7.next) {
                       case 0:
@@ -4178,9 +4193,7 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                         }
                         return _context7.abrupt("return", 0);
                       case 2:
-                        awards = steps[i].awards.filter(function (a) {
-                          return game.definition.symbols.resolve(a.symbolId).kind !== 'scatter';
-                        });
+                        awards = awardsOf(steps[i]);
                         if (!(awards.length === 0)) {
                           _context7.next = 5;
                           break;
@@ -4278,32 +4291,29 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                           (_game$viewV3 = game.viewV) == null || (_game$viewV3 = _game$viewV3.slotMachineView.reelViews[_col10]) == null || _game$viewV3.explode(colElimRows[_col10], timing.explode);
                         }
                         spawnWinFloats(awards, colElimRows, currentCols, timing["float"]);
-                        for (_iterator6 = _createForOfIteratorHelperLoose(awards); !(_step6 = _iterator6()).done;) {
-                          award = _step6.value;
-                          pay = Number(award.pay) || 0;
-                          if (pay > 0) game.pushWinFeed(award.symbolId, award.count, pay);
-                        }
+                        pushFeed(awards);
+                        feedNext = i + 1;
                         // 用伺服器給的該步驟權威贏分 不要用 awards[].pay 自己加總 兩者可能因倍率等因素對不起來
                         stepWin = Number(steps[i].win) || 0;
                         game.addWinBarScore(stepWin);
-                        _context7.next = 38;
+                        _context7.next = 39;
                         return raceSkip(game, Promise.all(explodePromises));
-                      case 38:
+                      case 39:
                         if (!_context7.sent) {
-                          _context7.next = 40;
+                          _context7.next = 41;
                           break;
                         }
                         return _context7.abrupt("return", 0);
-                      case 40:
-                        _context7.next = 42;
+                      case 41:
+                        _context7.next = 43;
                         return skipWait(game, timing.gap / 1000);
-                      case 42:
+                      case 43:
                         if (!_context7.sent) {
-                          _context7.next = 44;
+                          _context7.next = 45;
                           break;
                         }
                         return _context7.abrupt("return", 0);
-                      case 44:
+                      case 45:
                         // 掉落
                         // 盤面補牌共用停輪音：該欄最下面那顆落到 targetY 就播；H/V 兩個 view 都會觸發 只播一次
                         fillPromises = [];
@@ -4334,26 +4344,26 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                           }, _loop7);
                         });
                         _i9 = 0, _Object$keys5 = Object.keys(colElimRows);
-                      case 47:
+                      case 48:
                         if (!(_i9 < _Object$keys5.length)) {
-                          _context7.next = 52;
+                          _context7.next = 53;
                           break;
                         }
-                        return _context7.delegateYield(_loop7(), "t1", 49);
-                      case 49:
+                        return _context7.delegateYield(_loop7(), "t1", 50);
+                      case 50:
                         _i9++;
-                        _context7.next = 47;
+                        _context7.next = 48;
                         break;
-                      case 52:
-                        _context7.next = 54;
+                      case 53:
+                        _context7.next = 55;
                         return raceSkip(game, Promise.all(fillPromises));
-                      case 54:
+                      case 55:
                         if (!_context7.sent) {
-                          _context7.next = 56;
+                          _context7.next = 57;
                           break;
                         }
                         return _context7.abrupt("return", 0);
-                      case 56:
+                      case 57:
                         for (_i10 = 0, _Object$keys6 = Object.keys(colElimRows); _i10 < _Object$keys6.length; _i10++) {
                           _colStr2 = _Object$keys6[_i10];
                           currentCols[Number(_colStr2)] = toMapByCol[Number(_colStr2)];
@@ -4377,43 +4387,43 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                             }
                           }
                         }
-                      case 59:
+                      case 60:
                       case "end":
                         return _context7.stop();
                     }
                   }, _loop4);
                 });
                 i = 0;
-              case 57:
+              case 60:
                 if (!(i < steps.length)) {
+                  _context8.next = 70;
+                  break;
+                }
+                return _context8.delegateYield(_loop4(), "t1", 62);
+              case 62:
+                _ret = _context8.t1;
+                if (!(_ret === 0)) {
+                  _context8.next = 65;
+                  break;
+                }
+                return _context8.abrupt("break", 70);
+              case 65:
+                if (!(_ret === 1)) {
                   _context8.next = 67;
                   break;
                 }
-                return _context8.delegateYield(_loop4(), "t1", 59);
-              case 59:
-                _ret = _context8.t1;
-                if (!(_ret === 0)) {
-                  _context8.next = 62;
-                  break;
-                }
-                return _context8.abrupt("break", 67);
-              case 62:
-                if (!(_ret === 1)) {
-                  _context8.next = 64;
-                  break;
-                }
-                return _context8.abrupt("continue", 64);
-              case 64:
-                i++;
-                _context8.next = 57;
-                break;
+                return _context8.abrupt("continue", 67);
               case 67:
+                i++;
+                _context8.next = 60;
+                break;
+              case 70:
                 // 跳過
                 if (game.spinSkip.isSkipped) settleSkipped();
 
                 // viewV 的 cascade 是 fire-and-forget，把最終盤同步回去
                 if (!game.viewV) {
-                  _context8.next = 76;
+                  _context8.next = 79;
                   break;
                 }
                 _loop5 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop5(_col7) {
@@ -4433,19 +4443,19 @@ System.register("bundle://1002/_virtual/CascadeReelsTask.ts", ['./rollupPluginMo
                   }, _loop5);
                 });
                 _col7 = 0;
-              case 71:
+              case 74:
                 if (!(_col7 < colCount)) {
-                  _context8.next = 76;
+                  _context8.next = 79;
                   break;
                 }
-                return _context8.delegateYield(_loop5(_col7), "t2", 73);
-              case 73:
-                _col7++;
-                _context8.next = 71;
-                break;
+                return _context8.delegateYield(_loop5(_col7), "t2", 76);
               case 76:
+                _col7++;
+                _context8.next = 74;
+                break;
+              case 79:
                 return _context8.abrupt("return", currentCols);
-              case 77:
+              case 80:
               case "end":
                 return _context8.stop();
             }
