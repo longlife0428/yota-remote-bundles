@@ -10089,7 +10089,7 @@ System.register("chunks:///_virtual/GamePopupManager.ts", ['./rollupPluginModLoB
 });
 
 System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './OrientationController.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, Widget, UITransform, Mask, profiler, Component, ImageAsset, sys, assetManager, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, getSettingStore, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, Widget, UITransform, profiler, Component, ImageAsset, sys, assetManager, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, getSettingStore, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -10106,7 +10106,6 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
       view = module.view;
       Widget = module.Widget;
       UITransform = module.UITransform;
-      Mask = module.Mask;
       profiler = module.profiler;
       Component = module.Component;
       ImageAsset = module.ImageAsset;
@@ -10261,13 +10260,6 @@ System.register("chunks:///_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelp
             var widget = layer.getComponent(Widget);
             if (widget) widget.enabled = false;
             (_layer$getComponent = layer.getComponent(UITransform)) == null || _layer$getComponent.setContentSize(visible.width / scale, visible.height / scale);
-          }
-          // 落雷層裁在可視範圍內
-          var fx = this.symbolFxNode;
-          if (fx) {
-            var _fx$getComponent;
-            if (!fx.getComponent(Mask)) fx.addComponent(Mask);
-            (_fx$getComponent = fx.getComponent(UITransform)) == null || _fx$getComponent.setContentSize(visible);
           }
           for (var _iterator = _createForOfIteratorHelperLoose((_this$templateNode$ch = (_this$templateNode = this.templateNode) == null ? void 0 : _this$templateNode.children) != null ? _this$templateNode$ch : []), _step; !(_step = _iterator()).done;) {
             var _this$templateNode$ch, _this$templateNode;
