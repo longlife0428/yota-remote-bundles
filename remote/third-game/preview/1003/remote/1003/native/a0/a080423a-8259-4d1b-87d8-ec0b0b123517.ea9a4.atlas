@@ -1,0 +1,69 @@
+introduce.png
+	size: 2032, 2032
+	filter: Linear, Linear
+bk
+	bounds: 1313, 835, 20, 20
+ch/kb/k_b_body
+	bounds: 807, 233, 504, 622
+	offsets: 265, 579, 1026, 1538
+ch/kb/k_b_hand_l
+	bounds: 807, 31, 200, 594
+	rotate: 90
+ch/kb/k_b_hand_r
+	bounds: 1760, 288, 200, 594
+ch/kb/k_b_leg_l
+	bounds: 1630, 1354, 248, 673
+ch/kb/k_b_leg_r
+	bounds: 557, 161, 248, 673
+ch/kf/kf_body
+	bounds: 2, 122, 553, 712
+ch/kf/kf_body2
+	bounds: 1403, 2, 484, 258
+ch/kf/kf_hand_l2
+	bounds: 2, 7, 193, 113
+ch/kf/kf_hand_r
+	bounds: 801, 857, 542, 344
+ch/kf/kf_head2
+	bounds: 1313, 262, 445, 499
+ch/kf/kf_leg_l
+	bounds: 1221, 1215, 407, 812
+ch/kf/kf_leg_r
+	bounds: 801, 1203, 418, 824
+ch/kf2/body
+	bounds: 2, 836, 797, 1191
+	offsets: 301, 0, 1098, 1191
+ch/kf2/head
+	bounds: 1345, 763, 404, 450
+ch/kf2/mouth1
+	bounds: 197, 39, 191, 81
+	offsets: 1, 1, 193, 83
+ch/kf2/mouth2
+	bounds: 1630, 1229, 123, 95
+	offsets: 1, 1, 125, 105
+	rotate: 90
+ch/kf2/mouth_t
+	bounds: 1880, 1801, 226, 57
+	rotate: 90
+tall
+	bounds: 1751, 884, 468, 256
+	offsets: 0, 0, 468, 291
+	rotate: 90
+
+introduce_2.png
+	size: 740, 740
+	filter: Linear, Linear
+ch/kb/k_b_leg_head
+	bounds: 2, 32, 298, 351
+ch/kf/kf_hand_l
+	bounds: 2, 385, 403, 353
+ch/kf2/hand_l
+	bounds: 407, 492, 316, 246
+ch/kf2/hand_l2
+	bounds: 407, 255, 293, 235
+glow_88
+	bounds: 302, 21, 232, 233
+	offsets: 15, 13, 256, 256
+	rotate: 90
+shine
+	bounds: 537, 49, 201, 204
+	offsets: 8, 0, 217, 204
