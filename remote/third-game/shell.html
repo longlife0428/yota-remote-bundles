@@ -228,13 +228,17 @@ body.shown #game { opacity: 1; }
     // 玩家目前所在的桌號 大廳 init 帶 tableId 進來 沒帶就當作第 1 桌 跟 Cocos 的 getCurrentSeatTableId() 一樣
     var currentSeatId = '1';
     // 有遊戲說明頁的遊戲與語言 頁面放在 game-info/遊戲代號/語言/index.html 新增頁面就在這裡加一行
-    var GAME_INFO_PAGES = { '1001': ['zh-TW'] };
+    var GAME_INFO_PAGES = { '1001': ['zh-TW'], '1003': ['zh-TW'] };
     // 說明頁用到的圖片 共用的每個語言都要 各語言才有的放語言下面 路徑從遊戲說明資料夾算起
     // 說明頁新增圖片就加進這裡 開頁前會先載好
     var GAME_INFO_ASSETS = {
         '1001': {
             common: ['10.png', 'A.png', 'H1.png', 'H2.png', 'H3.png', 'H4.png', 'J.png', 'JP.png', 'K.png', 'Q.png', 'SCATTER.png', 'symbol_m1_1.png', 'symbol_m1_2.png', 'symbol_m1_3.png', 'symbol_m1_4.png', 'symbol_m2_1.png', 'symbol_m2_2.png', 'symbol_m2_3.png', 'symbol_m2_4.png'].map(function (f) { return 'assets/symbols/' + f; }),
             'zh-TW': ['buy-feature.jpg', 'free-game-multiplier-after.jpg', 'main-game.jpg'].map(function (f) { return 'assets/screenshots/zh-TW/' + f; })
+        },
+        '1003': {
+            common: ['H1.png', 'H1_g.png', 'H2.png', 'H2_g.png', 'H3.png', 'H3_g.png', 'H4.png', 'H4_g.png', 'L1.png', 'L1_g.png', 'L2.png', 'L2_g.png', 'L3.png', 'L3_g.png', 'L4.png', 'L4_g.png', 'L5.png', 'L5_g.png', 'scatter.png', 'wild.png'].map(function (f) { return 'assets/symbols/' + f; }),
+            'zh-TW': ['free-game.jpg', 'main-game.jpg'].map(function (f) { return 'assets/screenshots/zh-TW/' + f; })
         }
     };
     // 這款遊戲實際用的說明頁語言 沒有頁面回空字串 語言沒有就用第一個
