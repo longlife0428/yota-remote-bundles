@@ -182,7 +182,7 @@ body.shown #game { opacity: 1; }
 //   hello 握手 帶 gameId lang settings  setting 音樂音效震動切換  dialog-result auto-play-result 彈窗結果
 //   get-state 殼頁定時問遊戲載入好沒 遊戲用 state 回覆
 //   settings 帶 music sound vibrate 震動開關存在殼頁自己的 localStorage 遊戲不必理會 vibrate
-// 遊戲端實作 1001 在 GameRoot.bindShell 第三方遊戲用 host-sdk.js
+// 遊戲端實作 1001 在 utils/SubGameBridge.ts 由 GameRoot.bindShell 啟動 第三方遊戲用 host-sdk.js
 // 大廳端的型別在 entry 的 ThirdGameConst.ts 要跟這裡同步
 (function () {
     var query = new URLSearchParams(location.search);
