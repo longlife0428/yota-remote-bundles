@@ -50,18 +50,26 @@
     "assets": {
         "server": "http://127.0.0.1:8971/",
         "remoteBundles": [
+            "1001",
+            "1001",
             "1001"
         ],
         "subpackages": [],
         "preloadBundles": [
             {
                 "bundle": "main"
+            },
+            {
+                "bundle": "main"
+            },
+            {
+                "bundle": "main"
             }
         ],
         "bundleVers": {
-            "1001": "fbbcf",
-            "internal": "d0abe",
-            "main": "2d432"
+            "1001": "44c33",
+            "internal": "07d67",
+            "main": "2b635"
         },
         "preloadAssets": [],
         "projectBundles": [
@@ -75,9 +83,7 @@
         "jsList": []
     },
     "scripting": {
-        "scriptPackages": [
-            "../src/chunks/bundle.30131.js"
-        ]
+        "scriptPackages": []
     },
     "launch": {
         "launchScene": "db://assets/launcher.scene"
