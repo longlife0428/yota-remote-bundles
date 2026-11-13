@@ -177,6 +177,7 @@ body.shown #game { opacity: 1; }
 //   state 回覆殼頁的 get-state 帶 state 為 loading 或 ready 回 ready 殼頁開進場選座
 //   error 帶 message  上面的指令也能由遊戲發
 //   vibrate 帶 pattern 要手機震動 數字或數字陣列 每段 0～1000ms 最多 10 段 不合格或開關關著就丟掉
+//   leave 不經確認直接離開 token 失效 被踢時用 殼頁通知大廳 exit-confirm via game
 // 殼頁到遊戲 { source: 'host-shell', type, payload }
 //   hello 握手 帶 gameId lang settings  setting 音樂音效震動切換  dialog-result auto-play-result 彈窗結果
 //   get-state 殼頁定時問遊戲載入好沒 遊戲用 state 回覆
@@ -1230,6 +1231,10 @@ body.shown #game { opacity: 1; }
                 break;
             case 'vibrate':
                 vibrate(payload.pattern);
+                break;
+            case 'leave':
+                clearSeat();
+                emit('exit-confirm', { via: 'game' });
                 break;
         }
     }
