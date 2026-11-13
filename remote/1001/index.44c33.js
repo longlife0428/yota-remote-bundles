@@ -1,6 +1,6 @@
-System.register("bundle://1001/_virtual/1001", ['./GameMain_1001.ts', './GameRoot.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './SpinSkipConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SkipWait.ts', './SpinShortcutController.ts', './SpinSkipController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './NativeBundleUpdateView.ts', './NativeBundleUpdater.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './eyeofhorus.ts', './index.ts', './mock-shared.ts', './slot-api-mock.ts', './start.ts', './types.ts', './simple-mock.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './SymbolCell.ts', './SymbolImageManager.ts', './SymbolImageSet.ts', './SymbolState.ts', './SymbolView.ts', './SymbolViewErase.ts', './SymbolViewMultiplier.ts', './SymbolViewSpine.ts', './ReelView.ts', './ReelView_1001.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './SlotGameMain.ts', './FGState_1001.ts', './GameState.ts', './GameStateKey.ts', './NGState_1001.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './WinFreeGamePopupTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './SpinTypes.ts', './SubGameData.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseButton.ts', './ButtonState.ts', './ButtonVariant.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BuyFeaturePopupView.ts', './CameraSyncOrtho.ts', './CollectMulEffect.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './JackpotView.ts', './LoadingModel.ts', './LoadingView.ts', './LoadingViewModel.ts', './AlertView.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SelectBetView.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './RollingNumberLabel.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './WinAnimationView.ts', './WinBarMarqueeView.ts', './WinFreeGamePopupView.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts', './SpineSafe.ts'], function () {
+System.register("bundle://1001/_virtual/1001", ['./GameMain_1001.ts', './GameRoot.ts', './AppAudio.ts', './AudioBehaviorTypes.ts', './AudioConfig.ts', './SOUNDMAP.ts', './AppConfig.ts', './DirectorSpeedHook.ts', './GameConfig.ts', './GameConfigManager.ts', './GameConst.ts', './LocalConfig.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './SlotGameDefinition.ts', './SpeedConfig.ts', './SpinSkipConfig.ts', './BuyFeatureController.ts', './DualViewController.ts', './OrientationController.ts', './ScatterFreeGameController.ts', './SkipWait.ts', './SpinShortcutController.ts', './SpinSkipController.ts', './WinAnimationController.ts', './WinBarController.ts', './BaseRuntimeEventBus.ts', './BaseRuntimeEventTypes.ts', './EventComponent.ts', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts', './SubscriptionBag.ts', './TypedEventBus.ts', './NativeBundleUpdateView.ts', './NativeBundleUpdater.ts', './LanguageData.ts', './LocalizedLabel.ts', './i18nHelper.ts', './BetHistory.ts', './SlotGameTypes.ts', './SlotGrid.ts', './SlotRound.ts', './GameNetHandler.ts', './GridLayoutConfig.ts', './RestClient.ts', './SlotApiClient.ts', './SlotApiHandlers.ts', './SlotApiTypes.ts', './SlotGridDecoder.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './SlotRoundMapper.ts', './SlotWebSocketClient.ts', './SpinFlowPlanner.ts', './SpinResultHandler.ts', './eyeofhorus.ts', './index.ts', './mock-shared.ts', './slot-api-mock.ts', './slot-push-mock.ts', './start.ts', './types.ts', './simple-mock.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelModel.ts', './SlotMachineModel.ts', './SymbolCell.ts', './SymbolImageManager.ts', './SymbolImageSet.ts', './SymbolState.ts', './SymbolView.ts', './SymbolViewErase.ts', './SymbolViewMultiplier.ts', './SymbolViewSpine.ts', './ReelView.ts', './ReelView_1001.ts', './SlotMachineView.ts', './WinFloatLabel.ts', './SlotGameMain.ts', './FGState_1001.ts', './GameState.ts', './GameStateKey.ts', './NGState_1001.ts', './AppStore.ts', './DeviceStore.ts', './HttpClientStore.ts', './RootStore.ts', './RootStoreHooks.ts', './SettingStore.ts', './SlotGameStore.ts', './StoreManager.ts', './StoreMap.ts', './TrackerStore.ts', './UserStore.ts', './ViewStore.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './ExitFreeGameTask.ts', './FinishSpinTask.ts', './GameTask.ts', './GameTaskHandler.ts', './GameTaskQueue.ts', './PlayFreeRoundTask.ts', './ScatterWinTask.ts', './WinAnimationTask.ts', './WinFreeGamePopupTask.ts', './EagleTracker.ts', './TrackerMap.ts', './ISlotGameMain.ts', './SpinTypes.ts', './AdapterNode.ts', './AppAnimation.ts', './AppViewPool.ts', './BaseButton.ts', './ButtonState.ts', './ButtonVariant.ts', './BaseToggle.ts', './BaseToggleGroup.ts', './BaseUIComponent.ts', './BuyFeaturePopupView.ts', './CameraSyncOrtho.ts', './CollectMulEffect.ts', './CustomSurroundingEffect.ts', './DebugPanel.ts', './GamePopupManager.ts', './GameRuleView.ts', './GameViewAdapter.ts', './HistoryAdapter.ts', './HistoryModel.ts', './JackpotView.ts', './LoadingModel.ts', './LoadingView.ts', './LoadingViewModel.ts', './AlertView.ts', './CommonPopView.ts', './HistoryItem.ts', './HistoryView.ts', './PopupBase.ts', './PopupProperty.ts', './PopupStack.ts', './SelectBetView.ts', './SelectBetViewModel.ts', './SpinnerView.ts', './StoreAlertView.ts', './ToastView.ts', './RollingNumberLabel.ts', './GameEndStatus.ts', './NewGameStatus.ts', './ReSpinStatus.ts', './SpinStartStatus.ts', './StatusManager.ts', './TemplateModel.ts', './TemplateView.ts', './TemplateViewModel.ts', './WinAnimationView.ts', './WinBarMarqueeView.ts', './WinFreeGamePopupView.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameLaunchContext.ts', './Logger.ts', './SpineSafe.ts', './SubGameBridge.ts'], function () {
   return {
-    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
   };
 });
@@ -130,6 +130,14 @@ System.register("bundle://1001/_virtual/AlertView.ts", ['./rollupPluginModLoBabe
           return viewStore.alertInfo;
         };
         _proto.onExitClick = function onExitClick() {
+          var _this$alertInfo;
+          // 有指定確定後的動作就只做它 例如回大廳
+          var callback = (_this$alertInfo = this.alertInfo) == null ? void 0 : _this$alertInfo.callback;
+          if (callback) {
+            this.node.destroy();
+            callback();
+            return;
+          }
           if (StoreManager.getInstance().getGameStore().spinStatus !== GAMESTOREMAP.NEW_GAME) {
             window.location.reload();
             // StoreManager.getInstance().getGameStore().setSpinStatus(GAMESTOREMAP.NEW_GAME);
@@ -3279,7 +3287,20 @@ System.register("bundle://1001/_virtual/BuyFeatureController.ts", ['./rollupPlug
           subscriptions.add(eventBus.on(GAME_EVENT_TYPE.BUY_FEATURE_REQUESTED, function (event) {
             void _this2.onBuyFeature(event.buyFeatureId);
           }));
+          // 不開放購買時藏起按鈕 重新開放時由各遊戲切換模式時再顯示
+          subscriptions.add(eventBus.on(GAME_EVENT_TYPE.BUY_FEATURE_AVAILABLE_CHANGED, function (event) {
+            if (!event.available) _this2.hideBuyButtons();
+          }));
+          if (!this.deps.storeManager.getGameStore().buyFeatureAvailable) this.hideBuyButtons();
           this.reevaluateFlash();
+        }
+
+        /** 藏起所有版面的購買按鈕 */;
+        _proto.hideBuyButtons = function hideBuyButtons() {
+          for (var _iterator2 = _createForOfIteratorHelperLoose(this.deps.getViews()), _step2; !(_step2 = _iterator2()).done;) {
+            var v = _step2.value;
+            v.buySuperBtn.node.active = false;
+          }
         }
 
         /**
@@ -3316,8 +3337,8 @@ System.register("bundle://1001/_virtual/BuyFeatureController.ts", ['./rollupPlug
         _proto.startFlash = function startFlash() {
           if (this.flashActive) return;
           this.flashActive = true;
-          for (var _iterator2 = _createForOfIteratorHelperLoose(this.deps.getViews()), _step2; !(_step2 = _iterator2()).done;) {
-            var v = _step2.value;
+          for (var _iterator3 = _createForOfIteratorHelperLoose(this.deps.getViews()), _step3; !(_step3 = _iterator3()).done;) {
+            var v = _step3.value;
             // 用 tween 讓按鈕放大縮小提示
             var node = v.buySuperBtn.node;
             Tween.stopAllByTarget(node);
@@ -3335,8 +3356,8 @@ System.register("bundle://1001/_virtual/BuyFeatureController.ts", ['./rollupPlug
         _proto.stopFlash = function stopFlash() {
           if (!this.flashActive) return;
           this.flashActive = false;
-          for (var _iterator3 = _createForOfIteratorHelperLoose(this.deps.getViews()), _step3; !(_step3 = _iterator3()).done;) {
-            var v = _step3.value;
+          for (var _iterator4 = _createForOfIteratorHelperLoose(this.deps.getViews()), _step4; !(_step4 = _iterator4()).done;) {
+            var v = _step4.value;
             // 清掉 tween（避免切換過程殘留）
             var node = v.buySuperBtn.node;
             Tween.stopAllByTarget(node);
@@ -3362,18 +3383,24 @@ System.register("bundle://1001/_virtual/BuyFeatureController.ts", ['./rollupPlug
                   }
                   return _context.abrupt("return");
                 case 4:
-                  if (!this.pending) {
+                  if (this.deps.storeManager.getGameStore().buyFeatureAvailable) {
                     _context.next = 6;
                     break;
                   }
                   return _context.abrupt("return");
                 case 6:
-                  if (!(this.pendingBuyFeatureCost > 0)) {
+                  if (!this.pending) {
                     _context.next = 8;
                     break;
                   }
                   return _context.abrupt("return");
                 case 8:
+                  if (!(this.pendingBuyFeatureCost > 0)) {
+                    _context.next = 10;
+                    break;
+                  }
+                  return _context.abrupt("return");
+                case 10:
                   EagleTracker.trackerEvent(TrackerMap.BUY_TRIPLE_CLICK);
                   AppAudio.getInstance(this.deps.audioBundleName).playEffect(this.deps.effects.BUY_POPUP);
                   this.pendingBuyFeatureId = buyFeatureId;
@@ -3391,7 +3418,7 @@ System.register("bundle://1001/_virtual/BuyFeatureController.ts", ['./rollupPlug
                   }, function () {
                     return _this3.onCancel();
                   });
-                case 19:
+                case 21:
                 case "end":
                   return _context.stop();
               }
@@ -5882,8 +5909,8 @@ System.register("bundle://1001/_virtual/CustomSurroundingEffect.ts", ['./rollupP
   };
 });
 
-System.register("bundle://1001/_virtual/DebugPanel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppConfig.ts', './GameConst.ts', './PresentationStore.ts', './GameRuntimeEventBus.ts', './StoreManager.ts', './GameViewAdapter.ts', './CollectMulEffect.ts', './AppAudio.ts', './AudioConfig.ts', './SlotMachineView.ts', './ReelTimingDebugStore.ts', './ReelConfig.ts', './SceneSpeedStore.ts', './SceneSpeedConfig.ts', './SpinSkipConfig.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _inheritsLoose, _createForOfIteratorHelperLoose, _extends, cclegacy, _decorator, sys, director, Component, AppConfig, WinTier, PresentationStore, gameRuntimeEventBus, StoreManager, GameViewAdapter, playCollectMulFlyForBalls, playCollectMulFly, AppAudio, EFFECTSMAP, REEL_STOP_NORMAL_PRIORITY, REEL_STOP_BY_KIND, SlotMachineView, ReelTimingDebugStore, DEFAULT_REEL_CONFIG, SceneSpeedActivationMode, SceneSpeedStore, DEFAULT_SCENE_SPEED_CONFIG, getSpinSkipScope, setSpinSkipScope, GAME_EVENT_TYPE;
+System.register("bundle://1001/_virtual/DebugPanel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppConfig.ts', './GameConst.ts', './PresentationStore.ts', './GameRuntimeEventBus.ts', './StoreManager.ts', './GameViewAdapter.ts', './CollectMulEffect.ts', './AppAudio.ts', './AudioConfig.ts', './SlotMachineView.ts', './ReelTimingDebugStore.ts', './ReelConfig.ts', './SceneSpeedStore.ts', './SceneSpeedConfig.ts', './SpinSkipConfig.ts', './slot-push-mock.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _inheritsLoose, _createForOfIteratorHelperLoose, _extends, cclegacy, _decorator, sys, director, Component, AppConfig, WinTier, PresentationStore, gameRuntimeEventBus, StoreManager, GameViewAdapter, playCollectMulFlyForBalls, playCollectMulFly, AppAudio, EFFECTSMAP, REEL_STOP_NORMAL_PRIORITY, REEL_STOP_BY_KIND, SlotMachineView, ReelTimingDebugStore, DEFAULT_REEL_CONFIG, SceneSpeedActivationMode, SceneSpeedStore, DEFAULT_SCENE_SPEED_CONFIG, getSpinSkipScope, setSpinSkipScope, mockPushKick, mockPushExpiring, mockPushRestart, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _inheritsLoose = module.inheritsLoose;
@@ -5930,6 +5957,10 @@ System.register("bundle://1001/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
     }, function (module) {
       getSpinSkipScope = module.getSpinSkipScope;
       setSpinSkipScope = module.setSpinSkipScope;
+    }, function (module) {
+      mockPushKick = module.mockPushKick;
+      mockPushExpiring = module.mockPushExpiring;
+      mockPushRestart = module.mockPushRestart;
     }, function (module) {
       GAME_EVENT_TYPE = module.GAME_EVENT_TYPE;
     }],
@@ -6266,6 +6297,19 @@ System.register("bundle://1001/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
           }
           p.appendChild(maxWinGrid);
 
+          // ── 推播通道 ──
+
+          p.appendChild(this.section('推播通道 假後端'));
+          var pushGrid = this.row('flex-wrap:wrap;gap:4px;');
+          var pushOptions = [['踢人', mockPushKick], ['session 快到期', mockPushExpiring], ['伺服器重啟', mockPushRestart]];
+          for (var _i3 = 0, _pushOptions = pushOptions; _i3 < _pushOptions.length; _i3++) {
+            var _pushOptions$_i = _pushOptions[_i3],
+              label = _pushOptions$_i[0],
+              trigger = _pushOptions$_i[1];
+            pushGrid.appendChild(this.toggleBtn(label, false, trigger));
+          }
+          p.appendChild(pushGrid);
+
           // ── 免費遊戲每局報獎 ──
 
           p.appendChild(this.section('免費遊戲每局報獎'));
@@ -6273,7 +6317,7 @@ System.register("bundle://1001/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
           var fgEnableOptions = [['關閉(原本)', false], ['開啟', true]];
           var presentationStore = PresentationStore.getInstance();
           var _loop3 = function _loop3() {
-            var _fgEnableOptions$_i = _fgEnableOptions[_i3],
+            var _fgEnableOptions$_i = _fgEnableOptions[_i4],
               label = _fgEnableOptions$_i[0],
               enabled = _fgEnableOptions$_i[1];
             var active = presentationStore.config.featureRoundWinPresentationEnabled === enabled;
@@ -6282,14 +6326,14 @@ System.register("bundle://1001/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
               _this4.updateControl();
             }));
           };
-          for (var _i3 = 0, _fgEnableOptions = fgEnableOptions; _i3 < _fgEnableOptions.length; _i3++) {
+          for (var _i4 = 0, _fgEnableOptions = fgEnableOptions; _i4 < _fgEnableOptions.length; _i4++) {
             _loop3();
           }
           p.appendChild(fgEnableGrid);
           var fgWinTierGrid = this.row('flex-wrap:wrap;gap:4px;');
           var fgWinTierOptions = [['Big', WinTier.BIG], ['Mega', WinTier.MEGA], ['Super', WinTier.SUPER], ['Epic', WinTier.EPIC]];
           var _loop4 = function _loop4() {
-            var _fgWinTierOptions$_i = _fgWinTierOptions[_i4],
+            var _fgWinTierOptions$_i = _fgWinTierOptions[_i5],
               label = _fgWinTierOptions$_i[0],
               minTier = _fgWinTierOptions$_i[1];
             var active = presentationStore.config.featureRoundWinPresentationMinTier === minTier;
@@ -6298,7 +6342,7 @@ System.register("bundle://1001/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
               _this4.updateControl();
             }));
           };
-          for (var _i4 = 0, _fgWinTierOptions = fgWinTierOptions; _i4 < _fgWinTierOptions.length; _i4++) {
+          for (var _i5 = 0, _fgWinTierOptions = fgWinTierOptions; _i5 < _fgWinTierOptions.length; _i5++) {
             _loop4();
           }
           p.appendChild(fgWinTierGrid);
@@ -6363,8 +6407,8 @@ System.register("bundle://1001/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
             row.appendChild(_this4.makeEl('span', label, 'font-size:11px;color:#aaa;min-width:70px;'));
             var select = document.createElement('select');
             select.style.cssText = 'flex:1;background:#222;color:#ddd;border:1px solid #555;border-radius:4px;padding:3px;font-family:monospace;font-size:11px;';
-            for (var _i6 = 0, _EASE_OPTIONS2 = EASE_OPTIONS; _i6 < _EASE_OPTIONS2.length; _i6++) {
-              var name = _EASE_OPTIONS2[_i6];
+            for (var _i7 = 0, _EASE_OPTIONS2 = EASE_OPTIONS; _i7 < _EASE_OPTIONS2.length; _i7++) {
+              var name = _EASE_OPTIONS2[_i7];
               var opt = document.createElement('option');
               opt.value = name;
               opt.textContent = name;
@@ -6796,8 +6840,8 @@ System.register("bundle://1001/_virtual/DebugPanel.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("bundle://1001/_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _createClass, cclegacy, ResolutionPolicy, view, Size, screen, gameRuntimeEventBus, GAME_EVENT_TYPE, GAME_EVENT_ID;
+System.register("bundle://1001/_virtual/DeviceStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameRuntimeEventBus.ts', './SubGameBridge.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _createClass, cclegacy, ResolutionPolicy, view, Size, screen, gameRuntimeEventBus, isFixedRatio, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
       _createClass = module.createClass;
@@ -6810,14 +6854,13 @@ System.register("bundle://1001/_virtual/DeviceStore.ts", ['./rollupPluginModLoBa
     }, function (module) {
       gameRuntimeEventBus = module.gameRuntimeEventBus;
     }, function (module) {
+      isFixedRatio = module.isFixedRatio;
+    }, function (module) {
       GAME_EVENT_TYPE = module.GAME_EVENT_TYPE;
       GAME_EVENT_ID = module.GAME_EVENT_ID;
     }],
     execute: function () {
       cclegacy._RF.push({}, "c46b2SYVbVHlpn1QfGxnlGJ", "DeviceStore", undefined);
-      function isFixedRatio() {
-        return globalThis.__subGameFixedRatio__ === true;
-      }
 
       // 固定比例時容器縮成設計比例並置中 畫布只有遊戲範圍
       var fixedRatioPolicy = null;
@@ -7332,8 +7375,8 @@ System.register("bundle://1001/_virtual/EventComponent.ts", ['./rollupPluginModL
   };
 });
 
-System.register("bundle://1001/_virtual/ExitFreeGameTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './GameStateKey.ts', './EagleTracker.ts', './GameConst.ts', './PresentationStore.ts', './FinishSpinTask.ts', './EndSpinTask.ts', './WinAnimationTask.ts'], function (exports) {
-  var _inheritsLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, GameTask, GameStateKey, EagleTracker, WinTier, PresentationStore, finishSpin, endSpin, playWinAnimationIfNeeded;
+System.register("bundle://1001/_virtual/ExitFreeGameTask.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTask.ts', './GameStateKey.ts', './EagleTracker.ts', './GameConst.ts', './PresentationStore.ts', './FinishSpinTask.ts', './EndSpinTask.ts', './WinAnimationTask.ts', './SpinFlowPlanner.ts'], function (exports) {
+  var _inheritsLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, GameTask, GameStateKey, EagleTracker, WinTier, PresentationStore, finishSpin, endSpin, playWinAnimationIfNeeded, jackpotWinOf;
   return {
     setters: [function (module) {
       _inheritsLoose = module.inheritsLoose;
@@ -7357,6 +7400,8 @@ System.register("bundle://1001/_virtual/ExitFreeGameTask.ts", ['./rollupPluginMo
       endSpin = module.endSpin;
     }, function (module) {
       playWinAnimationIfNeeded = module.playWinAnimationIfNeeded;
+    }, function (module) {
+      jackpotWinOf = module.jackpotWinOf;
     }],
     execute: function () {
       cclegacy._RF.push({}, "d1caeEsh4pL5Y0cLlnUpS4j", "ExitFreeGameTask", undefined);
@@ -7384,7 +7429,7 @@ System.register("bundle://1001/_virtual/ExitFreeGameTask.ts", ['./rollupPluginMo
         };
         _proto.run = /*#__PURE__*/function () {
           var _run = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-            var game, spinWin, tracker, bet, jackpot, amount;
+            var game, spinWin, tracker, bet;
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
@@ -7411,13 +7456,14 @@ System.register("bundle://1001/_virtual/ExitFreeGameTask.ts", ['./rollupPluginMo
                   }
                   endSpin(game);
 
-                  // 回到 NG 報獎+Total
+                  // 回到 NG 報獎+Total 彩池在進免費遊戲前已演過
+                  // 報獎級別刻意不含彩池 跟主遊戲同一套規則 見 SpinFlowPlanner
                   if (PresentationStore.getInstance().config.featureRoundWinPresentationEnabled) {
                     _context.next = 15;
                     break;
                   }
                   _context.next = 15;
-                  return playWinAnimationIfNeeded(game, spinWin);
+                  return playWinAnimationIfNeeded(game, spinWin - jackpotWinOf(this.result));
                 case 15:
                   if (!(spinWin > 0)) {
                     _context.next = 19;
@@ -7427,20 +7473,6 @@ System.register("bundle://1001/_virtual/ExitFreeGameTask.ts", ['./rollupPluginMo
                   _context.next = 19;
                   return game.popups.showWinAnimation(spinWin, bet, WinTier.TOTAL);
                 case 19:
-                  jackpot = this.result.jackpot;
-                  if (!(jackpot != null && jackpot.won && jackpot.tier)) {
-                    _context.next = 25;
-                    break;
-                  }
-                  amount = Number(jackpot.payout) || 0;
-                  console.log('[Jackpot][1001][FG] 觸發派獎', {
-                    tier: jackpot.tier,
-                    payout: jackpot.payout,
-                    amount: amount
-                  });
-                  _context.next = 25;
-                  return game.popups.showJackpot(jackpot.tier, amount);
-                case 25:
                 case "end":
                   return _context.stop();
               }
@@ -8540,7 +8572,7 @@ System.register("bundle://1001/_virtual/GameLaunchContext.ts", ['cc'], function 
   };
 });
 
-System.register("bundle://1001/_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './GameViewAdapter.ts', './AppAssetBundle.ts', './AppUtility.ts', './StoreMap.ts', './SlotApiTypes.ts', './SlotMachineModel.ts', './GamePopupManager.ts', './AppAudio.ts', './AudioConfig.ts', './EagleTracker.ts', './TrackerMap.ts', './GameRuntimeEventBus.ts', './SlotGameMain.ts', './GameRoot.ts', './TemplateView.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './DirectorSpeedHook.ts', './GameConfigManager.ts', './GameStateKey.ts', './SpinResultHandler.ts', './NGState_1001.ts', './FGState_1001.ts', './SlotGameDefinition.ts', './SubGameData.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+System.register("bundle://1001/_virtual/GameMain_1001.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './GameViewAdapter.ts', './AppAssetBundle.ts', './AppUtility.ts', './StoreMap.ts', './SlotApiTypes.ts', './SlotMachineModel.ts', './GamePopupManager.ts', './AppAudio.ts', './AudioConfig.ts', './EagleTracker.ts', './TrackerMap.ts', './GameRuntimeEventBus.ts', './SlotGameMain.ts', './GameRoot.ts', './TemplateView.ts', './PresentationConfig.ts', './PresentationStore.ts', './ReelConfig.ts', './SceneSpeedConfig.ts', './ReelTimingDebugStore.ts', './SceneSpeedStore.ts', './DirectorSpeedHook.ts', './GameConfigManager.ts', './GameStateKey.ts', './SpinResultHandler.ts', './NGState_1001.ts', './FGState_1001.ts', './SlotGameDefinition.ts', './SubGameBridge.ts', './GameRuntimeEventTypes.ts'], function (exports) {
   var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Prefab, director, view, Widget, Camera, sp, Node, UITransform, JsonAsset, StoreManager, GameViewAdapter, AppAssetBundle, AppUtility, GAMESTOREMAP, TURBOSTATUSMAP, isRoundInProgress, SlotMachineModel, SlotMachineState, GamePopupManager, AppAudio, EFFECTSMAP, MUSICMAP, EagleTracker, TrackerMap, gameRuntimeEventBus, SlotGameMain, GameRoot, TemplateView, parsePresentationConfig, PRESENTATION_CONFIG_PATH, PresentationStore, parseReelConfig, REEL_CONFIG_PATH, parseSceneSpeedConfig, ReelTimingDebugStore, SceneSpeedStore, SceneSpeedActivationMode, installDirectorSpeedHook, setDirectorSpeedFactor, resetDirectorSpeedFactor, GameConfigManager, GameStateKey, SpinResultHandler, NGState_1001, FGState_1001, SLOT_GAME_DEFINITION, getSubGameData, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
@@ -9746,6 +9778,71 @@ System.register("bundle://1001/_virtual/GameMain_1001.ts", ['./rollupPluginModLo
   };
 });
 
+System.register("bundle://1001/_virtual/GameNetHandler.ts", ['cc'], function (exports) {
+  var cclegacy;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "48497Up4xFLAIgn1uEfw4pP", "GameNetHandler", undefined);
+      /**
+       * GameNetHandler
+       *
+       * 仿舊專案（Cocos_2022）SGEngine 的封包處理器模式：每種 API／訊息各自一個
+       * Handler class，把「拆解回應資料 + 組裝後續 Task」的邏輯封裝起來，取代
+       * HttpClientStore 裡所有 API 呼叫都塞在同一個大 class 的寫法。原名
+       * NetResponseHandler，2026-08-11 改名對齊舊專案命名（搭配 GameNet 使用）。
+       *
+       * 與舊專案的差異：舊專案的 id 是 protobuf MessageID（WebSocket 推播用），
+       * 這裡改用字串 key（對應 API 操作名稱，例如 'SLOT_SPIN'／'GET_GAME_INFO'）。
+       */
+      var GameNetHandler = exports('GameNetHandler', function GameNetHandler() {});
+
+      /**
+       * GameNet
+       *
+       * 管理一組 GameNetHandler，依 key 分派。一個 key 只能註冊一個 Handler
+       * （對應 SGEngine 一個 MessageID 一個 Handler 的慣例，避免同一種回應被重複處理）。
+       *
+       * 對應舊專案（Cocos_2022）的 GameNet：`Map<id, handler>` + 查表派發，這裡的
+       * key 用字串（frame.type）取代舊專案的數字 protobuf MessageID，本質是同一設計。
+       */
+      var GameNet = exports('GameNet', /*#__PURE__*/function () {
+        function GameNet() {
+          this.handlers = new Map();
+        }
+        var _proto = GameNet.prototype;
+        _proto.register = function register(handler) {
+          if (this.handlers.has(handler.key)) {
+            console.warn("[GameNet] handler for \"" + handler.key + "\" already registered, overwriting");
+          }
+          this.handlers.set(handler.key, handler);
+          return this;
+        };
+        _proto.unregister = function unregister(key) {
+          this.handlers["delete"](key);
+        }
+
+        /** 分派 payload 給對應 key 的 Handler；找不到對應 Handler 時只 log 警告，不丟例外 */;
+        _proto.dispatch = function dispatch(key, payload) {
+          var handler = this.handlers.get(key);
+          if (!handler) {
+            console.warn("[GameNet] no handler registered for \"" + key + "\"");
+            return;
+          }
+          handler.handle(payload);
+        };
+        _proto.has = function has(key) {
+          return this.handlers.has(key);
+        };
+        return GameNet;
+      }());
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("bundle://1001/_virtual/GamePopupManager.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './AppAssetBundle.ts', './JackpotView.ts', './WinAnimationView.ts', './StoreManager.ts', './GameConfigManager.ts', './GameRoot.ts'], function (exports) {
   var _createClass, _asyncToGenerator, _regeneratorRuntime, _createForOfIteratorHelperLoose, cclegacy, instantiate, director, Prefab, AppAssetBundle, JackpotView, WinAnimationView, StoreManager, GameConfigManager, GameRoot;
   return {
@@ -10096,8 +10193,8 @@ System.register("bundle://1001/_virtual/GamePopupManager.ts", ['./rollupPluginMo
   };
 });
 
-System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './OrientationController.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, Widget, UITransform, profiler, Component, ImageAsset, sys, assetManager, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, getSettingStore, createRootStore, NativeBundleUpdateView, LoadingView, GAME_EVENT_TYPE;
+System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './StoreManager.ts', './i18nHelper.ts', './StoreMap.ts', './AppAssetBundle.ts', './AppViewPool.ts', './EagleTracker.ts', './TrackerMap.ts', './GameConfigManager.ts', './GameConfig.ts', './start.ts', './GameRuntimeEventBus.ts', './AppConfig.ts', './EventComponent.ts', './PopupStack.ts', './OrientationController.ts', './RootStoreHooks.ts', './NativeBundleUpdateView.ts', './LoadingView.ts', './SubGameBridge.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, view, Widget, UITransform, profiler, Component, ImageAsset, sys, assetManager, instantiate, StoreManager, initI18n, VIEWMAP, GAMEVIEWMAP, VIEWLEVEL, AppAssetBundle, AppViewPool, EagleTracker, TrackerMap, GameConfigManager, isMock, stopGameMock, startGameMock, gameRuntimeEventBus, AppConfig, EventComponent, PopupStack, fitViewToSafeArea, getSettingStore, createRootStore, NativeBundleUpdateView, LoadingView, inShell, onShellMessage, postToShell, isFixedRatio, notifyEntered, getEnterStartTime, GAME_EVENT_TYPE;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -10161,6 +10258,13 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
     }, function (module) {
       LoadingView = module.LoadingView;
     }, function (module) {
+      inShell = module.inShell;
+      onShellMessage = module.onShellMessage;
+      postToShell = module.postToShell;
+      isFixedRatio = module.isFixedRatio;
+      notifyEntered = module.notifyEntered;
+      getEnterStartTime = module.getEnterStartTime;
+    }, function (module) {
       GAME_EVENT_TYPE = module.GAME_EVENT_TYPE;
     }],
     execute: function () {
@@ -10188,13 +10292,10 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           _initializerDefineProperty(_this, "loadingView", _descriptor6, _assertThisInitialized(_this));
           /** 落雷(symbol_up)播放時暫時搬過來的節點 不受 ReelView 的 Mask 限制 */
           _initializerDefineProperty(_this, "symbolFxNode", _descriptor7, _assertThisInitialized(_this));
+          // 取消監聽殼頁訊息
+          _this.unbindShell = null;
           // 殼頁的 hello 帶初始音樂音效 setting 是切換 套用到原本的音量設定
-          _this.onShellMessage = function (event) {
-            var _event$data;
-            if (event.source !== window.parent || ((_event$data = event.data) == null ? void 0 : _event$data.source) !== 'host-shell') return;
-            var _event$data2 = event.data,
-              type = _event$data2.type,
-              payload = _event$data2.payload;
+          _this.applyShellSettings = function (type, payload) {
             var settings = type === 'hello' ? payload == null ? void 0 : payload.settings : type === 'setting' ? payload : null;
             var store = getSettingStore();
             if (!settings || !store) return;
@@ -10232,27 +10333,14 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           PopupStack.setLayer(this.topNode);
           view.on('design-resolution-changed', this.fitContentLayers, this);
           this.fitContentLayers();
-        };
-        _proto.inShell = function inShell() {
-          return typeof window !== 'undefined' && !!window.parent && window.parent !== window;
-        };
-        _proto.postShell = function postShell(type, payload) {
-          if (payload === void 0) {
-            payload = {};
-          }
-          if (this.inShell()) window.parent.postMessage({
-            source: 'game',
-            type: type,
-            payload: payload
-          }, '*');
         }
 
         /** 遊戲放在殼頁 iframe 裡時 向殼頁要初始設定 並通知殼頁載入畫面已出現 讓殼頁拿掉遮罩 */;
         _proto.bindShell = function bindShell() {
-          if (!this.inShell()) return;
-          window.addEventListener('message', this.onShellMessage);
-          this.postShell('hi');
-          this.postShell('ready');
+          if (!inShell()) return;
+          this.unbindShell = onShellMessage(this.applyShellSettings);
+          postToShell('hi');
+          postToShell('ready');
         };
         // 螢幕比設計框窄時 內容層整體縮小 整個設計框才看得到
         // 層的大小同步放大成 螢幕除以縮放 縮放後剛好蓋滿螢幕
@@ -10276,7 +10364,9 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
           }
         };
         _proto.onDestroy = function onDestroy() {
-          if (typeof window !== 'undefined') window.removeEventListener('message', this.onShellMessage);
+          var _this$unbindShell;
+          (_this$unbindShell = this.unbindShell) == null || _this$unbindShell.call(this);
+          this.unbindShell = null;
           view.off('design-resolution-changed', this.fitContentLayers, this);
           if (GameRoot.instance === this) GameRoot.instance = null;
           this.removeBackdrop();
@@ -10291,7 +10381,7 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
-                  if (!(!sys.isBrowser || globalThis.__subGameFixedRatio__ !== true)) {
+                  if (!(!sys.isBrowser || !isFixedRatio())) {
                     _context.next = 2;
                     break;
                   }
@@ -10509,7 +10599,7 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
         _proto.initial = /*#__PURE__*/function () {
           var _initial = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
             var _this$loadingView$get;
-            var startTime, updateView, enterStartTime, entered;
+            var startTime, updateView, enterStartTime;
             return _regeneratorRuntime().wrap(function _callee3$(_context3) {
               while (1) switch (_context3.prev = _context3.next) {
                 case 0:
@@ -10582,20 +10672,19 @@ System.register("bundle://1001/_virtual/GameRoot.ts", ['./rollupPluginModLoBabel
                   console.log('Total load time: ', performance.now() - startTime);
 
                   // entry 的 SubGame.ts 在按下進場那一刻寫進 globalThis 的時間戳
-                  enterStartTime = globalThis.__subGameEnterStartTime__;
-                  if (typeof enterStartTime === 'number') {
+                  enterStartTime = getEnterStartTime();
+                  if (enterStartTime !== undefined) {
                     console.log('[GameRoot] 熱更新下載開始 到 遊戲出現 總耗時: ', Date.now() - enterStartTime, 'ms');
                   }
 
                   // 告訴 entry 已經進到遊戲 大廳依 existTableList 決定要不要開選座彈窗 獨立執行時沒有這個介面就跳過
-                  entered = globalThis.__subGameEntered__;
-                  if (typeof entered === 'function') entered();
+                  notifyEntered();
                   // 載入完成 通知殼頁開進場選座
-                  this.postShell('show-seat-lobby');
+                  postToShell('show-seat-lobby');
                   EagleTracker.trackerEvent(TrackerMap.GAME_LOAD_COMPLETE, {
                     total_load_time_ms: performance.now() - startTime
                   });
-                case 45:
+                case 44:
                 case "end":
                   return _context3.stop();
               }
@@ -11473,7 +11562,9 @@ System.register("bundle://1001/_virtual/GameRuntimeEventTypes.ts", ['cc'], funct
         /** 共用：進出 FG 模式變動 GameStore.setGameMode */
         GAME_MODE_CHANGED: 'game/game-mode-changed',
         /** 要求購買免費遊戲 */
-        BUY_FEATURE_REQUESTED: 'game/buy-feature-requested'
+        BUY_FEATURE_REQUESTED: 'game/buy-feature-requested',
+        /** 能不能購買免費遊戲變動 */
+        BUY_FEATURE_AVAILABLE_CHANGED: 'game/buy-feature-available-changed'
       });
 
       /** 遊戲事件追蹤編號 */
@@ -11533,7 +11624,9 @@ System.register("bundle://1001/_virtual/GameRuntimeEventTypes.ts", ['cc'], funct
         /** 進出 FG 模式變動 */
         GAME_MODE_CHANGED: 'EVT-GAME-029',
         /** 要求購買免費遊戲 */
-        BUY_FEATURE_REQUESTED: 'EVT-GAME-030'
+        BUY_FEATURE_REQUESTED: 'EVT-GAME-030',
+        /** 能不能購買免費遊戲變動 */
+        BUY_FEATURE_AVAILABLE_CHANGED: 'EVT-GAME-031'
       });
 
       /** 事件名稱與 payload 對照表 */
@@ -13356,8 +13449,8 @@ System.register("bundle://1001/_virtual/HistoryView.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './SlotApiClient.ts', './SlotRoundMapper.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './GridLayoutConfig.ts', './GameConfig.ts', './GameConst.ts', './PresentationStore.ts', './i18nHelper.ts', './LanguageData.ts', './Logger.ts', './start.ts', './slot-api-mock.ts', './StoreMap.ts', './GameConfigManager.ts'], function (exports) {
-  var _createClass, _asyncToGenerator, _regeneratorRuntime, _extends, cclegacy, isRoundInProgress, SlotApiHttpError, SLOT_API_CODE, STEP_STATE, SlotApiClient, SlotRoundMapper, SlotHistoryMapper, toBetPlan, toSlotInitData, toWinTierThresholds, baseBetAmount, toSlotConfigData, toJackpotSnapshot, getBoardDamp, autoFallbackToMock, isMock, API_GAME_ID, PresentationStore, switchLanguage, getLocalizedString, Logger, startGameMock, MOCK_API_BASE_URL, MOCK_TOKEN, GAMESTOREMAP, GameConfigManager;
+System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './SlotApiClient.ts', './SlotWebSocketClient.ts', './GameNetHandler.ts', './SlotApiHandlers.ts', './SlotRoundMapper.ts', './SlotHistoryMapper.ts', './SlotResponseAdapter.ts', './GridLayoutConfig.ts', './GameConfig.ts', './GameConst.ts', './PresentationStore.ts', './i18nHelper.ts', './LanguageData.ts', './Logger.ts', './SubGameBridge.ts', './start.ts', './slot-api-mock.ts', './StoreMap.ts', './GameConfigManager.ts'], function (exports) {
+  var _createClass, _asyncToGenerator, _regeneratorRuntime, _extends, cclegacy, SlotApiHttpError, SLOT_API_CODE, isRoundInProgress, STEP_STATE, SlotApiClient, SlotWebSocketClient, GameNet, JackpotUpdatedHandler, SessionKickedHandler, SessionExpiringHandler, SlotRoundMapper, SlotHistoryMapper, toJackpotSnapshot, toBetPlan, toSlotInitData, toWinTierThresholds, baseBetAmount, toSlotConfigData, getBoardDamp, autoFallbackToMock, isMock, API_GAME_ID, PresentationStore, switchLanguage, getLocalizedString, isSupportedLanguage, Logger, exitToLobby, startGameMock, MOCK_TOKEN, MOCK_API_BASE_URL, AUTOSPINSTATUSMAP, GAMESTOREMAP, GameConfigManager;
   return {
     setters: [function (module) {
       _createClass = module.createClass;
@@ -13367,23 +13460,31 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
     }, function (module) {
       cclegacy = module.cclegacy;
     }, function (module) {
-      isRoundInProgress = module.isRoundInProgress;
       SlotApiHttpError = module.SlotApiHttpError;
       SLOT_API_CODE = module.SLOT_API_CODE;
+      isRoundInProgress = module.isRoundInProgress;
       STEP_STATE = module.STEP_STATE;
     }, function (module) {
       SlotApiClient = module.SlotApiClient;
+    }, function (module) {
+      SlotWebSocketClient = module.default;
+    }, function (module) {
+      GameNet = module.GameNet;
+    }, function (module) {
+      JackpotUpdatedHandler = module.JackpotUpdatedHandler;
+      SessionKickedHandler = module.SessionKickedHandler;
+      SessionExpiringHandler = module.SessionExpiringHandler;
     }, function (module) {
       SlotRoundMapper = module.SlotRoundMapper;
     }, function (module) {
       SlotHistoryMapper = module.SlotHistoryMapper;
     }, function (module) {
+      toJackpotSnapshot = module.toJackpotSnapshot;
       toBetPlan = module.toBetPlan;
       toSlotInitData = module.toSlotInitData;
       toWinTierThresholds = module.toWinTierThresholds;
       baseBetAmount = module.baseBetAmount;
       toSlotConfigData = module.toSlotConfigData;
-      toJackpotSnapshot = module.toJackpotSnapshot;
     }, function (module) {
       getBoardDamp = module.getBoardDamp;
     }, function (module) {
@@ -13397,14 +13498,18 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
       switchLanguage = module.switchLanguage;
     }, function (module) {
       getLocalizedString = module.getLocalizedString;
+      isSupportedLanguage = module.isSupportedLanguage;
     }, function (module) {
       Logger = module.Logger;
     }, function (module) {
+      exitToLobby = module.exitToLobby;
+    }, function (module) {
       startGameMock = module.startGameMock;
     }, function (module) {
-      MOCK_API_BASE_URL = module.MOCK_API_BASE_URL;
       MOCK_TOKEN = module.MOCK_TOKEN;
+      MOCK_API_BASE_URL = module.MOCK_API_BASE_URL;
     }, function (module) {
+      AUTOSPINSTATUSMAP = module.AUTOSPINSTATUSMAP;
       GAMESTOREMAP = module.GAMESTOREMAP;
     }, function (module) {
       GameConfigManager = module.default;
@@ -13431,8 +13536,10 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
         return pathname.startsWith(GATEWAY_GAME_PAGE_PREFIX) ? '' : TEST_SITE_API_BASE_URL;
       }
 
-      /** 獎池輪詢間隔 GET /player/jackpots 每分鐘最多 30 次 保守取 30 秒 */
-      var JACKPOT_POLL_MS = 30000;
+      /** 推播沒連著時的獎池輪詢間隔 規格 §5.7 要求每 10 秒 GET /player/jackpots 每分鐘最多 30 次 */
+      var JACKPOT_POLL_MS = 10000;
+      /** entry 回 4503 維護中時 隔多久用同一把 token 再打一次 規格沒給間隔 */
+      var MAINTENANCE_RETRY_MS = 10000;
       /** 注單列表一次取幾筆（只取第一頁） */
       var HISTORY_PAGE_SIZE = 20;
       /** 一轉最多接幾步，防後端資料異常時無窮迴圈（規格 §5.2 建議加上限） */
@@ -13442,6 +13549,10 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
 
       /** 同一轉的連消步：`nst` 是這兩個值時這一轉還沒結束，用這一步的 `sid` 接著打 */
       var TUMBLE_STATES = new Set([STEP_STATE.BASE_TUMBLE, STEP_STATE.FREE_TUMBLE]);
+      // 主遊戲一轉打到一半 下一次按轉要接著打 不開新局
+      var BASE_UNFINISHED_STATES = new Set([STEP_STATE.BASE_TUMBLE, STEP_STATE.BASE_RESPIN]);
+      // 規格要回大廳的錯誤碼
+      var LOBBY_CODES = new Set([SLOT_API_CODE.LINE_CLOSED, SLOT_API_CODE.PLAYER_NOT_FOUND, SLOT_API_CODE.GAME_NOT_ALLOWED, SLOT_API_CODE.CURRENCY_MISMATCH, SLOT_API_CODE.TOKEN_REJECTED]);
       var HttpClientStore = exports('default', /*#__PURE__*/function () {
         var _proto = HttpClientStore.prototype;
         /**
@@ -13501,6 +13612,16 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
           /** 免費遊戲前面各轉累積的倍數 */
           this.freeAccumulated = 0;
           this.jackpotTimer = null;
+          // 畫面有要看獎池 推播連著時不輪詢 斷線才退回輪詢
+          this.jackpotWanted = false;
+          // 被踢或 token 失效 之後不再下注 也不再打 entry
+          this.sessionEnded = false;
+          // 結束時的提示 之後再按轉重新顯示
+          this.sessionEndAlert = null;
+          // 開新局連續回 4013 的次數
+          this.limitRejects = 0;
+          // 推播通道 假資料模式也走同一條 由假後端的 WebSocket 代理接住
+          this.push = null;
           this.cache = {
             betDetails: new Map()
           };
@@ -13577,17 +13698,18 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
                   return this.applyLanguage(entry.lg);
                 case 21:
                   this.applyEntryToStores(entry);
-                  _context.next = 27;
+                  this.connectPush(entry);
+                  _context.next = 28;
                   break;
-                case 24:
-                  _context.prev = 24;
+                case 25:
+                  _context.prev = 25;
                   _context.t1 = _context["catch"](0);
                   this.handleError(_context.t1);
-                case 27:
+                case 28:
                 case "end":
                   return _context.stop();
               }
-            }, _callee, this, [[0, 24], [4, 10]]);
+            }, _callee, this, [[0, 25], [4, 10]]);
           }));
           function gameInitial() {
             return _gameInitial.apply(this, arguments);
@@ -13638,36 +13760,55 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
             return _regeneratorRuntime().wrap(function _callee3$(_context3) {
               while (1) switch (_context3.prev = _context3.next) {
                 case 0:
-                  _context3.prev = 0;
+                  if (!this.sessionEnded) {
+                    _context3.next = 4;
+                    break;
+                  }
+                  this.restoreBalance();
+                  this.showSessionEnded();
+                  return _context3.abrupt("return", null);
+                case 4:
+                  _context3.prev = 4;
                   option = this.betPlan.find(function (item) {
                     return Number(item.amount) === Number(bet);
                   });
                   if (option) {
-                    _context3.next = 4;
+                    _context3.next = 8;
                     break;
                   }
                   throw new Error("\u4E0B\u6CE8\u91D1\u984D " + bet + " \u4E0D\u5728\u4E0B\u6CE8\u6E05\u55AE\u4E0A");
-                case 4:
-                  _context3.next = 6;
+                case 8:
+                  _context3.next = 10;
                   return this.playSpin(option, !!buyFeatureType);
-                case 6:
+                case 10:
                   steps = _context3.sent;
                   result = this.mapper().toSlotRoundResult(steps, this.baseBetOf(steps[0]));
                   gameStore = this.storeManager.getGameStore();
                   gameStore.setSpinData(result);
                   gameStore.setRoundId(result.operationId);
                   this.setIsUpdate(true);
+                  this.limitRejects = 0;
                   return _context3.abrupt("return", result);
-                case 15:
-                  _context3.prev = 15;
-                  _context3.t0 = _context3["catch"](0);
+                case 20:
+                  _context3.prev = 20;
+                  _context3.t0 = _context3["catch"](4);
+                  this.restoreBalance();
                   this.handleError(_context3.t0);
+                  // 不開放購買 隱藏購買按鈕
+                  if (buyFeatureType && _context3.t0 instanceof SlotApiHttpError && _context3.t0.code === SLOT_API_CODE.MODE_CLOSED) {
+                    this.storeManager.getGameStore().setBuyFeatureAvailable(false);
+                  }
+                  // 開新局回 4013 先讓玩家換一組下注額 仍是 4013 就重取清單
+                  if (_context3.t0 instanceof SlotApiHttpError && _context3.t0.code === SLOT_API_CODE.LIMIT_OR_FROZEN && ++this.limitRejects >= 2) {
+                    this.limitRejects = 0;
+                    void this.refreshBetPlan();
+                  }
                   return _context3.abrupt("return", null);
-                case 19:
+                case 27:
                 case "end":
                   return _context3.stop();
               }
-            }, _callee3, this, [[0, 15]]);
+            }, _callee3, this, [[4, 20]]);
           }));
           function spin(_x, _x2) {
             return _spin.apply(this, arguments);
@@ -13678,7 +13819,10 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
          * 向後端要免費遊戲的下一轉：用最近一步的 `sid` 與本局的 `cs`／`ml` 續打（不扣款），
          * 接到這一轉的連消步都拿完。
          *
-         * @returns 這一轉的結果；局已經結束、或請求失敗（已顯示錯誤）時回 null。
+         * 局還沒打完時失敗不離開免費遊戲：提示後玩家按確定 用最近一步的 `sid` 再要一次（規格附錄 B 同一個 `id` 重送）；
+         * 401 先重打 entry 再要。
+         *
+         * @returns 這一轉的結果；局已經結束、token 失效、或不能重試的錯誤（已顯示錯誤）時回 null。
          */;
 
         _proto.nextFreeSpin = /*#__PURE__*/
@@ -13695,34 +13839,61 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
                   }
                   return _context4.abrupt("return", null);
                 case 3:
-                  _context4.prev = 3;
+                  if (!this.sessionEnded) {
+                    _context4.next = 6;
+                    break;
+                  }
+                  this.showSessionEnded();
+                  return _context4.abrupt("return", null);
+                case 6:
+                  _context4.prev = 6;
                   console.log("[\u514D\u8CBB\u904A\u6232] \u5411\u5F8C\u7AEF\u8981\u4E0B\u4E00\u8F49 id=" + last.sid + " cs=" + last.cs + " ml=" + last.ml);
-                  _context4.next = 7;
+                  _context4.next = 10;
                   return this.betStep({
                     id: last.sid,
                     cs: last.cs,
                     ml: last.ml
                   });
-                case 7:
+                case 10:
                   first = _context4.sent;
                   console.log("[\u514D\u8CBB\u904A\u6232] \u56DE\u61C9 sid=" + first.sid + " nst=" + first.nst + " \u5269\u9918" + ((_first$fs = first.fs) == null ? void 0 : _first$fs.s) + "/" + ((_first$fs2 = first.fs) == null ? void 0 : _first$fs2.ts) + "\u8F49");
-                  _context4.next = 11;
+                  _context4.next = 14;
                   return this.drainSpin(first);
-                case 11:
+                case 14:
                   steps = _context4.sent;
                   spin = this.mapper().toSlotFreeSpin(steps, this.baseBetOf(first), this.freeAccumulated);
                   this.freeAccumulated = spin.multiplier.accumulated;
                   return _context4.abrupt("return", spin);
-                case 17:
-                  _context4.prev = 17;
-                  _context4.t0 = _context4["catch"](3);
+                case 20:
+                  _context4.prev = 20;
+                  _context4.t0 = _context4["catch"](6);
+                  if (this.canRetryInRound(_context4.t0)) {
+                    _context4.next = 25;
+                    break;
+                  }
                   this.handleError(_context4.t0);
                   return _context4.abrupt("return", null);
-                case 21:
+                case 25:
+                  console.warn('[免費遊戲] 要下一轉失敗 等玩家確定後重試', Logger.fmt(_context4.t0));
+                  if (!(_context4.t0 instanceof SlotApiHttpError && _context4.t0.kind === 'unauthorized')) {
+                    _context4.next = 30;
+                    break;
+                  }
+                  _context4.next = 29;
+                  return this.reenter();
+                case 29:
+                  return _context4.abrupt("continue", 32);
+                case 30:
+                  _context4.next = 32;
+                  return this.waitRetryConfirm(_context4.t0);
+                case 32:
+                  _context4.next = 0;
+                  break;
+                case 34:
                 case "end":
                   return _context4.stop();
               }
-            }, _callee4, this, [[3, 17]]);
+            }, _callee4, this, [[6, 20]]);
           }));
           function nextFreeSpin() {
             return _nextFreeSpin.apply(this, arguments);
@@ -13730,13 +13901,39 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
           return nextFreeSpin;
         }()
         /**
+         * 局打到一半失敗時 能不能用同一個 `id` 再試。
+         *
+         * @param error 請求丟出的錯誤。
+         * @returns 可以重試時 true；token 失效、回大廳的錯誤碼、4016、4005 與程式錯誤是 false。
+         */;
+
+        _proto.canRetryInRound = function canRetryInRound(error) {
+          if (this.sessionEnded || !(error instanceof SlotApiHttpError)) return false;
+          if (LOBBY_CODES.has(error.code)) return false;
+          return error.code !== SLOT_API_CODE.NEEDS_SUPPORT && error.code !== SLOT_API_CODE.BAD_REQUEST;
+        }
+
+        /**
+         * 顯示錯誤提示 玩家按確定後 resolve；自動旋轉一併停掉。
+         *
+         * @param error 請求丟出的錯誤。
+         * @returns 按下確定之後 resolve。
+         */;
+        _proto.waitRetryConfirm = function waitRetryConfirm(error) {
+          var _this = this;
+          this.stopAutoSpin();
+          return new Promise(function (resolve) {
+            _this.storeManager.getViewStore().showAlertView(String(error.code || error.httpStatus || error.kind), _this.errorMessageOf(error), resolve);
+          });
+        }
+
+        /**
          * 取注單列表第一頁寫進 GameStore。
          *
          * {@link isUpdate} 關著（剛查過、還沒再轉）時不發請求，直接回目前 store 裡的那份。
          *
          * @returns GameStore 裡的歷史資料；失敗時交給 {@link handleError} 並回 null。
          */;
-
         _proto.getHistory = /*#__PURE__*/
         function () {
           var _getHistory = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
@@ -13847,34 +14044,39 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
           return shutdown;
         }() /** 丟掉 client 與進場狀態，下一次 {@link gameInitial} 會重新進場。 */;
         _proto.close = function close() {
+          var _this$push;
+          (_this$push = this.push) == null || _this$push.close();
+          this.push = null;
+          this.sessionEnded = false;
+          this.sessionEndAlert = null;
+          this.jackpotWanted = false;
           this.stopJackpotPolling();
           this.client = null;
         }
 
         /**
-         * 開始查獎池水位：進場後查一次，之後固定間隔輪詢。已經在輪詢就不重複建立。
+         * 開始看獎池水位：進場後查一次，之後靠 WebSocket 推播更新；推播沒連著時退回固定間隔輪詢。已經在看就不重複建立。
          *
          * @returns 第一次查詢完成之後 resolve。
          */;
         _proto.subscribeJackpotPool = /*#__PURE__*/
         function () {
           var _subscribeJackpotPool = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8() {
-            var _this = this;
+            var _this$push2;
             return _regeneratorRuntime().wrap(function _callee8$(_context8) {
               while (1) switch (_context8.prev = _context8.next) {
                 case 0:
-                  if (!this.jackpotTimer) {
+                  if (!this.jackpotWanted) {
                     _context8.next = 2;
                     break;
                   }
                   return _context8.abrupt("return");
                 case 2:
-                  this.jackpotTimer = setInterval(function () {
-                    return void _this.pollJackpotPool();
-                  }, JACKPOT_POLL_MS);
-                  _context8.next = 5;
+                  this.jackpotWanted = true;
+                  if (!((_this$push2 = this.push) != null && _this$push2.isOpen)) this.startJackpotPolling();
+                  _context8.next = 6;
                   return this.pollJackpotPool();
-                case 5:
+                case 6:
                 case "end":
                   return _context8.stop();
               }
@@ -13886,7 +14088,7 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
           return subscribeJackpotPool;
         }()
         /**
-         * 停止查獎池水位。
+         * 停止看獎池水位。
          *
          * @returns 立即 resolve。
          */;
@@ -13897,8 +14099,9 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
             return _regeneratorRuntime().wrap(function _callee9$(_context9) {
               while (1) switch (_context9.prev = _context9.next) {
                 case 0:
+                  this.jackpotWanted = false;
                   this.stopJackpotPolling();
-                case 1:
+                case 2:
                 case "end":
                   return _context9.stop();
               }
@@ -13908,44 +14111,207 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
             return _unsubscribeJackpotPool.apply(this, arguments);
           }
           return unsubscribeJackpotPool;
-        }() /** 查一次獎池水位並更新畫面；失敗只記錄不彈提示 401 要重打 entry。 */;
-        _proto.pollJackpotPool = /*#__PURE__*/
+        }()
+        /**
+         * 建立推播通道（規格第 6 章）：連上之後獎池靠推播更新，斷線退回輪詢；被踢要停下來提示；session 快到期要呼叫一次 HTTP 續期。
+         * 重連前先重打 entry，entry 被拒（4011）就不再重連。已經建立過就不重複建立。
+         *
+         * @param entry 進場回應，`ws` 是推播位址。
+         */;
+
+        _proto.connectPush = function connectPush(entry) {
+          var _this2 = this;
+          if (this.push) return;
+          if (!entry.ws) {
+            console.warn('[HttpClientStore] entry 沒有 ws 不建立推播');
+            return;
+          }
+          var gameNet = new GameNet().register(new JackpotUpdatedHandler(function (data) {
+            return _this2.applyJackpotPush(data);
+          })).register(new SessionKickedHandler(function () {
+            return _this2.endSession();
+          })).register(new SessionExpiringHandler(function () {
+            return void _this2.pollJackpotPool();
+          }));
+          var push = new SlotWebSocketClient({
+            url: entry.ws,
+            token: this.mockMode ? MOCK_TOKEN : GameConfigManager.token,
+            beforeReconnect: function beforeReconnect() {
+              return _this2.reenterForPush();
+            }
+          });
+          // 不認識的訊息直接忽略
+          push.onFrame(function (frame) {
+            if (gameNet.has(frame.type)) gameNet.dispatch(frame.type, frame.data);
+          });
+          push.onState(function (open) {
+            if (open) _this2.stopJackpotPolling();else if (_this2.jackpotWanted) {
+              _this2.startJackpotPolling();
+              void _this2.pollJackpotPool();
+            }
+          });
+          this.push = push;
+          try {
+            push.connect();
+          } catch (error) {
+            console.warn('[HttpClientStore] 推播連線失敗', Logger.fmt(error));
+          }
+        }
+
+        /**
+         * 推播的獎池更新：只帶有變的池，沒帶到的池沿用目前的水位。
+         *
+         * @param data `jackpot.updated` 的 `data`。
+         */;
+        _proto.applyJackpotPush = function applyJackpotPush(data) {
+          if (!this.entry) return;
+          var gameStore = this.storeManager.getGameStore();
+          gameStore.setJackpotPoolData(toJackpotSnapshot(data, API_GAME_ID, this.entry.cc, gameStore.jackpotPoolData));
+        }
+
+        /**
+         * 這把 token 不能再用了（規格 §3.2 §6.3 附錄 A）：停掉所有請求與推播 提示後按確定回大廳 不重連也不再打 entry。
+         *
+         * @remarks 被踢與 4011 用「已在其他裝置開啟」 其他回大廳的錯誤碼與 entry 4016 用該錯誤碼的語系文字。
+         * @param error 造成結束的錯誤 沒給代表被踢。
+         */;
+        _proto.endSession = function endSession(error) {
+          var _this$push3, _error$code;
+          if (this.sessionEnded) return;
+          this.sessionEnded = true;
+          this.jackpotWanted = false;
+          this.stopJackpotPolling();
+          (_this$push3 = this.push) == null || _this$push3.close();
+          var code = (_error$code = error == null ? void 0 : error.code) != null ? _error$code : SLOT_API_CODE.TOKEN_REJECTED;
+          var message = code === SLOT_API_CODE.TOKEN_REJECTED ? getLocalizedString('4011_kicked') : this.errorMessageOf(error);
+          this.sessionEndAlert = {
+            title: String(code),
+            message: message
+          };
+          this.showSessionEnded();
+        }
+
+        /** 重新顯示結束提示 自動旋轉一併停掉 */;
+        _proto.showSessionEnded = function showSessionEnded() {
+          if (!this.sessionEndAlert) return;
+          this.stopAutoSpin();
+          this.storeManager.getViewStore().showAlertView(this.sessionEndAlert.title, this.sessionEndAlert.message, function () {
+            return exitToLobby();
+          });
+        }
+
+        /**
+         * 目前還能不能開新的一轉。
+         *
+         * @returns token 已失效時 false 並重新顯示結束提示。
+         */;
+        _proto.canSpin = function canSpin() {
+          if (!this.sessionEnded) return true;
+          this.showSessionEnded();
+          return false;
+        }
+
+        /** 自動旋轉開著才關掉 本來就關著不發事件 免得免費遊戲中按鈕被切成停止 */;
+        _proto.stopAutoSpin = function stopAutoSpin() {
+          var gameStore = this.storeManager.getGameStore();
+          if ((gameStore == null ? void 0 : gameStore.autoSpinStatus) === AUTOSPINSTATUSMAP.ON) gameStore.setAutoSpinStatus(AUTOSPINSTATUSMAP.OFF);
+        }
+
+        /** 開局失敗時 畫面上先扣的那一注改回後端最後給的餘額 */;
+        _proto.restoreBalance = function restoreBalance() {
+          var _this$lastStep, _this$entry2;
+          var balance = ((_this$lastStep = this.lastStep) == null ? void 0 : _this$lastStep.bl) || ((_this$entry2 = this.entry) == null ? void 0 : _this$entry2.bl);
+          if (balance && Number.isFinite(Number(balance))) this.storeManager.getUserStore().setBalance(Number(balance));
+        }
+
+        /**
+         * 推播重連前重打 entry（規格 6.4）：只確認 token 還有效、順便續期，不套用回應，避免一轉進行中蓋掉最近一步與免費遊戲狀態。
+         *
+         * @returns false 代表 token 已失效（4011），提示後不再重連；斷網等其他失敗不提示，照常繼續重連。
+         */;
+        _proto.reenterForPush = /*#__PURE__*/
         function () {
-          var _pollJackpotPool = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
-            var response;
+          var _reenterForPush = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
             return _regeneratorRuntime().wrap(function _callee10$(_context10) {
               while (1) switch (_context10.prev = _context10.next) {
                 case 0:
-                  if (!(!this.client || !this.entry)) {
+                  if (!(this.sessionEnded || !this.client)) {
                     _context10.next = 2;
                     break;
                   }
-                  return _context10.abrupt("return");
+                  return _context10.abrupt("return", false);
                 case 2:
                   _context10.prev = 2;
                   _context10.next = 5;
-                  return this.client.jackpots(API_GAME_ID);
+                  return this.client.entry(API_GAME_ID);
                 case 5:
-                  response = _context10.sent;
-                  this.storeManager.getGameStore().setJackpotPoolData(toJackpotSnapshot(response, API_GAME_ID, this.entry.cc));
-                  _context10.next = 13;
-                  break;
-                case 9:
-                  _context10.prev = 9;
+                  return _context10.abrupt("return", true);
+                case 8:
+                  _context10.prev = 8;
                   _context10.t0 = _context10["catch"](2);
-                  console.warn('[HttpClientStore] 獎池查詢失敗', Logger.fmt(_context10.t0));
-                  if (_context10.t0 instanceof SlotApiHttpError && _context10.t0.kind === 'unauthorized') void this.reenter();
+                  if (!(_context10.t0 instanceof SlotApiHttpError && (_context10.t0.kind === 'unauthorized' || LOBBY_CODES.has(_context10.t0.code)))) {
+                    _context10.next = 13;
+                    break;
+                  }
+                  this.endSession(_context10.t0.code ? _context10.t0 : undefined);
+                  return _context10.abrupt("return", false);
                 case 13:
+                  console.warn('[HttpClientStore] 推播重連前重打 entry 失敗', Logger.fmt(_context10.t0));
+                  return _context10.abrupt("return", true);
+                case 15:
                 case "end":
                   return _context10.stop();
               }
-            }, _callee10, this, [[2, 9]]);
+            }, _callee10, this, [[2, 8]]);
+          }));
+          function reenterForPush() {
+            return _reenterForPush.apply(this, arguments);
+          }
+          return reenterForPush;
+        }() /** 查一次獎池水位並更新畫面；失敗只記錄不彈提示 401 要重打 entry。 */;
+        _proto.pollJackpotPool = /*#__PURE__*/
+        function () {
+          var _pollJackpotPool = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
+            var response;
+            return _regeneratorRuntime().wrap(function _callee11$(_context11) {
+              while (1) switch (_context11.prev = _context11.next) {
+                case 0:
+                  if (!(!this.client || !this.entry)) {
+                    _context11.next = 2;
+                    break;
+                  }
+                  return _context11.abrupt("return");
+                case 2:
+                  _context11.prev = 2;
+                  _context11.next = 5;
+                  return this.client.jackpots(API_GAME_ID);
+                case 5:
+                  response = _context11.sent;
+                  this.storeManager.getGameStore().setJackpotPoolData(toJackpotSnapshot(response, API_GAME_ID, this.entry.cc));
+                  _context11.next = 13;
+                  break;
+                case 9:
+                  _context11.prev = 9;
+                  _context11.t0 = _context11["catch"](2);
+                  console.warn('[HttpClientStore] 獎池查詢失敗', Logger.fmt(_context11.t0));
+                  if (_context11.t0 instanceof SlotApiHttpError && _context11.t0.kind === 'unauthorized') void this.reenter();
+                case 13:
+                case "end":
+                  return _context11.stop();
+              }
+            }, _callee11, this, [[2, 9]]);
           }));
           function pollJackpotPool() {
             return _pollJackpotPool.apply(this, arguments);
           }
           return pollJackpotPool;
         }();
+        _proto.startJackpotPolling = function startJackpotPolling() {
+          var _this3 = this;
+          if (!this.jackpotTimer) this.jackpotTimer = setInterval(function () {
+            return void _this3.pollJackpotPool();
+          }, JACKPOT_POLL_MS);
+        };
         _proto.stopJackpotPolling = function stopJackpotPolling() {
           if (this.jackpotTimer) clearInterval(this.jackpotTimer);
           this.jackpotTimer = null;
@@ -13959,15 +14325,15 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
          */;
         _proto.enter = /*#__PURE__*/
         function () {
-          var _enter = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
-            var _this2 = this;
+          var _enter = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
+            var _this4 = this;
             var token, baseUrl, _loop, _ret, attempt;
-            return _regeneratorRuntime().wrap(function _callee11$(_context12) {
-              while (1) switch (_context12.prev = _context12.next) {
+            return _regeneratorRuntime().wrap(function _callee12$(_context13) {
+              while (1) switch (_context13.prev = _context13.next) {
                 case 0:
                   token = this.mockMode ? MOCK_TOKEN : GameConfigManager.token;
                   if (token) {
-                    _context12.next = 3;
+                    _context13.next = 3;
                     break;
                   }
                   throw new Error('missing token');
@@ -13980,59 +14346,103 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
                   this.client = new SlotApiClient(baseUrl);
                   this.client.setToken(token);
                   _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop() {
-                    var entry, _error$retryAfterSec, waitMs;
-                    return _regeneratorRuntime().wrap(function _loop$(_context11) {
-                      while (1) switch (_context11.prev = _context11.next) {
+                    var entry, _error$retryAfterSec2, waitMs;
+                    return _regeneratorRuntime().wrap(function _loop$(_context12) {
+                      while (1) switch (_context12.prev = _context12.next) {
                         case 0:
-                          _context11.prev = 0;
-                          _context11.next = 3;
-                          return _this2.client.entry(API_GAME_ID);
+                          _context12.prev = 0;
+                          _context12.next = 3;
+                          return _this4.client.entry(API_GAME_ID);
                         case 3:
-                          entry = _context11.sent;
+                          entry = _context12.sent;
                           console.log("[HttpClientStore] entry ls.nst=" + entry.ls.nst, Logger.fmt(entry));
-                          _this2.applyEntry(entry);
-                          return _context11.abrupt("return", {
+                          _this4.applyEntry(entry);
+                          return _context12.abrupt("return", {
                             v: entry
                           });
                         case 9:
-                          _context11.prev = 9;
-                          _context11.t0 = _context11["catch"](0);
-                          if (!(!(_context11.t0 instanceof SlotApiHttpError) || _context11.t0.code !== SLOT_API_CODE.PROCESSING || attempt >= MAX_ENTRY_WAIT_ATTEMPTS)) {
-                            _context11.next = 13;
+                          _context12.prev = 9;
+                          _context12.t0 = _context12["catch"](0);
+                          if (!(!(_context12.t0 instanceof SlotApiHttpError) || attempt >= MAX_ENTRY_WAIT_ATTEMPTS)) {
+                            _context12.next = 13;
                             break;
                           }
-                          throw _context11.t0;
+                          throw _context12.t0;
                         case 13:
-                          waitMs = ((_error$retryAfterSec = _context11.t0.retryAfterSec) != null ? _error$retryAfterSec : 2) * 1000;
-                          _context11.next = 16;
+                          if (!(_context12.t0.code === SLOT_API_CODE.NEEDS_SUPPORT)) {
+                            _context12.next = 16;
+                            break;
+                          }
+                          _this4.endSession(_context12.t0);
+                          throw _context12.t0;
+                        case 16:
+                          if (!(_context12.t0.code === SLOT_API_CODE.MAINTENANCE)) {
+                            _context12.next = 21;
+                            break;
+                          }
+                          // 維護中不回大廳 提示一次 稍後用同一把 token 再打 entry
+                          if (attempt === 1) _this4.showError(_context12.t0);
+                          _context12.next = 20;
+                          return new Promise(function (resolve) {
+                            return setTimeout(resolve, MAINTENANCE_RETRY_MS);
+                          });
+                        case 20:
+                          return _context12.abrupt("return", 0);
+                        case 21:
+                          if (!(_context12.t0.code === SLOT_API_CODE.RATE_LIMITED || _context12.t0.code === SLOT_API_CODE.BUSY)) {
+                            _context12.next = 25;
+                            break;
+                          }
+                          _context12.next = 24;
+                          return new Promise(function (resolve) {
+                            var _error$retryAfterSec;
+                            return setTimeout(resolve, ((_error$retryAfterSec = _context12.t0.retryAfterSec) != null ? _error$retryAfterSec : 1) * 1000);
+                          });
+                        case 24:
+                          return _context12.abrupt("return", 0);
+                        case 25:
+                          if (!(_context12.t0.code !== SLOT_API_CODE.PROCESSING)) {
+                            _context12.next = 27;
+                            break;
+                          }
+                          throw _context12.t0;
+                        case 27:
+                          waitMs = ((_error$retryAfterSec2 = _context12.t0.retryAfterSec) != null ? _error$retryAfterSec2 : 2) * 1000;
+                          _context12.next = 30;
                           return new Promise(function (resolve) {
                             return setTimeout(resolve, waitMs);
                           });
-                        case 16:
+                        case 30:
                         case "end":
-                          return _context11.stop();
+                          return _context12.stop();
                       }
                     }, _loop, null, [[0, 9]]);
                   });
                   attempt = 1;
                 case 9:
-                  return _context12.delegateYield(_loop(), "t0", 10);
+                  return _context13.delegateYield(_loop(), "t0", 10);
                 case 10:
-                  _ret = _context12.t0;
-                  if (!_ret) {
-                    _context12.next = 13;
+                  _ret = _context13.t0;
+                  if (!(_ret === 0)) {
+                    _context13.next = 13;
                     break;
                   }
-                  return _context12.abrupt("return", _ret.v);
+                  return _context13.abrupt("continue", 15);
                 case 13:
+                  if (!_ret) {
+                    _context13.next = 15;
+                    break;
+                  }
+                  return _context13.abrupt("return", _ret.v);
+                case 15:
                   attempt++;
-                  _context12.next = 9;
+                  _context13.next = 9;
                   break;
-                case 16:
+                case 18:
                 case "end":
-                  return _context12.stop();
+                  return _context13.stop();
               }
-            }, _callee11, this);
+            }, _callee12, this);
           }));
           function enter() {
             return _enter.apply(this, arguments);
@@ -14057,8 +14467,7 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
           this.resume = this.toResume(entry.ls);
           if ((_this$resume = this.resume) != null && _this$resume.freeGame) this.freeAccumulated = this.resume.freeGame.accumulated;
           if (this.resume && isRoundInProgress(entry.ls) && !this.resume.freeGame) {
-            // 連消播到一半：之後要用 ls.sid 接著打（規格第 7 章），目前還沒做
-            console.warn("[HttpClientStore] \u4E0A\u4E00\u5C40\u9084\u6C92\u6253\u5B8C\uFF08ls.nst=" + entry.ls.nst + "\uFF09\uFF0C\u9019\u500B\u72C0\u614B\u7684\u7E8C\u6253\u5C1A\u672A\u5BE6\u4F5C\uFF1B\u4E0B\u4E00\u6B21\u4E0B\u6CE8\u8981\u9001\u540C\u6A23\u7684 cs\uFF0Fml");
+            console.log("[HttpClientStore] \u4E0A\u4E00\u8F49\u9084\u6C92\u6253\u5B8C ls.nst=" + entry.ls.nst + " \u4E0B\u4E00\u6B21\u6309\u8F49\u63A5\u8457\u6253");
           }
         }
 
@@ -14083,21 +14492,34 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
          * @param entry 進場回應。
          */;
         _proto.applyEntryToStores = function applyEntryToStores(entry) {
-          var _betLevels$;
+          var _entry$buy;
           var gameStore = this.storeManager.getGameStore();
           var data = toSlotInitData(entry, this.betPlan, gameStore.slotLayout);
           data.machine_info.resume = this.resume;
           data.machine_info.mock = this.mockMode;
+          gameStore.setAmountDecimals(entry.cd);
+          gameStore.setBuyFeatureAvailable(!!((_entry$buy = entry.buy) != null && _entry$buy.length));
           gameStore.setInitExtra(data.machine_info.extra);
           gameStore.setGameInitData(data);
+          // 餘額不足的儲值頁以 entry 的 ca 為準 商戶沒給就維持網址參數的值
+          if (entry.ca) gameStore.setCashierURL(entry.ca);
           PresentationStore.getInstance().setWinTiers(toWinTierThresholds(entry.wt));
 
           // 局還沒播完時 ls.bl 是開局扣款後的餘額，畫面照它顯示（規格 §5.1）
           this.storeManager.getUserStore().setBalance(Number(entry.ls.bl || entry.bl) || 0);
+          this.applyBetLevels(data.machine_info.bet_level, Number(data.machine_info.last_bet));
+        }
+
+        /**
+         * 下注清單與預選下注額灌進 TemplateStore；預選不在清單上就選第一個。
+         *
+         * @param betLevels 下注清單（底注金額）。
+         * @param preset 預選的下注額。
+         */;
+        _proto.applyBetLevels = function applyBetLevels(betLevels, preset) {
+          var _betLevels$;
           var templateStore = this.storeManager.getModel('TemplateStore');
-          var betLevels = data.machine_info.bet_level;
           templateStore.setBetLeavel(betLevels);
-          var preset = Number(data.machine_info.last_bet);
           var defaultBet = betLevels.includes(preset) ? preset : (_betLevels$ = betLevels[0]) != null ? _betLevels$ : 0;
           templateStore.setBetBalance(defaultBet);
           var index = betLevels.indexOf(defaultBet);
@@ -14105,66 +14527,99 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
         }
 
         /**
-         * 打主遊戲一轉：開局那步（`id` 是最近一步的 `sid`），接著把同一轉的連消步拿完。
+         * 開新局連續回 4013 時重打 entry 重取限紅清單（規格 §5.2 錯誤碼表），更新畫面上的下注清單。
          *
-         * 開局回 4023（`id` 不是最新一步，例如另一個分頁打過）時換成回應的 `latest_step_id` 重打一次。
+         * @returns 重取完成（或失敗、已顯示錯誤）之後 resolve。
+         */;
+        _proto.refreshBetPlan = /*#__PURE__*/
+        function () {
+          var _refreshBetPlan = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee13() {
+            var data;
+            return _regeneratorRuntime().wrap(function _callee13$(_context14) {
+              while (1) switch (_context14.prev = _context14.next) {
+                case 0:
+                  _context14.next = 2;
+                  return this.reenter();
+                case 2:
+                  if (!(!this.entry || this.sessionEnded)) {
+                    _context14.next = 4;
+                    break;
+                  }
+                  return _context14.abrupt("return");
+                case 4:
+                  data = toSlotInitData(this.entry, this.betPlan, this.storeManager.getGameStore().slotLayout);
+                  this.applyBetLevels(data.machine_info.bet_level, Number(data.machine_info.last_bet));
+                case 6:
+                case "end":
+                  return _context14.stop();
+              }
+            }, _callee13, this);
+          }));
+          function refreshBetPlan() {
+            return _refreshBetPlan.apply(this, arguments);
+          }
+          return refreshBetPlan;
+        }()
+        /**
+         * 打主遊戲一轉：開局那步（`id` 是最近一步的 `sid`），接著把同一轉的連消步拿完。
+         * 進場時停在一轉的一半 就用本局的 `cs`／`ml` 把剩下的打完 不開新局。
          *
          * @param option 這次的 Bet Size／Bet Level。
          * @param buy 買入免費遊戲。
          * @returns 這一轉的所有步驟。
          */;
+
         _proto.playSpin = /*#__PURE__*/
         function () {
-          var _playSpin = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12(option, buy) {
-            var _this$entry2, _this$lastStep$sid, _this$lastStep;
-            var buyId, request, first;
-            return _regeneratorRuntime().wrap(function _callee12$(_context13) {
-              while (1) switch (_context13.prev = _context13.next) {
+          var _playSpin = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee14(option, buy) {
+            var _this$entry3, _last$sid;
+            var last, buyId, request;
+            return _regeneratorRuntime().wrap(function _callee14$(_context15) {
+              while (1) switch (_context15.prev = _context15.next) {
                 case 0:
-                  buyId = (_this$entry2 = this.entry) == null || (_this$entry2 = _this$entry2.buy) == null || (_this$entry2 = _this$entry2[0]) == null ? void 0 : _this$entry2.id;
+                  last = this.lastStep; // 上一轉連消沒打完（進場時停在一半）規格要用本局的 cs ml 接著打 不開新局 也不能帶 bt
+                  if (!(last && BASE_UNFINISHED_STATES.has(last.nst))) {
+                    _context15.next = 8;
+                    break;
+                  }
+                  console.log("[HttpClientStore] \u63A5\u8457\u6253\u4E0A\u4E00\u8F49 ls.nst=" + last.nst);
+                  _context15.t0 = this;
+                  _context15.next = 6;
+                  return this.betStep({
+                    id: last.sid,
+                    cs: last.cs,
+                    ml: last.ml
+                  });
+                case 6:
+                  _context15.t1 = _context15.sent;
+                  return _context15.abrupt("return", _context15.t0.drainSpin.call(_context15.t0, _context15.t1));
+                case 8:
+                  buyId = (_this$entry3 = this.entry) == null || (_this$entry3 = _this$entry3.buy) == null || (_this$entry3 = _this$entry3[0]) == null ? void 0 : _this$entry3.id;
                   if (!(buy && !buyId)) {
-                    _context13.next = 3;
+                    _context15.next = 11;
                     break;
                   }
                   throw new Error('這款遊戲目前不開放買入（buy 為空）');
-                case 3:
+                case 11:
                   this.freeAccumulated = 0;
                   request = _extends({
-                    id: (_this$lastStep$sid = (_this$lastStep = this.lastStep) == null ? void 0 : _this$lastStep.sid) != null ? _this$lastStep$sid : '',
+                    id: (_last$sid = last == null ? void 0 : last.sid) != null ? _last$sid : '',
                     cs: option.size,
                     ml: option.level
                   }, buy ? {
                     bt: buyId
                   } : {});
-                  _context13.prev = 5;
-                  _context13.next = 8;
+                  _context15.t2 = this;
+                  _context15.next = 16;
                   return this.betStep(request);
-                case 8:
-                  first = _context13.sent;
-                  _context13.next = 18;
-                  break;
-                case 11:
-                  _context13.prev = 11;
-                  _context13.t0 = _context13["catch"](5);
-                  if (!(!(_context13.t0 instanceof SlotApiHttpError) || _context13.t0.code !== SLOT_API_CODE.NOT_LATEST_STEP || _context13.t0.latestStepId === undefined)) {
-                    _context13.next = 15;
-                    break;
-                  }
-                  throw _context13.t0;
-                case 15:
-                  _context13.next = 17;
-                  return this.betStep(_extends({}, request, {
-                    id: _context13.t0.latestStepId
-                  }));
-                case 17:
-                  first = _context13.sent;
+                case 16:
+                  _context15.t3 = _context15.sent;
+                  return _context15.abrupt("return", _context15.t2.drainSpin.call(_context15.t2, _context15.t3));
                 case 18:
-                  return _context13.abrupt("return", this.drainSpin(first));
-                case 19:
                 case "end":
-                  return _context13.stop();
+                  return _context15.stop();
               }
-            }, _callee12, this, [[5, 11]]);
+            }, _callee14, this);
           }));
           function playSpin(_x4, _x5) {
             return _playSpin.apply(this, arguments);
@@ -14181,48 +14636,48 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
 
         _proto.drainSpin = /*#__PURE__*/
         function () {
-          var _drainSpin = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee13(first) {
+          var _drainSpin = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15(first) {
             var steps, step;
-            return _regeneratorRuntime().wrap(function _callee13$(_context14) {
-              while (1) switch (_context14.prev = _context14.next) {
+            return _regeneratorRuntime().wrap(function _callee15$(_context16) {
+              while (1) switch (_context16.prev = _context16.next) {
                 case 0:
                   steps = [first];
                   step = first;
                 case 2:
                   if (!TUMBLE_STATES.has(step.nst)) {
-                    _context14.next = 11;
+                    _context16.next = 11;
                     break;
                   }
                   if (!(steps.length >= MAX_STEPS_PER_SPIN)) {
-                    _context14.next = 5;
+                    _context16.next = 5;
                     break;
                   }
                   throw new Error("\u4E00\u8F49\u8D85\u904E " + MAX_STEPS_PER_SPIN + " \u6B65\uFF0C\u4E2D\u6B62");
                 case 5:
-                  _context14.next = 7;
+                  _context16.next = 7;
                   return this.betStep({
                     id: step.sid,
                     cs: step.cs,
                     ml: step.ml
                   });
                 case 7:
-                  step = _context14.sent;
+                  step = _context16.sent;
                   steps.push(step);
-                  _context14.next = 2;
+                  _context16.next = 2;
                   break;
                 case 11:
                   if (!(step.nst === STEP_STATE.SELECT)) {
-                    _context14.next = 13;
+                    _context16.next = 13;
                     break;
                   }
                   throw new Error('荷魯斯之眼沒有選玩法，後端卻要求 select');
                 case 13:
-                  return _context14.abrupt("return", steps);
+                  return _context16.abrupt("return", steps);
                 case 14:
                 case "end":
-                  return _context14.stop();
+                  return _context16.stop();
               }
-            }, _callee13, this);
+            }, _callee15, this);
           }));
           function drainSpin(_x6) {
             return _drainSpin.apply(this, arguments);
@@ -14230,7 +14685,7 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
           return drainSpin;
         }()
         /**
-         * 打一次 bet 並記下這一步，下一個請求的 `id` 用它的 `sid`。
+         * 打一次 bet 並記下這一步，下一個請求的 `id` 用它的 `sid`。回 4023 時改用 `latest_step_id` 重打一次。
          *
          * @param request 下注請求。
          * @returns 這一步。
@@ -14238,22 +14693,41 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
 
         _proto.betStep = /*#__PURE__*/
         function () {
-          var _betStep = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee14(request) {
+          var _betStep = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16(request) {
             var step;
-            return _regeneratorRuntime().wrap(function _callee14$(_context15) {
-              while (1) switch (_context15.prev = _context15.next) {
+            return _regeneratorRuntime().wrap(function _callee16$(_context17) {
+              while (1) switch (_context17.prev = _context17.next) {
                 case 0:
-                  _context15.next = 2;
+                  _context17.prev = 0;
+                  _context17.next = 3;
                   return this.requireClient().bet(request);
-                case 2:
-                  step = _context15.sent;
+                case 3:
+                  step = _context17.sent;
+                  _context17.next = 13;
+                  break;
+                case 6:
+                  _context17.prev = 6;
+                  _context17.t0 = _context17["catch"](0);
+                  if (!(!(_context17.t0 instanceof SlotApiHttpError) || _context17.t0.code !== SLOT_API_CODE.NOT_LATEST_STEP || _context17.t0.latestStepId === undefined)) {
+                    _context17.next = 10;
+                    break;
+                  }
+                  throw _context17.t0;
+                case 10:
+                  _context17.next = 12;
+                  return this.requireClient().bet(_extends({}, request, {
+                    id: _context17.t0.latestStepId
+                  }));
+                case 12:
+                  step = _context17.sent;
+                case 13:
                   this.lastStep = step;
-                  return _context15.abrupt("return", step);
-                case 5:
+                  return _context17.abrupt("return", step);
+                case 15:
                 case "end":
-                  return _context15.stop();
+                  return _context17.stop();
               }
-            }, _callee14, this);
+            }, _callee16, this, [[0, 6]]);
           }));
           function betStep(_x7) {
             return _betStep.apply(this, arguments);
@@ -14273,31 +14747,28 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
         }
 
         /**
-         * 依 entry 的 `lg` 切換語言：商戶原樣轉交、不驗證，只認 en 與 zh-TW（對應現有的 zh-HK 繁體語系檔），
-         * 空字串或其他值維持目前語言。
+         * 依 entry 的 `lg` 切換語言：商戶原樣轉交、不驗證，有對應語系檔才切，空字串或沒有的語言維持目前語言。
          *
          * @param language entry 的 `lg`。
          * @returns 切換完成之後 resolve。
          */;
         _proto.applyLanguage = /*#__PURE__*/
         function () {
-          var _applyLanguage = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15(language) {
-            var mapped;
-            return _regeneratorRuntime().wrap(function _callee15$(_context16) {
-              while (1) switch (_context16.prev = _context16.next) {
+          var _applyLanguage = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee17(language) {
+            return _regeneratorRuntime().wrap(function _callee17$(_context18) {
+              while (1) switch (_context18.prev = _context18.next) {
                 case 0:
-                  mapped = language === 'en' ? 'en' : language === 'zh-TW' ? 'zh-HK' : '';
-                  if (!mapped) {
-                    _context16.next = 4;
+                  if (!(language && isSupportedLanguage(language))) {
+                    _context18.next = 3;
                     break;
                   }
-                  _context16.next = 4;
-                  return switchLanguage(mapped, GameConfigManager.GAMEID);
-                case 4:
+                  _context18.next = 3;
+                  return switchLanguage(language, GameConfigManager.GAMEID);
+                case 3:
                 case "end":
-                  return _context16.stop();
+                  return _context18.stop();
               }
-            }, _callee15);
+            }, _callee17);
           }));
           function applyLanguage(_x8) {
             return _applyLanguage.apply(this, arguments);
@@ -14312,14 +14783,16 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
 
         _proto.reenter = function reenter() {
           var _this$reentering,
-            _this3 = this;
+            _this5 = this;
+          // 被踢或 token 失效之後不再打 entry
+          if (this.sessionEnded) return Promise.resolve();
           (_this$reentering = this.reentering) != null ? _this$reentering : this.reentering = this.enter().then(function (entry) {
-            return _this3.storeManager.getUserStore().setBalance(Number(entry.ls.bl || entry.bl) || 0);
+            return _this5.storeManager.getUserStore().setBalance(Number(entry.ls.bl || entry.bl) || 0);
           })["catch"](function (error) {
             console.warn('[HttpClientStore] 重打 entry 失敗', Logger.fmt(error));
-            _this3.showError(error);
+            _this5.showError(error);
           })["finally"](function () {
-            return _this3.reentering = null;
+            return _this5.reentering = null;
           });
           return this.reentering;
         }
@@ -14346,44 +14819,48 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
          * @param error 請求丟出的錯誤。
          */;
         _proto.warnNotHandled = function warnNotHandled(error) {
-          if (error.code === SLOT_API_CODE.MAINTENANCE) {
-            console.warn('[錯誤處理未實作] 4503 維護中 規格要稍後用同一把 token 重打 entry 且不回大廳 目前只顯示提示 沒有重試');
-          } else if (error.code === SLOT_API_CODE.LIMIT_OR_FROZEN) {
-            console.warn('[錯誤處理未實作] 4013 下注額不可用或風控凍結 規格要求續打時不可換 Bet Size 與 Bet Level 目前只顯示提示 沒有鎖定下注選擇');
-          } else if (error.code === SLOT_API_CODE.RATE_LIMITED || error.httpStatus === 429) {
-            console.warn('[錯誤處理未實作] 429 請求過於頻繁 請求層已依 Retry-After 重送過仍失敗 目前只顯示提示 沒有再退避');
-          } else if (error.code === SLOT_API_CODE.INSUFFICIENT_BALANCE) {
+          if (error.code === SLOT_API_CODE.INSUFFICIENT_BALANCE) {
             console.warn('[錯誤處理未實作] 4014 餘額不足 試玩帳號規格要呼叫 POST /player/demo/reset 目前只顯示儲值提示 沒有重設');
           }
         }
 
         /**
-         * 跳錯誤提示：餘額不足沿用儲值提示；語言檔有該錯誤碼就用語系文字；4016 帶客服單號；其他照錯誤碼與說明。
+         * 跳錯誤提示：要回大廳的錯誤碼結束這把 token；餘額不足沿用儲值提示；其他照 {@link errorMessageOf}。會彈提示就停掉自動旋轉。
          *
          * @param error 請求丟出的錯誤。
          */;
         _proto.showError = function showError(error) {
+          // 已經結束 只留結束提示
+          if (this.sessionEnded) return;
+          if (error instanceof SlotApiHttpError && LOBBY_CODES.has(error.code)) {
+            this.endSession(error);
+            return;
+          }
+          this.stopAutoSpin();
           var viewStore = this.storeManager.getViewStore();
           if (error instanceof SlotApiHttpError) this.warnNotHandled(error);
           if (error instanceof SlotApiHttpError && error.code === SLOT_API_CODE.INSUFFICIENT_BALANCE) {
             viewStore.showStoreAlertView('', getLocalizedString('1102'));
             return;
           }
-          if (error instanceof SlotApiHttpError && error.code) {
-            // 語言檔有這個錯誤碼的 key 就用語系文字
-            var key = String(error.code);
-            var localized = getLocalizedString(key);
-            if (localized !== key) {
-              viewStore.showAlertView(key, localized);
-              return;
-            }
-          }
           if (error instanceof SlotApiHttpError) {
-            var message = error.supportRef ? error.message + " (" + error.supportRef + ")" : error.message;
-            viewStore.showAlertView(String(error.code || error.httpStatus || error.kind), message);
+            viewStore.showAlertView(String(error.code || error.httpStatus || error.kind), this.errorMessageOf(error));
             return;
           }
           viewStore.showAlertView('Error', error instanceof Error ? error.message : String(error));
+        }
+
+        /**
+         * 錯誤提示的文字：語系檔有這個錯誤碼就用語系文字 沒有用後端的說明 有客服單號接在後面。
+         *
+         * @param error 請求丟出的錯誤。
+         * @returns 要顯示的文字。
+         */;
+        _proto.errorMessageOf = function errorMessageOf(error) {
+          var key = String(error.code);
+          var localized = error.code ? getLocalizedString(key) : key;
+          var message = error.code && localized !== key ? localized : error.message;
+          return error.supportRef ? message + " (" + error.supportRef + ")" : message;
         }
 
         /**
@@ -14405,20 +14882,20 @@ System.register("bundle://1001/_virtual/HttpClientStore.ts", ['./rollupPluginMod
          */;
         _proto.switchToMock = /*#__PURE__*/
         function () {
-          var _switchToMock = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16(reason) {
-            return _regeneratorRuntime().wrap(function _callee16$(_context17) {
-              while (1) switch (_context17.prev = _context17.next) {
+          var _switchToMock = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee18(reason) {
+            return _regeneratorRuntime().wrap(function _callee18$(_context19) {
+              while (1) switch (_context19.prev = _context19.next) {
                 case 0:
                   console.warn('[HttpClientStore] 切換為模擬模式', Logger.fmt(reason));
                   this.mockTriggered = true;
                   this.mockMode = true;
-                  _context17.next = 5;
+                  _context19.next = 5;
                   return startGameMock();
                 case 5:
                 case "end":
-                  return _context17.stop();
+                  return _context19.stop();
               }
-            }, _callee16, this);
+            }, _callee18, this);
           }));
           function switchToMock(_x9) {
             return _switchToMock.apply(this, arguments);
@@ -15045,6 +15522,7 @@ System.register("bundle://1001/_virtual/LanguageData.ts", ['./rollupPluginModLoB
         getLocalizedString: getLocalizedString,
         getLocalizedStringForLanguage: getLocalizedStringForLanguage,
         i18nInit: i18nInit,
+        isSupportedLanguage: isSupportedLanguage,
         loadFixedLanguage: loadFixedLanguage,
         resolveLanguageCode: resolveLanguageCode,
         resolveTemplateStrings: resolveTemplateStrings,
@@ -15297,6 +15775,17 @@ System.register("bundle://1001/_virtual/LanguageData.ts", ['./rollupPluginModLoB
         var _LANGUAGE_MAP;
         var normalized = normalizeLocale(locale);
         return (_LANGUAGE_MAP = LANGUAGE_MAP[normalized]) != null ? _LANGUAGE_MAP : Object.values(LANGUAGE_MAP).includes(normalized) ? normalized : defaultLanguage;
+      }
+
+      /**
+       * 有沒有這個語言的語系檔
+       *
+       * @param locale 語言碼 可帶地區 例如 zh-TW en-US th
+       * @returns 有對應語系檔為 true
+       */
+      function isSupportedLanguage(locale) {
+        var normalized = normalizeLocale(locale);
+        return normalized in LANGUAGE_MAP || Object.values(LANGUAGE_MAP).includes(normalized);
       }
       var languageCodeList = Object.values(LANGUAGE_MAP);
       var defaultLanguage = exports('defaultLanguage', languageCodeList[0]);
@@ -16145,7 +16634,7 @@ System.register("bundle://1001/_virtual/mock-shared.ts", ['cc'], function (expor
   };
 });
 
-System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameConfigManager.ts', './SubGameData.ts'], function (exports) {
+System.register("bundle://1001/_virtual/NativeBundleUpdater.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameConfigManager.ts', './SubGameBridge.ts'], function (exports) {
   var _inheritsLoose, _createClass, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, native, sys, game, Component, GameConfigManager, getSubGameData;
   return {
     setters: [function (module) {
@@ -22301,6 +22790,7 @@ System.register("bundle://1001/_virtual/slot-api-mock.ts", ['./rollupPluginModLo
     }],
     execute: function () {
       exports({
+        currentMockJackpotPools: currentMockJackpotPools,
         installSlotApiHttpMock: installSlotApiHttpMock,
         uninstallSlotApiHttpMock: uninstallSlotApiHttpMock
       });
@@ -22543,7 +23033,7 @@ System.register("bundle://1001/_virtual/slot-api-mock.ts", ['./rollupPluginModLo
                   cd: cd,
                   bl: formatMinor(state.balanceMinor),
                   lg: '',
-                  ws: '',
+                  ws: MOCK_API_BASE_URL.replace(/^http/, 'ws') + "/ws",
                   lb: '',
                   ca: '',
                   bb: engine.baseBet,
@@ -22693,11 +23183,13 @@ System.register("bundle://1001/_virtual/slot-api-mock.ts", ['./rollupPluginModLo
                 return _context3.abrupt("return", fail(SLOT_API_CODE.INSUFFICIENT_BALANCE, 'bet rejected by merchant'));
               case 41:
                 state.balanceMinor -= chargedMinor;
+                // 開一局獎池水位往上加一點 推播只在水位有變時才推
+                state.jackpotTicks++;
                 state.round = buildRound(engine.makeRound({
                   buy: !!buyOption
                 }), body.id, listedCs, ml, baseMinor, chargedMinor, buyOption == null ? void 0 : buyOption.id);
                 return _context3.abrupt("return", ok(deliverNext(state.round)));
-              case 44:
+              case 45:
               case "end":
                 return _context3.stop();
             }
@@ -22875,11 +23367,9 @@ System.register("bundle://1001/_virtual/slot-api-mock.ts", ['./rollupPluginModLo
         return _handleJackpots.apply(this, arguments);
       }
       /**
-       * 一步的步驟狀態代碼（規格 §4.5）。
+       * 四層獎池目前的水位，HTTP 查詢與 WebSocket 推播共用。水位由 `jackpotTicks` 決定：每查一次、每開一局往上加一點。
        *
-       * @param free 是不是免費遊戲。
-       * @param boardIndex 這一轉的第幾張盤面（0 是第一步）。
-       * @returns 主遊戲 1／4，免費遊戲 21／22。
+       * @returns 各層獎池。
        */
       function _handleJackpots() {
         _handleJackpots = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
@@ -22891,15 +23381,11 @@ System.register("bundle://1001/_virtual/slot-api-mock.ts", ['./rollupPluginModLo
                 return latency();
               case 2:
                 state.jackpotTicks++;
-                pools = JACKPOT_SEED.map(function (seed, index) {
-                  return {
-                    pool_id: "mock-pool-" + (index + 1),
-                    current_value: (seed + state.jackpotTicks * (index + 1) * 0.37).toFixed(limit().cd),
-                    currency: state.currency,
-                    tier: index + 1,
+                pools = currentMockJackpotPools().map(function (pool) {
+                  return _extends({}, pool, {
                     pricing_mode: 'POOL_VALUE',
                     reference_bet: formatMinor(toMinor(limit().cs[limit().cs.length - 1], limit().cd) * resolveMockEngine().baseBet)
-                  };
+                  });
                 });
                 return _context4.abrupt("return", ok({
                   pools: pools
@@ -22912,6 +23398,24 @@ System.register("bundle://1001/_virtual/slot-api-mock.ts", ['./rollupPluginModLo
         }));
         return _handleJackpots.apply(this, arguments);
       }
+      function currentMockJackpotPools() {
+        return JACKPOT_SEED.map(function (seed, index) {
+          return {
+            pool_id: "mock-pool-" + (index + 1),
+            tier: index + 1,
+            current_value: (seed + state.jackpotTicks * (index + 1) * 0.37).toFixed(limit().cd),
+            currency: state.currency
+          };
+        });
+      }
+
+      /**
+       * 一步的步驟狀態代碼（規格 §4.5）。
+       *
+       * @param free 是不是免費遊戲。
+       * @param boardIndex 這一轉的第幾張盤面（0 是第一步）。
+       * @returns 主遊戲 1／4，免費遊戲 21／22。
+       */
       function stateOf(free, boardIndex) {
         if (free) return boardIndex === 0 ? STEP_STATE.FREE_SPIN : STEP_STATE.FREE_TUMBLE;
         return boardIndex === 0 ? STEP_STATE.BASE_SPIN : STEP_STATE.BASE_TUMBLE;
@@ -23039,6 +23543,270 @@ System.register("bundle://1001/_virtual/slot-api-mock.ts", ['./rollupPluginModLo
   };
 });
 
+System.register("bundle://1001/_virtual/slot-push-mock.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './slot-api-mock.ts'], function (exports) {
+  var _createForOfIteratorHelperLoose, _extends, cclegacy, currentMockJackpotPools;
+  return {
+    setters: [function (module) {
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+      _extends = module.extends;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      currentMockJackpotPools = module.currentMockJackpotPools;
+    }],
+    execute: function () {
+      exports({
+        installSlotApiWebSocketMock: installSlotApiWebSocketMock,
+        mockPushExpiring: mockPushExpiring,
+        mockPushKick: mockPushKick,
+        mockPushRestart: mockPushRestart,
+        uninstallSlotApiWebSocketMock: uninstallSlotApiWebSocketMock
+      });
+      cclegacy._RF.push({}, "104198yjZpJOLTXycJCQCqP", "slot-push-mock", undefined);
+      // 彩池每 5 秒檢查一次 只推跟上次推給這條連線不同的池
+      var JACKPOT_PUSH_MS = 5000;
+
+      // 原生的 WebSocket
+      var NativeWebSocket = null;
+      // 本 bundle 的 WebSocket 代理 只建一次
+      var webSocketProxy = null;
+      // 裝代理前全域的 WebSocket 卸載時換回它
+      var replacedWebSocket = null;
+      // 目前連著的替身 除錯面板用來模擬踢人 快到期 重啟
+      var liveSockets = new Set();
+      var SlotApiMockWebSocket = /*#__PURE__*/function () {
+        function SlotApiMockWebSocket(url) {
+          var _this = this;
+          this.CONNECTING = 0;
+          this.OPEN = 1;
+          this.CLOSING = 2;
+          this.CLOSED = 3;
+          this.binaryType = 'blob';
+          this.bufferedAmount = 0;
+          this.extensions = '';
+          this.protocol = '';
+          this.readyState = SlotApiMockWebSocket.CONNECTING;
+          this.onopen = null;
+          this.onmessage = null;
+          this.onerror = null;
+          this.onclose = null;
+          this.listeners = {};
+          this.jackpotTimer = null;
+          // 本連線序號 從 1 開始
+          this.seq = 0;
+          // 各層上次推給這條連線的金額
+          this.pushedAmounts = new Map();
+          this.url = url;
+          liveSockets.add(this);
+          setTimeout(function () {
+            if (_this.readyState !== SlotApiMockWebSocket.CONNECTING) return;
+            _this.readyState = SlotApiMockWebSocket.OPEN;
+            _this.emit('open', {
+              target: _this
+            });
+            // 連上後第一次推全部的池 之後每 5 秒只推有變的
+            _this.pushJackpots();
+            _this.jackpotTimer = setInterval(function () {
+              return _this.pushJackpots();
+            }, JACKPOT_PUSH_MS);
+          }, 0);
+        }
+        var _proto = SlotApiMockWebSocket.prototype;
+        _proto.send = function send(data) {
+          if (this.readyState !== SlotApiMockWebSocket.OPEN) throw new Error('websocket is not open');
+          try {
+            var _JSON$parse;
+            if (((_JSON$parse = JSON.parse(data)) == null ? void 0 : _JSON$parse.type) === 'ping') this.push('pong');
+          } catch (_unused) {
+            // 不是 JSON 的當作沒收到
+          }
+        };
+        _proto.close = function close(code, reason) {
+          var _this2 = this;
+          if (code === void 0) {
+            code = 1000;
+          }
+          if (reason === void 0) {
+            reason = '';
+          }
+          if (this.readyState === SlotApiMockWebSocket.CLOSED || this.readyState === SlotApiMockWebSocket.CLOSING) return;
+          this.readyState = SlotApiMockWebSocket.CLOSING;
+          if (this.jackpotTimer !== null) {
+            clearInterval(this.jackpotTimer);
+            this.jackpotTimer = null;
+          }
+          liveSockets["delete"](this);
+          setTimeout(function () {
+            _this2.readyState = SlotApiMockWebSocket.CLOSED;
+            _this2.emit('close', {
+              code: code,
+              reason: reason,
+              wasClean: true,
+              target: _this2
+            });
+          }, 0);
+        };
+        _proto.addEventListener = function addEventListener(type, listener, _options) {
+          var _this$listeners, _this$listeners$type;
+          ((_this$listeners$type = (_this$listeners = this.listeners)[type]) != null ? _this$listeners$type : _this$listeners[type] = new Set()).add(listener);
+        };
+        _proto.removeEventListener = function removeEventListener(type, listener, _options) {
+          var _this$listeners$type2;
+          (_this$listeners$type2 = this.listeners[type]) == null || _this$listeners$type2["delete"](listener);
+        };
+        _proto.dispatchEvent = function dispatchEvent(event) {
+          this.emit(event.type, event);
+          return true;
+        }
+
+        // 送一個伺服器訊框 type seq ts 恆在 data 只有部分訊息有
+        ;
+
+        _proto.push = function push(type, data) {
+          if (this.readyState !== SlotApiMockWebSocket.OPEN) return;
+          this.seq += 1;
+          this.emit('message', {
+            data: JSON.stringify(_extends({
+              type: type,
+              seq: this.seq,
+              ts: Date.now()
+            }, data === undefined ? {} : {
+              data: data
+            })),
+            target: this
+          });
+        };
+        _proto.pushJackpots = function pushJackpots() {
+          var _this3 = this;
+          var changed = currentMockJackpotPools().filter(function (pool) {
+            return _this3.pushedAmounts.get(pool.tier) !== pool.current_value;
+          });
+          if (changed.length === 0) return;
+          for (var _iterator = _createForOfIteratorHelperLoose(changed), _step; !(_step = _iterator()).done;) {
+            var pool = _step.value;
+            this.pushedAmounts.set(pool.tier, pool.current_value);
+          }
+          this.push('jackpot.updated', {
+            pools: changed
+          });
+        };
+        _proto.emit = function emit(type, event) {
+          event.type = type;
+          event.currentTarget = this;
+          var handler = this["on" + type];
+          handler == null || handler.call(this, event);
+          // Array.from
+          for (var _i = 0, _Array$from = Array.from((_this$listeners$type3 = this.listeners[type]) != null ? _this$listeners$type3 : []); _i < _Array$from.length; _i++) {
+            var _this$listeners$type3;
+            var listener = _Array$from[_i];
+            listener.call(this, event);
+          }
+        };
+        return SlotApiMockWebSocket;
+      }();
+      SlotApiMockWebSocket.CONNECTING = 0;
+      SlotApiMockWebSocket.OPEN = 1;
+      SlotApiMockWebSocket.CLOSING = 2;
+      SlotApiMockWebSocket.CLOSED = 3;
+      function shouldUseSlotApiMock(url) {
+        var rawUrl = String(url);
+        try {
+          var base = typeof globalThis.location === 'undefined' ? 'ws://localhost' : globalThis.location.href.replace(/^http/, 'ws');
+          var parsed = new URL(rawUrl, base);
+          return parsed.pathname === '/ws' || parsed.pathname.endsWith('/ws');
+        } catch (_unused2) {
+          return rawUrl.includes('/ws');
+        }
+      }
+
+      /**
+       * 從目前全域的 WebSocket 找出原生的那一支
+       *
+       * @param current 目前全域的 WebSocket
+       * @returns 原生的 WebSocket
+       */
+      function resolveNativeWebSocket(current) {
+        var _current$prototype;
+        var ctor = current == null || (_current$prototype = current.prototype) == null ? void 0 : _current$prototype.constructor;
+        return typeof ctor === 'function' && ctor.prototype === current.prototype ? ctor : current;
+      }
+
+      /**
+       * 建立 WebSocket 代理 `/ws` 連線接假後端 其他連線交給原生的
+       *
+       * @param nativeWebSocket 原生的 WebSocket
+       * @returns 可以放到 `globalThis.WebSocket` 的代理建構函式
+       */
+      function createWebSocketProxy(nativeWebSocket) {
+        var proxy = function proxy(url, protocols) {
+          if (shouldUseSlotApiMock(url)) return new SlotApiMockWebSocket(String(url));
+          return protocols === undefined ? new nativeWebSocket(url) : new nativeWebSocket(url, protocols);
+        };
+        proxy.prototype = nativeWebSocket.prototype;
+        proxy.CONNECTING = nativeWebSocket.CONNECTING;
+        proxy.OPEN = nativeWebSocket.OPEN;
+        proxy.CLOSING = nativeWebSocket.CLOSING;
+        proxy.CLOSED = nativeWebSocket.CLOSED;
+        return proxy;
+      }
+
+      /**
+       * 把全域的 WebSocket 換成本 bundle 的代理 看全域是不是自己的代理 不看模組旗標
+       */
+      function installSlotApiWebSocketMock() {
+        var _NativeWebSocket, _webSocketProxy;
+        var current = globalThis.WebSocket;
+        if (typeof current === 'undefined' || current === webSocketProxy) return;
+        (_NativeWebSocket = NativeWebSocket) != null ? _NativeWebSocket : NativeWebSocket = resolveNativeWebSocket(current);
+        (_webSocketProxy = webSocketProxy) != null ? _webSocketProxy : webSocketProxy = createWebSocketProxy(NativeWebSocket);
+        replacedWebSocket = current;
+        globalThis.WebSocket = webSocketProxy;
+      }
+
+      /**
+       * 離開遊戲時把全域的 WebSocket 換回裝代理之前的那一支 全域已不是自己的代理就不動
+       */
+      function uninstallSlotApiWebSocketMock() {
+        if (!webSocketProxy || globalThis.WebSocket !== webSocketProxy) return;
+        globalThis.WebSocket = replacedWebSocket;
+        replacedWebSocket = null;
+      }
+
+      /**
+       * 模擬伺服器踢人：先送 session.kicked 再關線 close code 是 1000。
+       */
+      function mockPushKick() {
+        for (var _i2 = 0, _Array$from2 = Array.from(liveSockets); _i2 < _Array$from2.length; _i2++) {
+          var socket = _Array$from2[_i2];
+          socket.push('session.kicked');
+          socket.close(1000);
+        }
+      }
+
+      /**
+       * 模擬 session 剩不到 5 分鐘。
+       */
+      function mockPushExpiring() {
+        for (var _iterator2 = _createForOfIteratorHelperLoose(liveSockets), _step2; !(_step2 = _iterator2()).done;) {
+          var socket = _step2.value;
+          socket.push('session.expiring');
+        }
+      }
+
+      /**
+       * 模擬伺服器重啟或關機：直接關線 close code 是 1001 沒有訊框。
+       */
+      function mockPushRestart() {
+        for (var _i3 = 0, _Array$from3 = Array.from(liveSockets); _i3 < _Array$from3.length; _i3++) {
+          var socket = _Array$from3[_i3];
+          socket.close(1001);
+        }
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("bundle://1001/_virtual/SlotApiClient.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './SlotApiTypes.ts', './RestClient.ts'], function (exports) {
   var _asyncToGenerator, _regeneratorRuntime, cclegacy, SLOT_API_CODE, SlotApiHttpError, RestClient, RestClientError;
   return {
@@ -23065,7 +23833,7 @@ System.register("bundle://1001/_virtual/SlotApiClient.ts", ['./rollupPluginModLo
        *
        * 玩家端 API v8.1（slot-integration.md §5）的 HTTP 呼叫：entry、bet、jackpots、history。每個請求都帶
        * `Authorization: Bearer <t>`；回應解開信封後原樣交給呼叫端，轉成前端模型在 SlotRoundMapper。
-       * WebSocket 只有推播（§6），這款還沒接。
+       * WebSocket 只有推播（§6），在 SlotWebSocketClient。
        */
       var SlotApiClient = exports('SlotApiClient', /*#__PURE__*/function () {
         /**
@@ -23479,6 +24247,76 @@ System.register("bundle://1001/_virtual/SlotApiClient.ts", ['./rollupPluginModLo
   };
 });
 
+System.register("bundle://1001/_virtual/SlotApiHandlers.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameNetHandler.ts'], function (exports) {
+  var _inheritsLoose, cclegacy, GameNetHandler;
+  return {
+    setters: [function (module) {
+      _inheritsLoose = module.inheritsLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      GameNetHandler = module.GameNetHandler;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "b10d7rHB+tBm4hj2MGZqYQ7", "SlotApiHandlers", undefined);
+
+      // jackpot.updated 的 data 每項是一個池 只推有變的
+
+      // 彩池金額變了
+      var JackpotUpdatedHandler = exports('JackpotUpdatedHandler', /*#__PURE__*/function (_GameNetHandler) {
+        _inheritsLoose(JackpotUpdatedHandler, _GameNetHandler);
+        function JackpotUpdatedHandler(onUpdated) {
+          var _this;
+          _this = _GameNetHandler.call(this) || this;
+          _this.key = 'jackpot.updated';
+          _this.onUpdated = onUpdated;
+          return _this;
+        }
+        var _proto = JackpotUpdatedHandler.prototype;
+        _proto.handle = function handle(payload) {
+          if (payload && Array.isArray(payload.pools)) this.onUpdated(payload);
+        };
+        return JackpotUpdatedHandler;
+      }(GameNetHandler));
+
+      // 同玩家同遊戲在別處進場 或商戶關閉了 session
+      var SessionKickedHandler = exports('SessionKickedHandler', /*#__PURE__*/function (_GameNetHandler2) {
+        _inheritsLoose(SessionKickedHandler, _GameNetHandler2);
+        function SessionKickedHandler(onKicked) {
+          var _this2;
+          _this2 = _GameNetHandler2.call(this) || this;
+          _this2.key = 'session.kicked';
+          _this2.onKicked = onKicked;
+          return _this2;
+        }
+        var _proto2 = SessionKickedHandler.prototype;
+        _proto2.handle = function handle() {
+          this.onKicked();
+        };
+        return SessionKickedHandler;
+      }(GameNetHandler));
+
+      // session 剩不到 5 分鐘
+      var SessionExpiringHandler = exports('SessionExpiringHandler', /*#__PURE__*/function (_GameNetHandler3) {
+        _inheritsLoose(SessionExpiringHandler, _GameNetHandler3);
+        function SessionExpiringHandler(onExpiring) {
+          var _this3;
+          _this3 = _GameNetHandler3.call(this) || this;
+          _this3.key = 'session.expiring';
+          _this3.onExpiring = onExpiring;
+          return _this3;
+        }
+        var _proto3 = SessionExpiringHandler.prototype;
+        _proto3.handle = function handle() {
+          this.onExpiring();
+        };
+        return SessionExpiringHandler;
+      }(GameNetHandler));
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("bundle://1001/_virtual/SlotApiTypes.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _inheritsLoose, _wrapNativeSuper, cclegacy;
   return {
@@ -23502,8 +24340,16 @@ System.register("bundle://1001/_virtual/SlotApiTypes.ts", ['./rollupPluginModLoB
       /** 前端會分流處理的錯誤碼（規格附錄 A） */
       var SLOT_API_CODE = exports('SLOT_API_CODE', {
         OK: 0,
+        // 線路不存在或停用
+        LINE_CLOSED: 4001,
+        // 玩家不存在
+        PLAYER_NOT_FOUND: 4002,
+        // 遊戲未授權給線路
+        GAME_NOT_ALLOWED: 4003,
         NOT_FOUND: 4004,
         BAD_REQUEST: 4005,
+        // 幣別不符
+        CURRENCY_MISMATCH: 4010,
         TOKEN_REJECTED: 4011,
         LIMIT_OR_FROZEN: 4013,
         INSUFFICIENT_BALANCE: 4014,
@@ -24156,10 +25002,11 @@ System.register("bundle://1001/_virtual/SlotGameMain.ts", ['./rollupPluginModLoB
 
         /** public：供 Net/SpinResultHandler 呼叫 */;
         _proto.applyGameModeUi = function applyGameModeUi(fg) {
+          var _this3 = this;
           this.forEachView(function (v) {
             // v.buySuperBtn.node.active = !fg && !this.isGameLayerBuyHidden(v);
             // 直版也改回用遊戲層的購買鈕
-            v.buySuperBtn.node.active = !fg;
+            v.buySuperBtn.node.active = !fg && _this3.storeManager.getGameStore().buyFeatureAvailable;
           });
         }
 
@@ -24417,11 +25264,28 @@ System.register("bundle://1001/_virtual/SlotGameStore.ts", ['./rollupPluginModLo
           this._buyFeatureConfirm = null;
           this._buyFeatureCancel = null;
           this._buyFeatureClosed = null;
+          // 金額顯示幾位小數 進場後照 entry 的 cd
+          this._amountDecimals = 2;
+          // 能不能購買免費遊戲 entry 沒有 buy 或後端回 4019 時關掉
+          this._buyFeatureAvailable = true;
         }
-        /** 檢查餘額 */
+        _proto.setAmountDecimals = function setAmountDecimals(decimals) {
+          if (Number.isInteger(decimals) && decimals >= 0) this._amountDecimals = decimals;
+        };
+        _proto.setBuyFeatureAvailable = function setBuyFeatureAvailable(available) {
+          if (this._buyFeatureAvailable === available) return;
+          this._buyFeatureAvailable = available;
+          gameRuntimeEventBus.emit(GAME_EVENT_TYPE.BUY_FEATURE_AVAILABLE_CHANGED, {
+            eventId: GAME_EVENT_ID.BUY_FEATURE_AVAILABLE_CHANGED,
+            available: available
+          });
+        }
+
+        /** 檢查能不能開這一轉：token 已失效或餘額不夠時擋下 */;
         _proto.spinCheck = function spinCheck() {
           var kystore = AppStore.getCurrent();
           console.log('spinCheck');
+          if (!kystore.getModel('store/HttpClientStore').canSpin()) return false;
           if (kystore.getModel('store/UserStore').balance - kystore.getModel('store/TemplateStore').betBalance < 0) {
             kystore.getModel('store/ViewStore').showStoreAlertView('', getLocalizedString('1102'));
             return false;
@@ -24749,21 +25613,32 @@ System.register("bundle://1001/_virtual/SlotGameStore.ts", ['./rollupPluginModLo
             return this._buyFeatureCloseRequested;
           }
         }, {
+          key: "amountDecimals",
+          get: function get() {
+            return this._amountDecimals;
+          }
+        }, {
           key: "formatAmount",
           get: function get() {
             var _this$gameInitData;
             var isGC = ((_this$gameInitData = this.gameInitData) == null || (_this$gameInitData = _this$gameInitData['game']) == null ? void 0 : _this$gameInitData.currency) == '2';
+            var fallback = this._amountDecimals;
             return isGC ? function (v, dp) {
               if (dp === void 0) {
-                dp = 2;
+                dp = fallback;
               }
               return AppUtility.formatCompact(v, dp);
             } : function (v, dp) {
               if (dp === void 0) {
-                dp = 2;
+                dp = fallback;
               }
               return AppUtility.formatDecimal(v, dp);
             };
+          }
+        }, {
+          key: "buyFeatureAvailable",
+          get: function get() {
+            return this._buyFeatureAvailable;
           }
         }]);
         return GameStore;
@@ -25633,22 +26508,35 @@ System.register("bundle://1001/_virtual/SlotResponseAdapter.ts", ['./rollupPlugi
       /**
        * 獎池水位：只取玩家幣別的池，層級 1–4 對應 MINI／MINOR／MAJOR／GRAND；負值一律顯示 0。
        *
-       * @param response `GET /player/jackpots` 的 `data`
+       * @param response `GET /player/jackpots` 的 `data`，或 WebSocket `jackpot.updated` 的 `data`
        * @param gameCode 遊戲代號
        * @param currency 玩家幣別（entry 的 `cc`）
+       * @param previous 上一份快照；推播只帶有變的池，沒帶到的池沿用這份
        * @returns 常駐獎池條讀的快照
        */
-      function toJackpotSnapshot(response, gameCode, currency) {
+      function toJackpotSnapshot(response, gameCode, currency, previous) {
+        var _previous$pools, _previous;
+        if (previous === void 0) {
+          previous = null;
+        }
+        var amounts = new Map(((_previous$pools = (_previous = previous) == null ? void 0 : _previous.pools) != null ? _previous$pools : []).map(function (pool) {
+          return [pool.tier, pool.amount];
+        }));
+        for (var _iterator3 = _createForOfIteratorHelperLoose(response.pools), _step3; !(_step3 = _iterator3()).done;) {
+          var pool = _step3.value;
+          var tier = JACKPOT_TIERS[pool.tier - 1];
+          if (tier && pool.currency === currency) amounts.set(tier, Number(pool.current_value) < 0 ? '0' : pool.current_value);
+        }
         return {
           game_code: gameCode,
           currency: currency,
           pool_group_id: '',
-          pools: response.pools.filter(function (pool) {
-            return pool.currency === currency && JACKPOT_TIERS[pool.tier - 1];
-          }).map(function (pool) {
+          pools: JACKPOT_TIERS.filter(function (tier) {
+            return amounts.has(tier);
+          }).map(function (tier) {
             return {
-              tier: JACKPOT_TIERS[pool.tier - 1],
-              amount: Number(pool.current_value) < 0 ? '0' : pool.current_value
+              tier: tier,
+              amount: amounts.get(tier)
             };
           }),
           as_of_ms: Date.now()
@@ -25805,12 +26693,12 @@ System.register("bundle://1001/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
          * 輸出分兩塊，使用端各自取用：
          * - `grid`：進場盤面，取 `ls.r.sg` 最後一張（連消到一半斷線時，最後一張才是停下來的那一步）。
          *   沒玩過或上一局已結束時是後端的預設盤面；`ls.r` 為 null 或 `sg` 為空時是 null，使用端退回隨機盤面。
-         * - `freeGame`：只有 `ls.nst` 是 `STEP_STATE.FREE_SPIN` 且有 `ls.fs` 時才有（免費遊戲打到一半）。
+         * - `freeGame`：`ls.nst` 是免費遊戲的 21／22／23 且有 `ls.fs` 時才有（免費遊戲打到一半 含一轉中途的連消）。
          *   剩餘與總轉數取 `ls.fs`、累積倍數取 `ls.gs.am`（缺或不是數字時為 0）、贏分取 `ls.aw`。
          *   `result` 是收尾（ExitFreeGameTask）用的局資料，沒有任何盤面步驟，只有帳務欄位。
          *
-         * 局打到一半（`isRoundInProgress(ls)`）但 `freeGame` 為 null，代表連消播到一半（`nst` 4／22）等還沒支援續打的狀態，
-         * 使用端只畫盤面並印警告。
+         * 局打到一半（`isRoundInProgress(ls)`）但 `freeGame` 為 null，代表主遊戲一轉打到一半（`nst` 4／5），
+         * 使用端只畫盤面，下一次按轉用本局的 `cs`／`ml` 接著打（HttpClientStore.playSpin）。
          *
          * 套用到其他遊戲時要對照各款自己的地方：
          * - 盤面解碼：本款 `decoder.decode` 收 `board.rl`；1002 的收整張 `board`（球值在 `co`），照該款簽名傳。
@@ -25827,7 +26715,9 @@ System.register("bundle://1001/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
           var board = boards[boards.length - 1];
           var grid = board ? this.decoder.decode(board.rl) : null;
           var fs = ls.fs;
-          if (ls.nst !== STEP_STATE.FREE_SPIN || !fs) return {
+          // 免費遊戲中 含一轉打到一半的連消 重轉
+          var inFreeGame = ls.nst === STEP_STATE.FREE_SPIN || ls.nst === STEP_STATE.FREE_TUMBLE || ls.nst === STEP_STATE.FREE_RESPIN;
+          if (!inFreeGame || !fs) return {
             grid: grid,
             freeGame: null
           };
@@ -26097,6 +26987,259 @@ System.register("bundle://1001/_virtual/SlotRoundMapper.ts", ['cc', './SlotApiTy
   };
 });
 
+System.register("bundle://1001/_virtual/SlotWebSocketClient.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createForOfIteratorHelperLoose, _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy;
+  return {
+    setters: [function (module) {
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+      _createClass = module.createClass;
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      exports('buildSlotApiWebSocketUrl', buildSlotApiWebSocketUrl);
+      cclegacy._RF.push({}, "48399HXOlpHbKy8YfNTb7ir", "SlotWebSocketClient", undefined); // 玩家端 API 的推播通道 規格第 6 章 下注走 HTTP 這條只收推播 斷線不影響下注
+      // 伺服器推來的訊框 data 只有部分訊息有
+      // 心跳間隔 規格要求每 25 秒送一次 ping
+      var HEARTBEAT_MS = 25000;
+      // 重連退避 1 2 4 8 秒 上限 30 秒 加減 20% 抖動
+      var BACKOFF_BASE_MS = 1000;
+      var BACKOFF_MAX_MS = 30000;
+      var BACKOFF_JITTER = 0.2;
+      var SOCKET_OPEN = 1;
+
+      /**
+       * 組出帶 token 的連線網址。
+       *
+       * @remarks 原生的 URL 是假 DOM 的 polyfill 沒有 searchParams 會丟錯 所以用字串組。
+       * @param url entry 回應的 ws。
+       * @param token 網址上的 t。
+       * @returns 帶 `token` 參數的網址 已經有 token 就原樣回傳。
+       */
+      function buildSlotApiWebSocketUrl(url, token) {
+        if (!token) return url;
+        var _url$split = url.split('?'),
+          path = _url$split[0],
+          _url$split$ = _url$split[1],
+          query = _url$split$ === void 0 ? '' : _url$split$;
+        var params = query.split('&').filter(Boolean);
+        if (params.some(function (param) {
+          return param.startsWith('token=');
+        })) return url;
+        params.push("token=" + encodeURIComponent(token));
+        return path + "?" + params.join('&');
+      }
+      var SlotWebSocketClient = exports('default', /*#__PURE__*/function () {
+        function SlotWebSocketClient(options) {
+          this.socket = null;
+          this.heartbeatTimer = null;
+          this.reconnectTimer = null;
+          this.reconnectAttempts = 0;
+          // 主動關閉 或 收到被踢 都不重連
+          this.stopped = false;
+          this.frameListeners = new Set();
+          this.stateListeners = new Set();
+          this.options = options;
+        }
+
+        /**
+         * 目前連線是不是開著。
+         *
+         * @returns 開著為 true。
+         */
+        var _proto = SlotWebSocketClient.prototype;
+        /**
+         * 建立連線 已經有連線或已停止就不做事。
+         */
+        _proto.connect = function connect() {
+          var _this = this;
+          if (this.stopped || this.socket) return;
+          var url = buildSlotApiWebSocketUrl(this.options.url, this.options.token);
+          console.log('[SlotWSClient] connect', this.options.url);
+          var socket = new WebSocket(url);
+          this.socket = socket;
+          socket.onopen = function () {
+            console.log('[SlotWSClient] open');
+            _this.reconnectAttempts = 0;
+            _this.startHeartbeat();
+            for (var _iterator = _createForOfIteratorHelperLoose(_this.stateListeners), _step; !(_step = _iterator()).done;) {
+              var listener = _step.value;
+              listener(true);
+            }
+          };
+          socket.onmessage = function (event) {
+            return _this.handleMessage(event.data);
+          };
+          socket.onclose = function () {
+            return _this.handleClose(socket);
+          };
+        }
+
+        /**
+         * 主動關閉 不再重連。
+         */;
+        _proto.close = function close() {
+          this.stopped = true;
+          this.clearReconnectTimer();
+          this.stopHeartbeat();
+          var socket = this.socket;
+          this.socket = null;
+          socket == null || socket.close();
+        }
+
+        /**
+         * 訂閱伺服器推來的訊框。
+         *
+         * @param listener 收到訊框時呼叫 pong 不會傳進來。
+         */;
+        _proto.onFrame = function onFrame(listener) {
+          this.frameListeners.add(listener);
+        }
+
+        /**
+         * 訂閱連線開關。
+         *
+         * @param listener 連上時傳 true 斷線時傳 false。
+         */;
+        _proto.onState = function onState(listener) {
+          this.stateListeners.add(listener);
+        };
+        _proto.handleMessage = function handleMessage(raw) {
+          var frame;
+          try {
+            frame = JSON.parse(String(raw));
+          } catch (_unused) {
+            return;
+          }
+          if (!frame || typeof frame.type !== 'string') return;
+          console.log('[SlotWSClient][Response]', frame);
+          if (frame.type === 'pong') return;
+          // 被踢之後伺服器會關線 這條不能重連
+          if (frame.type === 'session.kicked') {
+            this.stopped = true;
+          }
+          for (var _iterator2 = _createForOfIteratorHelperLoose(this.frameListeners), _step2; !(_step2 = _iterator2()).done;) {
+            var listener = _step2.value;
+            listener(frame);
+          }
+        };
+        _proto.handleClose = function handleClose(socket) {
+          if (this.socket !== socket) return;
+          this.socket = null;
+          this.stopHeartbeat();
+          console.log('[SlotWSClient] closed');
+          for (var _iterator3 = _createForOfIteratorHelperLoose(this.stateListeners), _step3; !(_step3 = _iterator3()).done;) {
+            var listener = _step3.value;
+            listener(false);
+          }
+          this.scheduleReconnect();
+        };
+        _proto.scheduleReconnect = function scheduleReconnect() {
+          var _this2 = this;
+          if (this.stopped || this.reconnectTimer) return;
+          this.reconnectAttempts += 1;
+          var base = Math.min(BACKOFF_MAX_MS, BACKOFF_BASE_MS * Math.pow(2, this.reconnectAttempts - 1));
+          var delay = base * (1 + (Math.random() * 2 - 1) * BACKOFF_JITTER);
+          console.log('[SlotWSClient] reconnecting', {
+            attempt: this.reconnectAttempts,
+            delayMs: Math.round(delay)
+          });
+          this.reconnectTimer = setTimeout(function () {
+            _this2.reconnectTimer = null;
+            void _this2.reconnect();
+          }, delay);
+        };
+        _proto.reconnect = /*#__PURE__*/function () {
+          var _reconnect = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+            var proceed;
+            return _regeneratorRuntime().wrap(function _callee$(_context) {
+              while (1) switch (_context.prev = _context.next) {
+                case 0:
+                  if (!this.stopped) {
+                    _context.next = 2;
+                    break;
+                  }
+                  return _context.abrupt("return");
+                case 2:
+                  if (!this.options.beforeReconnect) {
+                    _context.next = 14;
+                    break;
+                  }
+                  proceed = true;
+                  _context.prev = 4;
+                  _context.next = 7;
+                  return this.options.beforeReconnect();
+                case 7:
+                  proceed = _context.sent;
+                  _context.next = 13;
+                  break;
+                case 10:
+                  _context.prev = 10;
+                  _context.t0 = _context["catch"](4);
+                  proceed = true;
+                case 13:
+                  if (!proceed) this.stopped = true;
+                case 14:
+                  if (!this.stopped) {
+                    _context.next = 16;
+                    break;
+                  }
+                  return _context.abrupt("return");
+                case 16:
+                  try {
+                    this.connect();
+                  } catch (error) {
+                    console.error('[SlotWSClient] reconnect failed', error);
+                  }
+                  // 建立連線就丟錯時不會有 onclose 沒有連線就排下一次
+                  if (!this.socket) this.scheduleReconnect();
+                case 18:
+                case "end":
+                  return _context.stop();
+              }
+            }, _callee, this, [[4, 10]]);
+          }));
+          function reconnect() {
+            return _reconnect.apply(this, arguments);
+          }
+          return reconnect;
+        }();
+        _proto.startHeartbeat = function startHeartbeat() {
+          var _this3 = this;
+          this.stopHeartbeat();
+          this.heartbeatTimer = setInterval(function () {
+            if (!_this3.isOpen) return;
+            var frame = {
+              type: 'ping'
+            };
+            console.log('[SlotWSClient][Request]', frame);
+            _this3.socket.send(JSON.stringify(frame));
+          }, HEARTBEAT_MS);
+        };
+        _proto.stopHeartbeat = function stopHeartbeat() {
+          if (this.heartbeatTimer) clearInterval(this.heartbeatTimer);
+          this.heartbeatTimer = null;
+        };
+        _proto.clearReconnectTimer = function clearReconnectTimer() {
+          if (this.reconnectTimer) clearTimeout(this.reconnectTimer);
+          this.reconnectTimer = null;
+        };
+        _createClass(SlotWebSocketClient, [{
+          key: "isOpen",
+          get: function get() {
+            var _this$socket;
+            return ((_this$socket = this.socket) == null ? void 0 : _this$socket.readyState) === SOCKET_OPEN;
+          }
+        }]);
+        return SlotWebSocketClient;
+      }());
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("bundle://1001/_virtual/SOUNDMAP.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
@@ -26279,14 +27422,19 @@ System.register("bundle://1001/_virtual/SpineSafe.ts", ['cc'], function (exports
   };
 });
 
-System.register("bundle://1001/_virtual/SpinFlowPlanner.ts", ['cc'], function (exports) {
-  var cclegacy;
+System.register("bundle://1001/_virtual/SpinFlowPlanner.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _extends, cclegacy;
   return {
     setters: [function (module) {
+      _extends = module.extends;
+    }, function (module) {
       cclegacy = module.cclegacy;
     }],
     execute: function () {
-      exports('planSpinFlow', planSpinFlow);
+      exports({
+        jackpotWinOf: jackpotWinOf,
+        planSpinFlow: planSpinFlow
+      });
       cclegacy._RF.push({}, "18694xsU7VJ96UQfjDYvG0T", "SpinFlowPlanner", undefined);
       /**
        * 純資料流程規劃：只描述「該加入哪些 Task、依什麼順序」，不 import cc／View／具體 Task class，
@@ -26303,7 +27451,10 @@ System.register("bundle://1001/_virtual/SpinFlowPlanner.ts", ['cc'], function (e
       function planSpinFlow(roundResult, willEnterFreeGame) {
         var steps = [];
         var mainMult = roundResult.multiplier || 0;
-        var spinWin = Number(roundResult.totalWin) || 0;
+        var jackpotWin = jackpotWinOf(roundResult);
+        // 一般贏分 不含彩池 大獎級別與報獎都看它
+        // 後端 wt 定義是含彩池的整局贏分 這裡刻意不含 彩池金額在演彩池時才加進贏分與餘額
+        var spinWin = (Number(roundResult.totalWin) || 0) - jackpotWin;
         if (mainMult > 0 && spinWin > 0) {
           steps.push({
             kind: 'collectWin',
@@ -26312,42 +27463,58 @@ System.register("bundle://1001/_virtual/SpinFlowPlanner.ts", ['cc'], function (e
           });
         }
         if (willEnterFreeGame) {
-          // 同一局有贏分 先報獎再進免費遊戲
+          // 同一局有贏分 先報獎 彩池在進免費遊戲之前演
           steps.push({
             kind: 'winAnimation',
             spinWin: spinWin
           });
+          appendJackpotStep(steps, roundResult, spinWin, false);
           steps.push({
             kind: 'scatterWin'
           });
-          appendFreeGameSteps(steps, roundResult);
+          appendFreeGameSteps(steps, roundResult, spinWin);
           return steps;
         }
         steps.push({
           kind: 'finishSpin',
-          spinWin: spinWin
+          spinWin: spinWin,
+          balanceAfter: balanceBeforeJackpot(roundResult, jackpotWin)
         });
         steps.push({
           kind: 'winAnimation',
           spinWin: spinWin
         });
-        appendJackpotStep(steps, roundResult);
+        appendJackpotStep(steps, roundResult, spinWin, true);
         steps.push({
           kind: 'endSpin'
         });
         return steps;
       }
-      function appendFreeGameSteps(steps, roundResult) {
+
+      /**
+       * 這一局彩池派彩金額
+       *
+       * @param roundResult 這一局的結果
+       * @returns 沒中彩池是 0
+       */
+      function jackpotWinOf(roundResult) {
+        var jackpot = roundResult.jackpot;
+        return jackpot != null && jackpot.won && jackpot.tier ? Number(jackpot.payout) || 0 : 0;
+      }
+      function balanceBeforeJackpot(roundResult, jackpotWin) {
+        return jackpotWin > 0 ? String(Number(roundResult.balanceAfter) - jackpotWin) : roundResult.balanceAfter;
+      }
+      function appendFreeGameSteps(steps, roundResult, spinWin) {
         var _roundResult$freeSpin;
-        var spinWin = Number(roundResult.totalWin) || 0;
         var lazy = roundResult.freeSpinsTotal !== undefined;
         var freeRoundCount = (_roundResult$freeSpin = roundResult.freeSpinsTotal) != null ? _roundResult$freeSpin : roundResult.freeRounds.length;
         if (freeRoundCount === 0) {
+          // 彩池已在前面演過 這裡直接用含彩池的最終餘額
           steps.push({
             kind: 'finishSpin',
-            spinWin: spinWin
+            spinWin: spinWin + jackpotWinOf(roundResult),
+            balanceAfter: roundResult.balanceAfter
           });
-          appendJackpotStep(steps, roundResult);
           steps.push({
             kind: 'endSpin'
           });
@@ -26383,14 +27550,18 @@ System.register("bundle://1001/_virtual/SpinFlowPlanner.ts", ['cc'], function (e
           kind: 'exitFreeGame'
         });
       }
-      function appendJackpotStep(steps, roundResult) {
+      function appendJackpotStep(steps, roundResult, spinWin, roundEnds) {
         var jackpot = roundResult.jackpot;
         if (!(jackpot != null && jackpot.won) || !jackpot.tier) return;
-        steps.push({
+        var amount = jackpotWinOf(roundResult);
+        steps.push(_extends({
           kind: 'jackpot',
           tier: jackpot.tier,
-          amount: Number(jackpot.payout) || 0
-        });
+          amount: amount,
+          winAfter: spinWin + amount
+        }, roundEnds ? {
+          balanceAfter: roundResult.balanceAfter
+        } : {}));
       }
       cclegacy._RF.pop();
     }
@@ -26441,14 +27612,14 @@ System.register("bundle://1001/_virtual/SpinnerView.ts", ['./rollupPluginModLoBa
 });
 
 System.register("bundle://1001/_virtual/SpinResultHandler.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './GameTaskHandler.ts', './GameTaskQueue.ts', './GameTask.ts', './SpinFlowPlanner.ts', './CascadeReelsTask.ts', './CollectWinTask.ts', './ScatterWinTask.ts', './FinishSpinTask.ts', './WinAnimationTask.ts', './EndSpinTask.ts', './EnterFreeGameTask.ts', './WinFreeGamePopupTask.ts', './PlayFreeRoundTask.ts', './ExitFreeGameTask.ts'], function (exports) {
-  var _inheritsLoose, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, _extends, cclegacy, GameTaskHandler, GameTaskQueue, GameTaskFn, GameTaskPromise, planSpinFlow, CascadeReelsTask, CollectWinTask, ScatterWinTask, FinishSpinTask, WinAnimationTask, EndSpinTask, EnterFreeGameTask, WinFreeGamePopupTask, PlayFreeRoundTask, runFreeRound, ExitFreeGameTask;
+  var _inheritsLoose, _createForOfIteratorHelperLoose, _extends, _asyncToGenerator, _regeneratorRuntime, cclegacy, GameTaskHandler, GameTaskQueue, GameTaskFn, GameTaskPromise, planSpinFlow, CascadeReelsTask, CollectWinTask, ScatterWinTask, FinishSpinTask, WinAnimationTask, EndSpinTask, EnterFreeGameTask, WinFreeGamePopupTask, PlayFreeRoundTask, runFreeRound, ExitFreeGameTask;
   return {
     setters: [function (module) {
       _inheritsLoose = module.inheritsLoose;
       _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+      _extends = module.extends;
       _asyncToGenerator = module.asyncToGenerator;
       _regeneratorRuntime = module.regeneratorRuntime;
-      _extends = module.extends;
     }, function (module) {
       cclegacy = module.cclegacy;
     }, function (module) {
@@ -26575,14 +27746,16 @@ System.register("bundle://1001/_virtual/SpinResultHandler.ts", ['./rollupPluginM
                 }));
                 break;
               case 'finishSpin':
-                _this4.addTask(new FinishSpinTask(_this4.game, roundResult, step.spinWin));
+                _this4.addTask(new FinishSpinTask(_this4.game, _extends({}, roundResult, {
+                  balanceAfter: step.balanceAfter
+                }), step.spinWin));
                 break;
               case 'winAnimation':
                 _this4.addTask(new WinAnimationTask(_this4.game, step.spinWin));
                 break;
               case 'jackpot':
                 _this4.addTask(new GameTaskPromise(function () {
-                  return _this4.game.popups.showJackpot(step.tier, step.amount);
+                  return _this4.playJackpot(step);
                 }));
                 break;
               case 'endSpin':
@@ -26622,34 +27795,64 @@ System.register("bundle://1001/_virtual/SpinResultHandler.ts", ['./rollupPluginM
         }
 
         /**
+         * 演彩池 演完才把彩池金額加進贏分 局在這裡結束時一併更新餘額
+         *
+         * @param step 彩池步驟
+         */;
+        _proto.playJackpot = /*#__PURE__*/
+        function () {
+          var _playJackpot = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(step) {
+            return _regeneratorRuntime().wrap(function _callee$(_context) {
+              while (1) switch (_context.prev = _context.next) {
+                case 0:
+                  _context.next = 2;
+                  return this.game.popups.showJackpot(step.tier, step.amount);
+                case 2:
+                  this.game.storeManager.getModel('TemplateStore').setWinBalance(step.winAfter);
+                  this.game.winBarValue = step.winAfter;
+                  this.game.setWinBarNum(step.winAfter);
+                  if (step.balanceAfter !== undefined) this.game.storeManager.getModel('UserStore').setBalance(Number(step.balanceAfter));
+                case 6:
+                case "end":
+                  return _context.stop();
+              }
+            }, _callee, this);
+          }));
+          function playJackpot(_x) {
+            return _playJackpot.apply(this, arguments);
+          }
+          return playJackpot;
+        }()
+        /**
          * 免費遊戲：每一轉向後端要、播完再要下一轉，直到局結束，然後排收尾（ExitFreeGameTask）。
          * 後端失敗時 nextFreeSpin() 已顯示錯誤並回 null，這裡就用手上的結果收尾，免得畫面卡在免費遊戲。
          */;
+
         _proto.playFreeGame = /*#__PURE__*/
         function () {
-          var _playFreeGame = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(mainResult) {
+          var _playFreeGame = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(mainResult) {
             var _this5 = this;
             var store, totalWin, balance, capStop, spin;
-            return _regeneratorRuntime().wrap(function _callee$(_context) {
-              while (1) switch (_context.prev = _context.next) {
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
                 case 0:
                   store = this.game.storeManager.getHttpClientStore();
                   totalWin = mainResult.totalWin;
                   balance = mainResult.balanceAfter;
                   capStop = false;
-                  _context.prev = 4;
+                  _context2.prev = 4;
                 case 5:
-                  _context.next = 7;
+                  _context2.next = 7;
                   return store.nextFreeSpin();
                 case 7:
-                  spin = _context.sent;
+                  spin = _context2.sent;
                   if (spin) {
-                    _context.next = 10;
+                    _context2.next = 10;
                     break;
                   }
-                  return _context.abrupt("break", 24);
+                  return _context2.abrupt("break", 24);
                 case 10:
-                  _context.next = 12;
+                  _context2.next = 12;
                   return runFreeRound(this.game, spin.steps, spin.multiplier);
                 case 12:
                   // 剩餘／總轉數以後端為準（再觸發會讓總數增加）
@@ -26661,20 +27864,20 @@ System.register("bundle://1001/_virtual/SpinResultHandler.ts", ['./rollupPluginM
                   balance = spin.balance;
                   capStop || (capStop = spin.endReason === 'cap_stop');
                   if (!spin.finished) {
-                    _context.next = 20;
+                    _context2.next = 20;
                     break;
                   }
-                  return _context.abrupt("break", 24);
+                  return _context2.abrupt("break", 24);
                 case 20:
-                  _context.next = 22;
+                  _context2.next = 22;
                   return new Promise(function (r) {
                     return _this5.game.scheduleOnce(r, _this5.game.cascadeTiming().fgDelay / 1000);
                   });
                 case 22:
-                  _context.next = 5;
+                  _context2.next = 5;
                   break;
                 case 24:
-                  _context.prev = 24;
+                  _context2.prev = 24;
                   if (capStop) console.log('[MaxWin] 免費遊戲達到贏分上限', {
                     totalWin: totalWin
                   });
@@ -26683,14 +27886,14 @@ System.register("bundle://1001/_virtual/SpinResultHandler.ts", ['./rollupPluginM
                     totalWin: totalWin,
                     balanceAfter: balance
                   }), Number(totalWin) || 0));
-                  return _context.finish(24);
+                  return _context2.finish(24);
                 case 28:
                 case "end":
-                  return _context.stop();
+                  return _context2.stop();
               }
-            }, _callee, this, [[4,, 24, 28]]);
+            }, _callee2, this, [[4,, 24, 28]]);
           }));
-          function playFreeGame(_x) {
+          function playFreeGame(_x2) {
             return _playFreeGame.apply(this, arguments);
           }
           return playFreeGame;
@@ -27021,8 +28224,8 @@ System.register("bundle://1001/_virtual/SpinTypes.ts", ['cc'], function () {
   };
 });
 
-System.register("bundle://1001/_virtual/start.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './simple-mock.ts', './slot-api-mock.ts'], function (exports) {
-  var _asyncToGenerator, _regeneratorRuntime, cclegacy, startSimpleMock, installSlotApiHttpMock, uninstallSlotApiHttpMock;
+System.register("bundle://1001/_virtual/start.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './simple-mock.ts', './slot-api-mock.ts', './slot-push-mock.ts'], function (exports) {
+  var _asyncToGenerator, _regeneratorRuntime, cclegacy, startSimpleMock, installSlotApiHttpMock, uninstallSlotApiHttpMock, installSlotApiWebSocketMock, uninstallSlotApiWebSocketMock;
   return {
     setters: [function (module) {
       _asyncToGenerator = module.asyncToGenerator;
@@ -27034,6 +28237,9 @@ System.register("bundle://1001/_virtual/start.ts", ['./rollupPluginModLoBabelHel
     }, function (module) {
       installSlotApiHttpMock = module.installSlotApiHttpMock;
       uninstallSlotApiHttpMock = module.uninstallSlotApiHttpMock;
+    }, function (module) {
+      installSlotApiWebSocketMock = module.installSlotApiWebSocketMock;
+      uninstallSlotApiWebSocketMock = module.uninstallSlotApiWebSocketMock;
     }],
     execute: function () {
       exports({
@@ -27043,7 +28249,7 @@ System.register("bundle://1001/_virtual/start.ts", ['./rollupPluginModLoBabelHel
       cclegacy._RF.push({}, "e59a4UF96tH8YJqUb6fmnEb", "start", undefined);
 
       /**
-       * 啟動假後端：註冊玩家端 API 的路由，並裝上 fetch／XHR 替身讓路由攔得到請求，重複呼叫是安全的。
+       * 啟動假後端：註冊玩家端 API 的路由，裝上 fetch／XHR 替身讓路由攔得到請求，並裝上推播通道的 WebSocket 代理，重複呼叫是安全的。
        *
        * @returns 裝好之後 resolve。
        */
@@ -27052,7 +28258,7 @@ System.register("bundle://1001/_virtual/start.ts", ['./rollupPluginModLoBabelHel
       }
 
       /**
-       * 離開遊戲時拆掉假後端的路由，不留給下一款遊戲。
+       * 離開遊戲時拆掉假後端的路由與 WebSocket 代理，不留給下一款遊戲。
        *
        * `simple-mock` 的 fetch／XHR 替身不拆：路由清掉之後請求都原樣放行，留著不影響別款遊戲的資料。
        */
@@ -27062,8 +28268,9 @@ System.register("bundle://1001/_virtual/start.ts", ['./rollupPluginModLoBabelHel
             while (1) switch (_context.prev = _context.next) {
               case 0:
                 installSlotApiHttpMock();
+                installSlotApiWebSocketMock();
                 startSimpleMock();
-              case 2:
+              case 3:
               case "end":
                 return _context.stop();
             }
@@ -27073,6 +28280,7 @@ System.register("bundle://1001/_virtual/start.ts", ['./rollupPluginModLoBabelHel
       }
       function stopGameMock() {
         uninstallSlotApiHttpMock();
+        uninstallSlotApiWebSocketMock();
       }
       cclegacy._RF.pop();
     }
@@ -27481,26 +28689,202 @@ System.register("bundle://1001/_virtual/StoreMap.ts", ['cc'], function (exports)
   };
 });
 
-System.register("bundle://1001/_virtual/SubGameData.ts", ['cc'], function (exports) {
-  var cclegacy;
+System.register("bundle://1001/_virtual/SubGameBridge.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _asyncToGenerator, _regeneratorRuntime, cclegacy;
   return {
     setters: [function (module) {
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+    }, function (module) {
       cclegacy = module.cclegacy;
     }],
     execute: function () {
-      exports('getSubGameData', getSubGameData);
-      cclegacy._RF.push({}, "f747aFIOiRNOZGlchQY8BRm", "SubGameData", undefined);
+      exports({
+        exitToLobby: exitToLobby,
+        getEnterStartTime: getEnterStartTime,
+        getSubGameData: getSubGameData,
+        inShell: inShell,
+        isFixedRatio: isFixedRatio,
+        notifyEntered: notifyEntered,
+        onShellMessage: onShellMessage,
+        postToShell: postToShell,
+        showAutoPlaySelector: showAutoPlaySelector,
+        showSystemMenu: showSystemMenu
+      });
+      cclegacy._RF.push({}, "f747aFIOiRNOZGlchQY8BRm", "SubGameBridge", undefined);
       /**
        * 大廳寫進 `globalThis.__subGameData__` 的資料 只收這個遊戲讀寫的欄位
        * 權威定義在 base 的 subgame/SubGameConfig.ts 欄位改名時兩邊要一起改
        */
+      // 子遊戲跟大廳 殼頁溝通的接口都集中在這裡 其他地方不要直接碰 globalThis 的 __subGame*
+      // 這份程式碼跨到大廳（entry）那個獨立 Creator 專案裡執行 沒辦法直接 import
+      // 只能透過大廳常駐節點在載入前掛好的 globalThis 函式呼叫回去 詳見 entry 的 assets/base/subgame/SubGame.ts
+      // 下面的名稱與簽名以 SubGame.ts 的 SubGameGlobalScope 為準 改名時兩邊要一起改
+      // 網頁版放在殼頁 iframe 裡 改用 postMessage 跟殼頁溝通 協定見 yota-remote-bundles 的 shell.html
+      var scope = function scope() {
+        return globalThis;
+      };
+
       /**
        * 取大廳帶進來的子遊戲資料
        *
        * @returns 有大廳時回資料 獨立 Preview 或直接開 bundle 時回 undefined
        */
       function getSubGameData() {
-        return globalThis.__subGameData__;
+        return scope().__subGameData__;
+      }
+
+      /**
+       * 是不是放在殼頁的 iframe 裡
+       *
+       * @returns 在 iframe 裡為 true
+       */
+      function inShell() {
+        return typeof window !== 'undefined' && !!window.parent && window.parent !== window;
+      }
+
+      /**
+       * 送訊息給殼頁 不在殼頁裡就不送
+       *
+       * @param type 訊息類型
+       * @param payload 訊息內容
+       */
+      function postToShell(type, payload) {
+        if (payload === void 0) {
+          payload = {};
+        }
+        if (inShell()) window.parent.postMessage({
+          source: 'game',
+          type: type,
+          payload: payload
+        }, '*');
+      }
+
+      /**
+       * 監聽殼頁送來的訊息 不在殼頁裡就不監聽
+       *
+       * @param handler 收到殼頁訊息時呼叫 帶訊息類型與內容
+       * @returns 取消監聽的函式
+       */
+      function onShellMessage(handler) {
+        if (!inShell()) return function () {};
+        var listener = function listener(event) {
+          var _event$data;
+          if (event.source !== window.parent || ((_event$data = event.data) == null ? void 0 : _event$data.source) !== 'host-shell') return;
+          handler(event.data.type, event.data.payload);
+        };
+        window.addEventListener('message', listener);
+        return function () {
+          return window.removeEventListener('message', listener);
+        };
+      }
+
+      /**
+       * 不經確認直接回大廳 token 失效 被踢這類不能再玩的情況用
+       *
+       * @remarks 原生大廳用 `__subGameExit__` 網頁殼頁送 `leave` 兩邊都沒有時只印警告
+       */
+      function exitToLobby() {
+        var exit = scope().__subGameExit__;
+        if (exit) {
+          void exit();
+          return;
+        }
+        if (inShell()) {
+          postToShell('leave');
+          return;
+        }
+        console.warn('[大廳橋接] exitToLobby 沒有大廳可以回 獨立測試模式略過');
+      }
+
+      /**
+       * 開大廳的系統選單
+       *
+       * @returns 選單關掉之後 resolve 沒接上大廳時印警告後直接 resolve
+       */
+      function showSystemMenu() {
+        return _showSystemMenu.apply(this, arguments);
+      }
+
+      /**
+       * 開大廳的自動旋轉局數選擇
+       *
+       * @returns 選到的局數 負數代表無限 取消是 null 沒接上大廳時印警告並回 undefined
+       */
+      function _showSystemMenu() {
+        _showSystemMenu = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+          var show;
+          return _regeneratorRuntime().wrap(function _callee$(_context) {
+            while (1) switch (_context.prev = _context.next) {
+              case 0:
+                show = scope().__subGameShowSystemMenu__;
+                if (show) {
+                  _context.next = 4;
+                  break;
+                }
+                console.warn('[大廳橋接] showSystemMenu 未接上大廳 獨立測試模式略過');
+                return _context.abrupt("return");
+              case 4:
+                _context.next = 6;
+                return show();
+              case 6:
+              case "end":
+                return _context.stop();
+            }
+          }, _callee);
+        }));
+        return _showSystemMenu.apply(this, arguments);
+      }
+      function showAutoPlaySelector() {
+        return _showAutoPlaySelector.apply(this, arguments);
+      }
+
+      /**
+       * 大廳是否判斷這個網頁要用固定比例顯示
+       *
+       * @returns 固定比例為 true
+       */
+      function _showAutoPlaySelector() {
+        _showAutoPlaySelector = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+          var show;
+          return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+            while (1) switch (_context2.prev = _context2.next) {
+              case 0:
+                show = scope().__subGameShowAutoPlaySelector__;
+                if (show) {
+                  _context2.next = 4;
+                  break;
+                }
+                console.warn('[大廳橋接] showAutoPlaySelector 未接上大廳 獨立測試模式略過');
+                return _context2.abrupt("return", undefined);
+              case 4:
+                return _context2.abrupt("return", show());
+              case 5:
+              case "end":
+                return _context2.stop();
+            }
+          }, _callee2);
+        }));
+        return _showAutoPlaySelector.apply(this, arguments);
+      }
+      function isFixedRatio() {
+        return scope().__subGameFixedRatio__ === true;
+      }
+
+      /**
+       * 大廳按下進場那一刻的時間戳
+       *
+       * @returns 毫秒時間戳 沒有大廳時 undefined
+       */
+      function getEnterStartTime() {
+        var time = scope().__subGameEnterStartTime__;
+        return typeof time === 'number' ? time : undefined;
+      }
+
+      /** 通知大廳已經進到遊戲 沒有大廳就略過 */
+      function notifyEntered() {
+        var _scope$__subGameEnter, _scope;
+        (_scope$__subGameEnter = (_scope = scope()).__subGameEntered__) == null || _scope$__subGameEnter.call(_scope);
       }
       cclegacy._RF.pop();
     }
@@ -30073,8 +31457,8 @@ System.register("bundle://1001/_virtual/TemplateView.ts", ['./rollupPluginModLoB
   };
 });
 
-System.register("bundle://1001/_virtual/TemplateViewModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TemplateModel.ts', './StoreManager.ts', './SpinStartStatus.ts', './StatusManager.ts', './NewGameStatus.ts', './StoreMap.ts', './AppAudio.ts', './SOUNDMAP.ts', './ReSpinStatus.ts', './GameEndStatus.ts', './EagleTracker.ts', './TrackerMap.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameConfigManager.ts', './GameRuntimeEventBus.ts', './SubGameData.ts', './GameStateKey.ts', './SlotGameMain.ts', './GameRuntimeEventTypes.ts'], function (exports) {
-  var _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, sys, JsonAsset, TemplateStore, StoreManager, SpinStartStatus, StatusManager, NewGameStatus, GAMESTOREMAP, TURBOSTATUSMAP, AUTOSPINSTATUSMAP, AppAudio, bindAudioVolumeEvents, EFFECTSMAP, ReSpinStatus, GameEndStatus, EagleTracker, TrackerMap, AppAssetBundle, AppUtility, GameConfigManager, gameRuntimeEventBus, getSubGameData, GameStateKey, SlotGameMain, GAME_EVENT_TYPE, GAME_EVENT_ID;
+System.register("bundle://1001/_virtual/TemplateViewModel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TemplateModel.ts', './StoreManager.ts', './SpinStartStatus.ts', './StatusManager.ts', './NewGameStatus.ts', './StoreMap.ts', './AppAudio.ts', './SOUNDMAP.ts', './ReSpinStatus.ts', './GameEndStatus.ts', './EagleTracker.ts', './TrackerMap.ts', './AppAssetBundle.ts', './AppUtility.ts', './GameConfigManager.ts', './GameRuntimeEventBus.ts', './SubGameBridge.ts', './GameStateKey.ts', './SlotGameMain.ts', './GameRuntimeEventTypes.ts'], function (exports) {
+  var _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy, sys, JsonAsset, TemplateStore, StoreManager, SpinStartStatus, StatusManager, NewGameStatus, GAMESTOREMAP, TURBOSTATUSMAP, AUTOSPINSTATUSMAP, AppAudio, bindAudioVolumeEvents, EFFECTSMAP, ReSpinStatus, GameEndStatus, EagleTracker, TrackerMap, AppAssetBundle, AppUtility, GameConfigManager, gameRuntimeEventBus, showSystemMenu, showAutoPlaySelector, getSubGameData, GameStateKey, SlotGameMain, GAME_EVENT_TYPE, GAME_EVENT_ID;
   return {
     setters: [function (module) {
       _createClass = module.createClass;
@@ -30120,6 +31504,8 @@ System.register("bundle://1001/_virtual/TemplateViewModel.ts", ['./rollupPluginM
     }, function (module) {
       gameRuntimeEventBus = module.gameRuntimeEventBus;
     }, function (module) {
+      showSystemMenu = module.showSystemMenu;
+      showAutoPlaySelector = module.showAutoPlaySelector;
       getSubGameData = module.getSubGameData;
     }, function (module) {
       GameStateKey = module.GameStateKey;
@@ -30132,9 +31518,6 @@ System.register("bundle://1001/_virtual/TemplateViewModel.ts", ['./rollupPluginM
     execute: function () {
       cclegacy._RF.push({}, "150efUfXEpFfbFqhoiGvECI", "TemplateViewModel", undefined);
 
-      // 這份程式碼跨到大廳（entry）那個獨立 Creator 專案裡執行 沒辦法直接 import
-      // runGameScene／PendingGameEntry 只能透過大廳常駐節點在載入前掛好的 globalThis
-      // 函式呼叫回去 詳見 entry 的 assets/base/subgame/SubGame.ts
       // 選單（含裡面的離開確認）／自動旋轉選擇彈窗改由大廳共用 子遊戲不再自帶
       var TemplateViewModel = exports('default', /*#__PURE__*/function () {
         function TemplateViewModel(context) {
@@ -30452,7 +31835,6 @@ System.register("bundle://1001/_virtual/TemplateViewModel.ts", ['./rollupPluginM
         }();
         _proto.menuClick = /*#__PURE__*/function () {
           var _menuClick = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
-            var scope;
             return _regeneratorRuntime().wrap(function _callee4$(_context4) {
               while (1) switch (_context4.prev = _context4.next) {
                 case 0:
@@ -30463,17 +31845,9 @@ System.register("bundle://1001/_virtual/TemplateViewModel.ts", ['./rollupPluginM
                   return _context4.abrupt("return");
                 case 2:
                   this.kyAudio.playEffect(EFFECTSMAP.MENU_CLICK);
-                  scope = globalThis;
-                  if (scope.__subGameShowSystemMenu__) {
-                    _context4.next = 7;
-                    break;
-                  }
-                  console.warn('[TemplateViewModel] showSystemMenu 未接上大廳 Bridge，獨立測試模式略過');
-                  return _context4.abrupt("return");
-                case 7:
-                  _context4.next = 9;
-                  return scope.__subGameShowSystemMenu__();
-                case 9:
+                  _context4.next = 5;
+                  return showSystemMenu();
+                case 5:
                 case "end":
                   return _context4.stop();
               }
@@ -30486,7 +31860,7 @@ System.register("bundle://1001/_virtual/TemplateViewModel.ts", ['./rollupPluginM
         }();
         _proto.autoClick = /*#__PURE__*/function () {
           var _autoClick = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
-            var scope, count;
+            var count;
             return _regeneratorRuntime().wrap(function _callee5$(_context5) {
               while (1) switch (_context5.prev = _context5.next) {
                 case 0:
@@ -30498,7 +31872,7 @@ System.register("bundle://1001/_virtual/TemplateViewModel.ts", ['./rollupPluginM
                 case 2:
                   this.kyAudio.playEffect(EFFECTSMAP.AUTO_SPIN_CLICK);
                   if (!(this.gameStore.autoSpinStatus === AUTOSPINSTATUSMAP.OFF)) {
-                    _context5.next = 16;
+                    _context5.next = 12;
                     break;
                   }
                   if (!this.isSpinInProgress()) {
@@ -30507,28 +31881,20 @@ System.register("bundle://1001/_virtual/TemplateViewModel.ts", ['./rollupPluginM
                   }
                   return _context5.abrupt("return");
                 case 6:
-                  scope = globalThis;
-                  if (scope.__subGameShowAutoPlaySelector__) {
-                    _context5.next = 10;
-                    break;
-                  }
-                  console.warn('[TemplateViewModel] showAutoPlaySelector 未接上大廳 Bridge，獨立測試模式略過');
-                  return _context5.abrupt("return");
-                case 10:
-                  _context5.next = 12;
-                  return scope.__subGameShowAutoPlaySelector__();
-                case 12:
+                  _context5.next = 8;
+                  return showAutoPlaySelector();
+                case 8:
                   count = _context5.sent;
                   if (count !== null && count !== undefined) {
                     this.gameStore.setAutoSpinTimes(count < 0 ? 'MAX' : count);
                     this.gameStore.setAutoSpinStatus(AUTOSPINSTATUSMAP.ON);
                   }
-                  _context5.next = 17;
+                  _context5.next = 13;
                   break;
-                case 16:
+                case 12:
                   // 遊戲內 Auto 按鈕再次點擊＝cancel，停止後續局數
                   this.gameStore.setAutoSpinStatus(AUTOSPINSTATUSMAP.OFF);
-                case 17:
+                case 13:
                 case "end":
                   return _context5.stop();
               }
