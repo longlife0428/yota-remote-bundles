@@ -1,0 +1,268 @@
+ui_mul.png
+	size: 1048, 1048
+	filter: Linear, Linear
+begin/begin_00
+	bounds: 893, 90, 80, 70
+	offsets: 49, 60, 180, 173
+begin/begin_01
+	bounds: 972, 967, 79, 74
+	offsets: 48, 58, 180, 173
+	rotate: 90
+begin/begin_02
+	bounds: 816, 586, 84, 77
+	offsets: 45, 56, 180, 173
+begin/begin_03
+	bounds: 300, 4, 86, 81
+	offsets: 44, 54, 180, 173
+begin/begin_04
+	bounds: 632, 142, 90, 84
+	offsets: 42, 53, 180, 173
+begin/begin_05
+	bounds: 502, 3, 94, 86
+	offsets: 40, 51, 180, 173
+	rotate: 90
+begin/begin_06
+	bounds: 590, 4, 96, 91
+	offsets: 40, 49, 180, 173
+	rotate: 90
+begin/begin_07
+	bounds: 399, 3, 101, 94
+	offsets: 37, 47, 180, 173
+begin/begin_08
+	bounds: 300, 87, 105, 97
+	offsets: 35, 46, 180, 173
+	rotate: 90
+begin/begin_09
+	bounds: 198, 6, 108, 100
+	offsets: 33, 44, 180, 173
+	rotate: 90
+begin/begin_10
+	bounds: 516, 102, 112, 104
+	offsets: 31, 42, 180, 173
+begin/begin_11
+	bounds: 399, 99, 115, 107
+	offsets: 30, 40, 180, 173
+begin/begin_12
+	bounds: 714, 672, 119, 110
+	offsets: 28, 39, 180, 173
+begin/begin_13
+	bounds: 586, 551, 123, 114
+	offsets: 26, 36, 180, 173
+begin/begin_14
+	bounds: 586, 667, 126, 116
+	offsets: 25, 35, 180, 173
+begin/begin_15
+	bounds: 916, 791, 130, 120
+	offsets: 23, 33, 180, 173
+begin/begin_16
+	bounds: 449, 362, 134, 124
+	offsets: 21, 31, 180, 173
+	rotate: 90
+begin/begin_17
+	bounds: 776, 784, 138, 127
+	offsets: 19, 29, 180, 173
+begin/begin_18
+	bounds: 633, 785, 141, 127
+	offsets: 18, 28, 180, 173
+begin/begin_19
+	bounds: 164, 351, 145, 132
+	offsets: 16, 25, 180, 173
+	rotate: 90
+begin/begin_20
+	bounds: 298, 362, 149, 134
+	offsets: 14, 25, 180, 173
+begin/begin_21
+	bounds: 167, 512, 152, 139
+	offsets: 13, 22, 180, 173
+begin/begin_22
+	bounds: 322, 744, 156, 143
+	offsets: 11, 20, 180, 173
+begin/begin_23
+	bounds: 2, 351, 160, 147
+	offsets: 9, 18, 180, 173
+begin/begin_24
+	bounds: 2, 500, 163, 151
+	offsets: 8, 16, 180, 173
+button_times_bg
+	bounds: 2, 653, 318, 393
+glow1
+	bounds: 322, 889, 157, 157
+	offsets: 1, 1, 159, 159
+icon/icon_00
+	bounds: 915, 468, 36, 42
+	offsets: 3, 0, 39, 42
+icon/icon_01
+	bounds: 670, 102, 37, 38
+	offsets: 2, 0, 39, 42
+icon/icon_02
+	bounds: 649, 512, 37, 38
+	offsets: 2, 0, 39, 42
+	rotate: 90
+icon/icon_03
+	bounds: 630, 102, 38, 38
+	offsets: 1, 0, 39, 42
+icon/icon_04
+	bounds: 893, 52, 36, 38
+	offsets: 1, 0, 39, 42
+	rotate: 90
+icon/icon_05
+	bounds: 933, 53, 35, 38
+	offsets: 1, 0, 39, 42
+	rotate: 90
+icon/icon_06
+	bounds: 683, 62, 32, 38
+	offsets: 2, 0, 39, 42
+icon/icon_07
+	bounds: 683, 22, 26, 38
+	offsets: 5, 0, 39, 42
+icon/icon_08
+	bounds: 2, 2, 18, 38
+	offsets: 10, 0, 39, 42
+	rotate: 90
+icon/icon_09
+	bounds: 902, 625, 11, 38
+	offsets: 14, 0, 39, 42
+icon/icon_10
+	bounds: 709, 102, 8, 38
+	offsets: 17, 0, 39, 42
+icon/icon_11
+	bounds: 975, 366, 16, 38
+	offsets: 14, 0, 39, 42
+	rotate: 90
+icon/icon_12
+	bounds: 669, 468, 23, 42
+	offsets: 11, 0, 39, 42
+icon/icon_13
+	bounds: 989, 468, 31, 42
+	offsets: 7, 0, 39, 42
+icon/icon_14
+	bounds: 953, 468, 34, 42
+	offsets: 5, 0, 39, 42
+sweeplight/00
+	bounds: 714, 570, 100, 100
+sweeplight/01
+	bounds: 711, 468, 100, 100
+sweeplight/02
+	bounds: 669, 366, 100, 100
+sweeplight/03
+	bounds: 719, 264, 100, 100
+sweeplight/04
+	bounds: 771, 366, 100, 100
+sweeplight/05
+	bounds: 813, 468, 100, 100
+sweeplight/06
+	bounds: 724, 162, 100, 100
+sweeplight/07
+	bounds: 915, 512, 100, 100
+sweeplight/08
+	bounds: 821, 264, 100, 100
+sweeplight/09
+	bounds: 826, 162, 100, 100
+sweeplight/10
+	bounds: 873, 366, 100, 100
+sweeplight/11
+	bounds: 873, 366, 100, 100
+sweeplight/12
+	bounds: 923, 264, 100, 100
+sweeplight/13
+	bounds: 928, 162, 100, 100
+sweeplight/14
+	bounds: 724, 60, 100, 100
+sweeplight2/00
+	bounds: 245, 166, 17, 25
+	offsets: 25, 174, 181, 234
+sweeplight2/01
+	bounds: 586, 515, 34, 61
+	offsets: 18, 141, 181, 234
+	rotate: 90
+sweeplight2/02
+	bounds: 975, 78, 51, 82
+	offsets: 15, 124, 181, 234
+sweeplight2/03
+	bounds: 826, 61, 65, 99
+	offsets: 13, 110, 181, 234
+sweeplight2/04
+	bounds: 835, 665, 78, 117
+	offsets: 12, 99, 181, 234
+sweeplight2/05
+	bounds: 632, 228, 85, 132
+	offsets: 12, 86, 181, 234
+sweeplight2/06
+	bounds: 575, 362, 92, 140
+	offsets: 12, 79, 181, 234
+sweeplight2/07
+	bounds: 481, 648, 103, 146
+	offsets: 11, 73, 181, 234
+sweeplight2/08
+	bounds: 399, 208, 107, 152
+	offsets: 12, 68, 181, 234
+sweeplight2/09
+	bounds: 322, 625, 117, 157
+	offsets: 12, 63, 181, 234
+	rotate: 90
+sweeplight2/10
+	bounds: 321, 498, 125, 161
+	offsets: 12, 59, 181, 234
+	rotate: 90
+sweeplight2/11
+	bounds: 2, 22, 129, 162
+	offsets: 13, 57, 181, 234
+sweeplight2/12
+	bounds: 647, 914, 132, 162
+	offsets: 15, 57, 181, 234
+	rotate: 90
+sweeplight2/13
+	bounds: 2, 186, 132, 163
+	offsets: 17, 55, 181, 234
+sweeplight2/14
+	bounds: 481, 914, 132, 164
+	offsets: 19, 53, 181, 234
+	rotate: 90
+sweeplight2/15
+	bounds: 811, 913, 133, 159
+	offsets: 22, 53, 181, 234
+	rotate: 90
+sweeplight2/16
+	bounds: 136, 193, 132, 156
+	offsets: 26, 53, 181, 234
+sweeplight2/17
+	bounds: 270, 194, 127, 155
+	offsets: 32, 52, 181, 234
+sweeplight2/18
+	bounds: 508, 208, 122, 152
+	offsets: 38, 52, 181, 234
+sweeplight2/19
+	bounds: 481, 796, 116, 150
+	offsets: 45, 52, 181, 234
+	rotate: 90
+sweeplight2/21
+	bounds: 484, 504, 100, 142
+	offsets: 61, 53, 181, 234
+sweeplight2/22
+	bounds: 916, 699, 90, 130
+	offsets: 71, 53, 181, 234
+	rotate: 90
+sweeplight2/23
+	bounds: 915, 614, 83, 124
+	offsets: 78, 54, 181, 234
+	rotate: 90
+sweeplight2/24
+	bounds: 136, 116, 75, 107
+	offsets: 86, 55, 181, 234
+	rotate: 90
+sweeplight2/25
+	bounds: 133, 2, 63, 95
+	offsets: 97, 57, 181, 234
+sweeplight2/26
+	bounds: 975, 384, 49, 82
+	offsets: 110, 59, 181, 234
+sweeplight2/27
+	bounds: 972, 929, 36, 63
+	offsets: 120, 62, 181, 234
+	rotate: 90
+sweeplight2/28
+	bounds: 133, 99, 15, 24
+	offsets: 135, 70, 181, 234
+	rotate: 90
+sweeplight2/29
+	bounds: 481, 645, 1, 1

@@ -1,0 +1,107 @@
+extra_bet.png
+	size: 976, 976
+	filter: Linear, Linear
+extra_light/extra_light_00
+	bounds: 2, 616, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_01
+	bounds: 177, 811, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_02
+	bounds: 2, 451, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_03
+	bounds: 335, 811, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_04
+	bounds: 2, 286, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_05
+	bounds: 493, 811, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_06
+	bounds: 2, 121, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_07
+	bounds: 651, 811, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_08
+	bounds: 809, 811, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_09
+	bounds: 177, 653, 156, 163
+	offsets: 22, 19, 200, 200
+	rotate: 90
+extra_light/extra_light_10
+	bounds: 160, 2, 154, 163
+	offsets: 23, 19, 200, 200
+	rotate: 90
+extra_light/extra_light_11
+	bounds: 325, 2, 154, 163
+	offsets: 23, 19, 200, 200
+	rotate: 90
+extra_light/extra_light_12
+	bounds: 476, 159, 154, 162
+	offsets: 23, 19, 200, 200
+extra_light/extra_light_13
+	bounds: 632, 324, 154, 162
+	offsets: 23, 19, 200, 200
+extra_light/extra_light_14
+	bounds: 632, 160, 154, 162
+	offsets: 23, 19, 200, 200
+extra_light/extra_light_15
+	bounds: 490, 3, 154, 162
+	offsets: 23, 19, 200, 200
+	rotate: 90
+extra_light/extra_light_16
+	bounds: 654, 4, 154, 162
+	offsets: 23, 19, 200, 200
+	rotate: 90
+extra_light/extra_light_17
+	bounds: 790, 489, 154, 162
+	offsets: 23, 19, 200, 200
+extra_light/extra_light_18
+	bounds: 788, 324, 154, 162
+	offsets: 23, 19, 200, 200
+extra_light/extra_light_19
+	bounds: 634, 488, 154, 163
+	offsets: 23, 19, 200, 200
+extra_light/extra_light_20
+	bounds: 476, 323, 154, 163
+	offsets: 23, 19, 200, 200
+extra_light/extra_light_21
+	bounds: 342, 653, 156, 163
+	offsets: 22, 19, 200, 200
+	rotate: 90
+extra_light/extra_light_22
+	bounds: 507, 653, 156, 163
+	offsets: 22, 19, 200, 200
+	rotate: 90
+extra_light/extra_light_23
+	bounds: 672, 653, 156, 163
+	offsets: 22, 19, 200, 200
+	rotate: 90
+extra_light/extra_light_24
+	bounds: 160, 488, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_25
+	bounds: 160, 323, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_26
+	bounds: 318, 488, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_27
+	bounds: 160, 158, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_28
+	bounds: 476, 488, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_29
+	bounds: 318, 323, 156, 163
+	offsets: 22, 19, 200, 200
+extra_light/extra_light_30
+	bounds: 318, 158, 156, 163
+	offsets: 22, 19, 200, 200
+symbol_glow_filp_00
+	bounds: 2, 781, 173, 193
+	offsets: 23, 24, 220, 240

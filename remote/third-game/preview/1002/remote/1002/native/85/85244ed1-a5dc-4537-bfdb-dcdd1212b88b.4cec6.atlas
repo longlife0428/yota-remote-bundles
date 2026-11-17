@@ -1,0 +1,33 @@
+collect_end.png
+	size: 572, 572
+	filter: Linear, Linear
+vfx/fireStart_1
+	bounds: 259, 61, 89, 82
+vfx/fireStart_2
+	bounds: 350, 61, 89, 82
+vfx/fireStart_3
+	bounds: 389, 181, 89, 82
+	rotate: 90
+vfx/fireStart_4
+	bounds: 473, 201, 89, 82
+	rotate: 90
+vfx/fireStart_5
+	bounds: 473, 117, 89, 82
+vfx/fireStart_6
+	bounds: 441, 33, 89, 82
+vfx/fq5
+	bounds: 260, 422, 154, 148
+vfx/fq6
+	bounds: 416, 422, 154, 148
+vfx/fq8
+	bounds: 260, 272, 154, 148
+vfx/hit_0
+	bounds: 259, 145, 128, 125
+	offsets: 0, 0, 128, 128
+vfx/in_0
+	bounds: 2, 314, 256, 256
+vfx/in_1
+	bounds: 2, 58, 255, 254
+	offsets: 1, 2, 256, 256
+vfx/mainLight
+	bounds: 416, 292, 128, 128

@@ -1,6 +1,8 @@
 # yota-remote-bundles
 
-子遊戲熱更新的 CDN 內容。push 到 `main` 之後由 Cloudflare Pages 自動部署，**幾分鐘內直接上線，沒有測試也沒有審核擋**。
+子遊戲熱更新的 CDN 內容。push 到 `main` 之後由 GitLab CI（`.gitlab-ci.yml`）把 `remote/` 同步到公司 S3，**約半分鐘內直接上線，沒有測試也沒有審核擋**。
+
+2026-11-17 之前打包、仍連 Cloudflare R2 的舊版 App 不會吃到這裡的更新；要讓舊版也更新，另外執行 `git push github main`（舊的 GitHub 遠端，由 GitHub Actions 同步到 R2）。
 
 發布包由 `slot_game` 產生，不要手動編輯這裡的任何檔案。
 
@@ -59,13 +61,13 @@ remote/third-game/
 2. 自己把 `slot_game/build/<gameId>-web` 複製到 `remote/third-game/preview/<gameId>` 覆蓋，不要複製 `.map` 檔。
    - 完整構建：先清掉舊的再複製。
    - 只構建 Bundle：覆蓋 `assets/internal`、`assets/main`、`remote/<gameId>`、`src/settings*.json` 即可。
-3. commit 後 push，同步到 R2 後生效。
+3. commit 後 push，CI 同步到 S3 後生效。
 
 預覽網址：
 
 ```text
-https://pub-42d4a6164a8043969925bdede61d36a1.r2.dev/remote/third-game/preview/<gameId>/index.html
-https://pub-42d4a6164a8043969925bdede61d36a1.r2.dev/remote/third-game/shell.html?url=preview/<gameId>/index.html&gameId=<gameId>
+https://dev-rustfs.elitepro.ltd/dev-yota-cocos/remote/third-game/preview/<gameId>/index.html
+https://dev-rustfs.elitepro.ltd/dev-yota-cocos/remote/third-game/shell.html?url=preview/<gameId>/index.html&gameId=<gameId>
 ```
 
 第二條是經過殼頁開，有選單、自動旋轉、選座、遊戲說明與音樂音效開關。直接開第一條時，遊戲啟動頁會先確認上兩層有 `shell.html`，有就自動跳到第二條；網址加 `shell=0` 可以不跳。沒上傳過的遊戲打開會失敗。
@@ -95,9 +97,9 @@ Web 發布包不含 `hotupdate/`，直接取代 `remote/<gameId>/` 會把原生�
 發布後直接開網址確認：
 
 ```text
-https://yota-remote-bundles.pages.dev/remote/1001/version.json
-https://yota-remote-bundles.pages.dev/remote/1001/hotupdate/ios/project.manifest
-https://yota-remote-bundles.pages.dev/remote/1001/hotupdate/ios/<version>/1001/1001.zip
+https://dev-rustfs.elitepro.ltd/dev-yota-cocos/remote/1001/version.json
+https://dev-rustfs.elitepro.ltd/dev-yota-cocos/remote/1001/hotupdate/ios/project.manifest
+https://dev-rustfs.elitepro.ltd/dev-yota-cocos/remote/1001/hotupdate/ios/<version>/1001/1001.zip
 ```
 
 manifest 要關閉快取，payload zip 可以快取。
