@@ -1,6 +1,6 @@
 # 流程
 #   推到 main 或手動執行
-#   -> 檢查 runner 有 rclone 與兩個密碼變數
+#   -> 檢查映像有 rclone 與兩個密碼變數
 #   -> 把 remote 資料夾同步到公司 S3
 #   -> 用公開網址確認檔案真的讀得到
 #
@@ -26,6 +26,12 @@ variables:
 sync-to-rustfs:
   stage: deploy
 
+  # 用裝好 rclone 的映像執行 runner 本身不需要安裝任何東西
+  image:
+    name: rclone/rclone:latest
+    # 映像預設會直接跑 rclone 這裡清掉才能執行下面的腳本
+    entrypoint: ['']
+
   # 同一時間只跑一個 避免兩次推送互相覆蓋
   resource_group: rustfs-deploy
 
@@ -38,15 +44,11 @@ sync-to-rustfs:
     # 在 GitLab 按 Run pipeline 手動執行
     - if: $CI_PIPELINE_SOURCE == "web"
 
-  # 讓 runner 找得到 homebrew 裝的 rclone
-  before_script:
-    - export PATH="/opt/homebrew/bin:/usr/local/bin:${PATH}"
-
   script:
-    # 第一步 檢查 rclone 有沒有裝
+    # 第一步 確認映像裡有 rclone
     - |
       if ! command -v rclone >/dev/null 2>&1; then
-        echo "這台 runner 沒有 rclone 請安裝後重跑"
+        echo "映像裡找不到 rclone"
         exit 1
       fi
       rclone version | head -1
@@ -84,15 +86,22 @@ sync-to-rustfs:
       fail=0
       for id in 1001 1002 1003; do
         url="${RUSTFS_PUBLIC_BASE}/remote/${id}/version.json"
-        code=000
+        ok=0
         # 剛寫入可能有短暫延遲 最多試 5 次
+        # wget 下載成功才會回傳 0 其他狀態碼都算失敗
         for try in 1 2 3 4 5; do
-          code=$(curl -s -o /dev/null -w '%{http_code}' "$url")
-          [ "$code" = 200 ] && break
+          if wget -q -O /dev/null "$url"; then
+            ok=1
+            break
+          fi
           sleep 3
         done
-        echo "${code}  remote/${id}/version.json"
-        [ "$code" = 200 ] || fail=1
+        if [ "$ok" = 1 ]; then
+          echo "OK    remote/${id}/version.json"
+        else
+          echo "失敗  remote/${id}/version.json"
+          fail=1
+        fi
       done
-      # 任何一個不是 200 就讓整個 pipeline 失敗
+      # 任何一個失敗就讓整個 pipeline 失敗
       exit $fail
