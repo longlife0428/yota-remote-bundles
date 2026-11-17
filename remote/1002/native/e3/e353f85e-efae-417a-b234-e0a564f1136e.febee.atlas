@@ -1,0 +1,100 @@
+transition.png
+	size: 2024, 2024
+	filter: Linear, Linear
+bg
+	bounds: 2, 1219, 1326, 800
+	offsets: 0, 1, 1326, 802
+pillar
+	bounds: 2, 417, 1324, 800
+	offsets: 1, 1, 1326, 802
+ti/ti_15
+	bounds: 1328, 463, 570, 541
+	offsets: 72, 46, 650, 600
+ti/ti_16
+	bounds: 1330, 1421, 597, 598
+	offsets: 46, 2, 650, 600
+ti/ti_17
+	bounds: 2, 2, 644, 413
+	offsets: 5, 95, 650, 600
+ti/ti_18
+	bounds: 648, 2, 641, 413
+	offsets: 8, 95, 650, 600
+ti/ti_19
+	bounds: 1330, 1006, 639, 413
+	offsets: 10, 95, 650, 600
+ti/ti_20
+	bounds: 1328, 48, 638, 413
+	offsets: 9, 95, 650, 600
+
+transition_2.png
+	size: 1864, 1864
+	filter: Linear, Linear
+aura_20
+	bounds: 1621, 1641, 225, 221
+	offsets: 13, 18, 256, 256
+aura_64
+	bounds: 1566, 1245, 256, 256
+ti/ti_00
+	bounds: 727, 662, 303, 401
+	offsets: 175, 168, 650, 600
+ti/ti_01
+	bounds: 2, 3, 304, 400
+	offsets: 174, 168, 650, 600
+	rotate: 90
+ti/ti_02
+	bounds: 1375, 113, 302, 291
+	offsets: 176, 168, 650, 600
+	rotate: 90
+ti/ti_03
+	bounds: 727, 365, 295, 314
+	offsets: 183, 167, 650, 600
+	rotate: 90
+ti/ti_04
+	bounds: 1082, 59, 291, 345
+	offsets: 186, 167, 650, 600
+ti/ti_05
+	bounds: 404, 2, 288, 368
+	offsets: 188, 165, 650, 600
+ti/ti_06
+	bounds: 1338, 798, 287, 383
+	offsets: 185, 168, 650, 600
+ti/ti_07
+	bounds: 1032, 791, 304, 390
+	offsets: 171, 170, 650, 600
+ti/ti_08
+	bounds: 694, 54, 309, 386
+	offsets: 164, 172, 650, 600
+	rotate: 90
+ti/ti_09
+	bounds: 1354, 417, 308, 379
+	offsets: 159, 183, 650, 600
+ti/ti_10
+	bounds: 1043, 406, 309, 383
+	offsets: 152, 184, 650, 600
+ti/ti_11
+	bounds: 550, 1065, 331, 404
+	offsets: 141, 160, 650, 600
+	rotate: 90
+ti/ti_12
+	bounds: 550, 1398, 512, 464
+	offsets: 128, 107, 650, 600
+ti/ti_13
+	bounds: 2, 903, 523, 466
+	offsets: 117, 104, 650, 600
+ti/ti_14
+	bounds: 2, 1371, 546, 491
+	offsets: 96, 88, 650, 600
+ti/ti_21
+	bounds: 2, 309, 592, 384
+	offsets: 30, 107, 650, 600
+	rotate: 90
+ti/ti_22
+	bounds: 1064, 1503, 555, 359
+	offsets: 46, 117, 650, 600
+ti/ti_23
+	bounds: 388, 372, 529, 337
+	offsets: 60, 126, 650, 600
+	rotate: 90
+ti/ti_24
+	bounds: 1064, 1183, 500, 318
+	offsets: 75, 134, 650, 600

@@ -1,0 +1,24 @@
+collect_start.png
+	size: 536, 536
+	filter: Linear, Linear
+vfx/f1
+	bounds: 2, 156, 155, 127
+vfx/f2
+	bounds: 250, 407, 155, 127
+vfx/f3
+	bounds: 2, 27, 155, 127
+vfx/f4
+	bounds: 250, 278, 155, 127
+vfx/f5
+	bounds: 407, 379, 155, 127
+	rotate: 90
+vfx/f6
+	bounds: 407, 222, 155, 127
+	rotate: 90
+vfx/f7
+	bounds: 159, 149, 155, 127
+vfx/f8
+	bounds: 159, 20, 155, 127
+vfx/oring_0
+	bounds: 2, 285, 246, 249
+	offsets: 3, 7, 256, 256
