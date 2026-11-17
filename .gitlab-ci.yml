@@ -1,0 +1,98 @@
+# 流程
+#   推到 main 或手動執行
+#   -> 檢查 runner 有 rclone 與兩個密碼變數
+#   -> 把 remote 資料夾同步到公司 S3
+#   -> 用公開網址確認檔案真的讀得到
+#
+# 需要的 CI/CD 變數 (Settings > CI/CD > Variables)
+#   RUSTFS_ACCESS_KEY_ID      S3 帳號
+#   RUSTFS_SECRET_ACCESS_KEY  S3 密碼
+
+# 只有一個階段
+stages:
+  - deploy
+
+# 全域變數
+variables:
+  # 只抓最新一版檔案 不抓歷史
+  GIT_DEPTH: '1'
+  # S3 位址
+  RUSTFS_ENDPOINT: https://dev-rustfs.elitepro.ltd
+  # 儲存桶名稱
+  RUSTFS_BUCKET: dev-yota-cocos
+  # 公開讀取網址 最後驗證用
+  RUSTFS_PUBLIC_BASE: https://dev-rustfs.elitepro.ltd/dev-yota-cocos
+
+sync-to-rustfs:
+  stage: deploy
+
+  # 同一時間只跑一個 避免兩次推送互相覆蓋
+  resource_group: rustfs-deploy
+
+  # 什麼時候跑
+  rules:
+    # 推到 main 且 remote 底下有檔案變動
+    - if: $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "main"
+      changes:
+        - remote/**/*
+    # 在 GitLab 按 Run pipeline 手動執行
+    - if: $CI_PIPELINE_SOURCE == "web"
+
+  # 讓 runner 找得到 homebrew 裝的 rclone
+  before_script:
+    - export PATH="/opt/homebrew/bin:/usr/local/bin:${PATH}"
+
+  script:
+    # 第一步 檢查 rclone 有沒有裝
+    - |
+      if ! command -v rclone >/dev/null 2>&1; then
+        echo "這台 runner 沒有 rclone 請安裝後重跑"
+        exit 1
+      fi
+      rclone version | head -1
+
+    # 第二步 檢查兩個密碼變數有沒有設
+    - |
+      for name in RUSTFS_ACCESS_KEY_ID RUSTFS_SECRET_ACCESS_KEY; do
+        if [ -z "$(printenv "$name")" ]; then
+          echo "缺少 CI/CD 變數 $name"
+          exit 1
+        fi
+      done
+
+    # 第三步 把 remote 同步到 S3
+    - |
+      # 連線資訊用環境變數交給 rclone 不寫進檔案也不印出來
+      export RCLONE_CONFIG_RUSTFS_TYPE=s3
+      export RCLONE_CONFIG_RUSTFS_PROVIDER=Other
+      export RCLONE_CONFIG_RUSTFS_ENDPOINT="${RUSTFS_ENDPOINT}"
+      export RCLONE_CONFIG_RUSTFS_ACCESS_KEY_ID="${RUSTFS_ACCESS_KEY_ID}"
+      export RCLONE_CONFIG_RUSTFS_SECRET_ACCESS_KEY="${RUSTFS_SECRET_ACCESS_KEY}"
+      # 網址格式是 位址/桶名/檔案
+      export RCLONE_CONFIG_RUSTFS_FORCE_PATH_STYLE=true
+      # 不檢查也不建立桶 桶已經存在
+      export RCLONE_CONFIG_RUSTFS_NO_CHECK_BUCKET=true
+
+      # sync 會讓 S3 跟 remote 完全一樣 S3 上多的檔案會被刪掉
+      # transfers 同時上傳數 checkers 同時比對數
+      rclone sync remote "rustfs:${RUSTFS_BUCKET}/remote" \
+        --transfers 16 --checkers 32 \
+        --stats 10s --stats-one-line
+
+    # 第四步 用公開網址確認檔案讀得到
+    - |
+      fail=0
+      for id in 1001 1002 1003; do
+        url="${RUSTFS_PUBLIC_BASE}/remote/${id}/version.json"
+        code=000
+        # 剛寫入可能有短暫延遲 最多試 5 次
+        for try in 1 2 3 4 5; do
+          code=$(curl -s -o /dev/null -w '%{http_code}' "$url")
+          [ "$code" = 200 ] && break
+          sleep 3
+        done
+        echo "${code}  remote/${id}/version.json"
+        [ "$code" = 200 ] || fail=1
+      done
+      # 任何一個不是 200 就讓整個 pipeline 失敗
+      exit $fail
